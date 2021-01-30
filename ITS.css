@@ -99,7 +99,7 @@
     --graph-node: #cfd7dd;
     --graph-fill: var(--red);
     --graph-404: #727e93;
-    --graph-img: #ff86be;
+    --graph-img: var(--blue) /*#ff86be*/;
     
     /*Characters*/
     --mylt: #2f1010;
@@ -208,7 +208,7 @@
     --graph-node: #000000;
     --graph-fill: #c14343;
     --graph-404: #727e93;
-    --graph-img: #5469de;
+    --graph-img: var(--blue) /*#5469de*/;
     
     /*Characters*/
     --mylt: #2f1010;
@@ -543,11 +543,12 @@ ul ul::before {
 }
 
 
-/*Horizontal Linebreak*/
+/*--Horizontal Linebreak--*/
 .markdown-preview-view hr {
     border-color: var(--gray) !important;
 }   
 
+/*Stylized hr Line*/
 .markdown-preview-view hr::after{
     content: "⧫" "⍚" "⧫";
     display: inline-block;
@@ -580,7 +581,7 @@ img {
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
-  border: 1px solid var(--text-muted);
+  border: 1px solid var(--text-faint);
   border-radius: 2px;
   position: relative;
   width: 1.3em;
@@ -600,7 +601,7 @@ img {
   background-color: var(--blue);
 }
 
-/*** /*Checkbox Checked* /
+/*** /*Checkbox Checked Checkmark* /
 .markdown-preview-view .task-list-item-checkbox:checked::before {
   content: ' ';
   position: absolute;
@@ -624,7 +625,7 @@ img {
 input[type="checkbox" i] {
     -webkit-appearance: none;
     box-sizing: border-box;
-    border: 1px solid var(--text-muted);
+    border: 1px solid var(--accent);
     border-radius: 2px;
     position: relative;
     width: 1.3em;
@@ -634,7 +635,6 @@ input[type="checkbox" i] {
     outline: none;
     margin-top: auto;
     margin-bottom: auto;
-    cursor: pointer;
     cursor: pointer;
 }
 
@@ -677,11 +677,12 @@ ul ul::before {
     left: -15px; top: 0; bottom: 0; 
 } 
 
+
+/*--Table--*/
 .markdown-preview-view table {
     border-color: var(--soft-text);
 }
 
-/*--Table--*/
 /*Border Color*/
 .markdown-preview-view th, .markdown-preview-view td {
     padding: 4px 10px;
@@ -703,7 +704,7 @@ ul ul::before {
   cursor: pointer;
 }
 
-}
+/*Hover Underline*/
 .tag:hover {
     color: white;
     text-decoration: underline;
@@ -732,20 +733,14 @@ ul ul::before {
 }
 
 /*Popover*/
+/*Fit Text Within Popover*/
 .popover {
-  font-size: 20px;   /* bigger text to make up for the downscaling */
-  text-align: justify; 
-  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.25); 
+  font-size: 16px;
+  text-align: justify;
 }
 
+/*Increase Popover size*/
 .popover.hover-popover .markdown-embed  {
     height: 500px;
 }
 
-.popover.hover-popover {
-    transform: scale(0.7); /* downscales the whole content - important for smaller tag pills */
-    max-height: 900px;   
-    min-height: 100px;
-    width: 700px;  
-    background: var(--background-primary);
-}

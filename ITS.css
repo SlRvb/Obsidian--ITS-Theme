@@ -1,0 +1,570 @@
+.workspace {
+    display: flex;
+    flex-grow: 1;
+    transition: padding-left 100ms ease-in;
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--background-secondary);
+}
+
+.theme-dark {
+    --background-primary: var(--note); /*Note background*/
+    --background-primary-alt: var(--dark-accent); /*Note Title background active*/
+    --background-secondary: var(--side-bar); /*Sidebar background*/
+    --background-secondary-alt: var(--outer-bar); /*Sidebar Title background*/
+    
+    --background-modifier-border: #333; /*Border outline of quotes, tables, line breaks*/
+    
+    --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
+    --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22); /*??*/
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
+    --background-modifier-success: #197300; /*??*/
+    --background-modifier-error: #3d0000; /*??*/
+    --background-modifier-error-rgb: 61, 0, 0; /*??*/
+    --background-modifier-error-hover: #470000; /*??*/
+    --background-modifier-cover: rgba(0, 0, 0, 0.8); /*??*/
+    
+    --text-on-accent: #dcddde; /*Program Title bar*/
+    --text-muted: var(--soft-text); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+    --text-normal: var(--text); /*Text body of note*/
+    --text-accent: var(--bright-blue); /*Links*/
+    --text-accent-hover: var(--red); /*Links hover*/
+    --text-faint: #4e5b6f; /*Link brackets color*/
+    --text-error: #ff3333; /*??*/
+    --text-error-hover: #990000; /*??*/
+    
+    --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
+    --text-selection: rgba(77, 23, 23, 0.99); /*Cursor dragged highlights*/
+    
+    --interactive-normal: #652121; /*??*/
+    --interactive-hover: #303030; /*??*/
+    --interactive-accent: var(--red); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 72, 54, 153; /*??*/
+    --interactive-accent-hover: #862f35; /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+    
+    --scrollbar-bg: rgba(255, 255, 255, 0.05);
+    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+    --highlight-mix-blend-mode: lighten;
+
+    /*--DEFAULT VARIABLES--*/
+    /*FONTS*/
+    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
+    --mermaid-font: var(--default-font); /*mermaidjs text*/
+    --reveal-font: var(--default-font); /*??*/
+    --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
+
+    /*COLORS*/
+    --dark-gray: #26303e;
+    --gray: #454a52;
+    --bright-red: #e06c75;
+    --dark-red: #2f1010;
+    --dark-lite-red: #431314;
+    --red: #c14343;
+    --blue: #4c78cc;
+    --dark-blue: #1a1e24;
+    --navy-blue: #20242b;
+    --bright-blue: #61afef;
+    --deep-dark-blue: #10161d;
+    
+    
+    /*Compatibility Color Recoloring*/
+    --deep-dark-accent: var(--dark-red);
+    --dark-accent: var(--dark-lite-red);
+    --lite-accent: var(--bright-red);
+    --accent: var(--red);
+    --bg: var(--dark-gray);
+    --fg: white;
+    --side-bar: var(--note);
+    --outer-bar: #0e0f15;
+    --dark-sidebar: var(--deep-dark-blue);
+    --inactive: var(--deep-dark-blue);
+    
+    --note: var(--dark-blue);
+    --text: #dcddde;
+    --soft-text: #aab3ca;
+    --code-bg: var(--navy-blue);
+    --headers: #c14343;
+    --code-text: #ea4262;
+    
+    --graph-bg: var(--deep-dark-blue);
+    --graph-lines: #53201F;
+    --graph-node: #cfd7dd;
+    
+    
+    /*Characters*/
+    --mylt: #2f1010;
+    --dyan: #6D5A8C;
+    --quinn: #ff8ad7;
+    --ryan: #79aec6;
+    --elisa: #e06c75;
+    --luciera: #619861;
+    --ferran: #957130;
+    --ryo: #3d5986;
+    --daniel: #0b1c41;
+    --anthera: #431314;
+    --jasmine: #c6a20a;
+    --alex: #7f7c8d;
+}
+
+
+
+/*--WORKSPACE--*/
+/*Ribbon Icons*/
+.side-dock-ribbon-tab, .side-dock-ribbon-action, .workspace-tab-header-inner-icon{
+    color: var(--soft-text);
+    text-align: center;
+    cursor: pointer;
+    stroke-width: 2px;
+}
+
+/*Sidebar Resize Handle*/
+.workspace-leaf-resize-handle {
+    background-color: var(--bg);
+    transition: background-color 200ms ease-in-out;
+}
+
+/*-File Navbar-*/
+.nav-file-title-content, .nav-folder-title-content {
+    color: var(--soft-text);
+}
+
+/*File selected*/
+.nav-file-title.is-active {
+  background-color: var(--dark-accent);
+  color: #ffffff;
+}
+
+.popover hover-popover is-loaded {
+    width: 100%;
+}
+
+/*Tag Pane Text*/
+.tree-item-self {
+    color: var(--soft-text);
+}
+
+/*-Graph Settings-*/
+.graph-controls.is-close {
+    /* background-color: var(--background-primary); */
+}
+/*Opened Settings*/
+.graph-controls {
+    background-color: var(--outer-bar);
+    border: 1px solid var(--background-modifier-border);
+}
+
+/*Arrows*/
+.collapse-icon svg {
+    transition: transform 100ms ease-in-out;
+    color: var(--soft-text);
+}
+
+/*Slider Colors*/
+input[type='range'] {
+    background-color: var(--note);
+}
+/*Search bar colors*/
+input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
+    background: var(--outer-sidebar);
+    border: 1px solid var(--soft-text);
+    color: var(--soft-text);
+}
+
+
+
+/*--Setings Menu--*/
+/*Settings Left*/
+.vertical-tab-header {
+    background-color: var(--dark-sidebar);
+}
+.horizontal-tab-nav-item, .vertical-tab-nav-item {
+    background-color: var(--dark-sidebar);
+    padding: 10px 6px 10px 24px;
+    cursor: default;
+    font-size: 16px;
+}
+/*Selected Item*/
+.horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
+    background-color: var(--dark-accent);
+}
+button.mod-cta {
+    background-color: var(--dark-accent);
+    color: var(--text-on-accent);
+}
+
+/*Dropdown Arrow*/
+.dropdown {
+background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/*Account Header 2*/
+.vertical-tab-content h2 {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+
+/*Hotkey*/
+.setting-hotkey {
+    background-color: var(--code-bg);
+    color: var(--soft-text);
+}
+
+
+/*-Sliding Panes-*/
+/*Hide the gradient of the Title Pane*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after {
+  background: rgba(0,0,0,0) !important;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+  background: rgba(0,0,0,0) !important;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+    background: rgba(0,0,0,0) !important;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:after {
+    background: rgba(0,0,0,0) !important;
+}
+
+/*Note Title Bar*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+    border-right: 2px solid var(--red) !important;
+    border-bottom: none;
+}
+/*Horizontal Scrollbar Color*/
+.workspace-split.mod-root {
+    background-color: var(--dark-accent);
+}
+
+/*--Graph View--*/
+/*  background of graph view pane*/
+.workspace-leaf-content[data-type = "graph"] .view-content{
+  background-color: var(--graph-bg); 
+}
+
+.graph-view.color-fill {
+  color: #cfd7dd !important; /*Created notes color*/
+}
+
+.graph-view.color-line {
+  color: var(--graph-lines);
+}
+.graph-view.color-text {
+  color: var(--soft-text);
+}
+/*Hover Node*/
+.graph-view.color-fill-highlight {
+  color: var(--red); /*Circle color*/
+}
+.graph-view.color-circle {
+  color: white; /*Outline color*/
+}
+
+.graph-view.color-line-highlight {
+  color: var(--red);
+}
+
+.graph-view.color-arrow {
+color: var(--soft-text);
+}
+
+.graph-view.color-fill-tag {
+  color: var(--headers) !important;
+}
+
+.graph-view.color-fill-attachment {
+  color: #aa0a54 !important;
+}
+
+.graph-view.color-fill-unresolved {
+  color: #727e93 !important; 
+}
+
+
+
+/*--NOTE TITLEBAR--*/
+/*Inactive Note Titlebar*/
+.view-header {
+    height: 36px;
+    display: flex;
+    border-top: 1px solid;
+    border-bottom: 2px solid;
+    background-color: var(--graph-bg);
+    z-index: 1;
+}
+
+/*Active Note Titlebar*/
+.workspace-leaf.mod-active .view-header {
+    background-color: var(--dark-accent);
+    border-bottom: 2px solid var(--bright-blue);
+}
+
+/*Bottom Bar*/
+.status-bar {
+    background-color: var(--graph-bg);
+    border-top: 1px solid var(--background-modifier-border);
+    color: var(--text-muted);
+}
+
+
+
+/*--NOTES--*/
+/*Note*/
+body {
+    text-rendering: optimizeLegibility;
+    font-family: var(--default-font);
+    line-height: 1.5em;
+    font-size: 16px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+/*Code*/
+.markdown-preview-view code {
+    color: var(--code-text);
+    font-family: var(--font-monospace);
+    background-color: var(--code-bg);
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 0.85em;
+}
+
+/*Headings*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: Calisto MT;
+    color: var(--headers);
+}
+
+/*Italicized Text*/
+i { /*I used for image description, em is just regular italics*/
+    font-style: italic;
+    color: #6a6a6a;
+}
+
+
+
+/*--Link--*/
+/*Active Link*/
+a, .markdown-preview-view .internal-link {
+  text-decoration: none; /*No underline*/
+}
+
+/*Link to No Page*/
+.markdown-preview-view .internal-link.is-unresolved {
+    opacity: 0.8;
+    color: var(--lite-accent);
+}
+
+
+
+/*--Bullet Points--*/
+.cm-hmd-list-indent .cm-tab, ul ul {
+    position: relative;
+}
+.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+    content:'';
+    border-left: 5px solid var(--accent);
+    position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before {
+    left: 0;
+    top: -5px;
+    bottom: -4px; 
+}
+ul ul::before {
+    left: -15px;
+    top: 0;
+    bottom: 0; 
+}
+
+
+/*Horizontal Linebreak*/
+.markdown-preview-view hr {
+    border-color: var(--gray) !important;
+}   
+
+.markdown-preview-view hr::after{
+    content: "⧫" "⍚" "⧫";
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: 50% 50%;
+    color: var(--fg);
+    padding: 0.5rem;
+}
+
+/*Embed Window*/
+.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
+    border-top: 1px solid var(--background-modifier-border);
+    border-bottom: 1px solid var(--background-modifier-border);
+    padding: 4px 0;
+    margin: 28px 0;
+}
+
+/*--Images--*/
+/*Center Image*/
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--List--*/
+/*Checkboxes*/
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border: 1px solid var(--text-muted);
+  border-radius: 2px;
+  position: relative;
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0;
+  filter: none;
+  outline: none;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  vertical-align: baseline;
+}
+
+/*Checkbox Checked color*/
+.markdown-preview-view .task-list-item-checkbox:checked {
+  border: none;
+  background-color: var(--blue);
+}
+
+/*** /*Checkbox Checked* /
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  content: ' ';
+  position: absolute;
+  background-color: white;
+  -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 14 14\'%3E%3Cpolygon points=\'5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039\'%3E%3C/polygon%3E%3C/svg%3E');
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+
+}***/
+
+/*Checked Checkbox*/
+.markdown-preview-view ul > li.task-list-item.is-checked {
+    text-decoration: none;
+    color: var(--text-faint);
+    font-weight: bold;
+}
+
+/*Table Checkboxes*/
+input[type="checkbox" i] {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border: 1px solid var(--text-muted);
+    border-radius: 2px;
+    position: relative;
+    width: 1.3em;
+    height: 1.3em;
+    margin: 0;
+    filter: none;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    cursor: pointer;
+}
+
+input[type="checkbox checked"] {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: relative;
+    width: 1.3em;
+    height: 1.3em;
+    margin: 0, 0, 0, 0;
+    filter: none;
+    outline: none;
+    border: none;
+    background-color: var(--blue);
+}
+
+/*List Smaller Indentation*/
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 28px;
+}
+
+/*List Connecting Line*/
+.cm-hmd-list-indent .cm-tab, ul ul {
+    position: relative;
+}
+.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+ content:'';
+ border-left: 2px solid var(--red);
+ position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before {
+    left: 0; top: -5px; bottom: -4px; 
+}
+ul ul::before {
+    left: -15px; top: 0; bottom: 0; 
+} 
+
+.markdown-preview-view table {
+    border-color: var(--soft-text);
+}
+
+/*--Table--*/
+/*Border Color*/
+.markdown-preview-view th, .markdown-preview-view td {
+    padding: 4px 10px;
+    border: 1px solid #2d374a;
+}
+
+
+/*--Tags--*/
+.tag {
+  background-color: var(--dark-accent);
+  border: none;
+  color: white;
+  font-size: 12px;
+  padding: 1px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+}
+.tag:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/*--Embeds--*/
+/* Italicize Embed Title*/
+.markdown-embed-title, .file-embed-title {
+    color: var(--lite-accent);
+    font-size: 20px;
+    line-height: 52px;
+    top: 5px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+}
+
+/* Italicize Embed Headings*/
+.markdown-preview-view .markdown-embed h1, .markdown-embed h2, .markdown-embed h3, .markdown-embed h4, .markdown-embed h5, .markdown-embed h6 {
+    font-size: 20px;
+    line-height: 1em;
+    color: var(--accent);
+}

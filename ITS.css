@@ -22,9 +22,9 @@
     --background-modifier-error: #3d0000; /*??*/
     --background-modifier-error-rgb: 61, 0, 0; /*??*/
     --background-modifier-error-hover: #470000; /*??*/
-    --background-modifier-cover: rgba(0, 0, 0, 0.8); /*??*/
+    --background-modifier-cover: black; /*Obsidian Title Bar Bg*/
     
-    --text-on-accent: #dcddde; /*Program Title bar*/
+    --text-on-accent: #dcddde; /*Program Title bar Text*/
     --text-muted: var(--soft-text); /*Text darker for sidebar, toggles, inactive, tags, etc*/
     --text-normal: var(--text); /*Text body of note*/
     --text-accent: var(--bright-blue); /*Links*/
@@ -131,9 +131,9 @@
     --background-modifier-error: #3d0000; /*??*/
     --background-modifier-error-rgb: 61, 0, 0; /*??*/
     --background-modifier-error-hover: #470000; /*??*/
-    --background-modifier-cover: rgba(0, 0, 0, 0.8); /*??*/
+    --background-modifier-cover: var(--dark-red); /*Obsidian Title Bar*/
     
-    --text-on-accent: #dcddde; /*Program Title bar*/
+    --text-on-accent: #dcddde; /*Program Title bar text*/
     --text-muted: var(--soft-text); /*Text darker for sidebar, toggles, inactive, tags, etc*/
     --text-normal: var(--text); /*Text body of note*/
     --text-accent: var(--bright-blue); /*Links*/
@@ -166,10 +166,10 @@
 
     /*COLORS*/
     --dark-gray: #d5dde8;
-    --gray: #c0cee5;
+    --gray: #d6deea;
     --bright-red: #a35158;
     --dark-red: #2f1010;
-    --dark-lite-red: #ffffff;
+    --dark-lite-red: #ffeded;
     --red: #c14343;
     --blue: #4c78cc;
     --dark-blue: #f8fbff;
@@ -186,7 +186,7 @@
     --bg: var(--dark-gray);
     --fg: #9f0202;
     --side-bar: var(--note);
-    --outer-bar: #dae1e8;
+    --outer-bar: #dfe7ef;
     --dark-sidebar: var(--deep-dark-blue);
     --inactive: #91a3c1;
     
@@ -203,12 +203,12 @@
     --tag: #c65656;
     --table: #c9ced9;
     
-    --graph-bg: #ffffff;
-    --graph-lines: #debcbc;
-    --graph-node: #d13c3c;
+    --graph-bg: var(--note);
+    --graph-lines: rgb(198, 201, 221);
+    --graph-node: #000000;
     --graph-fill: #c14343;
     --graph-404: #727e93;
-    --graph-img: #aa0a54;
+    --graph-img: #5469de;
     
     /*Characters*/
     --mylt: #2f1010;
@@ -228,6 +228,11 @@
 
 
 /*--WORKSPACE--*/
+/*Obsidian Title Bar Cover*/
+.titlebar {
+    background-color: var(--background-modifier-cover);
+}
+
 /*Ribbon Icons*/
 .side-dock-ribbon-tab, .side-dock-ribbon-action, .workspace-tab-header-inner-icon{
     color: var(--soft-text);
@@ -263,10 +268,13 @@
 }*/
 
 
+
 /*-Tag Pane Text-*/
 .tree-item-self {
     color: var(--soft-text);
 }
+
+
 
 /*-Graph Settings-*/
 .graph-controls.is-close {
@@ -307,6 +315,18 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 
 
 /*--Setings Menu--*/
+/*Settings Right*/
+.modal.mod-settings .vertical-tab-content-container {
+    padding: 35px 40px 20px 0;
+    height: 70vh;
+    background-color: var(--outer-bar);
+}
+.horizontal-tab-content, .vertical-tab-content {
+    background-color: var(--outer-bar);
+    padding: 5px 30px;
+}
+
+
 /*Settings Left*/
 .vertical-tab-header {
     background-color: var(--dark-sidebar);

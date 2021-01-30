@@ -79,7 +79,11 @@
     --side-bar: var(--note);
     --outer-bar: #0e0f15;
     --dark-sidebar: var(--deep-dark-blue);
-    --inactive: var(--deep-dark-blue);
+    --inactive: #586477;
+    
+    --file-select: var(--dark-lite-red);
+    --file: var(--soft-text);
+    --folder: #e05858;
     
     --note: var(--dark-blue);
     --text: #dcddde;
@@ -87,11 +91,124 @@
     --code-bg: var(--navy-blue);
     --headers: #c14343;
     --code-text: #ea4262;
+    --tag: var(--dark-lite-red);
+    --table: #2b2e34;
     
     --graph-bg: var(--deep-dark-blue);
     --graph-lines: #53201F;
     --graph-node: #cfd7dd;
+    --graph-fill: var(--red);
+    --graph-404: #727e93;
+    --graph-img: #ff86be;
     
+    /*Characters*/
+    --mylt: #2f1010;
+    --dyan: #6D5A8C;
+    --quinn: #ff8ad7;
+    --ryan: #79aec6;
+    --elisa: #e06c75;
+    --luciera: #619861;
+    --ferran: #957130;
+    --ryo: #3d5986;
+    --daniel: #0b1c41;
+    --anthera: #431314;
+    --jasmine: #c6a20a;
+    --alex: #7f7c8d;
+}
+
+.theme-light {
+    --background-primary: var(--note); /*Note background*/
+    --background-primary-alt: var(--dark-accent); /*Note Title background active*/
+    --background-secondary: var(--side-bar); /*Sidebar background*/
+    --background-secondary-alt: var(--outer-bar); /*Sidebar Title background*/
+    
+    --background-modifier-border: #e6bebe; /*Border outline of quotes, tables, line breaks*/
+    
+    --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
+    --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22); /*??*/
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
+    --background-modifier-success: #197300; /*??*/
+    --background-modifier-error: #3d0000; /*??*/
+    --background-modifier-error-rgb: 61, 0, 0; /*??*/
+    --background-modifier-error-hover: #470000; /*??*/
+    --background-modifier-cover: rgba(0, 0, 0, 0.8); /*??*/
+    
+    --text-on-accent: #dcddde; /*Program Title bar*/
+    --text-muted: var(--soft-text); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+    --text-normal: var(--text); /*Text body of note*/
+    --text-accent: var(--bright-blue); /*Links*/
+    --text-accent-hover: var(--red); /*Links hover*/
+    --text-faint: #4e5b6f; /*Link brackets color*/
+    --text-error: #ff3333; /*??*/
+    --text-error-hover: #990000; /*??*/
+    
+    --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
+    --text-selection: rgba(77, 23, 23, 0.99); /*Cursor dragged highlights*/
+    
+    --interactive-normal: #652121; /*??*/
+    --interactive-hover: #303030; /*??*/
+    --interactive-accent: var(--red); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 72, 54, 153; /*??*/
+    --interactive-accent-hover: #862f35; /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+    
+    --scrollbar-bg: rgba(255, 255, 255, 0.05);
+    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+    --highlight-mix-blend-mode: lighten;
+
+    /*--DEFAULT VARIABLES--*/
+    /*FONTS*/
+    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
+    --mermaid-font: var(--default-font); /*mermaidjs text*/
+    --reveal-font: var(--default-font); /*??*/
+    --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
+
+    /*COLORS*/
+    --dark-gray: #d5dde8;
+    --gray: #c0cee5;
+    --bright-red: #a35158;
+    --dark-red: #2f1010;
+    --dark-lite-red: #ffffff;
+    --red: #c14343;
+    --blue: #4c78cc;
+    --dark-blue: #f8fbff;
+    --navy-blue: #cbcfd8;
+    --bright-blue: #5599d0;
+    --deep-dark-blue: #91a3c1;
+    
+    
+    /*Compatibility Color Recoloring*/
+    --deep-dark-accent: var(--dark-red);
+    --dark-accent: var(--dark-lite-red);
+    --lite-accent: var(--bright-red);
+    --accent: var(--red);
+    --bg: var(--dark-gray);
+    --fg: #9f0202;
+    --side-bar: var(--note);
+    --outer-bar: #dae1e8;
+    --dark-sidebar: var(--deep-dark-blue);
+    --inactive: #91a3c1;
+    
+    --file-select: #ca8385;
+    --file: var(--soft-text);
+    --folder: #912e2e;
+    
+    --note: var(--dark-blue);
+    --text: #697580;
+    --soft-text: #d04e4e;
+    --code-bg: #e6e6e8;
+    --headers: #c14343;
+    --code-text: #ea4262;
+    --tag: #c65656;
+    --table: #c9ced9;
+    
+    --graph-bg: #ffffff;
+    --graph-lines: #debcbc;
+    --graph-node: #d13c3c;
+    --graph-fill: #c14343;
+    --graph-404: #727e93;
+    --graph-img: #aa0a54;
     
     /*Characters*/
     --mylt: #2f1010;
@@ -126,21 +243,27 @@
 }
 
 /*-File Navbar-*/
-.nav-file-title-content, .nav-folder-title-content {
-    color: var(--soft-text);
+/*Vault Name*/
+.nav-folder.mod-root > .nav-file-title, .nav-folder.mod-root > .nav-folder-title {
+    color: var(--accent);
+}
+/*File Colors*/
+.nav-file-title-content {
+    color: var(--file);
 }
 
 /*File selected*/
 .nav-file-title.is-active {
-  background-color: var(--dark-accent);
-  color: #ffffff;
+    background-color: var(--dark-accent);
+    border-color: var(--file-select);
 }
+/* Change color of Folder
+.nav-file-title, .nav-folder-title {
+    color: var(--folder);
+}*/
 
-.popover hover-popover is-loaded {
-    width: 100%;
-}
 
-/*Tag Pane Text*/
+/*-Tag Pane Text-*/
 .tree-item-self {
     color: var(--soft-text);
 }
@@ -168,13 +291,20 @@ input[type='range'] {
 /*Search bar colors*/
 input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
     background: var(--outer-sidebar);
-    border: 1px solid var(--soft-text);
+    border: 1px solid var(--table);
     color: var(--soft-text);
 }
 
+.checkbox-container {
+    cursor: pointer;
+    background-color: var(--deep-dark-accent);
+}
+    
 .suggestion-item.is-selected {
     background-color: var(--dark-accent);
 }
+
+
 
 /*--Setings Menu--*/
 /*Settings Left*/
@@ -240,6 +370,8 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     background-color: var(--dark-accent);
 }
 
+
+
 /*--Graph View--*/
 /*  background of graph view pane*/
 .workspace-leaf-content[data-type = "graph"] .view-content{
@@ -247,7 +379,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 .graph-view.color-fill {
-  color: #cfd7dd !important; /*Created notes color*/
+  color: var(--graph-node); /*Created notes color*/
 }
 
 .graph-view.color-line {
@@ -258,14 +390,14 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 /*Hover Node*/
 .graph-view.color-fill-highlight {
-  color: var(--red); /*Circle color*/
+  color: var(--graph-fill); /*Circle color*/
 }
 .graph-view.color-circle {
   color: white; /*Outline color*/
 }
 
 .graph-view.color-line-highlight {
-  color: var(--red);
+  color: var(--graph-fill);
 }
 
 .graph-view.color-arrow {
@@ -277,24 +409,31 @@ color: var(--soft-text);
 }
 
 .graph-view.color-fill-attachment {
-  color: #aa0a54 !important;
+  color: var(--graph-img) !important;
 }
 
 .graph-view.color-fill-unresolved {
-  color: #727e93 !important; 
+  color: var(--graph-404) !important; 
+}
+
+/*Bottom Bar*/
+.status-bar {
+    background-color: var(--outer-bar);
+    border-top: 1px solid var(--background-modifier-border);
+    color: var(--text-muted);
 }
 
 
 
 /*--NOTE TITLEBAR--*/
 /*Inactive Note Titlebar*/
-.view-header {
-    height: 36px;
-    display: flex;
-    border-top: 1px solid;
-    border-bottom: 2px solid;
-    background-color: var(--graph-bg);
-    z-index: 1;
+.view-header-title {
+    color: var(--inactive);
+    
+}
+
+.view-header-icon {
+    color: var(--soft-text);
 }
 
 /*Active Note Titlebar*/
@@ -303,11 +442,8 @@ color: var(--soft-text);
     border-bottom: 2px solid var(--bright-blue);
 }
 
-/*Bottom Bar*/
-.status-bar {
-    background-color: var(--graph-bg);
-    border-top: 1px solid var(--background-modifier-border);
-    color: var(--text-muted);
+.workspace-leaf.mod-active .view-header-title {
+    color: var(--soft-text);
 }
 
 
@@ -396,7 +532,7 @@ ul ul::before {
     transform: translate(-50%, -50%) rotate(0deg);
     transform-origin: 50% 50%;
     color: var(--fg);
-    padding: 0.5rem;
+    padding: 0.6rem;
 }
 
 /*Embed Window*/
@@ -525,13 +661,13 @@ ul ul::before {
 /*Border Color*/
 .markdown-preview-view th, .markdown-preview-view td {
     padding: 4px 10px;
-    border: 1px solid #2d374a;
+    border: 1px solid var(--table);
 }
 
 
 /*--Tags--*/
 .tag {
-  background-color: var(--dark-accent);
+  background-color: var(--tag);
   border: none;
   color: white;
   font-size: 12px;

@@ -56,12 +56,12 @@
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
 
     /*COLORS*/
-    --dark-gray: #26303e;
+    --dark-gray: #232a34;
     --gray: #454a52;
     --bright-red: #e06c75;
     --dark-red: #2f1010;
     --dark-lite-red: #431314;
-    --red: #c14343;
+    --red: #883737/*#c14343*/;
     --blue: #4c78cc;
     --dark-blue: #1a1e24;
     --navy-blue: #20242b;
@@ -97,9 +97,10 @@
     --graph-bg: var(--deep-dark-blue);
     --graph-lines: #53201F;
     --graph-node: #cfd7dd;
-    --graph-fill: var(--red);
+    --graph-fill: var(--header);
     --graph-404: #727e93;
     --graph-img: var(--blue) /*#ff86be*/;
+    --graph-tag: var(--headers);
     
     /*Characters*/
     --mylt: #2f1010;
@@ -142,9 +143,9 @@
     --text-error: #ff3333; /*??*/
     --text-error-hover: #990000; /*??*/
     
-    --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
+    --text-highlight-bg: rgba(199, 129, 129, 0.4); /*Text highlights*/
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
-    --text-selection: rgba(77, 23, 23, 0.99); /*Cursor dragged highlights*/
+    --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
     
     --interactive-normal: #652121; /*??*/
     --interactive-hover: #303030; /*??*/
@@ -165,7 +166,7 @@
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
 
     /*COLORS*/
-    --dark-gray: #d5dde8;
+    --dark-gray: #e1e6ed;
     --gray: #d6deea;
     --bright-red: #a35158;
     --dark-red: #2f1010;
@@ -205,10 +206,11 @@
     
     --graph-bg: var(--note);
     --graph-lines: rgb(198, 201, 221);
-    --graph-node: #000000;
-    --graph-fill: #c14343;
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
     --graph-404: #727e93;
     --graph-img: var(--blue) /*#5469de*/;
+    --graph-tag: #000000;
     
     /*Characters*/
     --mylt: #2f1010;
@@ -278,7 +280,11 @@
     color: var(--soft-text);
 }
 
-
+.search-result-file-matched-text {
+    color: var(--note);
+    background-color: var(--accent);
+    padding: 2px;
+}
 
 /*-Graph Settings-*/
 .graph-controls.is-close {
@@ -389,11 +395,6 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     border-right: 2px solid var(--red) !important;
     border-bottom: none;
 }
-/*Horizontal Scrollbar Color*/
-.workspace-split.mod-root {
-    background-color: var(--dark-accent);
-}
-
 
 
 /*--Graph View--*/
@@ -429,7 +430,7 @@ color: var(--soft-text);
 }
 
 .graph-view.color-fill-tag {
-  color: var(--headers) !important;
+  color: var(--graph-tag) !important;
 }
 
 .graph-view.color-fill-attachment {
@@ -440,11 +441,26 @@ color: var(--soft-text);
   color: var(--graph-404) !important; 
 }
 
-/*Bottom Bar*/
+
+
+/*--Bottom Bar--*/
 .status-bar {
     background-color: var(--outer-bar);
     border-top: 1px solid var(--background-modifier-border);
     color: var(--text-muted);
+}
+
+
+
+/*--Scrollbars--*/
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+}
+::-webkit-scrollbar {
+  background-color: var(--bg);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--lite-accent);
 }
 
 
@@ -710,6 +726,11 @@ ul ul::before {
     text-decoration: underline;
 }
 
+/*Frontmatter Tags Hover*/
+.frontmatter-container .tag:hover {
+    background-color: var(--outer-bar);
+    color: var(--soft-text);
+}
 
 /*--Embeds--*/
 /* Italicize Embed Title*/

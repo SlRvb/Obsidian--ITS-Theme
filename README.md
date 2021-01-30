@@ -7,7 +7,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 
 ![](Darkmode.png)
 
----
+Editing mode:
 
 ![](Darkmode-Editing.png)
 
@@ -16,6 +16,6 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 
 ![](Lightmode.png)
 
----
+Editing mode:
 
 ![](Lightmode-Editing.png)

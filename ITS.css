@@ -172,7 +172,9 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
     color: var(--soft-text);
 }
 
-
+.suggestion-item.is-selected {
+    background-color: var(--dark-accent);
+}
 
 /*--Setings Menu--*/
 /*Settings Left*/

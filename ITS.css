@@ -241,6 +241,10 @@
     stroke-width: 2px;
 }
 
+.view-action:hover, .view-action.is-active {
+    color: var(--lite-accent);
+}
+
 /*Sidebar Resize Handle*/
 .workspace-leaf-resize-handle {
     background-color: var(--bg);
@@ -725,4 +729,23 @@ ul ul::before {
     font-size: 20px;
     line-height: 1em;
     color: var(--accent);
+}
+
+/*Popover*/
+.popover {
+  font-size: 20px;   /* bigger text to make up for the downscaling */
+  text-align: justify; 
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.25); 
+}
+
+.popover.hover-popover .markdown-embed  {
+    height: 500px;
+}
+
+.popover.hover-popover {
+    transform: scale(0.7); /* downscales the whole content - important for smaller tag pills */
+    max-height: 900px;   
+    min-height: 100px;
+    width: 700px;  
+    background: var(--background-primary);
 }

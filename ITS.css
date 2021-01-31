@@ -15,10 +15,10 @@
     
     --background-modifier-border: #333; /*Border outline of quotes, tables, line breaks*/
     
-    --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
-    --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*??*/
-    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
-    --background-modifier-success: #197300; /*??*/
+    --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*Search Field Bg Color*/
+    --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*Searched Highlight Color*/
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*Outershadow*/
+    --background-modifier-success: #197300; /*Publish Upload Success Background*/
     --background-modifier-error: #3d0000; /*??*/
     --background-modifier-error-rgb: 61, 0, 0; /*??*/
     --background-modifier-error-hover: #470000; /*??*/
@@ -40,7 +40,7 @@
     --interactive-normal: #652121; /*??*/
     --interactive-hover: #303030; /*??*/
     --interactive-accent: var(--red); /*Workspace Note Title Underline*/
-    --interactive-accent-rgb: 72, 54, 153; /*??*/
+    --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
     --interactive-accent-hover: #862f35; /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
     
@@ -54,6 +54,7 @@
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*??*/
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
+    --header-font: 'Calisto MT';
 
     /*COLORS*/
     --dark-gray: #232a34;
@@ -92,7 +93,7 @@
     --headers: #c14343;
     --code-text: #ea4262;
     --tag: var(--dark-lite-red);
-    --table: #2b2e34;
+    --table: #2f3440;
     
     --graph-bg: var(--deep-dark-blue);
     --graph-lines: #53201F;
@@ -128,7 +129,7 @@
     --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
-    --background-modifier-success: #197300; /*??*/
+    --background-modifier-success: #bfdbb7; /*Publish Upload Success Background*/
     --background-modifier-error: #3d0000; /*??*/
     --background-modifier-error-rgb: 61, 0, 0; /*??*/
     --background-modifier-error-hover: #470000; /*??*/
@@ -147,10 +148,10 @@
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
     --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
     
-    --interactive-normal: #652121; /*??*/
+    --interactive-normal: #4a0000; /*Publish published*/
     --interactive-hover: #303030; /*??*/
     --interactive-accent: var(--red); /*Workspace Note Title Underline*/
-    --interactive-accent-rgb: 72, 54, 153; /*??*/
+    --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
     --interactive-accent-hover: #862f35; /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
     
@@ -188,7 +189,7 @@
     --fg: #9f0202;
     --side-bar: var(--note);
     --outer-bar: #dfe7ef;
-    --dark-sidebar: var(--deep-dark-blue);
+    --dark-sidebar: var(--sidebar);
     --inactive: #91a3c1;
     
     --file-select: #ca8385;
@@ -256,7 +257,7 @@
 /*-File Navbar-*/
 /*Vault Name*/
 .nav-folder.mod-root > .nav-file-title, .nav-folder.mod-root > .nav-folder-title {
-    color: var(--lite-accent);
+    color: var(--headers);
 }
 /*File Colors*/
 .nav-file-title-content {
@@ -340,13 +341,12 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 .modal.mod-settings .vertical-tab-content-container {
     padding: 35px 40px 20px 0;
     height: 70vh;
-    background-color: var(--outer-bar);
+    background-color: var(--sidebar);
 }
 .horizontal-tab-content, .vertical-tab-content {
-    background-color: var(--outer-bar);
+    background-color: var(--sidebar);
     padding: 5px 30px;
 }
-
 
 /*Settings Left*/
 .vertical-tab-header {
@@ -362,14 +362,12 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 .horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
     background-color: var(--dark-accent);
 }
-button.mod-cta {
-    background-color: var(--dark-accent);
-    color: var(--text-on-accent);
-}
+
 
 /*Dropdown Arrow*/
 .dropdown {
-background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
+    background-color: var(--bg);
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
 }
 
 /*Account Header 2*/
@@ -386,7 +384,27 @@ background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22ht
 }
 
 
-/*-Sliding Panes-*/
+
+/*--Publish Settings--*/
+.modal-bg {
+    background-color: var(--background-modifier-form-field-highlighted);
+}
+.list-item-part mod-extended publish-upload-item-title {
+    color: white;
+}
+
+/*Published flair*/
+.flair {
+    background-color: var(--interactive-normal);
+    color: white;
+}
+
+/*Publish item select*/
+.file-tree-item-header.is-selected {
+    background-color: rgba(var(--interactive-accent-rgb), 0.2);
+}
+
+/*--Sliding Panes--*/
 /*Hide the gradient of the Title Pane*/
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after {
   background: rgba(0,0,0,0) !important;
@@ -433,7 +451,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 .graph-view.color-line-highlight {
-  color: var(--graph-fill);
+  color: var(--accent);
 }
 
 .graph-view.color-arrow {
@@ -474,8 +492,6 @@ color: var(--soft-text);
   background-color: var(--lite-accent);
 }
 
-
-
 /*--NOTE TITLEBAR--*/
 /*Inactive Note Titlebar*/
 .view-header-title {
@@ -499,6 +515,11 @@ color: var(--soft-text);
 
 
 
+
+
+
+
+
 /*--NOTES--*/
 /*Note*/
 body {
@@ -510,6 +531,52 @@ body {
     color: var(--text-normal);
 }
 
+
+/*--Headings--*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: Calisto MT;
+    color: var(--headers);
+}
+
+/*Headings Line*/
+h1:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--table);
+  left: 0;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  width: 85%;
+  height: 3px;
+  background: var(--table);
+  left: 0;
+}
+
+h3:after {
+  content: "";
+  display: block;
+  width: 65%;
+  height: 3px;
+  background: var(--table);
+  left: 0;
+}
+
+h4:after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 3px;
+  background: var(--table);
+  left: 0;
+}
+
+
 /*Code*/
 .markdown-preview-view code {
     color: var(--code-text);
@@ -518,13 +585,6 @@ body {
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 0.85em;
-}
-
-/*Headings*/
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    font-family: Calisto MT;
-    color: var(--headers);
 }
 
 /*Italicized Text*/
@@ -764,6 +824,10 @@ ul ul::before {
     color: var(--accent);
 }
 
+.markdown-embed h1:after {
+  background: var(--accent);
+}
+
 /*Popover*/
 /*Fit Text Within Popover*/
 .popover {
@@ -776,3 +840,24 @@ ul ul::before {
     height: 500px;
 }
 
+
+
+
+/*---Publish---*/
+.site-header {
+    font: var(--its-font);
+}
+
+
+site-body-left-column-site-name {
+    font: var(--its-font);
+    color: var(--accent);
+}
+
+.site-body {
+    background-color: var(--side-bar);
+}
+
+.site-body-left-column {
+    background-color: var(--outer-bar);
+}

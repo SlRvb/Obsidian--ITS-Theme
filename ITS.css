@@ -16,7 +16,7 @@
     --background-modifier-border: #333; /*Border outline of quotes, tables, line breaks*/
     
     --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
-    --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22); /*??*/
+    --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*??*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-success: #197300; /*??*/
     --background-modifier-error: #3d0000; /*??*/
@@ -126,7 +126,7 @@
     --background-modifier-border: #e6bebe; /*Border outline of quotes, tables, line breaks*/
     
     --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
-    --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22); /*??*/
+    --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-success: #197300; /*??*/
     --background-modifier-error: #3d0000; /*??*/
@@ -256,7 +256,7 @@
 /*-File Navbar-*/
 /*Vault Name*/
 .nav-folder.mod-root > .nav-file-title, .nav-folder.mod-root > .nav-folder-title {
-    color: var(--accent);
+    color: var(--lite-accent);
 }
 /*File Colors*/
 .nav-file-title-content {
@@ -280,11 +280,22 @@
     color: var(--soft-text);
 }
 
+/*--Search--*/
+/*Highlight Search Result*/
 .search-result-file-matched-text {
-    color: var(--note);
-    background-color: var(--accent);
+    color: var(--soft-text);
+    background-color: var(--background-modifier-form-field-highlighted);
     padding: 2px;
 }
+
+input[type='text']:hover,
+input[type='search']:hover,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='number']:hover {
+  background-color: var(--background-modifier-form-field-highlighted);
+}
+
 
 /*-Graph Settings-*/
 .graph-controls.is-close {

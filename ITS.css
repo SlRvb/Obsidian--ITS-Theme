@@ -244,6 +244,13 @@
     stroke-width: 2px;
 }
 
+/*Buttons*/
+.nav-action-button.is-active {
+    background-color: var(--dark-accent);
+    color: var(--soft-text);
+}
+
+/*???*/
 .view-action:hover, .view-action.is-active {
     color: var(--lite-accent);
 }
@@ -589,8 +596,10 @@ h4:after {
 
 /*Italicized Text*/
 i { /*I used for image description, em is just regular italics*/
+    display: block;
     font-style: italic;
     color: #6a6a6a;
+    text-align: center;
 }
 
 
@@ -662,6 +671,31 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Kepano: https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164
+Enlarge Image:*/
+.markdown-preview-view img {
+	cursor:zoom-in;}
+
+.markdown-preview-view img:active {
+	cursor:zoom-out;
+	display:block;
+	z-index:100;
+	position:fixed;
+    max-height:100%;
+    max-width:100%;
+    height:100%;
+    width:100%;
+    object-fit: contain;
+    margin:0 auto;
+    text-align:center;
+    top: 50%;
+  	transform: translateY(-50%);
+    padding:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:var(--background-primary);}
 
 /*--List--*/
 /*Checkboxes*/
@@ -764,6 +798,10 @@ ul ul::before {
     left: -15px; top: 0; bottom: 0; 
 } 
 
+/*Colored List Markers*/
+li::marker {
+    color: var(--soft-text);
+}
 
 /*--Table--*/
 .markdown-preview-view table {
@@ -839,6 +877,7 @@ ul ul::before {
 .popover.hover-popover .markdown-embed  {
     height: 500px;
 }
+
 
 
 

@@ -20,7 +20,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - **Gallery/Masonry:** Side by side images.
         - Put `cssclass: img-grid` into frontmatter/YAML, separate by adding spaces
         *Credit*: [Kepano]https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359)
-- <i></i> for images or other files attributions
+- \<i>\</i> for images or other files attributions
     - Adds a different color to text within it to differentiate it from other text
 
 

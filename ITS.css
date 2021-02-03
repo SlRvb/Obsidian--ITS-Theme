@@ -89,9 +89,9 @@
     --note: var(--dark-blue);
     --text: #dcddde;
     --soft-text: #aab3ca;
-    --code-bg: var(--navy-blue);
+    --code-bg: #232831;
     --headers: #c14343;
-    --code-text: #ea4262;
+    --code-text: #ff4165;
     --tag: var(--dark-lite-red);
     --table: #2f3440;
     
@@ -196,13 +196,13 @@
     --file-select: #ca8385;
     --file: var(--soft-text);
     --folder: #912e2e;
-    
+    --headers: #c14343;
     --note: var(--dark-blue);
     --text: #697580;
     --soft-text: #d04e4e;
-    --code-bg: #232831/*#e6e6e8*/;
-    --headers: #c14343;
+    --code-bg: #e6e6e8;
     --code-text: #ea4262;
+
     --tag: #c65656;
     --table: #c9ced9;
     

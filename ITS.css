@@ -54,7 +54,7 @@
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*??*/
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
-    --header-font: 'Calisto MT';
+    --its-font: 'Calisto MT';
 
     /*COLORS*/
     --dark-gray: #232a34;
@@ -165,6 +165,7 @@
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*??*/
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
+    --its-font: 'Calisto MT';
 
     /*COLORS*/
     --dark-gray: #e1e6ed;
@@ -199,7 +200,7 @@
     --note: var(--dark-blue);
     --text: #697580;
     --soft-text: #d04e4e;
-    --code-bg: #e6e6e8;
+    --code-bg: #232831/*#e6e6e8*/;
     --headers: #c14343;
     --code-text: #ea4262;
     --tag: #c65656;
@@ -499,6 +500,8 @@ color: var(--soft-text);
   background-color: var(--lite-accent);
 }
 
+
+
 /*--NOTE TITLEBAR--*/
 /*Inactive Note Titlebar*/
 .view-header-title {
@@ -546,45 +549,60 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--headers);
 }
 
-/*Headings Line*/
+/*Editor Heading Re-size*/
+/*Inspired by Red Graphite*/
+.cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+    font-size: 10px;
+}
+
+/*Heading Line*/
 h1:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: var(--table);
-  left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--table);
+    left: 0;
 }
 
 h2:after {
-  content: "";
-  display: block;
-  width: 85%;
-  height: 3px;
-  background: var(--table);
-  left: 0;
+    content: "";
+    display: block;
+    width: 85%;
+    height: 3px;
+    background: var(--table);
+    left: 0;
 }
 
 h3:after {
-  content: "";
-  display: block;
-  width: 65%;
-  height: 3px;
-  background: var(--table);
-  left: 0;
+    content: "";
+    display: block;
+    width: 65%;
+    height: 3px;
+    background: var(--table);
+    left: 0;
 }
 
 h4:after {
-  content: "";
-  display: block;
-  width: 40%;
-  height: 3px;
-  background: var(--table);
-  left: 0;
+    content: "";
+    display: block;
+    width: 40%;
+    height: 3px;
+    background: var(--table);
+    left: 0;
 }
 
+/*Editor Heading Lines*/
+.cm-s-obsidian pre.HyperMD-header:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--table);
+    left: 0;
+}
 
-/*Code*/
+/*-Code-*/
 .markdown-preview-view code {
     color: var(--code-text);
     font-family: var(--font-monospace);
@@ -592,6 +610,12 @@ h4:after {
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 0.85em;
+}
+
+/*Editor Code*/
+.cm-s-obsidian span.cm-inline-code {
+    background-color: var(--code-bg) !important;
+    vertical-align: baseline;
 }
 
 /*Italicized Text*/
@@ -675,7 +699,8 @@ img {
 /* Kepano: https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164
 Enlarge Image:*/
 .markdown-preview-view img {
-	cursor:zoom-in;}
+	cursor:zoom-in;
+}
 
 .markdown-preview-view img:active {
 	cursor:zoom-out;
@@ -696,6 +721,34 @@ Enlarge Image:*/
     right:0;
     bottom:0;
     background:var(--background-primary);}
+
+/*Kepano: https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359
+Masonry/Gallery View*/
+.markdown-preview-view img {
+	cursor: zoom-in;
+}
+
+.markdown-preview-view img:active {
+	cursor:zoom-out;
+	display:block;
+	z-index:100;
+	position:fixed;
+    max-height:100%;
+    max-width:100%;
+    height:100%;
+    width:100%;
+    object-fit: contain;
+    margin:0 auto;
+    text-align:center;
+    top: 50%;
+  	transform: translateY(-50%);
+    padding:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:var(--background-primary);
+}
+
 
 /*--List--*/
 /*Checkboxes*/
@@ -863,14 +916,15 @@ li::marker {
 }
 
 .markdown-embed h1:after {
-  background: var(--accent);
+    background: var(--accent);
 }
 
 /*Popover*/
 /*Fit Text Within Popover*/
 .popover {
-  font-size: 16px;
-  text-align: justify;
+    font-size: 16px;
+    /*text-align: justify;*/
+    border-color: var(--accent);
 }
 
 /*Increase Popover size*/
@@ -878,20 +932,45 @@ li::marker {
     height: 500px;
 }
 
+/*Blockquote*/
+.markdown-preview-view blockquote {
+    border: 1px solid var(--table);
+    background-color: var(--bg);
+    border-left-width: 8px;
+    position: relative;
+    margin: 2%;
+}
 
+.markdown-preview-view blockquote:after {
+    content: '\201D';
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    font-size: 50px;
+    font-family: var(--its-font);
+    color: var(--headers);
+}
 
 
 
 /*---Publish---*/
 .site-header {
-    font: var(--its-font);
+    font: Calisto MT;
+    text-align: left;
 }
 
+.page-header {
+    font-size: 0px;
+    font-family: Calisto MT;
+    color: transparent;
+    line-height: 0px;
+}
 
 site-body-left-column-site-name {
-    font: var(--its-font);
-    color: var(--accent);
+    font: Calisto MT;
+    color: var(--header);
 }
+
 
 .site-body {
     background-color: var(--side-bar);
@@ -899,4 +978,25 @@ site-body-left-column-site-name {
 
 .site-body-left-column {
     background-color: var(--outer-bar);
+}
+
+.site-body-left-column:before {
+    content: ' ';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--outer-bar);
+    z-index: 0;
+}
+
+
+.graph-view-container {
+    position: relative;
+    height: 300px;
+    border: 1px solid var(--table);
+    border-radius: 10px;
+    background-color: var(--graph-bg);
+    padding: 4px;
 }

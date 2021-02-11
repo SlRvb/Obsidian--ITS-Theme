@@ -5,17 +5,6 @@
     overflow: hidden;
     height: 100%;
     background-color: var(--background-secondary);
-    
-    --ln: #9884c3;
-    --ln-2: #7a5fb2;
-    --ln-3: #a670ba;
-    --ln-hr: #564281;
-    
-    --bblh:;
-    --bblh-2:;
-    --bblh-hr:;
-    
-    --salt:;
 }
 
 .theme-dark {
@@ -46,7 +35,7 @@
     
     --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
-    --text-selection: rgba(77, 23, 23, 0.99); /*Cursor dragged highlights*/
+    --text-selection: rgba(77, 23, 23, 0.46); /*Cursor dragged highlights*/
     
     --interactive-normal: #652121; /*??*/
     --interactive-hover: #303030; /*??*/
@@ -71,7 +60,7 @@
     --dark-gray: #232a34;
     --gray: #454a52;
     --bright-red: #e06c75;
-    --dark-red: #2f1010;
+    --dark-red: #571a1a/*#2f1010*/;
     --dark-lite-red: #431314;
     --red: #883737/*#c14343*/;
     --blue: #4c78cc;
@@ -103,7 +92,7 @@
     --code-bg: #232831;
     --headers: #c14343;
     --hr: var(--gray);
-    --code-text: rgb(255, 64, 101);
+    --code-text: #fa4545;
     --tag: var(--dark-red);
     --table: #2f3440;
     
@@ -208,6 +197,7 @@
     --file-select: #ca8385;
     --file: var(--soft-text);
     --folder: #912e2e;
+    
     --headers: #c14343;
     --note: var(--dark-blue);
     --text: #697580;
@@ -290,11 +280,6 @@
     background-color: var(--dark-accent);
     border-color: var(--file-select);
 }
-/* Change color of Folder
-.nav-file-title, .nav-folder-title {
-    color: var(--folder);
-}*/
-
 
 
 /*-Tag Pane Text-*/
@@ -620,14 +605,36 @@ h4:after {
     color: var(--code-text);
     font-family: var(--font-monospace);
     background-color: var(--code-bg);
-    
     z-index: 1; /*Lets the highlight appear on top*/
+    line-height: 1.4em;
+}
+
+.markdown-preview-view pre {
+    color: var(--code-text);
+    font-family: var(--font-monospace);
+    background-color: var(--code-bg);
+    z-index: 1; /*Lets the highlight appear on top*/
+    line-height: 1.4em;
+    display: block;
+}
+
+.markdown-preview-view pre[class*="language-"], .markdown-preview-view code[class*="language-"] {
+    background: var(--code-bg);
+    line-height: 1.4em;
+    display: block;
+    white-space: pre-wrap !important;
 }
 
 /*Editor Code*/
-.cm-s-obsidian span.cm-inline-code {
+.cm-s-obsidian pre.HyperMD-codeblock {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    z-index: 0;
+}
+
+.cm-s-obsidian .cm-inline-code {
     background-color: var(--code-bg) !important;
-    vertical-align: baseline;
+    color: var(--code-text);
 }
 
 /*Italicized Text*/
@@ -660,7 +667,7 @@ a, .markdown-preview-view .internal-link {
 }
 .cm-hmd-list-indent .cm-tab::before, ul ul::before {
     content:'';
-    border-left: 5px solid var(--accent);
+    border-left: 2px solid var(--accent);
     position: absolute;
 }
 .cm-hmd-list-indent .cm-tab::before {
@@ -669,15 +676,21 @@ a, .markdown-preview-view .internal-link {
     bottom: -4px; 
 }
 ul ul::before {
-    left: -15px;
+    left: -14px;
     top: 0;
     bottom: 0; 
+}
+/*Bullet Shape and Smaller Indentation*/
+ul, ul ul {
+    display: block;
+    list-style-type: "⧫  ";
+    padding-inline-start: 28px;
 }
 
 
 /*--Horizontal Linebreak--*/
 .markdown-preview-view hr {
-    border-color: var(--hr) !important;
+    border-color: var(--hr);
 }   
 
 /*Stylized hr Line*/
@@ -838,35 +851,12 @@ input[type="checkbox checked"] {
     background-color: var(--blue);
 }
 
-/*List Smaller Indentation*/
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 28px;
-}
-
-/*List Connecting Line*/
-.cm-hmd-list-indent .cm-tab, ul ul {
-    position: relative;
-}
-.cm-hmd-list-indent .cm-tab::before, ul ul::before {
-    content:'';
-    border-left: 2px solid var(--red);
-    position: absolute;
-}
-.cm-hmd-list-indent .cm-tab::before {
-    left: 0; top: -5px; bottom: -4px; 
-}
-ul ul::before {
-    left: -15px; top: 0; bottom: 0; 
-} 
 
 /*Colored List Markers*/
 li::marker {
     color: var(--soft-text);
 }
+
 
 /*--Table--*/
 .markdown-preview-view table {
@@ -901,12 +891,13 @@ li::marker {
 }
 
 /*--Frontmatter--*/
+/*No Background Color, Smaller Padding*/
 .frontmatter-container {
     background-color: transparent;
     border: 0px;
     padding: 0px 14px;
 }
-
+/*Horizontal line for bottom*/
 .frontmatter-container:after {
     content: "";
     display: block;
@@ -956,10 +947,26 @@ li::marker {
 }
 
 /*Popover*/
+.popover.hover-popover {
+    margin: 0px;
+}
+
 /*Fit image in popover*/
 .popover.hover-popover img {
     max-width: 100%;
     height: auto;
+}
+
+.popover.hover-popover img {
+    object-fit: cover;
+    height: 100px;
+    width: 100%;
+    object-position: center;
+}
+
+.popover.hover-popover blockquote:before {
+    top: -5px;
+    z-index: 0;
 }
 
 /*Fit Text Within Popover**
@@ -973,6 +980,10 @@ li::marker {
     height: 500px;
 }*/
 
+.popover.hover-popover {
+    width: 500px;
+}
+
 /*Blockquote*/
 .markdown-preview-view blockquote {
     border: 1px solid var(--table);
@@ -980,9 +991,10 @@ li::marker {
     border-left-width: 8px;
     position: relative;
     margin: 2%;
+    padding-right: 6%; /*Don't overlap with "*/
 }
 
-.markdown-preview-view blockquote:after {
+.markdown-preview-view blockquote:before {
     content: '\201D';
     position: absolute;
     top: 20px;

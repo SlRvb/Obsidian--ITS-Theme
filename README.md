@@ -17,6 +17,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 - Checkboxes
     - *Credit:* [Kepano: Nicer Checkboxes](https://forum.obsidian.md/t/nicer-checkboxes/2238) *Unsure*
 - **Images:**
+    - Images Centered
     - **Zoom:** images enlarges upon clicking and holding it 
         - *Credit:* [Kepano: Image Zoom Click Hold To Expand Images](https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164)
     - **Gallery/Masonry:** Side by side images.
@@ -32,6 +33,9 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - Images fit within the popover window
     - Larger Popover
     - Images are cropped
+- **Table**
+    - Centered
+    - Colored Headings
 
 
 *Folder Icons not included, use this to add your own icons:*

@@ -13,6 +13,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - **Embeded:**: Embedded files have smaller headers and are 1 color
 - Custom Horizontal line
 - Tag Pills (Rectangular)
+- Metadata minimal style
 - Checkboxes
     - *Credit:* [Kepano: Nicer Checkboxes](https://forum.obsidian.md/t/nicer-checkboxes/2238) *Unsure*
 - **Images:**
@@ -27,6 +28,11 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - Soft background
     - Wider blockquote
     - Quotation marks added top right corner
+- **Popover**
+    - Images fit within the popover window
+    - Larger Popover
+    - Images are cropped
+
 
 *Folder Icons not included, use this to add your own icons:*
 ```

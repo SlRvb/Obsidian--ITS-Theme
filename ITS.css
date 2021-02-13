@@ -1,12 +1,15 @@
-.workspace {
-    background-color: var(--background-secondary);
-    
+:root {
     /*FONTS*/
     --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*??*/
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
     --its-font: 'Calisto MT'; /*Doesn't work*/
+    
+}
+
+.workspace {
+    background-color: var(--background-secondary);
     
     /**/
     --border-radius: 0px;
@@ -260,16 +263,37 @@
     /*border-bottom: 3px solid var(--accent);*/
     padding-bottom: 2%;
 }
+/*Nav Folder Lines*/
+.nav-folder, .nav-file {
+    margin: -2px !important;
+    border-left: 2px solid var(--hr);
+}
 
-/*Folder*/
+/*Text wrap*/
+.nav-file-title, .nav-folder-title {
+    white-space: normal;
+    width: auto;
+    border-radius: var(--border-radius);
+}
+
+/*Folder Bold*/
 .nav-folder-title-content {
     font-weight: 600;
+}
+
+/*Folder Push Left*/
+.nav-folder-title {
+    padding-left: 8.6%;
+}
+
+/*File Under Folder*/
+.nav-file-title {
+    padding-left: 1.8%;
 }
 
 /*File Colors*/
 .nav-file-title-content {
     color: var(--file);
-    text-overflow: ellipsis;
 }
 
 /*File selected*/
@@ -278,23 +302,32 @@
     border-color: var(--file-select);
 }
 
-/*Nav Folder Lines*/
-.nav-folder, .nav-file{
-    margin: -2px !important;
-    border-left: 2px solid var(--hr);
-}
 
-/*Folder Icons*/
+/*Nav Folder/File Icons*/
 .nav-folder-children .nav-folder-title-content::before {
-    content: '\1F5BF  ';
+    content: '\1F5BF';
     color: var(--folder);
+    margin-right: 7px;
 }
 .nav-folder-children .nav-file-title-content:first-child::before {
-    content: "\1F5D0   ";
+    content: "\1F5D0";
     color: var(--folder);
-    padding-left: 5px;
+    margin-right: 7px;
 }
 
+/*Arrows*/
+.nav-folder-collapse-indicator {
+    margin-left: -14px;
+    width: 9px;
+    color: var(--soft-text);
+}
+
+.nav-folder .collapse-icon {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 9px;
+    color: var(--soft-text);
+}
 
 
 /*-Core Plugin Panes-*/
@@ -599,7 +632,7 @@ body {
 
 
 /*--Headings--*/
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     font-weight: 600;
     font-family: 'Calisto MT';
     color: var(--headers);
@@ -763,6 +796,11 @@ ul, ul ul, ul ul ul, ul ul ul ul {
     color: var(--fg);
     padding: 5px; /*Symbol Padding*/
     background-color: var(--background-primary); /*Color bg to cover line*/
+}
+
+.cm-s-obsidian pre.HyperMD-hr {
+    text-align: center;
+    border-top: 2px solid var(--hr);
 }
 
 
@@ -1070,6 +1108,7 @@ li::marker {
     padding-right: 6%; /*Don't overlap with "*/
 }
 
+/*Quotation Mark*/
 .markdown-preview-view blockquote:before {
     content: '\201D';
     position: absolute;

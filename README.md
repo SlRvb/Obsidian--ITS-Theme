@@ -45,6 +45,10 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
         - *Note: Dot appears at bottom left corner. If it's too annoying: Delete Lines 312 to 320*
 - **Folder Navigation Icons**
     - Credit: [Deathau](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/109)
+- **Text Wrapping**
+    - Outline Pane
+    - Tag Pane
+    - Folder Navigation *Planned*
 
 *Folder Icons based on Folder Title not included, use this to add your own icons:*
 ```

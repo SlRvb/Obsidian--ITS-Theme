@@ -7,6 +7,9 @@
     --reveal-font: var(--default-font); /*??*/
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
     --its-font: 'Calisto MT'; /*Doesn't work*/
+    
+    /**/
+    --border-radius: 0px;
 }
 
 .theme-dark {
@@ -243,7 +246,7 @@
 }
 /*Top*/
 .workspace-tab-header.is-active {
-    border-radius: 0px;
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
 }
 
 
@@ -324,6 +327,8 @@
     margin-left: 3.3%;
     border-left: 2px solid var(--inactive);
     transition: all 0.5s ease-in-out;
+    border-radius: var(--border-radius);
+    padding-left: 10px;
 }
 .outline .tree-item-children:hover {
     border-left-color: var(--accent);
@@ -357,7 +362,7 @@ input[type='number']:hover {
 .graph-controls {
     background-color: var(--outer-bar);
     border: 1px solid var(--background-modifier-border);
-    border-radius:0px;
+    border-radius: var(--border-radius);
 }
 
 /*Arrows*/
@@ -391,7 +396,7 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 /*--Setings Menu--*/
 /*Square Settings Background*/
 .modal {
-    border-radius: 0px;
+    border-radius: var(--border-radius);
 }
 
 /*Settings Right*/
@@ -547,15 +552,15 @@ color: var(--soft-text);
 /*Scrollbar*/
 ::-webkit-scrollbar-thumb {
     background-color: var(--accent);
-    -webkit-border-radius: 0px; /*Remove Rounding*/
+    -webkit-border-radius: var(--border-radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar-thumb:active {
     background-color: var(--lite-accent);
-    -webkit-border-radius: 0px; /*Remove Rounding*/
+    -webkit-border-radius: var(--border-radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar {
     background-color: var(--bg);
-    -webkit-border-radius: 0px; /*Remove Rounding*/
+    -webkit-border-radius: var(--border-radius); /*Remove Rounding*/
 }
 
 
@@ -1009,7 +1014,7 @@ li::marker {
 /*Larger Popover*/
 .popover.hover-popover {
     width: 30%;
-    border-radius: 0px;
+    border-radius: var(--border-radius);
     min-height: 100px;
     max-height: 600px;
     border: 2px solid var(--dark-accent);

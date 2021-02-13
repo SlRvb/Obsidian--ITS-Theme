@@ -1,10 +1,12 @@
 .workspace {
-    display: flex;
-    flex-grow: 1;
-    transition: padding-left 100ms ease-in;
-    overflow: hidden;
-    height: 100%;
     background-color: var(--background-secondary);
+    
+    /*FONTS*/
+    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
+    --mermaid-font: var(--default-font); /*mermaidjs text*/
+    --reveal-font: var(--default-font); /*??*/
+    --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
+    --its-font: 'Calisto MT';
 }
 
 .theme-dark {
@@ -37,9 +39,9 @@
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
     --text-selection: rgba(77, 23, 23, 0.46); /*Cursor dragged highlights*/
     
-    --interactive-normal: #652121; /*??*/
-    --interactive-hover: #303030; /*??*/
-    --interactive-accent: var(--red); /*Workspace Note Title Underline*/
+    --interactive-normal: #652121; /*Button Color*/
+    --interactive-hover: #303030;/*Button Color*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
     --interactive-accent-hover: #862f35; /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
@@ -49,19 +51,13 @@
     --highlight-mix-blend-mode: lighten;
 
     /*--DEFAULT VARIABLES--*/
-    /*FONTS*/
-    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
-    --mermaid-font: var(--default-font); /*mermaidjs text*/
-    --reveal-font: var(--default-font); /*??*/
-    --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
-    --its-font: 'Calisto MT';
 
     /*COLORS*/
     --dark-gray: #232a34;
     --gray: #454a52;
     --bright-red: #e06c75;
-    --dark-red: #571a1a/*#2f1010*/;
-    --dark-lite-red: #431314;
+    --dark-red: #290000/*#2f1010*/;
+    --dark-lite-red: #571a1a;
     --red: #883737/*#c14343*/;
     --blue: #4c78cc;
     --dark-blue: #1a1e24;
@@ -88,13 +84,15 @@
     
     --note: var(--dark-blue);
     --text: #dcddde;
+    --headers: #c14343;
     --soft-text: #aab3ca;
     --code-bg: #232831;
-    --headers: #c14343;
-    --hr: var(--gray);
     --code-text: #fa4545;
-    --tag: var(--dark-red);
+    
+    --tag: var(--dark-lite-red);
     --table: #2f3440;
+    --hr: var(--gray);
+    --i-at: #956666;
     
     --graph-bg: var(--deep-dark-blue);
     --graph-lines: #53201F;
@@ -104,19 +102,6 @@
     --graph-img: var(--blue) /*#ff86be*/;
     --graph-tag: var(--headers);
     
-    /*Characters*/
-    --mylt: #2f1010;
-    --dyan: #6D5A8C;
-    --quinn: #ff8ad7;
-    --ryan: #79aec6;
-    --elisa: #e06c75;
-    --luciera: #619861;
-    --ferran: #957130;
-    --ryo: #3d5986;
-    --daniel: #0b1c41;
-    --anthera: #431314;
-    --jasmine: #c6a20a;
-    --alex: #7f7c8d;
 }
 
 .theme-light {
@@ -161,12 +146,6 @@
     --highlight-mix-blend-mode: lighten;
 
     /*--DEFAULT VARIABLES--*/
-    /*FONTS*/
-    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
-    --mermaid-font: var(--default-font); /*mermaidjs text*/
-    --reveal-font: var(--default-font); /*??*/
-    --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
-    --its-font: 'Calisto MT';
 
     /*COLORS*/
     --dark-gray: #e1e6ed;
@@ -208,6 +187,7 @@
     --tag: #c65656;
     --table: #c9ced9;
     --hr: var(--gray);
+    --i-at: #804848;
     
     --graph-bg: var(--note);
     --graph-lines: rgb(198, 201, 221);
@@ -217,19 +197,7 @@
     --graph-img: var(--blue) /*#5469de*/;
     --graph-tag: #000000;
     
-    /*Characters*/
-    --mylt: #2f1010;
-    --dyan: #6D5A8C;
-    --quinn: #ff8ad7;
-    --ryan: #79aec6;
-    --elisa: #e06c75;
-    --luciera: #619861;
-    --ferran: #957130;
-    --ryo: #3d5986;
-    --daniel: #0b1c41;
-    --anthera: #431314;
-    --jasmine: #c6a20a;
-    --alex: #7f7c8d;
+    
 }
 
 
@@ -267,7 +235,7 @@
 
 /*-File Navbar-*/
 /*Vault Name*/
-.nav-folder.mod-root > .nav-file-title, .nav-folder.mod-root > .nav-folder-title {
+.nav-folder.mod-root > .nav-file-title {
     color: var(--headers);
 }
 /*File Colors*/
@@ -424,6 +392,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:after {
     background: rgba(0,0,0,0) !important;
 }
+/*Recolored and Eased Dropshadow*/
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
+    box-shadow: 0px 0px 20px 20px rgba(0, 28, 74, 0.15) !important;
+}
 
 /*Note Title Bar*/
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
@@ -504,6 +476,7 @@ color: var(--soft-text);
 /*Inactive Note Titlebar*/
 .view-header-title {
     color: var(--inactive);
+    background-color:;
     
 }
 
@@ -512,10 +485,6 @@ color: var(--soft-text);
 }
 
 /*Active Note Titlebar*/
-.workspace-leaf.mod-active .view-header {
-    background-color: var(--deep-dark-accent);
-    border-bottom: 2px solid var(--bright-blue);
-}
 
 .workspace-leaf.mod-active .view-header-title {
     color: var(--soft-text);
@@ -543,7 +512,7 @@ body {
 /*--Headings--*/
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    font-family: Calisto MT;
+    font-family: var(--its-font);
     color: var(--headers);
 }
 
@@ -634,14 +603,14 @@ h4:after {
 
 .cm-s-obsidian .cm-inline-code {
     background-color: var(--code-bg) !important;
-    color: var(--code-text);
+    color: var(--code-text) !important;
 }
 
 /*Italicized Text*/
 i { /*I used for image description, em is just regular italics*/
     display: block;
     font-style: italic;
-    color: #6a6a6a;
+    color: var(--i-at);
     text-align: center;
 }
 
@@ -681,9 +650,8 @@ ul ul::before {
     bottom: 0; 
 }
 /*Bullet Shape and Smaller Indentation*/
-ul, ul ul {
-    display: block;
-    list-style-type: "⧫  ";
+ul, ul ul, ul ul ul, ul ul ul ul {
+    list-style-type: "⬥  ";
     padding-inline-start: 28px;
 }
 

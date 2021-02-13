@@ -48,7 +48,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 - **Text Wrapping**
     - Outline Pane
     - Tag Pane
-    - Folder Navigation *Planned*
+    - Folder Navigation
 
 *Folder Icons based on Folder Title not included, use this to add your own icons:*
 ```

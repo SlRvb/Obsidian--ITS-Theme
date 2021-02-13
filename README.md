@@ -7,15 +7,17 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 # Features
 - Dark and Light mode compatible
 - Colored Graph
+- Squared Edges
 - **Heading:**
     - **Underline**: spans across the page depending on the heading
     - **Font:** Calisto MT
     - **Embeded:**: Embedded files have smaller headers and are 1 color
 - Custom Horizontal line
+    - *Credit:* [TriDiamond](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/223)
 - Tag Pills (Rectangular)
 - Metadata minimal style
 - Checkboxes
-    - *Credit:* [Kepano: Nicer Checkboxes](https://forum.obsidian.md/t/nicer-checkboxes/2238) *Unsure*
+    - *Credit:* [Kepano: Nicer Checkboxes](https://forum.obsidian.md/t/nicer-checkboxes/2238)
 - **Images:**
     - Images Centered
     - **Zoom:** images enlarges upon clicking and holding it 
@@ -25,20 +27,26 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
         - *Credit*: [Kepano: Display side by side image grid (CSS snippet)](https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359)
 - \<i>\</i> for images or other files attributions
     - Adds a different color to text within it to differentiate it from other text
+    - Centered to match image centering
 - **Blockquotes**
     - Soft background
     - Wider blockquote
     - Quotation marks added top right corner
 - **Popover**
-    - Images fit within the popover window
     - Larger Popover
-    - Images are cropped
+    - Images fit within the popover window
+    - Images are cropped in popover window
 - **Table**
-    - Centered
     - Colored Headings
+- **Line Relationships**
+    - Bullet Points
+        - *Credit:* [Lizardmenfromspace](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/2)
+    - Outline Pane
+    - Folder Navigation
+- **Folder Navigation Icons**
+    - Credit: [Deathau](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/109)
 
-
-*Folder Icons not included, use this to add your own icons:*
+*Folder Icons based on Folder Title not included, use this to add your own icons:*
 ```
 .nav-folder-title[data-path="<Folder name here>"] .nav-folder-title-content::before {
   content: "<Emoji here> ";

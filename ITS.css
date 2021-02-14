@@ -305,14 +305,18 @@
 
 /*Nav Folder/File Icons*/
 .nav-folder-children .nav-folder-title-content::before {
-    content: '\1F5BF';
-    color: var(--folder);
+    content: '📁'/*\1F5BF*/;
+    color: transparent;
+    text-shadow: 0 0 0 var(--folder);
     margin-right: 7px;
+    font-size: 13px;
 }
 .nav-folder-children .nav-file-title-content:first-child::before {
-    content: "\1F5D0";
-    color: var(--folder);
+    content: "📄"/*\1F5D0*/;
+    color: transparent;
+    text-shadow: 0 0 0 var(--file);
     margin-right: 7px;
+    font-size: 10px;
 }
 
 /*Arrows*/
@@ -611,8 +615,6 @@ color: var(--soft-text);
 .workspace-leaf.mod-active .view-header-title {
     color: var(--soft-text);
 }
-
-
 
 
 

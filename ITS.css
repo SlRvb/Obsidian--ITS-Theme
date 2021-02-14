@@ -285,10 +285,16 @@
 .nav-folder-title {
     padding-left: 8.6%;
 }
+.nav-folder-title:hover {
+    padding-left: 8%;
+}
 
 /*File Under Folder*/
 .nav-file-title {
     padding-left: 1.8%;
+}
+.nav-file-title:hover {
+    padding-left: 1%;
 }
 
 /*File Colors*/

@@ -4,13 +4,11 @@
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*??*/
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
-    --its-font: 'Calisto MT'; /*Doesn't work*/
-    
+    --its-font: 'Calisto MT'; /*Works, but if it doesn't, needs !important*/
 }
 
 .workspace {
     background-color: var(--background-secondary);
-    
     /**/
     --border-radius: 0px;
 }
@@ -87,6 +85,7 @@
     --file-select: var(--dark-lite-red);
     --file: var(--soft-text);
     --folder: #e05858;
+    --f-hover: var(--accent);
     
     --note: var(--dark-blue);
     --text: #dcddde;
@@ -179,8 +178,9 @@
     --inactive: #91a3c1;
     
     --file-select: #ca8385;
-    --file: var(--soft-text);
-    --folder: #912e2e;
+    --file: #647489;
+    --folder: #ce6d6d;
+    --f-hover: #912e2e;
     
     --headers: #c14343;
     --note: var(--dark-blue);
@@ -255,6 +255,21 @@
 
 
 /*-File Navbar-*/
+/*Adjusting Padding of Navbar Icons*/
+.nav-header {
+    padding: 3% 0px 5px;
+}
+.nav-action-button {
+    padding: 5px 8px 0 8px;
+    margin: 0 3px 0px 3px;
+    border-radius: var(--border-radius);
+}
+
+/*Remove Bottom Scrollbar*/
+.nav-files-container {
+    overflow-x: hidden;
+}
+
 /*Vault Name*/
 .nav-folder.mod-root > .nav-file-title, .nav-folder.mod-root > .nav-folder-title {
     color: var(--folder);
@@ -263,10 +278,15 @@
     /*border-bottom: 3px solid var(--accent);*/
     padding-bottom: 2%;
 }
+
 /*Nav Folder Lines*/
 .nav-folder, .nav-file {
     margin: -2px !important;
     border-left: 2px solid var(--hr);
+}
+/*Align Folder Line*/
+.nav-folder-children {
+    padding-left: 17px;
 }
 
 /*Text wrap*/
@@ -286,7 +306,7 @@
     padding-left: 8.6%;
 }
 .nav-folder-title:hover {
-    padding-left: 8%;
+    color: var(--f-hover) !important;
 }
 
 /*File Under Folder*/
@@ -294,11 +314,12 @@
     padding-left: 1.8%;
 }
 .nav-file-title:hover {
-    padding-left: 1%;
+    color: var(--f-hover) !important;
+    font-weight: 600; 
 }
 
 /*File Colors*/
-.nav-file-title-content {
+.nav-file-title {
     color: var(--file);
 }
 
@@ -314,15 +335,15 @@
     content: '📁'/*\1F5BF*/;
     color: transparent;
     text-shadow: 0 0 0 var(--folder);
-    margin-right: 7px;
+    margin-right: 4px;
     font-size: 13px;
 }
 .nav-folder-children .nav-file-title-content:first-child::before {
     content: "📄"/*\1F5D0*/;
     color: transparent;
     text-shadow: 0 0 0 var(--file);
-    margin-right: 7px;
-    font-size: 10px;
+    margin-right: 5px;
+    font-size: 12px;
 }
 
 /*Arrows*/
@@ -352,6 +373,9 @@
 .tree-item-self {
     color: var(--soft-text);
 }
+.tag-container .tree-item-self:hover {
+    color: var(--code-text);
+}
 
 /*Tag Pane Lines*/
 /* Works but Dot appears*/
@@ -373,7 +397,7 @@
     border-radius: var(--border-radius);
     padding-left: 10px;
 }
-.outline .tree-item-children:hover {
+.outline .tree-item-text:hover {
     border-left-color: var(--accent);
 }
 
@@ -480,7 +504,7 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
     font-size: 30px;
     font-weight: 900;
     text-align: center;
-    font-family: 'Calisto MT';
+    font-family: var(--its-font) !important;
 }
 
 /*Hotkey*/
@@ -539,45 +563,45 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 /*--Graph View--*/
 /*  background of graph view pane*/
 .workspace-leaf-content[data-type = "graph"] .view-content{
-  background-color: var(--graph-bg); 
+    background-color: var(--graph-bg); 
 }
 
 .graph-view.color-fill {
-  color: var(--graph-node); /*Created notes color*/
+    color: var(--graph-node); /*Created notes color*/
 }
 
 .graph-view.color-line {
-  color: var(--graph-lines);
+    color: var(--graph-lines);
 }
 .graph-view.color-text {
-  color: var(--soft-text);
+    color: var(--soft-text);
 }
 /*Hover Node*/
 .graph-view.color-fill-highlight {
-  color: var(--graph-fill); /*Circle color*/
+    color: var(--graph-fill); /*Circle color*/
 }
 .graph-view.color-circle {
-  color: white; /*Outline color*/
+    color: white; /*Outline color*/
 }
 
 .graph-view.color-line-highlight {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 .graph-view.color-arrow {
-color: var(--soft-text);
+    color: var(--soft-text);
 }
 
 .graph-view.color-fill-tag {
-  color: var(--graph-tag) !important;
+    color: var(--graph-tag) !important;
 }
 
 .graph-view.color-fill-attachment {
-  color: var(--graph-img) !important;
+    color: var(--graph-img) !important;
 }
 
 .graph-view.color-fill-unresolved {
-  color: var(--graph-404) !important; 
+    color: var(--graph-404) !important; 
 }
 
 
@@ -636,13 +660,14 @@ body {
     font-size: 16px;
     background-color: var(--background-primary);
     color: var(--text-normal);
+    z-index: 1;
 }
 
 
 /*--Headings--*/
 h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     font-weight: 600;
-    font-family: 'Calisto MT';
+    font-family: var(--its-font) !important;
     color: var(--headers);
 }
 
@@ -732,7 +757,6 @@ i { /*I used for image description, em is just regular italics*/
 
 
 
-
 /*--Link--*/
 /*Active Link*/
 a, .markdown-preview-view .internal-link {
@@ -763,17 +787,21 @@ a, .markdown-preview-view .internal-link {
     bottom: -4px; 
 }
 ul ul::before {
-    left: -17px;
+    left: -12px;
     top: 0;
     bottom: 0; 
 }
 /*Bullet Shape and Smaller Indentation*/
 ul, ul ul, ul ul ul, ul ul ul ul {
-    list-style-type: "⬥  ";
-    padding-inline-start: 28px;
+    list-style-type: "⬥ ";
+    padding-inline-start: 25px;
 }
 
-
+/*List Arrow*/
+.markdown-preview-view .list-collapse-indicator {
+    padding-left: 13px;
+    /*display:none;*/
+}
 
 /*--Horizontal Linebreak--*/
 .markdown-preview-view hr {
@@ -977,7 +1005,7 @@ li::marker {
     text-decoration: underline;
 }
 
-/*--Frontmatter--*/
+/*--Frontmatter/Metadata--*/
 /*No Background Color, Smaller Padding*/
 .frontmatter-container {
     background-color: transparent;
@@ -1008,17 +1036,23 @@ li::marker {
 }
 
 /*--Embeds--*/
+/*Remove Top Padding*/
+.markdown-embed .markdown-preview-view {
+    padding: 10px;
+}
+
 /* Italicize Embed Title*/
 .markdown-embed-title, .file-embed-title {
     color: var(--lite-accent);
     font-size: 20px;
-    line-height: 40px;
-    top: 5px;
-    left: 0;
-    right: 0;
+    font-family: var(--its-font);
+    line-height: 20px; /*Lower Height Title*/
     width: 100%;
+    height: auto;
     text-align: center;
     font-weight: 900;
+    padding: 1% 8% 2% 1%;
+    white-space: normal;
 }
 
 /* Italicize Embed Headings*/
@@ -1033,13 +1067,14 @@ li::marker {
 .markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
     border-top: 1px solid var(--background-modifier-border);
     border-bottom: 1px solid var(--background-modifier-border);
-    padding: 4px 0;
     margin: 28px 0;
 }
 
 /*Embed Link Color*/
 .markdown-embed-link, .file-embed-link {
     color: var(--lite-accent);
+    background-color: var(--note);
+    padding: 5px 5px 0px 5px;
 }
 
 

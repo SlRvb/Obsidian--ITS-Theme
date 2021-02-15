@@ -49,7 +49,9 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 - **Text Wrapping**
     - Outline Pane
     - Tag Pane
-    - Folder Navigation
+    - File Explorer Sidebar
+    - Embed Titles
+    - Query Titles
 
 *Folder Icons based on Folder Title not included, use this to add your own icons:*
 ```
@@ -65,15 +67,16 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 
 ![](Darkmode.png)
 
-Edit mode:
-
+**Features**
+![](Darkmode-Features.png)
+**Edit Mode**
 ![](Darkmode-Editing.png)
-
 
 ## Lightmode
 
 ![](Lightmode.png)
 
-Edit mode:
-
+**Features**
+![](Lightmode-Features.png)
+**Edit Mode**
 ![](Lightmode-Editing.png)

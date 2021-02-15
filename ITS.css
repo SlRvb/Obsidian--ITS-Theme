@@ -259,6 +259,7 @@
 .nav-header {
     padding: 3% 0px 5px;
 }
+/*Adjusting Button Padding*/
 .nav-action-button {
     padding: 5px 8px 0 8px;
     margin: 0 3px 0px 3px;
@@ -279,6 +280,27 @@
     padding-bottom: 2%;
 }
 
+/*Nav Folder/File Icons*/
+.nav-folder-children .nav-folder-title-content::before {
+    content: '📁'/*\1F5BF*/;
+    color: transparent;
+    text-shadow: 0 0 0 var(--folder);
+    margin-right: 4px;
+    font-size: 13px;
+}
+.nav-folder-children .nav-file-title-content::before {
+    content: "📄"/*\1F5D0*/;
+    color: transparent;
+    text-shadow: 0 0 0 var(--file);
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+/*Inactive Folder Color*/
+.is-collapsed .nav-folder-title-content:before {
+    text-shadow: 0 0 0 var(--headers);
+}
+
 /*Nav Folder Lines*/
 .nav-folder, .nav-file {
     margin: -2px !important;
@@ -286,7 +308,7 @@
 }
 /*Align Folder Line*/
 .nav-folder-children {
-    padding-left: 16px;
+    padding-left: 18px;
 }
 
 /*Text wrap*/
@@ -303,24 +325,20 @@
 
 /*Folder Push Left*/
 .nav-folder-title {
-    padding-left: 8.6%;
+    padding-left: 4px;
 }
 .nav-folder-title:hover {
     color: var(--f-hover) !important;
 }
 
-/*File Under Folder*/
+/*File Colors|File Under Folder*/
 .nav-file-title {
     padding-left: 1.8%;
+    color: var(--file);
 }
 .nav-file-title:hover {
     color: var(--f-hover) !important;
     font-weight: 600; 
-}
-
-/*File Colors*/
-.nav-file-title {
-    color: var(--file);
 }
 
 /*File selected*/
@@ -329,35 +347,9 @@
     border-color: var(--file-select);
 }
 
-
-/*Nav Folder/File Icons*/
-.nav-folder-children .nav-folder-title-content::before {
-    content: '📁'/*\1F5BF*/;
-    color: transparent;
-    text-shadow: 0 0 0 var(--folder);
-    margin-right: 4px;
-    font-size: 13px;
-}
-.nav-folder-children .nav-file-title-content:first-child::before {
-    content: "📄"/*\1F5D0*/;
-    color: transparent;
-    text-shadow: 0 0 0 var(--file);
-    margin-right: 5px;
-    font-size: 12px;
-}
-
 /*Arrows*/
-.nav-folder-collapse-indicator {
-    margin-left: -14px;
-    width: 9px;
-    color: var(--soft-text);
-}
-
 .nav-folder .collapse-icon {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 9px;
-    color: var(--soft-text);
+    display: none;
 }
 
 
@@ -714,6 +706,11 @@ h4:after {
     left: 0;
 }
 
+/*Smaller Header Editor Line Height*/
+.cm-s-obsidian pre.HyperMD-header {
+    line-height: 1 !important;
+}
+
 /*Editor Heading Lines*/
 .cm-s-obsidian pre.HyperMD-header:after {
     content: "";
@@ -895,16 +892,15 @@ Masonry/Gallery View*/
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
-  border: 1px solid var(--text-faint);
-  border-radius: 2px;
+  border: 1px solid var(--accent);
+  border-radius: var(--border-radius);
   position: relative;
-  width: 1.3em;
-  height: 1.3em;
+  width: 15px;
+  height: 15px;
   margin: 0;
   filter: none;
   outline: none;
-  margin-right: 4px;
-  margin-bottom: 2px;
+  margin: auto 6px auto 6px;
   cursor: pointer;
   vertical-align: baseline;
 }
@@ -942,8 +938,8 @@ input[type="checkbox" i] {
     border: 1px solid var(--accent);
     border-radius: 2px;
     position: relative;
-    width: 1.3em;
-    height: 1.3em;
+    width: 15px;
+    height: 15px;
     margin: 0;
     filter: none;
     outline: none;
@@ -1038,7 +1034,7 @@ li::marker {
 /*--Embeds--*/
 /*Remove Top Padding*/
 .markdown-embed .markdown-preview-view {
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 /* Italicize Embed Title*/
@@ -1051,7 +1047,7 @@ li::marker {
     height: auto;
     text-align: center;
     font-weight: 900;
-    padding: 1% 8% 2% 1%;
+    padding: 1% 8% 0% 1%;
     white-space: normal;
 }
 

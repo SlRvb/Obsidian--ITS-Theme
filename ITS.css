@@ -700,21 +700,12 @@ h4:after {
 }
 
 /*-Code-*/
-.markdown-preview-view code {
+.markdown-preview-view code, .markdown-preview-view pre {
     color: var(--code-text);
     font-family: var(--font-monospace);
     background-color: var(--code-bg);
     z-index: 1; /*Lets the highlight appear on top*/
     line-height: 1.4em;
-}
-
-.markdown-preview-view pre {
-    color: var(--code-text);
-    font-family: var(--font-monospace);
-    background-color: var(--code-bg);
-    z-index: 1; /*Lets the highlight appear on top*/
-    line-height: 1.4em;
-    display: block;
 }
 
 .markdown-preview-view pre[class*="language-"], .markdown-preview-view code[class*="language-"] {
@@ -725,15 +716,10 @@ h4:after {
 }
 
 /*Editor Code*/
-.cm-s-obsidian pre.HyperMD-codeblock {
-    background-color: var(--code-bg);
-    color: var(--code-text);
-    z-index: 0;
-}
-
-.cm-s-obsidian .cm-inline-code {
+.cm-s-obsidian pre.HyperMD-codeblock, span.cm-inline-code {
     background-color: var(--code-bg) !important;
     color: var(--code-text) !important;
+    z-index: 0;
 }
 
 /*Italicized Text*/
@@ -743,6 +729,7 @@ i { /*I used for image description, em is just regular italics*/
     color: var(--i-at);
     text-align: center;
 }
+
 
 
 

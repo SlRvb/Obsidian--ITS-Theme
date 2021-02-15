@@ -42,7 +42,8 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - Outline Pane
     - Folder Navigation
     - Tag Pane 
-        - *Note: Dot appears at bottom left corner. If it's too annoying: Delete Lines 312 to 320*
+        - *Note: Dot appears at bottom left corner. If it's too annoying add this snippet:*
+        - ```.tag-container .tree-item-children {border-left: 0px;}```
 - **Folder Navigation Icons**
     - Credit: [Deathau](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/109)
 - **Text Wrapping**

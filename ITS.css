@@ -282,11 +282,11 @@
 /*Nav Folder Lines*/
 .nav-folder, .nav-file {
     margin: -2px !important;
-    border-left: 2px solid var(--hr);
+    border-left: 2px solid var(--table);
 }
 /*Align Folder Line*/
 .nav-folder-children {
-    padding-left: 17px;
+    padding-left: 16px;
 }
 
 /*Text wrap*/
@@ -1149,11 +1149,19 @@ li::marker {
     color: var(--headers);
 }
 
-/*--Smaller Query Titles--*/
+/*--Query--*/
+/*Smaller Query Titles*/
 .markdown-preview-view .internal-query.is-embed .internal-query-header-title {
     font-size: 13px;
     font-weight: 600;
     color: var(--soft-text);
+    line-height: 18px;
+    
+}
+
+/*Header Spacing*/
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
+    padding: 0.5%;
 }
 
 /*---Publish---*/

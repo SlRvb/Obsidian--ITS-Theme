@@ -119,9 +119,9 @@
     --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
-    --background-modifier-success: #bfdbb7; /*Publish Upload Success Background*/
-    --background-modifier-error: #3d0000; /*??*/
-    --background-modifier-error-rgb: 61, 0, 0; /*??*/
+    --background-modifier-success: #deedd9; /*Publish Upload Success Background*/
+    --background-modifier-error: #efa9a9; /*??*/
+    --background-modifier-error-rgb: 240, 131, 131; /*Ctrl F Search Background*/
     --background-modifier-error-hover: #470000; /*??*/
     --background-modifier-cover: var(--dark-red); /*Obsidian Title Bar*/
     
@@ -135,11 +135,11 @@
     --text-error-hover: #990000; /*??*/
     
     --text-highlight-bg: rgba(199, 129, 129, 0.4); /*Text highlights*/
-    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
+    --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Search Highlight*/
     --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
     
-    --interactive-normal: #4a0000; /*Publish published*/
-    --interactive-hover: #303030; /*??*/
+    --interactive-normal: #f5d5d5; /*Button background Color*/
+    --interactive-hover: #303030; /*Button hover text*/
     --interactive-accent: var(--red); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
     --interactive-accent-hover: #862f35; /*Menu Button Hover*/
@@ -147,7 +147,7 @@
     
     --scrollbar-bg: rgba(255, 255, 255, 0.05);
     --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
-    --highlight-mix-blend-mode: lighten;
+    --highlight-mix-blend-mode: darken; /*Search Highlight Mode*/
 
     /*--DEFAULT VARIABLES--*/
 
@@ -412,14 +412,13 @@ input[type='number']:hover {
 }
 
 
-
 /*-Graph Settings-*/
 .graph-controls.is-close {
     /* background-color: var(--background-primary); */
 }
 /*Opened Settings*/
 .graph-controls {
-    background-color: var(--outer-bar);
+    background-color: var(--note);
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--border-radius);
 }
@@ -432,8 +431,9 @@ input[type='number']:hover {
 
 /*Slider Colors*/
 input[type='range'] {
-    background-color: var(--note);
+    background-color: var(--bg);
 }
+
 /*Search bar colors*/
 input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
     background: var(--outer-sidebar);
@@ -518,7 +518,7 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 /*Published flair*/
 .flair {
     background-color: var(--interactive-normal);
-    color: white;
+    color: var(--accent);
 }
 
 /*Publish item select*/
@@ -795,13 +795,15 @@ ul, ul ul, ul ul ul, ul ul ul ul {
     /*display:none;*/
 }
 
-/*--Horizontal Linebreak--*/
-.markdown-preview-view hr {
+/*--Horizontal Linebreak--*/ 
+.markdown-preview-view hr, .HyperMD-hr-bg {
+    height: 0; /*Center Line Vertically*/
+    border-bottom: 1px solid;
     border-color: var(--hr);
-}   
+}
 
 /*Stylized hr Line*/
-.markdown-preview-view hr::after{
+.markdown-preview-view hr::after, div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
     content: "⧫" "⍚" "⧫";
     display: inline-block;
     position: absolute;
@@ -813,11 +815,14 @@ ul, ul ul, ul ul ul, ul ul ul ul {
     background-color: var(--background-primary); /*Color bg to cover line*/
 }
 
+/*Center --- Lines*/
 .cm-s-obsidian pre.HyperMD-hr {
     text-align: center;
-    border-top: 2px solid var(--hr);
 }
-
+/*Hide --- Lines*/
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
+    color: transparent;
+}
 
 
 /*--Images--*/

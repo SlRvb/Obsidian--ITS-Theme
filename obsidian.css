@@ -660,7 +660,7 @@ body {
 h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     font-weight: 600;
     font-family: var(--its-font) !important;
-    color: var(--headers);
+    color: var(--headers) !important;
 }
 
 /*Editor Heading Re-size*/

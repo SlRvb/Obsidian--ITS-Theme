@@ -1115,10 +1115,6 @@ li::marker {
 .popover {
   font-size: 16px;
   text-align: justify;
-
-/*Increase Popover size**
-.popover.hover-popover .markdown-embed  {
-    height: 500px;									 
 }*/
 
 

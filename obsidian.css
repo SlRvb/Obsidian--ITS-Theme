@@ -719,10 +719,11 @@ h4:after {
 /*-Code-*/
 .markdown-preview-view code, .markdown-preview-view pre {
     color: var(--code-text);
-    font-family: var(--font-monospace);
+    font-family: var(--font-monospace) !important;
     background-color: var(--code-bg);
     z-index: 1; /*Lets the highlight appear on top*/
     line-height: 1.4em;
+    border-radius: var(--border-radius);
 }
 
 .markdown-preview-view pre[class*="language-"], .markdown-preview-view code[class*="language-"] {
@@ -730,6 +731,7 @@ h4:after {
     line-height: 1.4em;
     display: block;
     white-space: pre-wrap !important;
+    font-family: var(--font-monospace) !important;
 }
 
 /*Editor Code*/
@@ -737,6 +739,8 @@ h4:after {
     background-color: var(--code-bg) !important;
     color: var(--code-text) !important;
     z-index: 0;
+    font-family: var(--font-monospace) !important;
+    font-size: 14px;
 }
 
 /*Italicized Text*/
@@ -779,13 +783,16 @@ a, .markdown-preview-view .internal-link {
     bottom: -4px; 
 }
 ul ul::before {
-    left: -12px;
+    left: -11px;
     top: 0;
     bottom: 0; 
 }
 /*Bullet Shape and Smaller Indentation*/
-ul, ul ul, ul ul ul, ul ul ul ul {
+li {
     list-style-type: "⬥ ";
+    padding-left: 0px;
+}
+ul { 
     padding-inline-start: 25px;
 }
 
@@ -966,6 +973,7 @@ input[type="checkbox checked"] {
 /*Colored List Markers*/
 li::marker {
     color: var(--soft-text);
+    list-style-type: disc;
 }
 
 
@@ -1129,6 +1137,7 @@ li::marker {
     border: 1px solid var(--table);
     background-color: var(--bg);
     border-left-width: 8px;
+    border-radius: var(--border-radius);
     position: relative;
     margin: 2%;
     padding-right: 6%; /*Don't overlap with "*/

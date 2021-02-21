@@ -360,7 +360,7 @@
     width: 100%;
 }
 
-/*Tag Pane*/
+/*--Tag Pane--*/
 /*Text*/
 .tree-item-self {
     color: var(--soft-text);
@@ -596,7 +596,15 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     color: var(--graph-404) !important; 
 }
 
-
+/*--Starred Pane--*/
+.item-list .nav-file {
+    padding-left: 20px;
+    
+}
+/*File: Move Further In*/
+.nav-file-icon {
+    top: 5px;
+}
 
 /*--Bottom Bar--*/
 .status-bar {
@@ -660,7 +668,7 @@ body {
 h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     font-weight: 600;
     font-family: var(--its-font) !important;
-    color: var(--headers) !important;
+    color: var(--headers);
 }
 
 /*Editor Heading Re-size*/
@@ -764,49 +772,34 @@ a, .markdown-preview-view .internal-link {
     opacity: 0.8;
     color: var(--lite-accent);
 }
-
-
-
-/*--Bullet Points--*/
-/*Bullet Line*/
-.cm-hmd-list-indent .cm-tab, ul ul {
-    position: relative;
+/*-External Links-*/
+/*Hide SVG Image*/
+.external-link {
+    background-image: url();
 }
-.cm-hmd-list-indent .cm-tab::before, ul ul::before {
-    content:'';
-    border-left: 2px solid var(--accent);
-    position: absolute;
-}
-.cm-hmd-list-indent .cm-tab::before {
-    left: 0;
-    top: -5px;
-    bottom: -4px; 
-}
-ul ul::before {
-    left: -11px;
-    top: 0;
-    bottom: 0; 
-}
-/*Bullet Shape and Smaller Indentation*/
-li {
-    list-style-type: "⬥ ";
-    padding-left: 0px;
-}
-ul { 
-    padding-inline-start: 25px;
+/*Change External Link Symbol*/
+.external-link:after {
+    content: "⧪";
+    padding-right: 2px;
+    margin-right: -16px;
+    display: inline-block;
+    transform: rotate(-135deg);
 }
 
-/*List Arrow*/
-.markdown-preview-view .list-collapse-indicator {
-    padding-left: 13px;
-    /*display:none;*/
+/*Markdown Links*/
+.cm-s-obsidian span.cm-url {
+    color: var(--folder);
+    text-decoration: none;
+}
+.cm-s-obsidian span.cm-formatting-link {
+    color: var(--inactive);
 }
 
 /*--Horizontal Linebreak--*/ 
 .markdown-preview-view hr, .HyperMD-hr-bg {
     height: 0; /*Center Line Vertically*/
-    border-bottom: 1px solid;
     border-color: var(--hr);
+    border: 1px solid var(--hr);
 }
 
 /*Stylized hr Line*/
@@ -895,6 +888,48 @@ Masonry/Gallery View*/
 
 
 /*--List--*/
+/*Colored List Markers*/
+li::marker {
+    color: var(--soft-text);
+    list-style-type: disc;
+}
+
+/*-Bullet Points-*/
+/*Bullet Line*/
+.cm-hmd-list-indent .cm-tab, ul ul {
+    position: relative;
+}
+.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+    content:'';
+    border-left: 2px solid var(--accent);
+    position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before {
+    left: 3px;
+    top: -5px;
+    bottom: -4px; 
+}
+ul ul::before {
+    left: -11px;
+    top: 0;
+    bottom: 0; 
+}
+/*Bullet Shape*/
+li {
+    list-style-type: "⬥ ";
+    padding-left: 0px;
+}
+/*Smaller Indentation*/
+ul { 
+    padding-inline-start: 25px;
+}
+
+/*List Arrow*/
+.markdown-preview-view .list-collapse-indicator {
+    padding-left: 13px;
+    /*display:none;*/
+}
+
 /*Checkboxes*/
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
@@ -917,19 +952,6 @@ Masonry/Gallery View*/
   border: none;
   background-color: var(--blue);
 }
-
-/*** /*Checkbox Checked Checkmark* /
-.markdown-preview-view .task-list-item-checkbox:checked::before {
-  content: ' ';
-  position: absolute;
-  background-color: white;
-  -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 14 14\'%3E%3Cpolygon points=\'5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039\'%3E%3C/polygon%3E%3C/svg%3E');
-  left: 2px;
-  top: 2px;
-  right: 2px;
-  bottom: 2px;
-
-}***/
 
 /*Checked Checkbox*/
 .markdown-preview-view ul > li.task-list-item.is-checked {
@@ -967,13 +989,6 @@ input[type="checkbox checked"] {
     outline: none;
     border: none;
     background-color: var(--blue);
-}
-
-
-/*Colored List Markers*/
-li::marker {
-    color: var(--soft-text);
-    list-style-type: disc;
 }
 
 
@@ -1082,6 +1097,9 @@ li::marker {
 }
 
 
+
+
+
 /*--Popover--*/
 /*Larger Popover*/
 .popover.hover-popover {
@@ -1169,13 +1187,20 @@ li::marker {
     padding: 0.5%;
 }
 
+/*--Files--*/
 /*Iframe Borderless*/
 iframe {
     border-width: var(--border-radius);
-    border-style: inset;
+    border-style: none;
     border-color: initial;
     border-image: initial;
 }
+/*Remove File Padding*/
+.workspace-leaf-content .view-content {
+    padding: 2px 2px;
+    overflow: hidden;
+}
+
 
 /*---Publish---*/
 .site-header {

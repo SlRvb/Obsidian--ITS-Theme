@@ -392,8 +392,11 @@
 .outline .tree-item-text:hover {
     border-left-color: var(--accent);
 }
-
-
+/*Set Outline Padding*/
+.outline {
+    padding: 20px 10px !important;
+    overflow: hidden;
+}
 
 /*--Search--*/
 /*Highlight Search Result*/
@@ -910,7 +913,7 @@ li::marker {
     bottom: -4px; 
 }
 ul ul::before {
-    left: -11px;
+    left: -12px;
     top: 0;
     bottom: 0; 
 }
@@ -1044,10 +1047,15 @@ input[type="checkbox checked"] {
     border-bottom: 1px solid var(--table);
 }
 
-
+/*Tags*/
 .frontmatter-container .tag {
     background-color: var(--tag);
+    border-radius: var(--border-radius);
 }
+.frontmatter-container .frontmatter-alias {
+    border-radius: var(--border-radius);
+}
+
 
 /*Tags Hover*/
 .frontmatter-container .tag:hover {

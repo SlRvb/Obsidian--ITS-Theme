@@ -1,0 +1,234 @@
+.story h2, .story h2:after {
+    font-size: 17px;
+    line-height: 15px;
+}
+
+/*Change CSS based on YAML tag for specific stories 🗲*/
+
+.theme-dark, .theme-light {
+    --ln: #946ef7;
+    --ln-2: #7a5fb2;
+    --ln-3: #9884c3;
+    --ln-hr: #564281;
+    --ln-f: "Veteran Typewriter";
+    --ln-f-2: "Courier New";
+    
+    --ts: #cb3737;
+    --ts-2: #e06c75;
+    --ts-3: #e04040;
+    --ts-hr: #652828;
+    --ts-f: "Vampire Wars";    
+    --ts-f-2: "IM FELL English SC";    
+    
+    --bblh: #e0a32f;
+    --bblh-2: #72523e;
+    --bblh-3: #e2d780;
+    --bblh-hr: #807b53;
+    --bblh-f: "Kelly Slab";
+    --bblh-f-2: "RocknRoll One";
+    
+    --salt: #3c68ad;
+    --salt-2: #495d7c;
+    --salt-3: #7798cc;
+    --salt-hr: #3766b1;
+    
+    --50sits: #7d828e;
+    --50sits-2: #76859b;
+    --50sits-3: #7798cc;
+    --50sits-hr: #3766b1;
+    
+    --pu: #cb56b4;
+    
+    --dl: #bf0b50;
+    --soas: #c3777a;
+}
+
+
+
+
+/*----Lucifer Night----*/
+.ln .frontmatter-container { color: var(--ln); }
+.ln .frontmatter-container .tag { background-color: var(--ln-2); }
+.ln hr { border-color: var(--ln-hr) !important; }
+.ln hr:after { color: var(--ln-3) !important; }
+
+.ln th { color: var(--ln-2) !important; }
+.ln td strong { color: var(--ln) !important; font-family: var(--ln-f-2);}
+.ln strong { color: var(--ln); font-family: var(--ln-f-2); font-weight: 900;}
+
+.ln blockquote:before { color: var(--ln) !important; }
+
+/*Links*/
+.ln a {
+    font-family: var(--ln-f-2);
+    color: var(--ln-3);
+    outline: none;
+}
+
+.ln a:hover {
+    color: var(--ln);
+    outline: none;
+}
+
+.ln .internal-link.is-unresolved { color: var(--ln-2); }
+.ln .internal-link.is-unresolved:hover { color: var(--ln);
+}
+
+/*Headings*/
+.ln h1, .ln h2, .ln h3, .ln h4, .ln h5, .ln h6 { color: var(--ln) !important; font-family: var(--ln-f) !important; font-weight: 900;}
+
+.ln .markdown-embed-title, .ln .file-embed-title, .ln .markdown-embed h1, .ln  .markdown-embed h2, .ln .markdown-embed h3, .ln .markdown-embed h4, .ln .markdown-embed h5, .ln .markdown-embed h6 { color: var(--ln) !important; }
+
+.ln h1:after, .ln h2:after, .ln h3:after, .ln h4:after, .ln h5:after, .ln h6:after { background: var(--ln-hr); }
+
+/*List Line*/
+.ln cm-hmd-list-indent .cm-tab::before, .ln ul ul::before {
+    border-left: 2px solid var(--ln);
+}
+.ln li:marker {
+    list-style-type: "⬥ " !important;
+    color: transparent;
+    text-shadow: 0 0 0 var(--ln-hr);
+}
+
+/*Code*/
+.ln .markdown-preview-section code, .ln .markdown-preview-section pre { color: var(--ln-3) !important; }
+.ln .cm-s-obsidian pre.HyperMD-codeblock, .ln span.cm-inline-code { color: var(--ln) !important; }
+
+
+
+
+
+/*----The Slayer----*/
+.ts .frontmatter-container { color: var(--ts) !important; }
+.ts .frontmatter-container .tag { background-color: var(--ts-2); }
+.ts hr { border-color: var(--ts-hr) !important; }
+.ts hr:after { color: var(--ts-3) !important; }
+
+.ts th { color: var(--ts-2) !important; font-family: var(--ts-f-2) !important; }
+.ts td strong { color: var(--ts) !important; }
+.ts strong { color: var(--ts); font-family: var(--ts-f-2); }
+
+/*Links*/
+.ts a {
+    font-family: var(--ts-f-2);
+    color: var(--ts-3);
+    outline: none;
+}
+
+.ts a:hover {
+    color: var(--ts);
+    outline: none;
+}
+
+.ts .internal-link.is-unresolved { color: var(--ts-2); }
+.ts .internal-link.is-unresolved:hover { color: var(--ts); }
+
+/*Headings*/
+.ts h1, .ts h2, .ts h3, .ts h4, .ts h5, .ts h6 { color: var(--ts); font-family: var(--ts-f) !important; }
+
+.ts .markdown-embed-title, .ts .file-embed-title, .ts .markdown-embed h1, .ts .markdown-embed h2, .ts .markdown-embed h3, .ts .markdown-embed h4, .ts .markdown-embed h5, .ts .markdown-embed h6 { color: var(--ts); }
+
+.ts h1:after, .ts h2:after, .ts h3:after, .ts h4:after, .ts h5:after, .ts h6:after { background: var(--ts-hr); }
+
+/*List Line*/
+.ts cm-hmd-list-indent .cm-tab::before, .ts ul ul::before {
+    border-left: 2px solid var(--ts);
+}
+
+/*Code*/
+.ts .markdown-preview-section code, .ts .markdown-preview-section pre { color: var(--ts-3) !important; }
+.ts .cm-s-obsidian pre.HyperMD-codeblock, .ts span.cm-inline-code { color: var(--ts) !important; }
+
+
+
+
+
+/*----SALT----*/
+.salt .frontmatter-container { color: var(--salt); }
+.salt .frontmatter-container .tag { background-color: var(--salt-2); }
+.salt .markdown-preview-view hr::after { border-color: var(--salt-hr) !important; }
+
+.salt td strong { color: var(--salt) !important; }
+.salt strong { color: var(--salt); }
+
+/*Links*/
+.salt a {
+    color: var(--salt-3);
+    outline: none;
+}
+
+.salt a:hover {
+    color: var(--salt);
+    outline: none;
+}
+
+.salt .internal-link.is-unresolved { color: var(--salt-2); }
+.salt .internal-link.is-unresolved:hover { color: var(--salt); }
+
+/*Headings*/
+.salt h1, .salt h2, .salt h3, .salt h4, .salt h5, .salt h6 { color: var(--salt) !important; }
+
+.salt .markdown-embed-title, .salt .file-embed-title, .salt .markdown-embed h1, .salt .markdown-embed h2, .markdown-embed h3, .salt .markdown-embed h4, .salt .markdown-embed h5, .salt .markdown-embed h6 { color: var(--salt) !important; }
+
+.salt h1:after, .salt h2:after, .salt h3:after, .salt h4:after, .salt h5:after, .salt h6:after { background: var(--salt-hr); }
+
+/*List Line*/
+.salt cm-hmd-list-indent .cm-tab::before, .salt ul ul::before {
+    border-left: 2px solid var(--salt);
+}
+
+/*Code*/
+.salt .markdown-preview-view code, .markdown-preview-view pre { color: var(--salt-3); }
+.salt .cm-s-obsidian pre.HyperMD-codeblock, span.cm-inline-code { color: var(--salt); }
+
+
+
+
+
+/*Bi Bar Of Lonely Hearts*/
+.bblh .frontmatter-container { color: var(--bblh) !important; }
+.bblh .frontmatter-container .tag { background-color: var(--bblh-2); }
+.bblh hr { border-color: var(--bblh-hr) !important; }
+.bblh hr:after { color: var(--bblh-3) !important; }
+
+.bblh th { color: var(--bblh-2) !important; }
+.bblh td strong { color: var(--bblh) !important; }
+.bblh strong { color: var(--bblh); font-family: var(--bblh-f-2) !important; }
+
+.bblh blockquote:before { color: var(--bblh) !important; }
+.bblh blockquote { font-family: var(--bblh-f-2); }
+
+/*Links*/
+.bblh a {
+    font-family: var(--bblh-f-2);
+    color: var(--bblh-3);
+    outline: none;
+}
+
+.bblh a:hover {
+    color: var(--bblh);
+    outline: none;
+}
+.bblh .tag { background-color: var(--bblh-2); }
+
+.bblh .internal-link.is-unresolved { color: var(--bblh-2); }
+.bblh .internal-link.is-unresolved:hover { color: var(--bblh); }
+
+/*Headings*/
+.bblh h1 { color: var(--bblh); font-family: var(--bblh-f) !important; }
+.bblh h2, .bblh h3, .bblh h4, .bblh h5, .bblh h6 { color: var(--bblh); font-family: var(--bblh-f-2) !important; }
+.bblh .markdown-embed-title, .bblh .file-embed-title, .bblh .markdown-embed h1, .bblh .markdown-embed h2, .bblh .markdown-embed h3, .bblh .markdown-embed h4, .bblh .markdown-embed h5, .bblh .markdown-embed h6 { color: var(--bblh) !important; }
+
+.bblh h1:after, .bblh h2:after, .bblh h3:after, .bblh h4:after, .bblh h5:after, .bblh h6:after { background: var(--bblh-hr); }
+
+/*List Line*/
+.bblh cm-hmd-list-indent .cm-tab::before, .bblh ul ul::before {
+    border-left: 2px solid var(--bblh);
+}
+
+/*Code*/
+.bblh .markdown-preview-section code, .bblh .markdown-preview-section pre { color: var(--bblh-3) !important; }
+.bblh .cm-s-obsidian pre.HyperMD-codeblock, .bblh span.cm-inline-code { color: var(--bblh) !important; }
+
+.bblh .internal-embed::before { color: var(--bblh-3); font-family:var(--bblh-f-2); font-weight: 900; }

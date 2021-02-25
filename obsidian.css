@@ -373,7 +373,7 @@
 /* Works but Dot appears*/
 .tag-container .tree-item-children {
     margin-left: 3.5%;
-    border-left: 2px solid var(--inactive);
+    border-left: 1px solid var(--inactive);
     transition: all 0.5s ease-in-out;
 }
 
@@ -384,7 +384,7 @@
 /*Outline Pane Lines*/
 .outline .tree-item-children {
     margin-left: 3.3%;
-    border-left: 2px solid var(--inactive);
+    border-left: 1px solid var(--inactive);
     transition: all 0.5s ease-in-out;
     border-radius: var(--border-radius);
     padding-left: 10px;
@@ -894,15 +894,15 @@ Masonry/Gallery View*/
 /*Colored List Markers*/
 li::marker {
     color: var(--soft-text);
-    list-style-type: disc;
+    
 }
 
 /*-Bullet Points-*/
 /*Bullet Line*/
-.cm-hmd-list-indent .cm-tab, ul ul {
+.cm-hmd-list-indent .cm-tab, ul ul, ol {
     position: relative;
 }
-.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+.cm-hmd-list-indent .cm-tab::before, ul ul::before, ol ol::before {
     content:'';
     border-left: 2px solid var(--accent);
     position: absolute;
@@ -912,20 +912,22 @@ li::marker {
     top: -5px;
     bottom: -4px; 
 }
-ul ul::before {
+ul ul::before, ol::before {
     left: -12px;
     top: 0;
     bottom: 0; 
 }
+ol::before { left: -15px; }
+
 /*Bullet Shape*/
-li {
+ul, ul:nth-child(Even) {
     list-style-type: "⬥ ";
-    padding-left: 0px;
 }
 /*Smaller Indentation*/
-ul { 
+ul, ol { 
     padding-inline-start: 25px;
 }
+
 
 /*List Arrow*/
 .markdown-preview-view .list-collapse-indicator {
@@ -1046,6 +1048,11 @@ input[type="checkbox checked"] {
 .frontmatter-container .frontmatter-container-header {
     border-bottom: 1px solid var(--table);
 }
+. CodeMirror-line .cm-s-obsidian .cm-hmd-frontmatter {
+    font-size: 12px;
+    line-height: 2px !important;
+}
+
 
 /*Tags*/
 .frontmatter-container .tag {
@@ -1104,6 +1111,14 @@ input[type="checkbox checked"] {
     padding: 5px 5px 0px 5px;
 }
 
+/*Display Embed Path**
+/*https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/264**
+.internal-embed::before{
+    content: attr(alt);
+    color: var(--headers);
+    position: absolute;
+    margin-top: -24px;
+}
 
 
 

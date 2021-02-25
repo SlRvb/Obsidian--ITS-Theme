@@ -1,0 +1,89 @@
+
+
+
+/*Image Position*/
+img[alt*="pt"]{
+    object-fit: cover;
+    object-position: top;
+}
+img[alt*="pb"] {
+    object-fit: cover;
+    object-position: bottom;
+}
+img[alt*="pl"] {
+    object-fit: cover;
+    object-position: left;
+}
+img[alt*="pr"] {
+    object-fit: cover;
+    object-position: right;
+}
+
+/*Left & Right*/
+img[alt*="left"] {
+    float:left;
+    margin-right: 2%;
+    margin-bottom: 0px;
+}
+
+
+img[alt*="right"] {
+    float:right;
+    margin-left: 2%;
+    margin-bottom: 0px;
+}
+
+
+
+/*Banners*/
+img[alt*="banner"] {
+    display: block;
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+}
+
+img[alt*="banner+small"]{
+    display: block;
+    object-fit: cover;
+    height: 100px;
+    width: 100%;
+}
+
+img[alt*="banner+tall"]{
+    display: block;
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
+
+
+/*Portait*/
+img[alt*="portrait"] {
+    display: block;
+    object-fit: cover;
+    height: 400px;
+    width: 40%;
+}
+
+img[alt*="portrait+small"] {
+    display:block;
+    height: 200px;
+    width: 20%;
+    object-fit: cover;
+}
+
+img[alt*="portrait+tall"] {
+    display:block;
+    height: 500px;
+    width: 50%;
+    object-fit: cover;
+}
+
+img[alt*="portrait+tall"] {
+    display:block;
+    height: 500px;
+    width: 50%;
+    object-fit: cover;
+}

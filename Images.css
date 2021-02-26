@@ -1,24 +1,23 @@
-
-
-
-/*Image Position*/
-img[alt*="pt"]{
-    object-fit: cover;
-    object-position: top;
-}
-img[alt*="pb"] {
-    object-fit: cover;
-    object-position: bottom;
-}
-img[alt*="pl"] {
-    object-fit: cover;
-    object-position: left;
-}
-img[alt*="pr"] {
-    object-fit: cover;
-    object-position: right;
+/*--Variables--*/
+.theme-dark, .theme-light{
+    --tiny: 100px;
+    --small: 200px;
+    --small-med: 300px;
+    --med-small: 400px
+    --medium: 500px;
+    --med-tall: 600px;
+    --tall: 700px;
 }
 
+
+
+/*----Simplified Version----*/
+/*Fix Float Issues*/
+img[alt*="clear"] {
+    clear: both;
+}
+
+/*Image Locations*/
 /*Left & Right*/
 img[alt*="left"] {
     float:left;
@@ -26,64 +25,156 @@ img[alt*="left"] {
     margin-bottom: 0px;
 }
 
-
 img[alt*="right"] {
     float:right;
     margin-left: 2%;
     margin-bottom: 0px;
 }
 
-
-
+/*Image Shapes*/
 /*Banners*/
 img[alt*="banner"] {
     display: block;
     object-fit: cover;
     height: 150px;
     width: 100%;
+    margin-bottom: 0px;
 }
 
-img[alt*="banner+small"]{
+img[alt*="banner+small"] {
     display: block;
     object-fit: cover;
-    height: 100px;
+    height: var(--tiny);
     width: 100%;
+    margin-bottom: 0px;
 }
 
-img[alt*="banner+tall"]{
+img[alt*="banner+tall"] {
     display: block;
     object-fit: cover;
-    height: 300px;
+    height: var(--medium);
     width: 100%;
+    margin-bottom: 0px;
 }
-
-
 
 /*Portait*/
 img[alt*="portrait"] {
-    display: block;
     object-fit: cover;
     height: 400px;
     width: 40%;
 }
 
 img[alt*="portrait+small"] {
-    display:block;
     height: 200px;
     width: 20%;
     object-fit: cover;
 }
 
 img[alt*="portrait+tall"] {
-    display:block;
     height: 500px;
     width: 50%;
     object-fit: cover;
 }
 
-img[alt*="portrait+tall"] {
-    display:block;
-    height: 500px;
-    width: 50%;
+/*Profile*/
+img[alt*="pile"] {
     object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+
+img[alt*="profile+medium"] {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+}
+
+/*----Customizable Version----*/
+
+/*--Image Sizing--*/
+/*Fit image within bounds WITHOUT stretching*/
+img[alt*="cover"]{
+    object-fit: cover;
+}
+
+/*Height*/
+img[alt*="htiny"]{
+    height: var(--tiny);
+}
+img[alt*="hsmall"]{
+    height: var(--small);
+}
+img[alt*="hmed"]{
+    height: var(--medium);
+}
+img[alt*="htall"]{
+    height: var(--tall);
+}
+/*Width*/
+img[alt*="wtiny"]{
+    width: var(--tiny);
+}
+img[alt*="wsmall"]{
+    width: var(--small);
+}
+img[alt*="wmed"]{
+    width: var(--medium);
+}
+img[alt*="wtall"]{
+    width: var(--tall);
+}
+
+
+/*--Image Position--*/
+/*Inner Image*/
+img[alt*="pt"]{
+    object-fit: cover;
+    object-position: top !important;
+}
+img[alt*="pb"] {
+    object-fit: cover;
+    object-position: bottom !important;
+}
+img[alt*="pl"] {
+    object-fit: cover;
+    object-position: left !important;
+}
+img[alt*="pr"] {
+    object-fit: cover;
+    object-position: right !important;
+}
+img[alt*="pc"] {
+    object-fit: cover;
+    object-position: center !important;
+}
+
+
+/*Image Locations*/
+img[alt*="locl"] {
+    float:left;
+    margin-right: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+img[alt*="locr"] {
+    float:right;
+    margin-left: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*--Image Shapes--*/
+/*Banners*/
+img[alt*="sban"] {
+    object-fit: cover;
+    width: 100%;
+}
+
+/*Profile*/
+/*Rounded Image*/
+img[alt*="sprof"]{
+    object-fit: cover;
+    border-radius: 100%;
 }

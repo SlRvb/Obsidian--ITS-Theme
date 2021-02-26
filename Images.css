@@ -129,23 +129,23 @@ img[alt*="wtall"]{
 /*Inner Image*/
 img[alt*="pt"]{
     object-fit: cover;
-    object-position: top !important;
+    object-position: top;
 }
 img[alt*="pb"] {
     object-fit: cover;
-    object-position: bottom !important;
+    object-position: bottom;
 }
 img[alt*="pl"] {
     object-fit: cover;
-    object-position: left !important;
+    object-position: left;
 }
 img[alt*="pr"] {
     object-fit: cover;
-    object-position: right !important;
+    object-position: right;
 }
 img[alt*="pc"] {
     object-fit: cover;
-    object-position: center !important;
+    object-position: center;
 }
 
 

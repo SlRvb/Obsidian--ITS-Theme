@@ -25,9 +25,13 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - **Gallery/Masonry:** Side by side images.
         - Put `cssclass: img-grid` into frontmatter/YAML, separate by adding spaces
         - *Credit*: [Kepano: Display side by side image grid (CSS snippet)](https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359)
+    - **Image Positions:** Move images to either left, right, center, change types, etc.
+        - Inspired by: [Lithou's Image Flags](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)
+        - *If you use lithou's snippet, this feature does conflict with it.*
 - **\<i>\</i>** for images or other files attributions
     - Adds a different color to text within it to differentiate it from other text
     - Centered to match image centering
+    - Adding: `alt="left"` and `alt="right"` within it will push the attribute to left and right of the screen.
 - **Blockquotes**
     - Soft background
     - Wider blockquote
@@ -52,6 +56,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - File Explorer Sidebar
     - Embed Titles
     - Query Titles
+- Embeds simplified
 
 *Folder Icons based on Folder Title not included, use this to add your own icons:*
 ```
@@ -80,3 +85,52 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 ![](Lightmode-Features.png)
 **Edit Mode**
 ![](Lightmode-Editing.png)
+
+# Image Positions
+**Clear**
+`![[image.png|clear]]`: `clear` will allow that image to sit below another image if it's on the same side instead of sitting in the middle of the page.
+
+**Cover** (Mostly for Complex Version)
+`![[image.png|cover]]`: `cover` will allow for the resizing of the image to maintain aspect ratio and avoid stretching.
+
+**Sizing** (Mostly for Complex Version)
+`![[image.png|<>+<>|200]]`: Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
+
+## Simplified Version
+**Left/Right**
+`![[image.png|left]]`. `left` will move the image to the left.
+`![[image.png|right]`. `right` will move the image to the right.
+
+**Banner**
+`![[image.png|banner]]`. `banner` will crop the image height-wise while setting the width to cover the entire page.
+
+**Portrait**
+`![[image.png|portrait]]`. `portrait` will crop the image width-wise while setting the height to a standard of about 400px.
+
+**Profile**
+*Not fully working unless you use the `pc` property.*
+Profile will round the borders of the image to create a round image. 
+
+
+## Complex Version
+**Left/Right**
+`![[image.png|locl]]`. `locl` will move the image to the left.
+`![[image.png|locr]]`. `locr` will move the image to the right.
+
+**Inner Image Position**
+`![[image.png|pl]]`. `pl` will move the inside of the image to the left.
+`![[image.png|pr]]`. `pr` will move the inside of the image to the right.
+`![[image.png|pt]]`. `pt` will move the inside of the image to the top.
+`![[image.png|pb]]`. `pb` will move the inside of the image to the bottom.
+`![[image.png|pc]]`. `pc` will move the inside of the image to the center.
+
+**Sizing**
+`![[image.png|htiny]]`. `htiny` will resize the image to about 100px in height.
+`![[image.png|hsmall]]`. `hsmall` will resize the image to about 200px in height.
+`![[image.png|hmed]]`. `hmed` will resize the image to about 500px in height.
+`![[image.png|htall]]`. `htall` will resize the image to about 700px in height.
+
+`![[image.png|wtiny]]`. `wtiny` will resize the image to about 100px in width.
+`![[image.png|wsmall]]`. `wsmall` will resize the image to about 200px in width.
+`![[image.png|wmed]]`. `wmed` will resize the image to about 500px in width.
+`![[image.png|wtall]]`. `wtall` will resize the image to about 700px in width.

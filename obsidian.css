@@ -86,13 +86,14 @@
     --file: var(--soft-text);
     --folder: #e05858;
     --f-hover: var(--accent);
-    
+        
     --note: var(--dark-blue);
     --text: #dcddde;
     --headers: #c14343;
     --soft-text: #aab3ca;
     --code-bg: #232831;
     --code-text: #fa4545;
+    --embed-bg: var(--dark-sidebar);
     
     --tag: var(--dark-lite-red);
     --table: #2f3440;
@@ -188,6 +189,7 @@
     --soft-text: #d04e4e;
     --code-bg: #e6e6e8;
     --code-text: #ea4262;
+    --embed-bg: #eaeef4;
 
     --tag: #c65656;
     --table: #c9ced9;
@@ -666,6 +668,9 @@ body {
     z-index: 1;
 }
 
+.justified p {
+    text-align: justify;
+}
 
 /*--Headings--*/
 h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
@@ -760,9 +765,27 @@ i { /*I used for image description, em is just regular italics*/
     font-style: italic;
     color: var(--i-at);
     text-align: center;
+    background-color: var(--outer-bar);
+}
+
+i[alt*="right"] {
+    display: block;
+    text-align: right;
+    background-color: var(--outer-bar);
+    padding-right: 2%;
 }
 
 
+i[alt*="left"] {
+    display: block;
+    text-align: left;
+    background-color: var(--outer-bar);
+    padding-left: 2%;
+}
+
+i[alt*="clear"] {
+    clear: left;
+}
 
 /*--Link--*/
 /*Active Link*/
@@ -815,7 +838,7 @@ a, .markdown-preview-view .internal-link {
     transform-origin: 50% 50%;
     color: var(--fg);
     padding: 5px; /*Symbol Padding*/
-    background-color: var(--background-primary); /*Color bg to cover line*/
+    background-color: var(--note); /*Color bg to cover line*/
 }
 
 /*Center --- Lines*/
@@ -864,30 +887,213 @@ Enlarge Image:*/
 
 /*Kepano: https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359
 Masonry/Gallery View*/
-.markdown-preview-view img {
-	cursor: zoom-in;
+.img-grid .markdown-preview-section img:not([width]),
+.img-grid .markdown-preview-section video {
+    width:100%;
+}
+.img-grid .markdown-preview-section > div {
+    display:flex;
+}
+.img-grid .markdown-preview-section > div > .internal-embed {
+    flex:1;
+    margin-left:-0.5rem;
+    padding:0 0.5rem 0.5rem 0.5rem;
+}
+.img-grid .markdown-preview-section > div > *:not(div) {
+    margin-block-start: 0rem;
+    margin-block-end: 1rem;
+}
+.img-grid .markdown-preview-section > div hr {
+    width:100%;
+}
+/* These lines make every image the same height */
+.img-grid .markdown-preview-section > div > .internal-embed img:not(:active) {
+    object-fit:cover;
+    height:100%;
 }
 
-.markdown-preview-view img:active {
-	cursor:zoom-out;
-	display:block;
-	z-index:100;
-	position:fixed;
-    max-height:100%;
-    max-width:100%;
-    height:100%;
-    width:100%;
-    object-fit: contain;
-    margin:0 auto;
-    text-align:center;
-    top: 50%;
-  	transform: translateY(-50%);
-    padding:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:var(--background-primary);
+/*Image Positions*/
+/*--Variables--*/
+.theme-dark, .theme-light{
+    --tiny: 100px;
+    --small: 200px;
+    --small-med: 300px;
+    --med-small: 400px
+    --medium: 500px;
+    --med-tall: 600px;
+    --tall: 700px;
 }
+
+
+
+/*----Simplified Version----*/
+/*Fix Float Issues*/
+img[alt*="clear"] {
+    clear: both;
+}
+
+/*Image Locations*/
+/*Left & Right*/
+img[alt*="left"] {
+    float:left;
+    margin-right: 2%;
+    margin-bottom: 0px;
+}
+
+img[alt*="right"] {
+    float:right;
+    margin-left: 2%;
+    margin-bottom: 0px;
+}
+
+/*Image Shapes*/
+/*Banners*/
+img[alt*="banner"] {
+    display: block;
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+img[alt*="banner+small"] {
+    display: block;
+    object-fit: cover;
+    height: var(--tiny);
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+img[alt*="banner+tall"] {
+    display: block;
+    object-fit: cover;
+    height: var(--medium);
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/*Portait*/
+img[alt*="portrait"] {
+    object-fit: cover;
+    height: 400px;
+    width: 40%;
+}
+
+img[alt*="portrait+small"] {
+    height: 200px;
+    width: 20%;
+    object-fit: cover;
+}
+
+img[alt*="portrait+tall"] {
+    height: 500px;
+    width: 50%;
+    object-fit: cover;
+}
+
+/*Profile*/
+img[alt*="pile"] {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+
+img[alt*="profile+medium"] {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+}
+
+/*----Customizable Version----*/
+
+/*--Image Sizing--*/
+/*Fit image within bounds WITHOUT stretching*/
+img[alt*="cover"]{
+    object-fit: cover;
+}
+
+/*Height*/
+img[alt*="htiny"]{
+    height: var(--tiny);
+}
+img[alt*="hsmall"]{
+    height: var(--small);
+}
+img[alt*="hmed"]{
+    height: var(--medium);
+}
+img[alt*="htall"]{
+    height: var(--tall);
+}
+/*Width*/
+img[alt*="wtiny"]{
+    width: var(--tiny);
+}
+img[alt*="wsmall"]{
+    width: var(--small);
+}
+img[alt*="wmed"]{
+    width: var(--medium);
+}
+img[alt*="wtall"]{
+    width: var(--tall);
+}
+
+
+/*--Image Position--*/
+/*Inner Image*/
+img[alt*="pt"]{
+    object-fit: cover;
+    object-position: top;
+}
+img[alt*="pb"] {
+    object-fit: cover;
+    object-position: bottom;
+}
+img[alt*="pl"] {
+    object-fit: cover;
+    object-position: left;
+}
+img[alt*="pr"] {
+    object-fit: cover;
+    object-position: right;
+}
+img[alt*="pc"] {
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/*Image Locations*/
+img[alt*="locl"] {
+    float:left;
+    margin-right: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+img[alt*="locr"] {
+    float:right;
+    margin-left: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*--Image Shapes--*/
+/*Banners*/
+img[alt*="sban"] {
+    object-fit: cover;
+    width: 100%;
+}
+
+/*Profile*/
+/*Rounded Image*/
+img[alt*="sprof"]{
+    object-fit: cover;
+    border-radius: 100%;
+}
+
 
 
 /*--List--*/
@@ -920,7 +1126,7 @@ ul ul::before, ol::before {
 ol::before { left: -15px; }
 
 /*Bullet Shape*/
-ul, ul:nth-child(Even) {
+ul, ul:nth-child(odd), ul:nth-child(even) {
     list-style-type: "⬥ ";
 }
 /*Smaller Indentation*/
@@ -1099,9 +1305,10 @@ input[type="checkbox checked"] {
 
 /*Embed Window*/
 .markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
-    border-top: 1px solid var(--background-modifier-border);
-    border-bottom: 1px solid var(--background-modifier-border);
-    margin: 28px 0;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin: 5px 0;
+    background-color: var(--embed-bg);
 }
 
 /*Embed Link Color*/
@@ -1111,6 +1318,11 @@ input[type="checkbox checked"] {
     padding: 5px 5px 0px 5px;
 }
 
+/*Embed Horiztonal Bg Color*/
+.markdown-embed .markdown-preview-view hr::after {
+    background-color: var(--dark-sidebar);
+}
+
 /*Display Embed Path**
 /*https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/264**
 .internal-embed::before{
@@ -1118,9 +1330,7 @@ input[type="checkbox checked"] {
     color: var(--headers);
     position: absolute;
     margin-top: -24px;
-}
-
-
+} */
 
 
 /*--Popover--*/
@@ -1175,7 +1385,7 @@ input[type="checkbox checked"] {
 
 /*--Blockquote--*/
 .markdown-preview-view blockquote {
-    border: 1px solid var(--table);
+    border: 0px solid var(--table);
     background-color: var(--bg);
     border-left-width: 8px;
     border-radius: var(--border-radius);
@@ -1223,6 +1433,17 @@ iframe {
     padding: 2px 2px;
     overflow: hidden;
 }
+
+/*Dataview Table*/
+.table-view-table > thead > tr > th {
+    font-weight: 900 !important;
+    font-family: var(--its-font);
+    color: var(--headers);
+    border-bottom: solid var(--accent) !important;
+}
+
+
+
 
 
 /*---Publish---*/

@@ -114,7 +114,7 @@ Example | Description |
 
 Example | Description |
 ---|---|
-`![[image.png\|loc\|sban\|200]]`| Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
+`![[image.png\|loc\|sban\|200]]`| Place the `\|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
 
 
 ## Simplified Version

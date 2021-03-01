@@ -177,12 +177,20 @@ These will inch the images around if the ^ above code isn't enough.
 
 Example | Description |
 ---|---|
+`![[image.png\|p+cr]]`| `p+cr` will move the inside of the image to the center right.
+`![[image.png\|p+cl]]`| `p+cl` will move the inside of the image to the center left.
 `![[image.png\|p+ct]]`| `p+ct` will move the inside of the image to the center top of the image.
 `![[image.png\|p+cct]]`| `p+cct` will move the inside of the image to the center top, slightly higher than `p+ct`|
 `![[image.png\|p+cb]]`| `p+cb` will move the inside of the image to the center bottom of the image.
 `![[image.png\|p+ccb]]`| `p+ccb` will move the inside of the image to the center bottom, slightly higher than `p+cb`|
 
+*Note that these side by side images are done with the .img-grid cssclass*
 
+#### Left/Right Example
+![](https://i.imgur.com/J7bsqq0.png)
+
+#### Top/Bottom Example
+![](https://i.imgur.com/eaHgjBs.png)
 
 
 ### Sizing

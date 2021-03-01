@@ -160,9 +160,17 @@ img[alt*="pl"] {
     object-fit: cover;
     object-position: left;
 }
+img[alt*="p+cl"] {
+    object-fit: cover;
+    object-position: 25%;
+}
 img[alt*="pr"] {
     object-fit: cover;
     object-position: right;
+}
+img[alt*="p+cr"] {
+    object-fit: cover;
+    object-position: 75%;
 }
 img[alt*="pc"] {
     object-fit: cover;

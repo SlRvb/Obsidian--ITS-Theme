@@ -102,19 +102,19 @@ Obsidian internal images `![[]]` will change immediately, but for external image
 
 Example | Description |
 ---|---|
-`![[image.png\|clear]]`| `clear` will allow that image to sit below another image if it's on the same side instead of sitting in the middle of the page.
+`![[image.png\|clear]]`| `clear` will allow that image to sit below another image<br>If it's on the same side instead of sitting in the middle of the page.
 
 ### Cover (Mostly for Customizable Version)
 
 Example | Description |
 ---|---|
-`![[image.png\|cover]]`| `cover` will allow for the resizing of the image to maintain aspect ratio and avoid stretching.
+`![[image.png\|cover]]`| `cover` will resize the image maintaining aspect ratio and avoid stretching.
 
 ### Sizing (Mostly for Customizable Version)
 
 Example | Description |
 ---|---|
-`![[image.png\|locr|sban|200]]`| Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
+`![[image.png\|loc\|sban\|200]]`| Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
 
 
 ## Simplified Version

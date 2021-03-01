@@ -4,12 +4,12 @@
 Theme for my Obsidian Story Vault: ***In The Shadows.***
 
 # Table of Contents
-- [Features](github.com/SlRvb/Obsidian--ITS-Theme#features)
-- [Preview](github.com/SlRvb/Obsidian--ITS-Theme#images)
-- [Image Positions](github.com/SlRvb/Obsidian--ITS-Theme#image-positions)
-    - [Simplified Version](github.com/SlRvb/Obsidian--ITS-Theme#simplified-version)
-    - [Customizable Version](github.com/SlRvb/Obsidian--ITS-Theme#customizable-version)
-- [Embed Adjustmens *Coming Soon*](github.com/SlRvb/Obsidian--ITS-Theme#embed-adjustments)
+- [Features](#features)
+- [Preview](#images)
+- [Image Positions](#image-positions)
+    - [Simplified Version](#simplified-version)
+    - [Customizable Version](#customizable-version)
+- [Embed Adjustmens *Coming Soon*](#embed-adjustments)
 
 # Features
 - Dark and Light mode compatible

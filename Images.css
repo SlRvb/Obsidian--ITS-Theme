@@ -3,7 +3,7 @@
     --tiny: 100px;
     --small: 200px;
     --small-med: 300px;
-    --med-small: 400px
+    --med-small: 400px;
     --medium: 500px;
     --med-tall: 600px;
     --tall: 700px;
@@ -77,7 +77,7 @@ img[alt*="portrait+tall"] {
 }
 
 /*Profile*/
-img[alt*="pile"] {
+img[alt*="profile"] {
     object-fit: cover;
     height: 100px;
     width: 100px;
@@ -89,9 +89,11 @@ img[alt*="profile+medium"] {
     width: 250px;
 }
 
-/*----Customizable Version----*/
-
-/*--Image Sizing--*/
+/*--Customizable Version--*/
+img[alt*="flex"]{
+    display: grid;
+}
+/*-Image Sizing-*/
 /*Fit image within bounds WITHOUT stretching*/
 img[alt*="cover"]{
     object-fit: cover;
@@ -103,6 +105,12 @@ img[alt*="htiny"]{
 }
 img[alt*="hsmall"]{
     height: var(--small);
+}
+img[alt*="hs-med"]{
+    height: var(--small-med);
+}
+img[alt*="hm-sm"]{
+    height: var(--med-small);
 }
 img[alt*="hmed"]{
     height: var(--medium);
@@ -147,7 +155,22 @@ img[alt*="pc"] {
     object-fit: cover;
     object-position: center;
 }
-
+img[alt*="p+cct"] {
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+img[alt*="p+ct"] {
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+img[alt*="p+cb"] {
+    object-fit: cover;
+    object-position: 50% 80%;
+}
+img[alt*="p+ccb"] {
+    object-fit: cover;
+    object-position: 50% 90%;
+}
 
 /*Image Locations*/
 img[alt*="locl"] {

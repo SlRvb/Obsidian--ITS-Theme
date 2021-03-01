@@ -150,11 +150,11 @@ These will inch the images around if the ^ above code isn't enough.
 
 
 ### Sizing
-`![[image.png|htiny]]`. `htiny` will resize the image to about 100px in height.
-
-`![[image.png|hsmall]]`. `hsmall` will resize the image to about 200px in height.
-
-`![[image.png|hmed]]`. `hmed` will resize the image to about 500px in height.
+||
+---|---|
+`![[image.png|htiny]]`|`htiny` will resize the image to about 100px in height.
+`![[image.png|hsmall]]`| `hsmall` will resize the image to about 200px in height.
+`![[image.png|hmed]]` | `hmed` will resize the image to about 500px in height.
 
 `![[image.png|htall]]`. `htall` will resize the image to about 700px in height.
 

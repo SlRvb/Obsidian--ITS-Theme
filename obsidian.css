@@ -878,7 +878,6 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
 /*--Images--*/
 /*Center Image*/
 img {
-    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -911,10 +910,6 @@ Enlarge Image:*/
 
 /*Kepano: https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359
 Masonry/Gallery View*/
-.img-grid .markdown-preview-section img:not([width]),
-.img-grid .markdown-preview-section video {
-    width:100%;
-}
 .img-grid .markdown-preview-section > div {
     display:flex;
 }

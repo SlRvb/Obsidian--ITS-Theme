@@ -8,7 +8,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 - [Preview](github.com/SlRvb/Obsidian--ITS-Theme/images)
 - [Image Positions](github.com/SlRvb/Obsidian--ITS-Theme/image-positions)
     - [Simplified Version](github.com/SlRvb/Obsidian--ITS-Theme/simplified-version)
-    - [Customizable Version](github.com/SlRvb/Obsidian--ITS-Theme/image-positions)
+    - [Customizable Version](github.com/SlRvb/Obsidian--ITS-Theme/customizable-version)
 - [Embed Adjustmens *Coming Soon*](github.com/SlRvb/Obsidian--ITS-Theme/embed-adjustments)
 
 # Features
@@ -64,6 +64,8 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - Embed Titles
     - Query Titles
 - Embeds simplified
+- Image Positions
+- Embed Adjustments *Coming Soon*
 
 *Folder Icons based on Folder Title not included, use this to add your own icons:*
 ```
@@ -147,7 +149,6 @@ Example | Description |
 Example | Description |
 ---|---|
 `![[image.png\|profile]]`| `profile` will round the borders of the image to create a round image and size it to about 100px.
-`![[image.png\|profile+medium]]`| `profile+medium` will round the borders of the image to create a round image and resize it to about 250px.
 `![[image.png\|profile+medium]]`| `profile+medium` will round the borders of the image to create a round image and resize it to about 250px.
 
 

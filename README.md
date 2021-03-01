@@ -3,6 +3,13 @@
 
 Theme for my Obsidian Story Vault: ***In The Shadows.***
 
+# Table of Contents
+- [Features](github.com/SlRvb/Obsidian--ITS-Theme/features)
+- [Preview](github.com/SlRvb/Obsidian--ITS-Theme/images)
+- [Image Positions](github.com/SlRvb/Obsidian--ITS-Theme/image-positions)
+    - [Simplified Version](github.com/SlRvb/Obsidian--ITS-Theme/simplified-version)
+    - [Customizable Version](github.com/SlRvb/Obsidian--ITS-Theme/image-positions)
+- [Embed Adjustmens *Coming Soon*](github.com/SlRvb/Obsidian--ITS-Theme/embed-adjustments)
 
 # Features
 - Dark and Light mode compatible
@@ -87,14 +94,25 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 ![](Lightmode-Editing.png)
 
 # Image Positions
+Obsidian internal images `![[]]` will change immediately, but for external images `![]()`Obsidian needs to be refreshed: `ctrl + r` to see the changes.
+
 ### Clear
-`![[image.png\|clear]]`: `clear` will allow that image to sit below another image if it's on the same side instead of sitting in the middle of the page.
 
-### Cover (Mostly for Complex Version)
-`![[image.png\|cover]]`: `cover` will allow for the resizing of the image to maintain aspect ratio and avoid stretching.
+Example | Description |
+---|---|
+`![[image.png\|clear]]`| `clear` will allow that image to sit below another image if it's on the same side instead of sitting in the middle of the page.
 
-### Sizing (Mostly for Complex Version)
-`![[image.png\|locr|sban|200]]`: Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
+### Cover (Mostly for Customizable Version)
+
+Example | Description |
+---|---|
+`![[image.png\|cover]]`| `cover` will allow for the resizing of the image to maintain aspect ratio and avoid stretching.
+
+### Sizing (Mostly for Customizable Version)
+
+Example | Description |
+---|---|
+`![[image.png\|locr|sban|200]]`| Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
 
 
 ## Simplified Version
@@ -110,24 +128,30 @@ Example | Description |
 
 Example | Description |
 ---|---|
-`![[image.png\|banner]]`| `banner` will crop the image height-wise while setting the width to cover the entire page.
+`![[image.png\|banner]]`| `banner` will crop the image height-wise to about 150px while setting the width to cover the entire page.
+`![[image.png\|banner+small]]`| `banner+small` will crop the image height-wise to about 100px while setting the width to cover the entire page.
+`![[image.png\|banner+tall]]`| `banner+tall` will crop the image height-wise to about 500px while setting the width to cover the entire page.
 
 
 ### Portrait
 
 Example | Description |
 ---|---|
-`![[image.png\|portrait]]`| `portrait` will crop the image width-wise while setting the height to a standard of about 400px.
+`![[image.png\|portrait]]`| `portrait` will crop the image width-wise to about 40% while setting the height to a standard of about 400px.
+`![[image.png\|portrait+small]]`| `portrait+small` will crop the image width-wise to about 20% while setting the height to a standard of about 200px.
+`![[image.png\|portrait+tall]]`| `portrait+tall` will crop the image width-wise to about 50% while setting the height to a standard of about 500px.
 
 
 ### Profile *Not fully working unless you use the `pc` property.*
 
 Example | Description |
 ---|---|
-`![[image.png\|profile]]`| `profile` will round the borders of the image to create a round image. 
+`![[image.png\|profile]]`| `profile` will round the borders of the image to create a round image and size it to about 100px.
+`![[image.png\|profile+medium]]`| `profile+medium` will round the borders of the image to create a round image and resize it to about 250px.
+`![[image.png\|profile+medium]]`| `profile+medium` will round the borders of the image to create a round image and resize it to about 250px.
 
 
-## Complex Version
+## Customizable Version
 ### Left/Right
 
 Example | Description |

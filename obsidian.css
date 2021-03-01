@@ -933,16 +933,15 @@ Masonry/Gallery View*/
 /* These lines make every image the same height */
 .img-grid .markdown-preview-section > div > .internal-embed img:not(:active) {
     object-fit:cover;
-    height:100%;
 }
 
 /*----Image Positions----*/
-/*--Simplified Version--*/
 /*Fix Float Issues*/
 img[alt*="clear"] {
     clear: both;
 }
 
+/*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
 img[alt*="left"] {
@@ -1003,7 +1002,7 @@ img[alt*="portrait+tall"] {
 }
 
 /*Profile*/
-img[alt*="pile"] {
+img[alt*="profile"] {
     object-fit: cover;
     height: 100px;
     width: 100px;
@@ -1019,6 +1018,8 @@ img[alt*="profile+medium"] {
 img[alt*="flex"]{
     display: grid;
 }
+
+
 /*-Image Sizing-*/
 /*Fit image within bounds WITHOUT stretching*/
 img[alt*="cover"]{
@@ -1041,6 +1042,9 @@ img[alt*="hm-sm"]{
 img[alt*="hmed"]{
     height: var(--medium);
 }
+img[alt*="hm-tl"]{
+    height: var(--med-tall);
+}
 img[alt*="htall"]{
     height: var(--tall);
 }
@@ -1051,8 +1055,17 @@ img[alt*="wtiny"]{
 img[alt*="wsmall"]{
     width: var(--small);
 }
+img[alt*="ws-med"]{
+    width: var(--small-med);
+}
+img[alt*="wm-small"]{
+    width: var(--med-small);
+}
 img[alt*="wmed"]{
     width: var(--medium);
+}
+img[alt*="wm-tl"]{
+    width: var(--med-tall);
 }
 img[alt*="wtall"]{
     width: var(--tall);
@@ -1073,9 +1086,17 @@ img[alt*="pl"] {
     object-fit: cover;
     object-position: left;
 }
+img[alt*="p+cl"] {
+    object-fit: cover;
+    object-position: 25%;
+}
 img[alt*="pr"] {
     object-fit: cover;
     object-position: right;
+}
+img[alt*="p+cr"] {
+    object-fit: cover;
+    object-position: 75%;
 }
 img[alt*="pc"] {
     object-fit: cover;
@@ -1092,6 +1113,10 @@ img[alt*="p+ct"] {
 img[alt*="p+cb"] {
     object-fit: cover;
     object-position: 50% 80%;
+}
+img[alt*="p+ccb"] {
+    object-fit: cover;
+    object-position: 50% 90%;
 }
 
 /*Image Locations*/

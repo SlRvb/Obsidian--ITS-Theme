@@ -191,9 +191,16 @@ Example | Description |
 ---|---|
 `![[image.png\|htiny]]`|`htiny` will resize the image to about 100px in height.
 `![[image.png\|hsmall]]`| `hsmall` will resize the image to about 200px in height.
+`![[image.png\|hs-med]]`| `hs-med` will resize the image to about 300px in height.
+`![[image.png\|hm-sm]]`| `hm-sm` will resize the image to about 400px in height.
 `![[image.png\|hmed]]`| `hmed` will resize the image to about 500px in height.
+`![[image.png\|hm-tl]]`| `hm-tl` will resize the image to about 600px in height.
 `![[image.png\|htall]]`| `htall` will resize the image to about 700px in height.
+||
 `![[image.png\|wtiny]]`| `wtiny` will resize the image to about 100px in width.
 `![[image.png\|wsmall]]`| `wsmall` will resize the image to about 200px in width.
+`![[image.png\|ws-med]]`| `ws-med` will resize the image to about 300px in width.
+`![[image.png\|wm-sm]]`| `wm-sm` will resize the image to about 400px in width.
 `![[image.png\|wmed]]`| `wmed` will resize the image to about 500px in width.
+`![[image.png\|wm-tl]]`| `wm-tl` will resize the image to about 600px in width.
 `![[image.png\|wtall]]`| `wtall` will resize the image to about 700px in width.

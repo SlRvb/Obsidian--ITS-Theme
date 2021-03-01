@@ -1,5 +1,5 @@
 /*--Variables--*/
-.theme-dark, .theme-light{
+.theme-dark, .theme-light {
     --tiny: 100px;
     --small: 200px;
     --small-med: 300px;
@@ -11,12 +11,12 @@
 
 
 
-/*----Simplified Version----*/
 /*Fix Float Issues*/
 img[alt*="clear"] {
     clear: both;
 }
 
+/*----Simplified Version----*/
 /*Image Locations*/
 /*Left & Right*/
 img[alt*="left"] {
@@ -115,6 +115,9 @@ img[alt*="hm-sm"]{
 img[alt*="hmed"]{
     height: var(--medium);
 }
+img[alt*="hm-tl"]{
+    height: var(--med-tall);
+}
 img[alt*="htall"]{
     height: var(--tall);
 }
@@ -125,12 +128,22 @@ img[alt*="wtiny"]{
 img[alt*="wsmall"]{
     width: var(--small);
 }
+img[alt*="ws-med"]{
+    width: var(--small-med);
+}
+img[alt*="wm-small"]{
+    width: var(--med-small);
+}
 img[alt*="wmed"]{
     width: var(--medium);
+}
+img[alt*="wm-tl"]{
+    width: var(--med-tall);
 }
 img[alt*="wtall"]{
     width: var(--tall);
 }
+
 
 
 /*--Image Position--*/

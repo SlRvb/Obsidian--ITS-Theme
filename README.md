@@ -142,6 +142,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 
 
 **Inner Image Position Adjustments** These will inch the images around if the ^ above code isn't enough.
+
 `![[image.png|p+ct]]`. `p+ct` will move the inside of the image to the center top of the image.
 `![[image.png|p+cct]]`. `p+cct` will move the inside of the image to the center top, slightly higher than `p+ct`.
 `![[image.png|p+cb]]`. `p+cb` will move the inside of the image to the center bottom of the image.

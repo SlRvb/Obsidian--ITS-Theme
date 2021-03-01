@@ -11,6 +11,13 @@
     background-color: var(--background-secondary);
     /**/
     --border-radius: 0px;
+    --tiny: 100px;
+    --small: 200px;
+    --small-med: 300px;
+    --med-small: 400px;
+    --medium: 500px;
+    --med-tall: 600px;
+    --tall: 700px;
 }
 
 .theme-dark {
@@ -408,12 +415,24 @@
     padding: 2px;
 }
 
+/*Text Input Field*/
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    background-color: var(--outer-bar);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--table);
+    color: var(--soft-text);
+}
+
 input[type='text']:hover,
 input[type='search']:hover,
 input[type='email']:hover,
 input[type='password']:hover,
 input[type='number']:hover {
-  background-color: var(--background-modifier-form-field-highlighted);
+    background-color: var(--background-modifier-form-field-highlighted);
 }
 
 
@@ -439,12 +458,7 @@ input[type='range'] {
     background-color: var(--bg);
 }
 
-/*Search bar colors*/
-input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
-    background: var(--outer-sidebar);
-    border: 1px solid var(--table);
-    color: var(--soft-text);
-}
+
 
 .checkbox-container {
     cursor: pointer;
@@ -655,7 +669,6 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 
 
 
-
 /*--NOTES--*/
 /*Note*/
 body {
@@ -844,10 +857,21 @@ a, .markdown-preview-view .internal-link {
 /*Center --- Lines*/
 .cm-s-obsidian pre.HyperMD-hr {
     text-align: center;
-}
+    margin: 0px;
+    margin-block-start: .1%;
+    margin-block-end: .1%;
+}   
+
 /*Hide --- Lines*/
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
     color: transparent;
+    margin: 0px;
+    margin-block-start: .1%;
+    margin-block-end: .1%;
+}   
+/*Hide Collapsed Header Line*/
+.CodeMirror-activeline-background {
+    display:none;
 }
 
 
@@ -912,21 +936,8 @@ Masonry/Gallery View*/
     height:100%;
 }
 
-/*Image Positions*/
-/*--Variables--*/
-.theme-dark, .theme-light{
-    --tiny: 100px;
-    --small: 200px;
-    --small-med: 300px;
-    --med-small: 400px
-    --medium: 500px;
-    --med-tall: 600px;
-    --tall: 700px;
-}
-
-
-
-/*----Simplified Version----*/
+/*----Image Positions----*/
+/*--Simplified Version--*/
 /*Fix Float Issues*/
 img[alt*="clear"] {
     clear: both;
@@ -1004,9 +1015,11 @@ img[alt*="profile+medium"] {
     width: 250px;
 }
 
-/*----Customizable Version----*/
-
-/*--Image Sizing--*/
+/*--Customizable Version--*/
+img[alt*="flex"]{
+    display: grid;
+}
+/*-Image Sizing-*/
 /*Fit image within bounds WITHOUT stretching*/
 img[alt*="cover"]{
     object-fit: cover;
@@ -1018,6 +1031,12 @@ img[alt*="htiny"]{
 }
 img[alt*="hsmall"]{
     height: var(--small);
+}
+img[alt*="hs-med"]{
+    height: var(--small-med);
+}
+img[alt*="hm-sm"]{
+    height: var(--med-small);
 }
 img[alt*="hmed"]{
     height: var(--medium);
@@ -1062,7 +1081,18 @@ img[alt*="pc"] {
     object-fit: cover;
     object-position: center;
 }
-
+img[alt*="p+cct"] {
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+img[alt*="p+ct"] {
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+img[alt*="p+cb"] {
+    object-fit: cover;
+    object-position: 50% 80%;
+}
 
 /*Image Locations*/
 img[alt*="locl"] {
@@ -1089,7 +1119,7 @@ img[alt*="sban"] {
 
 /*Profile*/
 /*Rounded Image*/
-img[alt*="sprof"]{
+img[alt*="sprf"]{
     object-fit: cover;
     border-radius: 100%;
 }
@@ -1176,7 +1206,7 @@ input[type="checkbox" i] {
     -webkit-appearance: none;
     box-sizing: border-box;
     border: 1px solid var(--accent);
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     position: relative;
     width: 15px;
     height: 15px;
@@ -1191,7 +1221,7 @@ input[type="checkbox" i] {
 input[type="checkbox checked"] {
     -webkit-appearance: none;
     box-sizing: border-box;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     position: relative;
     width: 1.3em;
     height: 1.3em;

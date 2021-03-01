@@ -47,7 +47,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - Folder Navigation
     - Tag Pane 
         - *Note: Dot appears at bottom left corner. If it's too annoying add this snippet:*
-        - ```.tag-container .tree-item-children {border-left: 0px;}```
+        - ```|tag-container .tree-item-children {border-left: 0px;}```
 - **Folder Navigation Icons**
     - Credit: [Deathau](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/109)
 - **Text Wrapping**
@@ -88,80 +88,87 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 
 # Image Positions
 ### Clear
-`![[image.png|clear]]`: `clear` will allow that image to sit below another image if it's on the same side instead of sitting in the middle of the page.
+`![[image.png\|clear]]`: `clear` will allow that image to sit below another image if it's on the same side instead of sitting in the middle of the page.
 
 ### Cover (Mostly for Complex Version)
-`![[image.png|cover]]`: `cover` will allow for the resizing of the image to maintain aspect ratio and avoid stretching.
+`![[image.png\|cover]]`: `cover` will allow for the resizing of the image to maintain aspect ratio and avoid stretching.
 
 ### Sizing (Mostly for Complex Version)
-`![[image.png|locr|sban|200]]`: Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
+`![[image.png\|locr|sban|200]]`: Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
 
 
 ## Simplified Version
 ### Left/Right
-`![[image.png|left]]`. `left` will move the image to the left.
 
-`![[image.png|right]`. `right` will move the image to the right.
+Example | Description |
+---|---|
+`![[image.png\|left]]`| `left` will move the image to the left.
+`![[image.png\|right]`| `right` will move the image to the right.
 
 
 ### Banner
-`![[image.png|banner]]`. `banner` will crop the image height-wise while setting the width to cover the entire page.
+
+Example | Description |
+---|---|
+`![[image.png\|banner]]`| `banner` will crop the image height-wise while setting the width to cover the entire page.
 
 
 ### Portrait
-`![[image.png|portrait]]`. `portrait` will crop the image width-wise while setting the height to a standard of about 400px.
+
+Example | Description |
+---|---|
+`![[image.png\|portrait]]`| `portrait` will crop the image width-wise while setting the height to a standard of about 400px.
 
 
 ### Profile *Not fully working unless you use the `pc` property.*
-`![[image.png|profile]]`. `profile` will round the borders of the image to create a round image. 
+
+Example | Description |
+---|---|
+`![[image.png\|profile]]`| `profile` will round the borders of the image to create a round image. 
 
 
 ## Complex Version
 ### Left/Right
-`![[image.png|locl]]`. `locl` will move the image to the left.
 
-`![[image.png|locr]]`. `locr` will move the image to the right.
+Example | Description |
+---|---|
+`![[image.png\|locl]]`| `locl` will move the image to the left.
+`![[image.png\|locr]]`| `locr` will move the image to the right.
 
 
 ### Inner Image Position
-`![[image.png|pl]]`. `pl` will move the inside of the image to the left.
 
-`![[image.png|pr]]`. `pr` will move the inside of the image to the right.
-
-`![[image.png|pt]]`. `pt` will move the inside of the image to the top.
-
-`![[image.png|pb]]`. `pb` will move the inside of the image to the bottom.
-
-`![[image.png|pc]]`. `pc` will move the inside of the image to the center.
+Example | Description |
+---|---|
+`![[image.png\|pl]]`| `pl` will move the inside of the image to the left.
+`![[image.png\|pr]]`| `pr` will move the inside of the image to the right.
+`![[image.png\|pt]]`| `pt` will move the inside of the image to the top.
+`![[image.png\|pb]]`| `pb` will move the inside of the image to the bottom.
+`![[image.png\|pc]]`| `pc` will move the inside of the image to the center.
 
 
 ### Inner Image Position Adjustments
 These will inch the images around if the ^ above code isn't enough.
 
-`![[image.png|p+ct]]`. `p+ct` will move the inside of the image to the center top of the image.
-
-`![[image.png|p+cct]]`. `p+cct` will move the inside of the image to the center top, slightly higher than `p+ct`.
-
-`![[image.png|p+cb]]`. `p+cb` will move the inside of the image to the center bottom of the image.
-
-`![[image.png|p+ccb]]`. `p+ccb` will move the inside of the image to the center bottom, slightly higher than `p+cb`.
+Example | Description |
+---|---|
+`![[image.png\|p+ct]]`| `p+ct` will move the inside of the image to the center top of the image.
+`![[image.png\|p+cct]]`| `p+cct` will move the inside of the image to the center top, slightly higher than `p+ct`|
+`![[image.png\|p+cb]]`| `p+cb` will move the inside of the image to the center bottom of the image.
+`![[image.png\|p+ccb]]`| `p+ccb` will move the inside of the image to the center bottom, slightly higher than `p+cb`|
 
 
 
 
 ### Sizing
-||
+
+Example | Description |
 ---|---|
-`![[image.png|htiny]]`|`htiny` will resize the image to about 100px in height.
-`![[image.png|hsmall]]`| `hsmall` will resize the image to about 200px in height.
-`![[image.png|hmed]]` | `hmed` will resize the image to about 500px in height.
-
-`![[image.png|htall]]`. `htall` will resize the image to about 700px in height.
-
-`![[image.png|wtiny]]`. `wtiny` will resize the image to about 100px in width.
-
-`![[image.png|wsmall]]`. `wsmall` will resize the image to about 200px in width.
-
-`![[image.png|wmed]]`. `wmed` will resize the image to about 500px in width.
-
-`![[image.png|wtall]]`. `wtall` will resize the image to about 700px in width.
+`![[image.png\|htiny]]`|`htiny` will resize the image to about 100px in height.
+`![[image.png\|hsmall]]`| `hsmall` will resize the image to about 200px in height.
+`![[image.png\|hmed]]`| `hmed` will resize the image to about 500px in height.
+`![[image.png\|htall]]`| `htall` will resize the image to about 700px in height.
+`![[image.png\|wtiny]]`| `wtiny` will resize the image to about 100px in width.
+`![[image.png\|wsmall]]`| `wsmall` will resize the image to about 200px in width.
+`![[image.png\|wmed]]`| `wmed` will resize the image to about 500px in width.
+`![[image.png\|wtall]]`| `wtall` will resize the image to about 700px in width.

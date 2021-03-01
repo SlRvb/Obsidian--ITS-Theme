@@ -87,53 +87,41 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 ![](Lightmode-Editing.png)
 
 # Image Positions
-**Clear**
-
+#### Clear
 `![[image.png|clear]]`: `clear` will allow that image to sit below another image if it's on the same side instead of sitting in the middle of the page.
 
-
-**Cover** (Mostly for Complex Version)
-
+### Cover (Mostly for Complex Version)
 `![[image.png|cover]]`: `cover` will allow for the resizing of the image to maintain aspect ratio and avoid stretching.
 
-
-**Sizing** (Mostly for Complex Version)
-
-`![[image.png|<>+<>|200]]`: Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
+### Sizing (Mostly for Complex Version)
+`![[image.png|locr|sban|200]]`: Place the `|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
 
 
 ## Simplified Version
-**Left/Right**
-
+### Left/Right
 `![[image.png|left]]`. `left` will move the image to the left.
 `![[image.png|right]`. `right` will move the image to the right.
 
 
-**Banner**
-
+### Banner
 `![[image.png|banner]]`. `banner` will crop the image height-wise while setting the width to cover the entire page.
 
 
-**Portrait**
-
+### Portrait
 `![[image.png|portrait]]`. `portrait` will crop the image width-wise while setting the height to a standard of about 400px.
 
 
-**Profile** *Not fully working unless you use the `pc` property.*
-
-
+### Profile *Not fully working unless you use the `pc` property.*
 `![[image.png|profile]]`. `profile` will round the borders of the image to create a round image. 
 
 
 ## Complex Version
-**Left/Right**
-
+### Left/Right
 `![[image.png|locl]]`. `locl` will move the image to the left.
 `![[image.png|locr]]`. `locr` will move the image to the right.
 
 
-**Inner Image Position**
-
+### Inner Image Position
 `![[image.png|pl]]`. `pl` will move the inside of the image to the left.
 `![[image.png|pr]]`. `pr` will move the inside of the image to the right.
 `![[image.png|pt]]`. `pt` will move the inside of the image to the top.
@@ -141,7 +129,8 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 `![[image.png|pc]]`. `pc` will move the inside of the image to the center.
 
 
-**Inner Image Position Adjustments** These will inch the images around if the ^ above code isn't enough.
+### Inner Image Position Adjustments
+These will inch the images around if the ^ above code isn't enough.
 
 `![[image.png|p+ct]]`. `p+ct` will move the inside of the image to the center top of the image.
 `![[image.png|p+cct]]`. `p+cct` will move the inside of the image to the center top, slightly higher than `p+ct`.
@@ -151,8 +140,7 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 
 
 
-**Sizing**
-
+### Sizing
 `![[image.png|htiny]]`. `htiny` will resize the image to about 100px in height.
 `![[image.png|hsmall]]`. `hsmall` will resize the image to about 200px in height.
 `![[image.png|hmed]]`. `hmed` will resize the image to about 500px in height.

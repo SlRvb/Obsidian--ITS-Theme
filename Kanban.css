@@ -1,0 +1,58 @@
+/*Credit: https://github.com/Braweria/Spectrum*/
+/*Just an edit to make the colors work for any theme. This is not mine.*/
+
+.kanban ul {
+  display: flex;
+  flex-direction: row;
+  background-color:  rgba(21, 23, 25, 0.37);
+  border: 1px solid var(--background-modifier-border);
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.kanban ul li {
+  flex: 1;
+  list-style: none;
+}
+
+.kanban ul ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem;
+  margin-right: 2.5rem;
+  margin-top: 1rem;
+  border-radius: 0;
+  border: 0;
+  background: none;
+}
+
+.kanban ul ul li {
+    width: 100%;
+    display: block;
+    background: rgba(18, 18, 18, 0.63);
+    border: 1px solid var(--background-modifier-border);
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.kanban ul ul li:nth-child(even) {
+  background: var(--background-primary);
+}
+
+.kanban ul ul li:hover {
+  background: rgba(75, 82, 90, 0.29);
+}
+
+.kanban ul ul li .task-list-item-checkbox {
+  margin-left: 1.5rem;
+}
+
+.kanban ul ul ul {
+  margin-right: 0;
+}
+
+.kanban ul ul::before {
+  border-left: 0;
+}

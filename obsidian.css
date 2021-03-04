@@ -26,7 +26,7 @@
     --background-secondary: var(--side-bar); /*Sidebar background*/
     --background-secondary-alt: var(--outer-bar); /*Sidebar Title background*/
     
-    --background-modifier-border: #2d3034; /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-border: var(--table); /*Border outline of quotes, tables, line breaks*/
     
     --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*Search Field Bg Color*/
     --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*Searched Highlight Color*/
@@ -42,7 +42,7 @@
     --text-normal: var(--text); /*Text body of note*/
     --text-accent: var(--bright-blue); /*Links*/
     --text-accent-hover: var(--red); /*Links hover*/
-    --text-faint: #4e5b6f; /*Link brackets color*/
+    --text-faint: #4e5b6f; /*Link brackets color & Gutter Numbers*/
     --text-error: #ff3333; /*??*/
     --text-error-hover: #990000; /*??*/
     
@@ -51,7 +51,7 @@
     --text-selection: rgba(77, 23, 23, 0.46); /*Cursor dragged highlights*/
     
     --interactive-normal: #652121; /*Button Color*/
-    --interactive-hover: #303030;/*Button Color*/
+    --interactive-hover: var(--embed-bg);/*Button Color*/
     --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
     --interactive-accent-hover: #862f35; /*Menu Button Hover*/
@@ -64,7 +64,7 @@
     /*--DEFAULT VARIABLES--*/
 
     /*COLORS*/
-    --dark-gray: #232a34;
+    --dark-gray: #252c36;
     --gray: #3c5274;
     --bright-red: #e06c75;
     --dark-red: #290000/*#2f1010*/;
@@ -122,7 +122,7 @@
     --background-secondary: var(--side-bar); /*Sidebar background*/
     --background-secondary-alt: var(--outer-bar); /*Sidebar Title background*/
     
-    --background-modifier-border: #e6bebe; /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-border: var(--table); /*Border outline of quotes, tables, line breaks*/
     
     --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
@@ -147,7 +147,7 @@
     --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
     
     --interactive-normal: #f5d5d5; /*Button background Color*/
-    --interactive-hover: #303030; /*Button hover text*/
+    --interactive-hover: var(--embed-bg)/*#5d2b2b*/; /*Button hover text*/
     --interactive-accent: var(--red); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
     --interactive-accent-hover: #862f35; /*Menu Button Hover*/
@@ -160,7 +160,7 @@
     /*--DEFAULT VARIABLES--*/
 
     /*COLORS*/
-    --dark-gray: #e1e6ed;
+    --dark-gray: #dde4ef/*#e7ecf4*/;
     --gray: #d6deea;
     --bright-red: #a35158;
     --dark-red: #2f1010;
@@ -183,7 +183,7 @@
     --side-bar: var(--note);
     --outer-bar: #dfe7ef;
     --dark-sidebar: var(--sidebar);
-    --inactive: #91a3c1;
+    --inactive: #91a3c1/*#91a3c1*/;
     
     --file-select: #ca8385;
     --file: #647489;
@@ -194,12 +194,12 @@
     --note: var(--dark-blue);
     --text: #697580;
     --soft-text: #d04e4e;
-    --code-bg: #e6e6e8;
+    --code-bg: #f1f5ff;
     --code-text: #ea4262;
-    --embed-bg: #eaeef4;
+    --embed-bg: #ebf1f8;
 
     --tag: #c65656;
-    --table: #c9ced9;
+    --table: #ccd6eb;
     --hr: var(--gray);
     --i-at: #804848;
     
@@ -232,6 +232,10 @@
 .nav-action-button.is-active {
     background-color: var(--dark-accent);
     color: var(--soft-text);
+}
+
+button, button.mod-cta {
+    border-radius: var(--border-radius);
 }
 
 /*Pinned Pane Button Color*/
@@ -421,7 +425,7 @@ input[type='search'],
 input[type='email'],
 input[type='password'],
 input[type='number'] {
-    background-color: var(--outer-bar);
+    background-color: var(--bg);
     border-radius: var(--border-radius);
     border: 1px solid var(--table);
     color: var(--soft-text);
@@ -434,7 +438,10 @@ input[type='password']:hover,
 input[type='number']:hover {
     background-color: var(--background-modifier-form-field-highlighted);
 }
-
+.document-search-button:hover {
+    background-color: var(--interactive-accent);
+    color: white;
+}
 
 /*-Graph Settings-*/
 .graph-controls.is-close {
@@ -459,10 +466,10 @@ input[type='range'] {
 }
 
 
-
+/*Settings Toggle*/
 .checkbox-container {
     cursor: pointer;
-    background-color: var(--inactive);
+    background-color: var(--bg);
 }
     
 .suggestion-item.is-selected {
@@ -1150,12 +1157,14 @@ img[alt*="sprf"]{
 /*Colored List Markers*/
 li::marker {
     color: var(--soft-text);
-    
 }
 
 /*-Bullet Points-*/
 /*Bullet Line*/
-.cm-hmd-list-indent .cm-tab, ul ul, ol {
+.cm-hmd-list-indent .cm-tab {
+    position: inherit;
+}
+ul ul, ol {
     position: relative;
 }
 .cm-hmd-list-indent .cm-tab::before, ul ul::before, ol ol::before {
@@ -1184,10 +1193,9 @@ ul, ol {
     padding-inline-start: 25px;
 }
 
-
 /*List Arrow*/
 .markdown-preview-view .list-collapse-indicator {
-    padding-left: 13px;
+    padding-left: 8px;
     /*display:none;*/
 }
 
@@ -1355,10 +1363,14 @@ input[type="checkbox checked"] {
 
 /*Embed Window*/
 .markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
-    border-top: 0px;
-    border-bottom: 0px;
+    border: 0px;
     margin: 5px 0;
     background-color: var(--embed-bg);
+    border-radius: var(--border-radius);
+}
+/*Embed Note Doesn't Exist Hover*/
+.markdown-preview-view .file-embed:hover {
+    background-color: var(--dark-accent);
 }
 
 /*Embed Link Color*/

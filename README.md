@@ -118,12 +118,13 @@ Example | Description |
 
 
 ## Simplified Version
-### Left/Right
+### Left/Right/Center
 
 Example | Description |
 ---|---|
 `![[image.png\|left]]`| `left` will move the image to the left.
 `![[image.png\|right]`| `right` will move the image to the right.
+`![[image.png\|c]`| `c` will move the image to the center.
 
 
 ### Banner
@@ -184,7 +185,7 @@ Example | Description |
 `![[image.png\|p+cb]]`| `p+cb` will move the inside of the image to the center bottom of the image.
 `![[image.png\|p+ccb]]`| `p+ccb` will move the inside of the image to the center bottom, slightly higher than `p+cb`|
 
-*Note that these side by side images are done with the .img-grid cssclass*
+*Note that these side by side images are done with the .img-grid cssclass that now no longer works*
 
 #### Left/Right Example
 ![](https://i.imgur.com/J7bsqq0.png)
@@ -212,3 +213,12 @@ Example | Description |
 `![[image.png\|wmed]]`| `wmed` will resize the image to about 500px in width.
 `![[image.png\|wm-tl]]`| `wm-tl` will resize the image to about 600px in width.
 `![[image.png\|wtall]]`| `wtall` will resize the image to about 700px in width.
+
+
+# Embed Adjustments
+
+Example | Description
+---|---|
+`![[Embed Page|no-title]]` | Hide the title of embedded page
+
+**Embed Adjustments use the same [parameters](#sizing) as the images for resizing it and [moving it](#left-right-center) (except for `c`).**

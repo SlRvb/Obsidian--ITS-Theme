@@ -915,8 +915,9 @@ Enlarge Image:*/
     bottom:0;
     background:var(--background-primary);}
 
-/*Kepano: https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359
-Masonry/Gallery View*/
+/* Img Grid Defunct
+Kepano: https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359
+Masonry/Gallery View
 .img-grid .markdown-preview-section > div {
     display:flex;
 }
@@ -932,15 +933,18 @@ Masonry/Gallery View*/
 .img-grid .markdown-preview-section > div hr {
     width:100%;
 }
-/* These lines make every image the same height */
+/* These lines make every image the same height
 .img-grid .markdown-preview-section > div > .internal-embed img:not(:active) {
     object-fit:cover;
-}
+}*/
 
 /*----Image Positions----*/
 /*Fix Float Issues*/
 img[alt*="clear"] {
     clear: both;
+}
+img[alt*="c"] {
+    display:block;
 }
 
 /*--Simplified Version--*/

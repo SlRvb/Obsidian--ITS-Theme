@@ -1,6 +1,6 @@
 :root {
     /*FONTS*/
-    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
+    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif, 'Wingdings'; /*Note text*/
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*??*/
     --font-monospace: 'Source Code Pro', monospace; /*Code block text*/
@@ -36,7 +36,7 @@
     --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*Searched Highlight Color*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*Outershadow*/
     --background-modifier-success: #197300; /*Publish Upload Success Background*/
-    --background-modifier-error: #3d0000; /*??*/
+    --background-modifier-error: #3d0000; /*Delete Screen Button*/
     --background-modifier-error-rgb: 61, 0, 0; /*??*/
     --background-modifier-error-hover: #470000; /*??*/
     --background-modifier-cover: black; /*Obsidian Title Bar Bg*/
@@ -87,7 +87,7 @@
     --f-hover: var(--accent);
         
     --note: #1a1e24;
-    --text: #dcddde;
+    --text: #bccad8 /*#dcddde*/;
     --headers: #c14343;
     --soft-text: #aab3ca;
     --code-bg: #232831;
@@ -120,7 +120,7 @@
     --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-success: #deedd9; /*Publish Upload Success Background*/
-    --background-modifier-error: #efa9a9; /*??*/
+    --background-modifier-error: var(--accent); /*Delete Screen Button*/
     --background-modifier-error-rgb: 240, 131, 131; /*Ctrl F Search Background*/
     --background-modifier-error-hover: #470000; /*??*/
     --background-modifier-cover: var(--deep-dark-accent); /*Obsidian Title Bar*/
@@ -181,7 +181,7 @@
     --tag: #c65656;
     --table: #ccd6eb;
     --hr: #d6deea;
-    --i-at: #804848;
+    --i-at: var(--headers)/*#804848*/;
     
     --graph-bg: var(--note);
     --graph-lines: #e4e7f8;
@@ -566,7 +566,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:after {
-    background: none;
+    background: none !important;
 }
 /*Recolored and Eased Dropshadow*/
 body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
@@ -849,7 +849,7 @@ a, .markdown-preview-view .internal-link {
     color: var(--inactive);
 }
 
-/*--Horizontal Linebreak--*/ 
+/*--Horizontal Linebreak, HR--*/ 
 .markdown-preview-view hr, .HyperMD-hr-bg {
     height: 0; /*Center Line Vertically*/
     border-color: var(--hr);
@@ -858,13 +858,15 @@ a, .markdown-preview-view .internal-link {
 
 /*Stylized hr Line*/
 .markdown-preview-view hr::after, div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
-    content: "🗲";
+    content: "⚡";
     display: inline-block;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(120deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+    font-size: 16px;
     transform-origin: 50% 50%;
-    color: var(--fg);
+    color: transparent;
+    text-shadow: 0 0 0 var(--headers);
     padding: 5px; /*Symbol Padding*/
     background-color: var(--note); /*Color bg to cover line*/
 }
@@ -1186,7 +1188,7 @@ li::marker {
     top: -5px;
     bottom: -4px; 
 }
-ul ul::before, ol::before {
+ul ul::before, ol ol::before {
     left: -12px;
     top: 0;
     bottom: 0; 
@@ -1529,8 +1531,8 @@ input[type="checkbox checked"] {
 
 /*--Blockquote--*/
 .markdown-preview-view blockquote {
-    border: 0px solid var(--table);
-    background-color: var(--bg);
+    border: 0px solid var(--bg);
+    background-color: var(--embed-bg);
     border-left-width: 8px;
     border-radius: var(--border-radius);
     position: relative;
@@ -1571,6 +1573,7 @@ iframe {
     border-style: none;
     border-color: initial;
     border-image: initial;
+    width: 100%;
 }
 /*Remove File Padding*/
 .workspace-leaf-content .view-content {

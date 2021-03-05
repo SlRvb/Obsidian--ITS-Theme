@@ -76,6 +76,8 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 ```
 
 # Preview
+![](ITS.png)
+
 
 ## Darkmode
 

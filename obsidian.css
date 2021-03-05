@@ -463,12 +463,14 @@ input[type='range']::-webkit-slider-thumb {
     cursor: pointer;
     background-color: var(--bg);
     border-radius: var(--border-radius);
+    width: 22px;
 }
-
+/*Checkbox*/
 .checkbox-container:after {
+    display: none;
     border-radius: var(--border-radius);
 }
-    
+
 .suggestion-item.is-selected {
     background-color: var(--dark-accent);
 }

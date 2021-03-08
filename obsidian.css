@@ -93,6 +93,7 @@
     --code-bg: #232831;
     --code-text: #fa4545;
     --embed-bg: var(--dark-sidebar);
+    --footnote: #6e7e89;
     
     --tag: var(--dark-accent);
     --table: #283846;
@@ -177,6 +178,7 @@
     --code-bg: #f1f5ff;
     --code-text: #ea4262;
     --embed-bg: var(--code-bg) /*#ebf1f8*/;
+    --footnote: #8996a0;
 
     --tag: #c65656;
     --table: #ccd6eb;
@@ -1582,7 +1584,7 @@ blockquote p {
 .footnotes hr { display: none; }
 
 /*Resize text*/
-.footnotes { font-size: 14px; color: var(--soft-text); }
+.footnotes { font-size: 14px; color: var(--footnote); }
 
 /*Reduce footnote paragraph/line height*/
 .footnotes p { line-height: 16px; margin: 5px; }

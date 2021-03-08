@@ -823,6 +823,10 @@ a, .markdown-preview-view .internal-link {
     opacity: 0.8;
     color: var(--lite-accent);
 }
+.markdown-preview-view .internal-link.is-unresolved:hover {
+    color: var(--accent);
+}
+
 /*-External Links-*/
 /*Hide SVG Image*/
 .external-link {
@@ -1396,6 +1400,10 @@ input[type="checkbox checked"] {
 .markdown-embed .markdown-preview-view hr::after {
     background-color: var(--dark-sidebar);
 }
+/*Recolor Embedded Blockquote BG*/
+.markdown-embed blockquote {
+    background: linear-gradient(to left, var(--note), transparent);
+}
 
 /*Display Embed Path**
 /*https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/264**
@@ -1552,9 +1560,10 @@ input[type="checkbox checked"] {
     color: var(--headers);
 }
 /*Remove Margin From Block embedding*/
-blockquote p {
-    margin: 0px;
-}
+blockquote p { margin: 0px; }
+
+
+
 
 /*--Query--*/
 /*Smaller Query Titles*/

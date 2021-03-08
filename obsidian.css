@@ -95,7 +95,7 @@
     --embed-bg: var(--dark-sidebar);
     
     --tag: var(--dark-accent);
-    --table: #2f3440;
+    --table: #283846;
     --hr: #3c5274;
     --i-at: #bf5e5e;
     
@@ -852,7 +852,6 @@ a, .markdown-preview-view .internal-link {
 /*--Horizontal Linebreak, HR--*/ 
 .markdown-preview-view hr, .HyperMD-hr-bg {
     height: 0; /*Center Line Vertically*/
-    border-color: var(--hr);
     border: 1px solid var(--hr);
 }
 
@@ -1550,6 +1549,10 @@ input[type="checkbox checked"] {
     font-family: var(--font);
     color: var(--headers);
 }
+/*Remove Margin From Block embedding*/
+blockquote p {
+    margin: 0px;
+}
 
 /*--Query--*/
 /*Smaller Query Titles*/
@@ -1565,6 +1568,45 @@ input[type="checkbox checked"] {
 .markdown-preview-view .internal-query.is-embed .internal-query-header {
     padding: 0.5%;
 }
+
+
+
+/*--Footnotes--*/
+/*Reduce Footnote Number size/line height*/
+.footnote-ref {
+    font-size: 10px;
+    line-height: 0px;
+}
+
+/*Hide HR, Horizontal Line*/
+.footnotes hr { display: none; }
+
+/*Resize text*/
+.footnotes { font-size: 14px; color: var(--soft-text); }
+
+/*Reduce footnote paragraph/line height*/
+.footnotes p { line-height: 16px; margin: 5px; }
+
+/*Change Footnote Link Icon*/
+/*Hide & Recolor Original Icon*/
+.footnote-backref.footnote-link { visibility: hidden; color: var(--headers); }
+
+/*Recolor hover*/
+.footnote-backref.footnote-link:hover { color: var(--accent2-lite); }
+
+/*Display New Icon*/
+.footnote-backref.footnote-link:after { 
+    visibility: visible;
+    display: inline-block;
+    content: "⧪"; 
+    font-size: 16px;
+    padding-bottom: 2px;
+    margin-left: -2.5%;
+    transform: rotate(180deg);
+}
+
+
+
 
 /*--Files--*/
 /*Iframe Borderless*/

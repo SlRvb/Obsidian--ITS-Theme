@@ -1573,7 +1573,6 @@ iframe {
     border-style: none;
     border-color: initial;
     border-image: initial;
-    width: 100%;
 }
 /*Remove File Padding*/
 .workspace-leaf-content .view-content {

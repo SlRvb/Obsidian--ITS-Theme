@@ -68,7 +68,7 @@
     /*--DEFAULT VARIABLES--*/
 
     /*Compatibility Color Recoloring*/
-    --deep-dark-accent: #290000 /*#2f1010*/;
+    --deep-dark-accent: #270f0f /*#2f1010*/;
     --dark-accent: #571a1a /*#53201F*/;
     --lite-accent: #e06c75;
     --accent: #883737/*#c14343*/;
@@ -82,18 +82,21 @@
     --inactive: #586477;
     
     --file-select: var(--dark-accent);
-    --file: var(--soft-text);
+    --file: #aab3ca;
     --folder: #e05858;
     --f-hover: var(--accent);
         
     --note: #1a1e24;
     --text: #bccad8 /*#dcddde*/;
     --headers: #c14343;
-    --soft-text: #aab3ca;
+    --soft-text: #aab3ca/*#d04e4e*/;
     --code-bg: #232831;
     --code-text: #fa4545;
     --embed-bg: var(--dark-sidebar);
     --footnote: #6e7e89;
+    
+    --th: var(--dark-accent);
+    --td: #030a1452;
     
     --tag: var(--dark-accent);
     --table: #283846;
@@ -175,10 +178,13 @@
     --note: #f8fbff;
     --text: #697580;
     --soft-text: #d04e4e;
-    --code-bg: #f1f5ff;
+    --code-bg: #e3eafc;
     --code-text: #ea4262;
-    --embed-bg: var(--code-bg) /*#ebf1f8*/;
+    --embed-bg: #f1f5ff /*#ebf1f8*/;
     --footnote: #8996a0;
+    
+    --th: #c14343;
+    --td: #d0ddef62;
 
     --tag: #c65656;
     --table: #ccd6eb;
@@ -1175,7 +1181,7 @@ img[alt*="sprf"]{
 /*--List--*/
 /*Colored List Markers*/
 li::marker {
-    color: var(--soft-text);
+    color: var(--headers);
 }
 
 /*-Bullet Points-*/
@@ -1278,15 +1284,33 @@ input[type="checkbox checked"] {
 
 
 /*--Table--*/
-.markdown-preview-view table {
-    border-color: var(--soft-text);
+.markdown-preview-view td {
+    border: none;
 }
 
-/*Border Color*/
-.markdown-preview-view th, .markdown-preview-view td {
-    padding: 4px 10px;
-    border: 1px solid var(--table);
+.markdown-preview-view th {
+    background-color: var(--th);
+    color: #edf7ff;
+    border: 0px;
 }
+
+.markdown-preview-view th:nth-child(even) {
+    opacity: 80%;
+    border-left: 1px solid var(--note);
+    border-right: 1px solid var(--note);
+}
+
+.markdown-preview-view td:nth-child(odd) {
+    background-color: var(--td);
+    border: 0;
+    border-bottom: 1px solid var(--note);
+}
+
+.markdown-preview-view tr:nth-child(even) {
+    background-color: var(--embed-bg);
+    border: 0;
+}
+
 
 
 /*--Tags--*/
@@ -1639,6 +1663,7 @@ iframe {
     font-family: var(--font);
     color: var(--headers);
     border-bottom: solid var(--accent) !important;
+    background-color: var(--embed-bg);
 }
 
 

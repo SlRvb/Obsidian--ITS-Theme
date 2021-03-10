@@ -221,6 +221,6 @@ Example | Description |
 
 Example | Description
 ---|---|
-`![[Embed Page|no-title]]` | Hide the title of embedded page
+`![[Embed Page\|no-title]]` | Hide the title of embedded page
 
 **Embed Adjustments use the same [parameters](#sizing) as the images for resizing it and [moving it](#left-right-center) (except for `c`).**

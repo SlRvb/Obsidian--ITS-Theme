@@ -1590,13 +1590,34 @@ blockquote p { margin: 0px; }
 
 
 /*--Query--*/
+.markdown-preview-view .internal-query.is-embed {
+    border: none;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.internal-query.is-embed .search-result-file-matches {
+    border: none;
+    padding: 0;
+    margin-right: 10px;
+    margin-bottom: .5%;
+}
+
+.internal-query.is-embed .search-result {
+    border-bottom: 1px solid var(--bg);
+    background-color: var(--note);
+    margin-bottom: 0;
+}
+
 /*Smaller Query Titles*/
 .markdown-preview-view .internal-query.is-embed .internal-query-header-title {
     font-size: 13px;
     font-weight: 600;
     color: var(--soft-text);
     line-height: 18px;
-    
+}
+.markdown-preview-view .internal-query.is-embed .internal-query-header{
+    background-color: var(--dark-accent);
 }
 
 /*Header Spacing*/
@@ -1657,13 +1678,54 @@ iframe {
     overflow: hidden;
 }
 
-/*Dataview Table*/
+
+
+
+
+/*----Plugins----*/
+
+/*--Dataview Table--*/
 .table-view-table > thead > tr > th {
     font-weight: 900 !important;
     font-family: var(--font);
     color: var(--headers);
     border-bottom: solid var(--accent) !important;
     background-color: var(--embed-bg);
+}
+
+
+/*--Checklist Plugin Edit--*/
+/*Add padding to Checklist Pane*/
+.todo-list .group {
+    margin: 4%;
+}
+
+/*Shrink Checklist Header*/
+.todo-list .group-header {
+    font-size: 14px !important;
+}
+
+/*Resize/Recolor/Square Task*/
+.todo-list .item.svelte-zpfope.svelte-zpfope {
+    background-color: var(--th) !important;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    margin-bottom: 1%;
+}
+
+/*Recolor Every Odd Task*/
+.todo-list .item.svelte-zpfope.svelte-zpfope:nth-child(odd) {
+    background-color: var(--code-bg) !important;
+}
+
+/*Resize Task Title*/
+.todo-list .content.svelte-zpfope.svelte-zpfope {
+    padding: 1% !important;
+    line-height: 18px;
+}
+/*Square Counter*/
+.todo-list .count.svelte-im5pnh {
+    border-radius: var(--border-radius);
 }
 
 

@@ -86,7 +86,7 @@
     --folder: #e05858;
     --f-hover: var(--accent);
         
-    --note: #1a1e24;
+    --note: #1a1e24 /*#0d131c*/;
     --text: #bccad8 /*#dcddde*/;
     --headers: #c14343;
     --soft-text: #aab3ca/*#d04e4e*/;
@@ -619,8 +619,11 @@ input[type='range']::-webkit-slider-thumb {
 /*--Starred Pane--*/
 .item-list .nav-file {
     padding-left: 20px;
-    
 }
+.item-list {
+    overflow-x: hidden;
+}
+
 /*File: Move Further In*/
 .nav-file-icon {
     top: 5px;

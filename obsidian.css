@@ -568,24 +568,7 @@ input[type='range']::-webkit-slider-thumb {
     background-color: rgba(var(--interactive-accent-rgb), 0.2);
 }
 
-/*--Sliding Panes--*/
-/*Hide the gradient of the Title Pane*/
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after,
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:after {
-    background: none !important;
-}
-/*Recolored and Eased Dropshadow*/
-body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
-    box-shadow: 0px 0px 20px 20px var(--slide-shadow) !important;
-}
 
-/*Note Title Bar*/
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
-    border-right: 2px solid var(--headers);
-    border-bottom: none;
-}
 
 
 /*--Graph View--*/
@@ -1684,6 +1667,27 @@ iframe {
 
 /*----Plugins----*/
 
+
+/*--Sliding Panes--*/
+/*Hide the gradient of the Title Pane*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:after {
+    background: none !important;
+}
+/*Recolored and Eased Dropshadow*/
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
+    box-shadow: 0px 0px 20px 20px var(--slide-shadow) !important;
+}
+
+/*Note Title Bar*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+    border-right: 2px solid var(--headers);
+    border-bottom: none;
+}
+
+
 /*--Dataview Table--*/
 .table-view-table > thead > tr > th {
     font-weight: 900 !important;
@@ -1707,7 +1711,7 @@ iframe {
 
 /*Resize/Recolor/Square Task*/
 .todo-list .item.svelte-zpfope.svelte-zpfope {
-    background-color: var(--th) !important;
+    background-color: var(--dark-accent) !important;
     border-radius: var(--border-radius);
     font-size: 14px;
     margin-bottom: 1%;

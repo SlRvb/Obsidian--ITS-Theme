@@ -283,6 +283,7 @@ button, button.mod-cta {
     font-size: 24px;
     /*border-bottom: 3px solid var(--accent);*/
     padding-bottom: 2%;
+    padding-left: 1.5%;
 }
 
 /*Nav Folder/File Icons*/

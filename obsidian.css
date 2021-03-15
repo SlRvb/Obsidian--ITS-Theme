@@ -1740,6 +1740,16 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     margin-bottom: 1%;
 }
 
+/*Checkbox*/
+.todo-list .toggle.svelte-zpfope.svelte-zpfope {
+    padding-right: 4px;
+}
+/*Square Checkbox*/
+.todo-list .checkbox.svelte-y3iyim {
+    border-radius: var(--border-radius);
+}
+
+
 /*Recolor Every Odd Task*/
 .todo-list .item.svelte-zpfope.svelte-zpfope:nth-child(odd) {
     background-color: var(--code-bg) !important;
@@ -1754,9 +1764,9 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 .todo-list .count.svelte-im5pnh {
     border-radius: var(--border-radius);
 }
-
-
-
+.todo-list .content.svelte-zpfope.svelte-zpfope {
+    word-break: break-word;
+}
 
 
 /*---Publish---*/

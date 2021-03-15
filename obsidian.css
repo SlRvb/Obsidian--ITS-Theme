@@ -690,6 +690,7 @@ body {
     text-align: justify;
 }
 
+
 /*--Headings--*/
 h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     font-weight: 600;
@@ -1690,6 +1691,17 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     border-right: 2px solid var(--headers);
     border-bottom: none;
 }
+
+/*Hide Black Border When Header is Rotated*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-content {
+    border: 0;
+}
+
+/*Display Border When Header Rotation is Off*/
+body.plugin-sliding-panes .workspace-split.mod-root .view-content {
+    border-left: 3px solid var(--bg);
+}
+
 
 
 /*--Dataview Table--*/

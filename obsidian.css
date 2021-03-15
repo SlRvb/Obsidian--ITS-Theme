@@ -1616,6 +1616,7 @@ blockquote p { margin: 0px; }
 }
 /*Query No Matches Found*/
 .internal-query.is-embed .search-empty-state {
+    margin: 0;
     color: var(--headers);
 }
 

@@ -97,6 +97,18 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 **Edit Mode**
 ![](Lightmode-Editing.png)
 
+
+
+# `<i></i>` Attributes
+
+Alt="_" | Description
+---|---|
+`left` | Move text of `<i>` to the left
+`right` | Move text of `<i>` to the right
+`no-bg` | Remove the background color of `<i>`
+`clear` | Equivalent of a `<br>` or an enter
+
+
 # Image Positions
 Obsidian internal images `![[]]` will change immediately, but for external images `![]()`Obsidian needs to be refreshed: `ctrl + r` to see the changes.
 
@@ -222,5 +234,9 @@ Example | Description |
 Example | Description
 ---|---|
 `![[Embed Page\|no-title]]` | Hide the title of embedded page
+`![[Embed Page\|no-lk]]` | Hide the link
+`![[Embed Page\|lk-l]]` | Move link to the left
+`![[Embed Page\|lk-clear]]` | Make background of the link transparent
+`![[Embed Page\|no-m]]` | Will remove margins and padding
 
 **Embed Adjustments use the same [parameters](#sizing) as the images for resizing it and [moving it](#left-right-center) (except for `c`).**

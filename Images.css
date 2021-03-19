@@ -1,22 +1,16 @@
-/*--Variables--*/
-.theme-dark, .theme-light {
-    --tiny: 100px;
-    --small: 200px;
-    --small-med: 300px;
-    --med-small: 400px;
-    --medium: 500px;
-    --med-tall: 600px;
-    --tall: 700px;
-}
-
-
-
 /*Fix Float Issues*/
 img[alt*="clear"] {
     clear: both;
 }
 
-/*----Simplified Version----*/
+/*Center Image*/
+img[alt*="c"] {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
 img[alt*="left"] {
@@ -93,6 +87,8 @@ img[alt*="profile+medium"] {
 img[alt*="flex"]{
     display: grid;
 }
+
+
 /*-Image Sizing-*/
 /*Fit image within bounds WITHOUT stretching*/
 img[alt*="cover"]{
@@ -143,7 +139,6 @@ img[alt*="wm-tl"]{
 img[alt*="wtall"]{
     width: var(--tall);
 }
-
 
 
 /*--Image Position--*/
@@ -218,7 +213,7 @@ img[alt*="sban"] {
 
 /*Profile*/
 /*Rounded Image*/
-img[alt*="sprof"]{
+img[alt*="sprf"]{
     object-fit: cover;
     border-radius: 100%;
 }

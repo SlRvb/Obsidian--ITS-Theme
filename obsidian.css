@@ -992,7 +992,7 @@ li {
 }
 
 li:nth-child(even) {
-    border-left: 2px solid var(--lines);
+    border-left: 2px solid var(--hr);
 }
 
 /*Bullet Line Original**
@@ -1192,7 +1192,7 @@ input[type="checkbox checked"] {
     padding: 5px 10px;
 }
 
-/* Italicize Embed Title*/
+/* Recolor Embed Title*/
 .markdown-embed-title, .file-embed-title {
     color: var(--lite-accent);
     font-size: 20px;
@@ -1206,12 +1206,12 @@ input[type="checkbox checked"] {
     white-space: normal;
 }
 
-/* Italicize Embed Headings*/
+/* Recolor Embed Headings*/
 .markdown-preview-view .markdown-embed h1, .markdown-embed h2, .markdown-embed h3, .markdown-embed h4, .markdown-embed h5, .markdown-embed h6 {
     font-size: 20px;
     line-height: 1em;
     color: var(--accent);
-    font-style: italic;
+    font-family: var(--font);
 }
 
 /*Embed Window*/
@@ -1700,6 +1700,7 @@ img[alt*="sprf"]{
 
 .internal-embed[alt*="lk-l"] .markdown-embed-link {
     left: 10px;
+    right: unset;
 }
 
 .internal-embed[alt*="lk-clear"] .markdown-embed-link {

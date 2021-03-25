@@ -96,7 +96,7 @@
     --footnote: #6e7e89;
     
     --th: var(--dark-accent);
-    --td: #030a1452;
+    --td: #030a1490;
     
     --tag: var(--dark-accent);
     --table: #283846;
@@ -351,6 +351,11 @@ button, button.mod-cta {
 .nav-file-title.is-active {
     background-color: var(--dark-accent);
     color: var(--fg);
+}
+
+/**/
+.nav-folder-title.is-being-dragged-over {
+    border:none;
 }
 
 /*Arrows*/
@@ -1115,7 +1120,7 @@ input[type="checkbox checked"] {
 }
 
 .markdown-preview-view tr:nth-child(even) {
-    background-color: var(--embed-bg);
+    background-color: var(--td);
     border: 0;
 }
 

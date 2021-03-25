@@ -3,21 +3,22 @@
 
 Theme for my Obsidian Story Vault: ***In The Shadows.***
 
+
 # Table of Contents
 - [Features](#features)
 - [Preview](#images)
 - [Image Positions](#image-positions)
     - [Simplified Version](#simplified-version)
     - [Customizable Version](#customizable-version)
-- [Embed Adjustmens *Coming Soon*](#embed-adjustments)
+- [Embed Adjustments](#embed-adjustments)
+- [Alternate Themes Snippets](#alternate-themes)
 
 # Features
-- Dark and Light mode compatible
+- **Dark and Light mode**
 - Colored Graph
 - Squared Edges
 - **Heading:**
     - **Underline**: spans across the page depending on the heading
-    - **Font:** Calisto MT
     - **Embeded:** Embedded files have smaller headers and are 1 color
 - Custom Horizontal line
     - *Credit:* [TriDiamond](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/223)
@@ -63,17 +64,14 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
     - File Explorer Sidebar
     - Embed Titles
     - Query Titles
-- Embeds simplified
-- Image Positions
-- Embed Adjustments *Coming Soon*
-
-*Folder Icons based on Folder Title not included, use this to add your own icons:*
-```
-.nav-folder-title[data-path="<Folder name here>"] .nav-folder-title-content::before {
-  content: "<Emoji here> ";
-  font-size:1.3em;
-}
-```
+- Embed Adjustments
+- Fonts: (Main ones are near the `listed:`, alternates are below it)
+    - Headings: [Calisto MT]()
+        - [Suez One](https://fonts.google.com/specimen/Suez+One)
+        - [Palatino Black](https://www.fonts.com/font/linotype/palatino/black)
+        - [Georgia Bold](https://www.fonts.com/font/microsoft-corporation/georgia/bold)
+    - Monospace: [JetBrains Mono Medium](https://www.jetbrains.com/lp/mono/)
+        - [Recursive Mono Casual Static Medium](https://www.recursive.design/)
 
 # Preview
 ![](ITS.png)
@@ -240,3 +238,31 @@ Example | Description
 `![[Embed Page\|no-m]]` | Will remove margins and padding
 
 **Embed Adjustments use the same [parameters](#sizing) as the images for resizing it and [moving it](#left-right-center) (except for `c`).**
+
+# Alternate Themes
+
+## SlRvb
+![](Theme-SlRvb--Darkmode.png)
+![](Theme-SlRvb--Lightmode.png)
+- Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
+- Monospace: [Fira Code](https://github.com/tonsky/FiraCode)
+
+## D&D
+![](Theme-DnD--Darkmode.png)
+![](Theme-DnD--Lightmode.png)
+
+**Fonts used:**
+- Headings: [Cinzel Decorative](https://fonts.google.com/specimen/Cinzel+Decorative)
+    - [Oleo Script](https://fonts.google.com/specimen/Oleo+Script)
+    - [Lobster](https://fonts.google.com/specimen/Lobster?)
+- Monospace: [Fira Code](https://github.com/tonsky/FiraCode)
+
+## School Days
+![](Theme-School-Days--Darkmode.png)
+![](Theme-School-Days--Lightmode.png)
+
+**Fonts used:**
+- Vault Name: [Jersey M54](https://www.dafont.com/jersey-m54.font)
+- Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
+    - [RocknRoll One](https://fonts.google.com/specimen/RocknRoll+One)
+- Monospace: [Recursive Mono Linear Static Medium](https://www.recursive.design/)

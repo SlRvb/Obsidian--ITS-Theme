@@ -96,7 +96,7 @@
     --footnote: #6e7e89;
     
     --th: var(--dark-accent);
-    --td: #030a1490;
+    --td: #030a1495;
     
     --tag: var(--dark-accent);
     --table: #283846;
@@ -146,7 +146,7 @@
     --interactive-hover: var(--embed-bg)/*#5d2b2b*/; /*Button hover text*/
     --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select, Resize Handle*/
-    --interactive-accent-hover: #862f35; /*Menu Button Hover*/
+    --interactive-accent-hover: var(--lite-accent); /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
     
     --scrollbar-bg: rgba(255, 255, 255, 0.05);
@@ -225,6 +225,11 @@
 .nav-action-button.is-active {
     background-color: var(--dark-accent);
     color: var(--soft-text);
+}
+/*Button Hover Color*/
+.modal button:not(.mod-cta):not(.mod-warning):hover, button:hover, button.mod-cta:hover {
+    background-color: var(--dark-accent) !important;
+    color: white;
 }
 
 button, button.mod-cta {
@@ -346,6 +351,10 @@ button, button.mod-cta {
     color: var(--f-hover) !important;
     font-weight: 600; 
 }
+.nav-folder-children .nav-file-title-content::before{
+    text-shadow: 0 0 0 var(--inactive);
+}
+
 
 /*File selected*/
 .nav-file-title.is-active {
@@ -377,10 +386,17 @@ button, button.mod-cta {
 /*Text*/
 .tree-item-self {
     color: var(--soft-text);
+    border-radius: var(--border-radius);
 }
 .tag-container .tree-item-self:hover {
     color: var(--code-text);
 }
+
+/*Count Squared*/
+.tree-item-flair {
+    border-radius: var(--border-radius);
+}
+
 
 /*Tag Pane Lines*/
 /* Works but Dot appears*/
@@ -578,15 +594,13 @@ input[type='range']::-webkit-slider-thumb {
 .flair {
     background-color: var(--interactive-normal);
     color: var(--accent);
+    border-radius: var(--border-radius);
 }
 
 /*Publish item select*/
 .file-tree-item-header.is-selected {
     background-color: rgba(var(--interactive-accent-rgb), 0.2);
 }
-
-
-
 
 /*--Graph View--*/
 /*  background of graph view pane*/
@@ -1195,7 +1209,10 @@ input[type="checkbox checked"] {
 /*Tags Hover*/
 .frontmatter-container .tag:hover {
     background-color: var(--tag);
+    border: none;
 }
+
+
 
 /*--Embeds--*/
 /*Remove Top Padding*/

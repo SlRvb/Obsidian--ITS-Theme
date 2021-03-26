@@ -3,7 +3,7 @@
     --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*??*/
-    --font-monospace: 'JetBrains Mono Medium', 'Recursive Mono Casual Static Medium', 'Menlo Bold', 'Source Code Pro', monospace; /*Code block text*/
+    --font-monospace: 'Fira Code Medium', /*'JetBrains Mono Medium', 'Recursive Mono Casual Static Medium', 'Menlo Bold',*/ 'Source Code Pro', monospace; /*Code block text*/
     --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif; /*Works, but if it doesn't, needs !important*/
 }
 
@@ -72,7 +72,7 @@
     --dark-accent: #571a1a /*#53201F*/;
     --lite-accent: #e06c75;
     --accent: #883737/*#c14343*/;
-    --accent2: #4c78cc;
+    --accent2: var(--hr)/*#4c78cc*/;
     --accent2-lite: #61afef;
     --bg: #252c36;
     --fg: #cfd7dd;
@@ -108,7 +108,7 @@
     --graph-node: var(--fg);
     --graph-fill: var(--headers);
     --graph-404: #727e93;
-    --graph-img: var(--accent2) /*#ff86be*/;
+    --graph-img: #4c78cc /*#ff86be*/;
     --graph-tag: var(--headers);
 }
 
@@ -160,7 +160,7 @@
     --dark-accent: #ffeded;
     --lite-accent: #a35158;
     --accent: #c14343;
-    --accent2: #4c78cc;
+    --accent2: var(--hr)/*#4c78cc*/;
     --accent2-lite: #5599d0;
     --bg: #dde4ef;
     --fg: #9f0202;
@@ -196,7 +196,7 @@
     --graph-node: var(--headers);
     --graph-fill: #2e5db2;
     --graph-404: #727e93;
-    --graph-img: var(--accent2) /*#5469de*/;
+    --graph-img: #4c78cc /*#5469de*/;
     --graph-tag: #000000;    
 }
 
@@ -1012,7 +1012,7 @@ li {
 }
 
 li:nth-child(even) {
-    border-left: 2px solid var(--hr);
+    border-left: 2px solid var(--accent2);
 }
 
 .markdown-preview-view ul > li.task-list-item {

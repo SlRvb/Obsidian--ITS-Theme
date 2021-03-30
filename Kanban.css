@@ -34,7 +34,7 @@
 .markdown-preview-view ul > li.task-list-item, .markdown-preview-view ol > li.task-list-item {
     text-indent: 0px !important;
 }
-
+/*Hide Bullet*/
 .kanban ul {
     list-style: none;
 }
@@ -119,7 +119,7 @@
 
 /*----Personal Edits----*/
 /*Fix Margins/Padding*/
-.kanban blockquote {
+.kanban .internal-embed blockquote {
     padding: 1%;
     padding-left: 5%;
     font-size: 12px;

@@ -1,58 +1,165 @@
 /*Credit: https://github.com/Braweria/Spectrum*/
-/*Just an edit to make the colors work for any theme. This is not mine.*/
+/*Just an edit to make the colors and lists work for any theme. This is not mine.*/
+
+.theme-dark {
+    --td: #030a1495;
+    
+    /*ITS Theme Color Compatibility*/
+    --hvr: var(--text-highlight-bg);
+    --hvr2: var(--text-selection);
+    
+    /* Uncomment me for default theme colors
+    --hvr: rgba(105, 88, 178, 0.51);
+    --hvr2: rgba(40, 20, 77, 0.51);
+    */
+}
+.theme-light {
+    --td: #d0ddef62;
+    /*ITS Theme Color Compatibility*/
+    --hvr: var(--text-highlight-bg);
+    --hvr2: var(--text-selection);
+    
+    /* Uncomment me for default theme colors
+    --hvr: rgba(125, 94, 255, 0.19);
+    --hvr2: rgba(171, 137, 234, 0.3);
+    */
+}
+
+/*Widen Page*/
+.kanban .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+    max-width: 100% !important;
+}
+
+/*Remove Text Spacing from bullet/number*/
+.markdown-preview-view ul > li.task-list-item, .markdown-preview-view ol > li.task-list-item {
+    text-indent: 0px !important;
+}
 
 .kanban ul {
-  display: flex;
-  flex-direction: row;
-  background-color:  rgba(21, 23, 25, 0.37);
-  border: 1px solid var(--background-modifier-border);
-  padding: 1rem;
-  border-radius: 0;
+    list-style: none;
+}
+
+.kanban ul, .kanban ol {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0;
+    flex-wrap: wrap;
+    padding-inline-start: 0px;
 }
 
 .kanban ul li {
-  flex: 1;
-  list-style: none;
+    flex: 1 1 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+}
+.kanban ol li {
+    flex: 1 1 20%;
+    padding-right: 10px;
+    margin-left: 30px;
+    border: 0;
 }
 
-.kanban ul ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0rem;
-  margin-right: 2.5rem;
-  margin-top: 1rem;
-  border-radius: 0;
-  border: 0;
-  background: none;
+.kanban ul ul, .kanban ol ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: none;
 }
 
 .kanban ul ul li {
     width: 100%;
     display: block;
-    background: rgba(18, 18, 18, 0.63);
-    border: 1px solid var(--background-modifier-border);
-    margin-bottom: 5px;
-    padding: 10px;
+    background: var(--td);
+    padding-left: 15px;
     border-radius: 0;
 }
-
-.kanban ul ul li:nth-child(even) {
-  background: var(--background-primary);
+.kanban ol ol li {
+    width: 100%;
+    background: var(--td);
+    margin-left: 10px;
 }
 
-.kanban ul ul li:hover {
-  background: rgba(75, 82, 90, 0.29);
+
+.kanban ul ul li:nth-child(even), .kanban ol ol li:nth-child(even) {
+    background: var(--background-primary);
+    border: 0;
 }
 
-.kanban ul ul li .task-list-item-checkbox {
-  margin-left: 1.5rem;
+.kanban ul ul li:hover, .kanban ol ol li:hover {
+    background: var(--hvr);
+    mix-blend-mode: var(--highlight-mix-blend-mode);
 }
 
-.kanban ul ul ul {
-  margin-right: 0;
+.kanban ul li:hover, .kanban ol li:hover {
+    background: var(--hvr2);
+    mix-blend-mode: var(--highlight-mix-blend-mode);
+}
+
+
+
+.kanban ul ul ul{
+    margin-right: 0;
 }
 
 .kanban ul ul::before {
-  border-left: 0;
+    border-left: 0;
+}
+
+.kanban ul .list-collapse-indicator {
+    margin-left: -20px;
+}
+
+
+
+
+
+/*----Personal Edits----*/
+/*Fix Margins/Padding*/
+.kanban blockquote {
+    padding: 1%;
+    padding-left: 5%;
+    font-size: 12px;
+    line-height: 15px;
+    border-left-width: 3px;
+    margin: 0;
+    border-color: rgb(190, 190, 190);
+}
+
+/*Remove Quote*/
+.kanban .internal-embed blockquote:before {
+    display:none;
+}
+/*Shrink margins*/
+.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
+    margin: 0;
+}
+
+
+/*Display Embed Title*/
+.kanban .internal-embed::before{
+    content: attr(alt);
+}
+.kanban .image-embed::before {
+    content: none;
+}
+
+/*Hide Link but make embed clickable as a link*/
+.kanban .internal-embed .markdown-embed-link {
+    left: 0;
+    top: -40%;
+    background-color: transparent;
+    color: transparent;
+}
+.kanban .internal-embed .markdown-embed .markdown-preview-view {
+    margin: 0;
+    padding: 0;
+}
+/*Reduce Hr Height*/
+.kanban hr{
+    margin: 0;
+    margin-bottom: 10px;
 }

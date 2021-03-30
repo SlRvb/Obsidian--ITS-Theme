@@ -192,10 +192,16 @@ Example | Description |
 ---|---|
 `![[image.png\|p+cr]]`| `p+cr` will move the inside of the image to the center right.
 `![[image.png\|p+cl]]`| `p+cl` will move the inside of the image to the center left.
+||
 `![[image.png\|p+ct]]`| `p+ct` will move the inside of the image to the center top of the image.
 `![[image.png\|p+cct]]`| `p+cct` will move the inside of the image to the center top, slightly higher than `p+ct`|
+`![[image.png\|p+tc]]`| `p+tc` will move the inside of the image to the center top, slightly lower than `pt`|
+`![[image.png\|p+tcc]]`| `p+tcc` will move the inside of the image to the center top, slightly lower than `p+tc`|
+||
 `![[image.png\|p+cb]]`| `p+cb` will move the inside of the image to the center bottom of the image.
-`![[image.png\|p+ccb]]`| `p+ccb` will move the inside of the image to the center bottom, slightly higher than `p+cb`|
+`![[image.png\|p+ccb]]`| `p+ccb` will move the inside of the image to the center bottom, slightly lower than `p+cb`|
+`![[image.png\|p+bc]]`| `p+bc` will move the inside of the image to the center bottom, slightly higher than `pb`|
+`![[image.png\|p+bcc]]`| `p+bcc` will move the inside of the image to the center bottom, slightly higher than `p+bc`|
 
 *Note that these side by side images are done with the .img-grid cssclass that now no longer works*
 

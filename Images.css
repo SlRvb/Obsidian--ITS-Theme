@@ -171,19 +171,35 @@ img[alt*="pc"] {
     object-fit: cover;
     object-position: center;
 }
+img[alt*="p+tc"] {
+    object-fit: cover;
+    object-position: 50% 10%;
+}
+img[alt*="p+tcc"] {
+    object-fit: cover;
+    object-position: 50% 20%;
+}
 img[alt*="p+cct"] {
     object-fit: cover;
     object-position: 50% 30%;
 }
 img[alt*="p+ct"] {
     object-fit: cover;
-    object-position: 50% 20%;
+    object-position: 50% 40%;
 }
 img[alt*="p+cb"] {
     object-fit: cover;
-    object-position: 50% 80%;
+    object-position: 50% 60%;
 }
 img[alt*="p+ccb"] {
+    object-fit: cover;
+    object-position: 50% 70%;
+}
+img[alt*="p+bc"] {
+    object-fit: cover;
+    object-position: 50% 80%;
+}
+img[alt*="p+bcc"] {
     object-fit: cover;
     object-position: 50% 90%;
 }

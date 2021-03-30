@@ -2,7 +2,7 @@
 /*Just an edit to make the colors and lists work for any theme. This is not mine.*/
 
 .theme-dark {
-    --td: #030a1495;
+    --td: #030a1445;
     
     /*ITS Theme Color Compatibility*/
     --hvr: var(--text-highlight-bg);
@@ -14,7 +14,7 @@
     */
 }
 .theme-light {
-    --td: #d0ddef62;
+    --td: #d0ddef32;
     /*ITS Theme Color Compatibility*/
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);

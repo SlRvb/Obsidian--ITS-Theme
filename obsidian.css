@@ -1809,7 +1809,7 @@ img[alt*="sprf"]{
 .internal-embed[alt*="n-h3"] .markdown-embed h3,
 .internal-embed[alt*="n-h4"] .markdown-embed h4,
 .internal-embed[alt*="n-h5"] .markdown-embed h5,
-.internal-embed[alt*="n-h6"] .markdown-embed h6,{
+.internal-embed[alt*="n-h6"] .markdown-embed h6 {
     display: none;
 }
 

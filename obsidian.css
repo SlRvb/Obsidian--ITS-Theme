@@ -875,6 +875,8 @@ a:hover {
 .markdown-preview-view hr, .HyperMD-hr-bg {
     height: 0; /*Center Line Vertically*/
     border: 1px solid var(--hr);
+    /*margin-top: 17px;
+    margin-bottom: 20px;*/
 }
 
 /*Stylized hr Line*/
@@ -904,8 +906,8 @@ a:hover {
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
     color: transparent;
     margin: 0px;
-    margin-block-start: .1%;
-    margin-block-end: .1%;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
 }   
 /*Hide Collapsed Header Line*/
 .CodeMirror-activeline-background {
@@ -987,6 +989,17 @@ ul, ol {
 }
 
 /*-Bullet Points-*/
+
+/*Editor Bullet Points*/
+.cm-s-obsidian span.cm-formatting-list-ul {
+    visibility: hidden;
+}
+.cm-s-obsidian span.cm-formatting-list-ul:before {
+    visibility: visible;
+    content: "⬥";
+    margin-right: -9px;
+}
+
 /*Editor Bullet Lines*/
 .markdown-preview-view .task-list-item-checkbox {
     margin-right: 2%;
@@ -999,7 +1012,7 @@ ul, ol {
     content:'';
     border-left: 2px solid var(--accent);
     position: absolute;
-    left: 3px;
+    left: 6px;
     top: -5px;
     bottom: -4px; 
 }
@@ -1171,6 +1184,11 @@ input[type="checkbox checked"] {
 
 
 /*--Frontmatter/Metadata--*/
+/*CSS class, Hide Frontmatter*/
+.nom .frontmatter-container {
+    display: none;
+}
+
 /*No Background Color, Smaller Padding*/
 .frontmatter-container {
     background-color: transparent;
@@ -1189,7 +1207,7 @@ input[type="checkbox checked"] {
 .frontmatter-container .frontmatter-container-header {
     border-bottom: 1px solid var(--table);
 }
-. CodeMirror-line .cm-s-obsidian .cm-hmd-frontmatter {
+.CodeMirror-line .cm-s-obsidian .cm-hmd-frontmatter {
     font-size: 12px;
     line-height: 2px !important;
 }
@@ -1668,22 +1686,39 @@ img[alt*="pc"] {
     object-fit: cover;
     object-position: center;
 }
+img[alt*="p+tc"] {
+    object-fit: cover;
+    object-position: 50% 10%;
+}
+img[alt*="p+tcc"] {
+    object-fit: cover;
+    object-position: 50% 20%;
+}
 img[alt*="p+cct"] {
     object-fit: cover;
     object-position: 50% 30%;
 }
 img[alt*="p+ct"] {
     object-fit: cover;
-    object-position: 50% 20%;
+    object-position: 50% 40%;
 }
 img[alt*="p+cb"] {
     object-fit: cover;
-    object-position: 50% 80%;
+    object-position: 50% 60%;
 }
 img[alt*="p+ccb"] {
     object-fit: cover;
+    object-position: 50% 70%;
+}
+img[alt*="p+bc"] {
+    object-fit: cover;
+    object-position: 50% 80%;
+}
+img[alt*="p+bcc"] {
+    object-fit: cover;
     object-position: 50% 90%;
 }
+
 
 /*Image Locations*/
 img[alt*="locl"] {
@@ -1703,7 +1738,7 @@ img[alt*="locr"] {
 
 /*--Image Shapes--*/
 /*Banners*/
-img[alt*="sban"] {
+img[alt*="sban"], .internal-embed img[alt*="sban"] {
     object-fit: cover;
     width: 100%;
 }
@@ -1722,7 +1757,7 @@ img[alt*="sprf"]{
 }
 
 /*Embed Link Hide/Move*/
-.internal-embed[alt*="no-lk"] .markdown-embed-link {
+.internal-embed[alt*="nlk"] .markdown-embed-link {
     display: none;
 }
 
@@ -1754,10 +1789,31 @@ img[alt*="sprf"]{
     margin-right: auto;
 }
 
-.internal-embed[alt*="no-m"] .markdown-embed .markdown-preview-view {
+.internal-embed[alt*="nmg"] .markdown-embed .markdown-preview-view {
     margin: 0;
     padding: 0;
 }
+
+/*Hide Headings*/
+.internal-embed[alt*="no-h"] .markdown-embed h1,
+.internal-embed[alt*="no-h"] .markdown-embed h2,
+.internal-embed[alt*="no-h"] .markdown-embed h3,
+.internal-embed[alt*="no-h"] .markdown-embed h4,
+.internal-embed[alt*="no-h"] .markdown-embed h5,
+.internal-embed[alt*="no-h"] .markdown-embed h6 {
+    display: none;
+}
+/*Hide Specific Headings*/
+.internal-embed[alt*="n-h1"] .markdown-embed h1,
+.internal-embed[alt*="n-h2"] .markdown-embed h2,
+.internal-embed[alt*="n-h3"] .markdown-embed h3,
+.internal-embed[alt*="n-h4"] .markdown-embed h4,
+.internal-embed[alt*="n-h5"] .markdown-embed h5,
+.internal-embed[alt*="n-h6"] .markdown-embed h6,{
+    display: none;
+}
+
+
 
 /*Height Adjustment*/
 .internal-embed[alt*="htiny"] .markdown-embed-content {
@@ -1910,7 +1966,27 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 }
 
 
-/*---Publish---*/
+
+/*Button Plugin*/
+.button-default {
+    border-radius: var(--border-radius) !important;
+    box-shadow: none !important;
+}
+.button-default:hover {
+    box-shadow: 0 4px 4px var(--td), 0 10px 10px var(--td) !important;
+    color: var(--text);
+}
+
+
+
+
+
+
+
+
+
+
+/*----Publish----*/
 .site-header {
     font: var(--font);
     text-align: left;

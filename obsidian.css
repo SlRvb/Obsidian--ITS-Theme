@@ -526,6 +526,7 @@ input[type='range']::-webkit-slider-thumb {
 
 /*Undo b quote formatting*/
 b.u-pop {
+    font-weight: 900;
     color: var(--folder) !important;
     display: inline-block;
     margin: 0;

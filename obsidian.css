@@ -84,7 +84,7 @@
     --file: #aab3ca;
     --folder: #e05858;
     --f-hover: var(--accent);
-    --lines: #465164;
+    --lines: var(--accent2)/*#465164*/;
         
     --note: #1a1e24 /*#0d131c*/;
     --text: #bccad8 /*#dcddde*/;
@@ -524,6 +524,15 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: var(--border-radius);
 }
 
+/*Undo b quote formatting*/
+b.u-pop {
+    color: var(--folder) !important;
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
 
 
 /*Setting Item Padding Reduction*/
@@ -1080,15 +1089,21 @@ ol::before { left: -15px; }
 
 /*Checkbox Checked color*/
 .markdown-preview-view .task-list-item-checkbox:checked {
-  border: none;
-  background-color: var(--accent);
+    border: none;
+    background-color: var(--headers);
 }
 
 /*Checked Checkbox*/
-.markdown-preview-view ul > li.task-list-item.is-checked {
-    text-decoration: none;
-    color: var(--text-faint);
+.markdown-preview-view ul > li.task-list-item.is-checked, 
+.markdown-preview-view ol > li.task-list-item.is-checked {
+    text-decoration: unset;
+    color: var(--lines);
     font-weight: bold;
+}
+
+li.task-list-item.is-checked > a,
+li.task-list-item.is-checked > code {
+    opacity: 65%;
 }
 
 /*Table Checkboxes*/

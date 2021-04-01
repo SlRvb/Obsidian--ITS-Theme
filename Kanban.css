@@ -1,25 +1,24 @@
 /*Credit: https://github.com/Braweria/Spectrum*/
 /*Just an edit to make the colors and lists work for any theme. This is not mine.*/
 
-.theme-dark {
-    --td: #030a1445;
-    
+.theme-dark {    
     /*ITS Theme Color Compatibility*/
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);
     
     /* Uncomment me for default theme colors
+    --td: #030a1445;
     --hvr: rgba(105, 88, 178, 0.51);
     --hvr2: rgba(40, 20, 77, 0.51);
     */
 }
 .theme-light {
-    --td: #d0ddef32;
     /*ITS Theme Color Compatibility*/
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);
     
     /* Uncomment me for default theme colors
+    --td: #d0ddef32;
     --hvr: rgba(125, 94, 255, 0.19);
     --hvr2: rgba(171, 137, 234, 0.3);
     */
@@ -29,11 +28,19 @@
 .kanban .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
     max-width: 100% !important;
 }
+.kanban {
+    padding-top: 10px;
+}
 
 /*Remove Text Spacing from bullet/number*/
-.markdown-preview-view ul > li.task-list-item, .markdown-preview-view ol > li.task-list-item {
-    text-indent: 0px !important;
+.kanban .task-list-item-checkbox {
+    margin-left: 24px;
+    margin-top: 2px;
 }
+.kanban ol .task-list-item-checkbox {
+    margin-left: 0;
+}
+
 /*Hide Bullet*/
 .kanban ul {
     list-style: none;
@@ -117,15 +124,17 @@
 
 
 
+
 /*----Personal Edits----*/
 /*Fix Margins/Padding*/
 .kanban .internal-embed blockquote {
     padding: 1%;
-    padding-left: 5%;
+    padding-left: 10px;
     font-size: 12px;
     line-height: 15px;
     border-left-width: 3px;
     margin: 0;
+    overflow: hidden;
 }
 
 /*Remove Quote*/
@@ -141,6 +150,7 @@
 /*Display Embed Title*/
 .kanban .internal-embed::before{
     content: attr(alt);
+    line-height: 15px;
 }
 .kanban .image-embed::before {
     content: none;

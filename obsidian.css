@@ -288,7 +288,7 @@ button, button.mod-cta {
     font-size: 24px;
     /*border-bottom: 3px solid var(--accent);*/
     padding-bottom: 2%;
-    padding-left: 1.5%;
+    padding-left: 1.5% !important;
 }
 
 /*Nav Folder/File Icons*/
@@ -1495,6 +1495,37 @@ iframe {
 
 
 /*SlRvb's Custom CSS*/
+
+/*Justify text*/
+.justified p {
+    text-align: justify;
+}
+
+/*Readable Text Width.*/ /*Thanks @foreveryone*/
+.markdown-preview-view.readable .markdown-preview-sizer {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Writing*/
+.writing h1,
+.writing h2,
+.writing h3,
+.writing h4,
+.writing h5,
+.writing h6 {
+    text-align: center;
+}
+.writing p {
+    text-align: justify;
+}
+.markdown-preview-view.writing .markdown-preview-sizer {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*Italicized Text*/
 i { /*I used for image description, em is just regular italics*/

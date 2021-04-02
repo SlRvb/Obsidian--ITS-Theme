@@ -1526,6 +1526,14 @@ iframe {
     margin-right: auto;
 }
 
+/*Poems*/
+.poem p {
+    text-align: center;
+    line-height: 1.3em;
+    margin-block-end: 4%;
+}
+
+
 
 /*Italicized Text*/
 i { /*I used for image description, em is just regular italics*/
@@ -1918,6 +1926,7 @@ b {
     padding: 10px 20px;
     margin-left: 2%;
 }
+
 
 
 /*----Plugins----*/

@@ -1001,13 +1001,9 @@ ul, ol {
 /*-Bullet Points-*/
 
 /*Editor Bullet Points*/
-.cm-s-obsidian span.cm-formatting-list-ul {
-    visibility: hidden;
-}
-.cm-s-obsidian span.cm-formatting-list-ul:after {
-    visibility: visible;
+.cm-s-obsidian span.cm-formatting-list-ul:before {
     content: "⬥";
-    margin-left: -12px;
+    margin-right: -10px;
 }
 
 /*Editor Bullet Lines*/

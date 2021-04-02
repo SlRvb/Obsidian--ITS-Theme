@@ -1000,7 +1000,7 @@ ul, ol {
 
 /*-Bullet Points-*/
 
-/*Editor Bullet Points*/
+/*Editor Bullet Points*
 .cm-s-obsidian span.cm-formatting-list-ul {
     visibility: hidden;
 }
@@ -2033,7 +2033,56 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     color: var(--text);
 }
 
+/*ABC JS*/
+.abcjs-container svg {    
+    fill: white !important;
+}
 
+.abcjs-container svg path {    
+    fill: white !important;
+}
+
+
+
+/*--Mermaid--*/
+/*Mermaid Class*/
+g.classGroup text {
+    font-size: 10px;
+
+}
+
+g.classGroup rect {
+        fill: rgba(0, 0, 0, 0) !important;
+        stroke:#595d67  !important;
+        stroke-width:1spx;
+}
+
+/***Mermaid Flowchart
+ .path {
+    stroke: #8384bf !important;
+    stroke-width: 1.5px !important;
+}
+
+.node circle, .node ellipse, .node path, .node polygon, .node rect {
+    fill: #0b0d13 !important;
+    stroke: #2c2c52 !important;
+    stroke-width: 1px;
+}
+
+path[Attributes Style]{
+    marker-end: url(app://obsidian.md/index.html#arrowhead10);
+} ***/
+
+/*Mermaid ERD*/
+.entityBox {
+    fill: var(--background-primary-alt) !important;
+}
+.attributeBoxEven {
+    fill: var(--background-primary) !important;
+}
+.attributeBoxOdd {
+    fill: var(--background-secondary-alt) !important;
+}
 
 
 

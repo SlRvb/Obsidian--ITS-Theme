@@ -1004,10 +1004,10 @@ ul, ol {
 .cm-s-obsidian span.cm-formatting-list-ul {
     visibility: hidden;
 }
-.cm-s-obsidian span.cm-formatting-list-ul:before {
+.cm-s-obsidian span.cm-formatting-list-ul:after {
     visibility: visible;
     content: "⬥";
-    margin-right: -9px;
+    margin-left: -12px;
 }
 
 /*Editor Bullet Lines*/

@@ -996,7 +996,12 @@ ol > li::marker {
 
 /*Bullet Shape*/
 ul:nth-child(odd), ul:nth-child(even) {
-    list-style-type: "⬥ ";
+    list-style-type: none;
+}
+li::before {
+    content: "⬥ ";
+    margin-left: -23px;
+    margin-right: 5px;
 }
 /*Smaller Indentation*/
 ul, ol { 
@@ -1315,7 +1320,7 @@ input[type="checkbox checked"] {
 /*--Popover--*/
 /*Larger Popover*/
 .popover.hover-popover {
-    width: 50%;
+    width: 30%;
     border-radius: var(--border-radius);
     min-height: 100px;
     max-height: 600px;

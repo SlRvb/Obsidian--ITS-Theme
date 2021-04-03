@@ -1202,11 +1202,6 @@ input[type="checkbox checked"] {
 
 
 /*--Frontmatter/Metadata--*/
-/*CSS class, Hide Frontmatter*/
-.nom .frontmatter-container {
-    display: none;
-}
-
 /*No Background Color, Smaller Padding*/
 .frontmatter-container {
     background-color: transparent;
@@ -1499,6 +1494,11 @@ iframe {
 /*----SlRvb's Custom CSS----*/
 
 /*--CSS Classes--*/
+/*Hide Frontmatter*/
+.no-m .frontmatter-container {
+    display: none;
+}
+
 /*Justify text*/
 .justified p {
     text-align: justify;

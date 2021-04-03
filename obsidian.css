@@ -1315,7 +1315,7 @@ input[type="checkbox checked"] {
 /*--Popover--*/
 /*Larger Popover*/
 .popover.hover-popover {
-    width: 600px;
+    width: 50%;
     border-radius: var(--border-radius);
     min-height: 100px;
     max-height: 600px;

@@ -998,10 +998,12 @@ ol > li::marker {
 ul:nth-child(odd), ul:nth-child(even) {
     list-style-type: none;
 }
-li::before {
+ul li::before {
     content: "⬥ ";
-    margin-left: -25px;
-    margin-right: 4px;
+    margin-left: -21px;
+}
+li.task-list-item::before {
+    display: none;
 }
 /*Smaller Indentation*/
 ul, ol { 

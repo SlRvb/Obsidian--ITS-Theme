@@ -1,42 +1,40 @@
 /*Credit: https://github.com/Braweria/Spectrum*/
 /*Just an edit to make the colors and lists work for any theme. This is not mine.*/
 
-.theme-dark {    
-    /*ITS Theme Color Compatibility*/
-    --hvr: var(--text-highlight-bg);
-    --hvr2: var(--text-selection);
-    
-    /* Uncomment me for default theme colors
+.theme-dark {
+    --note: var(--background-primary);
     --td: #030a1445;
     --hvr: rgba(105, 88, 178, 0.51);
     --hvr2: rgba(40, 20, 77, 0.51);
-    */
+    --table: var(--background-modifier-border);
+    
 }
 .theme-light {
-    /*ITS Theme Color Compatibility*/
-    --hvr: var(--text-highlight-bg);
-    --hvr2: var(--text-selection);
-    
-    /* Uncomment me for default theme colors
+    --note: var(--background-primary);
     --td: #d0ddef32;
     --hvr: rgba(125, 94, 255, 0.19);
     --hvr2: rgba(171, 137, 234, 0.3);
-    */
+    --table: var(--background-modifier-border);
 }
+
 
 /*Widen Page*/
 .kanban .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
     max-width: 100% !important;
 }
+/*Reduce Padding at Top Kanban of Page*/
 .kanban {
     padding-top: 10px;
 }
+
 
 /*Remove Text Spacing from bullet/number*/
 .kanban .task-list-item-checkbox {
     margin-left: 24px;
     margin-top: 2px;
+    
 }
+/*Fix List Checkbox Margins*/
 .kanban ol .task-list-item-checkbox {
     margin-left: 0;
 }
@@ -56,13 +54,13 @@
 
 .kanban ul li {
     flex: 1 1 20%;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 0;
 }
 .kanban ol li {
     flex: 1 1 20%;
-    padding-right: 10px;
+    margin-right: 10px;
     margin-left: 30px;
     border: 0;
 }
@@ -71,12 +69,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0rem;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
     background: none;
 }
-
+/*Kaban Lines*/
+.kanban ul ul {
+    margin-left: 5px;
+    border-left: 2px solid var(--table);
+}
+.kanban ol ol {
+    margin-left: -15px;
+    padding-left: 20px;
+    border-left: 2px solid var(--table);
+}
+/*Color & Formatting*/
 .kanban ul ul li {
     width: 100%;
     display: block;
@@ -87,41 +94,28 @@
 .kanban ol ol li {
     width: 100%;
     background: var(--td);
-    margin-left: 10px;
+    margin-left: 14px;
 }
 
-
-.kanban ul ul li:nth-child(even), .kanban ol ol li:nth-child(even) {
-    background: var(--background-primary);
+/*Alternating Colors*/
+.kanban ul ul li:nth-child(even),
+.kanban ol ol li:nth-child(even) {
+    background: var(--note);
     border: 0;
 }
 
+/*Hover Colors*/
 .kanban ul ul li:hover, .kanban ol ol li:hover {
     background: var(--hvr);
-    mix-blend-mode: var(--highlight-mix-blend-mode);
 }
 
 .kanban ul li:hover, .kanban ol li:hover {
     background: var(--hvr2);
-    mix-blend-mode: var(--highlight-mix-blend-mode);
 }
-
-
-
-.kanban ul ul ul{
-    margin-right: 0;
-}
-
-.kanban ul ul::before {
-    border-left: 0;
-}
-
+/*Arrow*/
 .kanban ul .list-collapse-indicator {
     margin-left: -20px;
 }
-
-
-
 
 
 

@@ -98,6 +98,9 @@
     --th: var(--dark-accent);
     --td: #030a1495;
     
+    --hvr: var(--text-highlight-bg);
+    --hvr2: var(--text-selection);
+    
     --tag: var(--dark-accent);
     --table: #283846;
     --hr: #3c5274;
@@ -185,6 +188,9 @@
     
     --th: #c14343;
     --td: #d0ddef62;
+    
+    --hvr: var(--text-highlight-bg);
+    --hvr2: var(--text-selection);
 
     --tag: #c65656;
     --table: #ccd6eb;
@@ -1314,7 +1320,7 @@ input[type="checkbox checked"] {
 /*--Popover--*/
 /*Larger Popover*/
 .popover.hover-popover {
-    width: 30%;
+    width: 600px;
     border-radius: var(--border-radius);
     min-height: 100px;
     max-height: 600px;
@@ -1490,8 +1496,9 @@ iframe {
 }
 
 
-/*SlRvb's Custom CSS*/
+/*----SlRvb's Custom CSS----*/
 
+/*--CSS Classes--*/
 /*Justify text*/
 .justified p {
     text-align: justify;
@@ -1528,6 +1535,10 @@ iframe {
     line-height: 1.3em;
     margin-block-end: 4%;
 }
+
+/*--Kanban--*/
+/*Credit: https://github.com/Braweria/Spectrum*/
+
 
 
 
@@ -2042,45 +2053,59 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 
 /*--Mermaid--*/
 /*Mermaid Class*/
-g.classGroup text {
-    font-size: 10px;
-
-}
-
 g.classGroup rect {
-        fill: rgba(0, 0, 0, 0) !important;
-        stroke:#595d67  !important;
-        stroke-width:1spx;
+        fill: var(--embed-bg) !important;
+        stroke: var(--inactive)  !important;
+        stroke-width: 1spx;
+}
+.classLabel .label {
+    fill: var(--inactive) !important;
+}
+g.classGroup line {
+    stroke: var(--table) !important;
 }
 
-/***Mermaid Flowchart
- .path {
-    stroke: #8384bf !important;
-    stroke-width: 1.5px !important;
+/*Gantt*/
+.active0{
+    fill: var(--accent2) !important;
 }
-
-.node circle, .node ellipse, .node path, .node polygon, .node rect {
-    fill: #0b0d13 !important;
-    stroke: #2c2c52 !important;
-    stroke-width: 1px;
+.done0 {
+    fill: var(--accent2-lite) !important;
+    stroke: var(--inactive) !important;
 }
-
-path[Attributes Style]{
-    marker-end: url(app://obsidian.md/index.html#arrowhead10);
-} ***/
+.doneText, .taskTextOutside0{
+    fill: var(--text) !important;
+}
+.section {
+    fill: var(--outer-bar) !important;
+}
+/*Sequence Diagram*/
+.noteText > tspan {
+    fill: var(--footnote) !important;
+}
 
 /*Mermaid ERD*/
 .entityBox {
-    fill: var(--background-primary-alt) !important;
+    fill: var(--bg) !important;
+    stroke: var(--table) !important;
 }
 .attributeBoxEven {
-    fill: var(--background-primary) !important;
+    fill: var(--note) !important;
 }
 .attributeBoxOdd {
-    fill: var(--background-secondary-alt) !important;
+    fill: var(--dark-accent) !important;
 }
 
-
+.node-label{
+    stroke: white !important;
+}
+/*Journey Graph*/
+.section-type-0, .task-type-0 {
+    fill: var(--accent2) !important;
+}
+#m98906ab94e740deb .label {
+    fill: white !important;
+}
 
 
 

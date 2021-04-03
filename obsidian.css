@@ -1656,7 +1656,12 @@ iframe {
 .kanban ul .list-collapse-indicator {
     margin-left: -20px;
 }
-
+.kanban ol .list-collapse-indicator {
+    padding-left: 5%;
+}
+.kanban .task-list-item .list-collapse-indicator{
+    padding-left: 3%;
+}
 
 /*----Personal Edits----*/
 /*Fix Margins/Padding*/

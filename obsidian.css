@@ -1092,9 +1092,9 @@ ol::before { left: -15px; }
     width: 14px;
     height: 14px;
     filter: none;
-    margin-left: -.5%;
+    margin-left: -4px;
     margin-right: 1.5%;
-    margin-top: .5%;
+    margin-top: 3px;
     cursor: pointer;
     vertical-align: top;
 }
@@ -1550,6 +1550,7 @@ iframe {
 /*--Kanban--*/
 /*Credit: https://github.com/Braweria/Spectrum*/
 
+
 /*Widen Page*/
 .kanban .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
     max-width: 100% !important;
@@ -1562,7 +1563,7 @@ iframe {
 
 /*Remove Text Spacing from bullet/number*/
 .kanban .task-list-item-checkbox {
-    margin-left: 24px;
+    margin-left: 20px;
     margin-top: 2px;
     
 }
@@ -1578,6 +1579,7 @@ iframe {
 .kanban ul li::before {
     content: "";
     margin-left: 0px;
+    padding: 0;
 }
 
 .kanban ul, .kanban ol {
@@ -1652,7 +1654,6 @@ iframe {
 .kanban ul .list-collapse-indicator {
     margin-left: -20px;
 }
-
 
 
 /*----Personal Edits----*/

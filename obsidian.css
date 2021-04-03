@@ -1000,8 +1000,8 @@ ul:nth-child(odd), ul:nth-child(even) {
 }
 li::before {
     content: "⬥ ";
-    margin-left: -23px;
-    margin-right: 5px;
+    margin-left: -25px;
+    margin-right: 4px;
 }
 /*Smaller Indentation*/
 ul, ol { 

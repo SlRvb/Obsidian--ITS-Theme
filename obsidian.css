@@ -998,13 +998,17 @@ ol > li::marker {
 ul:nth-child(odd), ul:nth-child(even) {
     list-style-type: none;
 }
+
 ul li::before {
     content: "⬥ ";
-    margin-left: -26px;
-    padding: 3px;
+    margin-left: -24px;
+    color: var(--accent);
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 li.task-list-item::before {
-    display: none;
+    visibility: collapse;
 }
 
 /*Smaller Indentation*/
@@ -1565,7 +1569,6 @@ iframe {
 .kanban .task-list-item-checkbox {
     margin-left: 20px;
     margin-top: 2px;
-    
 }
 /*Fix List Checkbox Margins*/
 .kanban ol .task-list-item-checkbox {
@@ -1626,7 +1629,6 @@ iframe {
     width: 100%;
     display: block;
     background: var(--td);
-    padding-left: 15px;
     border-radius: 0;
 }
 .kanban ol ol li {

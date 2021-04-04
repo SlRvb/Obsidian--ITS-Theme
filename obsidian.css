@@ -1332,7 +1332,7 @@ input[type="checkbox checked"] {
 /*--Popover--*/
 /*Larger Popover*/
 .popover.hover-popover {
-    width: 40em;
+    width: 30%;
     border-radius: var(--border-radius);
     min-height: 100px;
     max-height: 600px;
@@ -2298,10 +2298,10 @@ g.classGroup line {
 
 
 /*----Mobile----*/
-/*Popover*
-@media (max-width: 600px) {
+/*Popover*/
+@media (max-width: 400px) {
     .popover.hover-popover {
-        width: 50%;
+        width: 20%;
     }
 }
 

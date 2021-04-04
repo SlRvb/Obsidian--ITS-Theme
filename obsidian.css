@@ -1332,7 +1332,7 @@ input[type="checkbox checked"] {
 /*--Popover--*/
 /*Larger Popover*/
 .popover.hover-popover {
-    width: 30%;
+    width: 40rem;
     border-radius: var(--border-radius);
     min-height: 100px;
     max-height: 600px;
@@ -2286,6 +2286,24 @@ g.classGroup line {
 
 
 
+/*----Exported PDFs----*/
+/*Fix Poems*/
+@media print {
+    .poem p {
+        text-align: center;
+        line-height: 1.3em;
+        margin-block-end: 4%;
+    }
+}
+
+
+/*----Mobile----*/
+/*Popover*
+@media (max-width: 600px) {
+    .popover.hover-popover {
+        width: 50%;
+    }
+}
 
 
 /*----Publish----*/

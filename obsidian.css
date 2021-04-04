@@ -1010,6 +1010,9 @@ ul li::before {
 li.task-list-item::before {
     visibility: collapse;
 }
+ol li::before {
+    visibility: collapse;
+}
 
 /*Smaller Indentation*/
 ul, ol { 
@@ -1653,14 +1656,15 @@ iframe {
     background: var(--hvr2);
 }
 /*Arrow*/
-.kanban ul .list-collapse-indicator {
+.kanban .list-collapse-indicator{
+    width: 20px;
+}
+
+.kanban ul .list-collapse-indicator{
     margin-left: -20px;
 }
 .kanban ol .list-collapse-indicator {
-    padding-left: 5%;
-}
-.kanban .task-list-item .list-collapse-indicator{
-    padding-left: 3%;
+    padding-left: 10px;
 }
 
 /*----Personal Edits----*/

@@ -2301,7 +2301,7 @@ g.classGroup line {
 /*Popover*/
 @media (max-width: 400px) {
     .popover.hover-popover {
-        width: 20%;
+        width: unset;
     }
 }
 

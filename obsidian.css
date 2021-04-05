@@ -1124,7 +1124,6 @@ ol::before { left: -15px; }
     text-decoration: unset;
     color: var(--lines);
     font-weight: bold;
-    padding-left: 10px;
 }
 
 li.task-list-item.is-checked > a,

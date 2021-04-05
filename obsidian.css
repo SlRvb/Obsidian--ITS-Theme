@@ -11,7 +11,7 @@
     background-color: var(--background-secondary);
     
     /*Sizes*/
-    --border-radius: 0px;
+    --radius: 0px;
     --tiny: 100px;
     --small: 200px;
     --small-med: 300px;
@@ -20,8 +20,8 @@
     --med-tall: 600px;
     --tall: 700px;
     
-    
     --slide-shadow: rgba(0, 28, 74, 0.15);
+    
 }
 
 .theme-dark {
@@ -67,7 +67,7 @@
 
     /*--DEFAULT VARIABLES--*/
 
-    /*Compatibility Color Recoloring*/
+    /*Compatibility Color Recoloring*/    
     --deep-dark-accent: #270f0f /*#2f1010*/;
     --dark-accent: #571a1a /*#53201F*/;
     --lite-accent: #e06c75;
@@ -158,7 +158,7 @@
 
     /*--DEFAULT VARIABLES--*/    
     
-    /*Compatibility Color Recoloring*/
+    /*Compatibility Color Recoloring*/    
     --deep-dark-accent: #2f1010;
     --dark-accent: #ffeded;
     --lite-accent: #a35158;
@@ -239,7 +239,7 @@
 }
 
 button, button.mod-cta {
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 /*Pinned Pane Button Color*/
@@ -265,7 +265,7 @@ button, button.mod-cta {
 }
 /*Top*/
 .workspace-tab-header.is-active {
-    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+    border-radius: var(--radius) var(--radius) 0px 0px;
 }
 
 
@@ -279,7 +279,7 @@ button, button.mod-cta {
 .nav-action-button {
     padding: 5px 8px 0 8px;
     margin: 0 3px 0px 3px;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 /*Remove Bottom Scrollbar*/
@@ -332,7 +332,7 @@ button, button.mod-cta {
 .nav-file-title, .nav-folder-title {
     white-space: normal;
     width: auto;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 /*Folder Bold*/
@@ -392,7 +392,7 @@ button, button.mod-cta {
 /*Text*/
 .tree-item-self {
     color: var(--soft-text);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 .tag-container .tree-item-self:hover {
     color: var(--code-text);
@@ -400,7 +400,7 @@ button, button.mod-cta {
 
 /*Count Squared*/
 .tree-item-flair {
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 
@@ -421,7 +421,7 @@ button, button.mod-cta {
     margin-left: 3.9%;
     border-left: 1px solid var(--lines);
     transition: all 0.5s ease-in-out;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     padding-left: 0px;
 }
 .outline .tree-item-text:hover {
@@ -450,7 +450,7 @@ input[type='email'],
 input[type='password'],
 input[type='number'] {
     background-color: var(--note);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     border: 1px solid var(--table);
     color: var(--soft-text);
 }
@@ -486,7 +486,7 @@ input[type='number']:hover {
 .graph-controls {
     background-color: var(--side-bar);
     border: 1px solid var(--background-modifier-border);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 /*Arrows*/
@@ -499,23 +499,23 @@ input[type='number']:hover {
 /*Slider Colors*/
 input[type='range'] {
     background-color: var(--bg);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 input[type='range']::-webkit-slider-thumb {
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 /*Settings Toggle*/
 .checkbox-container {
     cursor: pointer;
     background-color: var(--bg);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     width: 22px;
 }
 /*Checkbox*/
 .checkbox-container:after {
     display: none;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 .suggestion-item.is-selected {
@@ -527,7 +527,7 @@ input[type='range']::-webkit-slider-thumb {
 /*--Setings Menu--*/
 /*Square Settings Background*/
 .modal {
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 /*Undo b quote formatting*/
@@ -552,10 +552,10 @@ b.u-pop {
 .modal.mod-settings .vertical-tab-content-container {
     padding: 35px 40px 20px 0;
     height: 70vh;
-    background-color: var(--sidebar);
+    background-color: var(--side-bar);
 }
 .horizontal-tab-content, .vertical-tab-content {
-    background-color: var(--sidebar);
+    background-color: var(--side-bar);
     padding: 5px 30px;
 }
 
@@ -579,14 +579,14 @@ b.u-pop {
 .dropdown {
     background-color: var(--embed-bg);
     background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 /*Account Header 2*/
 .vertical-tab-content h2 {
     font-size: 30px;
     font-weight: 900;
-    text-align: center;
+    text-align: left;
     font-family: var(--font) !important;
 }
 
@@ -610,7 +610,7 @@ b.u-pop {
 .flair {
     background-color: var(--interactive-normal);
     color: var(--accent);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 /*Publish item select*/
@@ -689,15 +689,15 @@ b.u-pop {
 /*Scrollbar*/
 ::-webkit-scrollbar-thumb {
     background-color: var(--accent);
-    -webkit-border-radius: var(--border-radius); /*Remove Rounding*/
+    -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar-thumb:active {
     background-color: var(--lite-accent);
-    -webkit-border-radius: var(--border-radius); /*Remove Rounding*/
+    -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar {
     background-color: var(--bg);
-    -webkit-border-radius: var(--border-radius); /*Remove Rounding*/
+    -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 
 
@@ -804,7 +804,7 @@ h4:after {
     background-color: var(--code-bg);
     z-index: 1; /*Lets the highlight appear on top*/
     line-height: 1.4em;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     font-size: 14px;
 }
 
@@ -1060,6 +1060,7 @@ li:nth-child(even) {
     text-indent: -20px !important;
 }
 
+
 /*Bullet Line Original**
 ul ul, ol {
     position: relative;
@@ -1086,7 +1087,10 @@ ol::before { left: -15px; }
 
 /*List Arrows*/
 .markdown-preview-view .list-collapse-indicator {
-    padding-left: 9px;
+    padding-left: 14px;
+}
+.markdown-preview-view .task-list-item .list-collapse-indicator {
+    padding-left: 10px;
 }
 
 /*Checkboxes*/
@@ -1094,7 +1098,7 @@ ol::before { left: -15px; }
     -webkit-appearance: none;
     box-sizing: border-box;
     border: 1px solid var(--accent);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     position: relative;
     width: 14px;
     height: 14px;
@@ -1118,6 +1122,7 @@ ol::before { left: -15px; }
     text-decoration: unset;
     color: var(--lines);
     font-weight: bold;
+    padding-left: 10px;
 }
 
 li.task-list-item.is-checked > a,
@@ -1130,7 +1135,7 @@ input[type="checkbox" i] {
     -webkit-appearance: none;
     box-sizing: border-box;
     border: 1px solid var(--accent);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     position: relative;
     width: 15px;
     height: 15px;
@@ -1145,7 +1150,7 @@ input[type="checkbox" i] {
 input[type="checkbox checked"] {
     -webkit-appearance: none;
     box-sizing: border-box;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     position: relative;
     width: 1.3em;
     height: 1.3em;
@@ -1246,11 +1251,11 @@ input[type="checkbox checked"] {
 /*Tags*/
 .frontmatter-container .tag {
     background-color: var(--tag);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     color: white;
 }
 .frontmatter-container .frontmatter-alias {
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 
 
@@ -1295,7 +1300,7 @@ input[type="checkbox checked"] {
     border: 0px;
     margin: 5px 0;
     background-color: var(--embed-bg);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 /*Embed Note Doesn't Exist Hover*/
 .markdown-preview-view .file-embed:hover {
@@ -1333,7 +1338,7 @@ input[type="checkbox checked"] {
 /*Larger Popover*/
 .popover.hover-popover {
     width: 650px;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     min-height: 100px;
     max-height: 600px;
     border: 2px solid var(--dark-accent);
@@ -1389,7 +1394,7 @@ input[type="checkbox checked"] {
     border: 0px solid var(--bg);
     background-color: var(--embed-bg);
     border-left-width: 8px;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     position: relative;
     margin: 2%;
     padding-right: 35px; /*Don't overlap with "*/
@@ -1496,7 +1501,7 @@ blockquote p { margin: 0px; }
 /*--Files--*/
 /*Iframe Borderless*/
 iframe {
-    border-width: var(--border-radius);
+    border-width: var(--radius);
     border-style: none;
     border-color: initial;
     border-image: initial;
@@ -1655,17 +1660,25 @@ iframe {
 .kanban ul li:hover, .kanban ol li:hover {
     background: var(--hvr2);
 }
-/*Arrow*/
+/*-Arrows-*/
 .kanban .list-collapse-indicator{
     width: 20px;
 }
-
+/*Bullet Arrows*/
 .kanban ul .list-collapse-indicator{
-    margin-left: -20px;
-}
-.kanban ol .list-collapse-indicator {
+    margin-left: -22px;
     padding-left: 10px;
 }
+.kanban .task-list-item .list-collapse-indicator {
+    padding-left: 10px;
+}
+/*Numbered List + Numbered Checklist*/
+.kanban ol .list-collapse-indicator, .kanban ol .task-list-item .list-collapse-indicator{
+    margin-left: -38px;
+    padding-left: 5px;
+}
+
+
 
 /*----Personal Edits----*/
 /*Fix Margins/Padding*/
@@ -2103,7 +2116,7 @@ b {
     border: 0px solid var(--lines);
     background-color: var(--outer-bar);
     border-left-width: 8px;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     position: relative;
     font-weight: unset;
     padding: 10px 20px;
@@ -2113,6 +2126,11 @@ b {
 
 
 /*----Plugins----*/
+/*--Style Settings--*/
+.setting-item-description p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
 
 
 /*--Sliding Panes--*/
@@ -2170,7 +2188,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 /*Resize/Recolor/Square Task*/
 .todo-list .item.svelte-zpfope.svelte-zpfope {
     background-color: var(--background-primary-alt) !important;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     font-size: 14px;
     margin-bottom: 1%;
 }
@@ -2181,7 +2199,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 }
 /*Square Checkbox*/
 .todo-list .checkbox.svelte-y3iyim {
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     border-color: var(--accent) !important;
 }
 
@@ -2198,7 +2216,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 }
 /*Square Counter*/
 .todo-list .count.svelte-im5pnh {
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 }
 .todo-list .content.svelte-zpfope.svelte-zpfope {
     word-break: break-word;
@@ -2208,7 +2226,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 
 /*Button Plugin*/
 .button-default {
-    border-radius: var(--border-radius) !important;
+    border-radius: var(--radius) !important;
     box-shadow: none !important;
 }
 .button-default:hover {
@@ -2283,6 +2301,43 @@ g.classGroup line {
     fill: white !important;
 }
 
+
+
+/*--Timeline Plugin--*/
+.timeline-card {
+    background-color: var(--embed-bg) !important;
+    border-radius: var(--radius) !important;
+}
+.timeline-content {
+    padding: 0px !important;
+}
+.timeline-card .thumb {
+    border-radius: var(--radius) !important;
+}
+
+/*Line*/
+.timeline::after {
+    background-color: var(--outer-bar) !important;
+}
+
+/*Circle*/
+.timeline-container::after {
+    width: 10px !important;
+    height: 10px !important;
+    right: -11px !important;
+    border: 4px solid var(--accent) !important;
+}
+.timeline-right::after{
+    left: -7px !important;
+}
+
+/*Arrows*/
+.timeline-left::before {
+    border-color: transparent transparent transparent var(--background-secondary-alt) !important;
+}
+.timeline-right::before {
+    border-color: transparent var(--background-secondary-alt) transparent transparent !important;
+}
 
 
 

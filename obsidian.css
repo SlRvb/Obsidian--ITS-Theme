@@ -1236,14 +1236,14 @@ ol > li::marker {
 /*Bullet Shape*/
 ul:nth-child(odd), ul:nth-child(even) {
     list-style-type: "";
-    display: block;
 }
 
 ul li::before {
     content: "⬥ ";
     margin-left: -24px;
     color: var(--accent);
-    position: absolute;
+    padding-right: 4px;
+    position: relative;
     margin-top: auto;
     margin-bottom: auto;
 }

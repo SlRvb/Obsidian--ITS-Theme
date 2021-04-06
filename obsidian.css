@@ -3,7 +3,7 @@ name: In The Shadows Settings
 id: ITS
 settings:
     -
-        title: Text
+        title: Text Fonts
         id: text-fonts
         type: heading
         level: 2
@@ -26,9 +26,6 @@ settings:
 
 
     -
-
-
-
         title: Colors
         id: Colors
         type: heading
@@ -52,6 +49,15 @@ settings:
         format: hex
         default-dark: '#aab3ca'
         default-light: '#d04e4e'
+    - 
+        title: Headings
+        description: Heading and Vault title colors.
+        id: header
+        type: variable-themed-color
+        format: hex
+        default-dark: '#c14343'
+        default-light: '#d04e4e'
+
 
 
 
@@ -62,6 +68,7 @@ settings:
         level: 3
     - 
         title: Note
+        description: Note and sidebar colors.
         id: note
         type: variable-themed-color
         format: hex
@@ -75,13 +82,37 @@ settings:
         default-dark: '#0e0f15'
         default-light: '#dfe7ef'
     - 
+        title: Sidebar
+        description: Change only sidebar, right settings pane, and inactive note title background color.
+        id: side-bar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#1a1e24'
+        default-light: '#f8fbff'
+    - 
+        title: Dark Sidebar
+        description: Left settings bar and pane separator color.
+        id: dark-sidebar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#10161d'
+        default-light: '#7e8ea3'
+    - 
         title: File
-        id: file
+        description: File icon color.
+        id: f-icon
         type: variable-themed-color
         format: hex
         default-dark: '#aab3ca'
+        default-light: '#a6bbde'
+    - 
+        title: Folder
+        description: Folder icon color.
+        id: folder
+        type: variable-themed-color
+        format: hex
+        default-dark: '#586477'
         default-light: '#7e8ea3'
-
 
 
 
@@ -102,6 +133,7 @@ settings:
         default-dark: '#883737'
     - 
         title: Lite Accent
+        description: Link hover, scrollbar active, tags, embed titles and links colors.
         id: lite-accent
         type: variable-themed-color
         format: hex
@@ -117,6 +149,7 @@ settings:
         default-light: '#5599d0'
     -
         title: Dark Accent
+        description: File selected color.
         id: dark-accent
         type: variable-themed-color
         format: hex
@@ -130,11 +163,38 @@ settings:
         format: hex
         default-dark: '#270f0f'
         default-light: '#2f1010'
+    -
+        title: Inactive
+        description: Inactive note; file text; unresolved and external link, editor and external link hover; and mermaid text color.
+        id: inactive
+        type: variable-themed-color
+        format: hex
+        default-dark: '#586477'
+        default-light: '#a6bbde'
+
 
     -
-
-
-
+        title: Highlights
+        id: RGBA
+        type: heading
+        level: 3
+    -
+        title: Text Highlight
+        description: Markdown highlight color.
+        id: text-hightlight-bg
+        type: variable-themed-color
+        format: rgb
+        default-dark: '#c78181'
+        default-light: '#c78181'
+    -
+        title: Search Highlight
+        description: Search result highlight color.
+        id: text-highlight-bg-active
+        type: variable-themed-color
+        format: rgb
+        default-dark: '#c78181'
+        default-light: '#c78181'
+    -
 
         title: Other
         id: Other
@@ -237,8 +297,9 @@ settings:
     --dark-sidebar: #10161d;
     --inactive: #586477;
     
-    --file: #aab3ca;
     --folder: #e05858;
+    --file: #aab3ca;
+    --f-icon: var(--inactive);
     --f-hover: var(--accent);
     --lines: var(--accent2)/*#465164*/;
         
@@ -248,7 +309,7 @@ settings:
     --soft-text: #aab3ca/*#d04e4e*/;
     --code-bg: #232831;
     --code-text: #fa4545;
-    --embed-bg: var(--dark-sidebar);
+    --embed-bg: #111417;
     --footnote: #6e7e89;
     
     --th: var(--dark-accent);
@@ -328,8 +389,9 @@ settings:
     --dark-sidebar: var(--embed-bg);
     --inactive: #a6bbde /*#91a3c1*/;
     
-    --file: #7e8ea3;
     --folder: #ce6d6d;
+    --file: #7e8ea3;
+    --f-icon: var(--inactive);
     --f-hover: #912e2e;
     --lines: #b5c2d8;
     
@@ -361,7 +423,6 @@ settings:
     --graph-img: #4c78cc /*#5469de*/;
     --graph-tag: #000000;    
 }
-
 
 
 /*--WORKSPACE--*/
@@ -441,6 +502,7 @@ button, button.mod-cta {
 /*Remove Bottom Scrollbar*/
 .nav-files-container {
     overflow-x: hidden;
+    /*padding-top: 2.5em;*/
 }
 
 /*Vault Name*/
@@ -449,8 +511,11 @@ button, button.mod-cta {
     font-family: var(--font);
     font-size: 24px;
     /*border-bottom: 3px solid var(--accent);*/
-    padding-bottom: 2%;
     padding-left: 1.5% !important;
+    /*position: fixed;
+    top: 1.5em;
+    background-color: var(--side-bar);
+    padding-top: .7em;*/
 }
 
 /*Nav Folder/File Icons*/
@@ -460,6 +525,7 @@ button, button.mod-cta {
     text-shadow: 0 0 0 var(--folder);
     margin-right: 4px;
     font-size: 13px;
+    
 }
 .nav-folder-children .nav-file-title-content::before {
     content: "📄"/*\1F5D0*/;
@@ -514,7 +580,7 @@ button, button.mod-cta {
     font-weight: 600; 
 }
 .nav-folder-children .nav-file-title-content::before{
-    text-shadow: 0 0 0 var(--inactive);
+    text-shadow: 0 0 0 var(--f-icon);
 }
 
 
@@ -594,7 +660,7 @@ button, button.mod-cta {
 /*--Search--*/
 /*Highlight Search Result*/
 .search-result-file-matched-text {
-    color: var(--soft-text);
+    color: var(--text);
     background-color: var(--background-modifier-form-field-highlighted);
     padding: 2px;
 }
@@ -2291,8 +2357,14 @@ b {
 .setting-item-description p {
     margin-block-start: 0;
     margin-block-end: 0;
+    line-height: 1.2em;
 }
-
+.themed-color-wrapper > div {
+    padding: .1em !important;
+    padding-left: .3em !important;
+    padding-right: .3em !important;
+    border-radius: var(--radius) !important;
+}
 
 /*--Sliding Panes--*/
 /*Hide the gradient of the Title Pane*/
@@ -2394,6 +2466,12 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     box-shadow: 0 4px 4px var(--td), 0 10px 10px var(--td) !important;
     color: var(--text);
 }
+.block-language-button > div {
+    display:  !important;
+}
+
+
+
 
 /*ABC JS*/
 .abcjs-container svg {    

@@ -1226,7 +1226,7 @@ Masonry/Gallery View
 /*--List--*/
 /*Colored List Markers*/
 li::marker{
-    color: var(--accent);
+    color: transparent;
 }
 /*Lighten Numbered List Marker Color*/
 ol > li::marker {
@@ -1235,17 +1235,14 @@ ol > li::marker {
 
 /*Bullet Shape*/
 ul:nth-child(odd), ul:nth-child(even) {
-    list-style-type: "";
-    visibility: collapse;
-    
+    list-style-type: "";    
 }
 
 ul li::before {
     content: "⬥ ";
     margin-left: -24px;
     color: var(--accent);
-    padding-right: 4px;
-    position: relative;
+    position: absolute;
     margin-top: auto;
     margin-bottom: auto;
 }

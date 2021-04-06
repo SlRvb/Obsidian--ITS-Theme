@@ -25,6 +25,18 @@ settings:
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
     
 
+    -
+        title: Other
+        id: Other
+        type: heading
+        level: 2
+    - 
+        title: Horizontal Line Symbol
+        description: Add quotations around symbol for it to work. For Example "⚡".
+        id: hr-sym
+        type: variable-text
+        default: '⚡'
+
 
     -
         title: Colors
@@ -58,6 +70,14 @@ settings:
         format: hex
         default-dark: '#c14343'
         default-light: '#d04e4e'
+    - 
+        title: File Title
+        description: File text color.
+        id: file
+        type: variable-themed-color
+        format: hex
+        default-dark: '#aab3ca'
+        default-light: '#7e8ea3'
     - 
         title: Code Text
         id: code-text
@@ -112,7 +132,7 @@ settings:
         default-light: '#f8fbff'
     - 
         title: Dark Sidebar
-        description: Left settings bar, <i></i> background, and pane separator colors.
+        description: Left settings bar, <i></i> background, graph background, and pane separator colors.
         id: dark-sidebar
         type: variable-themed-color
         format: hex
@@ -124,7 +144,7 @@ settings:
         id: f-icon
         type: variable-themed-color
         format: hex
-        default-dark: '#aab3ca'
+        default-dark: '#586477'
         default-light: '#a6bbde'
     - 
         title: Folder
@@ -207,6 +227,15 @@ settings:
         format: hex
         default-dark: '#252c36'
         default-light: '#dde4ef'
+    -
+        title: Lines
+        description: Explorer, heading, input box, settings, frontmatter, and mermaidjs lines
+        id: table
+        type: variable-themed-color
+        format: hex
+        default-dark: '#283846'
+        default-light: '#ccd6eb'
+
 
 
     -
@@ -236,6 +265,7 @@ settings:
         format: hex
         default-dark: '#3c5274'
         default-light: '#d6deea'
+
     -
         title: Highlights
         id: RGBA
@@ -280,16 +310,45 @@ settings:
 
 
     -
-        title: Other
-        id: Other
+        title: Graph Colors
+        id: Graph
         type: heading
-        level: 2
+        level: 3
     - 
-        title: Horizontal Line Symbol
-        description: Add quotations around symbol for it to work. For Example "⚡".
-        id: hr-sym
-        type: variable-text
-        default: '⚡'
+        title: Graph Background
+        id: graph-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#1a1e24'
+        default-light: '#f8fbff'
+    - 
+        title: Graph Lines
+        id: graph-lines
+        type: variable-themed-color
+        format: hex
+        default-dark: '#571a1a'
+        default-light: '#e4e7f8'
+    - 
+        title: Graph Node
+        id: graph-node
+        type: variable-themed-color
+        format: hex
+        default-dark: '#cfd7dd'
+        default-light: '#c14343'
+    -
+        title: Graph Attachment
+        id: graph-img
+        type: variable-themed-color
+        format: hex
+        default-dark: '#4c78cc'
+        default-light: '#4c78cc'
+    -
+        title: Graph Tags
+        id: graph-tag
+        type: variable-themed-color
+        format: hex
+        default-dark: '#c14343'
+        default-light: '#000000'
 */
 
 
@@ -2646,6 +2705,10 @@ g.classGroup line {
     border-radius: var(--radius) !important;
 }
 
+.timeline-container {
+    padding: 5px 15px !important;
+}
+
 /*Line*/
 .timeline::after {
     background-color: var(--outer-bar) !important;
@@ -2663,6 +2726,9 @@ g.classGroup line {
 }
 
 /*Arrows*/
+.timeline-left::before, .timeline-right::before {
+    top: 16px !important;
+}
 .timeline-left::before {
     border-color: transparent transparent transparent var(--background-secondary-alt) !important;
 }

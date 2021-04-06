@@ -73,6 +73,13 @@ settings:
         format: hex
         default-dark: '#bf5e5e'
         default-light: '#c14343'
+    - 
+        title: Footnotes
+        id: footnote
+        type: variable-themed-color
+        format: hex
+        default-dark: '#6e7e89'
+        default-light: '#8996a0'
 
 
     -
@@ -229,8 +236,6 @@ settings:
         format: hex
         default-dark: '#3c5274'
         default-light: '#d6deea'
-
-
     -
         title: Highlights
         id: RGBA

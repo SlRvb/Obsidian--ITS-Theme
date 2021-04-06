@@ -51,8 +51,8 @@ settings:
         default-light: '#d04e4e'
     - 
         title: Headings
-        description: Heading, Vault title, HR Symbol, blockquote quotation mark, and open folder icon colors.
-        id: headers
+        description: Heading and Vault title colors.
+        id: header
         type: variable-themed-color
         format: hex
         default-dark: '#c14343'
@@ -83,7 +83,7 @@ settings:
         default-light: '#dfe7ef'
     - 
         title: Sidebar
-        description: Change only sidebar, right settings pane, and inactive note title background colors.
+        description: Change only sidebar, right settings pane, and inactive note title background color.
         id: side-bar
         type: variable-themed-color
         format: hex
@@ -91,7 +91,7 @@ settings:
         default-light: '#f8fbff'
     - 
         title: Dark Sidebar
-        description: Left settings bar, <i></i> background, and pane separator colors.
+        description: Left settings bar and pane separator color.
         id: dark-sidebar
         type: variable-themed-color
         format: hex
@@ -107,12 +107,12 @@ settings:
         default-light: '#a6bbde'
     - 
         title: Folder
-        description: Closed folder icon color.
+        description: Folder icon color.
         id: folder
         type: variable-themed-color
         format: hex
-        default-dark: '#e05858'
-        default-light: '#ce6d6d'
+        default-dark: '#586477'
+        default-light: '#7e8ea3'
 
 
 
@@ -171,20 +171,6 @@ settings:
         format: hex
         default-dark: '#586477'
         default-light: '#a6bbde'
-    -
-        title: Note Elements
-        id: Note-Elements
-        type: heading
-        level: 3
-    - 
-        title: Embed/Blockquote
-        description: Embed/Blockquote color.
-        id: embed-bg
-        type: variable-themed-color
-        format: hex
-        default-dark: '#111417'
-        default-light: '#f1f5ff'
-
 
 
     -
@@ -323,7 +309,7 @@ settings:
     --soft-text: #aab3ca/*#d04e4e*/;
     --code-bg: #232831;
     --code-text: #fa4545;
-    --embed-bg: #10161d /*#111417*/;
+    --embed-bg: #111417;
     --footnote: #6e7e89;
     
     --th: var(--dark-accent);
@@ -400,7 +386,7 @@ settings:
     --fg: #9f0202;
     --side-bar: var(--note);
     --outer-bar: #dfe7ef;
-    --dark-sidebar: #f1f5ff;
+    --dark-sidebar: var(--embed-bg);
     --inactive: #a6bbde /*#91a3c1*/;
     
     --folder: #ce6d6d;
@@ -536,7 +522,7 @@ button, button.mod-cta {
 .nav-folder-children .nav-folder-title-content::before {
     content: '📁'/*\1F5BF*/;
     color: transparent;
-    text-shadow: 0 0 0 var(--headers);
+    text-shadow: 0 0 0 var(--folder);
     margin-right: 4px;
     font-size: 13px;
     
@@ -551,7 +537,7 @@ button, button.mod-cta {
 
 /*Inactive Folder Color*/
 .is-collapsed .nav-folder-title-content:before {
-    text-shadow: 0 0 0 var(--folder);
+    text-shadow: 0 0 0 var(--headers);
 }
 
 /*Nav Folder Lines*/
@@ -724,9 +710,6 @@ input[type='number']:hover {
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--radius);
 }
-.graph-controls .setting-item-name {
-    color: var(--text);
-}
 
 /*Arrows*/
 .collapse-icon svg {
@@ -772,7 +755,7 @@ input[type='range']::-webkit-slider-thumb {
 /*Undo b quote formatting*/
 b.u-pop {
     font-weight: 900;
-    color: var(--headers) !important;
+    color: var(--folder) !important;
     display: inline-block;
     margin: 0;
     border: 0;
@@ -1117,7 +1100,7 @@ a:hover {
 }*/
 /*Link in parentheses*/
 .cm-s-obsidian span.cm-url {
-    color: var(--headers);
+    color: var(--folder);
     text-decoration: none;
 }
 /*Link Hover Color*/
@@ -1554,9 +1537,9 @@ input[type="checkbox checked"] {
     padding: 5px 5px 0px 5px;
 }
 
-/*Embed HR, Horiztonal Bg Color*/
+/*Embed Horiztonal Bg Color*/
 .markdown-embed .markdown-preview-view hr::after {
-    background-color: var(--embed-bg);
+    background-color: var(--dark-sidebar);
 }
 /*Recolor Embedded Blockquote BG*/
 .markdown-embed blockquote {
@@ -1616,9 +1599,9 @@ input[type="checkbox checked"] {
     padding: 5px 5px 0px 5px;
 }
 
-/*Popover HR, Horizontal Line BG*/
+/*Popover Horizontal Line BG*/
 .popover.hover-popover hr:after {
-    background-color: var(--embed-bg) !important;
+    background-color: var(--note);
 }
 
 /*Fit Text Within Popover**

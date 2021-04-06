@@ -1235,7 +1235,7 @@ ol > li::marker {
 
 /*Bullet Shape*/
 ul:nth-child(odd), ul:nth-child(even) {
-    list-style-type: "";    
+    list-style-type: none;
 }
 
 ul li::before {

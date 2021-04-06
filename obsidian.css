@@ -9,6 +9,7 @@ settings:
         level: 2
     - 
         title: Headings
+        description: Heading and Vault Title fonts.
         id: font
         type: variable-text
         default: "'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif"
@@ -36,14 +37,14 @@ settings:
         type: heading
         level: 3
     - 
-        title: Text Color
+        title: Text
         id: text
         type: variable-themed-color
         format: hex
         default-dark: '#bccad8'
         default-light: '#697580'
     - 
-        title: Faint Text Color
+        title: Faint Text
         id: soft-text
         type: variable-themed-color
         format: hex
@@ -57,8 +58,21 @@ settings:
         format: hex
         default-dark: '#c14343'
         default-light: '#d04e4e'
-
-
+    - 
+        title: Code Text
+        id: code-text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#fa4545'
+        default-light: '#ea4262'
+    -
+        title: <i></i>
+        description: <i></i> text color.
+        id: i-at
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bf5e5e'
+        default-light: '#c14343'
 
 
     -
@@ -117,7 +131,6 @@ settings:
 
 
 
-
     - 
         title: Other Colors
         id: Other-Colors
@@ -129,8 +142,8 @@ settings:
         id: accent
         type: variable-themed-color
         format: hex
-        default-light: '#c14343'
         default-dark: '#883737'
+        default-light: '#c14343'
     - 
         title: Lite Accent
         description: Link hover, scrollbar active, tags, embed titles and links colors.
@@ -139,6 +152,14 @@ settings:
         format: hex
         default-dark: '#e06c75'
         default-light: '#a35158'
+    - 
+        title: Accent 2
+        description: Arrows, lines, even bullet list line colors.
+        id: accent2
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3c5274'
+        default-light: '#d6deea'
     -
         title: Lite Accent 2
         description: Link color.
@@ -172,6 +193,16 @@ settings:
         default-dark: '#586477'
         default-light: '#a6bbde'
     -
+        title: Background
+        description: Scrollbar color
+        id: bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#252c36'
+        default-light: '#dde4ef'
+
+
+    -
         title: Note Elements
         id: Note-Elements
         type: heading
@@ -182,9 +213,22 @@ settings:
         id: embed-bg
         type: variable-themed-color
         format: hex
-        default-dark: '#111417'
+        default-dark: '#10161d'
         default-light: '#f1f5ff'
-
+    - 
+        title: Code Background
+        id: code-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#232831'
+        default-light: '#eef6ff'
+    - 
+        title: Horizontal Line
+        id: hr
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3c5274'
+        default-light: '#d6deea'
 
 
     -
@@ -198,18 +242,39 @@ settings:
         id: text-hightlight-bg
         type: variable-themed-color
         format: rgb
-        default-dark: '#c78181'
-        default-light: '#c78181'
+        opacity: true
+        default-dark: '#a83c3c40'
+        default-light: '#c7818140'
     -
         title: Search Highlight
         description: Search result highlight color.
         id: text-highlight-bg-active
         type: variable-themed-color
         format: rgb
-        default-dark: '#c78181'
-        default-light: '#c78181'
+        opacity: true
+        default-dark: '#fd737340'
+        default-light: '#fd737340'
     -
+        title: Search 2
+        description: Search match highlight and background transparent color for settings.
+        id: background-modifier-form-field-highlighted
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#347bed22'
+        default-light: '#f0838322'
+    -
+        title: Text Selection
+        description: Cursor dragged highlights
+        id: text-selection
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#4d171746'
+        default-light: '#e5959537'    
 
+
+    -
         title: Other
         id: Other
         type: heading
@@ -221,6 +286,7 @@ settings:
         type: variable-text
         default: '⚡'
 */
+
 
 :root {
     /*FONTS*/
@@ -280,7 +346,7 @@ settings:
     --text-error-hover: #990000; /*??*/
     
     --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
-    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
+    --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Searched Result Highlight*/
     --text-selection: rgba(77, 23, 23, 0.46); /*Cursor dragged highlights*/
     
     --interactive-normal: #652121; /*Button Color*/
@@ -314,7 +380,7 @@ settings:
     --file: #aab3ca;
     --f-icon: var(--inactive);
     --f-hover: var(--accent);
-    --lines: var(--accent2)/*#465164*/;
+    --lines: var(--hr)/*#465164*/;
         
     --note: #1a1e24 /*#0d131c*/;
     --text: #bccad8 /*#dcddde*/;
@@ -322,7 +388,7 @@ settings:
     --soft-text: #aab3ca/*#d04e4e*/;
     --code-bg: #232831;
     --code-text: #fa4545;
-    --embed-bg: #111417;
+    --embed-bg: var(--dark-sidebar) /*#111417*/;
     --footnote: #6e7e89;
     
     --th: var(--dark-accent);
@@ -399,7 +465,7 @@ settings:
     --fg: #9f0202;
     --side-bar: var(--note);
     --outer-bar: #dfe7ef;
-    --dark-sidebar: var(--embed-bg);
+    --dark-sidebar: #f1f5ff;
     --inactive: #a6bbde /*#91a3c1*/;
     
     --folder: #ce6d6d;
@@ -414,11 +480,15 @@ settings:
     --soft-text: #d04e4e;
     --code-bg: #eef6ff;
     --code-text: #ea4262;
-    --embed-bg: #f1f5ff /*#ebf1f8*/;
+    --embed-bg: var(--dark-sidebar) /*#ebf1f8*/;
     --footnote: #8996a0;
     
-    --th: #c14343;
+    --th: var(--headers);
     --td: #d0ddef62;
+    
+    --highlight-md: rgba(199, 129, 129, 0.4);
+    --highlight-s: rgba(253, 115, 115, 0.4);
+    --highlight-c: rgba(229, 149, 149, 0.37);
     
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);
@@ -535,7 +605,7 @@ button, button.mod-cta {
 .nav-folder-children .nav-folder-title-content::before {
     content: '📁'/*\1F5BF*/;
     color: transparent;
-    text-shadow: 0 0 0 var(--folder);
+    text-shadow: 0 0 0 var(--headers);
     margin-right: 4px;
     font-size: 13px;
     
@@ -550,7 +620,7 @@ button, button.mod-cta {
 
 /*Inactive Folder Color*/
 .is-collapsed .nav-folder-title-content:before {
-    text-shadow: 0 0 0 var(--headers);
+    text-shadow: 0 0 0 var(--folder);
 }
 
 /*Nav Folder Lines*/
@@ -723,6 +793,9 @@ input[type='number']:hover {
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--radius);
 }
+.graph-controls .setting-item-name {
+    color: var(--text);
+}
 
 /*Arrows*/
 .collapse-icon svg {
@@ -768,7 +841,7 @@ input[type='range']::-webkit-slider-thumb {
 /*Undo b quote formatting*/
 b.u-pop {
     font-weight: 900;
-    color: var(--folder) !important;
+    color: var(--headers) !important;
     display: inline-block;
     margin: 0;
     border: 0;
@@ -1113,7 +1186,7 @@ a:hover {
 }*/
 /*Link in parentheses*/
 .cm-s-obsidian span.cm-url {
-    color: var(--folder);
+    color: var(--headers);
     text-decoration: none;
 }
 /*Link Hover Color*/
@@ -1231,7 +1304,7 @@ ol > li::marker {
 
 /*Bullet Shape*/
 ul:nth-child(odd), ul:nth-child(even) {
-    list-style-type: none;
+    list-style-type: "none;"
 }
 
 ul li::before {
@@ -1325,6 +1398,7 @@ ol::before { left: -15px; }
 /*List Arrows*/
 .markdown-preview-view .list-collapse-indicator {
     padding-left: 7em;
+    color: var(--soft-text);
 }
 .markdown-preview-view .task-list-item .list-collapse-indicator {
     padding-left: 10px;
@@ -1550,9 +1624,9 @@ input[type="checkbox checked"] {
     padding: 5px 5px 0px 5px;
 }
 
-/*Embed Horiztonal Bg Color*/
+/*Embed HR, Horiztonal Bg Color*/
 .markdown-embed .markdown-preview-view hr::after {
-    background-color: var(--dark-sidebar);
+    background-color: var(--embed-bg);
 }
 /*Recolor Embedded Blockquote BG*/
 .markdown-embed blockquote {
@@ -1612,9 +1686,9 @@ input[type="checkbox checked"] {
     padding: 5px 5px 0px 5px;
 }
 
-/*Popover Horizontal Line BG*/
+/*Popover HR, Horizontal Line BG*/
 .popover.hover-popover hr:after {
-    background-color: var(--note);
+    background-color: var(--embed-bg) !important;
 }
 
 /*Fit Text Within Popover**

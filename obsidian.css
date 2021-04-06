@@ -1236,6 +1236,8 @@ ol > li::marker {
 /*Bullet Shape*/
 ul:nth-child(odd), ul:nth-child(even) {
     list-style-type: "";
+    visibility: collapse;
+    
 }
 
 ul li::before {

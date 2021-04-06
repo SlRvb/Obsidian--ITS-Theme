@@ -239,7 +239,7 @@ settings:
     -
         title: Text Highlight
         description: Markdown highlight color.
-        id: text-hightlight-bg
+        id: text-highlight-bg
         type: variable-themed-color
         format: rgb
         opacity: true
@@ -2719,7 +2719,7 @@ site-body-left-column-site-name {
     position: absolute;
     right: 100%;
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-color: var(--outer-bar);
     z-index: 0;

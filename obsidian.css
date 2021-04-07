@@ -71,6 +71,17 @@ settings:
         min: 0
         max: 15
         step: 1
+    - 
+        title: Custom Bullet Shape
+        description: Toggle on if you want to use the bullet shape below.
+        id: .no-bull
+        type: class-toggle
+    - 
+        title: Bullet Shape
+        id: bullet
+        type: variable-text
+        default: '⬥ '
+
 
     - 
         title: Tags
@@ -454,6 +465,7 @@ settings:
     --hr-sym: "⚡";
     --scroll-size: 10px;
     --tag-o: 1px;
+    --bullet: "⬥ ";
 }
 
 
@@ -1448,11 +1460,11 @@ ol > li::marker {
 
 /*Bullet Shape*/
 ul:nth-child(odd), ul:nth-child(even) {
-    list-style-type: "none;"
+    list-style-type: "";
 }
 
 ul li::before {
-    content: "⬥ ";
+    content: var(--bullet);
     margin-left: -24px;
     color: var(--accent);
     position: absolute;
@@ -1475,10 +1487,12 @@ ul, ol {
     padding-left: 10px;
 }
 /*-Bullet Points-*/
-/*.cm-s-obsidian span.cm-formatting-list-ul {visibility: hidden;}*/
+.cm-s-obsidian span.cm-formatting-list-ul {
+    visibility: hidden;
+}
 /*Editor Bullet Points*/
 .cm-s-obsidian span.cm-formatting-list-ul:before {
-    content: "⬥";
+    content: var(--bullet);
     margin-right: -10px;
     visibility: visible;
 }
@@ -2849,7 +2863,8 @@ g.classGroup line {
     border: var(--tag-o) solid var(--tag);
     color: var(--tag);
 }
-
+/*Bullet Shapes*/
+.no-bull .cm-s-obsidian span.cm-formatting-list-ul { visibility: visible; }
 
 /*----Exported PDFs----*/
 /*Fix Poems*/

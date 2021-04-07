@@ -15,7 +15,25 @@ settings:
         default: "'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif"
     -
         title: Text
+        description: Changes text font for preview and edit mode. 
         id: default-font
+        type: variable-text
+        default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
+    -
+        title: Different Preview/Editor Text
+        description: If toggled on, Text only affects UI text.
+        id: ed-pre
+        type: class-toggle
+    -
+        title: Preview Text
+        description: Changes text font for preview mode.
+        id: pre-font
+        type: variable-text
+        default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
+    -
+        title: Editor Text
+        description: Changes text font for edit mode.
+        id: ed-font
         type: variable-text
         default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
     -
@@ -23,7 +41,6 @@ settings:
         id: font-monospace
         type: variable-text
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
-    
 
     -
         title: Other
@@ -36,6 +53,58 @@ settings:
         id: hr-sym
         type: variable-text
         default: '⚡'
+    -
+        title: No Horizontal Line Symbol
+        description: Hide the horizontal Line Symbol entirely
+        id: hr-tog
+        type: class-toggle
+    -
+        title: Hide Vault Name
+        id: v-non
+        type: class-toggle
+    -
+        title: Resize Scrollbars
+        id: scroll-size
+        type: variable-number-slider
+        default: 10
+        format: px
+        min: 0
+        max: 15
+        step: 1
+
+    - 
+        title: Tags
+        id: Tags
+        type: heading
+        level: 2
+    -
+        title: Bubble Tags
+        id: tag-bubble
+        type: class-toggle
+    -
+        title: Notion Tags
+        id: tag-notion
+        type: class-toggle
+    -
+        title: Outline Tags
+        id: tag-outline
+        type: class-toggle
+    -
+        title: Tag Outline Border Size
+        id: tag-o
+        type: variable-number-slider
+        default: 1
+        format: px
+        min: 0
+        max: 5
+        step: 1        
+    - 
+        title: Tag Color
+        id: tag
+        type: variable-themed-color
+        format: hex
+        default-dark: '#571a1a'
+        default-light: '#c65656'
 
 
     -
@@ -308,7 +377,6 @@ settings:
         default-dark: '#4d171746'
         default-light: '#e5959537'    
 
-
     -
         title: Graph Colors
         id: Graph
@@ -349,6 +417,8 @@ settings:
         format: hex
         default-dark: '#c14343'
         default-light: '#000000'
+
+
 */
 
 
@@ -359,6 +429,8 @@ settings:
     --reveal-font: var(--default-font); /*??*/
     --font-monospace: 'Fira Code Medium', /*'JetBrains Mono Medium', 'Recursive Mono Casual Static Medium', 'Menlo Bold',*/ 'Source Code Pro', monospace; /*Code block text*/
     --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif; /*Works, but if it doesn't, needs !important*/
+    --pre-font: var(--default-font) !important;
+    --ed-font: var(--default-font) !important;
 }
 
 .workspace {
@@ -380,6 +452,8 @@ settings:
     
     
     --hr-sym: "⚡";
+    --scroll-size: 10px;
+    --tag-o: 1px;
 }
 
 
@@ -616,6 +690,9 @@ button, button.mod-cta {
     background-color: var(--dark-sidebar);
     transition: background-color 200ms ease-in-out;
 }
+.workspace-leaf-resize-handle:hover {
+    background-color: var(--accent);
+}
 
 
 /*Square Tabs*/
@@ -663,6 +740,7 @@ button, button.mod-cta {
     top: 1.5em;
     background-color: var(--side-bar);
     padding-top: .7em;*/
+    display: block;
 }
 
 /*Nav Folder/File Icons*/
@@ -1062,6 +1140,7 @@ b.u-pop {
 ::-webkit-scrollbar-thumb {
     background-color: var(--accent);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
+    
 }
 ::-webkit-scrollbar-thumb:active {
     background-color: var(--lite-accent);
@@ -1070,6 +1149,7 @@ b.u-pop {
 ::-webkit-scrollbar {
     background-color: var(--bg);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
+    width: var(--scroll-size);
 }
 
 
@@ -1395,11 +1475,12 @@ ul, ol {
     padding-left: 10px;
 }
 /*-Bullet Points-*/
-
+/*.cm-s-obsidian span.cm-formatting-list-ul {visibility: hidden;}*/
 /*Editor Bullet Points*/
 .cm-s-obsidian span.cm-formatting-list-ul:before {
     content: "⬥";
     margin-right: -10px;
+    visibility: visible;
 }
 
 /*Editor Bullet Lines*/
@@ -2504,18 +2585,6 @@ b {
 
 
 /*----Plugins----*/
-/*--Style Settings--*/
-.setting-item-description p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    line-height: 1.2em;
-}
-.themed-color-wrapper > div {
-    padding: .1em !important;
-    padding-left: .3em !important;
-    padding-right: .3em !important;
-    border-radius: var(--radius) !important;
-}
 
 /*--Sliding Panes--*/
 /*Hide the gradient of the Title Pane*/
@@ -2736,6 +2805,50 @@ g.classGroup line {
     border-color: transparent var(--background-secondary-alt) transparent transparent !important;
 }
 
+
+
+/*--Style Settings Plugin--*/
+/*--Style Settings--*/
+.setting-item-description p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 1.2em;
+}
+.themed-color-wrapper > div {
+    padding: .1em !important;
+    padding-left: .3em !important;
+    padding-right: .3em !important;
+    border-radius: var(--radius) !important;
+}
+
+/*--Settings Specific--*/
+.ed-pre .markdown-preview-section p {
+    font-family: var(--pre-font);
+}
+.ed-pre .cm-s-obsidian {
+    font-family: var(--ed-font);
+}
+
+/*--CSS Class Toggles--*/
+/*Hide Vault Title*/
+.v-non .nav-folder.mod-root > .nav-folder-title {
+    display: none;
+}
+.hr-tog .markdown-preview-view hr::after, .hr-tog div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
+    display: none;
+}
+
+.tag-notion a.tag {
+    border-radius: 5px;
+}
+.tag-bubble a.tag {
+    border-radius: 25px;
+}
+.tag-outline a.tag {
+    background-color: transparent;
+    border: var(--tag-o) solid var(--tag);
+    color: var(--tag);
+}
 
 
 /*----Exported PDFs----*/

@@ -72,15 +72,20 @@ settings:
         max: 15
         step: 1
     - 
+        title: Default Bullet Shapes
+        description: Toggle on if you want to use the default bullets.
+        id: def-bull
+        type: class-toggle
+    - 
         title: Custom Bullet Shape
         description: Toggle on if you want to use the bullet shape below.
-        id: .no-bull
+        id: no-bull
         type: class-toggle
     - 
         title: Bullet Shape
         id: bullet
         type: variable-text
-        default: '⬥ '
+        default: '⬥'
 
 
     - 
@@ -465,7 +470,7 @@ settings:
     --hr-sym: "⚡";
     --scroll-size: 10px;
     --tag-o: 1px;
-    --bullet: "⬥ ";
+    --bullet: "⬥";
 }
 
 
@@ -1353,10 +1358,10 @@ a:hover {
 
 /*--Horizontal Linebreak, HR--*/ 
 .markdown-preview-view hr, .HyperMD-hr-bg {
-    height: 0; /*Center Line Vertically*/
+    height: 0;
     border: 1px solid var(--hr);
-    /*margin-top: 17px;
-    margin-bottom: 20px;*/
+    margin-top: 12px;
+    margin-bottom: 20px;
 }
 
 /*Stylized hr Line*/
@@ -1487,14 +1492,11 @@ ul, ol {
     padding-left: 10px;
 }
 /*-Bullet Points-*/
-.cm-s-obsidian span.cm-formatting-list-ul {
-    visibility: hidden;
-}
+
 /*Editor Bullet Points*/
 .cm-s-obsidian span.cm-formatting-list-ul:before {
     content: var(--bullet);
     margin-right: -10px;
-    visibility: visible;
 }
 
 /*Editor Bullet Lines*/
@@ -2864,7 +2866,24 @@ g.classGroup line {
     color: var(--tag);
 }
 /*Bullet Shapes*/
-.no-bull .cm-s-obsidian span.cm-formatting-list-ul { visibility: visible; }
+.no-bull .cm-s-obsidian span.cm-formatting-list-ul {
+    visibility: hidden;
+}
+.no-bull .cm-s-obsidian span.cm-formatting-list-ul:before {
+    content: var(--bullet);
+    margin-right: -10px;
+    visibility: visible;
+}
+/*Default Bullets*/
+.def-bull .cm-s-obsidian span.cm-formatting-list-ul:before {
+    visibility: hidden;
+}
+.def-bull ul li:before {
+    display: none;
+}
+.def-bull ul li { 
+    list-style-type: disc;
+}
 
 /*----Exported PDFs----*/
 /*Fix Poems*/

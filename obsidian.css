@@ -3041,16 +3041,16 @@ g.classGroup line {
         /*Sizes*/
         --radius: 0px;
         --tiny: 100px;
-        --small: 200px;
-        --small-med: 300px;
-        --med-small: 400px;
-        --medium: 500px;
-        --med-tall: 600px;
-        --tall: 700px;
+        --small: 150px;
+        --small-med: 200px;
+        --med-small: 250px;
+        --medium: 300px;
+        --med-tall: 450px;
+        --tall: 500px;
     }
     /*Popover*/
     .popover.hover-popover {
-        width: 400px;
+        width: 350px;
     }
 }
 

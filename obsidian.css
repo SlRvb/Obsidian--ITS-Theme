@@ -20,6 +20,51 @@ settings:
         type: variable-text
         default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
     -
+        title: Monospace
+        id: font-monospace
+        type: variable-text
+        default: "'Fira Code Medium', 'Source Code Pro', monospace"
+    -
+        title: Text Size
+        id: f-s-text
+        type: variable-number-slider
+        default: 14
+        format: px
+        min: 10
+        max: 30
+        step: 2
+    -
+        title: Header Weights
+        id: f-w-h
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
+    -
+        title: Line Height
+        id: lh
+        type: variable-number-slider
+        default: 20
+        format: px
+        min: 16
+        max: 50
+        step: 4
+    -
+        title: Header Height
+        id: head-h
+        type: variable-number-slider
+        default: 15
+        format: px
+        min: 0
+        max: 30
+        step: 5
+    -
+        title: Specific View Font Changes
+        id: Font-Specific
+        type: heading
+        level: 3
+    -
         title: Different Preview/Editor Text
         description: If toggled on, Text only affects UI text.
         id: ed-pre
@@ -36,17 +81,41 @@ settings:
         id: ed-font
         type: variable-text
         default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
-    -
-        title: Monospace
-        id: font-monospace
-        type: variable-text
-        default: "'Fira Code Medium', 'Source Code Pro', monospace"
 
     -
         title: Other
         id: Other
         type: heading
         level: 2
+
+    -
+        title: Workspace
+        id: Other-Work
+        type: heading
+        level: 3
+    -
+        title: Hide Vault Name
+        id: v-non
+        type: class-toggle
+    -
+        title: Wrap Title
+        id: title-wrap
+        type: class-toggle
+    -
+        title: Resize Scrollbars
+        id: scroll-size
+        type: variable-number-slider
+        default: 10
+        format: px
+        min: 0
+        max: 15
+        step: 1
+    -
+        title: Note Elements
+        id: Other-Note
+        type: heading
+        level: 3
+
     - 
         title: Horizontal Line Symbol
         description: Add quotations around symbol for it to work. For Example "⚡".
@@ -58,22 +127,8 @@ settings:
         description: Hide the horizontal Line Symbol entirely
         id: hr-tog
         type: class-toggle
-    -
-        title: Hide Vault Name
-        id: v-non
-        type: class-toggle
-    -
-        title: Resize Scrollbars
-        id: scroll-size
-        type: variable-number-slider
-        default: 10
-        format: px
-        min: 0
-        max: 15
-        step: 1
     - 
-        title: Default Bullet Shapes
-        description: Toggle on if you want to use the default bullets.
+        title: Default Bullet Disc Shape
         id: def-bull
         type: class-toggle
     - 
@@ -86,13 +141,18 @@ settings:
         id: bullet
         type: variable-text
         default: '⬥'
+    - 
+        title: Original Bullet Lines
+        description: Lines appear under bullet, not beside it. ⚠Causes scrolling glitches. Recommended this is turned off, but use if you wish.
+        id: b-li-o
+        type: class-toggle
 
 
     - 
         title: Tags
         id: Tags
         type: heading
-        level: 2
+        level: 3
     -
         title: Bubble Tags
         id: tag-bubble
@@ -466,13 +526,18 @@ settings:
     
     --slide-shadow: rgba(0, 28, 74, 0.15);
     
+    --scroll-size: 10px;
+    --lh: 20px;
+    --f-s-text: 16px;
+    --f-s-h: 34px;
+    --f-w-h: 600;
+    --h-line: 100%;
+    --head-h: 15px;
     
     --hr-sym: "⚡";
-    --scroll-size: 10px;
     --tag-o: 1px;
     --bullet: "⬥";
 }
-
 
 .theme-dark {
     --background-primary: var(--note); /*Note background*/
@@ -1205,13 +1270,39 @@ body {
     text-align: justify;
 }
 
+.cm-s-obsidian, p {
+    line-height: var(--lh);
+}
 
 /*--Headings--*/
 h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
-    font-weight: 600;
+    font-weight: var(--f-w-h);
     font-family: var(--font) !important;
     color: var(--headers);
 }
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+    margin: var(--head-h) 0 !important;
+}
+
+/*Font Sizes*/
+.markdown-preview-view h1,
+.cm-s-obsidian .cm-header-1 { font-size: var(--f-s-h); }
+.markdown-preview-view h2 { font-size: calc(var(--f-s-h) - 4px); }
+.cm-s-obsidian .cm-header-2 { font-size: calc(var(--f-s-h) - 6px); }
+.markdown-preview-view h3 { font-size: calc(var(--f-s-h) - 8px); }
+.cm-s-obsidian .cm-header-3 { font-size: calc(var(--f-s-h) - 10px); }
+.markdown-preview-view h4 { font-size: calc(var(--f-s-h) - 10px); }
+.cm-s-obsidian .cm-header-4 { font-size: calc(var(--f-s-h) - 12px); }
+.markdown-preview-view h5 { font-size: calc(var(--f-s-h) - 14px); }
+.cm-s-obsidian .cm-header-5 { font-size: calc(var(--f-s-h) - 14px); }
+.markdown-preview-view h6,
+.cm-s-obsidian .cm-header-6 { font-size: calc(var(--f-s-h) - 16px); }
 
 /*Editor Heading Re-size*/
 /*Inspired by Red Graphite*/
@@ -1293,7 +1384,10 @@ h4:after {
     font-family: var(--font-monospace);
     font-size: 14px;
 }
-
+/*Hide weird Tokening BG Coloring*/
+.token.operator {
+    background: transparent;
+}
 
 
 /*--Links--*/
@@ -1470,7 +1564,7 @@ ul:nth-child(odd), ul:nth-child(even) {
 
 ul li::before {
     content: var(--bullet);
-    margin-left: -24px;
+    margin-left: -22px;
     color: var(--accent);
     position: absolute;
     margin-top: auto;
@@ -1531,30 +1625,6 @@ li:nth-child(even) {
     text-indent: -20px !important;
 }
 
-
-/*Bullet Line Original**
-ul ul, ol {
-    position: relative;
-}
-ul ul::before, ol ol::before {
-    content:'';
-    border-left: 2px solid var(--accent);
-    position: absolute;
-}
-ul ul::before, ol ol::before {
-    left: -12px;
-    top: 0;
-    bottom: 0; 
-}
-ol::before { left: -15px; }
-
-.markdown-preview-view .task-list-item-checkbox {
-    margin-left: 1% !important;
-    margin-right: .5% !important;
-}
-.markdown-preview-view .list-collapse-indicator {
-    padding-left: 12px !important;
-}
 
 /*List Arrows*/
 .markdown-preview-view .list-collapse-indicator {
@@ -1849,7 +1919,7 @@ input[type="checkbox checked"] {
 
 /*Popover HR, Horizontal Line BG*/
 .popover.hover-popover hr:after {
-    background-color: var(--embed-bg) !important;
+    background-color: var(--note) !important;
 }
 
 /*Fit Text Within Popover**
@@ -2879,11 +2949,79 @@ g.classGroup line {
     visibility: hidden;
 }
 .def-bull ul li:before {
-    display: none;
+    content: "•";
+    padding-left: 4px;
+    font-size: 20px;
 }
-.def-bull ul li { 
-    list-style-type: disc;
+
+/*Bullet Line Original*/
+.bul-li-n li {
+    padding-left: 4px;
+    border-left: 2px solid var(--accent);
 }
+
+.bul-li-n li:nth-child(even) {
+    border-left: 2px solid var(--accent2);
+}
+
+.bul-li-n .markdown-preview-view ul > .bul-li-n li.task-list-item {
+    text-indent: -20px !important;
+}
+
+.b-li-o li {
+    border: 0;
+    padding: 0;
+}
+.b-li-o li::before {
+    color: var(--fg);
+}
+.b-li-o ul ul,
+.b-li-o ol {
+    position: relative;
+}
+.b-li-o ul ul::before,
+.b-li-o ol ol::before {
+    content:'';
+    border-left: 2px solid var(--accent);
+    position: absolute;
+}
+.b-li-o ul ul::before,
+.b-li-o ol ol::before {
+    left: -16px;
+    top: 0;
+    bottom: 0; 
+}
+.bul-li-o .markdown-preview-view ul > .bul-li-o li.task-list-item {
+    text-indent: -20px !important;
+}
+
+.title-wrap .view-header-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    line-height: 22px;
+}
+.title-wrap .view-header {
+    height: auto;
+}
+
+.naked-em .markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed, .markdown-embed .markdown-preview-view, .markdown-embed p {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.naked-em .markdown-embed-link{
+    color: transparent;
+}
+.naked-em .markdown-embed-link:hover {
+    background-color: var(--background-secondary);
+    padding: 10px 10px 5px 10px;
+}
+.naked-em .internal-embed .markdown-embed-content > ::-webkit-scrollbar {
+    width: 0px;
+}
+
+
 
 /*----Exported PDFs----*/
 /*Fix Poems*/
@@ -2897,8 +3035,20 @@ g.classGroup line {
 
 
 /*----Mobile----*/
-/*Popover*/
 @media (max-width: 500px) {
+    /**/
+    .theme-dark, .theme-light {
+        /*Sizes*/
+        --radius: 0px;
+        --tiny: 100px;
+        --small: 200px;
+        --small-med: 300px;
+        --med-small: 400px;
+        --medium: 500px;
+        --med-tall: 600px;
+        --tall: 700px;
+    }
+    /*Popover*/
     .popover.hover-popover {
         width: 400px;
     }

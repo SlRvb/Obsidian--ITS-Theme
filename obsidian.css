@@ -3006,7 +3006,10 @@ g.classGroup line {
     height: auto;
 }
 
-.naked-em .markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed, .markdown-embed .markdown-preview-view, .markdown-embed p {
+.naked-em .markdown-preview-view .markdown-embed,
+.naked-em .markdown-preview-view .file-embed,
+.naked-em .markdown-embed .markdown-preview-view,
+.naked-em .markdown-embed p {
     margin: 0;
     border: 0;
     padding: 0;

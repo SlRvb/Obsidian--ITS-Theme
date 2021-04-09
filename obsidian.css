@@ -132,7 +132,12 @@ settings:
     - 
         title: Centered Tables
         description: Move all tables to the center of the page.
-        id: table-center
+        id: t-c
+        type: class-toggle
+    - 
+        title: Naked Embeds
+        description: Embeds that look like they're part of the note.
+        id: naked-em
         type: class-toggle
     - 
         title: Default Bullet Disc Shape
@@ -2625,13 +2630,15 @@ img[alt*="sprf"]{
 .internal-embed[alt*="nob"] ul{
     padding-inline-start: 0;
 }
-.internal-embed[alt*="em"] .markdown-embed .markdown-preview-view, .markdown-preview-view .internal-embed[alt*="em"]:not(.image-embed) {
+.internal-embed[alt*="em"] .markdown-embed .markdown-preview-view,
+.markdown-preview-view .internal-embed[alt*="em"]:not(.image-embed) {
     padding: 20px 10px;
-    display: block;
+    display: block !important;
     width: 100%;
+    background-color: var(--embed-bg);
 }
 .internal-embed[alt*="em"] .markdown-embed-link{
-    color: var(--background-modifier-border);
+    color: var(--accent);
 }
 
 
@@ -3058,6 +3065,7 @@ g.classGroup line {
 .naked-em .markdown-preview-view .markdown-embed,
 .naked-em .markdown-preview-view .file-embed,
 .naked-em .markdown-embed .markdown-preview-view,
+.naked-em .markdown-embed li,
 .naked-em .markdown-embed p {
     margin: 0;
     border: 0;

@@ -24,15 +24,17 @@ settings:
         id: font-monospace
         type: variable-text
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
+
     -
         title: Text Size
+        description: Adjust size for preview/editor mode.
         id: f-s-text
         type: variable-number-slider
-        default: 14
+        default: 16
         format: px
-        min: 10
-        max: 30
-        step: 2
+        min: 11
+        max: 20
+        step: 1
     -
         title: Header Weights
         id: f-w-h
@@ -533,6 +535,7 @@ settings:
     
     --scroll-size: 10px;
     --lh: 20px;
+    --f-s-ui: 16px;
     --f-s-text: 16px;
     --f-s-h: 34px;
     --f-w-h: 600;
@@ -1275,9 +1278,10 @@ body {
     text-align: justify;
 }
 
-.cm-s-obsidian .HyperMD-list-line, p {
+.cm-s-obsidian .HyperMD-list-line, p, li, .cm-s-obsidian .CodeMirror-line * {
     line-height: var(--lh);
     min-height: 0;
+    font-size: var(--f-s-text);
 }
 
 /*--Headings--*/
@@ -1286,6 +1290,7 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     font-family: var(--font) !important;
     color: var(--headers);
 }
+
 
 .markdown-preview-view h1,
 .markdown-preview-view h2,
@@ -1314,6 +1319,7 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 /*Inspired by Red Graphite*/
 .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
     font-size: 10px;
+    color: var(--lines);
 }
 
 /*Heading Line*/
@@ -1641,9 +1647,11 @@ li:nth-child(even) {
 .markdown-preview-view .list-collapse-indicator {
     padding-left: 7em;
     color: var(--soft-text);
+    position: absolute;
 }
 .markdown-preview-view .task-list-item .list-collapse-indicator {
     padding-left: 10px;
+    position: absolute;
 }
 
 /*Checkboxes*/
@@ -1657,7 +1665,7 @@ li:nth-child(even) {
     height: 14px;
     filter: none;
     margin-left: -4px;
-    margin-right: 1.5%;
+    margin-right: .7em;
     margin-top: 3px;
     cursor: pointer;
     vertical-align: top;
@@ -1751,7 +1759,7 @@ input[type="checkbox checked"] {
     border: 0px;
 }
 /*Table Centered*/
-.table-center table {
+.t-c table {
     margin-left: auto;
     margin-right: auto
 }
@@ -2239,7 +2247,7 @@ iframe {
     padding-left: 10px;
 }
 .kanban .task-list-item .list-collapse-indicator {
-    padding-left: 10px;
+    position: absolute;
 }
 /*Numbered List + Numbered Checklist*/
 .kanban ol .list-collapse-indicator, .kanban ol .task-list-item .list-collapse-indicator{
@@ -2608,6 +2616,24 @@ img[alt*="sprf"]{
     margin-left: 0;
     margin-right: auto;
 }
+
+
+.internal-embed[alt*="nob"] li {
+    list-style: none;
+    margin: 0;
+}
+.internal-embed[alt*="nob"] ul{
+    padding-inline-start: 0;
+}
+.internal-embed[alt*="em"] .markdown-embed .markdown-preview-view, .markdown-preview-view .internal-embed[alt*="em"]:not(.image-embed) {
+    padding: 20px 10px;
+    display: block;
+    width: 100%;
+}
+.internal-embed[alt*="em"] .markdown-embed-link{
+    color: var(--background-modifier-border);
+}
+
 
 .internal-embed[alt*="nmg"] .markdown-embed .markdown-preview-view {
     margin: 0;
@@ -3036,6 +3062,7 @@ g.classGroup line {
     margin: 0;
     border: 0;
     padding: 0;
+    background-color: transparent;
 }
 .naked-em .markdown-embed-link{
     color: transparent;
@@ -3047,7 +3074,9 @@ g.classGroup line {
 .naked-em .internal-embed .markdown-embed-content > ::-webkit-scrollbar {
     width: 0px;
 }
-
+.naked-em .markdown-preview-view .internal-embed:not(.image-embed) {
+	display: inline-flex;
+}
 
 
 /*----Exported PDFs----*/

@@ -138,6 +138,7 @@ settings:
         type: class-toggle
     - 
         title: Bullet Shape
+        description: Add quotes around your new bullet. For example "~"
         id: bullet
         type: variable-text
         default: '⬥'

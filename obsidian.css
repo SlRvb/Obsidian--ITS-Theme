@@ -1277,6 +1277,7 @@ body {
 
 .cm-s-obsidian .HyperMD-list-line, p {
     line-height: var(--lh);
+    min-height: 0;
 }
 
 /*--Headings--*/
@@ -1624,6 +1625,7 @@ ul, ol {
 li {
     padding-left: 4px;
     border-left: 2px solid var(--accent);
+    line-height: var(--lh);
 }
 
 li:nth-child(even) {
@@ -1743,7 +1745,7 @@ input[type="checkbox checked"] {
 /*Bolded Right Side Table*/
 .table td:nth-child(1) {
     background-color: var(--outer-bar);
-    font-weight: 600;
+    font-weight: 900;
 }
 .table th, .table td {
     border: 0px;

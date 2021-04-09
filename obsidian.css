@@ -36,6 +36,16 @@ settings:
         max: 20
         step: 1
     -
+        title: Preview Text Size
+        description: Adjust size for preview mode.
+        id: f-s-pre
+        type: variable-number-slider
+        default: 16
+        format: px
+        min: 11
+        max: 20
+        step: 1
+    -
         title: Header Weights
         id: f-w-h
         type: variable-number-slider
@@ -540,7 +550,7 @@ settings:
     
     --scroll-size: 10px;
     --lh: 20px;
-    --f-s-ui: 16px;
+    --f-s-pre: 16px;
     --f-s-text: 16px;
     --f-s-h: 34px;
     --f-w-h: 600;
@@ -1282,12 +1292,20 @@ body {
 .justified p {
     text-align: justify;
 }
-
+/*Note Text Adjustments*/
 .cm-s-obsidian .HyperMD-list-line, p, li, .cm-s-obsidian .CodeMirror-line * {
     line-height: var(--lh);
     min-height: 0;
     font-size: var(--f-s-text);
 }
+
+p, li, table {
+    font-size: var(--f-s-pre);
+}
+p > .modal.mod-settings .modal-content, .setting-item-description p {
+    font-size: 16px !important;
+}
+
 
 /*--Headings--*/
 h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
@@ -1295,7 +1313,6 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     font-family: var(--font) !important;
     color: var(--headers);
 }
-
 
 .markdown-preview-view h1,
 .markdown-preview-view h2,
@@ -1590,6 +1607,7 @@ ul li::before {
     position: absolute;
     margin-top: auto;
     margin-bottom: auto;
+    font-size: 16px;
 }
 li.task-list-item::before {
     visibility: collapse;

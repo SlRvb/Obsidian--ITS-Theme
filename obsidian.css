@@ -1455,9 +1455,13 @@ a:hover {
 .markdown-preview-view hr, .HyperMD-hr-bg {
     height: 0;
     border: 1px solid var(--hr);
-    margin-top: 12px;
+    
+}
+.HyperMD-hr-bg {
+    margin-top: 10px;
     margin-bottom: 20px;
 }
+
 
 /*Stylized hr Line*/
 .markdown-preview-view hr::after, div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {

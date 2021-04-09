@@ -128,6 +128,11 @@ settings:
         id: hr-tog
         type: class-toggle
     - 
+        title: Centered Tables
+        description: Move all tables to the center of the page.
+        id: table-center
+        type: class-toggle
+    - 
         title: Default Bullet Disc Shape
         id: def-bull
         type: class-toggle
@@ -147,7 +152,6 @@ settings:
         description: Lines appear under bullet, not beside it. ⚠Causes scrolling glitches. Recommended this is turned off, but use if you wish.
         id: b-li-o
         type: class-toggle
-
 
     - 
         title: Tags
@@ -1271,7 +1275,7 @@ body {
     text-align: justify;
 }
 
-.cm-s-obsidian, p {
+.cm-s-obsidian .HyperMD-list-line, p {
     line-height: var(--lh);
 }
 
@@ -1736,6 +1740,19 @@ input[type="checkbox checked"] {
     border: 0;
 }
 
+/*Bolded Right Side Table*/
+.table td:nth-child(1) {
+    background-color: var(--outer-bar);
+    font-weight: 600;
+}
+.table th, .table td {
+    border: 0px;
+}
+/*Table Centered*/
+.table-center table {
+    margin-left: auto;
+    margin-right: auto
+}
 
 
 /*--Tags--*/

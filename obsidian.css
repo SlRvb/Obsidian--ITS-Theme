@@ -3143,8 +3143,8 @@ g.classGroup line {
 }
 
 /*Hide Text Expander Code in Preview Mode*/
-.markdown-preview-view.hide-expand pre[class*="language-expander"],
-.markdown-preview-view.hide-expand code[class*="language-expander"] {
+.hide-expand .markdown-preview-view pre[class*="language-expander"],
+.hide-expand .markdown-preview-view code[class*="language-expander"] {
     visibility:collapse;
 }
 

@@ -57,11 +57,11 @@ settings:
         title: Line Height
         id: lh
         type: variable-number-slider
-        default: 1.3
+        default: 1.5
         format: em
         min: 1
         max: 2
-        step: .2
+        step: .1
     -
         title: Header Height
         id: head-h
@@ -112,6 +112,10 @@ settings:
     -
         title: Wrap Title
         id: title-wrap
+        type: class-toggle
+    -
+        title: Hide Header Underline
+        id: h-line
         type: class-toggle
     -
         title: Resize Scrollbars
@@ -565,7 +569,7 @@ settings:
     --slide-shadow: rgba(0, 28, 74, 0.15);
     
     --scroll-size: 10px;
-    --lh: 1em;
+    --lh: 1.5em;
     --f-s-pre: 16px;
     --f-s-text: 16px;
     --f-s-h: 34px;
@@ -3150,6 +3154,18 @@ g.classGroup line {
 .naked-em .markdown-preview-view .internal-embed:not(.image-embed) {
 	display: inline-flex;
 }
+
+/*Hide Header Line*/
+.h-line h1:after,
+.h-line h2:after,
+.h-line h3:after,
+.h-line h4:after,
+.h-line h5:after,
+.h-line h6:after,
+.h-line .cm-s-obsidian pre.HyperMD-header:after {
+    display: none;
+}
+
 
 /*Hide Text Expander Code in Preview Mode*/
 .hide-expand .markdown-preview-view pre[class*="language-expander"],

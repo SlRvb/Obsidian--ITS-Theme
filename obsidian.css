@@ -1304,6 +1304,13 @@ b.u-pop {
     color: var(--soft-text);
 }
 
+/*Center Note Icons*/
+.view-header-icon, .view-actions{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 
 
@@ -2812,6 +2819,7 @@ body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
     border-right: 2px solid var(--headers);
     border-bottom: none;
+    padding-right: 2px;
 }
 
 /*Hide Black Border When Header is Rotated*/
@@ -2823,8 +2831,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     border-left: 3px solid var(--bg);
 }
-
-
+.title-wrap.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header  {
+    width: auto !important;
+    writing-mode: vertical-rl;
+}
 
 /*--Dataview Table--*/
 .table-view-table > thead > tr > th {

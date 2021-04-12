@@ -54,15 +54,6 @@ settings:
         max: 900
         step: 100
     -
-        title: Line Height
-        id: lh
-        type: variable-number-slider
-        default: 1.5
-        format: em
-        min: 1
-        max: 2
-        step: .1
-    -
         title: Header Height
         id: head-h
         type: variable-number-slider
@@ -71,6 +62,17 @@ settings:
         min: 0
         max: 30
         step: 5
+    -
+        title: Line Height
+        id: lh
+        type: variable-number-slider
+        default: 1.5
+        format: em
+        min: 1
+        max: 2
+        step: .1
+
+
     -
         title: Specific View Font Changes
         id: Font-Specific
@@ -110,12 +112,8 @@ settings:
         id: v-non
         type: class-toggle
     -
-        title: Wrap Title
+        title: Wrap Note Title
         id: title-wrap
-        type: class-toggle
-    -
-        title: Hide Header Underline
-        id: h-line
         type: class-toggle
     -
         title: Resize Scrollbars
@@ -131,7 +129,6 @@ settings:
         id: Other-Note
         type: heading
         level: 3
-
     - 
         title: Horizontal Line Symbol
         description: Add quotations around symbol for it to work. For Example "⚡".
@@ -143,6 +140,14 @@ settings:
         description: Hide the horizontal Line Symbol entirely
         id: hr-tog
         type: class-toggle
+    -
+        title: Hide Header Underline
+        id: h-line
+        type: class-toggle
+    -
+        title: Hide Frontmatter 
+        id: no-m
+        type: class-toggle
     - 
         title: Centered Tables
         description: Move all tables to the center of the page.
@@ -153,6 +158,11 @@ settings:
         description: Embeds that look like they're part of the note.
         id: naked-em
         type: class-toggle
+    -
+        title: List
+        id: Lists
+        type: heading
+        level: 4
     - 
         title: Default Bullet Disc Shape
         id: def-bull

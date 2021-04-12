@@ -2301,7 +2301,7 @@ iframe {
     padding-left: 10px;
 }
 .kanban .task-list-item .list-collapse-indicator {
-    position: absolute;
+    position: relative;
 }
 /*Numbered List + Numbered Checklist*/
 .kanban ol .list-collapse-indicator, .kanban ol .task-list-item .list-collapse-indicator{

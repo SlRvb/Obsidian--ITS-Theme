@@ -1773,6 +1773,11 @@ li.task-list-item.is-checked > a,
 li.task-list-item.is-checked > code {
     opacity: 65%;
 }
+/*Thanks @foreveryone*/
+li.task-list-item.is-checked li:not(.is-checked) {
+    font-weight: initial; 
+    color: var(--text)
+}
 
 /*Table Checkboxes*/
 input[type="checkbox" i] {

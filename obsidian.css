@@ -1452,6 +1452,7 @@ h4:after {
     white-space: pre-wrap !important;
     font-family: var(--font-monospace) !important;
     color: var(--text);
+    border-radius: var(--radius);
 }
 
 /*Editor Code*/

@@ -101,7 +101,6 @@ settings:
         id: Other
         type: heading
         level: 2
-
     -
         title: Workspace
         id: Other-Work
@@ -139,6 +138,11 @@ settings:
         title: No Horizontal Line Symbol
         description: Hide the horizontal Line Symbol entirely
         id: hr-tog
+        type: class-toggle
+    -
+        title: Header Tags Above Header
+        description: Move the editor header hastags # to above the header instead.
+        id: hash-top
         type: class-toggle
     -
         title: Hide Header Underline
@@ -546,7 +550,6 @@ settings:
         description: Hide text expander code block from preview
         id: hide-expand
         type: class-toggle
-
 */
 
 
@@ -710,7 +713,7 @@ settings:
     --text-error: #ff3333; /*??*/
     --text-error-hover: #990000; /*??*/
     
-    --text-highlight-bg: rgba(199, 129, 129, 0.4); /*Text highlights*/
+    --text-highlight-bg: rgba(255, 185, 185, 0.4); /*Text highlights*/
     --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Search Highlight*/
     --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
     
@@ -1375,6 +1378,7 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 .markdown-preview-view h6,
 .cm-s-obsidian .cm-header-6 { font-size: calc(var(--f-s-h) - 16px); }
 
+
 /*Editor Heading Re-size*/
 /*Inspired by Red Graphite*/
 .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
@@ -1418,6 +1422,7 @@ h4:after {
     background: var(--table);
     left: 0;
 }
+
 
 /*Editor Heading Lines*/
 .cm-s-obsidian pre.HyperMD-header:after {
@@ -3185,6 +3190,10 @@ g.classGroup line {
 .h-line .cm-s-obsidian pre.HyperMD-header:after {
     display: none;
 }
+.hash-top .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+    display: block;
+}
+
 
 
 /*Hide Text Expander Code in Preview Mode*/

@@ -1735,7 +1735,7 @@ li:nth-child(even) {
 }
 .markdown-preview-view .task-list-item .list-collapse-indicator {
     padding-left: 10px;
-    position: absolute;
+    position: relative;
 }
 
 /*Checkboxes*/

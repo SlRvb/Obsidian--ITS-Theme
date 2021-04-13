@@ -3214,6 +3214,7 @@ g.classGroup line {
 }
 .hash-top .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
     display: block;
+    margin-bottom: -8px;
 }
 
 

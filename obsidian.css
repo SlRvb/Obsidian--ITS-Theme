@@ -1465,7 +1465,8 @@ h4:after {
 }
 /*Hide weird Tokening BG Coloring*/
 .token.operator {
-    background: transparent;
+    color: var(--headers) !important;
+    background: transparent !important;
 }
 
 /*--Latex Math--*/

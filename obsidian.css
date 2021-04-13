@@ -1482,7 +1482,7 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 /*Math Editor Text*/
 .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end){
-    color: var(--lite-accent);
+    color: var(--headers);
 }
 
 /*--Links--*/

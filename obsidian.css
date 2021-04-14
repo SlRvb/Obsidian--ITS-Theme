@@ -3254,12 +3254,6 @@ g.classGroup line {
         --med-tall: 450px;
         --tall: 500px;
     }
-    
-    /*Outline */
-    .outline {
-        margin: 0;
-        border: none;
-    }
 }
 
 

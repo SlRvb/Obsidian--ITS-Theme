@@ -999,12 +999,12 @@ button, button.mod-cta {
 }
 
 .tag-container .tree-item-children:hover {
-    border-left: 2px solid var(--lines);
+    border-color: var(--accent);
 }
 
 /*Outline Pane Lines*/
 .outline .tree-item-children {
-    margin-left: 4%;
+    margin-left: .6em;
     border-left: 1px solid var(--lines);
     transition: all 0.3s ease-in-out;
     padding: 0;
@@ -1015,9 +1015,9 @@ button, button.mod-cta {
 }
 /*Set Outline Padding*/
 .outline {
-    margin: 20px 10px;
-    overflow: visible;
+    margin: .2em .5em;
 }
+
 
 
 
@@ -2181,10 +2181,11 @@ iframe {
     border-image: initial;
 }
 /*Remove File Padding*/
-.workspace-leaf-content .view-content {
+.workspace-split.mod-root .view-content {
     padding: 2px 2px;
     overflow: hidden;
 }
+
 
 
 /*----SlRvb's Custom CSS----*/

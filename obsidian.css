@@ -1002,20 +1002,18 @@ button, button.mod-cta {
 }
 
 /*Outline Pane Lines*/
-.outline .tree-item-children:not(.is-mobile) {
+.outline .tree-item-children {
     margin-left: 3.9%;
     border-left: 1px solid var(--lines);
     transition: all 0.3s ease-in-out;
-    border-radius: var(--radius);
-    padding-left: 0px;
 }
 .outline .tree-item-children:hover {
     border-left-color: var(--accent);
+    border-radius: var(--radius);
 }
 /*Set Outline Padding*/
-.outline:not(.is-mobile) {
-    padding: 20px 10px;
-    overflow: auto;
+.outline {
+    margin: 15px 10px;
 }
 
 

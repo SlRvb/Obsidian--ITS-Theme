@@ -1001,7 +1001,7 @@ button, button.mod-cta {
     border-left: 2px solid var(--lines);
 }
 
-/*Outline Pane Lines*/
+/*Outline Pane Lines*
 .outline .tree-item-children {
     margin-left: 4%;
     border-left: 1px solid var(--lines);

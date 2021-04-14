@@ -1003,18 +1003,19 @@ button, button.mod-cta {
 
 /*Outline Pane Lines*/
 .outline .tree-item-children {
-    margin-left: 3.9%;
+    margin-left: 4%;
     border-left: 1px solid var(--lines);
     transition: all 0.3s ease-in-out;
 }
 .outline .tree-item-children:hover {
-    border-left-color: var(--accent);
+    border-color: var(--accent);
     border-radius: var(--radius);
 }
-/*Set Outline Padding*/
+/*Set Outline Padding
 .outline {
     margin: 15px 10px;
 }
+*/
 
 
 

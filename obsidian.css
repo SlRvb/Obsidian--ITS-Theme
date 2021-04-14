@@ -740,7 +740,7 @@ settings:
     --bg: #dde4ef;
     --fg: #9f0202;
     --side-bar: var(--note);
-    --outer-bar: #dfe7ef;
+    --outer-bar: #eef3fd;
     --dark-sidebar: #f1f5ff;
     --inactive: #a6bbde /*#91a3c1*/;
     
@@ -1725,7 +1725,7 @@ li:nth-child(even) {
 }
 
 .markdown-preview-view ul > li.task-list-item {
-    text-indent: -20px !important;
+    text-indent: -1.3em;
 }
 
 
@@ -3057,6 +3057,7 @@ g.classGroup line {
 
 /*--Gallery Plugin--*/
 .workspace-leaf-content[data-type="ob-gallery-info"] .markdown-preview-view { padding: .5em; }
+.ob-gallery-display > ul { padding-inline-start: 0; }
 
 .gallery-info-section-tags.svelte-1fo05ye > .tag.svelte-1fo05ye {
     border-radius: var(--radius) !important;
@@ -3066,7 +3067,6 @@ g.classGroup line {
 .gallery-info-section-tags.svelte-1fo05ye > .tag.svelte-1fo05ye:hover { text-decoration: underline; }
 .gallery-info-section-label.svelte-1fo05ye.svelte-1fo05ye{ color: var(--soft-text); }
 .gallery-info-section-value.svelte-1fo05ye.svelte-1fo05ye { color: var(--fg) !important; }
-
 
 
 /*--Style Settings Plugin--*/
@@ -3169,7 +3169,7 @@ g.classGroup line {
     bottom: 0; 
 }
 .bul-li-o .markdown-preview-view ul > .bul-li-o li.task-list-item {
-    text-indent: -20px !important;
+    text-indent: -1.5em;
 }
 
 .title-wrap .view-header-title {

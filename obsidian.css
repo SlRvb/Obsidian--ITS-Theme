@@ -995,6 +995,7 @@ button, button.mod-cta {
     margin-left: 4%;
     border-left: 1px solid var(--lines);
     transition: all 0.5s ease-in-out;
+    padding: 0;
 }
 
 .tag-container .tree-item-children:hover {
@@ -1006,6 +1007,7 @@ button, button.mod-cta {
     margin-left: 4%;
     border-left: 1px solid var(--lines);
     transition: all 0.3s ease-in-out;
+    padding: 0;
 }
 .outline .tree-item-children:hover {
     border-color: var(--accent);

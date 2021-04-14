@@ -1014,8 +1014,7 @@ button, button.mod-cta {
 }
 /*Set Outline Padding*/
 .outline {
-    padding: 20px 10px !important;
-    overflow: hidden;
+    padding: 20px 10px;
 }
 
 

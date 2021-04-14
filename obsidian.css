@@ -3254,9 +3254,11 @@ g.classGroup line {
         --med-tall: 450px;
         --tall: 500px;
     }
-    /*Popover*/
-    .popover.hover-popover {
-        width: 350px;
+    
+    /*Outline */
+    .outline {
+        margin: 0;
+        border: none;
     }
 }
 

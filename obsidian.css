@@ -885,7 +885,7 @@ button, button.mod-cta {
 .nav-folder-children .nav-folder-title-content::before {
     content: '📁'/*\1F5BF*/;
     color: transparent;
-    text-shadow: 0 0 0 var(--headers);
+    text-shadow: 0 0 0 var(--folder);
     margin-right: 4px;
     font-size: 13px;
     
@@ -900,7 +900,7 @@ button, button.mod-cta {
 
 /*Inactive Folder Color*/
 .is-collapsed .nav-folder-title-content:before {
-    text-shadow: 0 0 0 var(--folder);
+    text-shadow: 0 0 0 var(--headers);
 }
 
 /*Nav Folder Lines*/

@@ -1472,6 +1472,7 @@ h4:after {
 /*--Latex Math--*/
 .MJX-TEX { 
     font-size: 130%;
+    color: var(--lite-accent);
 }
 /*Math Block Margin Reduction*/
 mjx-container[jax="CHTML"][display="true"] {

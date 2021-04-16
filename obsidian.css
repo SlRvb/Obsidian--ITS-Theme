@@ -1336,10 +1336,15 @@ body {
     line-height: var(--lh);
     min-height: 0;
     font-size: var(--f-s-text);
+    z-index: 0;
 }
 /*Fix Cursor Highlight*/
 .CodeMirror-selected {
-    z-index: 3;
+    z-index: 10 !important;
+}
+.CodeMirror .CodeMirror-line,
+.CodeMirror .CodeMirror-line-like {
+    z-index: 0 !important;
 }
 
 p, li, table {
@@ -1440,6 +1445,7 @@ h4:after {
 .markdown-preview-view code, .markdown-preview-view pre {
     color: var(--code-text);
     font-family: var(--font-monospace) !important;
+    z-index: 0;
     background-color: var(--code-bg);
     line-height: 1.4em;
     border-radius: var(--radius);
@@ -1454,6 +1460,7 @@ h4:after {
     font-family: var(--font-monospace) !important;
     color: var(--text);
     border-radius: var(--radius);
+    z-index: 0;
 }
 
 /*Editor Code*/
@@ -1462,6 +1469,7 @@ h4:after {
     color: var(--code-text);
     font-family: var(--font-monospace);
     font-size: 14px;
+    z-index: 0;
 }
 /*Hide weird Tokening BG Coloring*/
 .token.operator {

@@ -2940,7 +2940,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     border-radius: var(--radius) !important;
     box-shadow: none !important;
     background-color: var(--dark-accent) !important;
-    border-color: var(--table) !important;
+    border-color: var(--dark-accent) !important;
 }
 .button-default:hover {
     box-shadow: 0 4px 4px var(--td), 0 10px 10px var(--td) !important;

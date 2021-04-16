@@ -1340,11 +1340,11 @@ body {
 }
 /*Fix Cursor Highlight*/
 .CodeMirror-selected {
-    z-index: 10 !important;
+    z-index: 3;
 }
 .CodeMirror .CodeMirror-line,
 .CodeMirror .CodeMirror-line-like {
-    z-index: 0 !important;
+    z-index: 0;
 }
 
 p, li, table {
@@ -1684,9 +1684,9 @@ ul li::before {
 li.task-list-item::before {
     visibility: collapse;
 }
-/*ol li::before {
+ol li::before {
     visibility: collapse;
-}*/
+}
 
 /*Smaller Indentation*/
 ul, ol { 
@@ -2939,17 +2939,17 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 .button-default {
     border-radius: var(--radius) !important;
     box-shadow: none !important;
-    background-color: var(--dark-accent) !important;
-    border-color: var(--dark-accent) !important;
+    background-color: var(--th) !important;
+    border: 1px solid var(--code-bg) !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: var(--text-on-accent) !important;
 }
 .button-default:hover {
     box-shadow: 0 4px 4px var(--td), 0 10px 10px var(--td) !important;
-    color: var(--text);
+    color: var(--text) !important;
 }
-.block-language-button > div {
-    display:  !important;
-}
-
 
 
 
@@ -3226,6 +3226,8 @@ g.classGroup line {
 .h-line .cm-s-obsidian pre.HyperMD-header:after {
     display: none;
 }
+
+/*Heading/Header Hash Above Text*/
 .hash-top .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
     display: block;
     margin-bottom: -8px;
@@ -3253,9 +3255,9 @@ g.classGroup line {
 
 /*----Mobile----*/
 @media (max-width: 500px) {
-    /**/
+    
     .theme-dark, .theme-light {
-        /*Sizes*/
+        /*Mobile Sizes*/
         --radius: 0px;
         --tiny: 100px;
         --small: 150px;
@@ -3264,6 +3266,10 @@ g.classGroup line {
         --medium: 300px;
         --med-tall: 450px;
         --tall: 500px;
+    }
+    /*Popover Hover Fits Mobile Screen*/
+    .popover.hover-popover {
+        width:100%;
     }
 }
 

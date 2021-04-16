@@ -953,7 +953,7 @@ button, button.mod-cta {
     color: var(--fg);
 }
 
-/**/
+/*Dragged*/
 .nav-folder-title.is-being-dragged-over {
     border:none;
 }
@@ -1016,6 +1016,7 @@ button, button.mod-cta {
 /*Set Outline Padding*/
 .outline {
     margin: .2em .5em;
+    user-select: text;
 }
 
 
@@ -1328,17 +1329,17 @@ body {
     font-size: 16px;
     background-color: var(--background-primary);
     color: var(--text-normal);
-    z-index: 1;
 }
 
-.justified p {
-    text-align: justify;
-}
 /*Note Text Adjustments*/
 .cm-s-obsidian .HyperMD-list-line, p, li, .cm-s-obsidian .CodeMirror-line * {
     line-height: var(--lh);
     min-height: 0;
     font-size: var(--f-s-text);
+}
+/*Fix Cursor Highlight*/
+.CodeMirror-selected {
+    z-index: 3;
 }
 
 p, li, table {
@@ -1440,7 +1441,6 @@ h4:after {
     color: var(--code-text);
     font-family: var(--font-monospace) !important;
     background-color: var(--code-bg);
-    z-index: 1; /*Lets the highlight appear on top*/
     line-height: 1.4em;
     border-radius: var(--radius);
     font-size: 14px;
@@ -1460,7 +1460,6 @@ h4:after {
 .cm-s-obsidian pre.HyperMD-codeblock, .cm-s-obsidian span.cm-inline-code, .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
     background-color: var(--code-bg);
     color: var(--code-text);
-    z-index: 0;
     font-family: var(--font-monospace);
     font-size: 14px;
 }

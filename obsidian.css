@@ -623,7 +623,7 @@ settings:
     
     --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
     --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Searched Result Highlight*/
-    --text-selection: rgba(77, 23, 23, 0.46); /*Cursor dragged highlights*/
+    --text-selection: rgba(122, 20, 20, 0.4); /*Cursor dragged highlights*/
     
     --interactive-normal: #652121; /*Button Color*/
     --interactive-hover: var(--embed-bg);/*Button Color*/

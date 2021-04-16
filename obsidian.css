@@ -3268,8 +3268,11 @@ g.classGroup line {
         --tall: 500px;
     }
     /*Popover Hover Fits Mobile Screen*/
-    .popover.hover-popover {
+    .popover.hover-popover.is-loaded {
         width:100%;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

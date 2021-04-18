@@ -24,7 +24,6 @@ settings:
         id: font-monospace
         type: variable-text
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
-
     -
         title: Text Size
         description: Adjust size for preview/editor mode.
@@ -71,8 +70,6 @@ settings:
         min: 1
         max: 2
         step: .1
-
-
     -
         title: Specific View Font Changes
         id: Font-Specific
@@ -95,7 +92,6 @@ settings:
         id: ed-font
         type: variable-text
         default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
-
     -
         title: Other
         id: Other
@@ -187,7 +183,6 @@ settings:
         description: Lines appear under bullet, not beside it. ⚠Causes scrolling glitches. Recommended this is turned off, but use if you wish.
         id: b-li-o
         type: class-toggle
-
     - 
         title: Tags
         id: Tags
@@ -221,8 +216,6 @@ settings:
         format: hex
         default-dark: '#571a1a'
         default-light: '#c65656'
-
-
     -
         title: Colors
         id: Colors
@@ -285,8 +278,6 @@ settings:
         format: hex
         default-dark: '#6e7e89'
         default-light: '#8996a0'
-
-
     -
         title: Workspace Colors
         id: Workspace-Colors
@@ -347,15 +338,11 @@ settings:
         opacity: true
         default-dark: '#001c4a15'
         default-light: '#001c4a15'   
-
-
-
     - 
         title: Other Colors
         id: Other-Colors
         type: heading
         level: 3
-
     - 
         title: Accent
         id: accent
@@ -427,9 +414,6 @@ settings:
         format: hex
         default-dark: '#283846'
         default-light: '#ccd6eb'
-
-
-
     -
         title: Note Elements
         id: Note-Elements
@@ -457,7 +441,6 @@ settings:
         format: hex
         default-dark: '#3c5274'
         default-light: '#d6deea'
-
     -
         title: Highlights
         id: RGBA
@@ -499,7 +482,6 @@ settings:
         opacity: true
         default-dark: '#4d171746'
         default-light: '#e5959537'
-
     -
         title: Graph Colors
         id: Graph
@@ -805,12 +787,12 @@ settings:
 
 /*Buttons*/
 .nav-action-button.is-active {
-    background-color: var(--dark-accent);
-    color: var(--soft-text);
+    background-color: var(--th);
+    color: white;
 }
 /*Button Hover Color*/
 .modal button:not(.mod-cta):not(.mod-warning):hover, button:hover, button.mod-cta:hover {
-    background-color: var(--dark-accent) !important;
+    background-color: var(--interactive-accent-hover) !important;
     color: white;
 }
 
@@ -1267,12 +1249,18 @@ b.u-pop {
 }
 
 /*--Bottom Bar--*/
-.status-bar {
+.app-container .status-bar {
+    display: unset;
+    position: absolute;
     background-color: var(--outer-bar);
-    border-top: 1px solid var(--background-modifier-border);
     color: var(--text-muted);
+    bottom: 0;
+    right: 0;
+    padding-top: .5em;
+    border-left: 1px solid var(--th);
+    border-top: 1px solid var(--th);
+    box-shadow: 2px 1px 20px var(--outer-bar);
 }
-
 
 
 /*--Scrollbars--*/
@@ -2240,6 +2228,53 @@ iframe {
     text-align: center;
     line-height: 1.3em;
     margin-block-end: 4%;
+}
+
+/*Comments/Asides*/
+.aside {
+    text-decoration: unset;
+    text-align: justify;
+    color: transparent;
+    font-weight: unset;
+    float: right;
+    position: relative;
+    margin-right: -1.8em;
+    margin-bottom: .2em;
+    width: 1.5em;
+    height: 1.5em;
+    clear: right;
+    overflow: hidden;
+    background-color: var(--bg);
+    color: transparent;
+}
+.aside:before {
+    display: block;
+    border-bottom: 2px solid var(--table);
+    content: "🗨 ";
+    color: none;
+    text-shadow: 0 0 0 var(--headers);
+    font-size: 12px;
+    padding-top: .1em;
+    padding-left: .3em;
+}
+.aside:hover {
+    white-space: normal;
+    text-overflow: unset;
+    color: unset;
+    width: 20em;
+    height: unset;
+    background-color: var(--embed-bg);
+    padding: 1em;
+    padding-top: .5em;
+    z-index: 3;
+    /*box-shadow: .5em .5em var(--outer-bar);*/
+    border-right: 2px solid var(--accent);
+}
+.aside:hover .markdown-embed {
+    border-top: 1px solid var(--accent2);
+    border-bottom: 1px solid var(--accent2);
+    margin-top: .2em;
+    overflow: visible;
 }
 
 /*--Kanban--*/

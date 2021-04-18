@@ -2241,23 +2241,8 @@ iframe {
     margin-block-end: 4%;
 }
 
-/*Comments/Asides*/
-.aside-show {
-    text-decoration: unset;
-    text-align: justify;
-    font-weight: unset;
-    float: right;
-    position: relative;
-    margin-right: -25.3em;
-    margin-bottom: .2em;
-    clear: right;
-    width: 400px;
-    background-color: var(--embed-bg);
-    padding: 1em;
-    box-shadow: 1em .3em var(--headers);
-}
-
-
+/*-Comments/Asides-*/
+/*Hide Aside and hover to reveal it*/
 .aside-hide {
     text-decoration: unset;
     text-align: justify;
@@ -2288,9 +2273,9 @@ iframe {
     white-space: normal;
     text-overflow: unset;
     color: unset;
-    width: 20em;
+    width: 400px;
     height: unset;
-    background-color: var(--embed-bg);
+    background-color: var(--outer-bar);
     padding: 1em;
     padding-top: .5em;
     z-index: 3;
@@ -2304,6 +2289,22 @@ iframe {
     margin-top: .2em;
     overflow: visible;
 }
+/*Show Aside*/
+.aside-show {
+    text-decoration: unset;
+    text-align: justify;
+    font-weight: unset;
+    float: right;
+    position: relative;
+    margin-right: -25.3em;
+    margin-bottom: .2em;
+    clear: right;
+    width: 400px;
+    background-color: var(--outer-bar);
+    padding: 1em;
+    box-shadow: 1em .3em var(--headers);
+}
+
 
 /*--Kanban--*/
 /*Credit: https://github.com/Braweria/Spectrum*/

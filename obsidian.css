@@ -1256,7 +1256,6 @@ b.u-pop {
     color: var(--text-muted);
     bottom: 0;
     right: 0;
-    padding-top: .5em;
     border-left: 1px solid var(--th);
     border-top: 1px solid var(--th);
     box-shadow: 2px 1px 20px var(--outer-bar);
@@ -1318,6 +1317,18 @@ body {
     background-color: var(--background-primary);
     color: var(--text-normal);
 }
+/*Editor Resize*/
+.markdown-source-view.mod-cm5 {
+    padding-left: 0;
+    padding-right: .5em;
+}
+/*Editor Line Numbers*/
+.CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber{
+    box-sizing: content-box;
+    font-family: var(--font-monospace);
+    text-align: right;
+}
+
 
 /*Note Text Adjustments*/
 .cm-s-obsidian .HyperMD-list-line, p, li, .cm-s-obsidian .CodeMirror-line * {
@@ -1334,7 +1345,7 @@ body {
 .CodeMirror .CodeMirror-line-like {
     z-index: 0;
 }
-
+/*?*/
 p, li, table {
     font-size: var(--f-s-pre);
 }
@@ -2231,15 +2242,31 @@ iframe {
 }
 
 /*Comments/Asides*/
-.aside {
+.aside-show {
+    text-decoration: unset;
+    text-align: justify;
+    font-weight: unset;
+    float: right;
+    position: relative;
+    margin-right: -25.3em;
+    margin-bottom: .2em;
+    clear: right;
+    width: 400px;
+    background-color: var(--embed-bg);
+    padding: 1em;
+    box-shadow: 1em .3em var(--headers);
+}
+
+
+.aside-hide {
     text-decoration: unset;
     text-align: justify;
     color: transparent;
     font-weight: unset;
     float: right;
     position: relative;
+    margin: .5em;
     margin-right: -1.8em;
-    margin-bottom: .2em;
     width: 1.5em;
     height: 1.5em;
     clear: right;
@@ -2247,7 +2274,7 @@ iframe {
     background-color: var(--bg);
     color: transparent;
 }
-.aside:before {
+.aside-hide:before {
     display: block;
     border-bottom: 2px solid var(--table);
     content: "🗨 ";
@@ -2257,7 +2284,7 @@ iframe {
     padding-top: .1em;
     padding-left: .3em;
 }
-.aside:hover {
+.aside-hide:hover {
     white-space: normal;
     text-overflow: unset;
     color: unset;
@@ -2270,7 +2297,8 @@ iframe {
     /*box-shadow: .5em .5em var(--outer-bar);*/
     border-right: 2px solid var(--accent);
 }
-.aside:hover .markdown-embed {
+.aside-hide:hover .markdown-embed,
+.aside-show:hover .markdown-embed {
     border-top: 1px solid var(--accent2);
     border-bottom: 1px solid var(--accent2);
     margin-top: .2em;

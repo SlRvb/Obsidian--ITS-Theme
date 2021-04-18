@@ -1256,6 +1256,7 @@ b.u-pop {
     color: var(--text-muted);
     bottom: 0;
     right: 0;
+    padding: 0 .1em;
     border-left: 1px solid var(--th);
     border-top: 1px solid var(--th);
     box-shadow: 2px 1px 20px var(--outer-bar);
@@ -1357,10 +1358,11 @@ p > .modal.mod-settings .modal-content, .setting-item-description p {
 /*--Headings--*/
 h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     font-weight: var(--f-w-h);
-    font-family: var(--font) !important;
+    font-family: var(--font);
     color: var(--headers);
 }
 
+.cm-s-obsidian .cm-header,
 .markdown-preview-view h1,
 .markdown-preview-view h2,
 .markdown-preview-view h3,
@@ -1368,6 +1370,7 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
     margin: var(--head-h) 0 !important;
+    line-height: calc(var(--lh) - .5em);
 }
 
 /*Font Sizes*/
@@ -2281,13 +2284,6 @@ iframe {
     z-index: 3;
     /*box-shadow: .5em .5em var(--outer-bar);*/
     border-right: 2px solid var(--accent);
-}
-.aside-hide:hover .markdown-embed,
-.aside-show:hover .markdown-embed {
-    border-top: 1px solid var(--accent2);
-    border-bottom: 1px solid var(--accent2);
-    margin-top: .2em;
-    overflow: visible;
 }
 /*Show Aside*/
 .aside-show {

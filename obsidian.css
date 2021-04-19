@@ -992,7 +992,7 @@ button, button.mod-cta {
     padding: 0;
 }
 .outline .tree-item-children:hover {
-    border-color: var(--accent);
+    border-color: var(--headers);
     border-radius: var(--radius);
 }
 /*Set Outline Padding*/
@@ -1697,6 +1697,9 @@ li.task-list-item::before {
 }
 ol li::before {
     visibility: collapse;
+}
+ol ul li::before {
+    visibility: visible;
 }
 
 /*Smaller Indentation*/

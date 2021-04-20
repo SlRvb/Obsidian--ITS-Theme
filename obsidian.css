@@ -778,11 +778,14 @@ settings:
 
 
 /*Ribbon Icons*/
-.side-dock-ribbon-tab, .side-dock-ribbon-action, .workspace-tab-header-inner-icon{
+.side-dock-ribbon-tab, .side-dock-ribbon-action, .workspace-tab-header-inner-icon {
     color: var(--soft-text);
     text-align: center;
     cursor: pointer;
     stroke-width: 2px;
+}
+.side-dock-settings {
+    margin-bottom: 1em;
 }
 
 /*Buttons*/
@@ -855,7 +858,7 @@ button, button.mod-cta {
     font-family: var(--font);
     font-size: 24px;
     /*border-bottom: 3px solid var(--accent);*/
-    padding-left: 1.5% !important;
+    padding-left: .2em !important;
     /*position: fixed;
     top: 1.5em;
     background-color: var(--side-bar);
@@ -1332,7 +1335,7 @@ body {
 
 
 /*Note Text Adjustments*/
-.cm-s-obsidian .HyperMD-list-line, p, li, .cm-s-obsidian .CodeMirror-line * {
+.cm-s-obsidian .HyperMD-list-line, p, li, .cm-s-obsidian .CodeMirror-line {
     line-height: var(--lh);
     min-height: 0;
     font-size: var(--f-s-text);
@@ -1368,9 +1371,9 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 .cm-header-4,
 .cm-header-5,
 .cm-header-6 {
-    display: inline-block;
     margin-bottom: calc(var(--head-h) - 1.5em) !important;
 }
+
 
 .markdown-preview-view h1,
 .markdown-preview-view h2,
@@ -1590,9 +1593,13 @@ a:hover {
     transform-origin: 50% 50%;
     color: transparent;
     text-shadow: 0 0 0 var(--headers);
-    padding: 5px; /*Symbol Padding*/
+}
+
+div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
+    padding: 2px .2em; /*Symbol Padding*/
     background-color: var(--background-primary); /*Color bg to cover line*/
 }
+
 
 /*Center --- Lines*/
 .cm-s-obsidian pre.HyperMD-hr {
@@ -1609,10 +1616,10 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
     margin-block-start: 10px;
     margin-block-end: 10px;
 }   
-/*Hide Collapsed Header Line*/
-.CodeMirror-activeline-background {
-    display:none;
-}
+/*Hide Collapsed Header Line
+.CodeMirror-linebackground {
+    margin-bottom: 2em;
+}*/
 
 
 /*--Images--*/
@@ -1763,7 +1770,7 @@ li:nth-child(even) {
     position: relative;
 }
 
-/*Checkboxes*/
+/*--Checkboxes--*/
 .markdown-preview-view .task-list-item-checkbox {
     -webkit-appearance: none;
     box-sizing: border-box;
@@ -1793,16 +1800,38 @@ li:nth-child(even) {
     color: var(--lines);
     font-weight: bold;
 }
-
 li.task-list-item.is-checked > a,
 li.task-list-item.is-checked > code {
     opacity: 65%;
 }
+/*Uncheck Subchecklists*/
 /*Thanks @foreveryone*/
 li.task-list-item.is-checked li:not(.is-checked) {
     font-weight: initial; 
     color: var(--text)
 }
+/*Different Checked Box*/
+[data-checklist="-"] > input[type=checkbox]:checked {
+    background-color: var(--table) !important;   
+}
+[data-checklist="-"] > input[type=checkbox]:checked::before {
+    content: "-";
+    font-size: 12px;
+    color: var(--soft-text);
+    padding-left: .4em;
+}
+
+[data-checklist=">"] > input[type=checkbox]:checked {
+    background-color: var(--accent2) !important;
+}
+[data-checklist=">"] > input[type=checkbox]:checked::before {
+    content: "▶";
+    font-size: 11px;
+    color: var(--soft-text);
+    padding-left: .2em;
+    font-weight: 900;
+}
+
 
 /*Table Checkboxes*/
 input[type="checkbox" i] {
@@ -2100,8 +2129,8 @@ input[type="checkbox checked"] {
 .markdown-preview-view blockquote:before {
     content: '\201D';
     position: absolute;
-    top: 20px;
-    right: 1.5%;
+    top: -.1em;
+    right: .2em;
     font-size: 50px;
     font-family: var(--font);
     color: var(--headers);
@@ -2947,6 +2976,19 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     writing-mode: vertical-rl;
 }
 
+/*--Obsidian Tabs Plugin--*/
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf {
+    border-radius: var(--radius) !important;
+    border: 0 !important;
+    max-width: unset !important;
+}
+/*Tab Numbers*/
+.view-header .view-header-title::before {
+    background-color: var(--embed-bg) !important;
+    color: var(--soft-text);
+}
+
 /*--Dataview Table--*/
 .table-view-table > thead > tr > th {
     font-weight: 900 !important;
@@ -2955,7 +2997,10 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     border-bottom: solid var(--accent) !important;
     background-color: var(--embed-bg);
 }
-
+.kanban .dataview-ul {
+    display: block !important;
+    padding-inline-start: 1em !important;
+}
 
 /*--Checklist Plugin Edit--*/
 /*Add padding to Checklist Pane*/
@@ -3346,6 +3391,28 @@ g.classGroup line {
         margin-left: auto;
         margin-right: auto;
     }
+}
+/*Minimize Sidebar Spacing*/
+.workspace-drawer-header-info {
+    margin: 0;
+}
+.workspace-drawer-active-tab-header {
+    margin: 1em 0 0 0;
+}
+
+/*Wrap Nav and Search Buttons*/
+.is-mobile .workspace-drawer-actions,
+.is-mobile .nav-buttons-container {
+    flex-wrap: wrap;
+}
+/*Hide Vault Title*/
+.is-mobile .nav-folder.mod-root > .nav-file-title,
+.is-mobile .nav-folder.mod-root > .nav-folder-title {
+    display: none;
+}
+/*Fix Outline Spacing*/
+.is-mobile .outline {
+    margin: 0 -.2em;
 }
 
 

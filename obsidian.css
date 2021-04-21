@@ -114,7 +114,7 @@ settings:
         title: Resize Scrollbars
         id: scroll-size
         type: variable-number-slider
-        default: 10
+        default: 7
         format: px
         min: 0
         max: 15
@@ -157,6 +157,11 @@ settings:
         title: Naked Embeds
         description: Embeds that look like they're part of the note.
         id: naked-em
+        type: class-toggle
+    -
+        title: Original Embeds
+        description: Previous style of embeds
+        id: org-em
         type: class-toggle
     -
         title: List
@@ -532,6 +537,11 @@ settings:
         description: Hide text expander code block from preview
         id: hide-expand
         type: class-toggle
+    - 
+        title: Dataview Adjustments
+        description: Personal adjustments to some elements of dataview
+        id: dv
+        type: class-toggle
 */
 
 
@@ -563,7 +573,7 @@ settings:
     
     --slide-shadow: rgba(0, 28, 74, 0.15);
     
-    --scroll-size: 10px;
+    --scroll-size: 7px;
     --lh: 1.5em;
     --f-s-pre: 16px;
     --f-s-text: 16px;
@@ -896,6 +906,11 @@ button, button.mod-cta {
 /*Align Folder Line*/
 .nav-folder-children {
     padding-left: 18px;
+}
+/*Nav Hover Line Colors*/
+.nav-folder:hover,
+.nav-file:hover {
+    border-color: var(--accent);
 }
 
 /*Text wrap*/
@@ -1593,13 +1608,9 @@ a:hover {
     transform-origin: 50% 50%;
     color: transparent;
     text-shadow: 0 0 0 var(--headers);
-}
-
-div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
-    padding: 2px .2em; /*Symbol Padding*/
+    padding: 0 .2em; /*Symbol Padding*/
     background-color: var(--background-primary); /*Color bg to cover line*/
 }
-
 
 /*Center --- Lines*/
 .cm-s-obsidian pre.HyperMD-hr {
@@ -1973,6 +1984,12 @@ input[type="checkbox checked"] {
 }
 
 
+/*Fix Arrow*/
+.frontmatter-container .collapse-indicator {
+    font-size: .9em;
+}
+
+
 /*Tags*/
 .frontmatter-container .tag {
     background-color: var(--tag);
@@ -2001,9 +2018,9 @@ input[type="checkbox checked"] {
 /* Recolor Embed Title*/
 .markdown-embed-title, .file-embed-title {
     color: var(--lite-accent);
-    font-size: 20px;
+    font-size: 1.5em;
     font-family: var(--font);
-    line-height: 20px; /*Lower Height Title*/
+    line-height: 1em; /*Lower Height Title*/
     width: 100%;
     height: auto;
     text-align: center;
@@ -2013,20 +2030,33 @@ input[type="checkbox checked"] {
 }
 
 /* Recolor Embed Headings*/
-.markdown-preview-view .markdown-embed h1, .markdown-embed h2, .markdown-embed h3, .markdown-embed h4, .markdown-embed h5, .markdown-embed h6 {
+.markdown-preview-view .markdown-embed h1,
+.markdown-embed h2,
+.markdown-embed h3,
+.markdown-embed h4,
+.markdown-embed h5,
+.markdown-embed h6 {
     font-size: 20px;
     line-height: 1em;
     color: var(--accent);
     font-family: var(--font);
 }
 
-/*Embed Window*/
-.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
-    border: 0px;
-    margin: 5px 0;
-    background-color: var(--embed-bg);
-    border-radius: var(--radius);
+
+
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed,
+.internal-embed.is-loaded:not(.image-embed) {
+    border: 1px solid var(--td);
+    background-color: var(--note);
+    box-shadow: -.3em .3em var(--td);
 }
+.internal-embed .markdown-embed-content > ::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+
 /*Embed Note Doesn't Exist Hover*/
 .markdown-preview-view .file-embed:hover {
     background-color: var(--dark-accent);
@@ -2038,15 +2068,12 @@ input[type="checkbox checked"] {
     background-color: var(--note);
     padding: 5px 5px 0px 5px;
 }
+/*Hide Embed Link*/
+.markdown-embed .markdown-embed-link, .file-embed-link { display: none; }
+/*Display Link on Hover*/
+.markdown-embed:hover .markdown-embed-link { display: unset; }
 
-/*Embed HR, Horiztonal Bg Color*/
-.markdown-embed .markdown-preview-view hr::after {
-    background-color: var(--embed-bg);
-}
-/*Recolor Embedded Blockquote BG*/
-.markdown-embed blockquote {
-    background: linear-gradient(to left, var(--note), transparent);
-}
+
 
 /*Display Embed Path**
 /*https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/264**
@@ -2339,7 +2366,12 @@ iframe {
     width: 400px;
     background-color: var(--outer-bar);
     padding: 1em;
-    box-shadow: 1em .3em var(--headers);
+    box-shadow: .3em .3em var(--headers);
+}
+
+/*Shrink Scrollbar*/
+.aside > ::-webkit-scrollbar {
+    width: 5px;
 }
 
 
@@ -2483,7 +2515,8 @@ iframe {
     display:none;
 }
 /*Shrink margins*/
-.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
     margin: 0;
 }
 
@@ -2818,14 +2851,16 @@ img[alt*="sprf"]{
 }
 
 .internal-embed[alt*="right"] {
-    margin-left: auto;
-    margin-right: 0;
+    float: right;
+    margin-left: .5em;
 }
 .internal-embed[alt*="left"] {
-    margin-left: 0;
-    margin-right: auto;
+    float: left;
+    margin-right: .5em;
 }
-
+.internal-embed[alt*="center"] {
+    margin: auto;
+}
 
 .internal-embed[alt*="nob"] li {
     list-style: none;
@@ -2834,14 +2869,14 @@ img[alt*="sprf"]{
 .internal-embed[alt*="nob"] ul{
     padding-inline-start: 0;
 }
-.internal-embed[alt*="em"] .markdown-embed .markdown-preview-view,
-.markdown-preview-view .internal-embed[alt*="em"]:not(.image-embed) {
+.internal-embed[alt*="em+"] .markdown-embed .markdown-preview-view,
+.markdown-preview-view .internal-embed[alt*="em+"]:not(.image-embed) {
     padding: 20px 10px;
     display: block !important;
     width: 100%;
     background-color: var(--embed-bg);
 }
-.internal-embed[alt*="em"] .markdown-embed-link{
+.internal-embed[alt*="em+"] .markdown-embed-link{
     color: var(--accent);
 }
 
@@ -3333,6 +3368,26 @@ g.classGroup line {
 	display: inline-flex;
 }
 
+/*-Original Embeds-*/
+/*Embed Window*/
+.org-em .markdown-preview-view .markdown-embed,
+.org-em .markdown-preview-view .file-embed,
+.org-em .internal-embed.is-loaded:not(.image-embed) {
+    border: none;
+    background-color: var(--embed-bg);
+    border-radius: var(--radius);
+    box-shadow: unset !important;
+}
+/*Recolor Embedded Blockquote BG*/
+.org-em .markdown-embed blockquote {
+    background: linear-gradient(to right, var(--note), transparent);
+}
+/*Embed HR, Horiztonal Bg Color*/
+.org-em .markdown-embed .markdown-preview-view hr::after {
+    background-color: var(--embed-bg);
+}
+
+
 /*Hide Header Line*/
 .h-line h1:after,
 .h-line h2:after,
@@ -3350,14 +3405,26 @@ g.classGroup line {
     margin-bottom: -8px;
 }
 
-
-
-/*Hide Text Expander Code in Preview Mode*/
+/*-Plugin Toggles-*/
+/*Text Expander: Hide Code in Preview Mode*/
 .hide-expand .markdown-preview-view pre[class*="language-expander"],
 .hide-expand .markdown-preview-view code[class*="language-expander"] {
     display: none;
 }
+/*Dataview: Compact and Hide Bullets*/
+.dv .dataview-ul li::before {
+    display: none;
+}
+.dv .dataview-ul {
+    margin-left: -2em;
+}
+.dv .table td:nth-child(1) > .dataview {
+    color: var(--headers);
+}
 
+.dv .dataview-ul {
+    margin-block-end: 0 !important;
+}
 
 /*----Exported PDFs----*/
 /*Fix Poems*/

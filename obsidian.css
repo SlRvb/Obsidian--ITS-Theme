@@ -3458,6 +3458,10 @@ g.classGroup line {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .aside-hide:hover {
+        width: 100%;
+    }
 }
 /*Minimize Sidebar Spacing*/
 .workspace-drawer-header-info {

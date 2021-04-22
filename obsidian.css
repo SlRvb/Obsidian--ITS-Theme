@@ -900,7 +900,8 @@ button, button.mod-cta {
 
 /*Nav Folder Lines*/
 .nav-folder, .nav-file {
-    margin: -2px !important;
+    margin: 0 -2px;
+    margin-right: 0px;
     border-left: 2px solid var(--table);
 }
 /*Align Folder Line*/

@@ -730,7 +730,7 @@ settings:
     --accent2: var(--hr)/*#4c78cc*/;
     --accent2-lite: #5599d0;
     --bg: #dde4ef;
-    --fg: #9f0202;
+    --fg: #912e2e /*#9f0202*/;
     --side-bar: var(--note);
     --outer-bar: #eef3fd;
     --dark-sidebar: #f1f5ff;
@@ -739,7 +739,7 @@ settings:
     --folder: #ce6d6d;
     --file: #7e8ea3;
     --f-icon: var(--inactive);
-    --f-hover: #912e2e;
+    --f-hover: var(--accent);
     --lines: #b5c2d8;
     
     --headers: #c14343;

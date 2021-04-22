@@ -26,24 +26,24 @@ settings:
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
     -
         title: Text Size
-        description: Adjust size for preview/editor mode.
+        description: Adjust size for preview/editor mode. If you use the one below, this only affects editor mode.
         id: f-s-text
         type: variable-number-slider
-        default: 16
-        format: px
-        min: 11
-        max: 20
-        step: 1
+        default: 1
+        format: em
+        min: .6
+        max: 1.5
+        step: .1
     -
         title: Preview Text Size
         description: Adjust size for preview mode.
         id: f-s-pre
         type: variable-number-slider
-        default: 16
-        format: px
-        min: 11
-        max: 20
-        step: 1
+        default: 1
+        format: em
+        min: .6
+        max: 1.5
+        step: .1
     -
         title: Header Weights
         id: f-w-h
@@ -575,8 +575,8 @@ settings:
     
     --scroll-size: 7px;
     --lh: 1.5em;
-    --f-s-pre: 16px;
-    --f-s-text: 16px;
+    --f-s-pre: 1em;
+    --f-s-text: 1em;
     --f-s-h: 34px;
     --f-w-h: 600;
     --h-line: 100%;
@@ -621,7 +621,7 @@ settings:
     --interactive-hover: var(--embed-bg);/*Button Color*/
     --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
-    --interactive-accent-hover: #862f35; /*Menu Button Hover*/
+    --interactive-accent-hover: var(--accent); /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
     
     --scrollbar-bg: rgba(255, 255, 255, 0.05);
@@ -660,7 +660,7 @@ settings:
     --footnote: #6e7e89;
     
     --th: var(--dark-accent);
-    --td: #030a1495;
+    --td: #030a1460;
     
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);
@@ -882,7 +882,7 @@ button, button.mod-cta {
     color: transparent;
     text-shadow: 0 0 0 var(--folder);
     margin-right: 4px;
-    font-size: 13px;
+    font-size: .9em;
     
 }
 .nav-folder-children .nav-file-title-content::before {
@@ -890,7 +890,7 @@ button, button.mod-cta {
     color: transparent;
     text-shadow: 0 0 0 var(--file);
     margin-right: 5px;
-    font-size: 12px;
+    font-size: .85em;
 }
 
 /*Inactive Folder Color*/
@@ -1158,7 +1158,7 @@ b.u-pop {
     background-color: var(--dark-sidebar);
     padding: 10px 6px 10px 24px;
     cursor: default;
-    font-size: 16px;
+    font-size: 1em;
 }
 /*Selected Item*/
 .horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
@@ -1333,7 +1333,7 @@ body {
     text-rendering: optimizeLegibility;
     font-family: var(--default-font);
     line-height: 1.5em;
-    font-size: 16px;
+    font-size: 1em;
     background-color: var(--background-primary);
     color: var(--text-normal);
 }
@@ -2558,13 +2558,14 @@ i { /*I used for image description, em is just regular italics*/
     color: var(--i-at);
     text-align: center;
     background-color: var(--outer-bar);
+    padding: 0 1em;
 }
 
 i[alt*="right"] {
     display: block;
     text-align: right;
     background-color: var(--outer-bar);
-    padding-right: 2%;
+    padding-right: .8em;
 }
 
 
@@ -2572,7 +2573,7 @@ i[alt*="left"] {
     display: block;
     text-align: left;
     background-color: var(--outer-bar);
-    padding-left: 2%;
+    padding-left: .8em;
 }
 
 i[alt*="clear"] {
@@ -3231,6 +3232,53 @@ g.classGroup line {
 .gallery-info-section-label.svelte-1fo05ye.svelte-1fo05ye{ color: var(--soft-text); }
 .gallery-info-section-value.svelte-1fo05ye.svelte-1fo05ye { color: var(--fg) !important; }
 
+/*--Kanban Plugin--*/
+/*Outer box*/
+.kanban-plugin__lane { 
+    border-radius: var(--border-radius) !important;
+    border: 0 !important;
+}
+
+/*Fix Plus*/
+.kanban-plugin__new-lane-button { 
+    padding: 0 .3em;
+    color: var(--fg);
+}
+
+/*Items*/
+.kanban-plugin__item {
+    border: 0 2px 0 0 var(--accent) !important;
+    border-radius: var(--border-radius) !important; 
+    background-color: var(--note) !important;
+}
+.kanban-plugin__item-content-wrapper { 
+    border-left: 1px var(--accent) !important;
+    background-color: var(--td) !important;
+    border-radius: var(--border-radius) !important; 
+}
+.kanban-plugin__item-content-wrapper:hover { 
+    background-color: var(--dark-accent) !important;
+    border-radius: var(--border-radius) !important; 
+}
+
+.kanban-plugin__lane-input, .kanban-plugin__item-input { 
+    border-radius: var(--border-radius) !important;
+}
+
+/*Buttons*/
+.kanban-plugin__new-lane-button { 
+    border: 0 !important; 
+    background-color: var(--bg) !important; 
+}
+.kanban-plugin__delete-lane-button, .kanban-plugin__item-button-delete { 
+    border: 0 !important; 
+    background-color: var(--dark-accent) !important; 
+}
+.kanban-plugin__archive-lane-button, .kanban-plugin__item-button-archive { 
+    border: 0 !important; 
+    background-color: var(--bg) !important; 
+}
+
 
 /*--Style Settings Plugin--*/
 /*--Style Settings--*/
@@ -3419,12 +3467,16 @@ g.classGroup line {
 .dv .dataview-ul {
     margin-left: -2em;
 }
+.dv .dataview-ul {
+    margin-block-end: 0 !important;
+}
+
+/*Dim First Column Link*/
 .dv .table td:nth-child(1) > .dataview {
     color: var(--headers);
 }
-
-.dv .dataview-ul {
-    margin-block-end: 0 !important;
+.dv .table td:nth-child(1) .internal-link {
+    color: var(--accent2) !important;
 }
 
 /*----Exported PDFs----*/
@@ -3486,7 +3538,9 @@ g.classGroup line {
 .is-mobile .outline {
     margin: 0 -.2em;
 }
-
+.is-mobile .view-content {
+    height: calc(100% - .5em);
+}
 
 /*----Publish----*/
 .site-header {

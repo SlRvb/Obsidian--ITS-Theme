@@ -711,7 +711,7 @@ settings:
     
     --interactive-normal: var(--outer-bar); /*Button background Color*/
     --interactive-hover: var(--embed-bg)/*#5d2b2b*/; /*Button hover text*/
-    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent: var(--headers); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select, Resize Handle*/
     --interactive-accent-hover: var(--lite-accent); /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
@@ -726,7 +726,7 @@ settings:
     --deep-dark-accent: #2f1010;
     --dark-accent: #ffeded;
     --lite-accent: #a35158;
-    --accent: #c14343;
+    --accent: #912e2e;
     --accent2: var(--hr)/*#4c78cc*/;
     --accent2-lite: #5599d0;
     --bg: #dde4ef;
@@ -3472,10 +3472,13 @@ g.classGroup line {
 }
 
 /*Dim First Column Link*/
-.dv .table td:nth-child(1) > .dataview {
-    color: var(--headers);
+.dv .dataview td:nth-child(1) {
+    color: var(--headers) !important;
 }
-.dv .table td:nth-child(1) .internal-link {
+.dv .dataview td:nth-child(1) .internal-link {
+    color: var(--lines) !important;
+}
+.dv .dataview td:nth-child(1) .internal-link:hover {
     color: var(--accent2) !important;
 }
 

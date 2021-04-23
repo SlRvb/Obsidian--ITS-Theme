@@ -542,6 +542,11 @@ settings:
         description: Personal adjustments to some elements of dataview
         id: dv
         type: class-toggle
+    -
+        title: Colorful Bullet Lines
+        description: Personal adjustments to some elements of dataview
+        id: bul-li-col
+        type: class-toggle
 */
 
 
@@ -585,6 +590,8 @@ settings:
     --hr-sym: "⚡";
     --tag-o: 1px;
     --bullet: "⬥";
+    --b-line: 2px;
+
 }
 
 .theme-dark {
@@ -677,6 +684,15 @@ settings:
     --graph-404: #727e93;
     --graph-img: #4c78cc /*#ff86be*/;
     --graph-tag: var(--headers);
+
+
+    /*CSS Specifics*/
+    --b-l-1: #683732;
+    --b-l-2: #a13531;
+    --b-l-3: #fc4435;
+    --b-l-4: #df4252;
+    --b-l-5: #ac7782;
+    --b-l-6: #d6b6bc;
 }
 
 .theme-light {
@@ -730,7 +746,7 @@ settings:
     --accent2: var(--hr)/*#4c78cc*/;
     --accent2-lite: #5599d0;
     --bg: #dde4ef;
-    --fg: #912e2e /*#9f0202*/;
+    --fg: var(--accent) /*#9f0202*/;
     --side-bar: var(--note);
     --outer-bar: #eef3fd;
     --dark-sidebar: #f1f5ff;
@@ -746,7 +762,7 @@ settings:
     --note: #f8fbff;
     --text: #697580;
     --soft-text: #d04e4e;
-    --code-bg: #eef6ff;
+    --code-bg: #ebf1f8/*#eef6ff*/;
     --code-text: #ea4262;
     --embed-bg: var(--dark-sidebar) /*#ebf1f8*/;
     --footnote: #8996a0;
@@ -772,7 +788,16 @@ settings:
     --graph-fill: #2e5db2;
     --graph-404: #727e93;
     --graph-img: #4c78cc /*#5469de*/;
-    --graph-tag: #000000;    
+    --graph-tag: #000000; 
+    
+    
+    /*CSS Specifics*/
+    --b-l-1: #683732;
+    --b-l-2: #ff1702;
+    --b-l-3: #e27777;
+    --b-l-4: #ff7482;
+    --b-l-5: #ad8f8f;
+    --b-l-6: #d6b6bc;
 }
 
 
@@ -991,21 +1016,41 @@ button, button.mod-cta {
 
 
 /*Tag Pane Lines*/
-/* Works but Dot appears*/
 .tag-container .tree-item-children {
     margin-left: 4%;
     border-left: 1px solid var(--lines);
+    border-bottom: 1px solid var(--note);  /*Removes Dot!!*/
     transition: all 0.5s ease-in-out;
     padding: 0;
 }
 
 .tag-container .tree-item-children:hover {
-    border-color: var(--accent);
+    border-left: 1px solid var(--accent);
 }
 
+/*Add # For Tag Pane*/
+/*From California Coast.*/
+.tag-pane-tag-text:before {
+    content: "#";
+    padding-right: 1.3em;
+    position: relative;
+    margin: -1em;
+    color: var(--headers);
+}
+.collapse-icon + .tree-item-inner > .tag-pane-tag-text:before {
+    content: none;
+}
+
+
+/*Outline*/
+/*Set Outline Padding*/
+.outline {
+    margin: .2em .5em;
+    user-select: text;
+}
 /*Outline Pane Lines*/
 .outline .tree-item-children {
-    margin-left: .6em;
+    margin-left: .7em;
     border-left: 1px solid var(--lines);
     transition: all 0.3s ease-in-out;
     padding: 0;
@@ -1014,14 +1059,25 @@ button, button.mod-cta {
     border-color: var(--headers);
     border-radius: var(--radius);
 }
-/*Set Outline Padding*/
-.outline {
-    margin: .2em .5em;
-    user-select: text;
+/*
+.outline .tree-item-self .collapse-icon:before {
+    content: "H";
+    color: var(--table);
+}
+.outline .tree-item-self:hover .collapse-icon:before {
+    content: none;
+    color: var(--accent);
 }
 
-
-
+.outline .tree-item-self {
+    padding-left: .3em;
+}
+.outline .tree-item-self:before {
+    content: "H";
+    color: var(--table);
+    padding-right: .3em;
+}
+*/
 
 /*--Search--*/
 /*Highlight Search Result*/
@@ -1729,8 +1785,18 @@ ul, ol {
 .markdown-preview-view ol > li.task-list-item {
     padding-left: 10px;
 }
-/*-Bullet Points-*/
 
+
+/*Fix breaking when Space in between Lists*/
+ul li.task-list-item > p {
+    margin-block-end: unset;
+    margin-left: -1.3em;
+}
+ul li > p {
+    margin-block-end: unset;
+}
+
+/*-Bullet Points-*/
 /*Editor Bullet Points*/
 .cm-s-obsidian span.cm-formatting-list-ul:before {
     content: var(--bullet);
@@ -1758,12 +1824,12 @@ ul, ol {
 /*Bullet Line New*/
 li {
     padding-left: 4px;
-    border-left: 2px solid var(--accent);
+    border-left: var(--b-line) solid var(--accent);
     line-height: var(--lh);
 }
 
 li:nth-child(even) {
-    border-left: 2px solid var(--accent2);
+    border-left: var(--b-line) solid var(--accent2);
 }
 
 .markdown-preview-view ul > li.task-list-item {
@@ -3323,6 +3389,9 @@ g.classGroup line {
     color: var(--tag);
     line-height: 1.3em;
 }
+
+
+/*-Lists CSS-*/
 /*Bullet Shapes*/
 .no-bull .cm-s-obsidian span.cm-formatting-list-ul {
     visibility: hidden;
@@ -3347,15 +3416,12 @@ g.classGroup line {
     padding-left: 4px;
     border-left: 2px solid var(--accent);
 }
-
 .bul-li-n li:nth-child(even) {
     border-left: 2px solid var(--accent2);
 }
-
 .bul-li-n .markdown-preview-view ul > .bul-li-n li.task-list-item {
     text-indent: -20px !important;
 }
-
 .b-li-o li {
     border: 0;
     padding: 0;
@@ -3383,6 +3449,21 @@ g.classGroup line {
     text-indent: -1.5em;
 }
 
+/*Colored Bullet Lines*/
+.bul-li-col ul > li { border-color: var(--b-l-1); }
+.bul-li-col ul ul > li { border-color: var(--b-l-2); }
+.bul-li-col ul ul ul > li { border-color: var(--b-l-3); }
+.bul-li-col ul ul ul ul > li { border-color: var(--b-l-4); }
+.bul-li-col ul ul ul ul ul > li { border-color: var(--b-l-5); }
+.bul-li-col ul ul ul ul ul ul > li { border-color: var(--b-l-6); }
+.bul-li-col ol > li { border-color: var(--b-l-1); }
+.bul-li-col ol ol > li { border-color: var(--b-l-2); }
+.bul-li-col ol ol ol > li { border-color: var(--b-l-3); }
+.bul-li-col ol ol ol ol > li { border-color: var(--b-l-4); }
+.bul-li-col ol ol ol ol ol > li { border-color: var(--b-l-5); }
+.bul-li-col ol ol ol ol ol ol > li { border-color: var(--b-l-6); }
+
+/*Note Title Wrap*/
 .title-wrap .view-header-title {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -3393,6 +3474,7 @@ g.classGroup line {
     height: auto;
 }
 
+/*Naked Embeds*/
 .naked-em .markdown-preview-view .markdown-embed,
 .naked-em .markdown-preview-view .file-embed,
 .naked-em .markdown-embed .markdown-preview-view,

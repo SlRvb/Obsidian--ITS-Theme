@@ -2304,13 +2304,13 @@ blockquote p { margin: 0px; }
 .footnote-backref.footnote-link:hover { color: var(--accent2-lite); }
 
 /*Display New Icon*/
-.footnote-backref.footnote-link:after { 
+.footnote-backref.footnote-link:before { 
     visibility: visible;
     display: inline-block;
+    position: absolute;
     content: "⧪"; 
     font-size: 16px;
     padding-bottom: 2px;
-    margin-left: -2.5%;
     transform: rotate(180deg);
 }
 

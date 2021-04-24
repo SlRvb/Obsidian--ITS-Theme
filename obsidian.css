@@ -748,7 +748,7 @@ settings:
     --bg: #dde4ef;
     --fg: var(--accent) /*#9f0202*/;
     --side-bar: var(--note);
-    --outer-bar: #eef3fd;
+    --outer-bar: #e8eefb;
     --dark-sidebar: #f1f5ff;
     --inactive: #a6bbde /*#91a3c1*/;
     
@@ -3364,10 +3364,11 @@ g.classGroup line {
 .gallery-info-section-value.svelte-1fo05ye.svelte-1fo05ye { color: var(--fg) !important; }
 
 /*--Kanban Plugin--*/
-.workspace-split.mod-root .view-content{
+/*Show Scrollbar*/
+.workspace-leaf-content[data-type="kanban"] .view-content {
     overflow: auto;
 }
-
+/*Board Background*/
 .kanban-plugin {
     background-color: var(--note) !important;
 }
@@ -3376,25 +3377,22 @@ g.classGroup line {
 .kanban-plugin__lane { 
     background-color: var(--note) !important;
     border-radius: var(--border-radius) !important;
-    border-color: var(--outer-bar) !important;
-    box-shadow: -.2em .2em var(--outer-bar) !important;
+    border: 3px solid var(--td) !important;
+    box-shadow: -.2em .2em var(--td) !important;
 }
-
-
 
 /*Items*/
 .kanban-plugin__item {
-    border: 0 2px 0 0 var(--accent) !important;
-    border-radius: var(--border-radius) !important; 
-    background-color: var(--note) !important;
+    border: 0 !important;
+    border-left: 3px solid var(--th) !important;
+    border-radius: var(--border-radius) !important;
 }
-.kanban-plugin__item-content-wrapper { 
-    border-left: 1px var(--accent) !important;
-    background-color: var(--code-bg) !important;
+.kanban-plugin__item-content-wrapper {
+    background-color: var(--embed-bg) !important;
     border-radius: var(--border-radius) !important; 
 }
 .kanban-plugin__item-content-wrapper:hover { 
-    background-color: var(--dark-accent) !important;
+    background-color: var(--code-bg) !important;
     border-radius: var(--border-radius) !important; 
 }
 
@@ -3405,11 +3403,13 @@ g.classGroup line {
 
 /*Buttons*/
 .kanban-plugin__item-button-wrapper {
-    border-color: var(--lines) !important;
-    background-color: none !important;
+    border: 0 !important;
+    background-color: var(--code-bg) !important;
+    padding: 0 !important;
 }
 .kanban-plugin__new-item-button {
     background-color: transparent !important;
+    padding: 1em !important;
 }
 
 .kanban-plugin__new-lane-button { 

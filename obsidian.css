@@ -2967,6 +2967,9 @@ img[alt*="sprf"]{
 .internal-embed[alt*="lk-clear"] .markdown-embed-link {
     background-color: transparent;
 }
+.internal-embed[alt*="block"] {
+    display: block !important;
+}
 
 
 /*Title Hide/Show*/

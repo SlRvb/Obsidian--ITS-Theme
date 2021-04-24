@@ -1528,7 +1528,8 @@ h4:after {
 }
 
 /*-Code-*/
-.markdown-preview-view code, .markdown-preview-view pre {
+.markdown-preview-view code,
+.markdown-preview-view pre {
     color: var(--code-text);
     font-family: var(--font-monospace) !important;
     z-index: 0;
@@ -1538,7 +1539,8 @@ h4:after {
     font-size: 14px;
 }
 
-.markdown-preview-view pre[class*="language-"], .markdown-preview-view code[class*="language-"] {
+.markdown-preview-view pre[class*="language-"],
+.markdown-preview-view code[class*="language-"] {
     background: var(--code-bg);
     line-height: 1.4em;
     display: block;
@@ -1548,20 +1550,45 @@ h4:after {
     border-radius: var(--radius);
     z-index: 0;
 }
+/*Apply Dropshadow*/
+.markdown-preview-view pre,
+.markdown-preview-view pre[class*="language-"],
+.markdown-preview-view code,
+.cm-s-obsidian pre.HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code {
+    box-shadow: 0 .2em #00000010;
+}
+
+.markdown-preview-view pre,
+.markdown-preview-view pre[class*="language-"],
+.markdown-preview-view code {
+    border: 1px solid var(--td);
+}
+
+/*Hide box shadow inside codeblock*/
+.markdown-preview-view pre > code {
+    box-shadow: none;
+}
 
 /*Editor Code*/
-.cm-s-obsidian pre.HyperMD-codeblock, .cm-s-obsidian span.cm-inline-code, .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+.cm-s-obsidian pre.HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
     background-color: var(--code-bg);
     color: var(--code-text);
     font-family: var(--font-monospace);
     font-size: 14px;
     z-index: 0;
 }
+
+
 /*Hide weird Tokening BG Coloring*/
 .token.operator {
     color: var(--headers) !important;
     background: transparent !important;
 }
+
+
 
 /*--Latex Math--*/
 .MJX-TEX { 
@@ -3332,17 +3359,19 @@ g.classGroup line {
 .gallery-info-section-value.svelte-1fo05ye.svelte-1fo05ye { color: var(--fg) !important; }
 
 /*--Kanban Plugin--*/
-/*Outer box*/
-.kanban-plugin__lane { 
-    border-radius: var(--border-radius) !important;
-    border: 0 !important;
+.kanban-plugin {
+    background-color: var(--note) !important;
 }
 
-/*Fix Plus*/
-.kanban-plugin__new-lane-button { 
-    padding: 0 .3em;
-    color: var(--fg);
+/*Outer box*/
+.kanban-plugin__lane { 
+    background-color: var(--note) !important;
+    border-radius: var(--border-radius) !important;
+    border-color: var(--outer-bar) !important;
+    box-shadow: -.2em .2em var(--outer-bar) !important;
 }
+
+
 
 /*Items*/
 .kanban-plugin__item {
@@ -3352,7 +3381,7 @@ g.classGroup line {
 }
 .kanban-plugin__item-content-wrapper { 
     border-left: 1px var(--accent) !important;
-    background-color: var(--td) !important;
+    background-color: var(--code-bg) !important;
     border-radius: var(--border-radius) !important; 
 }
 .kanban-plugin__item-content-wrapper:hover { 
@@ -3360,20 +3389,34 @@ g.classGroup line {
     border-radius: var(--border-radius) !important; 
 }
 
-.kanban-plugin__lane-input, .kanban-plugin__item-input { 
+.kanban-plugin__lane-input,
+.kanban-plugin__item-input { 
     border-radius: var(--border-radius) !important;
 }
 
 /*Buttons*/
-.kanban-plugin__new-lane-button { 
-    border: 0 !important; 
-    background-color: var(--bg) !important; 
+.kanban-plugin__item-button-wrapper {
+    border-color: var(--lines) !important;
+    background-color: none !important;
 }
-.kanban-plugin__delete-lane-button, .kanban-plugin__item-button-delete { 
+.kanban-plugin__new-item-button {
+    background-color: transparent !important;
+}
+
+.kanban-plugin__new-lane-button { 
+    background-color: var(--outer-bar) !important;
+    border: 0 !important; 
+    padding: 0 .3em;
+    color: var(--fg);
+}
+
+.kanban-plugin__delete-lane-button,
+.kanban-plugin__item-button-delete { 
     border: 0 !important; 
     background-color: var(--dark-accent) !important; 
 }
-.kanban-plugin__archive-lane-button, .kanban-plugin__item-button-archive { 
+.kanban-plugin__archive-lane-button,
+.kanban-plugin__item-button-archive { 
     border: 0 !important; 
     background-color: var(--bg) !important; 
 }

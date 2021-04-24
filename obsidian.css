@@ -3377,8 +3377,8 @@ g.classGroup line {
 .kanban-plugin__lane { 
     background-color: var(--note) !important;
     border-radius: var(--border-radius) !important;
-    border: 3px solid var(--td) !important;
-    box-shadow: -.2em .2em var(--td) !important;
+    border: 3px solid var(--outer-bar) !important;
+    box-shadow: -.2em .2em var(--outer-bar) !important;
 }
 
 /*Items*/
@@ -3388,7 +3388,7 @@ g.classGroup line {
     border-radius: var(--border-radius) !important;
 }
 .kanban-plugin__item-content-wrapper {
-    background-color: var(--embed-bg) !important;
+    background-color: var(--outer-bar) !important;
     border-radius: var(--border-radius) !important; 
 }
 .kanban-plugin__item-content-wrapper:hover { 

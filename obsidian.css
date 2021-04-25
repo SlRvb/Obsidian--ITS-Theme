@@ -577,6 +577,7 @@ settings:
     --tall: 700px;
     
     --slide-shadow: rgba(0, 28, 74, 0.15);
+    --text-dl: #e5ebee;
     
     --scroll-size: 7px;
     --lh: 1.5em;
@@ -650,6 +651,7 @@ settings:
     --outer-bar: #0e0f15;
     --dark-sidebar: #10161d;
     --inactive: #586477;
+    --outline: var(--outer-bar);
     
     --folder: #e05858;
     --file: #aab3ca;
@@ -748,9 +750,10 @@ settings:
     --bg: #dde4ef;
     --fg: var(--accent) /*#9f0202*/;
     --side-bar: var(--note);
-    --outer-bar: #e8eefb;
+    --outer-bar: #eef3fd;
     --dark-sidebar: #f1f5ff;
     --inactive: #a6bbde /*#91a3c1*/;
+    --outline: var(--bg);
     
     --folder: #ce6d6d;
     --file: #7e8ea3;
@@ -808,7 +811,7 @@ settings:
 }
 /*Exit Button*/
 .titlebar-button:hover {
-    color: var(--fg);
+    color: var(--text-dl);
 }
 
 
@@ -826,12 +829,12 @@ settings:
 /*Buttons*/
 .nav-action-button.is-active {
     background-color: var(--th);
-    color: white;
+    color: var(--text-dl);
 }
 /*Button Hover Color*/
 .modal button:not(.mod-cta):not(.mod-warning):hover, button:hover, button.mod-cta:hover {
     background-color: var(--interactive-accent-hover) !important;
-    color: white;
+    color: var(--text-dl);
 }
 
 button, button.mod-cta {
@@ -944,6 +947,7 @@ button, button.mod-cta {
     white-space: normal;
     width: auto;
     border-radius: var(--radius);
+    border: 0;
 }
 
 /*Folder Bold*/
@@ -1116,7 +1120,7 @@ input[type='number']:hover {
 
 .document-search-button:hover {
     background-color: var(--interactive-accent);
-    color: white;
+    color: var(--text-dl);
 }
 
 
@@ -1250,7 +1254,7 @@ b.u-pop {
     background-color: var(--background-modifier-form-field-highlighted);
 }
 .list-item-part mod-extended publish-upload-item-title {
-    color: white;
+    color: var(--text-dl);
 }
 
 /*Published flair*/
@@ -1286,7 +1290,7 @@ b.u-pop {
     color: var(--graph-fill); /*Circle color*/
 }
 .graph-view.color-circle {
-    color: white; /*Outline color*/
+    color: var(--text-dl); /*Outline color*/
 }
 
 .graph-view.color-line-highlight {
@@ -2040,7 +2044,7 @@ input[type="checkbox checked"] {
 .tag {
     background-color: var(--tag);
     border: none;
-    color: white;
+    color: var(--text-dl);
     font-size: 12px;
     padding: 1px 8px;
     text-align: center;
@@ -2052,7 +2056,7 @@ input[type="checkbox checked"] {
 
 /*Hover Underline*/
 .tag:hover {
-    color: white;
+    color: var(--text-dl);
     text-decoration: underline;
 }
 /*Editor Tags*/
@@ -2102,7 +2106,7 @@ input[type="checkbox checked"] {
 .frontmatter-container .tag {
     background-color: var(--tag);
     border-radius: var(--radius);
-    color: white;
+    color: var(--text-dl);
 }
 .frontmatter-container .frontmatter-alias {
     border-radius: var(--radius);
@@ -2156,6 +2160,7 @@ input[type="checkbox checked"] {
     border: 1px solid var(--td);
     background-color: var(--note);
     box-shadow: -.3em .3em var(--td);
+    border-radius: var(--radius);
 }
 
 .internal-embed .markdown-embed-content > ::-webkit-scrollbar {
@@ -3225,15 +3230,15 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     border-radius: var(--radius) !important;
     box-shadow: none !important;
     background-color: var(--th) !important;
-    border: 1px solid var(--code-bg) !important;
+    border: 0 !important;
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
-    color: var(--text-on-accent) !important;
+    color: var(--text-dl) !important;
 }
 .button-default:hover {
-    box-shadow: 0 4px 4px var(--td), 0 10px 10px var(--td) !important;
-    color: var(--text) !important;
+    box-shadow: 0 .5em var(--embed-bg) !important;
+    color: var(--text-dl) !important;
 }
 
 
@@ -3372,14 +3377,18 @@ g.classGroup line {
 .kanban-plugin {
     background-color: var(--note) !important;
 }
+.kanban-plugin__lane-header-wrapper {
+    margin: 0 !important;
+}
 
 /*Outer box*/
 .kanban-plugin__lane { 
     background-color: var(--note) !important;
     border-radius: var(--border-radius) !important;
-    border: 3px solid var(--outer-bar) !important;
-    box-shadow: -.2em .2em var(--outer-bar) !important;
+    border: 3px solid var(--outline) !important;
+    box-shadow: -.2em .2em var(--outline) !important;
 }
+
 
 /*Items*/
 .kanban-plugin__item {
@@ -3392,14 +3401,22 @@ g.classGroup line {
     border-radius: var(--border-radius) !important; 
 }
 .kanban-plugin__item-content-wrapper:hover { 
-    background-color: var(--code-bg) !important;
-    border-radius: var(--border-radius) !important; 
+    background-color: var(--hvr2) !important;
+    border-radius: var(--border-radius) !important;
+
+}
+.kanban-plugin__item-title .markdown-preview-view {
+    font-size: 1em !important; /*calc(var(--f-s-text) -.*/
 }
 
 .kanban-plugin__lane-input,
 .kanban-plugin__item-input { 
     border-radius: var(--border-radius) !important;
 }
+.kanban-plugin__lane-items {
+    border-radius: var(--radius) !important;
+}
+
 
 /*Buttons*/
 .kanban-plugin__item-button-wrapper {
@@ -3411,12 +3428,20 @@ g.classGroup line {
     background-color: transparent !important;
     padding: 1em !important;
 }
+.kanban-plugin__new-lane-button-wrapper {
+    position: fixed;
+    width: auto !important;
+    bottom: 2em;
+    right: 50%;
+}
 
 .kanban-plugin__new-lane-button { 
     background-color: var(--outer-bar) !important;
-    border: 0 !important; 
     padding: 0 .3em;
     color: var(--fg);
+    text-align: center !important;
+    border: 1px solid var(--bg);
+    box-shadow: -.1em .1em var(--bg) !important;
 }
 
 .kanban-plugin__delete-lane-button,
@@ -3427,8 +3452,15 @@ g.classGroup line {
 .kanban-plugin__archive-lane-button,
 .kanban-plugin__item-button-archive { 
     border: 0 !important; 
-    background-color: var(--bg) !important; 
+    background-color: var(--bg) !important;
 }
+
+.kanban-plugin__item-button-delete:hover,
+.kanban-plugin__item-button-archive:hover {
+    color: var(--text-dl) !important; 
+}
+
+
 
 
 /*--Style Settings Plugin--*/
@@ -3462,6 +3494,7 @@ g.classGroup line {
     display: none;
 }
 
+/*Tags*/
 .tag-notion a.tag {
     border-radius: 5px;
 }

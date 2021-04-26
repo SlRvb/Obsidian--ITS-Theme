@@ -806,9 +806,9 @@ settings:
 
 /*--WORKSPACE--*/
 /*Obsidian Title Bar Cover*/
-.titlebar {
-    background-color: var(--background-modifier-cover);
-}
+.titlebar { background-color: var(--background-modifier-cover); }
+.titlebar-text{ color: var(--text-dl) !important; }
+
 /*Exit Button*/
 .titlebar-button:hover {
     color: var(--text-dl);
@@ -825,6 +825,12 @@ settings:
 .side-dock-settings {
     margin-bottom: 1em;
 }
+
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+    border-radius: var(--radius);
+}
+
 
 /*Buttons*/
 .nav-action-button.is-active {
@@ -3176,54 +3182,48 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 }
 
 /*--Checklist Plugin Edit--*/
-/*Add padding to Checklist Pane*/
-.todo-list .group {
-    margin: 4%;
+/*Square Checklist*/
+.checklist-plugin-main li,
+.checklist-plugin-main .checkbox,
+.checklist-plugin-main .count {
+    border-radius: var(--radius) !important;
 }
+.checklist-plugin-main li:nth-child(even) {
+    background-color: var(--accent2) !important;
+    border-left: 2px solid var(--accent) !important;
+}
+.checklist-plugin-main li:nth-child(even):hover { 
+    background-color: var(--outer-bar) !important;
+ }
 
-/*Shrink Checklist Header*/
-.todo-list .group-header {
-    font-size: 14px !important;
+/*Reduce Padding*/
+.checklist-plugin-main.svelte-1rowz1t { 
+    margin-top: -.8em !important;
+    padding: .4em !important; 
 }
+.checklist-plugin-main .content { padding: 0 !important; }
+.checklist-plugin-main li.compact { margin-bottom: .4em !important; }
 
-/*Resize/Recolor/Square Task*/
-.todo-list .item.svelte-zpfope.svelte-zpfope {
-    background-color: var(--background-primary-alt) !important;
-    border-radius: var(--radius);
-    font-size: 14px;
-    margin-bottom: 1%;
+/*Hide Bullet*/
+.checklist-plugin-main li.compact:before,
+.checklist-plugin-main li.classic:before { 
+    display: none !important; 
 }
-
-/*Checkbox*/
-.todo-list .toggle.svelte-zpfope.svelte-zpfope {
-    padding-right: 4px;
+/*Resize Checkbox*/
+.checklist-plugin-main .compact .toggle { padding: 0 .4em !important; }
+.checklist-plugin-main .checkbox {
+    border-width: 2px !important;
+    min-width: .5em !important;
+    min-height: .5em !important;
 }
-/*Square Checkbox*/
-.todo-list .checkbox.svelte-y3iyim {
-    border-radius: var(--radius);
-    border-color: var(--accent) !important;
+.checklist-plugin-main .compact .checkbox { 
+    width: 1em !important;
+    height: 1em !important;
 }
-
-
-/*Recolor Every Odd Task*/
-.todo-list .item.svelte-zpfope.svelte-zpfope:nth-child(odd) {
-    background-color: var(--code-bg) !important;
+.checklist-plugin-main .classic .checkbox { 
+    width: 1.5em !important;
+    height: 1.5em !important;
 }
-
-/*Resize Task Title*/
-.todo-list .content.svelte-zpfope.svelte-zpfope {
-    padding: 1% !important;
-    line-height: 18px;
-}
-/*Square Counter*/
-.todo-list .count.svelte-im5pnh {
-    border-radius: var(--radius);
-}
-.todo-list .content.svelte-zpfope.svelte-zpfope {
-    word-break: break-word;
-}
-
-
 
 /*Button Plugin*/
 .button-default {

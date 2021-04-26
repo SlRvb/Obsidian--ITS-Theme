@@ -3224,6 +3224,9 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     min-height: .5em !important;
     border-color: var(--accent) !important;
 }
+.checklist-plugin-main .toggle:hover { 
+    background-color: transparent !important; 
+}
 .checklist-plugin-main .compact .checkbox { 
     width: 1.2em !important;
     height: 1.2em !important;

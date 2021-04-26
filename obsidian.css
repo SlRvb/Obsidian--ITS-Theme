@@ -3190,15 +3190,16 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 }
 .checklist-plugin-main li { 
     border-left: 2px solid var(--accent) !important;
-    background-color: var(--embed-bg) !important;
+    background-color: var(--outline) !important;
 }
 .checklist-plugin-main li:nth-child(even) {
     background-color: var(--code-bg) !important;
     border-left: 2px solid var(--accent2) !important;
 }
+.checklist-plugin-main li:hover,
 .checklist-plugin-main li:nth-child(even):hover { 
     background-color: var(--outer-bar) !important;
- }
+}
 
 /*Reduce Padding*/
 .checklist-plugin-main.svelte-1rowz1t { 
@@ -3206,7 +3207,10 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     padding: .4em !important; 
 }
 .checklist-plugin-main .content { padding: 0 !important; }
-.checklist-plugin-main li.compact { margin-bottom: .4em !important; }
+.checklist-plugin-main li.compact {
+    padding: .1em;
+    margin-bottom: .4em !important;
+}
 
 /*Hide Bullet*/
 .checklist-plugin-main li.compact:before,

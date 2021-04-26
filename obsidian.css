@@ -3188,8 +3188,9 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 .checklist-plugin-main .count {
     border-radius: var(--radius) !important;
 }
+.checklist-plugin-main li { border-left: 2px solid var(--accent2) !important; }
 .checklist-plugin-main li:nth-child(even) {
-    background-color: var(--accent2) !important;
+    background-color: var(--code-bg) !important;
     border-left: 2px solid var(--accent) !important;
 }
 .checklist-plugin-main li:nth-child(even):hover { 

@@ -814,6 +814,12 @@ settings:
     color: var(--text-dl);
 }
 
+.menu {
+    border-radius: var(--radius) !important;
+}
+.menu-item:hover {
+    background-color: var(--outer-bar);
+}
 
 /*Ribbon Icons*/
 .side-dock-ribbon-tab, .side-dock-ribbon-action, .workspace-tab-header-inner-icon {
@@ -3429,7 +3435,6 @@ g.classGroup line {
     border-radius: var(--radius) !important;
 }
 
-
 /*Buttons*/
 .kanban-plugin__item-button-wrapper {
     border: 0 !important;
@@ -3455,25 +3460,10 @@ g.classGroup line {
     border: 1px solid var(--bg);
     box-shadow: -.1em .1em var(--bg) !important;
 }
-
-.kanban-plugin__delete-lane-button,
-.kanban-plugin__item-button-delete { 
-    border: 0 !important; 
-    background-color: var(--dark-accent) !important; 
-}
-.kanban-plugin__archive-lane-button,
-.kanban-plugin__item-button-archive { 
-    border: 0 !important; 
-    background-color: var(--bg) !important;
-}
-
-.kanban-plugin__item-button-delete:hover,
-.kanban-plugin__item-button-archive:hover {
-    color: var(--text-dl) !important; 
-}
-
-
-
+.kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
+.kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+    color: var(--text-dl) !important;
+} 
 
 /*--Style Settings Plugin--*/
 /*--Style Settings--*/

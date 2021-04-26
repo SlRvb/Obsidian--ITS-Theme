@@ -3188,10 +3188,13 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 .checklist-plugin-main .count {
     border-radius: var(--radius) !important;
 }
-.checklist-plugin-main li { border-left: 2px solid var(--accent2) !important; }
+.checklist-plugin-main li { 
+    border-left: 2px solid var(--accent) !important;
+    background-color: var(--embed-bg) !important;
+}
 .checklist-plugin-main li:nth-child(even) {
     background-color: var(--code-bg) !important;
-    border-left: 2px solid var(--accent) !important;
+    border-left: 2px solid var(--accent2) !important;
 }
 .checklist-plugin-main li:nth-child(even):hover { 
     background-color: var(--outer-bar) !important;

@@ -3189,12 +3189,11 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     border-radius: var(--radius) !important;
 }
 .checklist-plugin-main li { 
-    border-left: 2px solid var(--accent) !important;
-    background-color: var(--outline) !important;
+    border-left: 4px solid var(--accent) !important;
+    background-color: var(--code-bg) !important;
 }
 .checklist-plugin-main li:nth-child(even) {
-    background-color: var(--code-bg) !important;
-    border-left: 2px solid var(--accent2) !important;
+    border-left: 4px solid var(--accent2) !important;
 }
 .checklist-plugin-main li:hover,
 .checklist-plugin-main li:nth-child(even):hover { 
@@ -3223,15 +3222,17 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     border-width: 2px !important;
     min-width: .5em !important;
     min-height: .5em !important;
+    border-color: var(--accent) !important;
 }
 .checklist-plugin-main .compact .checkbox { 
-    width: 1em !important;
-    height: 1em !important;
+    width: 1.2em !important;
+    height: 1.2em !important;
 }
 .checklist-plugin-main .classic .checkbox { 
     width: 1.5em !important;
     height: 1.5em !important;
 }
+
 
 /*Button Plugin*/
 .button-default {

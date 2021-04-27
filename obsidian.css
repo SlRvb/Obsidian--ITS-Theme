@@ -3785,6 +3785,13 @@ g.classGroup line {
     height: calc(100% - .5em);
 }
 
+/*Kanban Mobile*/
+.is-mobile .kanban ul, 
+.is-mobile .kanban ol {
+    padding-inline-start: 0;
+}
+
+
 /*----Publish----*/
 .site-header {
     font: var(--font);

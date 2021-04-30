@@ -1395,6 +1395,7 @@ button, button.mod-cta {
 /*Dragged*/
 .nav-folder-title.is-being-dragged-over {
     border:none;
+    border-radius: var(--radius);
 }
 
 /*Arrows*/
@@ -1605,6 +1606,8 @@ b.u-pop {
 .setting-item ul li::before {
     position: relative;
     margin-right: .5em;
+}
+.setting-item li {
 }
 
 /*Setting Item Title*/
@@ -3898,7 +3901,7 @@ g.classGroup line {
 
 /*--Style Settings Plugin--*/
 /*--Style Settings Menu--*/
-.style-settings-container {
+.style-settings-container::not(.is-mobile) {
     padding-bottom: 0 !important;
     border-left: 2px solid var(--table);
     padding-left: 2.2em;
@@ -3906,7 +3909,7 @@ g.classGroup line {
 .style-settings-container:hover { 
     border-color: var(--accent); 
 }
-.style-settings-heading + .style-settings-container {
+.style-settings-heading + .style-settings-container::not(.is-mobile) {
     padding-left: 30px;
 }
 
@@ -4287,6 +4290,12 @@ g.classGroup line {
 }
 .workspace-drawer-active-tab-header {
     margin: 1em 0 0 0;
+}
+
+/*Fix Slider*/
+.is-mobile .setting-item.mod-slider .setting-item-control {
+    margin-top: .5em !important;
+    margin-bottom: 1em;
 }
 
 /*Wrap Nav and Search Buttons*/

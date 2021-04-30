@@ -3,11 +3,16 @@ name: In The Shadows Settings
 id: ITS
 settings:
     -
-        title: Text Fonts
-        id: text-fonts
+        title: Text
+        id: Text-CSS
         type: heading
         level: 2
-    - 
+    -
+        title: Fonts
+        id: text-fonts
+        type: heading
+        level: 3
+    -
         title: Headings
         description: Heading and Vault Title fonts.
         id: font
@@ -24,6 +29,11 @@ settings:
         id: font-monospace
         type: variable-text
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
+    -
+        title: Size
+        id: text-size
+        type: heading
+        level: 3
     -
         title: Text Size
         description: Adjust size for preview/editor mode. If you use the one below, this only affects editor mode.
@@ -71,164 +81,8 @@ settings:
         max: 2
         step: .1
     -
-        title: Specific View Font Changes
-        id: Font-Specific
-        type: heading
-        level: 3
-    -
-        title: Different Preview/Editor Text
-        description: If toggled on, Text only affects UI text.
-        id: ed-pre
-        type: class-toggle
-    -
-        title: Preview Text
-        description: Changes text font for preview mode.
-        id: pre-font
-        type: variable-text
-        default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
-    -
-        title: Editor Text
-        description: Changes text font for edit mode.
-        id: ed-font
-        type: variable-text
-        default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
-    -
-        title: Other
-        id: Other
-        type: heading
-        level: 2
-    -
-        title: Workspace
-        id: Other-Work
-        type: heading
-        level: 3
-    -
-        title: Hide Vault Name
-        id: v-non
-        type: class-toggle
-    -
-        title: Wrap Note Title
-        id: title-wrap
-        type: class-toggle
-    -
-        title: Resize Scrollbars
-        id: scroll-size
-        type: variable-number-slider
-        default: 7
-        format: px
-        min: 0
-        max: 15
-        step: 1
-    -
-        title: Note Elements
-        id: Other-Note
-        type: heading
-        level: 3
-    - 
-        title: Horizontal Line Symbol
-        description: Add quotations around symbol for it to work. For Example "⚡".
-        id: hr-sym
-        type: variable-text
-        default: '⚡'
-    -
-        title: No Horizontal Line Symbol
-        description: Hide the horizontal Line Symbol entirely
-        id: hr-tog
-        type: class-toggle
-    -
-        title: Header Tags Above Header
-        description: Move the editor header hastags # to above the header instead.
-        id: hash-top
-        type: class-toggle
-    -
-        title: Hide Header Underline
-        id: h-line
-        type: class-toggle
-    -
-        title: Hide Frontmatter 
-        id: no-m
-        type: class-toggle
-    - 
-        title: Centered Tables
-        description: Move all tables to the center of the page.
-        id: t-c
-        type: class-toggle
-    - 
-        title: Naked Embeds
-        description: Embeds that look like they're part of the note.
-        id: naked-em
-        type: class-toggle
-    -
-        title: Original Embeds
-        description: Previous style of embeds
-        id: org-em
-        type: class-toggle
-    -
-        title: List
-        id: Lists
-        type: heading
-        level: 4
-    - 
-        title: Default Bullet Disc Shape
-        id: def-bull
-        type: class-toggle
-    - 
-        title: Custom Bullet Shape
-        description: Toggle on if you want to use the bullet shape below.
-        id: no-bull
-        type: class-toggle
-    - 
-        title: Bullet Shape
-        description: Add quotes around your new bullet. For example "~"
-        id: bullet
-        type: variable-text
-        default: '⬥'
-    - 
-        title: Original Bullet Lines
-        description: Lines appear under bullet, not beside it. ⚠Causes scrolling glitches. Recommended this is turned off, but use if you wish.
-        id: b-li-o
-        type: class-toggle
-    - 
-        title: Tags
-        id: Tags
-        type: heading
-        level: 3
-    -
-        title: Bubble Tags
-        id: tag-bubble
-        type: class-toggle
-    -
-        title: Notion Tags
-        id: tag-notion
-        type: class-toggle
-    -
-        title: Outline Tags
-        id: tag-outline
-        type: class-toggle
-    -
-        title: Tag Outline Border Size
-        id: tag-o
-        type: variable-number-slider
-        default: 1
-        format: px
-        min: 0
-        max: 5
-        step: 1        
-    - 
-        title: Tag Color
-        id: tag
-        type: variable-themed-color
-        format: hex
-        default-dark: '#571a1a'
-        default-light: '#c65656'
-    -
         title: Colors
-        id: Colors
-        type: heading
-        level: 2
-    - 
-        title: Text
-        id: Text-Colors
+        id: text-colors
         type: heading
         level: 3
     - 
@@ -283,6 +137,328 @@ settings:
         format: hex
         default-dark: '#6e7e89'
         default-light: '#8996a0'
+    -
+        title: Specific View Font Changes
+        id: Font-Specific
+        type: heading
+        level: 3
+    -
+        title: Different Preview/Editor Text
+        description: If toggled on, Text only affects UI text.
+        id: ed-pre
+        type: class-toggle
+    -
+        title: Preview Text
+        description: Changes text font for preview mode.
+        id: pre-font
+        type: variable-text
+        default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
+    -
+        title: Editor Text
+        description: Changes text font for edit mode.
+        id: ed-font
+        type: variable-text
+        default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
+    -
+        title: Specific View Heading Changes
+        id: Heading-Specific
+        type: heading
+        level: 3
+    -
+		title: Specific Heading Adjustments
+		description: Toggle on to edit headings individually.
+		id: head-spec
+		type: class-toggle
+	-
+		title: Heading Fonts
+		id: Spec-Font-Head
+		type: heading
+		level: 4
+	- 
+		title: Heading 1 Font Preview
+		id: sphd-pre-ff-1
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+    - 
+		title: Heading 1 Font Editor
+		id: sphd-ed-ff-1
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 2 Font Preview
+		id: sphd-pre-ff-2
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 2 Font Editor
+		id: sphd-ed-ff-2
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 3 Font Preview
+		id: sphd-pre-ff-3
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 3 Font Editor
+		id: sphd-ed-ff-3
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 4 Font Preview
+		id: sphd-pre-ff-4
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 4 Font Editor
+		id: sphd-ed-ff-4
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 5 Font Preview
+		id: sphd-pre-ff-5
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 5 Font Editor
+		id: sphd-ed-ff-5
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 6 Font Preview
+		id: sphd-pre-ff-6
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	- 
+		title: Heading 6 Font Editor
+		id: sphd-ed-ff-6
+		type: variable-text
+		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
+	-
+        title: Heading Size
+        id: Spec-Size-Head
+        type: heading
+        level: 4
+	-
+		title: Heading 1 Size Preview
+		id: sphd-pre-fs-1
+		type: variable-number-slider
+        default: 34
+        format: em
+        min: .8
+        max: 1.5
+        step: .1	
+	-
+		title: Heading 1 Size Editor
+		id: sphd-ed-fs-1
+		type: variable-number-slider
+        default: 34
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	-
+		title: Heading 2 Size Preview
+		id: sphd-pre-fs-2
+		type: variable-number-slider
+        default: 30
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	-
+		title: Heading 2 Size Editor
+		id: sphd-ed-fs-2
+		type: variable-number-slider
+        default: 28
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	-
+		title: Heading 3 Size Preview
+		id: sphd-pre-fs-3
+		type: variable-number-slider
+        default: 26
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	-
+		title: Heading 3 Size Editor
+		id: sphd-ed-fs-3
+		type: variable-number-slider
+        default: 24
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	-
+		title: Heading 4 Size Preview
+		id: sphd-pre-fs-4
+		type: variable-number-slider
+        default: 24
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	-
+		title: Heading 4 Size Editor
+		id: sphd-ed-fs-4
+		type: variable-number-slider
+        default: 22
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	-
+		title: Heading 5 Size Preview
+		id: sphd-pre-fs-5
+		type: variable-number-slider
+        default: 20
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	-
+		title: Heading 5 Size Editor
+		id: sphd-ed-fs-5
+		type: variable-number-slider
+        default: 20
+        format: px
+        min: 18
+        max: 40
+        step: 2	
+	-
+		title: Heading 6 Size Preview
+		id: sphd-pre-fs-6
+		type: variable-number-slider
+        default: 18
+        format: px
+        min: 18
+        max: 40
+        step: 2	
+	-
+		title: Heading 6 Size Editor
+		id: sphd-ed-fs-6
+		type: variable-number-slider
+        default: 18
+        format: px
+        min: 18
+        max: 40
+        step: 2
+	
+	-
+        title: Heading Colors
+        id: Spec-Colors-Head
+        type: heading
+        level: 4		
+	-
+		title: Heading 1 Color Preview
+		id: sphd-pre-1
+		type: variable-themed-color
+		format: hex
+		default-dark: '#683732'
+		default-light: '#683732'
+	-
+		title: Heading 1 Color Editor
+		id: sphd-ed-1
+		type: variable-themed-color
+		format: hex
+		default-dark: '#683732'
+		default-light: '#683732'
+	-
+		title: Heading 2 Color Preview
+		id: sphd-pre-2
+		type: variable-themed-color
+		format: hex
+		default-dark: '#a13531'
+		default-light: '#a13531'
+	-
+		title: Heading 2 Color Editor
+		id: sphd-ed-2
+		type: variable-themed-color
+		format: hex
+		default-dark: '#a13531'
+		default-light: '#a13531'
+	-
+		title: Heading 3 Color Preview
+		id: sphd-pre-3
+		type: variable-themed-color
+		format: hex
+		default-dark: '#fc4435'
+		default-light: '#fc4435'
+	-
+		title: Heading 3 Color Editor
+		id: sphd-ed-3
+		type: variable-themed-color
+		format: hex
+		default-dark: '#fc4435'
+		default-light: '#fc4435'
+	-
+		title: Heading 4 Color Preview
+		id: sphd-pre-4
+		type: variable-themed-color
+		format: hex
+		default-dark: '#ff6a79'
+		default-light: '#ff6a79'
+	-
+		title: Heading 4 Color Editor
+		id: sphd-ed-4
+		type: variable-themed-color
+		format: hex
+		default-dark: '#ff6a79'
+		default-light: '#ff6a79'
+	-
+		title: Heading 5 Color Preview
+		id: sphd-pre-5
+		type: variable-themed-color
+		format: hex
+		default-dark: '#ac7782'
+		default-light: '#ac7782'
+	-
+		title: Heading 5 Color Editor
+		id: sphd-ed-5
+		type: variable-themed-color
+		format: hex
+		default-dark: '#ac7782'
+		default-light: '#ac7782'
+	-
+		title: Heading 6 Color Preview
+		id: sphd-pre-6
+		type: variable-themed-color
+		format: hex
+		default-dark: '#d6b6bc'
+		default-light: '#d6b6bc'
+	-
+		title: Heading 6 Color Editor
+		id: sphd-ed-6
+		type: variable-themed-color
+		format: hex
+		default-dark: '#d6b6bc'
+		default-light: '#d6b6bc'
+    -
+        title: Workspace
+        id: WS-CSS
+        type: heading
+        level: 2
+    -
+        title: Hide Vault Name
+        id: v-non
+        type: class-toggle
+    -
+        title: Wrap Note Title
+        id: title-wrap
+        type: class-toggle
+    -
+        title: Resize Scrollbars
+        id: scroll-size
+        type: variable-number-slider
+        default: 7
+        format: px
+        min: 0
+        max: 15
+        step: 1
     -
         title: Workspace Colors
         id: Workspace-Colors
@@ -342,12 +518,207 @@ settings:
         format: rgb
         opacity: true
         default-dark: '#001c4a15'
-        default-light: '#001c4a15'   
+        default-light: '#001c4a15'
+    -
+        title: Note Elements
+        id: Other-Note
+        type: heading
+        level: 2
+    - 
+        title: Horizontal Line Symbol
+        description: Add quotations around symbol for it to work. For Example "⚡".
+        id: hr-sym
+        type: variable-text
+        default: '⚡'
+    -
+        title: No Horizontal Line Symbol
+        description: Hide the horizontal Line Symbol entirely
+        id: hr-tog
+        type: class-toggle
+    -
+        title: Header Tags Above Header
+        description: Move the editor header hastags # to above the header instead.
+        id: hash-top
+        type: class-toggle
+    -
+        title: Hide Header Underline
+        id: h-line
+        type: class-toggle
+    -
+        title: Hide Frontmatter 
+        id: no-m
+        type: class-toggle
+    - 
+        title: Centered Tables
+        description: Move all tables to the center of the page.
+        id: t-c
+        type: class-toggle
+    - 
+        title: Naked Embeds
+        description: Embeds that look like they're part of the note.
+        id: naked-em
+        type: class-toggle
+    -
+        title: Original Embeds
+        description: Previous style of embeds
+        id: org-em
+        type: class-toggle
+    -
+        title: Colors
+        id: Note-Element-Colors
+        type: heading
+        level: 3
+    - 
+        title: Embed/Blockquote
+        description: Embed/Blockquote color.
+        id: embed-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#10161d'
+        default-light: '#f1f5ff'
+    - 
+        title: Code Background
+        id: code-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#232831'
+        default-light: '#eef6ff'
+    - 
+        title: Horizontal Line
+        id: hr
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3c5274'
+        default-light: '#d6deea'
+    -
+        title: Lists
+        id: Lists
+        type: heading
+        level: 2
+    - 
+        title: Default Bullet Disc Shape
+        id: def-bull
+        type: class-toggle
+    - 
+        title: Custom Bullet Shape
+        description: Toggle on if you want to use the bullet shape below.
+        id: no-bull
+        type: class-toggle
+    - 
+        title: Bullet Shape
+        description: Add quotes around your new bullet. For example "~"
+        id: bullet
+        type: variable-text
+        default: '⬥'
+    - 
+        title: Original Bullet Lines
+        description: Lines appear under bullet, not beside it. ⚠Causes scrolling glitches. Recommended this is turned off, but use if you wish.
+        id: b-li-o
+        type: class-toggle
+	-
+		title: Specific Lists
+		id: Bullet-Lists
+		type: heading
+		level: 4
+	-
+		title: Specific Line Size
+		id: b-line
+		type: variable-number-slider
+        default: 2
+        format: px
+        min: 1
+        max: 3
+        step: 1
+	-
+		title: Specific Line Color
+		id: Bullet-Line-Color
+		type: heading
+		level: 4
+	-
+		title: Toggle Colorful Bullet Line Color
+		description: Toggle on to use the colorful bullet lines
+		id: bul-li-col
+		type: class-toggle
+	-
+		title: Bullet Line 1 Color
+		id: b-l-1
+		type: variable-themed-color
+		format: hex
+		default-dark: '#683732'
+		default-light: '#683732'
+	-
+		title: Bullet Line 2 Color
+		id: b-l-2
+		type: variable-themed-color
+		format: hex
+		default-dark: '#a13531'
+		default-light: '#ff1702'
+	-
+		title: Bullet Line 3 Color
+		id: b-l-3
+		type: variable-themed-color
+		format: hex
+		default-dark: '#fc4435'
+		default-light: '#e27777'
+	-
+		title: Bullet Line 4 Color
+		id: b-l-4
+		type: variable-themed-color
+		format: hex
+		default-dark: '#ff6a79'
+		default-light: '#ff7482'
+	-
+		title: Bullet Line 5 Color
+		id: b-l-5
+		type: variable-themed-color
+		format: hex
+		default-dark: '#ac7782'
+		default-light: '#ad8f8f'
+	-
+		title: Bullet Line 6 Color
+		id: b-l-6
+		type: variable-themed-color
+		format: hex
+		default-dark: '#d6b6bc'
+		default-light: '#d6b6bc'
+    - 
+        title: Tags
+        id: Tags
+        type: heading
+        level: 2
+    -
+        title: Bubble Tags
+        id: tag-bubble
+        type: class-toggle
+    -
+        title: Notion Tags
+        id: tag-notion
+        type: class-toggle
+    -
+        title: Outline Tags
+        id: tag-outline
+        type: class-toggle
+    -
+        title: Tag Outline Border Size
+        id: tag-o
+        type: variable-number-slider
+        default: 1
+        format: px
+        min: 0
+        max: 5
+        step: 1
+    - 
+        title: Tag Color
+        id: tag
+        type: variable-themed-color
+        format: hex
+        default-dark: '#571a1a'
+        default-light: '#c65656'
     - 
         title: Other Colors
         id: Other-Colors
         type: heading
-        level: 3
+        level: 2
     - 
         title: Accent
         id: accent
@@ -420,33 +791,6 @@ settings:
         default-dark: '#283846'
         default-light: '#ccd6eb'
     -
-        title: Note Elements
-        id: Note-Elements
-        type: heading
-        level: 3
-    - 
-        title: Embed/Blockquote
-        description: Embed/Blockquote color.
-        id: embed-bg
-        type: variable-themed-color
-        format: hex
-        default-dark: '#10161d'
-        default-light: '#f1f5ff'
-    - 
-        title: Code Background
-        id: code-bg
-        type: variable-themed-color
-        format: hex
-        default-dark: '#232831'
-        default-light: '#eef6ff'
-    - 
-        title: Horizontal Line
-        id: hr
-        type: variable-themed-color
-        format: hex
-        default-dark: '#3c5274'
-        default-light: '#d6deea'
-    -
         title: Highlights
         id: RGBA
         type: heading
@@ -497,7 +841,7 @@ settings:
         id: graph-bg
         type: variable-themed-color
         format: hex
-        default-dark: '#1a1e24'
+        default-dark: '#10151B'
         default-light: '#f8fbff'
     - 
         title: Graph Lines
@@ -542,11 +886,6 @@ settings:
         description: Personal adjustments to some elements of dataview
         id: dv
         type: class-toggle
-    -
-        title: Colorful Bullet Lines
-        description: Personal adjustments to some elements of dataview
-        id: bul-li-col
-        type: class-toggle
 */
 
 
@@ -576,9 +915,11 @@ settings:
     --med-tall: 600px;
     --tall: 700px;
     
+    /*Colors*/
     --slide-shadow: rgba(0, 28, 74, 0.15);
     --text-dl: #e5ebee;
     
+    /*Sizes*/
     --scroll-size: 7px;
     --lh: 1.5em;
     --f-s-pre: 1em;
@@ -588,11 +929,40 @@ settings:
     --h-line: 100%;
     --head-h: 15px;
     
+    /*Other*/
     --hr-sym: "⚡";
     --tag-o: 1px;
     --bullet: "⬥";
     --b-line: 2px;
 
+    /*--Specific--*/
+    /*Fonts*/
+    --sphd-pre-ff-1: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-2: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-3: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-4: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-5: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-6: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-1: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-2: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-3: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-4: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-5: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-6: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+
+    /*Size*/
+    --sphd-pre-fs-1: 34px;
+    --sphd-pre-fs-2: 30px;
+    --sphd-pre-fs-3: 26px;
+    --sphd-pre-fs-4: 24px;
+    --sphd-pre-fs-5: 20px;
+    --sphd-pre-fs-6: 18px;
+    --sphd-ed-fs-1: 34px;
+    --sphd-ed-fs-2: 28px;
+    --sphd-ed-fs-3: 24px;
+    --sphd-ed-fs-4: 22px;
+    --sphd-ed-fs-5: 20px;
+    --sphd-ed-fs-6: 18px;
 }
 
 .theme-dark {
@@ -648,7 +1018,7 @@ settings:
     --bg: #252c36;
     --fg: #cfd7dd;
     --side-bar: var(--note);
-    --outer-bar: #0e0f15;
+    --outer-bar: #0b0f13 /*#0e0f15*/;
     --dark-sidebar: #10161d;
     --inactive: #586477;
     --outline: var(--outer-bar);
@@ -679,7 +1049,7 @@ settings:
     --hr: #3c5274;
     --i-at: #bf5e5e;
     
-    --graph-bg: var(--dark-sidebar);
+    --graph-bg: var(--outer-bar);
     --graph-lines: var(--dark-accent);
     --graph-node: var(--fg);
     --graph-fill: var(--headers);
@@ -695,6 +1065,19 @@ settings:
     --b-l-4: #ff6a79;
     --b-l-5: #ac7782;
     --b-l-6: #d6b6bc;
+
+    --sphd-pre-1: #683732;
+    --sphd-pre-2: #a13531;
+    --sphd-pre-3: #fc4435;
+    --sphd-pre-4: #ff6a79;
+    --sphd-pre-5: #ac7782;
+    --sphd-pre-6: #d6b6bc;
+    --sphd-ed-1: #683732;
+    --sphd-ed-2: #a13531;
+    --sphd-ed-3: #fc4435;
+    --sphd-ed-4: #ff6a79;
+    --sphd-ed-5: #ac7782;
+    --sphd-ed-6: #d6b6bc;
 }
 
 .theme-light {
@@ -801,6 +1184,19 @@ settings:
     --b-l-4: #ff7482;
     --b-l-5: #ad8f8f;
     --b-l-6: #d6b6bc;
+
+    --sphd-pre-1: #683732;
+    --sphd-pre-2: #ff1702;
+    --sphd-pre-3: #e27777;
+    --sphd-pre-4: #ff7482;
+    --sphd-pre-5: #ad8f8f;
+    --sphd-pre-6: #d6b6bc;
+    --sphd-ed-1: #683732;
+    --sphd-ed-2: #ff1702;
+    --sphd-ed-3: #e27777;
+    --sphd-ed-4: #ff7482;
+    --sphd-ed-5: #ad8f8f;
+    --sphd-ed-6: #d6b6bc;
 }
 
 
@@ -814,6 +1210,7 @@ settings:
     color: var(--text-dl);
 }
 
+/*Drop Menu*/
 .menu {
     border-radius: var(--radius) !important;
 }
@@ -1194,6 +1591,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 /*Undo b quote formatting*/
+.setting-item-description b,
 b.u-pop {
     font-weight: 900;
     color: var(--headers) !important;
@@ -1204,12 +1602,24 @@ b.u-pop {
     background: transparent;
 }
 
+.setting-item ul li::before {
+    position: relative;
+    margin-right: .5em;
+}
+
+/*Setting Item Title*/
+.setting-item-name {
+    font-weight: 900;
+    font-size: 1.1em;
+}
+.setting-item-description {
+    color: var(--footnote);
+}
 
 /*Setting Item Padding Reduction*/
 .setting-item {
     padding: 1% 0 1% 0;
 }
-
 
 /*Settings Right*/
 .modal.mod-settings .vertical-tab-content-container {
@@ -1259,7 +1669,10 @@ b.u-pop {
     color: var(--soft-text);
 }
 
-
+/*Sync Image Fit*/
+.sync-history-content-container {
+    overflow: auto;
+}
 
 /*--Publish Settings--*/
 .modal-bg {
@@ -1482,7 +1895,7 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 .cm-s-obsidian .cm-header-3 { font-size: calc(var(--f-s-h) - 10px); }
 .markdown-preview-view h4 { font-size: calc(var(--f-s-h) - 10px); }
 .cm-s-obsidian .cm-header-4 { font-size: calc(var(--f-s-h) - 12px); }
-.markdown-preview-view h5 { font-size: calc(var(--f-s-h) - 14px); }
+.markdown-preview-view h5,
 .cm-s-obsidian .cm-header-5 { font-size: calc(var(--f-s-h) - 14px); }
 .markdown-preview-view h6,
 .cm-s-obsidian .cm-header-6 { font-size: calc(var(--f-s-h) - 16px); }
@@ -3373,18 +3786,36 @@ g.classGroup line {
     border-color: transparent var(--background-secondary-alt) transparent transparent !important;
 }
 
+
+
 /*--Gallery Plugin--*/
 .workspace-leaf-content[data-type="ob-gallery-info"] .markdown-preview-view { padding: .5em; }
 .ob-gallery-display > ul { padding-inline-start: 0; }
 
-.gallery-info-section-tags.svelte-1fo05ye > .tag.svelte-1fo05ye {
+/*Info Block*/
+.gallery-info-container {
+    background-color: transparent !important;
     border-radius: var(--radius) !important;
-    color: var(--fg) !important;
-    background-color: var(--tag) !important;
+    border: 1px solid var(--outline) !important;
+    box-shadow: -.3em .3em var(--outline);
 }
-.gallery-info-section-tags.svelte-1fo05ye > .tag.svelte-1fo05ye:hover { text-decoration: underline; }
-.gallery-info-section-label.svelte-1fo05ye.svelte-1fo05ye{ color: var(--soft-text); }
-.gallery-info-section-value.svelte-1fo05ye.svelte-1fo05ye { color: var(--fg) !important; }
+/*Tags*/
+.gallery-info-section-tags > .tag {
+    border-radius: var(--radius) !important;
+    color: var(--text-dl) !important;
+    background-color: var(--tag) !important;
+    margin-right: .2em !important;
+}
+.gallery-info-section-tags > .tag:hover { text-decoration: underline !important; }
+
+
+/*Text*/
+.gallery-info-section-label { 
+    color: var(--headers) !important; 
+    font-weight: 900;
+}
+.gallery-info-section-value { color: var(--text) !important; }
+
 
 /*--Kanban Plugin--*/
 /*Show Scrollbar*/
@@ -3466,12 +3897,39 @@ g.classGroup line {
 } 
 
 /*--Style Settings Plugin--*/
-/*--Style Settings--*/
-.setting-item-description p {
-    margin-block-start: 0;
-    margin-block-end: 0;
+/*--Style Settings Menu--*/
+.style-settings-container {
+    padding-bottom: 0 !important;
+    border-left: 2px solid var(--table);
+    padding-left: 2.2em;
+}
+.style-settings-container:hover { 
+    border-color: var(--accent); 
+}
+.style-settings-heading + .style-settings-container {
+    padding-left: 30px;
+}
+
+/*Text Adjustments*/
+.style-settings-heading {
+    padding-bottom: 1px !important;
+}
+.style-settings-heading .setting-item-name { 
+    color: var(--headers);
+    font-weight: 900;
+    font-size: 1.1em !important;
+}
+.style-settings-container .setting-item-name {
+    font-weight: 900;
+    font-size: 1em !important;
+}
+.style-settings-container .setting-item-description {
     line-height: 1.2em;
 }
+.style-settings-container .setting-item-description small {
+    color: var(--footnote);
+}
+
 .themed-color-wrapper > div {
     padding: .1em !important;
     padding-left: .3em !important;
@@ -3479,13 +3937,7 @@ g.classGroup line {
     border-radius: var(--radius) !important;
 }
 
-/*--Settings Specific--*/
-.ed-pre .markdown-preview-view, .ed-pre li {
-    font-family: var(--pre-font);
-}
-.ed-pre .cm-s-obsidian  {
-    font-family: var(--ed-font);
-}
+
 
 /*--CSS Class Toggles--*/
 /*Hide Vault Title*/
@@ -3494,6 +3946,13 @@ g.classGroup line {
 }
 .hr-tog .markdown-preview-view hr::after, .hr-tog div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
     display: none;
+}
+/*--Settings Specific--*/
+.ed-pre .markdown-preview-view, .ed-pre li {
+    font-family: var(--pre-font);
+}
+.ed-pre .cm-s-obsidian  {
+    font-family: var(--ed-font);
 }
 
 /*Tags*/
@@ -3693,6 +4152,69 @@ g.classGroup line {
     display: block;
     margin-bottom: -8px;
 }
+
+/*Specific Heading Adjustments*/
+.head-spec h1 { 
+    color: var(--sphd-pre-1);
+    font-family: var(--sphd-pre-ff-1);
+    font-size: var(--sphd-pre-fs-1);
+}
+.head-spec h2 { 
+    color: var(--sphd-pre-2);
+    font-family: var(--sphd-pre-ff-2);
+    font-size: var(--sphd-pre-fs-2);
+}
+.head-spec h3 { 
+    color: var(--sphd-pre-3);
+    font-family: var(--sphd-pre-ff-2);
+    font-size: var(--sphd-pre-fs-3);
+}
+.head-spec h4 { 
+    color: var(--sphd-pre-4);
+    font-family: var(--sphd-pre-ff-2);
+    font-size: var(--sphd-pre-fs-2);
+}
+.head-spec h5 { 
+    color: var(--sphd-pre-5);
+    font-family: var(--sphd-pre-ff-2);
+    font-size: var(--sphd-pre-fs-2);
+}
+.head-spec h6 { 
+    color: var(--sphd-pre-6);
+    font-family: var(--sphd-pre-ff-1);
+    font-size: var(--sphd-pre-fs-1);
+}
+.head-spec .cm-header-1 { 
+    color: var(--sphd-ed-1);
+    font-family: var(--sphd-ed-ff-1);
+    font-size: var(--sphd-ed-fs-1);
+}
+.head-spec .cm-header-2 { 
+    color: var(--sphd-ed-2);
+    font-family: var(--sphd-ed-ff-2);
+    font-size: var(--sphd-ed-fs-2);
+}
+.head-spec .cm-header-3 { 
+    color: var(--sphd-ed-3);
+    font-family: var(--sphd-ed-ff-2);
+    font-size: var(--sphd-ed-fs-3);
+}
+.head-spec .cm-header-4 { 
+    color: var(--sphd-pre-4);
+    font-family: var(--sphd-ed-ff-2);
+    font-size: var(--sphd-ed-fs-2);
+}
+.head-spec .cm-header-5 { 
+    color: var(--sphd-pre-5);
+    font-family: var(--sphd-ed-ff-2);
+    font-size: var(--sphd-ed-fs-2);
+}
+.head-spec .cm-header-6 { 
+    color: var(--sphd-pre-6);
+    font-family: var(--sphd-ed-ff-1);
+    font-size: var(--sphd-ed-fs-1);
+}
+
 
 /*-Plugin Toggles-*/
 /*Text Expander: Hide Code in Preview Mode*/

@@ -995,7 +995,7 @@ settings:
     --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Searched Result Highlight*/
     --text-selection: rgba(122, 20, 20, 0.4); /*Cursor dragged highlights*/
     
-    --interactive-normal: #652121; /*Button Color*/
+    --interactive-normal: var(--dark-accent); /*Button Color*/
     --interactive-hover: var(--embed-bg);/*Button Color*/
     --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
@@ -1010,7 +1010,7 @@ settings:
 
     /*Compatibility Color Recoloring*/    
     --deep-dark-accent: #270f0f /*#2f1010*/;
-    --dark-accent: #571a1a /*#53201F*/;
+    --dark-accent: #571a1a /*#652121, #53201F*/;
     --lite-accent: #e06c75;
     --accent: #883737/*#c14343*/;
     --accent2: var(--hr)/*#4c78cc*/;
@@ -2803,6 +2803,139 @@ iframe {
 }
 
 
+/*----Mobile----*/
+@media (max-width: 500px) {
+    
+    .theme-dark, .theme-light {
+        /*Mobile Sizes*/
+        --radius: 0px;
+        --tiny: 100px;
+        --small: 150px;
+        --small-med: 200px;
+        --med-small: 250px;
+        --medium: 300px;
+        --med-tall: 450px;
+        --tall: 500px;
+    }
+    /*Popover Hover Fits Mobile Screen*/
+    .popover.hover-popover.is-loaded {
+        width:100%;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .aside-hide:hover {
+        width: 100%;
+    }
+}
+/*Minimize Sidebar Spacing*/
+.workspace-drawer-header-info {
+    margin: 0;
+}
+.workspace-drawer-active-tab-header {
+    margin: 1em 0 0 0;
+}
+
+/*Fix Slider*/
+.is-mobile .setting-item.mod-slider .setting-item-control {
+    margin-top: .5em !important;
+    margin-bottom: 1em;
+}
+
+/*Wrap Nav and Search Buttons*/
+.is-mobile .workspace-drawer-actions,
+.is-mobile .nav-buttons-container {
+    flex-wrap: wrap;
+}
+/*Hide Vault Title*/
+.is-mobile .nav-folder.mod-root > .nav-file-title,
+.is-mobile .nav-folder.mod-root > .nav-folder-title {
+    display: none;
+}
+/*Fix Outline Spacing*/
+.is-mobile .outline {
+    margin: 0 -.2em;
+}
+.is-mobile .view-content {
+    height: calc(100% - .5em);
+}
+
+/*Kanban Mobile*/
+.is-mobile .kanban ul, 
+.is-mobile .kanban ol {
+    padding-inline-start: 0;
+}
+
+
+/*----Publish----*/
+.site-header {
+    font: var(--font);
+    text-align: left;
+}
+
+.page-header {
+    font-size: 0px;
+    font-family: var(--font);
+    color: transparent;
+    line-height: 0px;
+}
+
+.site-body-left-column-site-name {
+    font: var(--font);
+    color: var(--headers);
+}
+
+
+.site-body {
+    background-color: var(--side-bar);
+}
+
+.site-body-left-column {
+    background-color: var(--outer-bar);
+}
+
+.site-body-left-column:before {
+    content: ' ';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--outer-bar);
+    z-index: 0;
+}
+
+
+.graph-view-container {
+    position: relative;
+    height: 300px;
+    border: 1px solid var(--table);
+    border-radius: 10px;
+    background-color: var(--graph-bg);
+    padding: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----SlRvb's Custom CSS----*/
 
@@ -3541,6 +3674,11 @@ b {
     text-shadow: 0 0 0px var(--text-normal);
 }
 
+
+
+
+
+
 /*----Plugins----*/
 
 /*--Sliding Panes--*/
@@ -3899,18 +4037,27 @@ g.classGroup line {
     color: var(--text-dl) !important;
 } 
 
+/*Copy Codeblock Plugin*/
+.copy-code-button { 
+    display: none !important;
+    color: var(--note) !important;
+    font-family: var(--font-monospace);
+    background-color: var(--inactive) !important;
+    text-transform: uppercase;
+}
+.copy-code-button:hover { color: var(--text-dl) !important; }
+
+.has-copy-button:hover .copy-code-button {
+    display: unset !important;
+}
+
 /*--Style Settings Plugin--*/
 /*--Style Settings Menu--*/
-.style-settings-container::not(.is-mobile) {
+.style-settings-container {
     padding-bottom: 0 !important;
-    border-left: 2px solid var(--table);
-    padding-left: 2.2em;
 }
 .style-settings-container:hover { 
     border-color: var(--accent); 
-}
-.style-settings-heading + .style-settings-container::not(.is-mobile) {
-    padding-left: 30px;
 }
 
 /*Text Adjustments*/
@@ -4231,8 +4378,6 @@ g.classGroup line {
 }
 .dv .dataview-ul {
     margin-left: -2em;
-}
-.dv .dataview-ul {
     margin-block-end: 0 !important;
 }
 
@@ -4258,115 +4403,3 @@ g.classGroup line {
 }
 
 
-/*----Mobile----*/
-@media (max-width: 500px) {
-    
-    .theme-dark, .theme-light {
-        /*Mobile Sizes*/
-        --radius: 0px;
-        --tiny: 100px;
-        --small: 150px;
-        --small-med: 200px;
-        --med-small: 250px;
-        --medium: 300px;
-        --med-tall: 450px;
-        --tall: 500px;
-    }
-    /*Popover Hover Fits Mobile Screen*/
-    .popover.hover-popover.is-loaded {
-        width:100%;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .aside-hide:hover {
-        width: 100%;
-    }
-}
-/*Minimize Sidebar Spacing*/
-.workspace-drawer-header-info {
-    margin: 0;
-}
-.workspace-drawer-active-tab-header {
-    margin: 1em 0 0 0;
-}
-
-/*Fix Slider*/
-.is-mobile .setting-item.mod-slider .setting-item-control {
-    margin-top: .5em !important;
-    margin-bottom: 1em;
-}
-
-/*Wrap Nav and Search Buttons*/
-.is-mobile .workspace-drawer-actions,
-.is-mobile .nav-buttons-container {
-    flex-wrap: wrap;
-}
-/*Hide Vault Title*/
-.is-mobile .nav-folder.mod-root > .nav-file-title,
-.is-mobile .nav-folder.mod-root > .nav-folder-title {
-    display: none;
-}
-/*Fix Outline Spacing*/
-.is-mobile .outline {
-    margin: 0 -.2em;
-}
-.is-mobile .view-content {
-    height: calc(100% - .5em);
-}
-
-/*Kanban Mobile*/
-.is-mobile .kanban ul, 
-.is-mobile .kanban ol {
-    padding-inline-start: 0;
-}
-
-
-/*----Publish----*/
-.site-header {
-    font: var(--font);
-    text-align: left;
-}
-
-.page-header {
-    font-size: 0px;
-    font-family: var(--font);
-    color: transparent;
-    line-height: 0px;
-}
-
-.site-body-left-column-site-name {
-    font: var(--font);
-    color: var(--headers);
-}
-
-
-.site-body {
-    background-color: var(--side-bar);
-}
-
-.site-body-left-column {
-    background-color: var(--outer-bar);
-}
-
-.site-body-left-column:before {
-    content: ' ';
-    position: absolute;
-    right: 100%;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--outer-bar);
-    z-index: 0;
-}
-
-
-.graph-view-container {
-    position: relative;
-    height: 300px;
-    border: 1px solid var(--table);
-    border-radius: 10px;
-    background-color: var(--graph-bg);
-    padding: 4px;
-}

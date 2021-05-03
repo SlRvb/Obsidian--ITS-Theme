@@ -4373,17 +4373,17 @@ g.classGroup line {
     font-size: var(--sphd-ed-fs-3);
 }
 .head-spec .cm-header-4 { 
-    color: var(--sphd-pre-4);
+    color: var(--sphd-ed-4);
     font-family: var(--sphd-ed-ff-4);
     font-size: var(--sphd-ed-fs-4);
 }
 .head-spec .cm-header-5 { 
-    color: var(--sphd-pre-5);
+    color: var(--sphd-ed-5);
     font-family: var(--sphd-ed-ff-5);
     font-size: var(--sphd-ed-fs-5);
 }
 .head-spec .cm-header-6 { 
-    color: var(--sphd-pre-6);
+    color: var(--sphd-ed-6);
     font-family: var(--sphd-ed-ff-6);
     font-size: var(--sphd-ed-fs-6);
 }

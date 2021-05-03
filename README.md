@@ -1,16 +1,17 @@
 # ITS Theme
-*By SlRvb*
+**By SlRvb**
 
-Theme for my Obsidian Story Vault: ***In The Shadows.***
-
+> Theme for my Obsidian Story Vault: **In The Shadows**.
 
 # Table of Contents
 - [Features](#features)
 - [Preview](#images)
+- [CSS Classes](#css-classes)
 - [Image Positions](#image-positions)
-    - [Simplified Version](#simplified-version)
-    - [Customizable Version](#customizable-version)
+	- [Simplified Version](#simplified-version)
+	- [Customizable Version](#customizable-version)
 - [Embed Adjustments](#embed-adjustments)
+- [Aside](#aside)
 - [Alternate Themes Snippets](#alternate-themes)
 
 # Features
@@ -18,67 +19,63 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 - Colored Graph
 - Squared Edges
 - **Heading:**
-    - **Underline**: spans across the page depending on the heading
-    - **Embeded:** Embedded files have smaller headers and are 1 color
+	- **Underline**: spans across the page depending on the heading
+	- **Embeded:** Embedded files have smaller headers and are 1 color
 - Custom Horizontal line
-    - *Credit:* [TriDiamond](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/223)
+	- *Credit:* [TriDiamond](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/223)
 - Tag Pills (Rectangular)
 - Metadata minimal style
 - Checkboxes
-    - *Credit:* [Kepano: Nicer Checkboxes](https://forum.obsidian.md/t/nicer-checkboxes/2238)
+	- *Credit:* [Kepano: Nicer Checkboxes](https://forum.obsidian.md/t/nicer-checkboxes/2238)
 - **Images:**
-    - Images Centered
-    - **Zoom:** images enlarges upon clicking and holding it 
-        - *Credit:* [Kepano: Image Zoom Click Hold To Expand Images](https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164)
-    - **Gallery/Masonry:** Side by side images.
-        - Put `cssclass: img-grid` into frontmatter/YAML, separate by adding spaces
-        - *Credit*: [Kepano: Display side by side image grid (CSS snippet)](https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359)
-    - **Image Positions:** Move images to either left, right, center, change types, etc.
-        - Inspired by: [Lithou's Image Flags](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)
-        - *If you use lithou's snippet, this feature does conflict with it.*
+	- Images Centered
+	- **Zoom:** images enlarges upon clicking and holding it 
+		- *Credit:* [Kepano: Image Zoom Click Hold To Expand Images](https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164)
+	- **Image Positions:** Move images to either left, right, center, change types, etc.
+		- Inspired by: [Lithou's Image Flags](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)
+		- *If you use lithou's snippet, this feature does conflict with it.*
 - **\<i>\</i>** for images or other files attributions
-    - Adds a different color to text within it to differentiate it from other text
-    - Centered to match image centering
-    - Adding: `alt="left"` and `alt="right"` within it will push the attribute to left and right of the screen.
+	- Adds a different color to text within it to differentiate it from other text
+	- Centered to match image centering
+	- Adding: `alt="left"` and `alt="right"` within it will push the attribute to left and right of the screen.
 - **Blockquotes**
-    - Soft background
-    - Wider blockquote
-    - Quotation marks added top right corner
+	- Soft background
+	- Wider blockquote
+	- Quotation marks added top right corner
 - **Popover**
-    - Larger Popover
-    - Images fit within the popover window
-    - Images are cropped in popover window
+	- Larger Popover
+	- Images fit within the popover window
+	- Images are cropped in popover window
 - **Line Relationships**
-    - Bullet Points
-        - *Credit:* [Lizardmenfromspace](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/2)
-    - Outline Pane
-    - Folder Navigation
-    - Tag Pane 
-        - *Note: Dot appears at bottom left corner. If it's too annoying add this snippet:*
-        - ```|tag-container .tree-item-children {border-left: 0px;}```
+	- Bullet Points
+		- *Credit:* [Lizardmenfromspace](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/2)
+	- Outline Pane
+	- Folder Navigation
+	- Tag Pane
 - **Folder Navigation Icons**
-    - Credit: [Deathau](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/109)
+	- Credit: [Deathau](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/109)
 - **Text Wrapping**
-    - Outline Pane
-    - Tag Pane
-    - File Explorer Sidebar
-    - Embed Titles
-    - Query Titles
-- Embed Adjustments
-- Fonts: (Main ones are near the `listed:`, alternates are below it)
-    - Headings: [Calisto MT]()
-        - [Suez One](https://fonts.google.com/specimen/Suez+One)
-        - [Palatino Black](https://www.fonts.com/font/linotype/palatino/black)
-        - [Georgia Bold](https://www.fonts.com/font/microsoft-corporation/georgia/bold)
-    - Monospace: [JetBrains Mono Medium](https://www.jetbrains.com/lp/mono/)
-        - [Recursive Mono Casual Static Medium](https://www.recursive.design/)
+	- Outline Pane
+	- Tag Pane
+	- File Explorer Sidebar
+	- Embed Titles
+	- Query Titles
+- **Embed Adjustments**
+- **Aside** for comments/etc
+- **Style Settings Plugin Suported**
+- **Fonts:** (Main ones are near the `listed:`, alternates are below it)
+	- **Headings:** [Calisto MT]()
+		- [Suez One](https://fonts.google.com/specimen/Suez+One)
+		- [Palatino Black](https://www.fonts.com/font/linotype/palatino/black)
+		- [Georgia Bold](https://www.fonts.com/font/microsoft-corporation/georgia/bold)
+	- **Monospace:** [JetBrains Mono Medium](https://www.jetbrains.com/lp/mono/)
+		- [Recursive Mono Casual Static Medium](https://www.recursive.design/)
 
 # Preview
 ![](ITS.png)
 
 
 ## Darkmode
-
 ![](Darkmode.png)
 
 **Features**
@@ -95,16 +92,48 @@ Theme for my Obsidian Story Vault: ***In The Shadows.***
 **Edit Mode**
 ![](Lightmode-Editing.png)
 
+# CSS Classes
+CSS Classes to add in the frontmatter/yaml to change the way page looks.
 
+**Example:**
+```
+---
+cssclass: table, t-c, no-m
+---
+```
+
+Classes | Description
+---|---|
+`no-m` | Fully hide Frontmatter on just that page
+`justified` | Justifies text
+`readable` | Set readable line width to just that page when readable line width is off
+`writing` | Centers Headings, justifies text, auto sets readable line width
+`poem` | Center text to center
+`kanban` | Turn lists into kanban-like boards
+`table` | First column background darker and text bolded
+`t-c` | Center tables
 
 # `<i></i>` Attributes
 
-Alt="_" | Description
+Alt="\_" | Description
 ---|---|
 `left` | Move text of `<i>` to the left
 `right` | Move text of `<i>` to the right
 `no-bg` | Remove the background color of `<i>`
 `clear` | Equivalent of a `<br>` or an enter
+
+# Aside
+Recommend using `<s class="aside-">Text</s>` to keep markdown formatting.
+
+Class | Description |
+---|---|
+`aside-show` | Aside content will be shown in the margin of the page.
+`aside-hide` | Aside content will be hidden and only display an icon 🗨.<br>To see comment, hover over the icon
+`aside-in` | Aside content will be embedded inside the page.
+
+**Examples:**
+Aside code is highlighted.
+![](https://i.imgur.com/vOetMco.png)
 
 
 # Image Positions
@@ -157,7 +186,8 @@ Example | Description |
 `![[image.png\|portrait+tall]]`| `portrait+tall` will crop the image width-wise to about 50% while setting the height to a standard of about 500px.
 
 
-### Profile *Not fully working unless you use the `pc` property.*
+### Profile
+> ⚠ Not fully working unless you use the `pc` property.
 
 Example | Description |
 ---|---|
@@ -203,12 +233,13 @@ Example | Description |
 `![[image.png\|p+bc]]`| `p+bc` will move the inside of the image to the center bottom, slightly higher than `pb`|
 `![[image.png\|p+bcc]]`| `p+bcc` will move the inside of the image to the center bottom, slightly higher than `p+bc`|
 
+#### Examples
 *Note that these side by side images are done with the .img-grid cssclass that now no longer works*
 
-#### Left/Right Example
+**Left/Right**
 ![](https://i.imgur.com/J7bsqq0.png)
 
-#### Top/Bottom Example
+**Top/Bottom Example**
 ![](https://i.imgur.com/eaHgjBs.png)
 
 
@@ -245,6 +276,8 @@ Example | Description
 
 **Embed Adjustments use the same [parameters](#sizing) as the images for resizing it and [moving it](#left-right-center) (except for `c`).**
 
+
+
 # Alternate Themes
 
 ## SlRvb
@@ -259,8 +292,8 @@ Example | Description
 
 **Fonts used:**
 - Headings: [Cinzel Decorative](https://fonts.google.com/specimen/Cinzel+Decorative)
-    - [Oleo Script](https://fonts.google.com/specimen/Oleo+Script)
-    - [Lobster](https://fonts.google.com/specimen/Lobster?)
+	- [Oleo Script](https://fonts.google.com/specimen/Oleo+Script)
+	- [Lobster](https://fonts.google.com/specimen/Lobster?)
 - Monospace: [Fira Code](https://github.com/tonsky/FiraCode)
 
 ## School Days
@@ -270,5 +303,5 @@ Example | Description
 **Fonts used:**
 - Vault Name: [Jersey M54](https://www.dafont.com/jersey-m54.font)
 - Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
-    - [RocknRoll One](https://fonts.google.com/specimen/RocknRoll+One)
+	- [RocknRoll One](https://fonts.google.com/specimen/RocknRoll+One)
 - Monospace: [Recursive Mono Linear Static Medium](https://www.recursive.design/)

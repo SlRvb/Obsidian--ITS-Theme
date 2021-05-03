@@ -161,6 +161,99 @@ settings:
         type: variable-text
         default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
     -
+        title: Specific Decoration Changes
+        id: Dec-Spec
+        type: heading
+        level: 3
+		collapsed: true
+    -
+        title: Different Preview/Editor Decorations
+        description: Toggle on to use different styles for italics, bold, and strikethrough
+        id: text-spec
+        type: class-toggle
+    -
+        title: Specific Decoration Fonts
+        id: Dec-Spec-Fonts
+        type: heading
+        level: 4
+    -
+        title: Preview Italic Font
+        id: em-pre-f
+        type: variable-text
+        default: "Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    -
+        title: Editor Italic Font
+        id: em-ed-f
+        type: variable-text
+        default: "Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    -
+        title: Preview Bold Font
+        id: b-pre-f
+        type: variable-text
+        default: "Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    -
+        title: Editor Bold Font
+        id: b-ed-f
+        type: variable-text
+        default: "Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    -
+        title: Preview Strikethrough Font
+        id: del-pre-f
+        type: variable-text
+        default: "Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    -
+        title: Editor Strikethrough Font
+        id: del-ed-f
+        type: variable-text
+        default: "Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    -
+        title: Specific Decoration Colors
+        id: Dec-Spec-Colors
+        type: heading
+        level: 4
+    -
+        title: Preview Italic Color
+        id: em-pre-c
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bccad8'
+        default-light: '#697580'
+    -
+        title: Editor Italic Color
+        id: em-ed-c
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bccad8'
+        default-light: '#697580'
+    -
+        title: Preview Bold Color
+        id: b-pre-c
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bccad8'
+        default-light: '#697580'
+    -
+        title: Editor Bold Color
+        id: b-ed-c
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bccad8'
+        default-light: '#697580'
+    -
+        title: Preview Strikethrough Color
+        id: del-pre-c
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bccad8'
+        default-light: '#697580'
+    -
+        title: Editor Strikethrough Color
+        id: del-ed-c
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bccad8'
+        default-light: '#697580'
+    -
         title: Specific View Heading Changes
         id: Heading-Specific
         type: heading
@@ -349,7 +442,6 @@ settings:
         min: 18
         max: 40
         step: 2
-	
 	-
         title: Heading Colors
         id: Spec-Colors-Head
@@ -971,6 +1063,10 @@ settings:
     /**/
     --em-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --em-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --b-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --b-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --del-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --del-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .theme-dark {
@@ -1088,6 +1184,11 @@ settings:
     --sphd-ed-6: #d6b6bc;
 
     --em-pre-c: var(--text);
+    --em-ed-c: var(--text);
+    --b-pre-c: var(--text);
+    --b-ed-c: var(--text);
+    --del-pre-c: var(--text);
+    --del-ed-c: var(--text);
 }
 
 .theme-light {
@@ -1207,6 +1308,13 @@ settings:
     --sphd-ed-4: #ff7482;
     --sphd-ed-5: #ad8f8f;
     --sphd-ed-6: #d6b6bc;
+
+    --em-pre-c: var(--text);
+    --em-ed-c: var(--text);
+    --b-pre-c: var(--text);
+    --b-ed-c: var(--text);
+    --del-pre-c: var(--text);
+    --del-ed-c: var(--text);
 }
 
 
@@ -4388,29 +4496,29 @@ g.classGroup line {
     font-size: var(--sphd-ed-fs-6);
 }
 
-.text-spec-pre em {
+.text-spec .markdown-preview-view em {
     font-family: var(--em-pre-f);
     color: var(--em-pre-c);
 }
-.text-spec-ed .cm-em {
+.text-spec .cm-em {
     font-family: var(--em-ed-f);
     color: var(--em-ed-c);
 }
-.text-spec-pre strong {
-    font-family: var(--em-pre-f);
-    color: var(--em-pre-c);
+.text-spec .markdown-preview-view strong {
+    font-family: var(--b-pre-f);
+    color: var(--b-pre-c);
 }
-.text-spec-ed .cm-strong {
-    font-family: var(--em-ed-f);
-    color: var(--em-ed-c);
+.text-spec .cm-strong {
+    font-family: var(--b-ed-f);
+    color: var(--b-ed-c);
 }
-.text-spec-pre del {
-    font-family: var(--em-pre-f);
-    color: var(--em-pre-c);
+.text-spec .markdown-preview-view del {
+    font-family: var(--del-pre-f);
+    color: var(--del-pre-c);
 }
-.text-spec-ed .cm-strikethrough {
-    font-family: var(--em-ed-f);
-    color: var(--em-ed-c);
+.text-spec .cm-strikethrough {
+    font-family: var(--del-ed-f);
+    color: var(--del-ed-c);
 }
 
 

@@ -142,6 +142,7 @@ settings:
         id: Font-Specific
         type: heading
         level: 3
+        collapsed: true
     -
         title: Different Preview/Editor Text
         description: If toggled on, Text only affects UI text.
@@ -164,6 +165,7 @@ settings:
         id: Heading-Specific
         type: heading
         level: 3
+        collapsed: true
     -
 		title: Specific Heading Adjustments
 		description: Toggle on to edit headings individually.
@@ -620,6 +622,7 @@ settings:
 		id: Bullet-Lists
 		type: heading
 		level: 4
+        collapsed: true
 	-
 		title: Specific Line Size
 		id: b-line
@@ -634,6 +637,7 @@ settings:
 		id: Bullet-Line-Color
 		type: heading
 		level: 4
+        collapsed: true
 	-
 		title: Toggle Colorful Bullet Line Color
 		description: Toggle on to use the colorful bullet lines
@@ -963,6 +967,10 @@ settings:
     --sphd-ed-fs-4: 22px;
     --sphd-ed-fs-5: 20px;
     --sphd-ed-fs-6: 18px;
+
+    /**/
+    --em-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --em-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .theme-dark {
@@ -1078,6 +1086,8 @@ settings:
     --sphd-ed-4: #ff6a79;
     --sphd-ed-5: #ac7782;
     --sphd-ed-6: #d6b6bc;
+
+    --em-pre-c: var(--text);
 }
 
 .theme-light {
@@ -2446,25 +2456,6 @@ input[type="checkbox checked"] {
 .markdown-preview-sizer {
     min-height: auto !important;
 }
-/*Flush Table Embed of Blockquotes*/
-.table .markdown-embed-content > .markdown-preview-view blockquote {
-    margin: 0;
-    overflow: hidden !important;
-}
-
-/*Bolded Right Side Table*/
-.table td:nth-child(1) {
-    background-color: var(--outer-bar);
-    font-weight: 900;
-}
-.table th, .table td {
-    border: 0px;
-}
-/*Table Centered*/
-.t-c table {
-    margin-left: auto;
-    margin-right: auto
-}
 
 
 
@@ -2919,6 +2910,18 @@ iframe {
 
 
 
+/*----Export ... I'll figure this out eventually I swear----*/
+/*Fix Poems*/
+@media print {
+    .poem p {
+        text-align: center;
+        line-height: 1.3em;
+        margin-block-end: 4%;
+    }
+}
+
+
+
 
 
 
@@ -2944,7 +2947,6 @@ iframe {
 .no-m .frontmatter-container {
     display: none;
 }
-
 
 /*Justify text*/
 .justified p {
@@ -2982,6 +2984,27 @@ iframe {
     line-height: 1.3em;
     margin-block-end: 4%;
 }
+
+/*-Table-*/
+/*Bolded Right Side Table*/
+.table td:nth-child(1) {
+    background-color: var(--outer-bar);
+    font-weight: 900;
+}
+.table th, .table td {
+    border: 0px;
+}
+/*Table Centered*/
+.t-c table {
+    margin-left: auto;
+    margin-right: auto
+}
+/*Flush Table Embed of Blockquotes*/
+.table .markdown-embed-content > .markdown-preview-view blockquote {
+    margin: 0;
+    overflow: hidden !important;
+}
+
 
 /*-Comments/Asides-*/
 /*Hide Aside and hover to reveal it*/
@@ -4321,18 +4344,18 @@ g.classGroup line {
 }
 .head-spec h4 { 
     color: var(--sphd-pre-4);
-    font-family: var(--sphd-pre-ff-2);
-    font-size: var(--sphd-pre-fs-2);
+    font-family: var(--sphd-pre-ff-4);
+    font-size: var(--sphd-pre-fs-4);
 }
 .head-spec h5 { 
     color: var(--sphd-pre-5);
-    font-family: var(--sphd-pre-ff-2);
-    font-size: var(--sphd-pre-fs-2);
+    font-family: var(--sphd-pre-ff-5);
+    font-size: var(--sphd-pre-fs-5);
 }
 .head-spec h6 { 
     color: var(--sphd-pre-6);
-    font-family: var(--sphd-pre-ff-1);
-    font-size: var(--sphd-pre-fs-1);
+    font-family: var(--sphd-pre-ff-6);
+    font-size: var(--sphd-pre-fs-6);
 }
 .head-spec .cm-header-1 { 
     color: var(--sphd-ed-1);
@@ -4346,24 +4369,52 @@ g.classGroup line {
 }
 .head-spec .cm-header-3 { 
     color: var(--sphd-ed-3);
-    font-family: var(--sphd-ed-ff-2);
+    font-family: var(--sphd-ed-ff-3);
     font-size: var(--sphd-ed-fs-3);
 }
 .head-spec .cm-header-4 { 
     color: var(--sphd-pre-4);
-    font-family: var(--sphd-ed-ff-2);
-    font-size: var(--sphd-ed-fs-2);
+    font-family: var(--sphd-ed-ff-4);
+    font-size: var(--sphd-ed-fs-4);
 }
 .head-spec .cm-header-5 { 
     color: var(--sphd-pre-5);
-    font-family: var(--sphd-ed-ff-2);
-    font-size: var(--sphd-ed-fs-2);
+    font-family: var(--sphd-ed-ff-5);
+    font-size: var(--sphd-ed-fs-5);
 }
 .head-spec .cm-header-6 { 
     color: var(--sphd-pre-6);
-    font-family: var(--sphd-ed-ff-1);
-    font-size: var(--sphd-ed-fs-1);
+    font-family: var(--sphd-ed-ff-6);
+    font-size: var(--sphd-ed-fs-6);
 }
+
+.text-spec-pre em {
+    font-family: var(--em-pre-f);
+    color: var(--em-pre-c);
+}
+.text-spec-ed .cm-em {
+    font-family: var(--em-ed-f);
+    color: var(--em-ed-c);
+}
+.text-spec-pre strong {
+    font-family: var(--em-pre-f);
+    color: var(--em-pre-c);
+}
+.text-spec-ed .cm-strong {
+    font-family: var(--em-ed-f);
+    color: var(--em-ed-c);
+}
+.text-spec-pre del {
+    font-family: var(--em-pre-f);
+    color: var(--em-pre-c);
+}
+.text-spec-ed .cm-strikethrough {
+    font-family: var(--em-ed-f);
+    color: var(--em-ed-c);
+}
+
+
+
 
 
 /*-Plugin Toggles-*/
@@ -4390,16 +4441,6 @@ g.classGroup line {
 }
 .dv .dataview td:nth-child(1) .internal-link:hover {
     color: var(--accent2) !important;
-}
-
-/*----Exported PDFs----*/
-/*Fix Poems*/
-@media print {
-    .poem p {
-        text-align: center;
-        line-height: 1.3em;
-        margin-block-end: 4%;
-    }
 }
 
 

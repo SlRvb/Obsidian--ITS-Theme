@@ -3932,14 +3932,18 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     height: 1.5em !important;
 }
 /*Fix Checked Item*/
-.checklist-plugin-main .checked {
+.checklist-plugin-main .compact .checked {
     border-radius: var(--radius) !important;
     position: relative !important;
     top: -2px !important;
     left: -2px !important;
     background-color: var(--accent) !important;
 }
-
+.checklist-plugin-main .classic .checked {
+    border-radius: var(--radius) !important;
+    position: absolute !important;
+    background-color: var(--accent) !important;
+}
 
 /*Button Plugin*/
 .button-default {

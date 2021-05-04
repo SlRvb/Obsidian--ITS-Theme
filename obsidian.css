@@ -1346,6 +1346,10 @@ settings:
 .side-dock-settings {
     margin-bottom: 1em;
 }
+.workspace-ribbon.is-collapsed {
+    border: none;
+    background-color: var(--outer-bar);
+}
 
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
@@ -2376,7 +2380,9 @@ ul, ol {
 .markdown-preview-view ol > li.task-list-item {
     padding-left: 10px;
 }
-
+.markdown-preview-view ul > li.task-list-item {
+    text-indent: -1.3em;
+}
 
 /*Fix breaking when Space in between Lists*/
 ul li.task-list-item > p {
@@ -2423,19 +2429,19 @@ li:nth-child(even) {
     border-left: var(--b-line) solid var(--accent2);
 }
 
-.markdown-preview-view ul > li.task-list-item {
-    text-indent: -1.3em;
-}
-
 
 /*List Arrows*/
-.markdown-preview-view .list-collapse-indicator {
-    padding-left: 7em;
+.markdown-preview-view ul .list-collapse-indicator {
+    padding-left: 1em;
     color: var(--soft-text);
-    position: absolute;
+    position: relative;
+}
+.markdown-preview-view ol .list-collapse-indicator {
+    padding-left: .5em;
+    position: relative;
 }
 .markdown-preview-view .task-list-item .list-collapse-indicator {
-    padding-left: 10px;
+    padding-left: .5em;
     position: relative;
 }
 

@@ -3107,6 +3107,11 @@ iframe {
     margin-left: auto;
     margin-right: auto
 }
+/*Table Widened*/
+.t-w table {
+    width: 100%;
+}
+
 /*Flush Table Embed of Blockquotes*/
 .table .markdown-embed-content > .markdown-preview-view blockquote {
     margin: 0;
@@ -3892,7 +3897,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 }
 
 /*Reduce Padding*/
-.checklist-plugin-main.svelte-1rowz1t { 
+.checklist-plugin-main { 
     margin-top: -.8em !important;
     padding: .4em !important; 
 }
@@ -3925,6 +3930,14 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 .checklist-plugin-main .classic .checkbox { 
     width: 1.5em !important;
     height: 1.5em !important;
+}
+/*Fix Checked Item*/
+.checklist-plugin-main .checked {
+    border-radius: var(--radius) !important;
+    position: relative !important;
+    top: -2px !important;
+    left: -2px !important;
+    background-color: var(--accent) !important;
 }
 
 

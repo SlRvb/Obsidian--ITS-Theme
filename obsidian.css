@@ -1137,11 +1137,13 @@ settings:
     --text: #bccad8 /*#dcddde*/;
     --headers: #c14343;
     --soft-text: #aab3ca/*#d04e4e*/;
-    --code-bg: #232831;
     --code-text: #fa4545;
-    --embed-bg: var(--dark-sidebar) /*#111417*/;
     --footnote: #6e7e89;
-    
+
+    --code-bg: #232831;
+    --embed-bg: var(--dark-sidebar) /*#111417*/;
+    --aside-bg: var(--outer-bar);
+
     --th: var(--dark-accent);
     --td: #030a1460;
     
@@ -1259,10 +1261,12 @@ settings:
     --note: #f8fbff;
     --text: #697580;
     --soft-text: #d04e4e;
-    --code-bg: var(--embed-bg) /*#eef6ff*/;
     --code-text: #ea4262;
-    --embed-bg: var(--dark-sidebar) /*#ebf1f8*/;
     --footnote: #8996a0;
+
+    --code-bg: var(--embed-bg) /*#eef6ff*/;
+    --embed-bg: var(--dark-sidebar) /*#ebf1f8*/;
+    --aside-bg: var(--outer-bar);
     
     --th: var(--headers);
     --td: #d0ddef62;
@@ -1888,7 +1892,6 @@ b.u-pop {
     padding: 0 .1em;
     border-left: 1px solid var(--th);
     border-top: 1px solid var(--th);
-    box-shadow: 2px 1px 20px var(--outer-bar);
 }
 
 
@@ -2786,6 +2789,7 @@ input[type="checkbox checked"] {
 
 /*--Blockquote--*/
 .markdown-preview-view blockquote {
+    display: flow-root;
     border: 0px solid var(--bg);
     background-color: var(--embed-bg);
     border-left-width: 8px;
@@ -3794,7 +3798,7 @@ img[alt*="sprf"]{
 /*--Blockquote Adjustments--*/
 /*Turn b into a blockquote without the quotations*/
 b {
-    display: block;
+    display: flow-root;
     border: 0px solid var(--lines);
     background-color: var(--outer-bar);
     border-left-width: 8px;

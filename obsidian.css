@@ -599,7 +599,7 @@ settings:
         default-light: '#a6bbde'
     - 
         title: Folder
-        description: Closed folder icon color.
+        description: Open folder icon color.
         id: folder
         type: variable-themed-color
         format: hex
@@ -1883,7 +1883,6 @@ b.u-pop {
 
 /*--Bottom Bar--*/
 .app-container .status-bar {
-    display: unset;
     position: absolute;
     background-color: var(--outer-bar);
     color: var(--text-muted);
@@ -2944,6 +2943,9 @@ iframe {
 }
 .workspace-drawer-active-tab-header {
     margin: 1em 0 0 0;
+}
+.is-mobile .status-bar {
+    display: none;
 }
 
 /*Fix Slider*/

@@ -1,8 +1,13 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N64JN4L)
+
 # ITS Theme
 **By SlRvb**
 
 > Theme for my Obsidian Story Vault: **In The Shadows**.
 
+![](ITS.png)
+
+---
 # Table of Contents
 - [Features](#features)
 - [Preview](#images)
@@ -13,6 +18,7 @@
 - [Embed Adjustments](#embed-adjustments)
 - [Aside](#aside)
 - [Alternate Themes Snippets](#alternate-themes)
+
 
 # Features
 - **Dark and Light mode**
@@ -72,8 +78,6 @@
 		- [Recursive Mono Casual Static Medium](https://www.recursive.design/)
 
 # Preview
-![](ITS.png)
-
 
 ## Darkmode
 ![](Darkmode.png)

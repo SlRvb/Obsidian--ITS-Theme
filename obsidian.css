@@ -1747,7 +1747,7 @@ b.u-pop {
 
 /*Setting Item Padding Reduction*/
 .setting-item {
-    padding: 1% 0 1% 0;
+    padding: .5em 0;
 }
 
 /*Settings Right*/
@@ -2237,16 +2237,12 @@ a:hover {
     color: var(--inactive);
 }
 
-
 /*--Horizontal Linebreak, HR--*/ 
-.markdown-preview-view hr, .HyperMD-hr-bg {
-    height: 0;
-    border: 1px solid var(--hr);
-    
+.markdown-preview-view hr {
+    border-top: 2px solid var(--hr);
 }
 .HyperMD-hr-bg {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    border-top: 2px solid var(--hr);
 }
 
 
@@ -2631,12 +2627,6 @@ input[type="checkbox checked"] {
 }
 
 
-/*Fix Arrow*/
-.frontmatter-container .collapse-indicator {
-    font-size: .9em;
-}
-
-
 /*Tags*/
 .frontmatter-container .tag {
     background-color: var(--tag);
@@ -2970,6 +2960,13 @@ iframe {
 }
 .is-mobile .view-content {
     height: calc(100% - .5em);
+}
+
+/*Mobile Fold*/
+.is-mobile .cm-foldPlaceholder {
+    background-color: var(--note);
+    border: 0;
+    color: var(--lite-accent);
 }
 
 /*Kanban Mobile*/

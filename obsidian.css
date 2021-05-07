@@ -2134,7 +2134,7 @@ h4:after {
     background-color: var(--code-bg);
     line-height: 1.4em;
     border-radius: var(--radius);
-    font-size: var(--f-s-text);
+    font-size: calc(var(--f-s-text) - .15rem);
 }
 
 .markdown-preview-view pre[class*="language-"],

@@ -1987,7 +1987,7 @@ body {
     text-rendering: optimizeLegibility;
     font-family: var(--default-font);
     line-height: 1.5em;
-    font-size: 1em;
+    font-size: var(--);
     background-color: var(--background-primary);
     color: var(--text-normal);
 }
@@ -2175,7 +2175,7 @@ h4:after {
     background-color: var(--code-bg);
     color: var(--code-text);
     font-family: var(--font-monospace);
-    font-size: var(--f-s-text);
+    font-size: calc(var(--f-s-text) - .15rem);
     z-index: 0;
 }
 
@@ -2205,19 +2205,6 @@ mjx-container[jax="CHTML"][display="true"] {
 /*Math Editor Text*/
 .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end){
     color: var(--headers);
-}
-
-/*Emphasis/Italic*/
-em {
-
-}
-
-/*Strong/Bold*/
-strong {
-
-}
-s {
-    
 }
 
 /*--Links--*/
@@ -3251,6 +3238,20 @@ iframe {
 /*Shrink Scrollbar*/
 .aside > ::-webkit-scrollbar {
     width: 5px;
+}
+
+#col {
+    display: block;
+    width: 100%;
+    padding-bottom:100%; 
+}
+
+#font {
+    display: block;
+    text-decoration: unset;
+    text-align: center;
+    font-size: 7rem;
+    line-height: 1em;
 }
 
 
@@ -4623,3 +4624,9 @@ g.classGroup line {
 }
 
 
+/*Rem to Em*/
+.theme-dark.is-mobile,
+.theme-light.is-mobile {
+    --f-s-text: 1em;
+    --f-s-pre: 1em;
+}

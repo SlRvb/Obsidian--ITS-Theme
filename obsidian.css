@@ -40,7 +40,7 @@ settings:
         id: f-s-text
         type: variable-number-slider
         default: 1
-        format: em
+        format: rem
         min: .6
         max: 1.5
         step: .1
@@ -50,7 +50,7 @@ settings:
         id: f-s-pre
         type: variable-number-slider
         default: 1
-        format: em
+        format: rem
         min: .6
         max: 1.5
         step: .1
@@ -1018,8 +1018,8 @@ settings:
     /*Sizes*/
     --scroll-size: 7px;
     --lh: 1.5em;
-    --f-s-pre: 1em;
-    --f-s-text: 1em;
+    --f-s-pre: 1rem;
+    --f-s-text: 1rem;
     --f-s-h: 34px;
     --f-w-h: 600;
     --h-line: 100%;
@@ -1123,7 +1123,7 @@ settings:
     --fg: #cfd7dd;
     --side-bar: var(--note);
     --outer-bar: #0b0f13 /*#0e0f15*/;
-    --dark-sidebar: #10161d;
+    --dark-sidebar: #0d1014;
     --inactive: #586477;
     --outline: var(--outer-bar);
     
@@ -1142,10 +1142,10 @@ settings:
 
     --code-bg: #232831;
     --embed-bg: var(--dark-sidebar) /*#111417*/;
-    --aside-bg: var(--outer-bar);
+    --aside-bg: #10141a;
 
     --th: var(--dark-accent);
-    --td: #030a1460;
+    --td: #06080c60;
     
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);
@@ -1658,9 +1658,18 @@ input[type='number']:hover {
     background-color: var(--interactive-accent);
     color: var(--text-dl);
 }
-
-
-
+/*Search Downdown*/
+.suggestion { 
+    overflow-x: none;
+}
+.suggestion-item{ overflow-wrap: anywhere; }
+.suggestion-container.mod-search-suggestion {
+    border-radius: var(--radius);
+    padding: 0;
+}
+.search-suggest-item.is-selected {
+    border-radius: var(--radius);
+}
 
 /*-Graph Settings-*/
 .graph-controls.is-close {
@@ -1671,9 +1680,21 @@ input[type='number']:hover {
     background-color: var(--side-bar);
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--radius);
+    padding: .5em;
+    padding-left: .2em;
+}
+.graph-control-section:not(.is-collapsed) .graph-control-section-header {
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
+}
+.graph-controls .setting-item:not(.setting-item-heading) {
+    padding: .5em .8em;
 }
 .graph-controls .setting-item-name {
     color: var(--text);
+}
+.graph-controls .setting-item:hover {
+    color: var(--accent);
 }
 
 /*Arrows*/
@@ -1711,31 +1732,16 @@ input[type='range']::-webkit-slider-thumb {
 
 
 
-/*--Setings Menu--*/
+/*--Settings Menu--*/
 /*Square Settings Background*/
 .modal {
     border-radius: var(--radius);
 }
 
-/*Undo b quote formatting*/
-.setting-item-description b,
-b.u-pop {
-    font-weight: 900;
-    color: var(--headers) !important;
-    display: inline-block;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    background: transparent;
+/*Setting Header Underline*/
+.setting-item-heading {
+    border-bottom: 2px solid var(--headers);
 }
-
-.setting-item ul li::before {
-    position: relative;
-    margin-right: .5em;
-}
-.setting-item li {
-}
-
 /*Setting Item Title*/
 .setting-item-name {
     font-weight: 900;
@@ -1745,10 +1751,45 @@ b.u-pop {
     color: var(--footnote);
 }
 
-/*Setting Item Padding Reduction*/
-.setting-item {
-    padding: .5em 0;
+/*Setting Items*/
+.setting-item:not(.setting-item-heading) { 
+    padding: .5em 1.5em; 
+    border: 0;
 }
+.setting-item:not(.setting-item-heading):nth-child(even) {
+    background-color: var(--td);
+    border: 0;
+}
+/*Settings Item Hover*/
+.modal.mod-settings .setting-item:not(.setting-item-heading):hover .setting-item-name { 
+    color: var(--headers);
+    padding-left: 1em;
+    transition-duration: .2s;
+}
+.modal.mod-settings .setting-item:not(.setting-item-heading):hover .setting-item-description {
+    padding-left: 1.2em;
+    transition-duration: .2s;
+}
+
+
+/*Undo b quote formatting
+.setting-item-description b,
+b.u-pop {
+    font-weight: 900;
+    color: var(--headers) !important;
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+}*/
+
+.setting-item ul li::before {
+    position: relative;
+    margin-right: .5em;
+}
+
+
 
 /*Settings Right*/
 .modal.mod-settings .vertical-tab-content-container {
@@ -1782,6 +1823,7 @@ b.u-pop {
     background-color: var(--embed-bg);
     background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
     border-radius: var(--radius);
+    border: 1px solid var(--table);
 }
 
 /*Account Header 2*/
@@ -2092,7 +2134,7 @@ h4:after {
     background-color: var(--code-bg);
     line-height: 1.4em;
     border-radius: var(--radius);
-    font-size: 14px;
+    font-size: var(--f-s-text);
 }
 
 .markdown-preview-view pre[class*="language-"],
@@ -2133,7 +2175,7 @@ h4:after {
     background-color: var(--code-bg);
     color: var(--code-text);
     font-family: var(--font-monospace);
-    font-size: 14px;
+    font-size: var(--f-s-text);
     z-index: 0;
 }
 
@@ -2342,7 +2384,7 @@ li::marker{
     color: transparent;
 }
 /*Lighten Numbered List Marker Color*/
-ol > li::marker {
+ol li::marker {
     color: var(--headers);
 }
 
@@ -2801,6 +2843,8 @@ input[type="checkbox checked"] {
 /*Remove Margin From Block embedding*/
 blockquote p { margin: 0px; }
 
+/*Fix Blockquote Mark*/
+.markdown-preview-view li blockquote:before { top: .3em; }
 
 
 
@@ -3162,7 +3206,7 @@ iframe {
     color: unset;
     width: 400px;
     height: unset;
-    background-color: var(--outer-bar);
+    background-color: var(--aside-bg);
     padding: 1em;
     padding-top: .5em;
     z-index: 3;
@@ -3180,7 +3224,7 @@ iframe {
     margin-bottom: .2em;
     clear: right;
     width: 400px;
-    background-color: var(--outer-bar);
+    background-color: var(--aside-bg);
     padding: 1em;
     box-shadow: .3em .3em var(--headers);
 }
@@ -3194,7 +3238,7 @@ iframe {
     margin-bottom: .2em;
     clear: right;
     width: 18em;
-    background-color: var(--outer-bar);
+    background-color: var(--aside-bg);
     padding: 1em;
     box-shadow: .3em .3em var(--headers);
     z-index: 3;
@@ -3796,7 +3840,7 @@ img[alt*="sprf"]{
 
 /*--Blockquote Adjustments--*/
 /*Turn b into a blockquote without the quotations*/
-b {
+.markdown-preview-view b {
     display: flow-root;
     border: 0px solid var(--lines);
     background-color: var(--outer-bar);
@@ -4220,6 +4264,7 @@ g.classGroup line {
 /*Text Adjustments*/
 .style-settings-heading {
     padding-bottom: 1px !important;
+    border-bottom: 2px solid var(--accent) !important;
 }
 .style-settings-heading .setting-item-name { 
     color: var(--headers);

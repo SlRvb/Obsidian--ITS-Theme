@@ -2389,6 +2389,9 @@ ul li::before {
     margin-bottom: auto;
     font-size: 16px;
 }
+ul li:nth-child(even)::before {
+    color: var(--accent2);
+}
 li.task-list-item::before {
     visibility: collapse;
 }
@@ -2447,7 +2450,7 @@ ul li > p {
 /*Preview Bullet Lines*/
 /*Bullet Line New*/
 li {
-    padding-left: 4px;
+    padding-left: 5px;
     border-left: var(--b-line) solid var(--accent);
     line-height: var(--lh);
 }
@@ -3004,6 +3007,14 @@ iframe {
 .is-mobile .kanban ul, 
 .is-mobile .kanban ol {
     padding-inline-start: 0;
+}
+
+/*Rem to Em*/
+/*Fix text sizing issue on mobile caused by rem*/
+.theme-dark.is-mobile,
+.theme-light.is-mobile {
+    --f-s-text: 1em;
+    --f-s-pre: 1em;
 }
 
 
@@ -4624,9 +4635,3 @@ g.classGroup line {
 }
 
 
-/*Rem to Em*/
-.theme-dark.is-mobile,
-.theme-light.is-mobile {
-    --f-s-text: 1em;
-    --f-s-pre: 1em;
-}

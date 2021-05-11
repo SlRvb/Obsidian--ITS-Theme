@@ -1,0 +1,100 @@
+:root {
+    --font: 'Norwester', 'Staatliches', 'Racing Sans One', 'Heavitas', 'Playfair Display', serif;
+}
+
+.theme-dark, .theme-light {
+    --hr-sym: "🏴";
+}
+
+.theme-dark {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(113,132,162,0.13);
+
+    --text-selection: rgba(61, 82, 107, 0.25);
+    --text-highlight-bg: rgba(87, 113, 156, 0.4);
+    --text-highlight-bg-active: rgba(134, 168, 197, 0.4);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--hr);
+    
+    /*Colors*/
+    --deep-dark-accent: #222731;
+    --dark-accent: #333A49;
+    --outer-bar: #0E0F15;
+    --dark-sidebar: #090C0E;
+    --side-bar: var(--note);
+    
+    --note: #171B21;
+    --hr: #4F5B6C;
+
+    --accent: #516071;
+    --lite-accent: #8EA1B4;
+    --accent2: #889FC3;
+    --accent2-lite: #9DB2CF;
+    
+    --f-icon: #586477;
+    --folder: #F1F7FF;
+
+    --headers: #9DB1CA;
+    --text: #778495;
+    --soft-text: #AAB3CA;
+    --code-text: #708090;
+    --i-at: #5D7B98;
+    --footnote: #576571;
+    
+    --embed-bg: #0E0F15;
+    --aside-bg: var(--table);
+
+    --table: #242D3D;
+    --tag: #353F52;
+
+
+    --graph-bg: var(--note);
+    --graph-lines: #293E64;
+}
+
+    
+.theme-light {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(131,185,240,0.13);
+
+    --text-selection: rgba(163, 188, 218, 0.22);
+    --text-highlight-bg: rgba(129,155,199,0.25);
+    --text-highlight-bg-active: rgba(172,210,255,0.25);
+
+    /*Colors*/
+    --deep-dark-accent: #171C22;
+    --dark-sidebar: #F1F7FF;
+    
+    --headers: #748092;
+    --text: #8A949D;
+    --soft-text: #9AADBA;
+    --code-text: #819AB5;
+    --i-at: #8FAABE;
+    
+    --accent: #939BA3;
+    --lite-accent: #B4C6D2;
+    --accent2-lite: #000000;
+    --dark-accent: #EBF2F9;
+
+    --f-icon: #A6B4CC;
+    --folder: #8296A6;
+
+    --tag: #8999B3;
+    --inactive: #C0C8D6;
+}

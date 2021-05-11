@@ -97,7 +97,7 @@
 ![](Lightmode-Editing.png)
 
 # CSS Classes
-CSS Classes to add in the frontmatter/yaml to change the way page looks.
+CSS Classes to add in the frontmatter/yaml to change the way a page looks.
 
 **Example:**
 ```
@@ -112,7 +112,7 @@ Classes | Description
 `justified` | Justifies text
 `readable` | Set readable line width to just that page when readable line width is off
 `writing` | Centers Headings, justifies text, auto sets readable line width
-`poem` | Center text to center
+`poem` | Centers text
 `kanban` | Turn lists into kanban-like boards
 `table` | First column background darker and text bolded
 `t-c` | Center tables
@@ -124,7 +124,7 @@ Alt="\_" | Description
 `left` | Move text of `<i>` to the left
 `right` | Move text of `<i>` to the right
 `no-bg` | Remove the background color of `<i>`
-`clear` | Equivalent of a `<br>` or an enter
+`clear` | Equivalent of a `<br>` or an enter.
 
 # Aside
 Recommend using `<s class="aside-">Text</s>` to keep markdown formatting.
@@ -141,7 +141,7 @@ Aside code is highlighted.
 
 
 # Image Positions
-Obsidian internal images `![[]]` will change immediately, but for external images `![]()`Obsidian needs to be refreshed: `ctrl + r` to see the changes.
+Obsidian internal images `![[]]` will change immediately, but for external images `![]()`, the page needs to be reopened to see the changes. 
 
 ### Clear
 
@@ -153,13 +153,13 @@ Example | Description |
 
 Example | Description |
 ---|---|
-`![[image.png\|cover]]`| `cover` will resize the image maintaining aspect ratio and avoid stretching.
+`![[image.png\|cover]]`| `cover` will resize the image, maintain aspect ratio and avoid stretching.
 
 ### Sizing (Mostly for Customizable Version)
 
 Example | Description |
 ---|---|
-`![[image.png\|loc\|sban\|200]]`| Place the `\|<numbers>` sizing at the *end* of the image line and it will shrink the image to that size.
+`![[image.png\|loc\|sban\|200]]`| Place the `\|<numbers>` sizing at the *end* of the text and it will shrink the image to that size.
 
 
 ## Simplified Version

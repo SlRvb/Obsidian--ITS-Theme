@@ -685,6 +685,14 @@ settings:
         default-dark: '#3c5274'
         default-light: '#d6deea'
     -
+		title: Aside Background Color
+		id: aside-bg
+		description: Aside background color and dark theme setting alternating setting item color.
+		type: variable-themed-color
+		format: hex
+		default-dark: '#11151d'
+		default-light: '#eef3fd'
+    -
         title: Lists
         id: Lists
         type: heading
@@ -887,6 +895,14 @@ settings:
         default-dark: '#283846'
         default-light: '#ccd6eb'
     -
+		title: Foreground
+		description: Active file selected title color, Graph Node Color, Kanban Plugin Button color.
+		id: fg
+		type: variable-themed-color
+		format: hex
+		default-dark: '#cfd7dd'
+		default-light: '#912e2e'
+    -
         title: Highlights
         id: RGBA
         type: heading
@@ -981,6 +997,11 @@ settings:
         title: Dataview Adjustments
         description: Personal adjustments to some elements of dataview
         id: dv
+        type: class-toggle
+    -
+        title: Image Zoom
+        description: Hold and click an image to zoom into it.
+        id: img-zoom
         type: class-toggle
 */
 
@@ -1104,7 +1125,7 @@ settings:
     --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
     --interactive-accent-hover: var(--accent); /*Menu Button Hover*/
-    --interactive-success: #197300; /*??*/
+    --interactive-success: #599049; /*??*/
     
     --scrollbar-bg: rgba(255, 255, 255, 0.05);
     --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
@@ -1126,7 +1147,7 @@ settings:
     --dark-sidebar: #0d1014;
     --inactive: #586477;
     --outline: var(--outer-bar);
-    
+
     --folder: #e05858;
     --file: #aab3ca;
     --f-icon: var(--inactive);
@@ -1142,7 +1163,7 @@ settings:
 
     --code-bg: #232831;
     --embed-bg: var(--dark-sidebar) /*#111417*/;
-    --aside-bg: #10141a;
+    --aside-bg: #11151d;
 
     --th: var(--dark-accent);
     --td: #06080c60;
@@ -1446,7 +1467,6 @@ button, button.mod-cta {
     text-shadow: 0 0 0 var(--folder);
     margin-right: 4px;
     font-size: .9em;
-    
 }
 .nav-folder-children .nav-file-title-content::before {
     content: "📄"/*\1F5D0*/;
@@ -1757,7 +1777,7 @@ input[type='range']::-webkit-slider-thumb {
     border: 0;
 }
 .setting-item:not(.setting-item-heading):nth-child(even) {
-    background-color: var(--td);
+    background-color: var(--aside-bg);
     border: 0;
 }
 /*Settings Item Hover*/
@@ -1941,7 +1961,6 @@ b.u-pop {
 ::-webkit-scrollbar-thumb {
     background-color: var(--accent);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
-    
 }
 ::-webkit-scrollbar-thumb:active {
     background-color: var(--lite-accent);
@@ -1971,7 +1990,7 @@ b.u-pop {
 }
 
 /*Center Note Icons*/
-.view-header-icon, .view-actions{
+.view-header-icon, .view-actions {
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
@@ -2242,6 +2261,7 @@ a:hover {
     margin-right: -16px;
     display: inline-block;
     transform: rotate(-135deg);
+    vertical-align: text-top;
 }
 
 /*Editor Links*/
@@ -2316,11 +2336,11 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
 
 /* Kepano: https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164
 Enlarge Image:*/
-.markdown-preview-view img {
+.img-zoom .markdown-preview-view img {
 	cursor:zoom-in;
 }
 
-.markdown-preview-view img:active {
+.img-zoom .markdown-preview-view img:active {
 	cursor:zoom-out;
 	display:block;
 	z-index:100;
@@ -3265,6 +3285,16 @@ iframe {
     line-height: 1em;
 }
 
+/*--Special Blockquote Formatting--*/
+blockquote mark strong {
+	display: block;
+	color: var(--accent2) !important;
+	text-align: right;
+    background-color: transparent !important;
+    font-style: italic;
+}
+
+
 
 /*--Kanban--*/
 /*Credit: https://github.com/Braweria/Spectrum*/
@@ -3916,6 +3946,8 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     writing-mode: vertical-rl;
 }
 
+
+
 /*--Obsidian Tabs Plugin--*/
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf {
@@ -3927,6 +3959,12 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
 .view-header .view-header-title::before {
     background-color: var(--embed-bg) !important;
     color: var(--soft-text);
+}
+.plugin-tabs .view-header-title::before { 
+    display: inline !important;
+}
+.plugin-tabs .view-actions {
+    margin-top: .05em;
 }
 
 /*--Dataview Table--*/
@@ -4448,6 +4486,9 @@ g.classGroup line {
 }
 .title-wrap .view-header {
     height: auto;
+}
+.plugin-tabs.title-wrap .view-header {
+    height: auto !important;
 }
 
 /*Naked Embeds*/

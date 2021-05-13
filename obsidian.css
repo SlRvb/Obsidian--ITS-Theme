@@ -3288,7 +3288,7 @@ iframe {
 /*--Special Blockquote Formatting--*/
 blockquote mark strong {
 	display: block;
-	color: var(--accent2) !important;
+	color: var(--headers) !important;
 	text-align: right;
     background-color: transparent !important;
     font-style: italic;

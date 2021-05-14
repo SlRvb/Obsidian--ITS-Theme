@@ -1577,7 +1577,7 @@ button, button.mod-cta {
 
 /*Tag Pane Lines*/
 .tag-container .tree-item-children {
-    margin-left: 4%;
+    margin-left: .7em;
     border-left: 1px solid var(--lines);
     border-bottom: 1px solid var(--note);  /*Removes Dot!!*/
     transition: all 0.5s ease-in-out;
@@ -2512,6 +2512,10 @@ li:nth-child(even) {
     vertical-align: top;
 }
 
+.kanban-plugin .task-list-item-checkbox {
+    -webkit-appearance: checkbox;
+}
+
 /*Checkbox Checked color*/
 .markdown-preview-view .task-list-item-checkbox:checked {
     border: none;
@@ -3028,6 +3032,16 @@ iframe {
 .is-mobile .kanban ol {
     padding-inline-start: 0;
 }
+
+/*Style Settings Mobile Fix*/
+.is-mobile .style-settings-heading + .style-settings-container {
+    padding-left: 0;
+    border: none;
+}
+.is-mobile .setting-item-control button {
+    width: 2em !important;
+}
+
 
 /*Rem to Em*/
 /*Fix text sizing issue on mobile caused by rem*/
@@ -4311,11 +4325,28 @@ g.classGroup line {
     border-color: var(--accent); 
 }
 
+/*Indentation*/
+.style-settings-heading + .style-settings-container {
+    padding-left: 30px;
+    border-left: 2px solid var(--table);
+}
+
 /*Text Adjustments*/
+/*Headings*/
 .style-settings-heading {
     padding-bottom: 1px !important;
     border-bottom: 2px solid var(--accent) !important;
 }
+
+.style-settings-heading[data-level="2"] {
+    padding-bottom: 1px !important;
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+.style-settings-heading[data-level="3"]  {
+    border-bottom: 2px solid var(--accent2) !important;
+}
+
 .style-settings-heading .setting-item-name { 
     color: var(--headers);
     font-weight: 900;

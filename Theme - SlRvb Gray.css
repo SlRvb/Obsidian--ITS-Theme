@@ -1,8 +1,10 @@
 :root {
+    /*Section: Text > Fonts > Headings*/
     --font: 'Norwester', 'Staatliches', 'Racing Sans One', 'Heavitas', 'Playfair Display', serif;
 }
 
 .theme-dark, .theme-light {
+    /*Section: Note Elements > Horizontal Line Symbol*/
     --hr-sym: "🏴";
 }
 
@@ -26,40 +28,44 @@
     --text-accent-hover: var(--accent2);
     --interactive-accent: var(--hr);
     
-    /*Colors*/
-    --deep-dark-accent: #222731;
-    --dark-accent: #333A49;
-    --outer-bar: #0E0F15;
-    --dark-sidebar: #090C0E;
-    --side-bar: var(--note);
+    /*----Colors----*/
+    /*Section: Workspace > Colors*/
+    --outer-bar: #0E0F15;       /*Outer Sidebar*/
+    --dark-sidebar: #090C0E;    /*Dark Sidebar*/
+    --side-bar: var(--note);      /*Sidebar*/
+    --f-icon: #586477;          /*File*/
+    --folder: #F1F7FF;          /*Folder*/
+    --note: #171B21;            /*Note*/
     
-    --note: #171B21;
-    --hr: #4F5B6C;
-
-    --accent: #516071;
-    --lite-accent: #8EA1B4;
-    --accent2: #889FC3;
-    --accent2-lite: #9DB2CF;
     
-    --f-icon: #586477;
-    --folder: #F1F7FF;
-
-    --headers: #9DB1CA;
-    --text: #778495;
-    --soft-text: #AAB3CA;
-    --code-text: #708090;
-    --i-at: #5D7B98;
-    --footnote: #576571;
+    /*Section: Text > Colors*/
+    --headers: #9DB1CA;     /*Headings*/
+    --text: #778495;        /*Text*/
+    --soft-text: #AAB3CA;   /*Faint Text*/
+    --code-text: #708090;   /*Code Text*/
+    --i-at: #5D7B98;        /*<i></i>*/
+    --footnote: #576571;    /*Footnotes*/
     
-    --embed-bg: #0E0F15;
-    --aside-bg: var(--table);
-
-    --table: #242D3D;
+    /*Section: Tags > Tag Color*/
     --tag: #353F52;
+    
+    /*Section: Note Elements > Colors*/
+    --hr: #4F5B6C;          /*Horizontal Line*/
+    --embed-bg: #0E0F15;    /*Embed/Blockquote*/
+    --aside-bg: var(--table); /*Aside Background Color*/
+    
+    /*Section: Other Colors*/    
+    --accent: #516071;              /*Accent*/
+    --lite-accent: #8EA1B4;         /*Lite Accent*/
+    --accent2: #889FC3;             /*Accent 2*/
+    --accent2-lite: #9DB2CF;        /*Lite Accent 2*/
+    --dark-accent: #333A49;         /*Dark Accent*/
+    --deep-dark-accent: #222731;    /*Deep Dark Accent*/
+    --table: #242D3D;               /*Lines*/
 
-
-    --graph-bg: var(--note);
-    --graph-lines: #293E64;
+    /*Section: Graph Colors*/
+    --graph-bg: var(--note);    /*Graph Background*/
+    --graph-lines: #293E64;   /*Graph Lines*/
 }
 
     
@@ -77,24 +83,27 @@
     --text-highlight-bg: rgba(129,155,199,0.25);
     --text-highlight-bg-active: rgba(172,210,255,0.25);
 
-    /*Colors*/
-    --deep-dark-accent: #171C22;
-    --dark-sidebar: #F1F7FF;
+    /*----Colors----*/
+    /*Section: Workspace > Colors*/
+    --dark-sidebar: #F1F7FF;    /*Dark Sidebar*/
+    --f-icon: #A6B4CC;          /*File*/
+    --folder: #8296A6;          /*Folder*/
     
-    --headers: #748092;
-    --text: #8A949D;
-    --soft-text: #9AADBA;
-    --code-text: #819AB5;
-    --i-at: #8FAABE;
+    /*Section: Text > Colors*/
+    --headers: #748092;     /*Headings*/
+    --text: #8A949D;        /*Text*/
+    --soft-text: #9AADBA;   /*Faint Text*/
+    --code-text: #819AB5;   /*Code Text*/
+    --i-at: #8FAABE;        /*<i></i>*/
     
-    --accent: #939BA3;
-    --lite-accent: #B4C6D2;
-    --accent2-lite: #000000;
-    --dark-accent: #EBF2F9;
+    /*Section: Other Colors*/
+    --accent: #939BA3;              /*Accent*/
+    --lite-accent: #B4C6D2;         /*Lite Accent*/
+    --accent2-lite: #000000;        /*Lite Accent 2*/
+    --dark-accent: #EBF2F9;         /*Dark Accent*/
+    --deep-dark-accent: #171C22;    /*Deep Dark Accent*/
+    --inactive: #C0C8D6;            /*Inactive*/
 
-    --f-icon: #A6B4CC;
-    --folder: #8296A6;
-
+    /*Section: Tags > Tag Color*/
     --tag: #8999B3;
-    --inactive: #C0C8D6;
 }

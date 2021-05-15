@@ -52,7 +52,7 @@
     /*Section: Note Elements > Colors*/
     --hr: #4F5B6C;          /*Horizontal Line*/
     --embed-bg: #0E0F15;    /*Embed/Blockquote*/
-    --aside-bg: var(--table); /*Aside Background Color*/
+    --aside-bg: #12151d;    /*Aside Background Color*/
     
     /*Section: Other Colors*/    
     --accent: #516071;              /*Accent*/

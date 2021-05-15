@@ -943,6 +943,15 @@ settings:
         opacity: true
         default-dark: '#4d171746'
         default-light: '#e5959537'
+	-
+		title: Table
+		description: Alternating row/column color for table.
+		id: td
+		type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#06080c60'
+		default-light: '#d0ddef62'
     -
         title: Graph Colors
         id: Graph

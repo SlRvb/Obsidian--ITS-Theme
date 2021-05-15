@@ -80,21 +80,21 @@
 # Preview
 
 ## Darkmode
-![](Darkmode.png)
+![](Images/Darkmode.png)
 
 **Features**
-![](Darkmode-Features.png)
+![](Images/Darkmode-Features.png)
 **Edit Mode**
-![](Darkmode-Editing.png)
+![](Images/Darkmode-Editing.png)
 
 ## Lightmode
 
-![](Lightmode.png)
+![](Images/Lightmode.png)
 
 **Features**
-![](Lightmode-Features.png)
+![](Images/Lightmode-Features.png)
 **Edit Mode**
-![](Lightmode-Editing.png)
+![](Images/Lightmode-Editing.png)
 
 # CSS Classes
 CSS Classes to add in the frontmatter/yaml to change the way a page looks.
@@ -126,6 +126,10 @@ Classes | Description
 ---|---|
 `#col` | Show/Create a color block
 `#font` | Showcase a font in huge sized text
+
+**Examples:**
+![](https://i.imgur.com/FHYhFcR.png)
+![](https://i.imgur.com/3cSv8c3.png)
 
 # `<i></i>` Attributes
 
@@ -306,14 +310,16 @@ Example | Description
 # Alternate Themes
 
 ## SlRvb
-![](Theme-SlRvb--Darkmode.png)
-![](Theme-SlRvb--Lightmode.png)
+![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb.css)
+![](Images/Theme-SlRvb--Darkmode.png)
+![](Images/Theme-SlRvb--Lightmode.png)
 - Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
 - Monospace: [Fira Code](https://github.com/tonsky/FiraCode)
 
 ## D&D
-![](Theme-DnD--Darkmode.png)
-![](Theme-DnD--Lightmode.png)
+![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20DnD.css)
+![](Images/Theme-DnD--Darkmode.png)
+![](Images/Theme-DnD--Lightmode.png)
 
 **Fonts used:**
 - Headings: [Cinzel Decorative](https://fonts.google.com/specimen/Cinzel+Decorative)
@@ -322,11 +328,30 @@ Example | Description
 - Monospace: [Fira Code](https://github.com/tonsky/FiraCode)
 
 ## School Days
-![](Theme-School-Days--Darkmode.png)
-![](Theme-School-Days--Lightmode.png)
+![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20School%20Days.css)
+![](Images/Theme-School-Days--Darkmode.png)
+![](Images/Theme-School-Days--Lightmode.png)
 
 **Fonts used:**
 - Vault Name: [Jersey M54](https://www.dafont.com/jersey-m54.font)
 - Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
 	- [RocknRoll One](https://fonts.google.com/specimen/RocknRoll+One)
 - Monospace: [Recursive Mono Linear Static Medium](https://www.recursive.design/)
+
+## ITS Dark
+![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20ITS%20Dark.css)
+
+![](Images/Theme-ITS-Dark.png)
+
+## SlRvb Gray
+![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb%20Gray.css)
+
+![](Images/Theme-SlRvb-Gray--Darkmode.png)
+![](Images/Theme-SlRvb-Gray--Lightmode.png)
+
+**Fonts used:**
+- Headings: [Norwester](https://jamiewilson.io/norwester/)
+	- [Staatliches](https://fonts.google.com/specimen/Staatliches)
+	- [Racing Sans One](https://fonts.google.com/specimen/Racing+Sans+One)
+	- [Heavitas](https://www.dafont.com/heavitas.font)
+	- [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)

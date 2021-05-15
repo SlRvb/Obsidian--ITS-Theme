@@ -2039,6 +2039,10 @@ body {
     font-size: var(--f-s-text);
     z-index: 0;
 }
+.cm-comment {
+    font-family: var(--font-monospace);
+}
+
 /*Fix Cursor Highlight*/
 .CodeMirror-selected {
     z-index: 3;

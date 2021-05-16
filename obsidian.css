@@ -729,7 +729,7 @@ settings:
 		type: variable-number-slider
         default: 2
         format: px
-        min: 1
+        min: 0
         max: 3
         step: 1
 	-

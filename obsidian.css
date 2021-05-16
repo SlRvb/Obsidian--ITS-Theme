@@ -3008,6 +3008,10 @@ iframe {
 .is-mobile .status-bar {
     display: none;
 }
+/*Square UI*/
+.is-mobile .modal, .is-mobile .workspace {
+    border-radius: var(--radius) !important;
+}
 
 /*Fix Slider*/
 .is-mobile .setting-item.mod-slider .setting-item-control {
@@ -3020,6 +3024,7 @@ iframe {
 .is-mobile .nav-buttons-container {
     flex-wrap: wrap;
 }
+
 /*Hide Vault Title*/
 .is-mobile .nav-folder.mod-root > .nav-file-title,
 .is-mobile .nav-folder.mod-root > .nav-folder-title {
@@ -3051,10 +3056,9 @@ iframe {
     padding-left: 0;
     border: none;
 }
-.is-mobile .setting-item-control button {
-    width: 2em !important;
+.is-mobile .style-settings-container .setting-item-control .pcr-button {
+    width: 2em;
 }
-
 
 /*Rem to Em*/
 /*Fix text sizing issue on mobile caused by rem*/

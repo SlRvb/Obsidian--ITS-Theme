@@ -4049,7 +4049,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     display: inline !important;
 }
 .plugin-tabs .view-actions {
-    margin-top: .05em;
+    margin-top: -.05em;
 }
 
 /*--Dataview Table--*/

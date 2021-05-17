@@ -4045,8 +4045,9 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     background-color: var(--embed-bg) !important;
     color: var(--soft-text);
 }
-.plugin-tabs .view-header-title::before { 
-    display: inline !important;
+.plugin-tabs .view-header-icon, 
+.plugin-tabs .mod-active .view-header-title::before {
+    background-color: transparent !important;
 }
 .plugin-tabs .view-actions {
     margin-top: -.05em;

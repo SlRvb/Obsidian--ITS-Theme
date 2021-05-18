@@ -3178,59 +3178,7 @@ iframe {
 .writing h4,
 .writing h5,
 .writing h6 {
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-.writing .heading-collapse-indicator{
-    position: absolute;
-}
-.writing h1:before,
-.writing h2:before,
-.writing h3:before,
-.writing h4:before,
-.writing h5:before,
-.writing h6:before {
-    content: '';
-    height: 0;
-    margin-right: .3em;
-    flex: 1;
-}
-.writing h1:after,
-.writing h2:after,
-.writing h3:after,
-.writing h4:after,
-.writing h5:after,
-.writing h6:after{
-    content: '';
-    height: 0;
-    margin-left: .3em;
-    flex: 1;
-}
-
-.writing h1:before,
-.writing h1:after {
-    border-top: 6px solid var(--folder);
-}
-.writing h2:before,
-.writing h2:after {
-    border-top: 5px solid var(--lite-accent);
-}
-.writing h3:before,
-.writing h3:after {
-    border-top: 4px solid var(--headers);
-}
-.writing h4:before,
-.writing h4:after {
-    border-top: 3px solid var(--accent);
-}
-.writing h5:before,
-.writing h5:after {
-    border-top: 3px solid var(--hr);
-}
-.writing h6:before,
-.writing h6:after {
-    border-top: 3px solid var(--table);
+    text-align: center;
 }
 
 .writing p {
@@ -3240,6 +3188,69 @@ iframe {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/*Center Headings*/
+.hc h1,
+.hc h2,
+.hc h3,
+.hc h4,
+.hc h5,
+.hc h6 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.hc .heading-collapse-indicator{
+    position: absolute;
+}
+.hc h1:before,
+.hc h2:before,
+.hc h3:before,
+.hc h4:before,
+.hc h5:before,
+.hc h6:before {
+    content: '';
+    height: 0;
+    margin-right: .3em;
+    flex: 1;
+}
+.hc h1:after,
+.hc h2:after,
+.hc h3:after,
+.hc h4:after,
+.hc h5:after,
+.hc h6:after{
+    content: '';
+    height: 0;
+    margin-left: .3em;
+    flex: 1;
+}
+
+.hc h1:before,
+.hc h1:after {
+    border-top: 6px solid var(--folder);
+}
+.hc h2:before,
+.hc h2:after {
+    border-top: 5px solid var(--lite-accent);
+}
+.hc h3:before,
+.hc h3:after {
+    border-top: 4px solid var(--headers);
+}
+.hc h4:before,
+.hc h4:after {
+    border-top: 3px solid var(--accent);
+}
+.hc h5:before,
+.hc h5:after {
+    border-top: 3px solid var(--hr);
+}
+.hc h6:before,
+.hc h6:after {
+    border-top: 3px solid var(--table);
 }
 
 /*Poems*/

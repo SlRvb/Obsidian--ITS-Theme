@@ -64,12 +64,6 @@ img[alt*="clear"] {
     clear: both;
 }
 
-/*----Image Positions----*/
-/*Fix Float Issues*/
-img[alt*="clear"] {
-    clear: both;
-}
-
 /*Center Image*/
 img[alt*="c"] {
     display:block;

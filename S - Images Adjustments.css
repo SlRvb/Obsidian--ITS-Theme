@@ -9,7 +9,21 @@
     --med-tall: 600px;
     --tall: 700px;
 }
-
+/*----Mobile----*/
+@media (max-width: 500px) {
+    
+    .theme-dark, .theme-light {
+        /*Mobile Sizes*/
+        --radius: 0px;
+        --tiny: 100px;
+        --small: 150px;
+        --small-med: 200px;
+        --med-small: 250px;
+        --medium: 300px;
+        --med-tall: 450px;
+        --tall: 500px;
+    }
+}
 
 /*----<i alt=""></i>----*/
 i { 

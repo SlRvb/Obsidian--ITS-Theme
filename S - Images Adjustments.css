@@ -11,6 +11,45 @@
 }
 
 
+/*----<i alt=""></i>----*/
+i { 
+    display: block;
+    font-style: unset;
+    color: var(--text-normal);
+    text-align: center;
+    background-color: var(--background-secondary-alt);
+    padding: 0 1em;
+}
+
+i[alt*="right"] {
+    display: block;
+    text-align: right;
+    background-color: var(--background-secondary-alt);
+    padding-right: .8em;
+}
+
+
+i[alt*="left"] {
+    display: block;
+    text-align: left;
+    background-color: var(--background-secondary-alt);
+    padding-left: .8em;
+}
+
+i[alt*="clear"] {
+    clear: left;
+}
+
+i[alt*="nobg"] {
+    background-color: transparent;
+}
+
+/*----Image Positions----*/
+/*Fix Float Issues*/
+img[alt*="clear"] {
+    clear: both;
+}
+
 /*----Image Positions----*/
 /*Fix Float Issues*/
 img[alt*="clear"] {

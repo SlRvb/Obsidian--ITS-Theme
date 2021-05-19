@@ -2481,6 +2481,10 @@ ul li > p {
     bottom: -4px; 
 }
 
+.cm-s-obsidian .HyperMD-list-line {
+    padding-top: 0;
+}
+
 /*Preview Bullet Lines*/
 /*Bullet Line New*/
 li {
@@ -4512,6 +4516,9 @@ g.classGroup line {
     content: "•";
     padding-left: 4px;
     font-size: 20px;
+}
+.def-bull ul li:nth-child(even):before {
+    color: var(--accent);
 }
 
 /*Bullet Line Original*/

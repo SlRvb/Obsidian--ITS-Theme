@@ -3502,19 +3502,21 @@ blockquote mark strong {
 }
 
 /*Hover Colors*/
-.kanban ul ul li:hover, .kanban ol ol li:hover {
+.kanban ul ul li:hover,
+.kanban ol ol li:hover {
     background: var(--hvr);
 }
 
-.kanban ul li:hover, .kanban ol li:hover {
+.kanban ul li:hover,
+.kanban ol li:hover {
     background: var(--hvr2);
 }
 /*-Arrows-*/
-.kanban .list-collapse-indicator{
+.kanban .list-collapse-indicator {
     width: 20px;
 }
 /*Bullet Arrows*/
-.kanban ul .list-collapse-indicator{
+.kanban ul .list-collapse-indicator {
     margin-left: -22px;
     padding-left: 10px;
 }
@@ -3522,9 +3524,14 @@ blockquote mark strong {
     position: relative;
 }
 /*Numbered List + Numbered Checklist*/
-.kanban ol .list-collapse-indicator, .kanban ol .task-list-item .list-collapse-indicator{
+.kanban ol .list-collapse-indicator, 
+.kanban ol .task-list-item .list-collapse-indicator{
     margin-left: -38px;
     padding-left: 5px;
+}
+/*Fix Arrow When bullets Spaced*/
+.kanban ul li > p {
+    margin-block-start: 0;
 }
 
 /*--Kanban Personal Edits--*/
@@ -4509,7 +4516,8 @@ g.classGroup line {
     visibility: visible;
 }
 /*Default Bullets*/
-.def-bull .cm-s-obsidian span.cm-formatting-list-ul:before {
+.def-bull .cm-s-obsidian span.cm-formatting-list-ul:before,
+.def-bull .kanban li:before {
     visibility: hidden;
 }
 .def-bull ul li:before {

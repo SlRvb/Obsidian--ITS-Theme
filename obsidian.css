@@ -30,6 +30,11 @@ settings:
         type: variable-text
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
     -
+        title: Font Ligatures
+        description: (Depends On Font) Text combines into symbols ie. - - > becomes -->.
+        id: lig
+        type: class-toggle
+    -
         title: Size
         id: text-size
         type: heading
@@ -2010,16 +2015,6 @@ b.u-pop {
 
 
 /*--NOTES--*/
-/*Note*/
-body {
-    text-rendering: optimizeLegibility;
-    font-variant-ligatures: none;
-    font-family: var(--default-font);
-    line-height: 1.5em;
-    font-size: var(--f-s-text);
-    background-color: var(--background-primary);
-    color: var(--text-normal);
-}
 /*Editor Resize*/
 .markdown-source-view.mod-cm5 {
     padding-left: 0;
@@ -2034,12 +2029,14 @@ body {
 
 
 /*Note Text Adjustments*/
-.cm-s-obsidian .HyperMD-list-line, p, li, .cm-s-obsidian .CodeMirror-line {
-    line-height: var(--lh);
-    min-height: 0;
-    font-size: var(--f-s-text);
-    z-index: 0;
+.cm-s-obsidian .CodeMirror-line,
+.markdown-preview-section {
+    text-rendering: optimizeLegibility;
     font-variant-ligatures: none;
+    font-family: var(--default-font);
+    line-height: var(--lh);
+    color: var(--text-normal);
+    z-index: 0;
 }
 .cm-comment {
     font-family: var(--font-monospace);
@@ -2827,12 +2824,6 @@ input[type="checkbox checked"] {
     object-position: center;
 }
 
-/*Fix Quote in Popover*/
-.popover.hover-popover blockquote:before {
-    top: -5px;
-    z-index: 0;
-}
-
 /*Popover Link Bg Color*/
 .popover .markdown-embed-link, .file-embed-link {
     background-color: var(--dark-accent);
@@ -2868,7 +2859,7 @@ input[type="checkbox checked"] {
 .markdown-preview-view blockquote:before {
     content: '\201D';
     position: absolute;
-    top: -.1em;
+    top: .4em;
     right: .2em;
     font-size: 50px;
     font-family: var(--font);
@@ -3244,27 +3235,27 @@ iframe {
 
 .hcl h1:before,
 .hcl h1:after {
-    border-top: 6px solid var(--folder);
+    border-top: 6px solid var(--accent);
 }
 .hcl h2:before,
 .hcl h2:after {
-    border-top: 5px solid var(--lite-accent);
+    border-top: 5px solid var(--headers);
 }
 .hcl h3:before,
 .hcl h3:after {
-    border-top: 4px solid var(--headers);
+    border-top: 4px solid var(--i-at);
 }
 .hcl h4:before,
 .hcl h4:after {
-    border-top: 3px solid var(--accent);
+    border-top: 3px solid var(--accent2-lite);
 }
 .hcl h5:before,
 .hcl h5:after {
-    border-top: 3px solid var(--hr);
+    border-top: 3px solid var(--lines);
 }
 .hcl h6:before,
 .hcl h6:after {
-    border-top: 3px solid var(--table);
+    border-top: 3px solid var(--text);
 }
 
 /*Poems*/
@@ -4755,6 +4746,14 @@ g.classGroup line {
 .text-spec .cm-strikethrough {
     font-family: var(--del-ed-f);
     color: var(--del-ed-c);
+}
+
+.lig .markdown-preview-section {
+    font-variant-ligatures: unset !important;
+}
+.lig .cm-s-obsidian .HyperMD-list-line, 
+.lig .cm-s-obsidian .CodeMirror-line  {
+    font-variant-ligatures: normal;
 }
 
 

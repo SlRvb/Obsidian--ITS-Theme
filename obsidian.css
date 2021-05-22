@@ -2013,9 +2013,10 @@ b.u-pop {
 /*Note*/
 body {
     text-rendering: optimizeLegibility;
+    font-variant-ligatures: none;
     font-family: var(--default-font);
     line-height: 1.5em;
-    font-size: var(--);
+    font-size: var(--f-s-text);
     background-color: var(--background-primary);
     color: var(--text-normal);
 }
@@ -2038,6 +2039,7 @@ body {
     min-height: 0;
     font-size: var(--f-s-text);
     z-index: 0;
+    font-variant-ligatures: none;
 }
 .cm-comment {
     font-family: var(--font-monospace);
@@ -3619,7 +3621,7 @@ i[alt*="nobg"] {
     background-color: transparent;
 }
 
-/*----Image Positions----*/
+/*----Image Positions/Adjustments----*/
 /*Fix Float Issues*/
 img[alt*="clear"] {
     clear: both;
@@ -3718,49 +3720,22 @@ img[alt*="cover"]{
 }
 
 /*Height*/
-img[alt*="htiny"]{
-    height: var(--tiny);
-}
-img[alt*="hsmall"]{
-    height: var(--small);
-}
-img[alt*="hs-med"]{
-    height: var(--small-med);
-}
-img[alt*="hm-sm"]{
-    height: var(--med-small);
-}
-img[alt*="hmed"]{
-    height: var(--medium);
-}
-img[alt*="hm-tl"]{
-    height: var(--med-tall);
-}
-img[alt*="htall"]{
-    height: var(--tall);
-}
+img[alt*="htiny"]{  height: var(--tiny); }
+img[alt*="hsmall"]{ height: var(--small); }
+img[alt*="hs-med"]{ height: var(--small-med); }
+img[alt*="hm-sm"]{  height: var(--med-small); }
+img[alt*="hmed"]{   height: var(--medium); }
+img[alt*="hm-tl"]{  height: var(--med-tall); }
+img[alt*="htall"]{  height: var(--tall); }
+
 /*Width*/
-img[alt*="wtiny"]{
-    width: var(--tiny);
-}
-img[alt*="wsmall"]{
-    width: var(--small);
-}
-img[alt*="ws-med"]{
-    width: var(--small-med);
-}
-img[alt*="wm-small"]{
-    width: var(--med-small);
-}
-img[alt*="wmed"]{
-    width: var(--medium);
-}
-img[alt*="wm-tl"]{
-    width: var(--med-tall);
-}
-img[alt*="wtall"]{
-    width: var(--tall);
-}
+img[alt*="wtiny"]{    width: var(--tiny); }
+img[alt*="wsmall"]{   width: var(--small); }
+img[alt*="ws-med"]{   width: var(--small-med); }
+img[alt*="wm-small"]{ width: var(--med-small); }
+img[alt*="wmed"]{     width: var(--medium); }
+img[alt*="wm-tl"]{    width: var(--med-tall); }
+img[alt*="wtall"]{    width: var(--tall); }
 
 
 /*--Image Position--*/

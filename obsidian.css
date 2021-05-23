@@ -1005,7 +1005,7 @@ settings:
     -
         title: Hide Text Expander
         description: Hide text expander code block from preview
-        id: hide-expand
+        id: h-exp
         type: class-toggle
     - 
         title: Dataview Adjustments
@@ -2529,10 +2529,6 @@ li:nth-child(even) {
     vertical-align: top;
 }
 
-.kanban-plugin .task-list-item-checkbox {
-    -webkit-appearance: checkbox;
-}
-
 /*Checkbox Checked color*/
 .markdown-preview-view .task-list-item-checkbox:checked {
     border: none;
@@ -3540,7 +3536,7 @@ blockquote mark strong {
 }
 
 /*Remove Quote*/
-.kanban .internal-embed blockquote:before {
+.kanban-o .internal-embed blockquote:before {
     display:none;
 }
 /*Shrink margins*/
@@ -3551,16 +3547,16 @@ blockquote mark strong {
 
 
 /*Display Embed Title*/
-.kanban .internal-embed::before{
+.kanban-o .internal-embed::before{
     content: attr(alt);
     line-height: 15px;
 }
-.kanban .image-embed::before {
+.kanban-o .image-embed::before {
     content: none;
 }
 
 /*Hide Link but make embed clickable as a link*/
-.kanban .internal-embed .markdown-embed-link {
+.kanban-o .internal-embed .markdown-embed-link {
     left: 0;
     top: -40%;
     background-color: transparent;
@@ -4368,7 +4364,15 @@ g.classGroup line {
 .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
 .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
     color: var(--text-dl) !important;
+}
+
+.kanban-plugin .task-list-item-checkbox {
+    -webkit-appearance: checkbox;
 } 
+
+
+
+
 
 /*Copy Codeblock Plugin*/
 .copy-code-button { 
@@ -4762,8 +4766,8 @@ g.classGroup line {
 
 /*-Plugin Toggles-*/
 /*Text Expander: Hide Code in Preview Mode*/
-.hide-expand .markdown-preview-view pre[class*="language-expander"],
-.hide-expand .markdown-preview-view code[class*="language-expander"] {
+.h-exp .markdown-preview-view pre[class*="language-expander"],
+.h-exp .markdown-preview-view code[class*="language-expander"] {
     display: none;
 }
 /*Dataview: Compact and Hide Bullets*/

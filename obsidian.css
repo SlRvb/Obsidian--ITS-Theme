@@ -3585,7 +3585,7 @@ i { /*I used for image description, em is just regular italics*/
     padding: 0 1em;
 }
 
-i[alt*="right"] {
+#right {
     display: block;
     text-align: right;
     background-color: var(--outer-bar);
@@ -3593,18 +3593,18 @@ i[alt*="right"] {
 }
 
 
-i[alt*="left"] {
+#left {
     display: block;
     text-align: left;
     background-color: var(--outer-bar);
     padding-left: .8em;
 }
 
-i[alt*="clear"] {
+#clear {
     clear: left;
 }
 
-i[alt*="nobg"] {
+#nobg {
     background-color: transparent;
 }
 

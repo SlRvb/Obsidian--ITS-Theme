@@ -3251,7 +3251,7 @@ iframe {
 }
 .hcl h6:before,
 .hcl h6:after {
-    border-top: 3px solid var(--text);
+    border-top: 3px solid var(--table);
 }
 
 /*Poems*/

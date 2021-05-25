@@ -635,15 +635,6 @@ settings:
         id: hr-tog
         type: class-toggle
     -
-        title: Header Tags Above Header
-        description: Move the editor header hastags # to above the header instead.
-        id: hash-top
-        type: class-toggle
-    -
-        title: Hide Header Underline
-        id: h-line
-        type: class-toggle
-    -
         title: Hide Frontmatter 
         id: no-m
         type: class-toggle
@@ -661,6 +652,29 @@ settings:
         title: Original Embeds
         description: Previous style of embeds
         id: org-em
+        type: class-toggle
+    -
+        title: Headers
+        id: Headers
+        type: heading
+        level: 3
+    -
+        title: Header Tags Above Header
+        description: Move the editor header hastags # to above the header instead.
+        id: hash-top
+        type: class-toggle
+    -
+        title: Hide Header Underline
+        id: h-line
+        type: class-toggle
+    -
+        title: Center Headings
+        id: hc
+        type: class-toggle
+    -
+        title: Center Heading With Lines
+        description: Center headings and have lines appear at either side of it.
+        id: hcl
         type: class-toggle
     -
         title: Colors

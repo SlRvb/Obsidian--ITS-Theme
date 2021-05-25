@@ -1736,6 +1736,9 @@ input[type='number']:hover {
     transition: transform 100ms ease-in-out;
     color: var(--lines);
 }
+.collapse-icon {
+    margin-top: -.1em;
+}
 
 
 /*Slider Colors*/

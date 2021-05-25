@@ -3202,6 +3202,7 @@ iframe {
     display: flex;
     width: 100%;
     align-items: center;
+    text-align: center;
 }
 .hcl .heading-collapse-indicator{
     position: absolute;

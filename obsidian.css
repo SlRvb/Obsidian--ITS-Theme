@@ -2652,6 +2652,7 @@ input[type="checkbox checked"] {
     display: inline-block;
     margin: 0px 0px;
     cursor: pointer;
+    line-height: var(--lh);
 }
 
 /*Hover Underline*/
@@ -4775,7 +4776,6 @@ g.classGroup line {
     display: none;
 }
 .dv .dataview-ul {
-    margin-left: -2em;
     margin-block-end: 0 !important;
 }
 

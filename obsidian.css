@@ -721,11 +721,6 @@ settings:
         id: def-bull
         type: class-toggle
     - 
-        title: Custom Bullet Shape
-        description: Toggle on if you want to use the bullet shape below.
-        id: no-bull
-        type: class-toggle
-    - 
         title: Bullet Shape
         description: Add quotes around your new bullet. For example "~"
         id: bullet
@@ -1116,6 +1111,11 @@ settings:
     --b-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --del-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --del-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    /*Plugin: 5e Statblock*/
+    --statblock-primary-color: var(--soft-text) !important;
+    --statblock-background-color: transparent;
+    --statblock-bar-color: var(--accent);
 }
 
 .theme-dark {
@@ -1666,6 +1666,13 @@ button, button.mod-cta {
     padding-right: .3em;
 }
 */
+
+/*--Outgoing Links--*/
+.search-result-file-match-destination-file {
+    border-radius: var(--radius);
+    border: 0;
+}
+
 
 /*--Search--*/
 /*Highlight Search Result*/
@@ -2416,7 +2423,7 @@ Masonry/Gallery View
 
 /*--List--*/
 /*Colored List Markers*/
-li::marker{
+li::marker, .cm-s-obsidian span.cm-formatting-list {
     color: transparent;
 }
 /*Lighten Numbered List Marker Color*/
@@ -2474,7 +2481,12 @@ ul li > p {
 
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
-.cm-s-obsidian span.cm-formatting-list-ul:before {
+.cm-s-obsidian span.cm-formatting-list-ul::before,
+.cm-s-obsidian span.cm-formatting-list-ol {
+    color: var(--soft-text);
+}
+
+.cm-s-obsidian span.cm-formatting-list-ul::before {
     content: var(--bullet);
     margin-right: -10px;
 }
@@ -3432,7 +3444,7 @@ blockquote mark strong {
 }
 /*Fix List Checkbox Margins*/
 .kanban ol .task-list-item-checkbox {
-    margin-left: -3px;
+    margin-left: 4px;
 }
 .kanban ol > li.task-list-item {
     padding-left: 0px;
@@ -4462,6 +4474,61 @@ g.classGroup line {
 
 
 
+/*--Plugin: 5e Statblock--*/
+.obsidian-statblock-plugin .creature-heading > .name {
+    font-family: var(--font) !important;
+    font-size: 1.8em !important;
+    color: var(--headers) !important;
+}
+
+.obsidian-statblock-plugin > .content-wrap {
+    font-size: 1.1em !important;
+    background-color: var(--embed-bg) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.obsidian-statblock-plugin .property-name {
+    color: var(--headers);
+    font-family: var(--font-monospace);
+    font-style: normal !important;
+    font-size: 16px;
+}
+.obsidian-statblock-plugin .section-header {
+    border: none !important;
+    color: var(--accent2) !important;
+    font-weight: 900 !important;
+    font-variant: normal !important;
+    text-transform: uppercase;
+    font-size: .9em !important;
+}
+.obsidian-statblock-plugin > .bar {
+    border: none !important;
+}
+
+.obsidian-statblock-plugin .subheading {
+    font-size: .9em !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--CSS Class Toggles--*/
 /*Hide Vault Title*/
 .v-non .nav-folder.mod-root > .nav-folder-title {
@@ -4494,23 +4561,19 @@ g.classGroup line {
 
 
 /*-Lists CSS-*/
-/*Bullet Shapes*/
-.no-bull .cm-s-obsidian span.cm-formatting-list-ul {
-    visibility: hidden;
-}
-.no-bull .cm-s-obsidian span.cm-formatting-list-ul:before {
-    content: var(--bullet);
-    margin-right: -10px;
-    visibility: visible;
-}
 /*Default Bullets*/
 .def-bull .cm-s-obsidian span.cm-formatting-list-ul:before,
 .def-bull .kanban li:before {
     visibility: hidden;
 }
+.def-bull .cm-s-obsidian span.cm-formatting-list-ul:before {
+    visibility: visible;
+    content: "•";
+    padding-left: 1.5px;
+    font-size: 20px;
+}
 .def-bull ul li:before {
     content: "•";
-    padding-left: 4px;
     font-size: 20px;
 }
 .def-bull ul li:nth-child(even):before {

@@ -3,14 +3,14 @@
 
 .theme-dark {
     --td: #030a1445;
-    --hvr: rgba(105, 88, 178, 0.51);
-    --hvr2: rgba(40, 20, 77, 0.51);
+    --hvr: rgba(var(--interactive-accent-rgb), 0.2);
+    --hvr2: rgba(var(--interactive-accent-rgb), 0.2);
     
 }
 .theme-light {
     --td: #d0ddef32;
-    --hvr: rgba(125, 94, 255, 0.19);
-    --hvr2: rgba(171, 137, 234, 0.3);
+    --hvr: rgba(var(--interactive-accent-rgb), 0.2);
+    --hvr2: rgba(var(--interactive-accent-rgb), 0.2);
 }
 
 
@@ -160,15 +160,16 @@
 
 
 /*Shrink margins*/
-.markdown-preview-view .markdown-embed,
-.markdown-preview-view .file-embed {
+.kanban .markdown-preview-view .markdown-embed,
+.kanban .markdown-preview-view .file-embed {
     margin: 0;
 }
 
 .kanban .internal-embed .markdown-embed .markdown-preview-view {
     margin: 0;
-    padding: 0;
+    padding: 6px;
 }
+
 /*Reduce Hr Height*/
 .kanban hr{
     margin: 0;

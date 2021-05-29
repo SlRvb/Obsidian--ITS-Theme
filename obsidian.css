@@ -654,6 +654,11 @@ settings:
         id: org-em
         type: class-toggle
     -
+        title: Justify Text
+        description: Justify preview and editor text
+        id: justified
+        type: class-toggle
+    -
         title: Headers
         id: Headers
         type: heading
@@ -1567,7 +1572,8 @@ button, button.mod-cta {
 }
 
 /*Dragged*/
-.nav-folder-title.is-being-dragged-over {
+.nav-folder-title.is-being-dragged-over,
+.drag-ghost {
     border:none;
     border-radius: var(--radius);
 }
@@ -3594,7 +3600,7 @@ blockquote mark strong {
 }
 .kanban .internal-embed .markdown-embed .markdown-preview-view {
     margin: 0;
-    padding: 0;
+    padding: 6px;
 }
 /*Reduce Hr Height*/
 .kanban hr{

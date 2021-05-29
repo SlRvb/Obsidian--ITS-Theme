@@ -2,19 +2,15 @@
 /*Just an edit to make the colors and lists work for any theme. This is not mine.*/
 
 .theme-dark {
-    --note: var(--background-primary);
     --td: #030a1445;
     --hvr: rgba(105, 88, 178, 0.51);
     --hvr2: rgba(40, 20, 77, 0.51);
-    --table: var(--background-modifier-border);
     
 }
 .theme-light {
-    --note: var(--background-primary);
     --td: #d0ddef32;
     --hvr: rgba(125, 94, 255, 0.19);
     --hvr2: rgba(171, 137, 234, 0.3);
-    --table: var(--background-modifier-border);
 }
 
 
@@ -30,18 +26,26 @@
 
 /*Remove Text Spacing from bullet/number*/
 .kanban .task-list-item-checkbox {
-    margin-left: 24px;
+    margin-left: 20px;
     margin-top: 2px;
-    
 }
 /*Fix List Checkbox Margins*/
 .kanban ol .task-list-item-checkbox {
-    margin-left: 0;
+    margin-left: 4px;
 }
+.kanban ol > li.task-list-item {
+    padding-left: 0px;
+}
+
 
 /*Hide Bullet*/
 .kanban ul {
     list-style: none;
+}
+.kanban ul li::before {
+    content: "";
+    margin-left: 0px;
+    padding: 0;
 }
 
 .kanban ul, .kanban ol {
@@ -73,16 +77,18 @@
     margin-top: 5px;
     background: none;
 }
+
 /*Kaban Lines*/
 .kanban ul ul {
     margin-left: 5px;
-    border-left: 2px solid var(--table);
+    border-left: 2px solid var(--background-modifier-border);
 }
 .kanban ol ol {
     margin-left: -15px;
     padding-left: 20px;
-    border-left: 2px solid var(--table);
+    border-left: 2px solid var(--background-modifier-border);
 }
+
 /*Color & Formatting*/
 .kanban ul ul li {
     width: 100%;
@@ -100,21 +106,42 @@
 /*Alternating Colors*/
 .kanban ul ul li:nth-child(even),
 .kanban ol ol li:nth-child(even) {
-    background: var(--note);
+    background: var(--background-primary);
     border: 0;
 }
 
+
 /*Hover Colors*/
-.kanban ul ul li:hover, .kanban ol ol li:hover {
+.kanban ul ul li:hover,
+.kanban ol ol li:hover {
     background: var(--hvr);
 }
 
-.kanban ul li:hover, .kanban ol li:hover {
+.kanban ul li:hover,
+.kanban ol li:hover {
     background: var(--hvr2);
 }
-/*Arrow*/
+/*-Arrows-*/
+.kanban .list-collapse-indicator {
+    width: 20px;
+}
+/*Bullet Arrows*/
 .kanban ul .list-collapse-indicator {
-    margin-left: -20px;
+    margin-left: -22px;
+    padding-left: 10px;
+}
+.kanban .task-list-item .list-collapse-indicator {
+    position: relative;
+}
+/*Numbered List + Numbered Checklist*/
+.kanban ol .list-collapse-indicator, 
+.kanban ol .task-list-item .list-collapse-indicator{
+    margin-left: -38px;
+    padding-left: 5px;
+}
+/*Fix Arrow When bullets Spaced*/
+.kanban ul li > p {
+    margin-block-start: 0;
 }
 
 
@@ -131,32 +158,13 @@
     overflow: hidden;
 }
 
-/*Remove Quote*/
-.kanban .internal-embed blockquote:before {
-    display:none;
-}
+
 /*Shrink margins*/
-.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
     margin: 0;
 }
 
-
-/*Display Embed Title*/
-.kanban .internal-embed::before{
-    content: attr(alt);
-    line-height: 15px;
-}
-.kanban .image-embed::before {
-    content: none;
-}
-
-/*Hide Link but make embed clickable as a link*/
-.kanban .internal-embed .markdown-embed-link {
-    left: 0;
-    top: -40%;
-    background-color: transparent;
-    color: transparent;
-}
 .kanban .internal-embed .markdown-embed .markdown-preview-view {
     margin: 0;
     padding: 0;
@@ -165,4 +173,11 @@
 .kanban hr{
     margin: 0;
     margin-bottom: 10px;
+}
+
+
+/*Kanban Mobile*/
+.is-mobile .kanban ul, 
+.is-mobile .kanban ol {
+    padding-inline-start: 0;
 }

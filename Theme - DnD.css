@@ -1,13 +1,24 @@
-:root {
+.theme-dark,
+.theme-light{
     /*FONTS*/
     --font: 'Cinzel Decorative', 'Amarante', 'Oleo Script', 'Lobster 1.3';
     --font-monospace: 'Fira Code Medium', 'Recursive Mono Linear Static Medium', 'Source Code Pro';
-}
-
-.workspace {    
     --slide-shadow: rgba(0, 28, 74, 0.15);
+
+    --hr-sym: "\29D7";
+
+    --statblock-primary-color: var(--soft-text) !important;
+    --statblock-background-color: transparent;
+    --statblock-bar-color: var(--accent);
 }
 .theme-dark {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
     --background-modifier-border: #2d3034; /*Border outline of quotes, tables, line breaks*/
     --background-modifier-form-field-highlighted: rgba(52, 237, 152, 0.22); /*Searched Highlight Color*/
     --background-modifier-error-rgb: 0, 23, 13;
@@ -48,7 +59,12 @@
     --code-bg: #2e3b3e;
     --code-text: #45faa6;
     --embed-bg: var(--outer-bar);
+
     --embed-h: #c93c3c;
+    --h1: var(--headers);
+    --h2: sandybrown;
+    --h3: var(--embed-h);
+
     
     --tag: var(--dark-accent);
     --table: #2c3836;
@@ -66,14 +82,26 @@
 
 
 .theme-light {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
     --background-modifier-form-field-highlighted: rgba(52, 237, 152, 0.22); /*Searched Highlight Color*/
     --background-modifier-error-rgb: 130, 196, 167;
     
     --text-highlight-bg: rgba(60, 168, 122, 0.4); /*Text highlights*/
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Search Highlight*/
     --text-selection: rgba(123, 255, 179, 0.29); /*Cursor dragged highlights*/
+    
     --text-faint: var(--accent2);
     --text-on-accent: var(--bg);
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
 
     /*--DEFAULT VARIABLES--*/    
     --deep-dark-accent: #1b2c25;
@@ -82,7 +110,7 @@
     --accent: #79c78e;
     --accent2: #cca04c;
     --accent2-lite: #35be89;
-    --bg: #d3efdf;
+    --bg: #cbe2d5;
     --fg: #029f08;
     --side-bar: var(--note);
     --outer-bar: #dfefe6;
@@ -93,6 +121,7 @@
     --file: #64896d;
     --folder: #6dcebf;
     --f-hover: #2e9163;
+    --lines: var(--inactive);
     
     --headers: #0e934c;
     --note: #f8fbff;
@@ -101,7 +130,11 @@
     --code-bg: #f1f5ff;
     --code-text: #35ad76;
     --embed-bg: var(--code-bg) /*#ebf1f8*/;
+
     --embed-h: #d05858;
+    --h1: var(--headers);
+    --h2: sandybrown;
+    --h3: var(--embed-h);
 
     --tag: #56c681;
     --table: #ccd6eb;
@@ -120,11 +153,9 @@
 
 
 .markdown-preview-view hr::after, div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
-    content: "\29D7";
+    content: var(--hr-sym);
 }
-.markdown-embed .markdown-preview-view hr::after {
-    background-color: var(--embed-bg);
-}
+
 
 /*Headings*/
 /*Heading Line*/
@@ -133,7 +164,7 @@ h1:after {
     display: block;
     width: 100%;
     height: 4px;
-    background: linear-gradient(to right, var(--headers), transparent);
+    background: linear-gradient(to right, var(--h1), transparent);
     left: 0;
 }
 
@@ -142,7 +173,7 @@ h2:after {
     display: block;
     width: 85%;
     height: 4px;
-    background: linear-gradient(to right, sandybrown, transparent);
+    background: linear-gradient(to right, var(--h2), transparent);
     left: 0;
 }
 
@@ -151,12 +182,53 @@ h3:after {
     display: block;
     width: 70%;
     height: 4px;
-    background: linear-gradient(to right, #ce3a3a, transparent);
+    background: linear-gradient(to right, var(--h3), transparent);
     left: 0;
 }
 
+/*hcl Headings*/
+.hcl h1:before,
+.hcl h1:after,
+.hcl h2:before, 
+.hcl h2:after,
+.hcl h3:before,
+.hcl h3:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    border: none;
+}
+
+.hcl h1::after {
+    background: linear-gradient(to right, var(--h1), transparent);
+}
+.hcl h1::before {
+    background: linear-gradient(to left, var(--h1), transparent);
+}
+.hcl h2::after {
+    background: linear-gradient(to right, var(--h2), transparent);
+}
+.hcl h2::before {
+    background: linear-gradient(to left, var(--h2), transparent);
+}
+.hcl h3::after {
+    background: linear-gradient(to right, var(--h3), transparent);
+}
+.hcl h3::before {
+    background: linear-gradient(to left, var(--h3), transparent);
+}
+
+
 /*Embed Headings*/
-.markdown-preview-view .markdown-embed h1, .markdown-embed h2, .markdown-embed h3, .markdown-embed h4, .markdown-embed h5, .markdown-embed h6 {
+.markdown-preview-view .markdown-embed h1,
+.markdown-embed h2, 
+.markdown-embed h3, 
+.markdown-embed h4, 
+.markdown-embed h5, 
+.markdown-embed h6 {
     color: var(--embed-h);
     font-style: normal;
 }
+

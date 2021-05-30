@@ -1508,6 +1508,16 @@ button, button.mod-cta {
     margin-right: 5px;
     font-size: .85em;
 }
+/*Move File Extension to Right*/
+.nav-folder-title-content,
+.nav-file-title-content {
+  width: 100%;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title {
+  flex-direction: row-reverse;
+}
+
 
 /*Inactive Folder Color*/
 .is-collapsed .nav-folder-title-content:before {
@@ -4006,6 +4016,29 @@ img[alt*="sprf"]{
     padding: 10px 20px;
     margin-left: 2%;
 }
+/*Quotes*/
+#quote {
+    padding-right: 2em;
+    text-align: justify;
+}
+#quote:before {
+    content: '\201D';
+    position: absolute;
+    top: .4em;
+    right: .2em;
+    font-size: 50px;
+    font-family: var(--font);
+    color: var(--headers);
+}
+/*Quote Author*/
+b mark strong {
+	display: block;
+	color: var(--lite-accent) !important;
+	text-align: right;
+    background-color: transparent !important;
+    font-style: italic;
+}
+
 
 /*--Recall--*/
 .recall { 

@@ -1,0 +1,777 @@
+/* @settings
+name: ITS Alternate Themes
+id: ITS-AT
+settings:
+    -
+        title: SlRvb Blue
+        id: slrvb-b
+        type: class-toggle
+    -
+        title: SlRvb Gray
+        id: slrvb-g
+        type: class-toggle
+    - 
+        title: School Days
+        id: s-d
+        type: class-toggle
+    -
+        title: D&D
+        id: dnd
+        type: class-toggle
+    -
+        title: ITS Dark
+        id: its-d
+        type: class-toggle
+*/
+
+
+
+
+/*----Theme: SlRvb Blue----*/
+.theme-light.slrvb-b,
+.theme-dark.slrvb-b {
+    --font: 'Recursive Sans Linear Static Black', 'Oleo Script', 'Calisto MT'; /*Works, but if it doesn't, needs !important*/
+    --font-monospace:  "Fira Code";
+}
+.theme-dark.slrvb-b {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(41, 57, 90, 0.48); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 54, 70, 105; /*??*/
+    
+    --text-highlight-bg: rgba(60, 102, 168, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(0, 137, 255, 0.4); /*??*/
+    --text-selection: rgba(34, 71, 114, 0.25); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--accent); /*Button Color*/
+    --interactive-hover: var(--embed-bg);/*Button Color*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 60, 102, 168; /*Publish item select*/
+    --interactive-accent-hover: #29395a; /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+
+    /*--DEFAULT VARIABLES--*/
+
+    /*Compatibility Color Recoloring*/
+    --deep-dark-accent: #1f283b /*#2f1010*/;
+    --dark-accent: #293e64 /*#53201F*/;
+    --lite-accent: #6ca6e0;
+    --accent: #394d64/*#c14343*/;
+    --accent2: #4c78cc;
+    --accent2-lite: #4c87cc;
+    --bg: #252c36;
+    --fg: #cfd7dd;
+    --side-bar: var(--note);
+    --outer-bar: #0e0f15;
+    --dark-sidebar: #10161d;
+    --inactive: #586477;
+    
+    --file: #aab3ca;
+    --folder: #63748d;
+    --f-hover: var(--accent);
+    --lines: #465164;
+        
+    --note: #1a1e24 /*#0d131c*/;
+    --text: #778495 /*#bccad8*/;
+    --headers: #2b61aa;
+    --soft-text: #6d7a9b/*#d04e4e*/;
+    --code-bg: #232831;
+    --code-text: slategray;
+    --embed-bg: var(--dark-sidebar);
+    --footnote: #6e7e89;
+    
+    --th: var(--dark-accent);
+    --td: #030a1495;
+    
+    --tag: var(--dark-accent);
+    --table: #283846;
+    --hr: #3c5274;
+    --i-at: #5d7b98;
+    
+    --graph-bg: var(--dark-sidebar);
+    --graph-lines: var(--dark-accent);
+    --graph-node: var(--fg);
+    --graph-fill: var(--headers);
+    --graph-404: #727e93;
+    --graph-img: var(--accent2) /*#ff86be*/;
+    --graph-tag: var(--headers);
+}
+.theme-light.slrvb-b {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(131, 190, 240, 0.22); /*Search Bar Active Highlight*/
+
+    --background-modifier-error-rgb: 131, 190, 240; /*Ctrl F Search Background*/
+    --background-modifier-error-hover: #470000; /*??*/
+    --background-modifier-cover: var(--deep-dark-accent); /*Obsidian Title Bar*/
+    --text-highlight-bg: rgba(129, 172, 199, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(115, 184, 253, 0.4); /*Search Highlight*/
+    --text-selection: rgba(149, 195, 229, 0.37); /*Cursor dragged highlights*/
+    
+    /*--DEFAULT VARIABLES--*/    
+    --deep-dark-accent: #101b2f;
+    --dark-accent: #edf4ff;
+    --lite-accent: #5174a3;
+    --accent: #64a0db;
+    --accent2: #4c78cc;
+    --accent2-lite: #5599d0;
+    --bg: #dde4ef;
+    --fg: #025d9f;
+    --side-bar: var(--note);
+    --outer-bar: #dfe7ef;
+    --dark-sidebar: var(--embed-bg);
+    --inactive: #a6bbde /*#91a3c1*/;
+    
+    --file: #8897b4;
+    --folder: #6da5ce;
+    --f-hover: #3685e0;
+    --lines: #b5c2d8;
+    
+    --headers: #4378c1;
+    --note: #f8fbff;
+    --text: #697580;
+    --soft-text: #4e99d0;
+    --code-bg: #eef6ff;
+    --code-text: #4296ea;
+    --embed-bg: #f1f5ff /*#ebf1f8*/;
+    --footnote: #8996a0;
+    
+    --th: #587aa8;
+    --td: #d0ddef62;
+
+    --tag: #5885b2;
+    --table: #ccd6eb;
+    --hr: #d6deea;
+    --i-at: var(--headers)/*#804848*/;
+    
+    --graph-bg: var(--note);
+    --graph-lines: #e4e7f8;
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
+    --graph-404: #727e93;
+    --graph-img: var(--accent2) /*#5469de*/;
+    --graph-tag: #000000;    
+}
+
+/*----Theme: SlRvb Gray----*/
+.theme-dark.slrvb-g,
+.theme-light.slrvb-g {
+    --font: 'Norwester', 'Staatliches', 'Racing Sans One', 'Heavitas', 'Playfair Display', serif;
+    --hr-sym: "🏴";
+}
+.theme-dark.slrvb-g {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(113,132,162,0.13);
+
+    --text-selection: rgba(61, 82, 107, 0.25);
+    --text-highlight-bg: rgba(87, 113, 156, 0.4);
+    --text-highlight-bg-active: rgba(134, 168, 197, 0.4);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--hr);
+
+    --outer-bar: #0E0F15;       /*Outer Sidebar*/
+    --dark-sidebar: #090C0E;    /*Dark Sidebar*/
+    --side-bar: var(--note);      /*Sidebar*/
+    --f-icon: #586477;          /*File*/
+    --folder: #F1F7FF;          /*Folder*/
+    --note: #171B21;            /*Note*/
+    
+    --headers: #9DB1CA;     /*Headings*/
+    --text: #778495;        /*Text*/
+    --soft-text: #AAB3CA;   /*Faint Text*/
+    --code-text: #708090;   /*Code Text*/
+    --i-at: #5D7B98;        /*<i></i>*/
+    --footnote: #576571;    /*Footnotes*/
+    --inactive: #3b444b;
+    
+    --tag: #353F52;
+    
+    --hr: #4F5B6C;          /*Horizontal Line*/
+    --embed-bg: #0E0F15;    /*Embed/Blockquote*/
+    --aside-bg: #12151d;    /*Aside Background Color*/
+    
+    --accent: #516071;              /*Accent*/
+    --lite-accent: #8EA1B4;         /*Lite Accent*/
+    --accent2: #889FC3;             /*Accent 2*/
+    --accent2-lite: #9DB2CF;        /*Lite Accent 2*/
+    --dark-accent: #333A49;         /*Dark Accent*/
+    --deep-dark-accent: #222731;    /*Deep Dark Accent*/
+    --table: #242D3D;               /*Lines*/
+
+    --graph-bg: var(--note);    /*Graph Background*/
+    --graph-lines: #293E64;   /*Graph Lines*/
+}    
+.theme-light.slrvb-g {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(131,185,240,0.13);
+
+    --text-selection: rgba(163, 188, 218, 0.22);
+    --text-highlight-bg: rgba(129,155,199,0.25);
+    --text-highlight-bg-active: rgba(172,210,255,0.25);
+
+    --dark-sidebar: #F1F7FF;    /*Dark Sidebar*/
+    --f-icon: #A6B4CC;          /*File*/
+    --folder: #8296A6;          /*Folder*/
+    
+    --headers: #748092;     /*Headings*/
+    --text: #8A949D;        /*Text*/
+    --soft-text: #9AADBA;   /*Faint Text*/
+    --code-text: #819AB5;   /*Code Text*/
+    --i-at: #8FAABE;        /*<i></i>*/
+    
+    --accent: #939BA3;              /*Accent*/
+    --lite-accent: #B4C6D2;         /*Lite Accent*/
+    --accent2-lite: #000000;        /*Lite Accent 2*/
+    --dark-accent: #EBF2F9;         /*Dark Accent*/
+    --deep-dark-accent: #171C22;    /*Deep Dark Accent*/
+    --inactive: #C0C8D6;            /*Inactive*/
+
+    --tag: #8999B3;
+}
+
+/*----Theme: School Days----*/
+.theme-dark.s-d,
+.theme-light.s-d  {
+    /*FONTS*/
+    --font: /*'Recursive Sans Casual Static',*/ 'Recursive Sans Linear Static Black', 'RocknRoll One Regular';
+	--vault-f: "Jersey M54";
+    --font-monospace: "Recursive Mono Linear Static Medium";
+    --solve-f: 'Recursive Sans Linear Static Regular';
+
+    --hr-sym: "✏";
+    --bullet: "🎓";
+}
+.theme-dark.s-d {
+    --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*Searched Highlight Color*/
+    
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*Outershadow*/
+    --background-modifier-cover: black; /*Obsidian Title Bar Bg*/
+    
+    --text-on-accent: #dcddde; /*Program Title bar Text*/
+    --text-muted: var(--soft-text); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+    --text-normal: var(--text); /*Text body of note*/
+    --text-accent: #808fac; /*Links*/
+    --text-accent-hover: var(--accent); /*Links hover*/
+    --text-faint: #4e5b6f; /*Link brackets color*/
+    
+    --text-highlight-bg: rgba(60, 93, 168, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
+    --text-selection: rgba(65, 82, 119, 0.31); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--accent); /*Button Color*/
+    --interactive-hover: #293846; /*Button Hover*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
+    --interactive-accent-hover: #2f5486; /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+    
+    --scrollbar-bg: rgba(255, 255, 255, 0.05);
+    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+    --highlight-mix-blend-mode: lighten;
+
+    /*--DEFAULT VARIABLES--*/
+    
+    /*Compatibility Color Recoloring*/
+    --deep-dark-accent: #212731;
+    --dark-accent: #2b3550;
+    --lite-accent: #d0913d/*#6c99e0*/;
+    --accent: #485b76;
+    --bg: #232a34;
+    --fg: white;
+    --side-bar: var(--note);
+    --outer-bar: #0e0f15;
+    --dark-sidebar: #10161d;
+    --inactive: #586477;
+    
+    --file-select: var(--dark-accent);
+    --file: var(--soft-text);
+    --folder: var(--lite-accent);
+	--f-hover: var(--folder);						 
+    
+    --note: #1a1e24;
+    --text: #dcddde;
+    --soft-text: #aab3ca;
+    --headers: #4378c1;
+    --code-bg: #232831;
+    --code-text: slategray;
+    --embed-bg: var(--dark-sidebar);
+    
+    --tag: #273346;
+    --table: #2f3440;
+    --hr: #414b5c;
+    
+    --latex: #b2cfff;
+    --latex-s: #61afef;
+    --latex-c: #ebbd3e;
+    --header-solve: #c7c7c7;
+    --answer: darkseagreen;
+    --answer-bg: #293c33;
+    
+    --graph-bg: var(--dark-sidebar);
+    --graph-lines: #1f3353;
+    --graph-node: #cfd7dd;
+    --graph-fill: var(--headers);
+    --graph-404: #727e93;
+    --graph-img: #4c78cc /*#ff86be*/;
+    --graph-tag: var(--headers);
+}
+.theme-light.s-d {    
+    --background-modifier-border: #bed5e6; /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-form-field-highlighted: rgba(131, 177, 240, 0.22); /*Search Bar Active Highlight*/
+    --background-modifier-error-hover: #987831;
+    --text-highlight-bg: rgba(145, 176, 208, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
+    --text-selection: rgba(149, 192, 229, 0.37); /*Cursor dragged highlights*/
+    --text-on-accent: var(--accent);
+
+    /*--DEFAULT VARIABLES--*/
+    --deep-dark-accent: var(--note);
+    --dark-accent: #d8ecfd;
+    --lite-accent: #e6af66 /*#5599d0*/;
+    --accent: #6d99d4;
+    --bg: #e1e6ed;
+    --fg: #025d9f;
+    --side-bar: var(--note);
+    --outer-bar: #e3f0fd;
+    --dark-sidebar: var(--embed-bg);
+    --inactive: #91a3c1;
+    
+    --file-select: #83a6ca;
+    --file: var(--soft-text);
+    --folder: var(--lite-accent);
+	--f-hover: var(--lite-accent);				   
+    
+    --headers: #4382c1;
+    --note: #f8fbff;
+    --text: #697580;
+    --soft-text: #6f8fd8;
+    --code-text: #4290ea;
+    --embed-bg: #f1f5ff;
+
+    --tag: #5685c6;
+    --table: #c9ced9;
+    --th: #b48c55;
+    --hr: #d6deea;
+    
+    --latex: #5895fa;
+    --latex-s: #9ed3ff;
+    --latex-c: #fdaf00;
+    --header-solve: #a87643;
+    --answer: #4f904f;
+    --answer-bg: #dbe8e2;
+    
+    --graph-bg: var(--note);
+    --graph-lines: rgb(198, 201, 221);
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
+    --graph-404: #727e93;
+    --graph-img: #4c78cc;
+    --graph-tag: #000000;
+}
+
+/*Vault Name*/
+.s-d .nav-folder.mod-root > .nav-folder-title {
+    font-family: var(--vault-f);
+    font-size: 30px;
+    color: var(--folder);
+}
+
+/*--Mathjax Edit--*/
+.s-d .mjx-math{
+    font-style: normal;
+}
+.s-d .MJX-TEX { 
+    font-size: 130%;
+    color: var(--latex);
+}
+/*Math Block Margin Reduction*/
+.s-d .mjx-container[jax="CHTML"][display="true"] {
+    margin: 3% 0 !important;
+}
+/*Math Editor*/
+.s-d .cm-s-obsidian span.cm-math,
+.s-d .cm-s-obsidian span.hmd-fold-math-placeholder {
+    color: var(--latex-s);
+    font-style: normal;
+}
+.s-d .cm-s-obsidian pre.HyperMD-codeblock,
+.s-d .cm-s-obsidian span.cm-inline-code,
+.s-d .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
+.s-d .markdown-preview-view code {
+    color: var(--latex-c);
+}
+
+
+/*--Solve Page--*/
+/*Header*/
+.s-d .solve h1,
+.s-d .solve h2,
+.s-d .solve h3,
+.s-d .solve h4,
+.s-d .solve h5,
+.s-d .solve h6 {
+    color: var(--header-solve);
+}
+.s-d .solve h3,
+.s-d .solve h4,
+.s-d .solve h5,
+.s-d .solve h6 {
+    font-family: var(--solve-f) !important;
+}
+/*Table*/
+.s-d .solve table { margin: auto auto 5% 5px; }
+.s-d .solve th, 
+.s-d .solve td:nth-child(1){
+    background-color: var(--outer-bar);
+    border-right: transparent;
+    border-left: transparent;
+}
+.s-d .solve td mark{
+    color: var(--answer);
+    background-color: var(--answer-bg);
+    font-weight: 600;
+    padding: 2px;
+}
+.s-d .solve tr { width: 10% !important; }
+
+.theme-dark.dnd,
+.theme-light.dnd {    
+    --font: 'Cinzel Decorative', 'Amarante', 'Oleo Script', 'Lobster 1.3';
+    --font-monospace: 'Fira Code Medium', 'Recursive Mono Linear Static Medium', 'Source Code Pro';
+    --slide-shadow: rgba(0, 28, 74, 0.15);
+
+    --hr-sym: "\29D7";
+}
+.theme-dark.dnd {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-border: #2d3034; /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-form-field-highlighted: rgba(52, 237, 152, 0.22); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 0, 23, 13;
+    
+    --text-highlight-bg: rgba(60, 168, 122, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Search Highlight*/
+    --text-selection: rgba(23, 77, 46, 0.46); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--accent)/*#216546*/; /*Button Color*/
+    --interactive-hover: var(--dark-accent);/*Button Color*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 69, 180, 128; /*Publish item select*/
+    --interactive-accent-hover: var(--dark-accent); /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+
+    /*--DEFAULT VARIABLES--*/
+    --deep-dark-accent: #1b2c25;
+    --dark-accent: #2e4d3c;
+    --lite-accent: #45b480;
+    --accent: #548b67;
+    --accent2: #cc824c;
+    --accent2-lite: #61efc9;
+    --bg: #1e3831;
+    --fg: white;
+    --side-bar: var(--note);
+    --outer-bar: #0e0f15;
+    --dark-sidebar: #1c2f2b;
+    --inactive: #587770;
+    
+    --file: var(--soft-text);
+    --folder: #9a5f3b;
+    --f-hover: var(--accent);
+    
+    --note: #1a1e24;
+    --text: #dcdedd;
+    --headers: #3eb281;
+    --soft-text: #aacac9;
+    --code-bg: #2e3b3e;
+    --code-text: #45faa6;
+    --embed-bg: var(--outer-bar);
+
+    --embed-h: #c93c3c;
+    --h1: var(--headers);
+    --h2: sandybrown;
+    --h3: var(--embed-h);
+
+    
+    --tag: var(--dark-accent);
+    --table: #2c3836;
+    --hr: #2b4e41;
+    --i-at: #5ebfa9;
+    
+    --graph-bg: #0b170e;
+    --graph-lines: #1f534d;
+    --graph-node: var(--headers);
+    --graph-fill: var(--headers);
+    --graph-404: #1f6f29;
+    --graph-img: var(--accent2) /*#ff86be*/;
+    --graph-tag: saddlebrown;
+}
+.theme-light.dnd {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(52, 237, 152, 0.22); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 130, 196, 167;
+    
+    --text-highlight-bg: rgba(60, 168, 122, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Search Highlight*/
+    --text-selection: rgba(123, 255, 179, 0.29); /*Cursor dragged highlights*/
+    
+    --text-faint: var(--accent2);
+    --text-on-accent: var(--bg);
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    /*--DEFAULT VARIABLES--*/    
+    --deep-dark-accent: #1b2c25;
+    --dark-accent: #e3fcef;
+    --lite-accent: #ac7c10;
+    --accent: #79c78e;
+    --accent2: #cca04c;
+    --accent2-lite: #35be89;
+    --bg: #cbe2d5;
+    --fg: #029f08;
+    --side-bar: var(--note);
+    --outer-bar: #dfefe6;
+    --dark-sidebar: var(--side-bar);
+    --inactive: #91c1ad /*#91a3c1*/;
+    
+    --file-select: #64c9a3;
+    --file: #64896d;
+    --folder: #6dcebf;
+    --f-hover: #2e9163;
+    --lines: var(--inactive);
+    
+    --headers: #0e934c;
+    --note: #f8fbff;
+    --text: #697580;
+    --soft-text: #52ad67;
+    --code-bg: #f1f5ff;
+    --code-text: #35ad76;
+    --embed-bg: var(--code-bg) /*#ebf1f8*/;
+
+    --embed-h: #d05858;
+    --h1: var(--headers);
+    --h2: sandybrown;
+    --h3: var(--embed-h);
+
+    --tag: #56c681;
+    --table: #ccd6eb;
+    --th: #549f54;
+    --hr: #d6deea;
+    --i-at: #48804e;
+    
+    --graph-bg: var(--note);
+    --graph-lines: #e4e7f8;
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
+    --graph-404: #727e93;
+    --graph-img: var(--accent2) /*#5469de*/;
+    --graph-tag: #000000;    
+}
+
+
+/*Headings*/
+/*Heading Line*/
+.dnd h1:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--h1), transparent);
+    left: 0;
+}
+
+.dnd h2:after {
+    content: "";
+    display: block;
+    width: 85%;
+    height: 4px;
+    background: linear-gradient(to right, var(--h2), transparent);
+    left: 0;
+}
+
+.dnd h3:after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(to right, var(--h3), transparent);
+    left: 0;
+}
+
+/*Writing Class Headings*/
+.dnd .hcl h1:before,
+.dnd .hcl h1:after,
+.dnd .hcl h2:before, 
+.dnd .hcl h2:after,
+.dnd .hcl h3:before,
+.dnd .hcl h3:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    border: none;
+}
+
+.dnd .hcl h1::after {
+    background: linear-gradient(to right, var(--h1), transparent);
+}
+.dnd .hcl h1::before {
+    background: linear-gradient(to left, var(--h1), transparent);
+}
+.dnd .hcl h2::after {
+    background: linear-gradient(to right, var(--h2), transparent);
+}
+.dnd .hcl h2::before {
+    background: linear-gradient(to left, var(--h2), transparent);
+}
+.dnd .hcl h3::after {
+    background: linear-gradient(to right, var(--h3), transparent);
+}
+.dnd .hcl h3::before {
+    background: linear-gradient(to left, var(--h3), transparent);
+}
+
+/*Embed Headings*/
+.dnd .markdown-embed h1,
+.dnd .markdown-embed h2, 
+.dnd .markdown-embed h3,
+.dnd .markdown-embed h4,
+.dnd .markdown-embed h5,
+.dnd .markdown-embed h6 {
+    color: var(--embed-h);
+    font-style: normal;
+}
+
+
+/*Table*/
+.dnd table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Plugin: 5e Statblock*/
+.dnd .obsidian-statblock-plugin .creature-heading > .name {
+    color: var(--embed-h) !important;
+}
+
+.dnd .obsidian-statblock-plugin .property-name {
+    color: var(--headers);
+}
+
+.dnd .obsidian-statblock-plugin .section-header {
+    color: var(--embed-h) !important;
+}
+
+
+
+/*Theme: ITS Dark*/
+.theme-dark.its-d {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+    
+    --background-modifier-form-field-highlighted: rgba(60, 8, 8, 0.46); 
+    --text-highlight-bg: rgba(139, 6, 6, 0.4);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--hr);
+
+    
+    /*Theme Dark Colors*/
+    --deep-dark-accent: #270f0f;
+    --dark-accent: var(--aside-bg);
+    --outer-bar: black;
+    --dark-sidebar: #000000;
+    --side-bar: var(--note);
+
+    --note: #070b11;
+    --hr: #571a1a;
+    --file: var(--text);
+    
+    --accent: #803232;
+    --accent2: var(--text);
+    --accent2-lite: #c5575b;
+    
+    --headers: #aa3333;
+    --text: #475569;
+    --soft-text: var(--accent);
+    --code-text: var(--accent);
+    --footnote: #577093;
+
+    --fg: var(--headers);
+    --bg: var(--inactive);
+    --code-bg: var(--aside-bg);
+    --embed-bg: black;
+    --aside-bg: #04070c;
+    
+    --th: var(--hr);
+    --td: #03000054;
+    
+    --table: #380b13;
+    --tag: var(--table);
+    
+    --inactive: #1b262f;
+    
+    --graph-bg: rgba(13, 20, 29, 0.51);
+    --graph-lines: var(--hr);
+}
+
+/*Bullet Edits*/
+
+/*Hide bullet*/
+.its-d ul li::before {
+    display: none;
+}
+.cm-hmd-list-indent.its-d .cm-tab::before {
+    border-left: 2px solid var(--dark-accent);
+}
+
+.its-d .markdown-preview-view .list-collapse-indicator {
+    position: absolute;
+    padding-left: 25px;
+}

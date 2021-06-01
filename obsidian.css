@@ -1295,7 +1295,7 @@ settings:
     --dark-accent: #ffeded;
     --lite-accent: #a35158;
     --accent: #912e2e;
-    --accent2: var(--hr)/*#4c78cc*/;
+    --accent2: #aac1d3/*#4c78cc*/;
     --accent2-lite: #5599d0;
     --bg: #dde4ef;
     --fg: var(--accent) /*#9f0202*/;
@@ -3198,7 +3198,8 @@ iframe {
 }
 
 /*Justify text*/
-.justified p {
+.justified .markdown-preview-view,
+.justified .cm-s-obsidian {
     text-align: justify;
 }
 

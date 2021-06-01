@@ -232,3 +232,21 @@ h3:after {
     font-style: normal;
 }
 
+/*Table*/
+.dnd table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Plugin: 5e Statblock*/
+.dnd .obsidian-statblock-plugin .creature-heading > .name {
+    color: var(--embed-h) !important;
+}
+
+.dnd .obsidian-statblock-plugin .property-name {
+    color: var(--headers);
+}
+
+.dnd .obsidian-statblock-plugin .section-header {
+    color: var(--embed-h) !important;
+}

@@ -3655,6 +3655,13 @@ i { /*I used for image description, em is just regular italics*/
 }
 
 /*----Image Positions/Adjustments----*/
+/*Invert Colors*/
+.theme-dark img[alt*="invert"] { mix-blend-mode: normal; }
+.theme-light img[alt*="invertd"] { mix-blend-mode: darken; }
+img[alt*="invert"] {
+    mix-blend-mode: exclusion;
+}
+
 /*Fix Float Issues*/
 img[alt*="clear"] {
     clear: both;

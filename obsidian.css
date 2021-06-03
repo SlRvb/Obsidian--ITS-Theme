@@ -1895,7 +1895,7 @@ b.u-pop {
 /*Dropdown Arrow*/
 .dropdown {
     background-color: var(--embed-bg);
-    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 128 128'%3E%3Cpath d='M64 115.58c-1.01 0-1.96-.51-2.5-1.37L.69 19.58C.1 18.67.06 17.5.58 16.55A2.96 2.96 0 0 1 3.19 15h121.62c1.09 0 2.09.59 2.61 1.55c.52.95.48 2.12-.11 3.03L66.5 114.22c-.54.85-1.49 1.36-2.5 1.36z' fill='%234e5b6f'/%3E%3C/svg%3E");
     border-radius: var(--radius);
     border: 1px solid var(--table);
 }
@@ -4391,7 +4391,7 @@ g.classGroup line {
 /*Items*/
 .kanban-plugin__item {
     border: 0 !important;
-    border-left: 3px solid var(--th) !important;
+    border-left: 3px solid var(--accent) !important;
     border-radius: var(--border-radius) !important;
 }
 .kanban-plugin__item-content-wrapper {
@@ -4448,6 +4448,19 @@ g.classGroup line {
 .kanban-plugin .task-list-item-checkbox {
     -webkit-appearance: checkbox;
 } 
+
+/*Metadata*/
+.kanban-plugin__item-metadata-wrapper:not(:empty) {
+    background-color: var(--note) !important;
+}
+.kanban-plugin__item-title-wrapper:not(:only-child) {
+    border: 0 !important;
+    background-color: var(--outline);
+}
+/*
+.kanban-plugin__meta-table {
+    font-size: .95em !important;
+}*/
 
 
 
@@ -4560,7 +4573,10 @@ g.classGroup line {
 }
 
 
-
+/*Plugin: Advanced Table*/
+.cm-s-obsidian .HyperMD-table-row {
+    font-family: var(--font-monospace);
+}
 
 
 
@@ -4905,11 +4921,8 @@ g.classGroup line {
     visibility: hidden;
 }
 .dv .dataview-ul {
-    margin-block-start: 0 !important;
-    margin-block-end: 0 !important;
-    padding-inline-start: 0px !important;
+    list-style-type: none;
 }
-
 /*Dim First Column Link*/
 .dv .dataview td:nth-child(1) {
     color: var(--headers) !important;

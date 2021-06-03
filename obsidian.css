@@ -4593,7 +4593,6 @@ g.classGroup line {
 
 
 
-
 /*--CSS Class Toggles--*/
 /*Hide Vault Title*/
 .v-non .nav-folder.mod-root > .nav-folder-title {
@@ -4603,10 +4602,10 @@ g.classGroup line {
     display: none;
 }
 /*--Settings Specific--*/
-.ed-pre .markdown-preview-view, .ed-pre li {
+.ed-pre .markdown-preview-section {
     font-family: var(--pre-font);
 }
-.ed-pre .cm-s-obsidian  {
+.ed-pre .cm-s-obsidian .CodeMirror-line {
     font-family: var(--ed-font);
 }
 

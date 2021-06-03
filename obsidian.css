@@ -1413,7 +1413,11 @@ settings:
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
     border-radius: var(--radius);
 }
-
+/*Sidebar Height Matches Note Title Height*/
+.workspace-tab-header-container {
+    padding-top: 8px;
+    height: 36px;
+}
 
 /*Buttons*/
 .nav-action-button.is-active {

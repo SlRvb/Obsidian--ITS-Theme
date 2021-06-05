@@ -559,6 +559,10 @@ settings:
         max: 15
         step: 1
     -
+        title: Hide Resize Handles
+        id: h-rh
+        type: class-toggle
+    -
         title: Workspace Colors
         id: Workspace-Colors
         type: heading
@@ -1395,7 +1399,9 @@ settings:
 }
 
 /*Ribbon Icons*/
-.side-dock-ribbon-tab, .side-dock-ribbon-action, .workspace-tab-header-inner-icon {
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action,
+.workspace-tab-header-inner-icon {
     color: var(--soft-text);
     text-align: center;
     cursor: pointer;
@@ -1419,6 +1425,7 @@ settings:
     height: 36px;
 }
 
+
 /*Buttons*/
 .nav-action-button.is-active {
     background-color: var(--th);
@@ -1440,11 +1447,15 @@ button, button.mod-cta {
 }
 
 /*Sidebar Resize Handle*/
-.workspace-leaf-resize-handle {
+.workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
     background-color: var(--dark-sidebar);
-    transition: background-color 200ms ease-in-out;
+    height: calc(100% - 36px);
 }
-.workspace-leaf-resize-handle:hover {
+.workspace-leaf-resize-handle:hover,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
     background-color: var(--accent);
 }
 
@@ -2033,6 +2044,14 @@ b.u-pop {
 
 
 /*--NOTE TITLEBAR--*/
+.view-header {
+    border-top: 0px;
+    background: var(--note);
+}
+.view-header-title-container:after {
+    background: linear-gradient(to right, transparent, var(--note));
+}
+
 /*Inactive Note Titlebar*/
 .view-header-title {
     color: var(--inactive);    
@@ -4908,7 +4927,21 @@ g.classGroup line {
 .lig .cm-s-obsidian .CodeMirror-line  {
     font-variant-ligatures: normal;
 }
+/*Hide Resize Handles*/
+.h-rh .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.h-rh .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
+.h-rh .workspace-tabs .workspace-leaf-resize-handle {
+    background-color: var(--side-bar);
+}
+.h-rh .workspace-leaf-resize-handle {
+    background: var(--note);
+}
 
+.h-rh .workspace-leaf-resize-handle:hover,
+.h-rh .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+.h-rh .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
+    background-color: var(--accent);
+}
 
 
 

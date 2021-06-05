@@ -3615,6 +3615,23 @@ blockquote mark strong {
     margin: 0;
 }
 
+.k-o ul ul li {
+    background: transparent;
+}
+.k-o ul ul li::before {
+    content: var(--bullet);
+    margin-left: -27px;
+}
+
+.k-o ul ul li {
+    border-left: 5px solid var(--table);
+    margin-left: -5px;
+}
+.k-o ul ul li:nth-child(even) {
+    border-left: 5px solid var(--accent);
+    margin-left: -5px;
+    background: var(--outline);
+}
 
 /*Display Embed Title*/
 .kanban-o .internal-embed::before{

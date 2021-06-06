@@ -584,7 +584,7 @@ settings:
         default-light: '#dfe7ef'
     - 
         title: Sidebar
-        description: Change only sidebar, right settings pane, and inactive note title background colors.
+        description: Change only sidebar, right settings pane colors.
         id: side-bar
         type: variable-themed-color
         format: hex
@@ -3615,6 +3615,7 @@ blockquote mark strong {
     margin: 0;
 }
 
+/*Kanban Outline*/
 .k-o ul ul li {
     background: transparent;
 }
@@ -4984,6 +4985,12 @@ g.classGroup line {
     color: var(--lines) !important;
 }
 .dv .dataview td:nth-child(1) .internal-link:hover {
+    color: var(--accent2) !important;
+}
+.dv .dataview td:nth-child(1) .external-link {
+    color: var(--inactive) !important;
+}
+.dv .dataview td:nth-child(1) .external-link:hover {
     color: var(--accent2) !important;
 }
 

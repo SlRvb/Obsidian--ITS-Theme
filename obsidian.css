@@ -1523,6 +1523,8 @@ button, button.mod-cta {
     margin-right: 5px;
     font-size: .85em;
 }
+
+
 /*Move File Extension to Right*/
 .nav-folder-title-content,
 .nav-file-title-content {
@@ -1757,6 +1759,18 @@ input[type='number']:hover {
     border-radius: var(--radius);
 }
 
+/*Quick Switcher*/
+.suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"])::before {
+    content: "📄";
+    color: transparent;
+    text-shadow: 0 0 0 var(--f-icon);
+    margin-right: 5px;
+    font-size: .85em;
+}
+.suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"]) {
+    top: 3.5px;
+}
+
 /*-Graph Settings-*/
 .graph-controls.is-close {
     /* background-color: var(--background-primary); */
@@ -1764,10 +1778,11 @@ input[type='number']:hover {
 /*Opened Settings*/
 .graph-controls {
     background-color: var(--side-bar);
-    border: 1px solid var(--background-modifier-border);
+    border: 1px solid var(--table);
     border-radius: var(--radius);
     padding: .5em;
     padding-left: .2em;
+    max-width: 17em;
 }
 .graph-control-section:not(.is-collapsed) .graph-control-section-header {
     font-weight: bold;
@@ -1820,11 +1835,23 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 
-
 /*--Settings Menu--*/
-/*Square Settings Background*/
-.modal {
+/*Square Settings & Quick Switcher/Command Palatte*/
+.modal, .prompt {
     border-radius: var(--radius);
+    box-shadow: .5em .5em var(--outline);
+    border: 0;
+}
+/*Resize Settings*/
+.modal.mod-settings {
+    width: 55vw;
+    height: 100vh;
+    max-height: 90vh;
+    max-width: 100vw;
+}
+.modal.mod-settings .vertical-tab-content-container,
+.modal.mod-settings .vertical-tab-header {
+    height: 90vh;
 }
 
 /*Setting Header Underline*/
@@ -1860,35 +1887,19 @@ input[type='range']::-webkit-slider-thumb {
     transition-duration: .2s;
 }
 
-
-/*Undo b quote formatting
-.setting-item-description b,
-b.u-pop {
-    font-weight: 900;
-    color: var(--headers) !important;
-    display: inline-block;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    background: transparent;
-}*/
-
 .setting-item ul li::before {
     position: relative;
     margin-right: .5em;
 }
 
-
-
 /*Settings Right*/
 .modal.mod-settings .vertical-tab-content-container {
     padding: 35px 40px 20px 0;
-    height: 70vh;
     background-color: var(--side-bar);
 }
 .horizontal-tab-content, .vertical-tab-content {
     background-color: var(--side-bar);
-    padding: 5px 30px;
+    padding: 5px 0px 5px 30px;
 }
 
 /*Settings Left*/
@@ -2487,9 +2498,7 @@ ul li::before {
 ul li:nth-child(even)::before {
     color: var(--accent2);
 }
-li.task-list-item::before {
-    visibility: collapse;
-}
+li.task-list-item::before,
 ol li::before {
     visibility: collapse;
 }
@@ -2512,11 +2521,11 @@ ul, ol {
 /*Fix breaking when Space in between Lists*/
 ul li.task-list-item > p {
     margin-block-end: unset;
-    margin-left: -1.3em;
 }
 ul li > p {
     margin-block-end: unset;
 }
+
 
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
@@ -2619,6 +2628,8 @@ li.task-list-item.is-checked li:not(.is-checked) {
     font-weight: initial; 
     color: var(--text)
 }
+
+
 /*Different Checked Box*/
 [data-checklist="-"] > input[type=checkbox]:checked {
     background-color: var(--table) !important;   

@@ -2104,7 +2104,7 @@ input[type='range']::-webkit-slider-thumb {
     background: linear-gradient(to left, var(--outer-bar), var(--dark-accent));
 }
 .workspace-leaf.mod-active .view-header-title-container:after {
-    background: none;
+    background: transparent !important;
 }
 
 /*Inactive Note Titlebar*/

@@ -1880,7 +1880,7 @@ input[type='range']::-webkit-slider-thumb {
     border: 0;
 }
 /*Resize Settings*/
-.modal.mod-settings {
+.modal.mod-settings:not(.is-mobile .modal.mod-settings) {
     width: 55vw;
     height: 100vh;
     max-height: 90vh;

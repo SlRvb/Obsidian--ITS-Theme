@@ -4200,7 +4200,14 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     width: auto !important;
     writing-mode: vertical-rl;
 }
-
+body.plugin-sliding-panes .workspace-leaf.mod-active .view-header {
+    border: none !important;
+    background: linear-gradient(to top, var(--outer-bar), var(--dark-accent));
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+    border-right: 0 !important;
+    border-bottom: none !important;
+}
 
 
 /*--Obsidian Tabs Plugin--*/

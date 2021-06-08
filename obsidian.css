@@ -1399,6 +1399,7 @@ settings:
     background-color: var(--outer-bar);
 }
 
+
 /*Ribbon Icons*/
 .side-dock-ribbon-tab,
 .side-dock-ribbon-action,
@@ -1470,6 +1471,7 @@ button, button.mod-cta {
     padding: .2em .5em;
     margin: 0px .2em;
 }
+
 .workspace-tab-header {
     padding-top: .17em;
     border-top: 2px solid transparent;
@@ -1479,6 +1481,11 @@ button, button.mod-cta {
     background-color: var(--td);
     border-radius: var(--radius);
 }
+/*
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+    width: 0;
+}*/
 
 /*Sidebar Resize Handle*/
 .workspace-leaf-resize-handle,
@@ -2092,6 +2099,13 @@ input[type='range']::-webkit-slider-thumb {
 .view-header-title-container:after {
     background: linear-gradient(to right, transparent, var(--note));
 }
+.workspace-leaf.mod-active .view-header {
+    border: none;
+    background: linear-gradient(to left, var(--outer-bar), var(--dark-accent));
+}
+.workspace-leaf.mod-active .view-header-title-container:after {
+    background: none;
+}
 
 /*Inactive Note Titlebar*/
 .view-header-title,
@@ -2106,7 +2120,7 @@ input[type='range']::-webkit-slider-thumb {
 .workspace-leaf.mod-active .view-action {
     color: var(--soft-text);
 }
-.workspace-leaf.mod-active .view-header-title:hover,
+
 .workspace-leaf.mod-active .view-header-icon:hover,
 .workspace-leaf.mod-active .view-action:hover {
     color: var(--accent);

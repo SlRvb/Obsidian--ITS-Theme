@@ -883,7 +883,8 @@ settings:
         id: dark-accent
         type: variable-themed-color
         format: hex
-        default-dark: '#571a1a'
+        default-dark: '#652121'
+
         default-light: '#ffeded'
     -
         title: Deep Dark Accent
@@ -891,7 +892,7 @@ settings:
         id: deep-dark-accent
         type: variable-themed-color
         format: hex
-        default-dark: '#270f0f'
+        default-dark: '#3f1010'
         default-light: '#2f1010'
     -
         title: Inactive
@@ -1171,8 +1172,8 @@ settings:
     /*--DEFAULT VARIABLES--*/
 
     /*Compatibility Color Recoloring*/    
-    --deep-dark-accent: #270f0f /*#2f1010*/;
-    --dark-accent: #571a1a /*#652121, #53201F*/;
+    --deep-dark-accent: #3f1010 /*#2f1010*/;
+    --dark-accent: #652121 /*#571a1a, #53201F*/;
     --lite-accent: #e06c75;
     --accent: #883737/*#c14343*/;
     --accent2: var(--hr)/*#4c78cc*/;
@@ -1415,16 +1416,6 @@ settings:
     background-color: var(--outer-bar);
 }
 
-.workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
-.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-    border-radius: var(--radius);
-}
-/*Sidebar Height Matches Note Title Height*/
-.workspace-tab-header-container {
-    padding-top: 8px;
-    height: 36px;
-}
-
 
 /*Buttons*/
 .nav-action-button.is-active {
@@ -1442,8 +1433,51 @@ button, button.mod-cta {
 }
 
 /*Pinned Pane Button Color*/
-.view-action:hover, .view-action.is-active {
+.view-action:hover,
+.view-action.is-active {
     color: var(--accent);
+}
+
+
+/*--Sidebar--*/
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf,
+.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+    border-radius: var(--radius);
+}
+/*Recolor Top*/
+.workspace-tab-container-before.is-before-active,
+.workspace-tab-container-after.is-after-active,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active, 
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner {
+    background-color: transparent;
+    border-radius: var(--radius);
+}
+.workspace-tab-header-container {
+    background-color: var(--side-bar);
+    border-radius: var(--radius);
+    padding-top: .2em;
+    height: 36px;
+}
+
+/*Icons*/
+.workspace-tab-header-inner {
+    padding: .2em .5em;
+    margin: 0px .2em;
+}
+.workspace-tab-header {
+    padding-top: .17em;
+    border-top: 2px solid transparent;
+}
+.workspace-tab-header.is-active {
+    border-top: 2px solid var(--headers);
+    background-color: var(--td);
+    border-radius: var(--radius);
 }
 
 /*Sidebar Resize Handle*/
@@ -1451,29 +1485,13 @@ button, button.mod-cta {
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
     background-color: var(--dark-sidebar);
-    height: calc(100% - 36px);
+    height: 100%;
 }
 .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
     background-color: var(--accent);
 }
-
-
-/*Square Tabs*/
-/*Left*/
-.workspace-tab-container-before.is-before-active .workspace-tab-header-inner, .workspace-tab-header.is-before-active .workspace-tab-header-inner {
-    border-bottom-right-radius: 0px;
-}
-/*Right*/
-.workspace-tab-container-after.is-after-active .workspace-tab-header-inner, .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-    border-bottom-left-radius: 0px;
-}
-/*Top*/
-.workspace-tab-header.is-active {
-    border-radius: var(--radius) var(--radius) 0px 0px;
-}
-
 
 
 /*-File Navbar-*/
@@ -1608,6 +1626,11 @@ button, button.mod-cta {
 /*Arrows*/
 .nav-folder .collapse-icon {
     display: none;
+}
+
+/*Tooltip Popup*/
+.tooltip {
+    border-radius: var(--radius);
 }
 
 
@@ -1760,16 +1783,23 @@ input[type='number']:hover {
 }
 
 /*Quick Switcher*/
+/*Add Note Icon*/
 .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"])::before {
     content: "📄";
     color: transparent;
-    text-shadow: 0 0 0 var(--f-icon);
+    text-shadow: 0 0 0 var(--file);
     margin-right: 5px;
     font-size: .85em;
 }
 .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"]) {
     top: 3.5px;
 }
+/*Recolor Create Note Icon*/
+.suggestion-flair[aria-label="Not created yet, select to create"] {
+    color: var(--inactive);
+}
+
+
 
 /*-Graph Settings-*/
 .graph-controls.is-close {
@@ -2056,7 +2086,7 @@ input[type='range']::-webkit-slider-thumb {
 
 /*--NOTE TITLEBAR--*/
 .view-header {
-    border-top: 0px;
+    border: none;
     background: var(--note);
 }
 .view-header-title-container:after {
@@ -2064,17 +2094,22 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 /*Inactive Note Titlebar*/
-.view-header-title {
-    color: var(--inactive);    
-}
-
-.view-header-icon {
-    color: var(--soft-text);
+.view-header-title,
+.view-header-icon,
+.view-action {
+    color: var(--inactive);
 }
 
 /*Active Note Titlebar*/
-.workspace-leaf.mod-active .view-header-title {
+.workspace-leaf.mod-active .view-header-title,
+.workspace-leaf.mod-active .view-header-icon,
+.workspace-leaf.mod-active .view-action {
     color: var(--soft-text);
+}
+.workspace-leaf.mod-active .view-header-title:hover,
+.workspace-leaf.mod-active .view-header-icon:hover,
+.workspace-leaf.mod-active .view-action:hover {
+    color: var(--accent);
 }
 
 /*Center Note Icons*/
@@ -2085,10 +2120,13 @@ input[type='range']::-webkit-slider-thumb {
     margin-bottom: auto;
 }
 
-
-
-
 /*--NOTES--*/
+/*Remove Note Padding*/
+.workspace-split.mod-root .view-content {
+    padding: 0;
+    overflow: hidden;
+}
+
 /*Editor Resize*/
 .markdown-source-view.mod-cm5 {
     padding-left: 0;
@@ -3037,11 +3075,6 @@ iframe {
     border-style: none;
     border-color: initial;
     border-image: initial;
-}
-/*Remove File Padding*/
-.workspace-split.mod-root .view-content {
-    padding: 2px 2px;
-    overflow: hidden;
 }
 
 

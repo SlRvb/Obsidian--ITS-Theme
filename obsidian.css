@@ -1801,18 +1801,18 @@ input[type='number']:hover {
 
 /*Quick Switcher*/
 /*Add Note Icon*/
-.suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"])::before {
+.prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"])::before {
     content: "📄";
     color: transparent;
     text-shadow: 0 0 0 var(--file);
     margin-right: 5px;
     font-size: .85em;
 }
-.suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"]) {
+.prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"]) {
     top: 3.5px;
 }
 /*Recolor Create Note Icon*/
-.suggestion-flair[aria-label="Not created yet, select to create"] {
+.prompt .suggestion-flair[aria-label="Not created yet, select to create"] {
     color: var(--inactive);
 }
 
@@ -1892,9 +1892,8 @@ input[type='range']::-webkit-slider-thumb {
 /*Resize Settings*/
 .modal.mod-settings:not(.is-mobile .modal.mod-settings) {
     width: 55vw;
-    height: 100vh;
-    max-height: 90vh;
-    max-width: 100vw;
+    height: 90vh;
+    overflow: visible;
 }
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .vertical-tab-header {

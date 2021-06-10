@@ -1890,7 +1890,7 @@ input[type='range']::-webkit-slider-thumb {
     border: 0;
 }
 /*Resize Settings*/
-.modal.mod-settings:not(.is-mobile .modal.mod-settings) {
+.modal.mod-settings {
     width: 55vw;
     height: 90vh;
     overflow: visible;
@@ -1898,6 +1898,10 @@ input[type='range']::-webkit-slider-thumb {
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .vertical-tab-header {
     height: 90vh;
+}
+.is-mobile .modal.mod-settings {
+    width: unset;
+    height: unset;
 }
 
 /*Setting Header Underline*/

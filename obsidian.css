@@ -1899,10 +1899,6 @@ input[type='range']::-webkit-slider-thumb {
 .modal.mod-settings .vertical-tab-header {
     height: 90vh;
 }
-.is-mobile .modal.mod-settings {
-    width: unset;
-    height: unset;
-}
 
 /*Setting Header Underline*/
 .setting-item-heading {
@@ -3141,6 +3137,11 @@ iframe {
 .is-mobile .status-bar {
     display: none;
 }
+/*Unset Mobile Changes*/
+.is-mobile .modal.mod-settings {
+    width: calc(100% - 20px);
+}
+
 /*Square UI*/
 .is-mobile .modal, .is-mobile .workspace {
     border-radius: var(--radius) !important;

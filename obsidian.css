@@ -1209,7 +1209,7 @@ settings:
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);
     
-    --tag: var(--dark-accent);
+    --tag: var(--th);
     --table: #283846;
     --hr: #3c5274;
     --i-at: #bf5e5e;
@@ -1466,21 +1466,31 @@ button, button.mod-cta {
     height: 36px;
 }
 
-/*Icons*/
+/*Sidebar: Icons*/
 .workspace-tab-header-inner {
     padding: .2em .5em;
     margin: 0px .2em;
 }
-
+/*Sidebar Icons: Add Padding to All*/
 .workspace-tab-header {
     padding-top: .17em;
     border-top: 2px solid transparent;
 }
 .workspace-tab-header.is-active {
-    border-top: 2px solid var(--headers);
-    background-color: var(--td);
+    border-color: var(--accent);
+    background-color: var(--dark-sidebar);
     border-radius: var(--radius);
 }
+
+/*Sidebar Icons: Remove Animation*/
+.workspace-tab-header,
+.workspace-tab-header-inner,
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+    transition: none;
+}
+
+
 /*
 .workspace-tab-container-before,
 .workspace-tab-container-after {
@@ -3241,14 +3251,48 @@ iframe {
 
 
 /*----Export ... I'll figure this out eventually I swear----*/
-/*Fix Poems*/
+/*Remove Page Margins*/
+@page {
+    background-color: var(--note);
+    margin: 0;
+}
+
+/*Fix Dark & Light Themes Colors*/
 @media print {
-    .poem p {
-        text-align: center;
+    .theme-light {
+        --note: #ffffff /*#f8fbff*/;
+    }
+}
+
+@media print {
+    .theme-dark .markdown-preview-view,
+    .theme-light .markdown-preview-view {
+        background-color: var(--note);
+        color: var(--text);
+    }
+    body {
+        padding: 10em;
+        background-color: var(--note);
+    }
+
+
+    /*Print: Fix Quote Height*/
+    .markdown-preview-view blockquote:before { top: -.1em; }
+
+    /*Print: Fix Highlight Text Color*/
+    .theme-dark .markdown-preview-view mark,
+    .theme-light .markdown-preview-view mark {
+        color: var(--text);
+    }
+
+    /*Poem Export: Not Working*/
+    .markdown-preview-section.poem {
+        text-align: center !important;
         line-height: 1.3em;
         margin-block-end: 4%;
     }
 }
+
 
 
 

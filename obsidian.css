@@ -3774,7 +3774,7 @@ blockquote mark strong {
 
 
 /*Italicized Text*/
-i { /*I used for image description, em is just regular italics*/
+.markdown-preview-section i { 
     display: block;
     font-style: unset;
     color: var(--i-at);

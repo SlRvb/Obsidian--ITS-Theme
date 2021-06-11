@@ -1165,7 +1165,7 @@ settings:
     --interactive-accent-hover: var(--accent); /*Menu Button Hover*/
     --interactive-success: #599049; /*??*/
     
-    --scrollbar-bg: rgba(255, 255, 255, 0.05);
+    --scrollbar-bg: rgba(160, 214, 255, 0.07);
     --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
     --highlight-mix-blend-mode: lighten;
 
@@ -1211,7 +1211,7 @@ settings:
     
     --tag: var(--th);
     --table: #283846;
-    --hr: #3c5274;
+    --hr: #2a3b55/*#3c5274*/;
     --i-at: #bf5e5e;
     
     --graph-bg: var(--outer-bar);
@@ -1278,7 +1278,7 @@ settings:
     --text-error: #ff3333; /*??*/
     --text-error-hover: #990000; /*??*/
     
-    --text-highlight-bg: rgba(255, 185, 185, 0.4); /*Text highlights*/
+    --text-highlight-bg: rgba(255, 185, 185, 0.253); /*Text highlights*/
     --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Search Highlight*/
     --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
     
@@ -1289,7 +1289,7 @@ settings:
     --interactive-accent-hover: var(--lite-accent); /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
     
-    --scrollbar-bg: rgba(255, 255, 255, 0.05);
+    --scrollbar-bg: rgba(0, 0, 0, 0.05);
     --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
     --highlight-mix-blend-mode: darken; /*Search Highlight Mode*/
 
@@ -2300,7 +2300,8 @@ h4:after {
     background-color: var(--code-bg);
     line-height: 1.4em;
     border-radius: var(--radius);
-    font-size: calc(var(--f-s-text) - .15rem);
+    font-size: calc(unset - .15rem);
+    overflow: auto;
 }
 
 .markdown-preview-view pre[class*="language-"],
@@ -2314,6 +2315,7 @@ h4:after {
     border-radius: var(--radius);
     z-index: 0;
 }
+
 /*Apply Dropshadow*/
 .markdown-preview-view pre,
 .markdown-preview-view pre[class*="language-"],
@@ -2987,8 +2989,8 @@ a.tag:hover {
     border-left-width: 8px;
     border-radius: var(--radius);
     position: relative;
-    margin: 2%;
-    padding-right: 35px; /*Don't overlap with "*/
+    margin: 1em;
+    padding-right: 40px; /*Don't overlap with "*/
 }
 
 /*Quotation Mark*/
@@ -3072,7 +3074,10 @@ blockquote p { margin: 0px; }
 
 /*Change Footnote Link Icon*/
 /*Hide & Recolor Original Icon*/
-.footnote-backref.footnote-link { visibility: hidden; color: var(--headers); }
+.footnote-backref.footnote-link { 
+    visibility: hidden; 
+    color: var(--headers); 
+}
 
 /*Recolor hover*/
 .footnote-backref.footnote-link:hover { color: var(--accent2-lite); }
@@ -3294,7 +3299,7 @@ iframe {
     }
 
     /*Poem Export: Not Working*/
-    .markdown-preview-section.poem {
+    .markdown-preview-section .poem {
         text-align: center !important;
         line-height: 1.3em;
         margin-block-end: 4%;
@@ -3352,16 +3357,130 @@ iframe {
 .writing h6 {
     text-align: center;
 }
+.writing h1:after,
+.writing h2:after,
+.writing h3:after,
+.writing h4:after,
+.writing h5:after,
+.writing h6:after {
+    height: 0 !important;
+}
 
-.writing p {
+.writing .markdown-preview-section {
     text-align: justify;
 }
 .markdown-preview-view.writing .markdown-preview-sizer {
-    max-width: 700px;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
 }
+/*Writing: Link*/
+.writing .internal-link,
+.writing .external-link {
+    color: var(--text);
+}
+.writing .internal-link:hover,
+.writing .external-link:hover {
+    background: var(--hvr2);
+    border: 0;
+    color: var(--soft-text);
+}
+/*Writing: Link Type Icons*/
+.writing .internal-link::after {
+    content: "\00B0";
+    color: var(--accent);
+}
+.writing .external-link::after {
+    content: "\207A";
+    transform: unset;
+    font-weight: 900;
+    color: var(--accent);
+}
 
+.writing hr::after {
+    display: none;
+}
+/*Writing: Aside Edits*/
+.writing .aside-hide,
+.writing .aside-hide:hover,
+.writing .aside-in,
+.writing .aside-show {
+    box-shadow: none;
+    background: none;
+}
+.writing .aside-in,
+.writing .aside-show {
+    border-left: 2px solid var(--headers);
+    width: 40%;
+}
+.writing .aside-show {
+    margin-right: -42%;
+}
+.writing .aside-hide:hover {
+    width: 15vw;
+}
+.writing .aside-hide:before {
+    background: transparent;
+    text-shadow: 0 0 0 var(--hr);
+}
+/*Writing: Code*/
+.markdown-preview-view.writing code,
+.markdown-preview-view.writing pre {
+    color: var(--text) !important;
+    border-color: var(--note);
+    box-shadow: none;
+    padding: 0;
+    background: none;
+}
+.markdown-preview-view.writing pre {
+    padding-left: .5em;
+    border-left: 5px solid var(--code-bg);
+    border-right: 5px solid var(--code-text);
+}
+.markdown-preview-view.writing pre[class*="language-"],
+.markdown-preview-view.writing code[class*="language-"] {
+    filter: saturate(70%);
+}
+
+/*Writing: Footnotes*/
+.writing .footnote-link {
+    color: var(--footnote);
+}
+.writing .footnote-backref.footnote-link:before {
+    content: "\25B2"/*\1F815*/;
+    transform: unset;
+    font-size: .5em;
+}
+/*Writing: Blockquotes*/
+.markdown-preview-view.writing blockquote {
+    background: none;
+    border-left: 3px solid var(--accent);
+    margin-left: 4em;
+    margin-right: 3em;
+}
+.markdown-preview-view.writing blockquote:before {
+    color: var(--accent);
+}
+.writing blockquote mark strong {
+    color: var(--inactive);
+}
+/*Writing: No List Line*/
+.writing li,
+.writing li:nth-child(even) {
+    border: 0;
+}
+/*Arrows*/
+.writing .collapse-icon svg {
+    color: var(--scrollbar-thumb-bg);
+}
+
+.writing .markdown-preview-section i {
+    color: var(--footnote);
+    background: var(--td);
+}
+.writing mark {
+    background-color: var(--scrollbar-bg);
+}
 
 /*--Center Headings--*/
 .hc h1,
@@ -3531,6 +3650,7 @@ iframe {
     float: right;
     position: relative;
     margin-bottom: .2em;
+    margin-left: .6em;
     clear: right;
     width: 18em;
     background-color: var(--aside-bg);
@@ -3546,6 +3666,12 @@ iframe {
 /*Shrink Scrollbar*/
 .aside > ::-webkit-scrollbar {
     width: 5px;
+}
+
+
+/*Unclear Asides*/
+#un-c {
+    clear: none;
 }
 
 #col {
@@ -3565,9 +3691,9 @@ iframe {
 /*--Special Blockquote Formatting--*/
 blockquote mark strong {
 	display: block;
-	color: var(--headers) !important;
+	color: var(--headers);
 	text-align: right;
-    background-color: transparent !important;
+    background-color: transparent;
     font-style: italic;
 }
 
@@ -3774,7 +3900,7 @@ blockquote mark strong {
 
 
 /*Italicized Text*/
-.markdown-preview-section i { 
+.markdown-preview-section i { /*I used for image description, em is just regular italics*/
     display: block;
     font-style: unset;
     color: var(--i-at);

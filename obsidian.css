@@ -40,7 +40,7 @@ settings:
         type: heading
         level: 3
     -
-        title: Text Size
+        title: Note Text Size
         description: Adjust size for preview/editor mode. If you use the one below, this only affects editor mode.
         id: f-s-text
         type: variable-number-slider
@@ -50,9 +50,9 @@ settings:
         max: 1.5
         step: .1
     -
-        title: Preview Text Size
-        description: Adjust size for preview mode.
-        id: f-s-pre
+        title: UI Text Size
+        description: Adjust size for preview/editor mode. If you use the one below, this only affects editor mode.
+        id: f-s-ui
         type: variable-number-slider
         default: 1
         format: rem
@@ -143,7 +143,7 @@ settings:
         default-dark: '#6e7e89'
         default-light: '#8996a0'
     -
-        title: Specific View Font Changes
+        title: Specific View Changes
         id: Font-Specific
         type: heading
         level: 3
@@ -165,6 +165,16 @@ settings:
         id: ed-font
         type: variable-text
         default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
+    -
+        title: Preview Text Size
+        description: Adjust size for preview mode.
+        id: f-s-pre
+        type: variable-number-slider
+        default: 1
+        format: rem
+        min: .6
+        max: 1.5
+        step: .1
     -
         title: Specific Decoration Changes
         id: Dec-Spec
@@ -1074,6 +1084,7 @@ settings:
     --lh: 1.5em;
     --f-s-pre: 1rem;
     --f-s-text: 1rem;
+    --f-s-ui: 1rem;
     --f-s-h: 34px;
     --f-w-h: 600;
     --h-line: 100%;
@@ -1290,7 +1301,7 @@ settings:
     --interactive-success: #197300; /*??*/
     
     --scrollbar-bg: rgba(0, 0, 0, 0.05);
-    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+    --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
     --highlight-mix-blend-mode: darken; /*Search Highlight Mode*/
 
     /*--DEFAULT VARIABLES--*/    
@@ -1883,6 +1894,16 @@ input[type='range']::-webkit-slider-thumb {
 
 
 /*--Settings Menu--*/
+/*Settings Menu: Font Sizes*/
+.modal.mod-settings .modal-content {
+    font-size: var(--f-s-ui);
+}
+.setting-item-description,
+.vertical-tab-header-group-title {
+    font-size: calc(var(--f-s-ui) - .1rem);
+}
+
+
 /*Square Settings & Quick Switcher/Command Palatte*/
 .modal, .prompt {
     border-radius: var(--radius);
@@ -1907,7 +1928,7 @@ input[type='range']::-webkit-slider-thumb {
 /*Setting Item Title*/
 .setting-item-name {
     font-weight: 900;
-    font-size: 1.1em;
+    font-size: calc(var(--f-s-ui) + .1rem);
 }
 .setting-item-description {
     color: var(--footnote);
@@ -2185,12 +2206,9 @@ input[type='range']::-webkit-slider-thumb {
 .CodeMirror .CodeMirror-line-like {
     z-index: 0;
 }
-/*?*/
-p, li, table {
-    font-size: var(--f-s-pre);
-}
-p > .modal.mod-settings .modal-content, .setting-item-description p {
-    font-size: 16px !important;
+/*Font Sizes*/
+p, li, table, .markdown-preview-section code {
+    font-size: var(--f-s-text);
 }
 
 
@@ -2304,6 +2322,8 @@ h4:after {
     overflow: auto;
 }
 
+
+
 .markdown-preview-view pre[class*="language-"],
 .markdown-preview-view code[class*="language-"] {
     background: var(--code-bg);
@@ -2346,7 +2366,6 @@ h4:after {
     font-size: calc(var(--f-s-text) - .15rem);
     z-index: 0;
 }
-
 
 /*Hide weird Tokening BG Coloring*/
 .token.operator {
@@ -2411,6 +2430,7 @@ a:hover {
     margin-right: -16px;
     display: inline-block;
     transform: rotate(-135deg);
+    font-size: var(--f-s-text);
 }
 
 /*Editor Links*/
@@ -3209,8 +3229,8 @@ iframe {
 .theme-light.is-mobile {
     --f-s-text: 1em;
     --f-s-pre: 1em;
+    --f-s-ui: 1em;
 }
-
 
 /*----Publish----*/
 .site-header {
@@ -4806,9 +4826,11 @@ g.classGroup line {
 }
 .style-settings-container .setting-item-description {
     line-height: 1.2em;
+    color: var(--footnote);
 }
 .style-settings-container .setting-item-description small {
-    color: var(--footnote);
+    line-height: 1.2em;
+    color: var(--inactive);
 }
 
 .themed-color-wrapper > div {
@@ -4891,6 +4913,12 @@ g.classGroup line {
 }
 .ed-pre .cm-s-obsidian .CodeMirror-line {
     font-family: var(--ed-font);
+}
+
+.ed-pre .markdown-preview-section p,
+.ed-pre .markdown-preview-section li,
+.ed-pre .markdown-preview-section pre {
+    font-size: var(--f-s-pre);
 }
 
 /*Tags*/
@@ -5203,6 +5231,7 @@ g.classGroup line {
 .h-rh .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
     background-color: var(--accent);
 }
+
 
 
 

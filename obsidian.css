@@ -2621,6 +2621,10 @@ ul, ol {
 .markdown-preview-view ol > li.task-list-item {
     padding-left: 10px;
 }
+/*Checkbox: Fix Spaced Checkboxes*/
+.markdown-preview-view ul li.task-list-item > p {
+    text-indent: unset;
+}
 .markdown-preview-view ul > li.task-list-item {
     text-indent: -1.3em;
 }
@@ -2632,7 +2636,6 @@ ul li.task-list-item > p {
 ul li > p {
     margin-block-end: unset;
 }
-
 
 /*-Bullet Points-*/
 /*Editor Bullet Points*/

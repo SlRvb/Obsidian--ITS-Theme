@@ -552,6 +552,11 @@ settings:
         type: heading
         level: 2
     -
+        title: Writing
+        description: Minimalistic/distraction free layout design.
+        id: writing
+        type: class-toggle
+    -
         title: Hide Vault Name
         id: v-non
         type: class-toggle
@@ -637,11 +642,6 @@ settings:
         id: Other-Note
         type: heading
         level: 2
-    -
-        title: Writing
-        description: Minimalistic/distraction free layout design.
-        id: writing
-        type: class-toggle
     - 
         title: Horizontal Line Symbol
         description: Add quotations around symbol for it to work. For Example "⚡".
@@ -1447,6 +1447,7 @@ settings:
 
 button, button.mod-cta {
     border-radius: var(--radius);
+    font-size: var(--f-s-ui);
 }
 
 /*Pinned Pane Button Color*/
@@ -1546,10 +1547,11 @@ button, button.mod-cta {
 }
 
 /*Vault Name*/
-.nav-folder.mod-root > .nav-file-title, .nav-folder.mod-root > .nav-folder-title {
+.nav-folder.mod-root > .nav-file-title,
+.nav-folder.mod-root > .nav-folder-title {
     color: var(--headers);
     font-family: var(--font);
-    font-size: 24px;
+    font-size: calc(var(--f-s-h) - 10px);
     /*border-bottom: 3px solid var(--accent);*/
     padding-left: .2em !important;
     /*position: fixed;
@@ -1565,14 +1567,14 @@ button, button.mod-cta {
     color: transparent;
     text-shadow: 0 0 0 var(--folder);
     margin-right: 4px;
-    font-size: .9em;
+    font-size: calc(var(--f-s-ui) - 3px);
 }
 .nav-folder-children .nav-file-title-content::before {
     content: "📄"/*\1F5D0*/;
     color: transparent;
     text-shadow: 0 0 0 var(--file);
     margin-right: 5px;
-    font-size: .85em;
+    font-size: calc(var(--f-s-ui) - 4px);
 }
 
 
@@ -1593,7 +1595,8 @@ button, button.mod-cta {
 }
 
 /*Nav Folder Lines*/
-.nav-folder, .nav-file {
+.nav-folder,
+.nav-file {
     margin: 0 -2px;
     margin-right: 0px;
     border-left: 2px solid var(--table);
@@ -1609,11 +1612,13 @@ button, button.mod-cta {
 }
 
 /*Text wrap*/
-.nav-file-title, .nav-folder-title {
+.nav-file-title,
+.nav-folder-title {
     white-space: normal;
     width: auto;
     border-radius: var(--radius);
     border: 0;
+    line-height: calc(var(--f-s-ui) + 2px);
 }
 
 /*Folder Bold*/
@@ -1681,6 +1686,7 @@ button, button.mod-cta {
 .tree-item-self {
     color: var(--soft-text);
     border-radius: var(--radius);
+    font-size: calc(var(--f-s-ui) - 2px);
 }
 .tag-container .tree-item-self:hover {
     color: var(--code-text);
@@ -1688,7 +1694,8 @@ button, button.mod-cta {
 
 /*Count Squared*/
 .tree-item-flair {
-    border-radius: var(--radius);
+    border-radius: var(--radius);    
+    font-size: calc(var(--f-s-ui) - 2px);
 }
 
 
@@ -1781,6 +1788,7 @@ input[type='number'] {
     border-radius: var(--radius);
     border: 1px solid var(--table);
     color: var(--soft-text);
+    font-size: var(--f-s-ui);
 }
 
 input[type='text']:hover,
@@ -1806,7 +1814,10 @@ input[type='number']:hover {
 .suggestion { 
     overflow-x: none;
 }
-.suggestion-item{ overflow-wrap: anywhere; }
+.suggestion-item { 
+    overflow-wrap: anywhere;
+    font-size: var(--f-s-ui);
+}
 .suggestion-container.mod-search-suggestion {
     border-radius: var(--radius);
     padding: 0;
@@ -1822,14 +1833,16 @@ input[type='number']:hover {
     color: transparent;
     text-shadow: 0 0 0 var(--file);
     margin-right: 5px;
-    font-size: .85em;
+    font-size: calc(var(--f-s-ui) - 2px);
 }
 .prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"]) {
     top: 3.5px;
 }
 /*Recolor Create Note Icon*/
-.prompt .suggestion-flair[aria-label="Not created yet, select to create"] {
+.prompt .suggestion-flair[aria-label="Not created yet, select to create"] svg {
     color: var(--inactive);
+    width: var(--f-s-ui);
+    height: var(--f-s-ui);
 }
 
 
@@ -1914,6 +1927,7 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: var(--radius);
     box-shadow: .5em .5em var(--outline);
     border: 0;
+    font-size: var(--f-s-ui);
 }
 /*Resize Settings*/
 .modal.mod-settings {
@@ -1978,14 +1992,17 @@ input[type='range']::-webkit-slider-thumb {
 .vertical-tab-header {
     background-color: var(--dark-sidebar);
 }
-.horizontal-tab-nav-item, .vertical-tab-nav-item {
+.horizontal-tab-nav-item,
+.vertical-tab-nav-item {
     background-color: var(--dark-sidebar);
-    padding: 10px 6px 10px 24px;
+    padding: 8px 6px 8px 24px;
     cursor: default;
-    font-size: 1em;
+    font-size: var(--f-s-ui);
+    line-height: calc(var(--f-s-ui) + 10px);
 }
 /*Selected Item*/
-.horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
+.horizontal-tab-nav-item.is-active,
+.vertical-tab-nav-item.is-active {
     background-color: var(--dark-accent);
 }
 
@@ -1996,11 +2013,12 @@ input[type='range']::-webkit-slider-thumb {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 128 128'%3E%3Cpath d='M64 115.58c-1.01 0-1.96-.51-2.5-1.37L.69 19.58C.1 18.67.06 17.5.58 16.55A2.96 2.96 0 0 1 3.19 15h121.62c1.09 0 2.09.59 2.61 1.55c.52.95.48 2.12-.11 3.03L66.5 114.22c-.54.85-1.49 1.36-2.5 1.36z' fill='%234e5b6f'/%3E%3C/svg%3E");
     border-radius: var(--radius);
     border: 1px solid var(--table);
+    font-size: var(--f-s-ui);
 }
 
 /*Account Header 2*/
 .vertical-tab-content h2 {
-    font-size: 30px;
+    font-size: var(--f-s-h);
     font-weight: 900;
     text-align: left;
     font-family: var(--font) !important;
@@ -2010,6 +2028,7 @@ input[type='range']::-webkit-slider-thumb {
 .setting-hotkey {
     background-color: var(--code-bg);
     color: var(--soft-text);
+    font-size: calc(var(--f-s-ui) - 2px);
 }
 
 /*Sync Image Fit*/
@@ -3394,7 +3413,8 @@ iframe {
 .writing .markdown-preview-section {
     text-align: justify;
 }
-.markdown-preview-view.writing .markdown-preview-sizer {
+.markdown-preview-view.writing .markdown-preview-sizer,
+.writing .markdown-preview-view .markdown-preview-sizer {
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
@@ -3449,6 +3469,8 @@ iframe {
     text-shadow: 0 0 0 var(--hr);
 }
 /*Writing: Code*/
+.writing .markdown-preview-view code,
+.writing .markdown-preview-view pre,
 .markdown-preview-view.writing code,
 .markdown-preview-view.writing pre {
     color: var(--text) !important;
@@ -3457,11 +3479,14 @@ iframe {
     padding: 0;
     background: none;
 }
+.writing .markdown-preview-view pre,
 .markdown-preview-view.writing pre {
     padding-left: .5em;
     border-left: 5px solid var(--code-bg);
     border-right: 5px solid var(--code-text);
 }
+.writing .markdown-preview-view pre[class*="language-"],
+.writing .markdown-preview-view code[class*="language-"],
 .markdown-preview-view.writing pre[class*="language-"],
 .markdown-preview-view.writing code[class*="language-"] {
     filter: saturate(70%);
@@ -3477,6 +3502,7 @@ iframe {
     font-size: .5em;
 }
 /*Writing: Blockquotes*/
+.writing .markdown-preview-view blockquote,
 .markdown-preview-view.writing blockquote {
     background: none;
     border-left: 3px solid var(--accent);
@@ -3499,6 +3525,9 @@ iframe {
 /*Arrows*/
 .writing .collapse-icon svg {
     color: var(--scrollbar-thumb-bg);
+}
+.writing .CodeMirror-foldgutter-open:after {
+    color: var(--inactive);
 }
 
 .writing .markdown-preview-section i {
@@ -3550,18 +3579,19 @@ iframe {
 }
 
 /*Writing: Editor HR*/
-div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
+.writing div:not(.CodeMirror-activeline) > .HyperMD-hr-bg::after {
     content: '';
 }
 /*Writing: Blockquote*/
 .writing .HyperMD-quote {
-    margin-left: 4em;
-    margin-right: 3em;
     border-left: 3px solid var(--accent);
 }
 
 .writing .cm-s-obsidian pre.HyperMD-header:after {
     height: 0;
+}
+.writing .cm-s-obsidian .CodeMirror-linenumber {
+    color: var(--inactive);
 }
 
 

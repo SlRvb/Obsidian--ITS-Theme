@@ -1447,7 +1447,7 @@ settings:
 
 button, button.mod-cta {
     border-radius: var(--radius);
-    font-size: var(--f-s-ui);
+    font-size: calc(var(--f-s-ui) - 2px);
 }
 
 /*Pinned Pane Button Color*/
@@ -2441,6 +2441,7 @@ a:hover {
 /*Hide SVG Image*/
 .external-link {
     background-image: url();
+    padding-right: unset;
 }
 /*Hover Color*/
 .external-link:hover {
@@ -2450,8 +2451,6 @@ a:hover {
 /*Change External Link Symbol*/
 .external-link:after {
     content: "⧪";
-    padding-right: 2px;
-    margin-right: -16px;
     display: inline-block;
     transform: rotate(-135deg);
     font-size: var(--f-s-text);
@@ -3512,11 +3511,6 @@ iframe {
     margin-left: 4em;
     margin-right: 3em;
 }
-/*
-.markdown-preview-view.writing blockquote:before {
-    color: var(--accent);
-}
-*/
 .writing blockquote mark strong {
     color: var(--inactive);
 }

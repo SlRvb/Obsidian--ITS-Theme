@@ -3,53 +3,6 @@ name: In The Shadows Settings
 id: ITS
 settings:
     -
-        title: Mobile
-        description: Mobile Version of some of the settings.
-        id: Mobile
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        title: Note Text Size
-        description: Adjust size for preview/editor mode.
-        id: f-s-text
-        type: variable-number-slider
-        default: 1
-        format: em
-        min: .6
-        max: 1.5
-        step: .1
-    -
-        title: Menu Text Size
-        description: Adjust the size for the menus, ie. Settings, Quick Switcher, etc.
-        id: f-s-ui
-        type: variable-number-slider
-        default: 1
-        format: em
-        min: .6
-        max: 1.5
-        step: .1
-    -
-        title: Sidebar Text Size
-        description: 
-        id: f-s-sb
-        type: variable-number-slider
-        default: 1
-        format: em
-        min: .6
-        max: 1.5
-        step: .1
-    -
-        title: Note Title Size
-        description: Adjust the size for the note titles.
-        id: f-s-nt
-        type: variable-number-slider
-        default: 1
-        format: em
-        min: .6
-        max: 1.5
-        step: .1
-    -
         title: Text
         id: Text-CSS
         type: heading
@@ -91,11 +44,11 @@ settings:
         description: Adjust size for preview/editor mode. If you use the one below, this only affects editor mode.
         id: f-s-text
         type: variable-number-slider
-        default: 1
-        format: rem
-        min: .6
-        max: 1.5
-        step: .1
+        default: 16
+        format: px
+        min: 10
+        max: 20
+        step: 2
     -
         title: Header Weights
         id: f-w-h
@@ -624,31 +577,31 @@ settings:
         description: Adjust the size for the menus, ie. Settings, Quick Switcher, etc.
         id: f-s-ui
         type: variable-number-slider
-        default: 1
-        format: rem
-        min: .6
-        max: 1.5
-        step: .1
+        default: 16
+        format: px
+        min: 12
+        max: 20
+        step: 1
     -
         title: Sidebar Text Size
         description: 
         id: f-s-sb
         type: variable-number-slider
-        default: 1
-        format: rem
-        min: .6
-        max: 1.5
-        step: .1
+        default: 16
+        format: px
+        min: 12
+        max: 20
+        step: 1
     -
         title: Note Title Size
         description: Adjust the size for the note titles.
         id: f-s-nt
         type: variable-number-slider
-        default: 1
-        format: rem
-        min: .6
-        max: 1.5
-        step: .1
+        default: 16
+        format: px
+        min: 12
+        max: 20
+        step: 1
     -
         title: Workspace Colors
         id: Workspace-Colors
@@ -1164,12 +1117,12 @@ settings:
     /*Sizes*/
     --scroll-size: 7px;
     --lh: 1.5em;
-    --f-s-ui: 1rem;
-    --f-s-sb: 1rem;
-    --f-s-nt: 1rem;
+    --f-s-ui: 16px;
+    --f-s-sb: 16px;
+    --f-s-nt: 16px;
 
-    --f-s-pre: 1rem;
-    --f-s-text: 1rem;
+    --f-s-pre: 16px;
+    --f-s-text: 16px;
     --f-s-h: 34px;
     --f-w-h: 600;
     --h-line: 100%;
@@ -1665,7 +1618,7 @@ button, button.mod-cta {
 }
 
 .nav-file-title-content {
-    line-height: calc(var(--f-s-sb) + .3rem);
+    line-height: calc(var(--f-s-sb) + 5px);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title {
@@ -2492,7 +2445,10 @@ h4:after { width: 40%; }
 /*Editor Code*/
 .cm-s-obsidian pre.HyperMD-codeblock,
 .cm-s-obsidian span.cm-inline-code,
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.cm-s-obsidian div.HyperMD-codeblock-bg,
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
     background-color: var(--code-bg);
     color: var(--code-text);
     font-family: var(--font-monospace);
@@ -3387,26 +3343,26 @@ iframe {
     width: 2em;
 }
 
-/*Rem to Em*/
-/*Fix text sizing issue on mobile caused by rem*/
-.theme-dark.is-mobile,
-.theme-light.is-mobile {
-    --f-s-text: 1em;
-    --f-s-pre: 1em;
-    --f-s-ui: 1em;
-    --f-s-sb: 1em;
-    --f-s-nt: 1em;
-}
-
-/*Resize*/
-
-.is-mobile .nav-file-title .nav-file-title-content,
+/*Mobile: Resize*/
+.is-mobile .nav-file-title,
 .is-mobile .nav-folder-title,
 .is-mobile .outline,
 .is-mobile .tag-container {
+    font-size: var(--f-s-sb) !important;
+    line-height: calc(var(--f-s-sb) + 10px);
+}
+.is-mobile .view-header-title {
     font-size: var(--f-s-sb);
+    line-height: calc(var(--f-s-sb) + 30px);
 }
 
+/*Mobile Toolbar Recolor*/
+.theme-dark .mobile-toolbar {
+    background-color: var(--deep-dark-accent);
+}
+.theme-light .mobile-toolbar {
+    background-color: var(--dark-accent);
+}
 
 
 

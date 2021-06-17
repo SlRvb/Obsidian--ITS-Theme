@@ -50,16 +50,6 @@ settings:
         max: 1.5
         step: .1
     -
-        title: UI Text Size
-        description: Adjust size for preview/editor mode. If you use the one below, this only affects editor mode.
-        id: f-s-ui
-        type: variable-number-slider
-        default: 1
-        format: rem
-        min: .6
-        max: 1.5
-        step: .1
-    -
         title: Header Weights
         id: f-w-h
         type: variable-number-slider
@@ -578,6 +568,41 @@ settings:
         id: h-rh
         type: class-toggle
     -
+        title: Workspace Resize
+        id: WS-Resize
+        type: heading
+        level: 3
+    -
+        title: Menu Text Size
+        description: Adjust the size for the menus, ie. Settings, Quick Switcher, etc.
+        id: f-s-ui
+        type: variable-number-slider
+        default: 1
+        format: rem
+        min: .6
+        max: 1.5
+        step: .1
+    -
+        title: Sidebar Text Size
+        description: 
+        id: f-s-sb
+        type: variable-number-slider
+        default: 1
+        format: rem
+        min: .6
+        max: 1.5
+        step: .1
+    -
+        title: Note Title Size
+        description: Adjust the size for the note titles.
+        id: f-s-nt
+        type: variable-number-slider
+        default: 1
+        format: rem
+        min: .6
+        max: 1.5
+        step: .1
+    -
         title: Workspace Colors
         id: Workspace-Colors
         type: heading
@@ -1087,9 +1112,12 @@ settings:
     /*Sizes*/
     --scroll-size: 7px;
     --lh: 1.5em;
+    --f-s-ui: 1rem;
+    --f-s-sb: 1rem;
+    --f-s-nt: 1rem;
+
     --f-s-pre: 1rem;
     --f-s-text: 1rem;
-    --f-s-ui: 1rem;
     --f-s-h: 34px;
     --f-w-h: 600;
     --h-line: 100%;
@@ -1567,21 +1595,25 @@ button, button.mod-cta {
     color: transparent;
     text-shadow: 0 0 0 var(--folder);
     margin-right: 4px;
-    font-size: calc(var(--f-s-ui) - 3px);
+    font-size: calc(var(--f-s-sb) - 2px);
 }
 .nav-folder-children .nav-file-title-content::before {
     content: "📄"/*\1F5D0*/;
     color: transparent;
     text-shadow: 0 0 0 var(--file);
     margin-right: 5px;
-    font-size: calc(var(--f-s-ui) - 4px);
+    font-size: calc(var(--f-s-sb) - 4px);
+    vertical-align: top;
 }
-
 
 /*Move File Extension to Right*/
 .nav-folder-title-content,
 .nav-file-title-content {
-  width: 100%;
+    width: 100%;
+}
+
+.nav-file-title-content {
+    line-height: calc(var(--f-s-sb) + .3rem);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title {
@@ -1618,7 +1650,8 @@ button, button.mod-cta {
     width: auto;
     border-radius: var(--radius);
     border: 0;
-    line-height: calc(var(--f-s-ui) + 2px);
+    line-height: calc(var(--f-s-sb) + 2px);
+    font-size: calc(var(--f-s-sb) - 2px);
 }
 
 /*Folder Bold*/
@@ -1679,14 +1712,28 @@ button, button.mod-cta {
     width: 100%;
 }
 
-
+/*--Right Panes--*/
+.view-content,
+.view-content > .tree-item-self,
+.view-content .pane-empty,
+.tag-pane-tag-text,
+.view-content > .search-results-children,
+.view-content > .search-empty-state,
+.view-content > .search-result-file-matches,
+.workspace-tabs .tree-item-self,
+.workspace-tabs .search-result-file-matches {
+    font-size: calc(var(--f-s-sb) - 2px);
+    line-height: calc(var(--f-s-sb) + .5em);
+}
+.workspace-leaf-content .tree-item-flair {
+    font-size: calc(var(--f-s-sb) - 5px);
+}
 
 /*--Tag Pane--*/
 /*Text*/
 .tree-item-self {
     color: var(--soft-text);
     border-radius: var(--radius);
-    font-size: calc(var(--f-s-ui) - 2px);
 }
 .tag-container .tree-item-self:hover {
     color: var(--code-text);
@@ -1694,9 +1741,9 @@ button, button.mod-cta {
 
 /*Count Squared*/
 .tree-item-flair {
-    border-radius: var(--radius);    
-    font-size: calc(var(--f-s-ui) - 2px);
+    border-radius: var(--radius);
 }
+
 
 
 /*Tag Pane Lines*/
@@ -2151,7 +2198,13 @@ input[type='range']::-webkit-slider-thumb {
 .view-header {
     border: none;
     background: var(--note);
+    height: calc(var(--f-s-nt) + 1.3em);
 }
+.view-header-title,
+.view-header-title-container {
+    font-size: var(--f-s-nt);
+}
+
 .view-header-title-container:after {
     background: linear-gradient(to right, transparent, var(--note));
 }
@@ -3288,6 +3341,8 @@ iframe {
     --f-s-text: 1em;
     --f-s-pre: 1em;
     --f-s-ui: 1em;
+    --f-s-sb: 1em;
+    --f-s-nt: 1em;
 }
 
 /*----Publish----*/
@@ -3839,6 +3894,8 @@ blockquote mark strong {
     background-color: transparent;
     font-style: italic;
 }
+
+
 
 
 

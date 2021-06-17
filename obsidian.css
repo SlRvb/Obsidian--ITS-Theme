@@ -1071,6 +1071,11 @@ settings:
         description: Personal adjustments to some elements of dataview
         id: dv
         type: class-toggle
+    - 
+        title: SuperCharged Links Adjustments
+        description: Personal adjustments to some elements of SuperCharged Links
+        id: scl
+        type: class-toggle
     -
         title: Image Zoom
         description: Hold and click an image to zoom into it.
@@ -3500,7 +3505,7 @@ iframe {
 }
 
 .writing .markdown-preview-section,
-.writing .cm-s-obsidian .CodeMirror-line {
+.cm-s-obsidian .CodeMirror-line {
     text-align: justify;
 }
 .markdown-preview-view.writing .markdown-preview-sizer,
@@ -5446,4 +5451,6 @@ g.classGroup line {
     color: var(--accent2) !important;
 }
 
-
+.scl .frontmatter-values-grid {
+    display: inline-block;
+}

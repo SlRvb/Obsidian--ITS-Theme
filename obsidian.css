@@ -3,6 +3,53 @@ name: In The Shadows Settings
 id: ITS
 settings:
     -
+        title: Mobile
+        description: Mobile Version of some of the settings.
+        id: Mobile
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Note Text Size
+        description: Adjust size for preview/editor mode.
+        id: f-s-text
+        type: variable-number-slider
+        default: 1
+        format: em
+        min: .6
+        max: 1.5
+        step: .1
+    -
+        title: Menu Text Size
+        description: Adjust the size for the menus, ie. Settings, Quick Switcher, etc.
+        id: f-s-ui
+        type: variable-number-slider
+        default: 1
+        format: em
+        min: .6
+        max: 1.5
+        step: .1
+    -
+        title: Sidebar Text Size
+        description: 
+        id: f-s-sb
+        type: variable-number-slider
+        default: 1
+        format: em
+        min: .6
+        max: 1.5
+        step: .1
+    -
+        title: Note Title Size
+        description: Adjust the size for the note titles.
+        id: f-s-nt
+        type: variable-number-slider
+        default: 1
+        format: em
+        min: .6
+        max: 1.5
+        step: .1
+    -
         title: Text
         id: Text-CSS
         type: heading
@@ -3350,6 +3397,18 @@ iframe {
     --f-s-sb: 1em;
     --f-s-nt: 1em;
 }
+
+/*Resize*/
+
+.is-mobile .nav-file-title .nav-file-title-content,
+.is-mobile .nav-folder-title,
+.is-mobile .outline,
+.is-mobile .tag-container {
+    font-size: var(--f-s-sb);
+}
+
+
+
 
 /*----Publish----*/
 .site-header {

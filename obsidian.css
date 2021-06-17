@@ -3500,7 +3500,7 @@ iframe {
 }
 
 .writing .markdown-preview-section,
-.cm-s-obsidian .CodeMirror-line {
+.writing .cm-s-obsidian .CodeMirror-line {
     text-align: justify;
 }
 .markdown-preview-view.writing .markdown-preview-sizer,

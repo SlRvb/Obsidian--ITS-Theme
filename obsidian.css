@@ -1179,7 +1179,7 @@ settings:
 
 .theme-dark {
     --background-primary: var(--note); /*Note background*/
-    --background-primary-alt: var(--deep-dark-accent); /*Note Title background active*/
+    --background-primary-alt: var(--outer-bar); /*Note Title background active*/
     --background-secondary: var(--side-bar); /*Sidebar background*/
     --background-secondary-alt: var(--outer-bar); /*Sidebar Title background*/
     
@@ -1303,7 +1303,7 @@ settings:
 
 .theme-light {
     --background-primary: var(--note); /*Note background*/
-    --background-primary-alt: var(--dark-accent); /*Note Title background active*/
+    --background-primary-alt: var(--outer-bar); /*Note Title background active*/
     --background-secondary: var(--side-bar); /*Sidebar background*/
     --background-secondary-alt: var(--outer-bar); /*Sidebar Title background*/
     
@@ -2208,6 +2208,7 @@ input[type='range']::-webkit-slider-thumb {
 .view-header-title,
 .view-header-title-container {
     font-size: var(--f-s-nt);
+    line-height: calc(var(--f-s-nt) + 1.2rem);
 }
 
 .view-header-title-container:after {

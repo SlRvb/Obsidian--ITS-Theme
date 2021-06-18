@@ -3335,6 +3335,9 @@ iframe {
 }
 
 /*Style Settings Mobile Fix*/
+.is-mobile .style-settings-container > .style-settings-heading {
+    margin-left: 1em;
+}
 .is-mobile .style-settings-heading + .style-settings-container {
     padding-left: 0;
     border: none;
@@ -3352,7 +3355,7 @@ iframe {
     line-height: calc(var(--f-s-sb) + 10px);
 }
 .is-mobile .view-header-title {
-    font-size: var(--f-s-sb);
+    font-size: calc(var(--f-s-sb) + 4px);
     line-height: calc(var(--f-s-sb) + 30px);
 }
 
@@ -3521,7 +3524,7 @@ iframe {
 }
 
 .writing .markdown-preview-section,
-.cm-s-obsidian .CodeMirror-line {
+.writing .cm-s-obsidian .CodeMirror-line {
     text-align: justify;
 }
 .markdown-preview-view.writing .markdown-preview-sizer,

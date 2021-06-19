@@ -1618,7 +1618,7 @@ button, button.mod-cta {
 }
 
 .nav-file-title-content {
-    line-height: calc(var(--f-s-sb) + 8px);
+    line-height: calc(var(--f-s-sb) + 5px);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title {

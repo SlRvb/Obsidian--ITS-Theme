@@ -1102,6 +1102,8 @@ settings:
 .theme-dark, .theme-light {
     /*Sizes*/
     --radius: 0px;
+
+    --micro: 70px;
     --tiny: 100px;
     --small: 200px;
     --small-med: 300px;
@@ -3251,6 +3253,8 @@ iframe {
     .theme-dark, .theme-light {
         /*Mobile Sizes*/
         --radius: 0px;
+
+        --micro: 70px;
         --tiny: 100px;
         --small: 150px;
         --small-med: 200px;
@@ -3510,7 +3514,7 @@ iframe {
 }
 
 /*Justify text*/
-.justified .markdown-preview-view,
+.justified .markdown-preview-section,
 .justified .cm-s-obsidian {
     text-align: justify;
 }
@@ -4279,6 +4283,7 @@ img[alt*="cover"]{
 }
 
 /*Height*/
+img[alt*="hmicro"]{  height: var(--micro); }
 img[alt*="htiny"]{  height: var(--tiny); }
 img[alt*="hsmall"]{ height: var(--small); }
 img[alt*="hs-med"]{ height: var(--small-med); }
@@ -4288,6 +4293,7 @@ img[alt*="hm-tl"]{  height: var(--med-tall); }
 img[alt*="htall"]{  height: var(--tall); }
 
 /*Width*/
+img[alt*="wmicro"]{  height: var(--micro); }
 img[alt*="wtiny"]{    width: var(--tiny); }
 img[alt*="wsmall"]{   width: var(--small); }
 img[alt*="ws-med"]{   width: var(--small-med); }

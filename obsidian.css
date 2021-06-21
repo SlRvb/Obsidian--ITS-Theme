@@ -1608,14 +1608,14 @@ button.mod-cta {
     color: transparent;
     text-shadow: 0 0 0 var(--folder);
     margin-right: 4px;
-    font-size: calc(var(--f-s-sb) - 3px);
+    font-size: 13px;
 }
 .nav-folder-children .nav-file-title-content::before {
     content: "📄"/*\1F5D0*/;
     color: transparent;
     text-shadow: 0 0 0 var(--file);
     margin-right: 5px;
-    font-size: calc(var(--f-s-sb) - 4px);
+    font-size: 12px;
     vertical-align: top;
 }
 
@@ -1623,14 +1623,10 @@ button.mod-cta {
 .nav-folder-title-content,
 .nav-file-title-content {
     width: 100%;
+    line-height: 20px;
 }
-
-.nav-file-title-content {
-    line-height: calc(var(--f-s-sb) + 5px);
-}
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 
@@ -3043,7 +3039,8 @@ a.tag:hover {
     border-radius: var(--radius);
     min-height: 100px;
     max-height: 600px;
-    border: 2px solid var(--dark-accent);
+    border: 2px solid var(--outline);
+    box-shadow: -5px 5px var(--outline);
 }
 
 /*Show More Embed in Popover*/
@@ -3982,7 +3979,15 @@ blockquote mark strong {
     line-height: calc(var(--f-s-sb) + 2px);
     font-size: calc(var(--f-s-sb) - 2px);
 }
-
+.resize .nav-folder-children .nav-folder-title-content::before {
+    font-size: calc(var(--f-s-sb) - 3px);
+}
+.resize .nav-folder-children .nav-file-title-content::before {
+    font-size: calc(var(--f-s-sb) - 4px);
+}
+.resize .nav-file-title-content {
+    line-height: calc(var(--f-s-sb) + 4px);
+}
 
 /*Right Panes*/
 .resize .view-content,
@@ -3997,7 +4002,7 @@ blockquote mark strong {
     font-size: calc(var(--f-s-sb) - 2px);
     line-height: calc(var(--f-s-sb) + 8px);
 }
-.workspace-leaf-content .tree-item-flair {
+.resize .workspace-leaf-content .tree-item-flair {
     font-size: calc(var(--f-s-sb) - 5px);
 }
 

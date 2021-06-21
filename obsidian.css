@@ -573,6 +573,10 @@ settings:
         type: heading
         level: 3
     -
+        title: Toggle Resize
+        id: resize
+        type: class-toggle
+    -
         title: Menu Text Size
         description: Adjust the size for the menus, ie. Settings, Quick Switcher, etc.
         id: f-s-ui
@@ -1026,8 +1030,8 @@ settings:
         id: graph-bg
         type: variable-themed-color
         format: hex
-        default-dark: '#10151B'
-        default-light: '#f8fbff'
+        default-dark: '#0b0f13'
+        default-light: '#eef3fd'
     - 
         title: Graph Lines
         id: graph-lines
@@ -1475,14 +1479,16 @@ settings:
     color: var(--text-dl);
 }
 /*Button Hover Color*/
-.modal button:not(.mod-cta):not(.mod-warning):hover, button:hover, button.mod-cta:hover {
+.modal button:not(.mod-cta):not(.mod-warning):hover, 
+button:hover, button.mod-cta:hover {
     background-color: var(--interactive-accent-hover) !important;
     color: var(--text-dl);
 }
 
-button, button.mod-cta {
+button, 
+button.mod-cta {
     border-radius: var(--radius);
-    font-size: calc(var(--f-s-ui) - 2px);
+    font-size: 14px;
 }
 
 /*Pinned Pane Button Color*/
@@ -1657,8 +1663,8 @@ button, button.mod-cta {
     width: auto;
     border-radius: var(--radius);
     border: 0;
-    line-height: calc(var(--f-s-sb) + 2px);
-    font-size: calc(var(--f-s-sb) - 2px);
+    line-height: 18px;
+    font-size: 14px;
 }
 
 /*Folder Bold*/
@@ -1717,23 +1723,6 @@ button, button.mod-cta {
 .tree-item-inner {
     word-wrap: break-word;
     width: 100%;
-}
-
-/*--Right Panes--*/
-.view-content,
-.view-content > .tree-item-self,
-.view-content .pane-empty,
-.tag-pane-tag-text,
-.view-content > .search-results-children,
-.view-content > .search-empty-state,
-.view-content > .search-result-file-matches,
-.workspace-tabs .tree-item-self,
-.workspace-tabs .search-result-file-matches {
-    font-size: calc(var(--f-s-sb) - 2px);
-    line-height: calc(var(--f-s-sb) + .5em);
-}
-.workspace-leaf-content .tree-item-flair {
-    font-size: calc(var(--f-s-sb) - 5px);
 }
 
 /*--Tag Pane--*/
@@ -1842,7 +1831,7 @@ input[type='number'] {
     border-radius: var(--radius);
     border: 1px solid var(--table);
     color: var(--soft-text);
-    font-size: var(--f-s-ui);
+    font-size: 16px;
 }
 
 input[type='text']:hover,
@@ -1870,7 +1859,7 @@ input[type='number']:hover {
 }
 .suggestion-item { 
     overflow-wrap: anywhere;
-    font-size: var(--f-s-ui);
+    font-size: 16px;
 }
 .suggestion-container.mod-search-suggestion {
     border-radius: var(--radius);
@@ -1887,7 +1876,7 @@ input[type='number']:hover {
     color: transparent;
     text-shadow: 0 0 0 var(--file);
     margin-right: 5px;
-    font-size: var(--f-s-ui);
+    font-size: 16px;
 }
 .prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"]) {
     margin: auto;
@@ -1897,8 +1886,8 @@ input[type='number']:hover {
 /*Recolor Create Note Icon*/
 .prompt .suggestion-flair[aria-label="Not created yet, select to create"] svg {
     color: var(--inactive);
-    width: var(--f-s-ui);
-    height: var(--f-s-ui);
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -1970,20 +1959,21 @@ input[type='range']::-webkit-slider-thumb {
 /*--Settings Menu--*/
 /*Settings Menu: Font Sizes*/
 .modal.mod-settings .modal-content {
-    font-size: var(--f-s-ui);
+    font-size: 16px;
 }
 .setting-item-description,
 .vertical-tab-header-group-title {
-    font-size: calc(var(--f-s-ui) - .1rem);
+    font-size: 14px;
 }
 
 
 /*Square Settings & Quick Switcher/Command Palatte*/
-.modal, .prompt {
+.modal,
+.prompt {
     border-radius: var(--radius);
     box-shadow: .5em .5em var(--outline);
     border: 0;
-    font-size: var(--f-s-ui);
+    font-size: 16px;
     max-height: 100%;
     overflow: auto;
 }
@@ -2005,7 +1995,7 @@ input[type='range']::-webkit-slider-thumb {
 /*Setting Item Title*/
 .setting-item-name {
     font-weight: 900;
-    font-size: calc(var(--f-s-ui) + .1rem);
+    font-size: 18px;
 }
 .setting-item-description {
     color: var(--footnote);
@@ -2055,8 +2045,8 @@ input[type='range']::-webkit-slider-thumb {
     background-color: var(--dark-sidebar);
     padding: 8px 6px 8px 24px;
     cursor: default;
-    font-size: var(--f-s-ui);
-    line-height: calc(var(--f-s-ui) + 10px);
+    font-size: 16px;
+    line-height: 26px;
 }
 /*Selected Item*/
 .horizontal-tab-nav-item.is-active,
@@ -2071,7 +2061,7 @@ input[type='range']::-webkit-slider-thumb {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 128 128'%3E%3Cpath d='M64 115.58c-1.01 0-1.96-.51-2.5-1.37L.69 19.58C.1 18.67.06 17.5.58 16.55A2.96 2.96 0 0 1 3.19 15h121.62c1.09 0 2.09.59 2.61 1.55c.52.95.48 2.12-.11 3.03L66.5 114.22c-.54.85-1.49 1.36-2.5 1.36z' fill='%234e5b6f'/%3E%3C/svg%3E");
     border-radius: var(--radius);
     border: 1px solid var(--table);
-    font-size: var(--f-s-ui);
+    font-size: 16px;
 }
 
 /*Account Header 2*/
@@ -2086,7 +2076,7 @@ input[type='range']::-webkit-slider-thumb {
 .setting-hotkey {
     background-color: var(--code-bg);
     color: var(--soft-text);
-    font-size: calc(var(--f-s-ui) - 2px);
+    font-size: 14px;
 }
 
 /*Sync Image Fit*/
@@ -2207,12 +2197,11 @@ input[type='range']::-webkit-slider-thumb {
 .view-header {
     border: none;
     background: var(--note);
-    height: calc(var(--f-s-nt) + 20px);
 }
 .view-header-title,
 .view-header-title-container {
-    font-size: var(--f-s-nt);
-    line-height: calc(var(--f-s-nt) + 20px);
+    font-size: 16px;
+    line-height: 36px;
 }
 
 .view-header-title-container:after {
@@ -2249,11 +2238,10 @@ input[type='range']::-webkit-slider-thumb {
 .view-header-icon, .view-actions {
     margin: auto;
 }
-
 .view-header-icon svg,
 .view-action svg {
-    height: var(--f-s-nt);
-    width: var(--f-s-nt);
+    height: 16px;
+    width: 16px;
 }
 
 /*--NOTES--*/
@@ -3358,23 +3346,6 @@ iframe {
     width: 2em;
 }
 
-/*Mobile: Resize*/
-.is-mobile .nav-file-title,
-.is-mobile .nav-folder-title,
-.is-mobile .outline,
-.is-mobile .tag-container {
-    font-size: var(--f-s-sb) !important;
-    line-height: calc(var(--f-s-sb) + 10px);
-}
-.is-mobile .view-header-title {
-    font-size: calc(var(--f-s-nt) + 4px);
-    line-height: calc(var(--f-s-nt) + 35px);
-}
-.is-mobile .view-header-icon svg,
-.is-mobile .view-action svg {
-    height: calc(var(--f-s-nt) + 9px);
-    width: calc(var(--f-s-nt) + 9px);
-}
 
 /*Mobile: Toolbar Recolor*/
 .mobile-toolbar {
@@ -3386,8 +3357,6 @@ iframe {
 .theme-light .mobile-toolbar {
     background-color: var(--dark-accent);
 }
-
-
 
 
 /*----Publish----*/
@@ -3940,6 +3909,116 @@ blockquote mark strong {
     font-style: italic;
 }
 
+
+/*--Workspace Resize--*/
+/*Resize: Menu*/
+.resize button, 
+.resize button.mod-cta {
+    font-size: calc(var(--f-s-ui) - 2px);
+}
+
+.resize input[type='text'],
+.resize input[type='search'],
+.resize input[type='email'],
+.resize input[type='password'],
+.resize input[type='number'] {
+    font-size: var(--f-s-ui);
+}
+
+.resize .suggestion-item { 
+    font-size: var(--f-s-ui);
+}
+/*Quick Switcher*/
+.resize .prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"])::before {
+    font-size: var(--f-s-ui);
+}
+.resize .prompt .suggestion-flair[aria-label="Not created yet, select to create"] svg {
+    width: var(--f-s-ui);
+    height: var(--f-s-ui);
+}
+/*Settings*/
+.resize .modal.mod-settings .modal-content {
+    font-size: var(--f-s-ui);
+}
+.resize .setting-item-description,
+.resize .vertical-tab-header-group-title,
+.resize .setting-hotkey {
+    font-size: calc(var(--f-s-ui) - 2px);
+}
+.resize .modal,
+.resize .prompt,
+.resize .dropdown {
+    font-size: var(--f-s-ui);
+}
+.resize .setting-item-name {
+    font-size: calc(var(--f-s-ui) + 2px);
+}
+.resize .horizontal-tab-nav-item,
+.resize .vertical-tab-nav-item {
+    font-size: var(--f-s-ui);
+    line-height: calc(var(--f-s-ui) + 10px);
+}
+
+
+/*Resize: Note*/
+.resize .view-header {
+    height: calc(var(--f-s-nt) + 20px);
+}
+.resize .view-header-title,
+.resize .view-header-title-container {
+    font-size: var(--f-s-nt);
+    line-height: calc(var(--f-s-nt) + 20px);
+}
+.resize .view-header-icon svg,
+.resize .view-action svg {
+    height: var(--f-s-nt);
+    width: var(--f-s-nt);
+}
+
+/*Resize: Sidebars*/
+/*Left Panes*/
+.resize .nav-file-title,
+.resize .nav-folder-title {
+    line-height: calc(var(--f-s-sb) + 2px);
+    font-size: calc(var(--f-s-sb) - 2px);
+}
+
+
+/*Right Panes*/
+.resize .view-content,
+.resize .view-content > .tree-item-self,
+.resize .view-content .pane-empty,
+.resize .tag-pane-tag-text,
+.resize .view-content > .search-results-children,
+.resize .view-content > .search-empty-state,
+.resize .view-content > .search-result-file-matches,
+.resize .workspace-tabs .tree-item-self,
+.resize .workspace-tabs .search-result-file-matches {
+    font-size: calc(var(--f-s-sb) - 2px);
+    line-height: calc(var(--f-s-sb) + 8px);
+}
+.workspace-leaf-content .tree-item-flair {
+    font-size: calc(var(--f-s-sb) - 5px);
+}
+
+
+/*Mobile: Resize*/
+.resize .is-mobile .nav-file-title,
+.resize .is-mobile .nav-folder-title,
+.resize .is-mobile .outline,
+.resize .is-mobile .tag-container {
+    font-size: var(--f-s-sb) !important;
+    line-height: calc(var(--f-s-sb) + 10px);
+}
+.resize .is-mobile .view-header-title {
+    font-size: calc(var(--f-s-nt) + 4px);
+    line-height: calc(var(--f-s-nt) + 35px);
+}
+.resize .is-mobile .view-header-icon svg,
+.resize .is-mobile .view-action svg {
+    height: calc(var(--f-s-nt) + 9px);
+    width: calc(var(--f-s-nt) + 9px);
+}
 
 
 

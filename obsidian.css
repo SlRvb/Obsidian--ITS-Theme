@@ -1861,8 +1861,10 @@ input[type='number']:hover {
     border-radius: var(--radius);
     padding: 0;
 }
-.search-suggest-item.is-selected {
-    border-radius: var(--radius);
+.search-suggest-item.is-selected, 
+.suggestion-container,
+.suggestion {
+    border-radius: var(--radius) !important;
 }
 
 /*Quick Switcher*/
@@ -3343,6 +3345,26 @@ iframe {
     width: 2em;
 }
 
+/*Mobile: Resize*/
+.is-mobile .nav-file-title,
+.is-mobile .nav-folder-title,
+.is-mobile .outline,
+.is-mobile .tag-container,
+.is-mobile .nav-folder-title-content,
+.is-mobile .nav-file-title-content {
+    font-size: var(--f-s-sb) !important;
+    line-height: calc(var(--f-s-sb) + 10px);
+}
+.is-mobile .view-header-title {
+    font-size: calc(var(--f-s-nt) + 4px);
+    line-height: calc(var(--f-s-nt) + 36px);
+}
+.is-mobile .view-header-icon svg,
+.is-mobile .view-action svg {
+    height: calc(var(--f-s-nt) + 4px);
+    width: calc(var(--f-s-nt) + 4px);
+}
+
 
 /*Mobile: Toolbar Recolor*/
 .mobile-toolbar {
@@ -4011,22 +4033,27 @@ blockquote mark strong {
 .resize .is-mobile .nav-file-title,
 .resize .is-mobile .nav-folder-title,
 .resize .is-mobile .outline,
-.resize .is-mobile .tag-container {
+.resize .is-mobile .tag-container,
+.resize .is-mobile .nav-folder-title-content,
+.resize .is-mobile .nav-file-title-content {
     font-size: var(--f-s-sb) !important;
     line-height: calc(var(--f-s-sb) + 10px);
 }
 .resize .is-mobile .view-header-title {
     font-size: calc(var(--f-s-nt) + 4px);
-    line-height: calc(var(--f-s-nt) + 35px);
+    line-height: calc(var(--f-s-nt) + 36px);
 }
 .resize .is-mobile .view-header-icon svg,
 .resize .is-mobile .view-action svg {
-    height: calc(var(--f-s-nt) + 9px);
-    width: calc(var(--f-s-nt) + 9px);
+    height: calc(var(--f-s-nt) + 4px);
+    width: calc(var(--f-s-nt) + 4px);
 }
-
-
-
+.is-mobile.resize .view-header-icon {
+    padding: calc(var(--f-s-nt) - 10px) 10px;
+}
+.is-mobile.resize .view-actions {
+    padding: calc(var(--f-s-nt) - 14px) 10px;
+}
 
 /*--Kanban--*/
 /*Credit: https://github.com/Braweria/Spectrum*/

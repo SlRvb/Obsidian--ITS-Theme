@@ -4874,6 +4874,13 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     color: var(--text-dl) !important;
 }
 
+/*Admonition*/
+.admonition { box-shadow: 5px 5px var(--outline) !important; }
+.admonition-title { padding: 10px 15px; }
+.admonition-content { 
+    margin: 5px 20px 20px 20px !important;
+    padding: 0 !important; 
+}
 
 
 /*ABC JS*/

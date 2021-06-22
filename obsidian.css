@@ -4273,7 +4273,7 @@ blockquote mark strong {
 }
 
 #right,
-.right {
+i.right {
     display: block;
     text-align: right;
     background-color: var(--outer-bar);
@@ -4282,7 +4282,7 @@ blockquote mark strong {
 
 
 #left,
-.left {
+i.left {
     display: block;
     text-align: left;
     background-color: var(--outer-bar);
@@ -4290,12 +4290,12 @@ blockquote mark strong {
 }
 
 #clear,
-.clear {
+i.clear {
     clear: left;
 }
 
 #nobg,
-.nobg {
+i.nobg {
     background-color: transparent;
 }
 

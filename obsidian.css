@@ -4876,10 +4876,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 
 /*Admonition*/
 .admonition { 
-    border-radius: var(--radius);
+    border-radius: var(--radius) !important;
     box-shadow: 5px 5px var(--outline) !important; 
 }
-.admonition-title { padding: 10px 15px; }
+.admonition-title { padding: 10px 15px !important; }
 .admonition-content { 
     margin: 5px 20px 20px 20px !important;
     padding: 0 !important; 

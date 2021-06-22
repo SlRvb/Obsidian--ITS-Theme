@@ -4273,30 +4273,30 @@ blockquote mark strong {
 }
 
 #right,
-i.right {
+.right {
     display: block;
-    text-align: right;
+    text-align: right !important;
     background-color: var(--outer-bar);
     padding-right: .8em;
 }
 
 
 #left,
-i.left {
+.left {
     display: block;
-    text-align: left;
+    text-align: left !important;
     background-color: var(--outer-bar);
     padding-left: .8em;
 }
 
 #clear,
-i.clear {
-    clear: left;
+.clear {
+    clear: both !important;
 }
 
 #nobg,
-i.nobg {
-    background-color: transparent;
+.nobg {
+    background-color: transparent !important;
 }
 
 /*----Image Positions/Adjustments----*/
@@ -4875,7 +4875,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 /*Admonition*/
-.admonition { box-shadow: 5px 5px var(--outline) !important; }
+.admonition { 
+    border-radius: var(--radius);
+    box-shadow: 5px 5px var(--outline) !important; 
+}
 .admonition-title { padding: 10px 15px; }
 .admonition-content { 
     margin: 5px 20px 20px 20px !important;

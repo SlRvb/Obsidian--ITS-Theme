@@ -3904,7 +3904,8 @@ iframe {
 
 
 /*Unclear Asides*/
-#un-c {
+#un-c,
+.un-c {
     clear: none;
 }
 
@@ -4271,7 +4272,8 @@ blockquote mark strong {
     padding: 0 1em;
 }
 
-#right {
+#right,
+.right {
     display: block;
     text-align: right;
     background-color: var(--outer-bar);
@@ -4279,18 +4281,21 @@ blockquote mark strong {
 }
 
 
-#left {
+#left,
+.left {
     display: block;
     text-align: left;
     background-color: var(--outer-bar);
     padding-left: .8em;
 }
 
-#clear {
+#clear,
+.clear {
     clear: left;
 }
 
-#nobg {
+#nobg,
+.nobg {
     background-color: transparent;
 }
 

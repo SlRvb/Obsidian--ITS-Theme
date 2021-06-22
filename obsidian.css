@@ -4043,22 +4043,22 @@ blockquote mark strong {
     line-height: calc(var(--f-s-sb) + 10px);
 }
 .is-mobile.resize  .view-header-title {
-    font-size: calc(var(--f-s-nt) + 2px);
-    line-height: calc(var(--f-s-nt) + 22px);
+    font-size: calc(var(--f-s-nt) + 4px);
+    line-height: calc(var(--f-s-nt) + 30px);
 }
-.resize .is-mobile .view-header-icon svg,
-.resize .is-mobile .view-action svg {
+.is-mobile.resize .view-header-icon svg,
+.is-mobile.resize .view-action svg {
     height: calc(var(--f-s-nt) + 4px);
     width: calc(var(--f-s-nt) + 4px);
 }
 .is-mobile.resize .view-header-icon {
-    padding: calc(var(--f-s-nt) - 10px) 10px;
+    padding: calc(var(--f-s-nt) - 5px) 10px;
 }
 .is-mobile.resize .view-actions {
-    padding: calc(var(--f-s-nt) - 14px) 10px;
+    padding: calc(var(--f-s-nt) - 24px) 10px;
 }
 .is-mobile.resize .view-header {
-    height: calc(var(--f-s-nt) + 24px);
+    height: calc(var(--f-s-nt) + 30px);
 }
 
 /*--Kanban--*/

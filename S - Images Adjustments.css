@@ -175,7 +175,7 @@ img[alt*="hm-tl"]{  height: var(--med-tall); }
 img[alt*="htall"]{  height: var(--tall); }
 
 /*Width*/
-img[alt*="wmicro"]{  height: var(--micro); }
+img[alt*="wmicro"]{   width: var(--micro); }
 img[alt*="wtiny"]{    width: var(--tiny); }
 img[alt*="wsmall"]{   width: var(--small); }
 img[alt*="ws-med"]{   width: var(--small-med); }

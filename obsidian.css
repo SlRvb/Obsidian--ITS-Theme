@@ -1449,8 +1449,9 @@ settings:
 /*Drop Menu*/
 .menu {
     border-radius: var(--radius) !important;
+    box-shadow: 5px 5px var(--outline);
 }
-.menu-item:hover {
+.menu-item:hover:not(.is-disabled):not(.is-label):hover {
     background-color: var(--outer-bar);
 }
 
@@ -4299,7 +4300,7 @@ blockquote mark strong {
     background-color: transparent !important;
 }
 
-/*----Image Positions/Adjustments----*/
+/*----Image Positions/Image Adjustments----*/
 /*Invert Colors*/
 .theme-dark img[alt*="invert"] { mix-blend-mode: normal; }
 .theme-light img[alt*="invertd"] { mix-blend-mode: darken; }
@@ -4415,7 +4416,7 @@ img[alt*="hm-tl"]{  height: var(--med-tall); }
 img[alt*="htall"]{  height: var(--tall); }
 
 /*Width*/
-img[alt*="wmicro"]{  height: var(--micro); }
+img[alt*="wmicro"]{   width: var(--micro); }
 img[alt*="wtiny"]{    width: var(--tiny); }
 img[alt*="wsmall"]{   width: var(--small); }
 img[alt*="ws-med"]{   width: var(--small-med); }

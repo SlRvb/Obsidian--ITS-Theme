@@ -1,6 +1,7 @@
 .theme-dark, .theme-light {
     /*Sizes*/
     --radius: 0px;
+    --micro: 70px;
     --tiny: 100px;
     --small: 200px;
     --small-med: 300px;
@@ -15,6 +16,7 @@
     .theme-dark, .theme-light {
         /*Mobile Sizes*/
         --radius: 0px;
+        --micro: 70px;
         --tiny: 100px;
         --small: 150px;
         --small-med: 200px;

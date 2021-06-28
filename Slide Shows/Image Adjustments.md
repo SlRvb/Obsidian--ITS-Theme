@@ -37,12 +37,17 @@ Style of sizing for images.
 `portrait` | Larger image height than image's width
 `profile` | Width and height of the image are equal (Needs `pc`)
 
+![[Image Adjustments-Simple - Types.png|700]]
+
 ---
-### Sizing
+### Type Sizing
 <i>⚠ **Note**: Obsidian's number sizing `|###` will **not** work with these.</i>
 
-Format: `![[Image.png|modifier+size]]`
+**Format**: `![[Image.png|modifier+size]]`
 
 Banner & Portrait use `+small` and `+tall` sizing, but Profile uses `+medium` only.
 
+![[Image Adjustments-Simple - Sizing.png|750]]
+
 ---
+## Customizable Version

@@ -3091,6 +3091,11 @@ a.tag:hover {
     height: 500px;
 }
 
+/*Popover: Fix Embed Height Inside*/
+.popover.hover-popover .markdown-embed .markdown-embed {
+    height: unset;
+}
+
 /*Fit image in popover*/
 .popover.hover-popover img {
     max-width: 100%;

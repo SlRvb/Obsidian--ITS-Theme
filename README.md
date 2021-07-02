@@ -308,16 +308,20 @@ Example | Description
 
 
 # Alternate Themes
+[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20All%20Alternate%20Themes.css) 
+
+All Alternate Themes are available in 1 snippet as well instead of many separate css snippets. Use the Style Settings plugin to toggle one of them on.
+
 
 ## SlRvb
-![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb.css)
+[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb.css)
 ![](Images/Theme-SlRvb--Darkmode.png)
 ![](Images/Theme-SlRvb--Lightmode.png)
 - Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
 - Monospace: [Fira Code](https://github.com/tonsky/FiraCode)
 
 ## D&D
-![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20DnD.css)
+[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20DnD.css)
 ![](Images/Theme-DnD--Darkmode.png)
 ![](Images/Theme-DnD--Lightmode.png)
 
@@ -328,7 +332,7 @@ Example | Description
 - Monospace: [Fira Code](https://github.com/tonsky/FiraCode)
 
 ## School Days
-![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20School%20Days.css)
+[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20School%20Days.css)
 ![](Images/Theme-School-Days--Darkmode.png)
 ![](Images/Theme-School-Days--Lightmode.png)
 
@@ -339,12 +343,12 @@ Example | Description
 - Monospace: [Recursive Mono Linear Static Medium](https://www.recursive.design/)
 
 ## ITS Dark
-![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20ITS%20Dark.css)
+[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20ITS%20Dark.css)
 
 ![](Images/Theme-ITS-Dark.png)
 
 ## SlRvb Gray
-![Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb%20Gray.css)
+[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb%20Gray.css)
 
 ![](Images/Theme-SlRvb-Gray--Darkmode.png)
 ![](Images/Theme-SlRvb-Gray--Lightmode.png)

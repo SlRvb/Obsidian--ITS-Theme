@@ -1287,10 +1287,6 @@ settings:
 
 
     /*CSS Specifics*/
-    --hue: 0;
-    --sat: 42%;
-    --bri: 37%;
-
     --b-l-1: #683732;
     --b-l-2: #a13531;
     --b-l-3: #fc4435;
@@ -1419,10 +1415,6 @@ settings:
     
     
     /*CSS Specifics*/
-    --hue: 0;
-    --sat: 42%;
-    --bri: 37%;
-
     --b-l-1: #683732;
     --b-l-2: #ff1702;
     --b-l-3: #e27777;
@@ -4836,6 +4828,7 @@ b mark strong {
 
 
 
+
 /*----Plugins----*/
 
 /*--Sliding Panes--*/
@@ -4871,6 +4864,8 @@ body.plugin-sliding-panes .workspace-split.mod-root .view-content {
     width: auto !important;
     writing-mode: vertical-rl;
 }
+
+/*Rotate Gradient for Sliding Panes*/
 body.plugin-sliding-panes .workspace-leaf.mod-active .view-header {
     border: none !important;
     background: linear-gradient(to top, var(--outer-bar), var(--dark-accent));
@@ -4879,7 +4874,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     border-right: 0 !important;
     border-bottom: none !important;
 }
-
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+    margin: auto !important;
+    margin-top: 8px !important;
+}
 
 /*--Obsidian Tabs Plugin--*/
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf,

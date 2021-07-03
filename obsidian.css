@@ -927,7 +927,7 @@ settings:
         default-light: '#5599d0'
     -
         title: Dark Accent
-        description: File selected color.
+        description: File selected and Note Gradient color.
         id: dark-accent
         type: variable-themed-color
         format: hex
@@ -936,7 +936,7 @@ settings:
         default-light: '#ffeded'
     -
         title: Deep Dark Accent
-        description: Active note title background color.
+        description: Darkmode Mobile Toolbar and Lightmode Obsidian titlebar background color.
         id: deep-dark-accent
         type: variable-themed-color
         format: hex
@@ -952,7 +952,7 @@ settings:
         default-light: '#a6bbde'
     -
         title: Background
-        description: Scrollbar color
+        description: Scrollbar background color
         id: bg
         type: variable-themed-color
         format: hex
@@ -3321,6 +3321,11 @@ iframe {
 }
 .workspace-drawer-ribbon {
     background-color: var(--outer-bar);
+}
+
+.workspace-drawer.mod-left,
+.workspace-drawer.mod-right {
+    border: none;
 }
 
 .is-mobile .status-bar {

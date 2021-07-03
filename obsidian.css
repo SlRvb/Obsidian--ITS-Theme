@@ -927,7 +927,7 @@ settings:
         default-light: '#5599d0'
     -
         title: Dark Accent
-        description: File selected and Note Gradient color.
+        description: File selected and Note Gradient, frontmatter tag color.
         id: dark-accent
         type: variable-themed-color
         format: hex
@@ -5376,7 +5376,26 @@ g.classGroup line {
 }
 
 
+/*Plugin: File Tree Alternative*/
+.oz-folder-contents {
+    border-left: 2px solid var(--lines) !important;
+    margin-left: 5px !important;
+}
 
+.oz-folder-toggle {
+    margin-right: 5px !important;
+}
+.oz-folder-block {
+    padding-left: 5px !important;
+}
+
+.oz-folder-count {
+    margin-right: 2px;
+}
+.oz-folder-count .nav-file-tag {
+    font-size: 11px !important;
+    border-radius: var(--radius);
+}
 
 
 

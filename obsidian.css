@@ -557,6 +557,10 @@ settings:
         id: title-wrap
         type: class-toggle
     -
+        title: Flat Note Title Color
+        id: nt-g
+        type: class-toggle
+    -
         title: Resize Scrollbars
         id: scroll-size
         type: variable-number-slider
@@ -5742,6 +5746,9 @@ g.classGroup line {
     background-color: var(--accent);
 }
 
+.nt-g .workspace-leaf.mod-active .view-header {
+    background: var(--dark-accent);
+}
 
 
 

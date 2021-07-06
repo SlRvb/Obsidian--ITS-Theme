@@ -2220,6 +2220,7 @@ input[type='range']::-webkit-slider-thumb {
 /*File: Move Further In*/
 .nav-file-icon {
     top: 5px;
+    display: none;
 }
 
 /*--Bottom Bar--*/

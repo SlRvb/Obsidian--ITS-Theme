@@ -1917,7 +1917,7 @@ input[type='number']:hover {
 }
 
 /*Quick Switcher*/
-/*Add Note Icon*/
+/*Add Note Icon**
 .prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"])::before {
     content: "📄";
     color: transparent;
@@ -1930,12 +1930,12 @@ input[type='number']:hover {
     margin-right: 6px;
 }
 
-/*Recolor Create Note Icon*/
+/*Recolor Create Note Icon**
 .prompt .suggestion-flair[aria-label="Not created yet, select to create"] svg {
     color: var(--inactive);
     width: 16px;
     height: 16px;
-}
+}*/
 
 
 

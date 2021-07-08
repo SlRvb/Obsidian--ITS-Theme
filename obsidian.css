@@ -792,13 +792,7 @@ settings:
         id: b-li-o
         type: class-toggle
 	-
-		title: Specific Lists
-		id: Bullet-Lists
-		type: heading
-		level: 4
-        collapsed: true
-	-
-		title: Specific Line Size
+		title: Line Size
 		id: b-line
 		type: variable-number-slider
         default: 2
@@ -2714,7 +2708,8 @@ ul li::before {
     content: var(--bullet);
     margin-left: -22px;
     color: var(--accent);
-    position: absolute;
+    position: relative; /*For Spaced Lists*/
+    float: left;
     margin-top: auto;
     margin-bottom: auto;
     font-size: var(--f-text);
@@ -2754,6 +2749,10 @@ ul li > p {
     margin-block-end: unset;
 }
 
+.markdown-preview-view .task-list-item-checkbox {
+    margin-right: 10px;
+}
+
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
 .cm-s-obsidian span.cm-formatting-list-ul::before,
@@ -2767,16 +2766,12 @@ ul li > p {
 }
 
 /*Editor Bullet Lines*/
-.markdown-preview-view .task-list-item-checkbox {
-    margin-right: 2%;
-}
-
 .cm-hmd-list-indent .cm-tab {
     position: relative;
 }
 .cm-hmd-list-indent .cm-tab::before {
     content:'';
-    border-left: 2px solid var(--accent);
+    border-left: var(--b-line) solid var(--accent);
     position: absolute;
     left: 6px;
     top: -5px;
@@ -2826,7 +2821,6 @@ li:nth-child(even) {
     height: 14px;
     filter: none;
     margin-left: -4px;
-    margin-right: .7em;
     margin-top: 3px;
     cursor: pointer;
     vertical-align: top;
@@ -4230,11 +4224,12 @@ blockquote mark strong {
 /*Remove Text Spacing from bullet/number*/
 .kanban .task-list-item-checkbox {
     margin-left: 20px;
+    margin-right: 5px;
     margin-top: 2px;
 }
 /*Fix List Checkbox Margins*/
 .kanban ol .task-list-item-checkbox {
-    margin-left: 4px;
+    margin-left: 0px;
 }
 .kanban ol > li.task-list-item {
     padding-left: 0px;
@@ -5498,93 +5493,89 @@ g.classGroup line {
 }
 .def-bull ul li:before {
     content: "•";
+    padding-left: 1.5px;
     font-size: 20px;
 }
 .def-bull ul li:nth-child(even):before {
     color: var(--accent);
 }
 
+
 /*Bullet Line Original*/
-.bul-li-o li {
-    padding-left: 4px;
-    border-left: 2px solid var(--accent);
-}
-.bul-li-o li:nth-child(even) {
-    border-left: 2px solid var(--accent2);
-}
-.bul-li-o .markdown-preview-view ul > .bul-li-o li.task-list-item {
-    text-indent: -1.5em !important;
-}
 .b-li-o li {
     border: 0;
     padding: 0;
 }
-.b-li-o li::before {
-    color: var(--fg);
+.b-li-o li::before,
+.b-li-o li:nth-child(even):before {
+    color: var(--soft-text);
 }
+
+.b-li-o ul ol,
+.b-li-o ol ul,
 .b-li-o ul ul,
-.b-li-o ol {
+.b-li-o ol ol {
     position: relative;
 }
-.b-li-o ul ul::before,
-.b-li-o ol ol::before {
+
+.b-li-o .markdown-preview-view:not(.kanban) ul ol::before,
+.b-li-o .markdown-preview-view:not(.kanban) ol ul::before,
+.b-li-o .markdown-preview-view:not(.kanban) ul ul::before,
+.b-li-o .markdown-preview-view:not(.kanban) ol ol::before {
     content:'';
-    border-left: 2px solid var(--accent);
+    border-left: var(--b-line) solid var(--accent);
     position: absolute;
 }
+
+.b-li-o ol ul::before,
+.b-li-o ul ol::before,
 .b-li-o ul ul::before,
 .b-li-o ol ol::before {
-    left: -1em;
-    top: 0;
-    bottom: 0; 
-}
-.b-li-o  li.task-list-item > ol {
-    left: -.5em;
+    left: -16px;
+    top: 0px;
+    bottom: 0px; 
 }
 
-
-.b-li-o .markdown-preview-view ul > .b-li-o li.task-list-item {
-    text-indent: 0em;
+.b-li-o .markdown-preview-view:not(.kanban) .task-list-item-checkbox {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+.b-li-o .markdown-preview-view ol > li.task-list-item {
+    padding-left: unset;
 }
 
 /*Colored Bullet Lines*/
 .bul-li-col ul > li,
-.bul-li-col ul ul::before
-{ border-color: var(--b-l-1); }
-.bul-li-col ul ul > li, 
-.bul-li-col ul ul ul::before
-{ border-color: var(--b-l-2); }
-.bul-li-col ul ul ul > li, 
-.bul-li-col ul ul ul ul::before
-{ border-color: var(--b-l-3); }
-.bul-li-col ul ul ul ul > li, 
-.bul-li-col ul ul ul ul ul::before
-{ border-color: var(--b-l-4); }
-.bul-li-col ul ul ul ul ul > li, 
-.bul-li-col ul ul ul ul ul ul::before
-{ border-color: var(--b-l-5); }
-.bul-li-col ul ul ul ul ul ul > li, 
-.bul-li-col ul ul ul ul ul ul ul::before
-{ border-color: var(--b-l-6); }
-
+.bul-li-col ul ul::before,
 .bul-li-col ol > li, 
 .bul-li-col ol ol::before
-{ border-color: var(--b-l-1); }
+{ border-color: var(--b-l-1) !important; }
+.bul-li-col ul ul > li, 
+.bul-li-col ul ul ul::before,
 .bul-li-col ol ol > li, 
 .bul-li-col ol ol::before
-{ border-color: var(--b-l-2); }
+{ border-color: var(--b-l-2) !important; }
+.bul-li-col ul ul ul > li, 
+.bul-li-col ul ul ul ul::before,
 .bul-li-col ol ol ol > li, 
 .bul-li-col ol ol ol::before
-{ border-color: var(--b-l-3); }
+{ border-color: var(--b-l-3) !important; }
+.bul-li-col ul ul ul ul > li, 
+.bul-li-col ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol > li, 
 .bul-li-col ol ol ol ol::before
-{ border-color: var(--b-l-4); }
+{ border-color: var(--b-l-4) !important; }
+.bul-li-col ul ul ul ul ul > li, 
+.bul-li-col ul ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol ol > li, 
 .bul-li-col ol ol ol ol ol::before
-{ border-color: var(--b-l-5); }
+{ border-color: var(--b-l-5) !important; }
+.bul-li-col ul ul ul ul ul ul > li, 
+.bul-li-col ul ul ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol ol ol > li,
 .bul-li-col ol ol ol ol ol ol::before
-{ border-color: var(--b-l-6); }
+{ border-color: var(--b-l-6) !important; }
+
 
 
 

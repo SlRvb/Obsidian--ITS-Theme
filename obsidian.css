@@ -2019,6 +2019,14 @@ input[type='range']::-webkit-slider-thumb {
     max-height: 90%;
     overflow: auto;
 }
+.suggestion-container {
+    border-radius: var(--radius);
+    box-shadow: 3px 3px var(--outline);
+    border: 2px solid var(--outline);
+    font-size: var(--f-text);
+    overflow: auto;
+}
+
 /*Resize Settings*/
 .modal.mod-settings {
     width: 55vw;

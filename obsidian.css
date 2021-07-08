@@ -2749,10 +2749,6 @@ ul li > p {
     margin-block-end: unset;
 }
 
-.markdown-preview-view .task-list-item-checkbox {
-    margin-right: 10px;
-}
-
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
 .cm-s-obsidian span.cm-formatting-list-ul::before,
@@ -2821,6 +2817,7 @@ li:nth-child(even) {
     height: 14px;
     filter: none;
     margin-left: -4px;
+    margin-right: 10px;
     margin-top: 3px;
     cursor: pointer;
     vertical-align: top;

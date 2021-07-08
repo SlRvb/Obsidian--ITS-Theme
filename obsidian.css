@@ -1648,7 +1648,7 @@ button.mod-cta {
     margin-right: 6px;
     vertical-align: top;
     font-size: 13px;
-    font-weight: none !important;
+    font-weight: 10 !important;
 }
 
 .nav-folder-children .nav-folder-title-content::before {

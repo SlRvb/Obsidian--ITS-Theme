@@ -2364,11 +2364,8 @@ input[type='range']::-webkit-slider-thumb {
 }
 /*Editor Line Numbers*/
 .CodeMirror-gutter,
-.cm-gutter,
 .CodeMirror-gutters,
-.cm-gutters,
-.CodeMirror-linenumber,
-.cm-linenumber {
+.CodeMirror-linenumber {
     box-sizing: content-box;
     font-family: var(--font-monospace);
     text-align: right;
@@ -2403,8 +2400,7 @@ p,
 li,
 table, 
 .markdown-preview-section code,
-.cm-s-obsidian .CodeMirror-lines,
-.cm-s-obsidian .cm-line {
+.cm-s-obsidian .CodeMirror-lines {
     font-size: var(--f-s-text);
 }
 
@@ -5514,7 +5510,8 @@ g.classGroup line {
 .ed-pre .markdown-preview-section {
     font-family: var(--pre-font);
 }
-.ed-pre .cm-s-obsidian .CodeMirror-line, .ed-pre .cm-s-obsidian .cm-line {
+.ed-pre .cm-s-obsidian .CodeMirror-line,
+.ed-pre .cm-s-obsidian .cm-line:not(.HyperMD-codeblock):not(.cm-comment) {
     font-family: var(--ed-font);
 }
 

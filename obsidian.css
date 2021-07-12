@@ -1153,7 +1153,7 @@ settings:
     --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*??*/
-    --font-monospace: 'Fira Code Medium', /*'JetBrains Mono Medium', 'Recursive Mono Casual Static Medium', 'Menlo Bold',*/ 'Source Code Pro', monospace; /*Code block text*/
+    --font-monospace: 'Fira Code', 'Fira Code Medium', /*'JetBrains Mono Medium', 'Recursive Mono Casual Static Medium', 'Menlo Bold',*/ 'Source Code Pro', monospace; /*Code block text*/
     --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif; /*Works, but if it doesn't, needs !important*/
     --pre-font: var(--default-font) !important;
     --ed-font: var(--default-font) !important;

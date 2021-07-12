@@ -24,6 +24,7 @@ settings:
         type: class-toggle
 */
 
+
 /*----Fonts----*/
 /*Font: Fira Code*/
 @font-face {
@@ -561,7 +562,7 @@ settings:
     --font-monospace: 'Fira Code Medium', 'Recursive Mono Linear Static Medium', 'Source Code Pro';
     --slide-shadow: rgba(0, 28, 74, 0.15);
 
-    --hr-sym: "\29D7";
+    --hr-sym: "\e88c";
     --statblock-primary-color: var(--soft-text) !important;
     --statblock-background-color: transparent;
     --statblock-bar-color: var(--accent);
@@ -779,7 +780,10 @@ settings:
     color: var(--embed-h);
     font-style: normal;
 }
-
+.dnd .markdown-preview-view hr::after, 
+div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
+    font-family: var(--mdi);
+}
 
 /*Table*/
 .dnd table {

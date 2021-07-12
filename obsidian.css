@@ -2393,7 +2393,10 @@ input[type='range']::-webkit-slider-thumb {
     color: var(--text-normal);
     z-index: 0;
 }
-.cm-comment {
+/*Comments*/
+.cm-comment,
+.cm-comment + .cm-url,
+.cm-formatting-link-string {
     font-family: var(--font-monospace);
 }
 

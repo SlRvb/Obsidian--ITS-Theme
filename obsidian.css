@@ -4612,14 +4612,14 @@ img[alt*="portrait+tall"] {
 }
 
 /*Profile*/
-img[alt*="profile"] {
+img[alt*="p.rofile"] {
     object-fit: cover;
     height: 100px;
     width: 100px;
     object-position: center !important;
 }
 
-img[alt*="profile+medium"] {
+img[alt*="p.rofile+medium"] {
     object-fit: cover;
     height: 250px;
     width: 250px;
@@ -4676,7 +4676,7 @@ img[alt*="p+cl"] {
     object-fit: cover;
     object-position: 25%;
 }
-img[alt*="p+r"] {
+img[alt*="pr"] {
     object-fit: cover;
     object-position: right;
 }

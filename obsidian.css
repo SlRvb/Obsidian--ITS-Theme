@@ -3476,6 +3476,9 @@ iframe {
 .is-mobile .kanban ol {
     padding-inline-start: 0;
 }
+.is-mobile .markdown-preview-view {
+    padding: unset;
+}
 
 /*Style Settings Mobile Fix*/
 .is-mobile .style-settings-container > .style-settings-heading {

@@ -2070,6 +2070,8 @@ input[type='range']::-webkit-slider-thumb {
     overflow: auto;
 }
 .notice {
+    color: var(--text-dl);
+    background-color: var(--accent);
     border-radius: var(--radius);
     box-shadow: 3px 3px var(--outline);
     border: 0;

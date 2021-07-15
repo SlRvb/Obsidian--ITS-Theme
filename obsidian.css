@@ -1779,6 +1779,9 @@ button.mod-cta {
     background-color: var(--dark-accent);
     color: var(--fg);
 }
+.nav-file-title.is-active .nav-file-title-content::before {
+    color: var(--soft-text);
+}
 
 /*Dragged*/
 .nav-folder-title.is-being-dragged-over,

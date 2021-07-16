@@ -1523,11 +1523,10 @@ settings:
 
 /*Obsidian Title Bar Cover*/
 .titlebar { background-color: var(--background-modifier-cover); }
-.titlebar-text{ color: var(--text-dl) !important; }
-
-/*Exit Button*/
-.titlebar-button:hover {
+.titlebar-text,
+.titlebar-button { 
     color: var(--text-dl);
+    opacity: 1;
 }
 
 /*Drop Menu*/
@@ -2362,11 +2361,6 @@ input[type='range']::-webkit-slider-thumb {
 .view-header-icon, .view-actions {
     margin: auto;
 }
-.view-header-icon svg,
-.view-action svg {
-    height: 16px;
-    width: 16px;
-}
 
 /*--NOTES--*/
 /*Remove Note Padding*/
@@ -2495,7 +2489,10 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 }
 
 /*Heading Line*/
-:is(h1, h2, h3, h4):after {
+h1:after, 
+h2:after, 
+h3:after, 
+h4:after {
     content: "";
     display: block;
     background: var(--table);
@@ -2520,7 +2517,8 @@ h4:after { width: 40%; }
 }
 
 /*-Code-*/
-.markdown-preview-view :is(code, pre) {
+.markdown-preview-view code,
+.markdown-preview-view pre {
     color: var(--code-text);
     font-family: var(--font-monospace) !important;
     z-index: 0;

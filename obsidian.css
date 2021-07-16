@@ -3606,14 +3606,30 @@ iframe {
 .site-header {
     font-family: var(--font);
     text-align: left;
+    border: 0;
 }
+.site-header-text {
+    font-weight: 800;
+    color: var(--headers);
+}
+
+.site-header-logo {
+    max-height: 25px;
+    margin-right: -5px;
+}
+@media screen and (max-width: 750px){
+    .site-footer {
+        visibility: hidden;
+    }
+}
+
 .site-footer {
     font-size: 13px;
     right: 12px;
     bottom: 0;
     position: absolute;
+    visibility: visible;
 }
-
 .page-header {
     font-size: 0px;
     font-family: var(--font);
@@ -3624,8 +3640,12 @@ iframe {
 .site-body-left-column-site-name {
     font-family: var(--font);
     color: var(--headers);
+    text-align: center;
 }
-
+.site-body-left-column-site-name:hover {
+    text-decoration: unset;
+    color: var(--lite-accent);
+}
 
 .site-body {
     background-color: var(--side-bar);
@@ -4427,7 +4447,7 @@ blockquote mark strong {
 /*--Kanban Personal Edits--*/
 /*Fix Margins/Padding*/
 .kanban .internal-embed blockquote {
-    padding: 1%;
+    padding-top: 2px;
     padding-left: 10px;
     font-size: 12px;
     line-height: 15px;

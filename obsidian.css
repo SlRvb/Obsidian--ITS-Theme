@@ -2637,9 +2637,9 @@ a:hover {
     font-family: var(--its);
     padding-left: 2px;
     display: inline-block;
-    /*transform: rotate(-135deg);*/
     font-size: inherit;
     opacity: .5;
+    font-weight: 400 !important;
 }
 
 /*Editor Links*/

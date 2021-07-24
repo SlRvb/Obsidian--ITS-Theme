@@ -1,5 +1,5 @@
 ## Embed Adjustments
-###### by [[SlRvb]]
+###### by [SlRvb](https://SlRvb.github.io/Site/)
 Inspired by [Lithou's Image Flags](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)
 
 ---

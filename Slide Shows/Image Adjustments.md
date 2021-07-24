@@ -71,6 +71,8 @@ Allows for more adjustments to images than the **Simplified Version**.
 `sban` | Banner sets width of image to 100%, height will be adjustable
 `cover` | Fit image in bounds without stretching
 
+![[Image Adjustments-Custom - Pos+Types.png|700]]
+
 ---
 ### Inner Photo Position
 Adjustments to target which part of the *inside* of the image to move around, **not** the where the image is moved to on a page.
@@ -86,6 +88,8 @@ Basic | Position|
 `pr` | Right
 `pc` | Center
 
+![[Image Adjustments-Custom - Inner Position Basic.png|700]]
+
 ---
 #### Precise
 **Format**: `![[|p+precise]]`
@@ -96,6 +100,8 @@ Top |  Bottom | Left | Right |
 `p+cct` | `p+ccb` | 
 `p+tc` | `p+bc` | 
 `p+tcc` | `p+bcc` | 
+
+![[Image Adjustments-Custom - Inner Position Precise.png|800]]
 
 ---
 ### Sizing
@@ -110,3 +116,21 @@ Height | Width | PX |
 `hmed` | `wmed` | 500
 `hm-tl` | `wm-tl` | 600
 `htall` | `wtall` | 700
+
+---
+
+![[Image Adjustments-Custom - Sizing.png]]
+
+---
+
+## Extras
+Uses some of the [Auto-Adaptive Images](https://forum.obsidian.md/t/auto-adaptive-images-for-dark-light-theme/13494) snippet with slightly different synax.
+
+||
+---|---|
+`invertb` | Flip image colors of white lined images
+`invertw` | Flip image colors of dark lined images
+`invertbc` | Flip image colors of white lined images
+`invertwc` | Flip image colors of dark lined images
+
+![[Image Adjustments-Extras Invert.gif]]

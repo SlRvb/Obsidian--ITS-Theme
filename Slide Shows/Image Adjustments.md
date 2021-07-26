@@ -128,9 +128,10 @@ Uses some of the [Auto-Adaptive Images](https://forum.obsidian.md/t/auto-adaptiv
 
 ||
 ---|---|
-`invertb` | Flip image colors of white lined images
-`invertw` | Flip image colors of dark lined images
-`invertbc` | Flip image colors of white lined images
-`invertwc` | Flip image colors of dark lined images
+`invertw` | Flip image colors of white lined images
+`invertb` | Flip image colors of dark lined images
+`invertwc` | Flip image colors of white lined images
+`invertbc` | Flip image colors of dark lined images
+`clear` | Image will sit below another image if it's on the same side
 
 ![[Image Adjustments-Extras Invert.gif]]

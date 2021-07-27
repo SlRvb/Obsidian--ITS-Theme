@@ -29,9 +29,13 @@ Type Syntax | Description|
 
 ---
 
-## Supported Markdown
+## Supported/Unsupported Markdown
+(As far as I know)
+
 -  `![[Embeds]]`
--  
+-  `**Bold**`
+-  `*Italics*`
+-  `[Markdown Links]()`
 
 **Don't work:**
 -  `# Headings` will not work within asides must be HTML versions.

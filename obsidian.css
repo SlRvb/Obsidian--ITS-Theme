@@ -1096,6 +1096,11 @@ settings:
         id: scl
         type: class-toggle
     -
+        title: Kanban Plugin Adjustments
+        description: Personal adjustments for less noisy Kanban layout
+        id: kbn
+        type: class-toggle
+    -
         title: Image Zoom
         description: Hold and click an image to zoom into it.
         id: img-zoom
@@ -2757,7 +2762,7 @@ Masonry/Gallery View
 .img-grid .markdown-preview-section > div hr {
     width:100%;
 }
-/* These lines make every image the same height
+/* These lines make every image the same height**
 .img-grid .markdown-preview-section > div > .internal-embed img:not(:active) {
     object-fit:cover;
 }*/
@@ -3745,7 +3750,8 @@ iframe {
 
 /*--CSS Classes--*/
 /*CSS class, Hide Frontmatter*/
-.no-m .frontmatter-container {
+.no-m .frontmatter-container,
+.reveal pre.frontmatter {
     display: none;
 }
 
@@ -4552,10 +4558,17 @@ blockquote mark strong {
 
 /*----Image Positions/Image Adjustments----*/
 /*Invert Colors*/
-.theme-dark img[alt*="invert"] { mix-blend-mode: normal; }
-.theme-light img[alt*="invertd"] { mix-blend-mode: darken; }
-img[alt*="invert"] {
-    mix-blend-mode: exclusion;
+.theme-dark img[alt*="invertb"] {
+    filter: invert(1) hue-rotate(180deg);
+}  
+.theme-light img[alt*="invertw"] {
+    filter: invert(1) hue-rotate(180deg);
+}
+.theme-dark img[alt*="invertbc"] {
+    filter: invert(1) hue-rotate(180deg) contrast(1.5);
+}
+.theme-light img[alt*="invertwc"] {
+    filter: invert(1) hue-rotate(180deg) contrast(1.45);
 }
 
 /*Fix Float Issues*/
@@ -4682,7 +4695,7 @@ img[alt*="wmicro"]{   width: var(--micro); }
 img[alt*="wtiny"]{    width: var(--tiny); }
 img[alt*="wsmall"]{   width: var(--small); }
 img[alt*="ws-med"]{   width: var(--small-med); }
-img[alt*="wm-small"]{ width: var(--med-small); }
+img[alt*="wm-sm"]{    width: var(--med-small); }
 img[alt*="wmed"]{     width: var(--medium); }
 img[alt*="wm-tl"]{    width: var(--med-tall); }
 img[alt*="wtall"]{    width: var(--tall); }
@@ -5926,4 +5939,62 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
     padding-top: 30px;
     display: flex;
     flex-direction: row-reverse;
+}
+
+/*Plugin: Kanban Adjustments*/
+/*----Lane----*/
+.kbn .kanban-plugin__lane-title p {
+    font-size: 12px !important;
+}
+.kbn .kanban-plugin__lane {
+    background: var(--note) !important;
+    box-shadow: none !important;
+    border-width: 2px !important;
+}
+.is-mobile.kbn .kanban-plugin__lane-header-wrapper {
+    margin: 0px !important;
+}
+/*----Title----*/
+.kbn .kanban-plugin__item-title .markdown-preview-view p {
+    font-size: 14px !important;
+}
+/*Title: Sizing*/
+.kbn .kanban-plugin__item-title-wrapper {
+    padding: 2px 8px !important;
+    background-color: var(--aside-bg) !important;
+}
+/*Title: Link Styling*/
+.kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link {
+    color: var(--text) !important;
+}
+.kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link:after {
+    content: "\00B0";
+    color: var(--accent);
+}
+.kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link:hover,
+.kbn .kanban-plugin__item .markdown-preview-view a.internal-link:hover {
+    background: var(--hvr2);
+}
+/*----Cards/Item----*/
+.kbn .kanban-plugin__item-metadata-wrapper:not(:empty) {
+    padding: 2px 6px !important;
+}
+.kbn .kanban-plugin__item {
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    border-left: 2px solid var(--table) !important;
+}
+/*Card: Key*/
+.kbn .kanban-plugin__meta-table td.kanban-plugin__meta-key {
+    color: var(--footnote) !important;
+    font-weight: 600;
+}
+/*Card: Tags*/
+.kbn .kanban-plugin__item .markdown-preview-view a.tag {
+    font-size: 11px !important;
+    line-height: 14px !important;
+}
+/*Card: Link Styling*/
+.kbn .kanban-plugin__item .markdown-preview-view a.internal-link {
+    font-weight: 600;
+    color: var(--text);
 }

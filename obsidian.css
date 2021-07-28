@@ -2645,6 +2645,7 @@ a:hover {
     font-size: inherit;
     opacity: .5;
     font-weight: 400 !important;
+    font-style: normal !important;
 }
 
 /*Editor Links*/
@@ -3813,6 +3814,8 @@ iframe {
     font-family: var(--its);
     color: var(--accent);
     margin-right: -5px;
+    font-style: normal !important;
+    font-weight: 10 !important;
 }
 .writing .external-link::after {
     content: "\e818";
@@ -3820,6 +3823,8 @@ iframe {
     color: var(--accent);
     opacity: unset;
     margin-right: -5px;
+    font-style: normal !important;
+    font-weight: 10 !important;
 }
 
 .writing hr::after {
@@ -5926,6 +5931,16 @@ g.classGroup line {
 .dv .dataview td:nth-child(1) .external-link:hover {
     color: var(--accent2) !important;
 }
+.dvl .list-view-ul li {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: var(--aside-bg);
+}
+.dvl .kanban ul li {
+    flex: 1 1 200px;
+}
+
+
 /*Super Charged Links*/
 .scl .frontmatter-values-grid {
     display: inline-block;
@@ -5968,7 +5983,8 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
     color: var(--text) !important;
 }
 .kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link:after {
-    content: "\00B0";
+    content: "\e819";
+    font-family: var(--its);
     color: var(--accent);
 }
 .kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link:hover,

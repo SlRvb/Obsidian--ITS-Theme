@@ -5936,8 +5936,8 @@ g.classGroup line {
     margin-top: 15px;
     background-color: var(--aside-bg);
 }
-.dvl .kanban ul li {
-    flex: 1 1 200px;
+.kanban.dvl ul li {
+    flex: 1 1 200px !important;
 }
 
 

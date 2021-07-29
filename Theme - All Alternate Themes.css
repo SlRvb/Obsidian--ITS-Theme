@@ -431,6 +431,7 @@ settings:
     --tag: #273346;
     --table: #2f3440;
     --hr: #414b5c;
+    --i-at: var(--lite-accent);
     
     --latex: #b2cfff;
     --latex-s: #61afef;
@@ -501,6 +502,7 @@ settings:
     --table: #c9ced9;
     --th: #b48c55;
     --hr: #d6deea;
+    --i-at: var(--text);
     
     --latex: #5895fa;
     --latex-s: #9ed3ff;

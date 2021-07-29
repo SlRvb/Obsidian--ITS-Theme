@@ -5167,9 +5167,8 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 .admonition-title { padding: 10px 15px !important; }
 .admonition-content { 
-    padding: 0 !important; 
+    padding: 0 0 0 5px !important;
 }
-
 
 /*ABC JS*/
 .abcjs-container svg {    

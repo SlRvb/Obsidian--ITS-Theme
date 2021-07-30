@@ -5964,6 +5964,7 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 .dv .dataview-ul {
     list-style-type: none;
+    margin-inline-start: -32px;
 }
 /*Dim First Column Link*/
 .dv .dataview td:nth-child(1) {
@@ -5984,6 +5985,9 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 .dvl .list-view-ul li {
     padding: 10px;
     margin-top: 15px;
+    background-color: var(--aside-bg);
+}
+.kanban.dvl .list-view-ul li {
     background-color: var(--aside-bg);
 }
 .kanban.dvl ul li {

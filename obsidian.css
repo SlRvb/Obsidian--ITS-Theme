@@ -5755,8 +5755,10 @@ h3.breadcrumbs-matrix-header:after { display: none; }
     white-space: pre-wrap;
     line-height: 22px;
 }
-.title-wrap .view-header {
+.title-wrap .view-header,
+.is-mobile.title-wrap .view-header-title-container {
     height: auto;
+    width: auto !important;
 }
 .plugin-tabs.title-wrap .view-header {
     height: auto !important;

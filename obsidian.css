@@ -2769,18 +2769,18 @@ Masonry/Gallery View
     object-fit:cover;
 }*/
 .img-grid span.image-embed[alt*="."],
-span.image-embed[alt*="grd"] { 
+span.image-embed[alt*="grid"] { 
     display: table-cell;
     vertical-align: middle;
     padding: 3px;
 }
 .img-grid img[alt*="."],
-img[alt*="grd"] {
+img[alt*="grid"] {
     max-height: 30vh;
 }
 
 .img-grid img[alt*="."]:hover,
-img[alt*="grd"]:hover {
+img[alt*="grid"]:hover {
     transform: scale(1.5);
 }
 

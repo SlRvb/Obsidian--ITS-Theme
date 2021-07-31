@@ -2745,29 +2745,7 @@ Enlarge Image:*/
     bottom:0;
 }
 
-/* Img Grid 
-Defunct
-Kepano: https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359
-Masonry/Gallery View
-.img-grid .markdown-preview-section > div {
-    display:flex;
-}
-.img-grid .markdown-preview-section > div > .internal-embed {
-    flex:1;
-    margin-left:-0.5rem;
-    padding:0 0.5rem 0.5rem 0.5rem;
-}
-.img-grid .markdown-preview-section > div > *:not(div) {
-    margin-block-start: 0rem;
-    margin-block-end: 1rem;
-}
-.img-grid .markdown-preview-section > div hr {
-    width:100%;
-}
-/* These lines make every image the same height**
-.img-grid .markdown-preview-section > div > .internal-embed img:not(:active) {
-    object-fit:cover;
-}*/
+/* Lithou's Img-Grid CSS */
 .img-grid span.image-embed[alt*="."],
 span.image-embed[alt*="grid"] { 
     display: table-cell;

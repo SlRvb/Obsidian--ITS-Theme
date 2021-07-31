@@ -300,3 +300,20 @@ img[alt*="sprf"]{
     object-fit: cover;
     border-radius: 100%;
 }
+
+/*Lithou's Grid CSS*/
+.img-grid span.image-embed[alt*="."],
+span.image-embed[alt*="grid"] { 
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 3px;
+}
+.img-grid img[alt*="."],
+img[alt*="grid"] {
+    max-height: 30vh;
+}
+
+.img-grid img[alt*="."]:hover,
+img[alt*="grid"]:hover {
+    transform: scale(1.5);
+}

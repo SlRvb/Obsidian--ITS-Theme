@@ -5987,13 +5987,15 @@ h3.breadcrumbs-matrix-header:after { display: none; }
     margin-top: 15px;
     background-color: var(--aside-bg);
 }
+.dvl .dataview.list-view-ul li::before {
+    margin-left: -27px;
+}
 .kanban.dvl .list-view-ul li {
     background-color: var(--aside-bg);
 }
 .kanban.dvl ul li {
     flex: 1 1 200px !important;
 }
-
 
 /*Super Charged Links*/
 .scl .frontmatter-values-grid {

@@ -3262,8 +3262,6 @@ a.tag:hover {
     font-family: var(--font);
     color: var(--headers);
 }
-/*Remove Margin From Block embedding*/
-blockquote p { margin: 0px; }
 
 /*Fix Blockquote Mark*/
 .markdown-preview-view li blockquote:before { top: .3em; }

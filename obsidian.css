@@ -2745,7 +2745,8 @@ Enlarge Image:*/
     bottom:0;
 }
 
-/* Img Grid Defunct
+/* Img Grid 
+Defunct
 Kepano: https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359
 Masonry/Gallery View
 .img-grid .markdown-preview-section > div {
@@ -2767,6 +2768,22 @@ Masonry/Gallery View
 .img-grid .markdown-preview-section > div > .internal-embed img:not(:active) {
     object-fit:cover;
 }*/
+.img-grid span.image-embed[alt*="."],
+span.image-embed[alt*="grd"] { 
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3px;
+}
+.img-grid img[alt*="."],
+img[alt*="grd"] {
+    max-height: 30vh;
+}
+
+.img-grid img[alt*="."]:hover,
+img[alt*="grd"]:hover {
+    transform: scale(1.5);
+}
+
 
 
 /*--List--*/
@@ -3262,6 +3279,8 @@ a.tag:hover {
     font-family: var(--font);
     color: var(--headers);
 }
+/*Remove Margin From Block embedding*/
+
 
 /*Fix Blockquote Mark*/
 .markdown-preview-view li blockquote:before { top: .3em; }

@@ -6039,7 +6039,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 /*Title: Sizing*/
 .kbn .kanban-plugin__item-title-wrapper {
     padding: 2px 8px !important;
-    background-color: var(--aside-bg) !important;
+    /*background-color: var(--aside-bg) !important;*/
 }
 
 /*Title: Link Styling*/

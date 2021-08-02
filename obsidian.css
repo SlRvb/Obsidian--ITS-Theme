@@ -41,6 +41,11 @@ settings:
         type: heading
         level: 3
     -
+        title: Mobile Note Text Size
+        description: Toggle on to use the resize on mobile.
+        id: ntsz
+        type: class-toggle
+    -
         title: Note Text Size
         description: Adjust size for preview/editor mode. If you use the one below, this only affects editor mode.
         id: f-s-text
@@ -161,11 +166,11 @@ settings:
         description: Adjust size for preview mode.
         id: f-s-pre
         type: variable-number-slider
-        default: 1
-        format: rem
-        min: .6
-        max: 1.5
-        step: .1
+        default: 16
+        format: px
+        min: 10
+        max: 24
+        step: 2
     -
         title: Specific Decoration Changes
         id: Dec-Spec
@@ -1215,7 +1220,7 @@ settings:
     --f-s-nt: 16px;
 
     --f-s-pre: 16px;
-    --f-s-text: 16px;
+    --f-s-text: 1em;
     --f-s-h: 34px;
     --f-w-h: 600;
     --h-line: 100%;
@@ -2416,6 +2421,10 @@ input[type='range']::-webkit-slider-thumb {
     z-index: 0;
 }
 /*Font Sizes*/
+.ntsz {
+    --f-s-text: 16px;
+}
+
 p,
 li,
 table, 
@@ -6020,6 +6029,9 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .is-mobile.kbn .kanban-plugin__lane-header-wrapper {
     margin: 0px !important;
 }
+.kbn .kanban-plugin__meta-table td {
+    padding: 0 !important;
+}
 /*----Title----*/
 .kbn .kanban-plugin__item-title .markdown-preview-view p {
     font-size: 14px !important;
@@ -6029,6 +6041,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
     padding: 2px 8px !important;
     background-color: var(--aside-bg) !important;
 }
+
 /*Title: Link Styling*/
 .kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link {
     color: var(--text) !important;

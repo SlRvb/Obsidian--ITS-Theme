@@ -48,7 +48,7 @@ settings:
     -
         title: Note Text Size
         description: Adjust size for preview/editor mode. If you use the one below, this only affects editor mode.
-        id: f-s-text
+        id: nt-f
         type: variable-number-slider
         default: 16
         format: px
@@ -1212,7 +1212,7 @@ settings:
     /*Sizes*/
     --scroll-size: 7px;
     --lh: 1.5em;
-    --f-text: 1em;
+    --f-text: 16px;
     --f-small: .88em;
 
     --f-s-ui: 16px;
@@ -2421,10 +2421,6 @@ input[type='range']::-webkit-slider-thumb {
     z-index: 0;
 }
 /*Font Sizes*/
-.ntsz {
-    --f-s-text: 16px;
-}
-
 p,
 li,
 table, 
@@ -2539,7 +2535,7 @@ h4:after { width: 40%; }
     background-color: var(--code-bg);
     line-height: 1.4em;
     border-radius: var(--radius);
-    font-size: calc(var(--f-s-text) - .15em);
+    font-size: calc(var(--f-s-text) - .10em);
     overflow: auto;
 }
 
@@ -3051,6 +3047,7 @@ a.tag {
     margin: 0px 0px;
     cursor: pointer;
     line-height: var(--lh);
+    font-size: inherit;
 }
 
 /*Hover Underline*/
@@ -4195,6 +4192,20 @@ blockquote mark strong {
     font-style: italic;
 }
 
+.ntsz {
+    --nt-f: 16px;
+}
+.markdown-preview-view.ntsz code,
+.markdown-preview-view.ntsz pre,
+.ntsz p,
+.ntsz li,
+.ntsz table, 
+.markdown-preview-section.ntsz code,
+.ntsz .cm-s-obsidian .CodeMirror-lines {
+    font-size: calc(var(--nt-f) - 2px);
+}
+
+
 
 /*--Workspace Resize--*/
 /*Resize: Menu*/
@@ -4356,16 +4367,22 @@ blockquote mark strong {
 
 
 /*Hide Bullet*/
-.kanban ul {
+.kanban ul, 
+ul.kanban {
     list-style: none;
 }
-.kanban ul li::before {
+
+.kanban ul li::before,
+ul.kanban li::before {
     content: "";
     margin-left: 0px;
     padding: 0;
 }
 
-.kanban ul, .kanban ol {
+.kanban ul, 
+.kanban ol,
+ul.kanban, 
+ol.kanban {
     display: flex;
     flex-direction: row;
     border-radius: 0;
@@ -4373,20 +4390,25 @@ blockquote mark strong {
     padding-inline-start: 0px;
 }
 
-.kanban ul li {
+.kanban ul li,
+ul.kanban li {
     flex: 1 1 20%;
     margin-left: 10px;
     margin-right: 10px;
     border: 0;
 }
-.kanban ol li {
+.kanban ol li,
+ol.kanban li {
     flex: 1 1 20%;
     margin-right: 10px;
     margin-left: 30px;
     border: 0;
 }
 
-.kanban ul ul, .kanban ol ol {
+.kanban ul ul, 
+ul.kanban ul,
+.kanban ol ol,
+ol.kanban ol {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4395,23 +4417,27 @@ blockquote mark strong {
     background: none;
 }
 /*Kaban Lines*/
-.kanban ul ul {
+.kanban ul ul,
+ul.kanban ul {
     margin-left: 5px;
     border-left: 2px solid var(--background-modifier-border);
 }
-.kanban ol ol {
+.kanban ol ol
+ol.kanban ol {
     margin-left: -15px;
     padding-left: 20px;
     border-left: 2px solid var(--background-modifier-border);
 }
 /*Color & Formatting*/
-.kanban ul ul li {
+.kanban ul ul li,
+ul.kanban ul li {
     width: 100%;
     display: block;
     background: var(--td);
     border-radius: 0;
 }
-.kanban ol ol li {
+.kanban ol ol li,
+ol.kanban ol li {
     width: 100%;
     background: var(--td);
     margin-left: 14px;
@@ -4419,36 +4445,47 @@ blockquote mark strong {
 
 /*Alternating Colors*/
 .kanban ul ul li:nth-child(even),
-.kanban ol ol li:nth-child(even) {
+ul.kanban ul li:nth-child(even),
+.kanban ol ol li:nth-child(even),
+ol.kanban ol li:nth-child(even) {
     background: var(--background-primary);
     border: 0;
 }
 
 /*Hover Colors*/
 .kanban ul ul li:hover,
-.kanban ol ol li:hover {
+ul ul li.kanban:hover,
+.kanban ol ol li:hover,
+ol.kanban ol li:hover {
     background: var(--hvr);
 }
 
 .kanban ul li:hover,
-.kanban ol li:hover {
+ul.kanban li:hover,
+.kanban ol li:hover,
+ol.kanban li:hover {
     background: var(--hvr2);
 }
 /*-Arrows-*/
-.kanban .list-collapse-indicator {
+.kanban .list-collapse-indicator,
+.list-collapse-indicator.kanban {
     width: 20px;
 }
 /*Bullet Arrows*/
-.kanban ul .list-collapse-indicator {
+.kanban ul .list-collapse-indicator,
+ul.kanban .list-collapse-indicator {
     margin-left: -22px;
     padding-left: 10px;
 }
-.kanban .task-list-item .list-collapse-indicator {
+.kanban .task-list-item .list-collapse-indicator,
+.task-list-item.kanban .list-collapse-indicator {
     position: relative;
 }
 /*Numbered List + Numbered Checklist*/
 .kanban ol .list-collapse-indicator, 
-.kanban ol .task-list-item .list-collapse-indicator{
+.kanban ol .task-list-item .list-collapse-indicator, 
+ol.kanban .list-collapse-indicator,
+ol.kanban .task-list-item .list-collapse-indicator {
     margin-left: -38px;
     padding-left: 5px;
 }
@@ -6026,11 +6063,11 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
     box-shadow: none !important;
     border-width: 2px !important;
 }
-.is-mobile.kbn .kanban-plugin__lane-header-wrapper {
-    margin: 0px !important;
-}
 .kbn .kanban-plugin__meta-table td {
     padding: 0 !important;
+}
+.is-mobile.kbn .kanban-plugin__lane-header-wrapper {
+    margin: 0px !important;
 }
 /*----Title----*/
 .kbn .kanban-plugin__item-title .markdown-preview-view p {

@@ -1583,6 +1583,7 @@ button,
 button.mod-cta {
     border-radius: var(--radius);
     font-size: calc(var(--f-text) - .12em);
+    font-family: var(--default-font);
 }
 
 /*Pinned Pane Button Color*/
@@ -2180,6 +2181,7 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: var(--radius);
     border: 1px solid var(--table);
     font-size: var(--f-text);
+    font-family: var(--default-font);
 }
 
 /*Account Header 2*/

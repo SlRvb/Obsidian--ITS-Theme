@@ -357,8 +357,12 @@ Example | Description
 - Monospace: [Recursive Mono Linear Static Medium](https://www.recursive.design/)
 
 ## Tangerine Dunes
+![](Images/Theme-Tangerine-Dunes--Darkmode.png)
+![](Images/Theme-Tangerine-Dunes--Lightmode.png)
 
 ## Drowned
+![](Images/Theme-Drowned--Darkmode.png)
+![](Images/Theme-Drowned--Lightmode.png)
 
 ## ITS Dark
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20ITS%20Dark.css)

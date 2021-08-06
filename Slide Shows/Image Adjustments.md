@@ -30,7 +30,7 @@ Optimized for easier comprehension and "quicker" styling
 ### Positions
 `left`, `center`, `right`
 
-![[Image Adjustments-Simple - Positions.png]]
+![[Image_Adjustments-Simple-Positions.png]]
 
 ---
 ### Types
@@ -43,7 +43,7 @@ Optimized for easier comprehension and "quicker" styling
 `p.rofile` | Width and height of the image are equal
 `circle` | Round edges of a squared image (best with `p.rofile`)
 
-![[Image Adjustments-Simple - Types.png|700]]
+![[Image_Adjustments-Simple-Types.png|700]]
 
 ---
 ### Type Sizing
@@ -54,7 +54,7 @@ Optimized for easier comprehension and "quicker" styling
 - **Banner & Portrait **use `+small` and `+tall` sizing
 - **Profile** uses `+medium` only.
 
-![[Image Adjustments-Simple - Sizing.png|700]]
+![[Image_Adjustments-Simple-Sizing.png|700]]
 
 ---
 ## Customizable Version
@@ -101,7 +101,7 @@ Top |  Bottom | Left | Right |
 `p+tc` | `p+bc` | 
 `p+tcc` | `p+bcc` | 
 
-![[Image Adjustments-Custom - Inner Position Precise.png|800]]
+![[Image_Adjustments-Custom-Inner_Position_Precise.png|800]]
 
 ---
 ### Sizing
@@ -119,7 +119,7 @@ Height | Width | PX |
 
 ---
 
-![[Image Adjustments-Custom - Sizing.png]]
+![[Image_Adjustments-Custom-Sizing.png]]
 
 ---
 

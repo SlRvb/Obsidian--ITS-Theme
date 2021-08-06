@@ -177,16 +177,23 @@ Example | Description |
 
 
 ## Simplified Version
+
 ### Left/Right/Center
 
 Example | Description |
 ---|---|
 `![[image.png\|left]]`| `left` will move the image to the left.
 `![[image.png\|right]`| `right` will move the image to the right.
-`![[image.png\|c]`| `c` will move the image to the center.
+`![[image.png\|ctr]`| `ctr` will move the image to the center.
+
+![](Images/Image_Adjustments-Simple-Positions.png)
 
 
-### Banner
+### Types
+
+![](Images/Image_Adjustments-Simple-Sizing.png)
+
+#### Banner
 
 Example | Description |
 ---|---|
@@ -195,7 +202,7 @@ Example | Description |
 `![[image.png\|banner+tall]]`| `banner+tall` will crop the image height-wise to about 500px while setting the width to cover the entire page.
 
 
-### Portrait
+#### Portrait
 
 Example | Description |
 ---|---|
@@ -204,8 +211,7 @@ Example | Description |
 `![[image.png\|portrait+tall]]`| `portrait+tall` will crop the image width-wise to about 50% while setting the height to a standard of about 500px.
 
 
-### Profile
-> ⚠ Not fully working unless you use the `pc` property.
+#### Profile
 
 Example | Description |
 ---|---|
@@ -224,6 +230,8 @@ Example | Description |
 
 ### Inner Image Position
 
+![](Images/Image_Adjustments-Custom-Inner_Position_Precise.png)
+
 Example | Description |
 ---|---|
 `![[image.png\|pl]]`| `pl` will move the inside of the image to the left.
@@ -233,8 +241,7 @@ Example | Description |
 `![[image.png\|pc]]`| `pc` will move the inside of the image to the center.
 
 
-### Inner Image Position Adjustments
-These will inch the images around if the ^ above code isn't enough.
+> These will inch the images around if the ^ above syntax isn't enough.
 
 Example | Description |
 ---|---|
@@ -251,17 +258,8 @@ Example | Description |
 `![[image.png\|p+bc]]`| `p+bc` will move the inside of the image to the center bottom, slightly higher than `pb`|
 `![[image.png\|p+bcc]]`| `p+bcc` will move the inside of the image to the center bottom, slightly higher than `p+bc`|
 
-#### Examples
-*Note that these side by side images are done with the .img-grid cssclass that now no longer works*
-
-**Left/Right**
-![](https://i.imgur.com/J7bsqq0.png)
-
-**Top/Bottom Example**
-![](https://i.imgur.com/eaHgjBs.png)
-
-
 ### Sizing
+![](Images/Image_Adjustments-Custom-Sizing.png)
 
 Example | Description |
 ---|---|
@@ -308,15 +306,30 @@ Example | Description
 
 
 # Alternate Themes
-[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20All%20Alternate%20Themes.css) 
+> [All Alternate Themes](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20All%20Alternate%20Themes.css) are available in 1 snippet as well instead of many separate css snippets. 
+> 
+> Use the **Style Settings plugin** to toggle one of them on.
 
-All Alternate Themes are available in 1 snippet as well instead of many separate css snippets. Use the Style Settings plugin to toggle one of them on.
+## SlRvb Gray
+[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb%20Gray.css)
+
+![](Images/Theme-SlRvb-Gray--Darkmode.png)
+![](Images/Theme-SlRvb-Gray--Lightmode.png)
+
+**Fonts used:**
+- Headings: [Norwester](https://jamiewilson.io/norwester/)
+	- [Staatliches](https://fonts.google.com/specimen/Staatliches)
+	- [Racing Sans One](https://fonts.google.com/specimen/Racing+Sans+One)
+	- [Heavitas](https://www.dafont.com/heavitas.font)
+	- [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)
 
 
-## SlRvb
+## SlRvb Blue
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb.css)
-![](Images/Theme-SlRvb--Darkmode.png)
-![](Images/Theme-SlRvb--Lightmode.png)
+![](Images/Theme-SlRvb-Blue--Darkmode.png)
+![](Images/Theme-SlRvb-Blue--Lightmode.png)
+
+**Fonts used:**
 - Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
 - Monospace: [Fira Code](https://github.com/tonsky/FiraCode)
 
@@ -337,25 +350,17 @@ All Alternate Themes are available in 1 snippet as well instead of many separate
 ![](Images/Theme-School-Days--Lightmode.png)
 
 **Fonts used:**
-- Vault Name: [Jersey M54](https://www.dafont.com/jersey-m54.font)
+- Vault Name: [Collegiate](https://www.dafont.com/collegiateflf.font)
+	- [Jersey M54](https://www.dafont.com/jersey-m54.font)
 - Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
 	- [RocknRoll One](https://fonts.google.com/specimen/RocknRoll+One)
 - Monospace: [Recursive Mono Linear Static Medium](https://www.recursive.design/)
+
+## Tangerine Dunes
+
+## Drowned
 
 ## ITS Dark
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20ITS%20Dark.css)
 
 ![](Images/Theme-ITS-Dark.png)
-
-## SlRvb Gray
-[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb%20Gray.css)
-
-![](Images/Theme-SlRvb-Gray--Darkmode.png)
-![](Images/Theme-SlRvb-Gray--Lightmode.png)
-
-**Fonts used:**
-- Headings: [Norwester](https://jamiewilson.io/norwester/)
-	- [Staatliches](https://fonts.google.com/specimen/Staatliches)
-	- [Racing Sans One](https://fonts.google.com/specimen/Racing+Sans+One)
-	- [Heavitas](https://www.dafont.com/heavitas.font)
-	- [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)

@@ -925,6 +925,11 @@ div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
     padding-left: 25px;
 }
 
+/*Theme: Tangerine Dunes*/
+.theme-dark.t-d, .theme-light.t-d {
+    --hr-sym: "\e564";
+    --hr-f: var(--mdi);
+}
 
 .theme-dark.t-d {
     --background-primary: var(--note);
@@ -972,7 +977,6 @@ div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
     --text-selection: rgba(126,57,26,0.27);
     --td: rgba(12,9,6,0.38);
 }
-
 .theme-light.t-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
@@ -1019,6 +1023,12 @@ div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
     --text-selection: rgba(251, 180, 147, 0.27);
 }
 
+/*Theme: Drowned*/
+.theme-dark.drwn, .theme-light.drwn {
+    --hr-sym: "\f1cd";
+    --hr-f: var(--mdi);
+}
+
 .theme-dark.drwn {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
@@ -1063,7 +1073,7 @@ div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
     --lines: #1e4765;
     --bg: #1e2f33;
     --table: #2b4448;
-
+    
     --text-highlight-bg: rgba(60,168,131,0.25);
     --text-highlight-bg-active: rgba(115,253,190,0.25);
     --background-modifier-form-field-highlighted: rgba(52,237,181,0.13);

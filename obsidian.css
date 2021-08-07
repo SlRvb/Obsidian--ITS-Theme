@@ -715,6 +715,11 @@ settings:
         description: Move all tables to the center of the page.
         id: t-c
         type: class-toggle
+    -
+        title: Center Iamges
+        description: Center images by default
+        id: imgctr
+        type: class-toggle
     - 
         title: Naked Embeds
         description: Embeds that look like they're part of the note.
@@ -1231,6 +1236,7 @@ settings:
     --hr-f: var(--its);
     --tag-o: 1px;
     --bullet: "\e802";
+    --bul-f: var(--its);
     --b-line: 2px;
 
     /*--Specific--*/
@@ -1369,6 +1375,7 @@ settings:
     --graph-404: #727e93;
     --graph-img: #4c78cc /*#ff86be*/;
     --graph-tag: var(--headers);
+    --graph-focused: var(--accent2-lite);
 
 
     /*CSS Specifics*/
@@ -1497,6 +1504,7 @@ settings:
     --graph-404: #727e93;
     --graph-img: #4c78cc /*#5469de*/;
     --graph-tag: #000000; 
+    --graph-focused: var(--accent2-lite);
     
     
     /*CSS Specifics*/
@@ -2282,6 +2290,10 @@ input[type='range']::-webkit-slider-thumb {
     color: var(--graph-404) !important; 
 }
 
+.graph-view.color-fill-focused {
+    color: var(--graph-focused) !important;
+}
+
 
 /*--Starred Pane--*/
 .item-list .nav-file {
@@ -2537,7 +2549,7 @@ h4:after { width: 40%; }
     background-color: var(--code-bg);
     line-height: 1.4em;
     border-radius: var(--radius);
-    font-size: calc(var(--f-s-text) - .10em);
+    font-size: calc(var(--f-s-text) - .05em);
     overflow: auto;
 }
 
@@ -2754,17 +2766,19 @@ Enlarge Image:*/
 
 /* Lithou's Img-Grid CSS */
 .img-grid span.image-embed[alt*="."],
-span.image-embed[alt*="grid"] { 
+span.image-embed[src*="grid"] { 
     display: table-cell;
     vertical-align: middle;
     padding: 3px;
 }
 .img-grid img[alt*="."],
+.image-embed[src*="grid"],
 img[alt*="grid"] {
     max-height: 30vh;
 }
 
 .img-grid img[alt*="."]:hover,
+.image-embed[src*="grid"]:hover,
 img[alt*="grid"]:hover {
     transform: scale(1.5);
 }
@@ -2788,7 +2802,7 @@ ul:nth-child(odd), ul:nth-child(even) {
 
 ul li::before {
     content: var(--bullet);
-    font-family: var(--its);
+    font-family: var(--bul-f);
     margin-left: -22px;
     color: var(--accent);
     position: relative; /*For Spaced Lists*/
@@ -2841,7 +2855,7 @@ ul li > p {
 
 .cm-s-obsidian span.cm-formatting-list-ul::before {
     content: var(--bullet);
-    font-family: var(--its);
+    font-family: var(--bul-f);
     margin-right: -10px;
 }
 
@@ -3041,7 +3055,7 @@ a.tag {
     background-color: var(--tag);
     border: none;
     color: var(--text-dl);
-    font-size: 12px;
+    font-size: calc(var(--f-s-text) - .2em);
     padding: 1px 8px;
     text-align: center;
     text-decoration: none;
@@ -3049,7 +3063,6 @@ a.tag {
     margin: 0px 0px;
     cursor: pointer;
     line-height: var(--lh);
-    font-size: inherit;
 }
 
 /*Hover Underline*/
@@ -3690,7 +3703,6 @@ iframe {
 /*Remove Page Margins*/
 @page {
     background-color: var(--note);
-    margin: 0;
 }
 
 /*Fix Dark & Light Themes Colors*/
@@ -3707,7 +3719,6 @@ iframe {
         color: var(--text);
     }
     body {
-        padding: 10em;
         background-color: var(--note);
     }
 
@@ -4197,12 +4208,12 @@ blockquote mark strong {
 .ntsz {
     --nt-f: 16px;
 }
-.markdown-preview-view.ntsz code,
-.markdown-preview-view.ntsz pre,
+.ntsz .markdown-preview-view code,
+.ntsz .markdown-preview-view pre,
 .ntsz p,
 .ntsz li,
 .ntsz table, 
-.markdown-preview-section.ntsz code,
+.ntsz a.tag,
 .ntsz .cm-s-obsidian .CodeMirror-lines {
     font-size: calc(var(--nt-f) - 2px);
 }
@@ -4524,6 +4535,7 @@ ol.kanban .task-list-item .list-collapse-indicator {
 }
 .k-o ul ul li::before {
     content: var(--bullet);
+    font-family: var(--bul-f);
     margin-left: -27px;
 }
 
@@ -4634,7 +4646,8 @@ img[alt*="circle"] {
 
 /*Center Image*/
 img[alt*="ctr"],
-img[alt*="center"] {
+img[alt*="center"],
+.imgctr img {
     display:block;
     margin-left: auto;
     margin-right: auto;

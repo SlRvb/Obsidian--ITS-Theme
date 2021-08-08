@@ -1320,7 +1320,7 @@ settings:
     --interactive-success: #599049; /*??*/
     
     --scrollbar-bg: rgba(160, 214, 255, 0.07);
-    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+    --scrollbar-thumb-bg: rgba(162, 191, 255, 0.13);
     --highlight-mix-blend-mode: lighten;
 
     /*--DEFAULT VARIABLES--*/
@@ -1444,8 +1444,8 @@ settings:
     --interactive-accent-hover: var(--lite-accent); /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
     
-    --scrollbar-bg: rgba(0, 0, 0, 0.05);
-    --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+    --scrollbar-bg: rgba(134, 173, 218, 0.157);
+    --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);
     --highlight-mix-blend-mode: darken; /*Search Highlight Mode*/
 
     /*--DEFAULT VARIABLES--*/    
@@ -3823,23 +3823,19 @@ iframe {
     color: var(--soft-text);
 }
 /*Writing: Link Type Icons*/
-.writing .internal-link::after {
-    content: "\e819";
-    font-family: var(--its);
-    color: var(--accent);
-    margin-right: -5px;
-    font-style: normal !important;
-    font-weight: 10 !important;
-}
+.writing .internal-link::after,
 .writing .external-link::after {
-    content: "\e818";
     font-family: var(--its);
-    color: var(--accent);
-    opacity: unset;
-    margin-right: -5px;
+    font-size: calc(var(--f-s-text) - 2px);
     font-style: normal !important;
     font-weight: 10 !important;
+    vertical-align: 2px;
+    color: var(--accent);
+    margin-right: -7px;
+    opacity: unset;
 }
+.writing .internal-link::after { content: "\e819"; }
+.writing .external-link::after { content: "\e818"; }
 
 .writing hr::after {
     display: none;
@@ -3876,7 +3872,7 @@ iframe {
     border-color: var(--note);
     box-shadow: none;
     padding: 0;
-    background: none;
+    background-color: var(--aside-bg);
 }
 .writing .markdown-preview-view pre,
 .markdown-preview-view.writing pre {

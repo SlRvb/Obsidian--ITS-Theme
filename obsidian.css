@@ -2428,7 +2428,8 @@ input[type='range']::-webkit-slider-thumb {
 
 /*Fix Cursor Highlight*/
 .is-mobile .CodeMirror-selected,
-.CodeMirror-selected {
+.CodeMirror-selected,
+.CodeMirror-selected.is-mobile {
     z-index: 3 !important;
 }
 .CodeMirror .CodeMirror-line,
@@ -2546,7 +2547,7 @@ h4:after { width: 40%; }
 .markdown-preview-view pre {
     color: var(--code-text);
     font-family: var(--font-monospace) !important;
-    z-index: 0;
+    z-index: 0 !important;
     background-color: var(--code-bg);
     line-height: 1.4em;
     border-radius: var(--radius);
@@ -2563,7 +2564,7 @@ h4:after { width: 40%; }
     font-family: var(--font-monospace) !important;
     color: var(--text);
     border-radius: var(--radius);
-    z-index: 0;
+    z-index: 0 !important;
 }
 
 /*Apply Dropshadow*/
@@ -2596,7 +2597,7 @@ h4:after { width: 40%; }
     background-color: var(--code-bg);
     color: var(--code-text);
     font-family: var(--font-monospace);
-    z-index: 0;
+    z-index: 0 !important;
 }
 
 /*Hide weird Tokening BG Coloring*/

@@ -2417,7 +2417,7 @@ input[type='range']::-webkit-slider-thumb {
     font-family: var(--default-font);
     line-height: var(--lh);
     color: var(--text-normal);
-    z-index: 0;
+    z-index: 0 !important;
 }
 /*Comments*/
 .cm-comment,
@@ -2427,8 +2427,9 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 /*Fix Cursor Highlight*/
+.is-mobile .CodeMirror-selected,
 .CodeMirror-selected {
-    z-index: 3;
+    z-index: 3 !important;
 }
 .CodeMirror .CodeMirror-line,
 .CodeMirror .CodeMirror-line-like {

@@ -558,6 +558,10 @@ settings:
         id: v-non
         type: class-toggle
     -
+        title: Display Folder Arrow On Hover
+        id: fhvr
+        type: class-toggle
+    -
         title: Wrap Note Title
         id: title-wrap
         type: class-toggle
@@ -6140,4 +6144,10 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .kbn .kanban-plugin__item .markdown-preview-view a.internal-link {
     font-weight: 600;
     color: var(--text);
+}
+/*Folder Hover Arrow*/
+.fhvr .nav-folder-title:hover .nav-folder-collapse-indicator {
+    display: unset;
+    margin-left: 9px;
+    margin-top: 2px;
 }

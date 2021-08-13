@@ -1775,7 +1775,7 @@ button.mod-cta {
 
 /*Folder Push Left*/
 .nav-folder-title {
-    padding-left: 24px;
+    padding-left: 23px;
 }
 .nav-folder-title .nav-folder-collapse-indicator:hover  {
     color: var(--f-hover) !important;
@@ -1811,6 +1811,12 @@ button.mod-cta {
     border:none;
     border-radius: var(--radius);
 }
+
+
+/*Arrows
+.nav-folder .collapse-icon {
+    display: none;
+}*/
 
 /*Tooltip Popup*/
 .tooltip {
@@ -2027,7 +2033,7 @@ input[type='number']:hover {
     transition: transform 100ms ease-in-out;
     color: var(--lines);
 }
-.collapse-icon:not(.nav-folder-collapse-indicator) {
+.collapse-icon {
     margin-top: -.1em;
 }
 

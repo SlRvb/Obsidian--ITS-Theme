@@ -1706,7 +1706,7 @@ button.mod-cta {
 }
 
 /*Nav Folder/File Icons*/
-.nav-folder-children .nav-folder-title-content::before,
+.nav-folder-children .nav-folder-collapse-indicator::after,
 .nav-file-title .nav-file-title-content::before {
     font-family: 'its';
     margin-right: 6px;
@@ -1715,9 +1715,10 @@ button.mod-cta {
     font-weight: 10 !important;
 }
 
-.nav-folder-children .nav-folder-title-content::before {
+.nav-folder-children .nav-folder-collapse-indicator::after {
     content: '\e801';
     color: var(--folder);
+    padding-top: 2px;
 }
 .nav-file-title .nav-file-title-content::before {
     content: '\e800';
@@ -1735,9 +1736,8 @@ button.mod-cta {
     flex-direction: row-reverse;
 }
 
-
 /*Inactive Folder Color*/
-.is-collapsed .nav-folder-title-content:before {
+.is-collapsed .nav-folder-collapse-indicator::after {
     color: var(--headers);
 }
 
@@ -1775,9 +1775,9 @@ button.mod-cta {
 
 /*Folder Push Left*/
 .nav-folder-title {
-    padding-left: 4px;
+    padding-left: 23px;
 }
-.nav-folder-title:hover {
+.nav-folder-title .nav-folder-collapse-indicator:hover  {
     color: var(--f-hover) !important;
 }
 
@@ -1813,10 +1813,10 @@ button.mod-cta {
 }
 
 
-/*Arrows*/
+/*Arrows
 .nav-folder .collapse-icon {
     display: none;
-}
+}*/
 
 /*Tooltip Popup*/
 .tooltip {

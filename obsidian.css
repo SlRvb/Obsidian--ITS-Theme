@@ -2841,7 +2841,7 @@ ul, ol {
     text-indent: unset;
 }
 .markdown-preview-view ul > li.task-list-item {
-    text-indent: -1.3em;
+    padding-left: 10px;
 }
 
 /*Fix breaking when Space in between Lists*/
@@ -2920,8 +2920,8 @@ li:nth-child(even) {
     width: 14px;
     height: 14px;
     filter: none;
-    margin-left: -4px;
-    margin-right: 10px;
+    margin-left: -.4em;
+    margin-right: .8em;
     margin-top: 3px;
     cursor: pointer;
     vertical-align: top;
@@ -5685,7 +5685,10 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 .v-non .nav-folder.mod-root > .nav-folder-title {
     display: none;
 }
-.hr-tog .markdown-preview-view hr::after, .hr-tog div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
+
+.hr-tog .markdown-preview-view hr::after, 
+.markdown-preview-view.hr-tog hr::after, 
+.hr-tog div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
     display: none;
 }
 /*--Settings Specific--*/
@@ -6026,7 +6029,9 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 /*-Plugin Toggles-*/
 /*Text Expander: Hide Code in Preview Mode*/
 .h-exp .markdown-preview-view pre[class*="language-expander"],
-.h-exp .markdown-preview-view code[class*="language-expander"] {
+.h-exp .markdown-preview-view code[class*="language-expander"]
+.markdown-preview-view.h-exp pre[class*="language-expander"],
+.markdown-preview-view.h-exp code[class*="language-expander"] {
     display: none;
 }
 /*Dataview: Compact and Hide Bullets*/

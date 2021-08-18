@@ -4072,7 +4072,6 @@ iframe {
 .illusion h6,
 .illusion .cm-s-obsidian .HyperMD-header {
     padding: 7px;
-    padding-left: 40px;
     color: var(--text-dl);
     box-shadow: 5px 5px var(--outline);
 }
@@ -4087,8 +4086,13 @@ iframe {
     color: var(--text-dl);
 }
 
-.illusion .markdown-preview-view .heading-collapse-indicator svg {
+.illusion .markdown-preview-view .heading-collapse-indicator svg,
+.markdown-preview-view.illusion .heading-collapse-indicator svg {
     color: var(--text-dl);
+}
+.illusion .markdown-preview-view .heading-collapse-indicator,
+.markdown-preview-view.illusion .heading-collapse-indicator {
+    padding-left: 40px;
 }
 .illusion h1:after,
 .illusion h2:after,
@@ -4096,27 +4100,21 @@ iframe {
 .illusion h4:after,
 .illusion h5:after,
 .illusion h6:after,
-.illusion .cm-s-obsidian pre.HyperMD-header:after { display: none; }
+.illusion .cm-s-obsidian pre.HyperMD-header:after { height: 0; }
 
 /*Illusion Header: Colors*/
 .illusion h1 { background-color: var(--sphd-pre-1); }
-.illusion .HyperMD-header-1.CodeMirror-line 
-{ background-color: var(--sphd-ed-1); }
+.illusion .HyperMD-header-1.CodeMirror-line { background-color: var(--sphd-ed-1); }
 .illusion h2 { background-color: var(--sphd-pre-2); }
-.illusion .HyperMD-header-2.CodeMirror-line 
-{ background-color: var(--sphd-ed-2); }
+.illusion .HyperMD-header-2.CodeMirror-line { background-color: var(--sphd-ed-2); }
 .illusion h3 { background-color: var(--sphd-pre-3); }
-.illusion .HyperMD-header-3.CodeMirror-line 
-{ background-color: var(--sphd-ed-3); }
+.illusion .HyperMD-header-3.CodeMirror-line { background-color: var(--sphd-ed-3); }
 .illusion h4 { background-color: var(--sphd-pre-4); }
-.illusion .HyperMD-header-4.CodeMirror-line  
-{ background-color: var(--sphd-ed-4); }
+.illusion .HyperMD-header-4.CodeMirror-line { background-color: var(--sphd-ed-4); }
 .illusion h5 { background-color: var(--sphd-pre-5); }
-.illusion .HyperMD-header-5.CodeMirror-line 
-{ background-color: var(--sphd-ed-5); }
+.illusion .HyperMD-header-5.CodeMirror-line { background-color: var(--sphd-ed-5); }
 .illusion h6 { background-color: var(--sphd-pre-6); }
-.illusion .HyperMD-header-6.CodeMirror-line 
-{ background-color: var(--sphd-ed-6); }
+.illusion .HyperMD-header-6.CodeMirror-line { background-color: var(--sphd-ed-6); }
 
 
 

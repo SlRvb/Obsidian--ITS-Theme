@@ -5822,7 +5822,7 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 
 .b-li-o .markdown-preview-view:not(.kanban) .task-list-item-checkbox {
-    margin-left: 3px;
+    margin-left: 2px;
     margin-right: 6px;
 }
 .b-li-o .markdown-preview-view ul > li.task-list-item { padding-left: 7px; }

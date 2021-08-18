@@ -4125,6 +4125,11 @@ iframe {
     margin-block-end: 4%;
 }
 
+/*Spaced Lists*/
+.s-li li {
+    margin-top: 10px;
+}
+
 /*-Table-*/
 /*Bolded Right Side Table*/
 .table td:nth-child(1) {

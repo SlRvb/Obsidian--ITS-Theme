@@ -763,6 +763,10 @@ settings:
         id: hcl
         type: class-toggle
     -
+        title: Illusion Theme Inspired Headings
+        id: illusion
+        type: class-toggle
+    -
         title: Colors
         id: Note-Element-Colors
         type: heading
@@ -1390,18 +1394,18 @@ settings:
     --b-l-5: #ac7782;
     --b-l-6: #d6b6bc;
 
-    --sphd-pre-1: #683732;
-    --sphd-pre-2: #a13531;
-    --sphd-pre-3: #fc4435;
-    --sphd-pre-4: #ff6a79;
-    --sphd-pre-5: #ac7782;
-    --sphd-pre-6: #d6b6bc;
-    --sphd-ed-1: #683732;
-    --sphd-ed-2: #a13531;
-    --sphd-ed-3: #fc4435;
-    --sphd-ed-4: #ff6a79;
-    --sphd-ed-5: #ac7782;
-    --sphd-ed-6: #d6b6bc;
+    --sphd-pre-1: #7c2929;
+    --sphd-pre-2: #652121;
+    --sphd-pre-3: #571d1d;
+    --sphd-pre-4: #381919;
+    --sphd-pre-5: #424c61;
+    --sphd-pre-6: #2e333d;
+    --sphd-ed-1: #7c2929;
+    --sphd-ed-2: #652121;
+    --sphd-ed-3: #571d1d;
+    --sphd-ed-4: #381919;
+    --sphd-ed-5: #424c61;
+    --sphd-ed-6: #2e333d;
 
     --em-pre-c: var(--text);
     --em-ed-c: var(--text);
@@ -1519,18 +1523,18 @@ settings:
     --b-l-5: #ad8f8f;
     --b-l-6: #d6b6bc;
 
-    --sphd-pre-1: #683732;
-    --sphd-pre-2: #ff1702;
-    --sphd-pre-3: #e27777;
-    --sphd-pre-4: #ff7482;
-    --sphd-pre-5: #ad8f8f;
-    --sphd-pre-6: #d6b6bc;
-    --sphd-ed-1: #683732;
-    --sphd-ed-2: #ff1702;
-    --sphd-ed-3: #e27777;
-    --sphd-ed-4: #ff7482;
-    --sphd-ed-5: #ad8f8f;
-    --sphd-ed-6: #d6b6bc;
+    --sphd-pre-1: #bb5555;
+    --sphd-pre-2: #a53f3f;
+    --sphd-pre-3: #862c2c;
+    --sphd-pre-4: #662828;
+    --sphd-pre-5: #697795;
+    --sphd-pre-6: #8a92a3;
+    --sphd-ed-1: #bb5555;
+    --sphd-ed-2: #a53f3f;
+    --sphd-ed-3: #862c2c;
+    --sphd-ed-4: #662828;
+    --sphd-ed-5: #697795;
+    --sphd-ed-6: #8a92a3;
 
     --em-pre-c: var(--text);
     --em-ed-c: var(--text);
@@ -2550,7 +2554,6 @@ h4:after { width: 40%; }
 .markdown-preview-view code,
 .markdown-preview-view pre {
     color: var(--code-text);
-    font-family: var(--font-monospace) !important;
     z-index: 0 !important;
     background-color: var(--code-bg);
     line-height: 1.4em;
@@ -2565,7 +2568,6 @@ h4:after { width: 40%; }
     line-height: 1.4em;
     display: block;
     white-space: pre-wrap !important;
-    font-family: var(--font-monospace) !important;
     color: var(--text);
     border-radius: var(--radius);
     z-index: 0 !important;
@@ -4061,6 +4063,62 @@ iframe {
 .hcl h6:after {
     border-top: 3px solid var(--table);
 }
+/*Illusion Headers*/
+.illusion h1,
+.illusion h2,
+.illusion h3,
+.illusion h4,
+.illusion h5,
+.illusion h6,
+.illusion .cm-s-obsidian .HyperMD-header {
+    padding: 7px;
+    padding-left: 40px;
+    color: var(--text-dl);
+    box-shadow: 5px 5px var(--outline);
+}
+.illusion .HyperMD-header.CodeMirror-line { 
+    box-shadow: 0px 2px var(--outline);
+    padding: 2px;
+    padding-bottom: 5px;
+}
+.illusion .cm-s-obsidian .cm-header { color: var(--text-dl); }
+.illusion .cm-s-obsidian pre.HyperMD-header > span > span:first-child { 
+    display:block;
+    color: var(--text-dl);
+}
+
+.illusion .markdown-preview-view .heading-collapse-indicator svg {
+    color: var(--text-dl);
+}
+.illusion h1:after,
+.illusion h2:after,
+.illusion h3:after,
+.illusion h4:after,
+.illusion h5:after,
+.illusion h6:after,
+.illusion .cm-s-obsidian pre.HyperMD-header:after { display: none; }
+
+/*Illusion Header: Colors*/
+.illusion h1 { background-color: var(--sphd-pre-1); }
+.illusion .HyperMD-header-1.CodeMirror-line 
+{ background-color: var(--sphd-ed-1); }
+.illusion h2 { background-color: var(--sphd-pre-2); }
+.illusion .HyperMD-header-2.CodeMirror-line 
+{ background-color: var(--sphd-ed-2); }
+.illusion h3 { background-color: var(--sphd-pre-3); }
+.illusion .HyperMD-header-3.CodeMirror-line 
+{ background-color: var(--sphd-ed-3); }
+.illusion h4 { background-color: var(--sphd-pre-4); }
+.illusion .HyperMD-header-4.CodeMirror-line  
+{ background-color: var(--sphd-ed-4); }
+.illusion h5 { background-color: var(--sphd-pre-5); }
+.illusion .HyperMD-header-5.CodeMirror-line 
+{ background-color: var(--sphd-ed-5); }
+.illusion h6 { background-color: var(--sphd-pre-6); }
+.illusion .HyperMD-header-6.CodeMirror-line 
+{ background-color: var(--sphd-ed-6); }
+
+
 
 /*Poems*/
 .poem p {

@@ -5799,47 +5799,36 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 
 
-/*Bullet Line Original*/
-.b-li-o li {
-    border: 0;
-    padding: 0;
-}
-.b-li-o li::before,
-.b-li-o li:nth-child(even):before {
-    color: var(--soft-text);
+/*Bullet Line Original (Adjusted)*/
+.b-li-o li,
+.b-li-o li:nth-child(even) {
+    border: none;
 }
 
-.b-li-o ul ol,
-.b-li-o ol ul,
-.b-li-o ul ul,
-.b-li-o ol ol {
-    position: relative;
+.b-li-o ol::marker,
+.b-li-o ul li:nth-child(odd)::before,
+.b-li-o ul li:nth-child(even)::before {
+    color: var(--fg);
 }
 
-.b-li-o .markdown-preview-view:not(.kanban) ul ol::before,
-.b-li-o .markdown-preview-view:not(.kanban) ol ul::before,
-.b-li-o .markdown-preview-view:not(.kanban) ul ul::before,
-.b-li-o .markdown-preview-view:not(.kanban) ol ol::before {
-    content:'';
-    border-left: var(--b-line) solid var(--accent);
-    position: absolute;
-}
-
-.b-li-o ol ul::before,
-.b-li-o ul ol::before,
-.b-li-o ul ul::before,
-.b-li-o ol ol::before {
-    left: -16px;
-    top: 0px;
-    bottom: 0px; 
+.b-li-o .markdown-preview-view:not(.kanban) ol ul,
+.b-li-o .markdown-preview-view:not(.kanban) ul ol,
+.b-li-o .markdown-preview-view:not(.kanban) ul ul,
+.b-li-o .markdown-preview-view:not(.kanban) ul ul,
+.b-li-o .markdown-preview-view:not(.kanban) ol ol {
+    margin-left: -15px;
+    padding-left: 35px;
+    border-left: 2px solid var(--accent);
 }
 
 .b-li-o .markdown-preview-view:not(.kanban) .task-list-item-checkbox {
-    margin-left: 0px;
-    margin-right: 4px;
+    margin-left: 3px;
+    margin-right: 6px;
 }
-.b-li-o .markdown-preview-view ol > li.task-list-item {
-    padding-left: unset;
+.b-li-o .markdown-preview-view ul > li.task-list-item { padding-left: 7px; }
+.b-li-o .markdown-preview-view ol > li.task-list-item { padding: 0; }
+.b-li-o .markdown-preview-view .task-list-item ol .list-collapse-indicator {
+    margin-left: -35px;
 }
 
 /*Colored Bullet Lines*/

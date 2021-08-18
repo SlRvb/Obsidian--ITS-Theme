@@ -116,6 +116,10 @@
 .internal-embed[alt*="htall"] .markdown-embed-content{
     height: var(--tall);
 }
+.internal-embed[alt*="full"] .markdown-embed-content,
+.internal-embed[alt*="full"] .markdown-embed-content > .markdown-preview-view { 
+    max-height: unset;
+}
 
 /*Width Adjustment*/
 .internal-embed[alt*="wtiny"]{

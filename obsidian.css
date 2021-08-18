@@ -5818,7 +5818,7 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 .b-li-o .markdown-preview-view:not(.kanban) ol ol {
     margin-left: -15px;
     padding-left: 35px;
-    border-left: 2px solid var(--accent);
+    border-left: var(--b-line) solid var(--accent);
 }
 
 .b-li-o .markdown-preview-view:not(.kanban) .task-list-item-checkbox {

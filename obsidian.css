@@ -2772,27 +2772,6 @@ Enlarge Image:*/
     bottom:0;
 }
 
-/* Lithou's Img-Grid CSS */
-.img-grid span.image-embed[alt*="."],
-span.image-embed[src*="grid"],
-span.image-embed[alt*="grid"] { 
-    display: table-cell;
-    vertical-align: middle;
-    padding: 3px;
-}
-.img-grid img[alt*="."],
-.image-embed[src*="grid"],
-img[alt*="grid"] {
-    max-height: 30vh;
-}
-
-.img-grid img[alt*="."]:hover,
-.image-embed[src*="grid"]:hover,
-img[alt*="grid"]:hover {
-    transform: scale(1.5);
-}
-
-
 /*--List--*/
 /*Colored List Markers*/
 li::marker, .cm-s-obsidian span.cm-formatting-list {
@@ -4680,26 +4659,68 @@ ol.kanban .task-list-item .list-collapse-indicator {
     background-color: transparent !important;
 }
 
-/*----Image Positions/Image Adjustments----*/
+/*----Image Positions/Adjustments----*/
+
+/*Captions*/
+.image-embed[src*="#cap"]::after,
+img[src*="#cap"]::after {
+    content: attr(alt);
+    color: var(--text-faint);
+    display: block;
+    text-align: center;
+    background-color: var(--background-primary-alt);
+}
+
+/* Lithou's Img-Grid CSS */
+.img-grid span.image-embed[alt*="."],
+span.image-embed[src*="#grid"],
+img[alt*="grid"],
+img[src*="#grid"] { 
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3px;
+}
+
+.img-grid img[alt*="."],
+.image-embed[src*="#grid"],
+p > img[alt*="grid"],
+p > img[src*="#grid"] {
+    max-height: 30vh;
+}
+
+.img-grid img[alt*="."]:hover,
+.image-embed[src*="#grid"]:hover,
+img[src*="#grid"]:hover,
+img[alt*="grid"]:hover {
+    transform: scale(1.5);
+}
+
+
 /*Invert Colors*/
-.theme-dark img[alt*="invertb"] {
+.theme-dark img[alt*="invertb"],
+.theme-dark img[src*="#invertb"] {
     filter: invert(1) hue-rotate(180deg);
 }  
-.theme-light img[alt*="invertw"] {
+.theme-light img[alt*="invertw"],
+.theme-light img[src*="#invertw"] {
     filter: invert(1) hue-rotate(180deg);
 }
-.theme-dark img[alt*="invertbc"] {
+.theme-dark img[alt*="invertbc"],
+.theme-dark img[src*="#invertbc"] {
     filter: invert(1) hue-rotate(180deg) contrast(1.5);
 }
-.theme-light img[alt*="invertwc"] {
+.theme-light img[alt*="invertwc"],
+.theme-light img[src*="#invertwc"] {
     filter: invert(1) hue-rotate(180deg) contrast(1.45);
 }
 
 /*Fix Float Issues*/
-img[alt*="clear"] {
+img[alt*="clear"],
+img[src*="#clear"] {
     clear: both;
 }
-img[alt*="unclr"]{
+img[alt*="unclr"],
+img[src*="#unclr"] {
     clear: none !important;
 }
 
@@ -4710,7 +4731,8 @@ img[alt*="circle"] {
 
 /*Center Image*/
 img[alt*="ctr"],
-img[alt*="center"],
+img[src*="#ctr"], img[src*="#center"]
+.image-embed[alt*="center"],
 .imgctr img {
     display:block;
     margin-left: auto;
@@ -4721,14 +4743,18 @@ img[alt*="center"],
 /*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
-img[alt*="left"] {
+img[alt*="left"],
+.image-embed[src*="#left"],
+img[src*="#left"] {
     float:left;
     margin-right: 2%;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-img[alt*="right"] {
+img[alt*="right"],
+.image-embed[src*="#right"],
+img[src*="#right"] {
     float:right;
     margin-left: 2%;
     margin-bottom: 0px;
@@ -4736,7 +4762,8 @@ img[alt*="right"] {
 
 /*Image Shapes*/
 /*Banners*/
-img[alt*="banner"] {
+img[alt*="banner"],
+.image-embed[src*="#banner"] {
     display: block;
     object-fit: cover;
     height: 150px;
@@ -4744,7 +4771,8 @@ img[alt*="banner"] {
     margin-bottom: 0px;
 }
 
-img[alt*="banner+small"] {
+img[alt*="banner+small"],
+.image-embed[src*="#banner+small"] {
     display: block;
     object-fit: cover;
     height: var(--tiny);
@@ -4752,7 +4780,8 @@ img[alt*="banner+small"] {
     margin-bottom: 0px;
 }
 
-img[alt*="banner+tall"] {
+img[alt*="banner+tall"],
+.image-embed[src*="#banner+tall"] {
     display: block;
     object-fit: cover;
     height: var(--medium);
@@ -4761,144 +4790,245 @@ img[alt*="banner+tall"] {
 }
 
 /*Portait*/
-img[alt*="portrait"] {
+img[alt*="portrait"],
+.image-embed[src*="#portrait"] {
     object-fit: cover;
     height: var(--small-med);
     width: 40%;
 }
 
-img[alt*="portrait+small"] {
+img[alt*="portrait+small"],
+.image-embed[src*="#portrait+small"] {
     height: var(--small);
     width: 20%;
     object-fit: cover;
 }
 
-img[alt*="portrait+tall"] {
+img[alt*="portrait+tall"],
+.image-embed[src*="#portrait+tall"] {
     height: 500px;
     width: 50%;
     object-fit: cover;
 }
 
 /*Profile*/
-img[alt*="p.rofile"] {
+img[alt*="p.rofile"],
+.image-embed[src*="#p.rofile"] {
     object-fit: cover;
     height: 100px;
     width: 100px;
     object-position: center !important;
 }
 
-img[alt*="p.rofile+medium"] {
+img[alt*="p.rofile+medium"],
+.image-embed[src*="#p.rofile+medium"] {
     object-fit: cover;
     height: 250px;
     width: 250px;
 }
 
 /*--Customizable Version--*/
-img[alt*="flex"]{
-    display: grid;
-}
-
-
 /*-Image Sizing-*/
+
 /*Fit image within bounds WITHOUT stretching*/
-img[alt*="cover"]{
+img[alt*="cover"], 
+img[src*="#cover"], 
+span.image-embed[src*="#cover"] img,
+img[alt*="cvr"],
+img[src*="#cvr"], 
+span.image-embed[src*="#cvr"] img {
     object-fit: cover;
 }
 
 /*Height*/
-img[alt*="hmicro"]{  height: var(--micro); }
-img[alt*="htiny"]{  height: var(--tiny); }
-img[alt*="hsmall"]{ height: var(--small); }
-img[alt*="hs-med"]{ height: var(--small-med); }
-img[alt*="hm-sm"]{  height: var(--med-small); }
-img[alt*="hmed"]{   height: var(--medium); }
-img[alt*="hm-tl"]{  height: var(--med-tall); }
-img[alt*="htall"]{  height: var(--tall); }
+img[alt*="hmicro"],
+img[src*="#hmicro"],
+.image-embed[src*="#hmicro"] img {
+    height: var(--micro);
+}
+img[alt*="htiny"],
+img[src*="#htiny"],
+.image-embed[src*="#htiny"] img {
+    height: var(--tiny);
+}
+img[alt*="hsmall"],
+img[src*="#hsmall"],
+.image-embed[src*="#hsmall"] img {
+    height: var(--small);
+}
+img[alt*="hs-med"],
+img[src*="#hs-med"],
+.image-embed[src*="#hs-med"] img {
+    height: var(--small-med);
+}
+img[alt*="hm-sm"],
+img[src*="#hm-sm"],
+.image-embed[src*="#hs-sm"] img {
+    height: var(--med-small);
+}
+img[alt*="hmed"],
+img[src*="#hmed"],
+.image-embed[src*="#hmed"] img {
+    height: var(--medium);
+}
+img[alt*="hm-tl"],
+img[src*="#hm-tl"],
+.image-embed[src*="#hm-tl"] img {
+    height: var(--med-tall);
+}
+img[alt*="htall"],
+img[src*="#htall"],
+.image-embed[src*="#htall"] img {
+    height: var(--tall);
+}
 
 /*Width*/
-img[alt*="wmicro"]{   width: var(--micro); }
-img[alt*="wtiny"]{    width: var(--tiny); }
-img[alt*="wsmall"]{   width: var(--small); }
-img[alt*="ws-med"]{   width: var(--small-med); }
-img[alt*="wm-sm"]{    width: var(--med-small); }
-img[alt*="wmed"]{     width: var(--medium); }
-img[alt*="wm-tl"]{    width: var(--med-tall); }
-img[alt*="wtall"]{    width: var(--tall); }
+img[alt*="wmicro"],
+img[src*="#wmicro"],
+.image-embed[src*="#wmicro"] img,
+.image-embed[alt*="#wmicro"]::after {
+    width: var(--micro); 
+}
+
+img[alt*="wtiny"],
+img[src*="#wtiny"],
+.image-embed[src*="#wtiny"] img,
+.image-embed[src*="#wtiny"]::after { 
+    width: var(--tiny); 
+}
+
+img[alt*="wsmall"],
+img[src*="#wsmall"],
+.image-embed[src*="#wsmall"] img,
+.image-embed[src*="#wsmall"]::after {
+    width: var(--small);
+}
+
+img[alt*="ws-med"],
+img[src*="#ws-med"],
+.image-embed[src*="#ws-med"] img,
+.image-embed[src*="#ws-med"]::after {
+    width: var(--small-med); 
+}
+
+img[alt*="wm-sm"],
+img[src*="#wm-sm"],
+.image-embed[src*="#wm-sm"] img,
+.image-embed[src*="#wm-sm"]::after {
+    width: var(--med-small); 
+}
+
+img[alt*="wmed"],
+img[src*="#med"],
+.image-embed[src*="#wmed"] img,
+.image-embed[src*="#wmed"]::after {
+    width: var(--medium); 
+}
+
+img[alt*="wm-tl"],
+img[src*="#m-tl"],
+.image-embed[src*="#wm-tl"] img,
+.image-embed[src*="#wm-tl"]::after {
+    width: var(--med-tall); 
+}
+
+img[alt*="wtall"],
+img[src*="#tall"],
+.image-embed[src*="#wtall"] img,
+.image-embed[src*="#wtall"]::after {
+    width: var(--tall); 
+}
 
 
 /*--Image Position--*/
 /*Inner Image*/
-img[alt*="pt"]{
+img[alt*="pt"],
+.image-embed[src*="#pt"] img{
     object-fit: cover;
     object-position: top;
 }
-img[alt*="pb"] {
+img[alt*="pb"],
+.image-embed[src*="#pb"] img{
     object-fit: cover;
     object-position: bottom;
 }
-img[alt*="pl"] {
+img[alt*="pl"],
+.image-embed[src*="#pl"] img{
     object-fit: cover;
     object-position: left;
 }
-img[alt*="p+cl"] {
+img[alt*="p+cl"],
+.image-embed[src*="#p+cl"] img{
     object-fit: cover;
     object-position: 25%;
 }
-img[alt*="pr"] {
+img[alt*="pr"],
+.image-embed[src*="#pr"] img{
     object-fit: cover;
     object-position: right;
 }
-img[alt*="p+cr"] {
+img[alt*="p+cr"],
+.image-embed[src*="#p+cr"] img{
     object-fit: cover;
     object-position: 75%;
 }
-img[alt*="pc"] {
+img[alt*="pc"],
+.image-embed[src*="#pc"] img{
     object-fit: cover;
     object-position: center;
 }
-img[alt*="p+tc"] {
+img[alt*="p+tc"],
+.image-embed[src*="#p+tc"] img{
     object-fit: cover;
     object-position: 50% 10%;
 }
-img[alt*="p+tcc"] {
+img[alt*="p+tcc"],
+.image-embed[src*="#p+tcc"] img{
     object-fit: cover;
     object-position: 50% 20%;
 }
-img[alt*="p+cct"] {
+img[alt*="p+cct"],
+.image-embed[src*="#p+cct"] img{
     object-fit: cover;
     object-position: 50% 30%;
 }
-img[alt*="p+ct"] {
+img[alt*="p+ct"],
+.image-embed[src*="#p+ct"] img{
     object-fit: cover;
     object-position: 50% 40%;
 }
-img[alt*="p+cb"] {
+img[alt*="p+cb"],
+.image-embed[src*="#p+cb"] img{
     object-fit: cover;
     object-position: 50% 60%;
 }
-img[alt*="p+ccb"] {
+img[alt*="p+ccb"],
+.image-embed[src*="#p+ccb"] img{
     object-fit: cover;
     object-position: 50% 70%;
 }
-img[alt*="p+bc"] {
+img[alt*="p+bc"],
+.image-embed[src*="#p+bc"] img{
     object-fit: cover;
     object-position: 50% 80%;
 }
-img[alt*="p+bcc"] {
+img[alt*="p+bcc"],
+.image-embed[src*="#p+bcc"] img{
     object-fit: cover;
     object-position: 50% 90%;
 }
 
-
 /*Image Locations*/
-img[alt*="locl"] {
+img[alt*="locl"],
+.image-embed[src*="#locl"] img {
     float:left;
     margin-right: 2%;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-img[alt*="locr"] {
+img[alt*="locr"],
+.image-embed[src*="#locr"] img {
     float:right;
     margin-left: 2%;
     margin-top: 0px;
@@ -4908,7 +5038,8 @@ img[alt*="locr"] {
 
 /*--Image Shapes--*/
 /*Banners*/
-img[alt*="sban"], .internal-embed img[alt*="sban"] {
+img[alt*="sban"],
+.internal-embed[src*="#sban"] img {
     object-fit: cover;
     width: 100%;
 }

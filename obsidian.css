@@ -2774,8 +2774,8 @@ Enlarge Image:*/
 
 /* Lithou's Img-Grid CSS */
 .img-grid span.image-embed[alt*="."],
-.img[alt*="grid"],
-span.image-embed[src*="grid"] { 
+span.image-embed[src*="grid"],
+span.image-embed[alt*="grid"] { 
     display: table-cell;
     vertical-align: middle;
     padding: 3px;
@@ -2791,7 +2791,6 @@ img[alt*="grid"] {
 img[alt*="grid"]:hover {
     transform: scale(1.5);
 }
-
 
 
 /*--List--*/

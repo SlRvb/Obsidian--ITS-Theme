@@ -4673,7 +4673,8 @@ img[src*="#cap"]::after {
 
 /* Lithou's Img-Grid CSS */
 .img-grid span.image-embed[alt*="."],
-span.image-embed[src*="#grid"],
+span.image-embed[src*="grid"],
+span.image-embed[alt*="grid"],
 img[alt*="grid"],
 img[src*="#grid"] { 
     display: table-cell;

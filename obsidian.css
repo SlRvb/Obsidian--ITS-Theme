@@ -4673,10 +4673,10 @@ ol.kanban .task-list-item .list-collapse-indicator {
 .image-embed[src*="#cap"]::after,
 img[src*="#cap"]::after {
     content: attr(alt);
-    color: var(--text-faint);
+    color: var(--inactive);
     display: block;
     text-align: center;
-    background-color: var(--background-primary-alt);
+    background-color: var(--background-secondary-alt);
 }
 
 /* Lithou's Img-Grid CSS */

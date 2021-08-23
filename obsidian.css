@@ -463,85 +463,85 @@ settings:
 		id: sphd-pre-1
 		type: variable-themed-color
 		format: hex
-		default-dark: '#683732'
-		default-light: '#683732'
+		default-dark: '#7c2929'
+		default-light: '#bb5555'
 	-
 		title: Heading 1 Color Editor
 		id: sphd-ed-1
 		type: variable-themed-color
 		format: hex
-		default-dark: '#683732'
-		default-light: '#683732'
+		default-dark: '#7c2929'
+		default-light: '#bb5555'
 	-
 		title: Heading 2 Color Preview
 		id: sphd-pre-2
 		type: variable-themed-color
 		format: hex
-		default-dark: '#a13531'
+		default-dark: '#652121'
 		default-light: '#a13531'
 	-
 		title: Heading 2 Color Editor
 		id: sphd-ed-2
 		type: variable-themed-color
 		format: hex
-		default-dark: '#a13531'
+		default-dark: '#652121'
 		default-light: '#a13531'
 	-
 		title: Heading 3 Color Preview
 		id: sphd-pre-3
 		type: variable-themed-color
 		format: hex
-		default-dark: '#fc4435'
-		default-light: '#fc4435'
+		default-dark: '#571d1d'
+		default-light: '#862c2c'
 	-
 		title: Heading 3 Color Editor
 		id: sphd-ed-3
 		type: variable-themed-color
 		format: hex
-		default-dark: '#fc4435'
-		default-light: '#fc4435'
+		default-dark: '#571d1d'
+		default-light: '#862c2c'
 	-
 		title: Heading 4 Color Preview
 		id: sphd-pre-4
 		type: variable-themed-color
 		format: hex
-		default-dark: '#ff6a79'
-		default-light: '#ff6a79'
+		default-dark: '#381919'
+		default-light: '#662828'
 	-
 		title: Heading 4 Color Editor
 		id: sphd-ed-4
 		type: variable-themed-color
 		format: hex
-		default-dark: '#ff6a79'
-		default-light: '#ff6a79'
+		default-dark: '#381919'
+		default-light: '#662828'
 	-
 		title: Heading 5 Color Preview
 		id: sphd-pre-5
 		type: variable-themed-color
 		format: hex
-		default-dark: '#ac7782'
-		default-light: '#ac7782'
+		default-dark: '#424c61'
+		default-light: '#697795'
 	-
 		title: Heading 5 Color Editor
 		id: sphd-ed-5
 		type: variable-themed-color
 		format: hex
-		default-dark: '#ac7782'
-		default-light: '#ac7782'
+		default-dark: '#424c61'
+		default-light: '#697795'
 	-
 		title: Heading 6 Color Preview
 		id: sphd-pre-6
 		type: variable-themed-color
 		format: hex
-		default-dark: '#d6b6bc'
-		default-light: '#d6b6bc'
+		default-dark: '#2e333d'
+		default-light: '#8a92a3'
 	-
 		title: Heading 6 Color Editor
 		id: sphd-ed-6
 		type: variable-themed-color
 		format: hex
-		default-dark: '#d6b6bc'
-		default-light: '#d6b6bc'
+		default-dark: '#2e333d'
+		default-light: '#8a92a3'
     -
         title: Workspace
         id: WS-CSS
@@ -1079,6 +1079,13 @@ settings:
         default-dark: '#cfd7dd'
         default-light: '#c14343'
     -
+        title: Graph Current Node
+        id: graph-focused
+        type: variable-themed-color
+        format: hex
+        default-dark: '#fd737366'
+        default-light: '#fd737366'
+    -
         title: Graph Attachment
         id: graph-img
         type: variable-themed-color
@@ -1383,7 +1390,7 @@ settings:
     --graph-404: #727e93;
     --graph-img: #4c78cc /*#ff86be*/;
     --graph-tag: var(--headers);
-    --graph-focused: var(--accent2-lite);
+    --graph-focused: var(--text-highlight-bg-active);
 
 
     /*CSS Specifics*/
@@ -1493,9 +1500,10 @@ settings:
     --th: var(--headers);
     --td: #d0ddef62;
     
-    --highlight-md: rgba(199, 129, 129, 0.4);
-    --highlight-s: rgba(253, 115, 115, 0.4);
-    --highlight-c: rgba(229, 149, 149, 0.37);
+    /*Highlights*/
+    --hl-md: rgba(199, 129, 129, 0.4);
+    --hl-search: rgba(253, 115, 115, 0.4);
+    --hl-cursor: rgba(229, 149, 149, 0.37);
     
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);
@@ -1508,11 +1516,11 @@ settings:
     --graph-bg: var(--note);
     --graph-lines: #e4e7f8;
     --graph-node: var(--headers);
-    --graph-fill: #2e5db2;
+    --graph-fill: var(--folder);
     --graph-404: #727e93;
     --graph-img: #4c78cc /*#5469de*/;
     --graph-tag: #000000; 
-    --graph-focused: var(--accent2-lite);
+    --graph-focused: var(--text-highlight-bg-active);
     
     
     /*CSS Specifics*/
@@ -4096,7 +4104,6 @@ iframe {
 .illusion .HyperMD-header-6.CodeMirror-line { background-color: var(--sphd-ed-6); }
 
 
-
 /*Poems*/
 .poem p {
     text-align: center;
@@ -4295,7 +4302,8 @@ blockquote mark strong {
 }
 .resize .setting-item-description,
 .resize .vertical-tab-header-group-title,
-.resize .setting-hotkey {
+.resize .setting-hotkey,
+.resize .graph-controls .setting-item-name {
     font-size: calc(var(--f-s-ui) - 2px);
 }
 .resize .modal,
@@ -4304,7 +4312,7 @@ blockquote mark strong {
     font-size: var(--f-s-ui);
 }
 .resize .setting-item-name {
-    font-size: calc(var(--f-s-ui) + 2px);
+    font-size: calc(var(--f-s-ui) - 0px);
 }
 .resize .horizontal-tab-nav-item,
 .resize .modal.mod-settings .vertical-tab-nav-item {
@@ -5867,6 +5875,32 @@ h3.breadcrumbs-matrix-header:after { display: none; }
     background-color: var(--aside-bg);
     color: var(--text) !important;
 }
+
+/*Plugin: Templater*/
+.cm-s-obsidian .cm-templater-command.cm-property {
+    color: var(--text-muted) !important;
+}
+.cm-s-obsidian .cm-templater-command.cm-undefined {
+    color: var(--text-faint) !important;
+}
+.cm-s-obsidian .cm-templater-command.cm-variable {
+    color: var(--text-accent) !important;
+}
+.cm-s-obsidian .cm-templater-command.cm-string {
+    color: var(--text-normal) !important;
+}
+.cm-s-obsidian .cm-templater-command.cm-def {
+    color: var(--interactive-accent) !important;
+}
+.cm-s-obsidian .templater-inline .cm-templater-command {
+    background-color: transparent !important;
+    border-bottom: 3px solid var(--outline);
+}
+.cm-s-obsidian .cm-templater-command.cm-templater-execution-tag {
+    color: #bdba26 !important;
+    font-weight: 10 !important;
+}
+
 
 
 

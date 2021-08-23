@@ -4691,9 +4691,10 @@ img[src*="#grid"] {
 }
 
 .img-grid img[alt*="."],
+.image-embed[alt*="grid"],
 .image-embed[src*="#grid"],
-p > img[alt*="grid"],
-p > img[src*="#grid"] {
+img[alt*="grid"],
+img[src*="#grid"] {
     max-height: 30vh;
 }
 

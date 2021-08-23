@@ -4676,7 +4676,6 @@ img[src*="#cap"]::after {
     color: var(--inactive);
     display: block;
     text-align: center;
-    background-color: var(--background-secondary-alt);
 }
 
 /* Lithou's Img-Grid CSS */

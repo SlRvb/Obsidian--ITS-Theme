@@ -3142,7 +3142,7 @@ a.tag:hover {
 }
 
 /* Recolor Embed Headings*/
-.markdown-preview-view .markdown-embed h1,
+.markdown-embed h1,
 .markdown-embed h2,
 .markdown-embed h3,
 .markdown-embed h4,
@@ -4670,6 +4670,7 @@ ol.kanban .task-list-item .list-collapse-indicator {
 /*----Image Positions/Adjustments----*/
 
 /*Captions*/
+.img-cap .image-embed::after,
 .image-embed[src*="#cap"]::after,
 img[src*="#cap"]::after {
     content: attr(alt);

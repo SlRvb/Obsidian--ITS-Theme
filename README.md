@@ -325,7 +325,7 @@ Example | Description
 
 
 ## SlRvb Blue
-[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb.css)
+[Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb%20Blue.css)
 ![](Images/Theme-SlRvb-Blue--Darkmode.png)
 ![](Images/Theme-SlRvb-Blue--Lightmode.png)
 

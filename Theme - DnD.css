@@ -1,17 +1,17 @@
-.theme-dark,
-.theme-light{
-    /*FONTS*/
+/*----Theme: D&D----*/
+.theme-dark.dnd,
+.theme-light.dnd {    
     --font: 'Cinzel Decorative', 'Amarante', 'Oleo Script', 'Lobster 1.3';
     --font-monospace: 'Fira Code Medium', 'Recursive Mono Linear Static Medium', 'Source Code Pro';
     --slide-shadow: rgba(0, 28, 74, 0.15);
 
-    --hr-sym: "\29D7";
-
+    --hr-sym: "\e88c";
+    --hr-f: var(--mdi);
     --statblock-primary-color: var(--soft-text) !important;
     --statblock-background-color: transparent;
     --statblock-bar-color: var(--accent);
 }
-.theme-dark {
+.theme-dark.dnd {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -56,8 +56,8 @@
     --text: #dcdedd;
     --headers: #3eb281;
     --soft-text: #aacac9;
-    --code-bg: #2e3b3e;
-    --code-text: #45faa6;
+    --code-bg: #222e31;
+    --code-text: #71dfac;
     --embed-bg: var(--outer-bar);
 
     --embed-h: #c93c3c;
@@ -71,17 +71,29 @@
     --hr: #2b4e41;
     --i-at: #5ebfa9;
     
-    --graph-bg: #0b170e;
-    --graph-lines: #1f534d;
+    --graph-bg: var(--note);/*#060f08;*/
+    --graph-lines: #244047;
     --graph-node: var(--headers);
     --graph-fill: var(--headers);
     --graph-404: #1f6f29;
     --graph-img: var(--accent2) /*#ff86be*/;
     --graph-tag: saddlebrown;
+
+    --sphd-pre-1: var(--accent);
+    --sphd-pre-2: var(--accent2);
+    --sphd-pre-3: var(--h3);
+    --sphd-pre-4: var(--hr);
+    --sphd-pre-5: var(--dark-sidebar);
+    --sphd-pre-6: var(--outer-bar);
+    --sphd-ed-1: var(--accent);
+    --sphd-ed-2: var(--accent2);
+    --sphd-ed-3: var(--h3);
+    --sphd-ed-4: var(--hr);
+    --sphd-ed-5: var(--dark-sidebar);
+    --sphd-ed-6: var(--outer-bar);
+
 }
-
-
-.theme-light {
+.theme-light.dnd {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -114,7 +126,7 @@
     --fg: #029f08;
     --side-bar: var(--note);
     --outer-bar: #dfefe6;
-    --dark-sidebar: var(--side-bar);
+    --dark-sidebar: var(--embed-bg);
     --inactive: #91c1ad /*#91a3c1*/;
     
     --file-select: #64c9a3;
@@ -130,6 +142,7 @@
     --code-bg: #f1f5ff;
     --code-text: #35ad76;
     --embed-bg: var(--code-bg) /*#ebf1f8*/;
+    --aside-bg: #ecf6f1;
 
     --embed-h: #d05858;
     --h1: var(--headers);
@@ -149,17 +162,25 @@
     --graph-404: #727e93;
     --graph-img: var(--accent2) /*#5469de*/;
     --graph-tag: #000000;    
-}
 
-
-.markdown-preview-view hr::after, div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
-    content: var(--hr-sym);
+    --sphd-pre-1: var(--accent);
+    --sphd-pre-2: var(--accent2);
+    --sphd-pre-3: var(--h3);
+    --sphd-pre-4: var(--headers);
+    --sphd-pre-5: var(--code-text);
+    --sphd-pre-6: var(--file);
+    --sphd-ed-1: var(--accent);
+    --sphd-ed-2: var(--accent2);
+    --sphd-ed-3: var(--h3);
+    --sphd-ed-4: var(--headers);
+    --sphd-ed-5: var(--code-text);
+    --sphd-ed-6: var(--file);
 }
 
 
 /*Headings*/
 /*Heading Line*/
-h1:after {
+.dnd:not(.illusion) h1:after {
     content: "";
     display: block;
     width: 100%;
@@ -168,7 +189,7 @@ h1:after {
     left: 0;
 }
 
-h2:after {
+.dnd:not(.illusion) h2:after {
     content: "";
     display: block;
     width: 85%;
@@ -177,7 +198,7 @@ h2:after {
     left: 0;
 }
 
-h3:after {
+.dnd:not(.illusion) h3:after {
     content: "";
     display: block;
     width: 70%;
@@ -186,13 +207,13 @@ h3:after {
     left: 0;
 }
 
-/*hcl Headings*/
-.hcl h1:before,
-.hcl h1:after,
-.hcl h2:before, 
-.hcl h2:after,
-.hcl h3:before,
-.hcl h3:after {
+/*Writing Class Headings*/
+.dnd .hcl h1:before,
+.dnd .hcl h1:after,
+.dnd .hcl h2:before, 
+.dnd .hcl h2:after,
+.dnd .hcl h3:before,
+.dnd .hcl h3:after {
     content: "";
     display: block;
     width: 100%;
@@ -201,33 +222,32 @@ h3:after {
     border: none;
 }
 
-.hcl h1::after {
+.dnd .hcl h1::after {
     background: linear-gradient(to right, var(--h1), transparent);
 }
-.hcl h1::before {
+.dnd .hcl h1::before {
     background: linear-gradient(to left, var(--h1), transparent);
 }
-.hcl h2::after {
+.dnd .hcl h2::after {
     background: linear-gradient(to right, var(--h2), transparent);
 }
-.hcl h2::before {
+.dnd .hcl h2::before {
     background: linear-gradient(to left, var(--h2), transparent);
 }
-.hcl h3::after {
+.dnd .hcl h3::after {
     background: linear-gradient(to right, var(--h3), transparent);
 }
-.hcl h3::before {
+.dnd .hcl h3::before {
     background: linear-gradient(to left, var(--h3), transparent);
 }
 
-
 /*Embed Headings*/
-.markdown-preview-view .markdown-embed h1,
-.markdown-embed h2, 
-.markdown-embed h3, 
-.markdown-embed h4, 
-.markdown-embed h5, 
-.markdown-embed h6 {
+.dnd .markdown-embed h1,
+.dnd .markdown-embed h2, 
+.dnd .markdown-embed h3,
+.dnd .markdown-embed h4,
+.dnd .markdown-embed h5,
+.dnd .markdown-embed h6 {
     color: var(--embed-h);
     font-style: normal;
 }

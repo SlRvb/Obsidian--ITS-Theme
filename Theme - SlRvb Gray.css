@@ -1,14 +1,11 @@
-:root {
-    /*Section: Text > Fonts > Headings*/
+/*----Theme: SlRvb Gray----*/
+.theme-dark.slrvb-g,
+.theme-light.slrvb-g {
     --font: 'Norwester', 'Staatliches', 'Racing Sans One', 'Heavitas', 'Playfair Display', serif;
-}
-
-.theme-dark, .theme-light {
-    /*Section: Note Elements > Horizontal Line Symbol*/
+    --font-monospace: 'Fira Code';
     --hr-sym: "🏴";
 }
-
-.theme-dark {
+.theme-dark.slrvb-g {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -26,51 +23,57 @@
     --text-muted: var(--soft-text);
     --text-accent: var(--accent2-lite);
     --text-accent-hover: var(--accent2);
+
+    --interactive-normal: var(--outer-bar);
+    --interactive-hover: var(--embed-bg);
     --interactive-accent: var(--hr);
-    
-    /*----Colors----*/
-    /*Section: Workspace > Colors*/
+    --interactive-accent-hover: var(--dark-accent);
+
     --outer-bar: #0E0F15;       /*Outer Sidebar*/
     --dark-sidebar: #090C0E;    /*Dark Sidebar*/
     --side-bar: var(--note);      /*Sidebar*/
-    --f-icon: #586477;          /*File*/
+    --f-icon: #586277;          /*File*/
     --folder: #F1F7FF;          /*Folder*/
     --note: #171B21;            /*Note*/
     
-    
-    /*Section: Text > Colors*/
     --headers: #9DB1CA;     /*Headings*/
     --text: #778495;        /*Text*/
     --soft-text: #AAB3CA;   /*Faint Text*/
-    --code-text: #708090;   /*Code Text*/
+    --code-text: #707a90;   /*Code Text*/
     --i-at: #5D7B98;        /*<i></i>*/
     --footnote: #576571;    /*Footnotes*/
-    --inactive: #3b444b;    /*Inactive*/
+    --inactive: #3c4a64;
     
-    /*Section: Tags > Tag Color*/
-    --tag: #353F52;
+    --tag: #353d52;
     
-    /*Section: Note Elements > Colors*/
-    --hr: #4F5B6C;          /*Horizontal Line*/
+    --hr: #414a5f;          /*Horizontal Line*/
     --embed-bg: #0E0F15;    /*Embed/Blockquote*/
     --aside-bg: #12151d;    /*Aside Background Color*/
     
-    /*Section: Other Colors*/    
-    --accent: #516071;              /*Accent*/
-    --lite-accent: #8EA1B4;         /*Lite Accent*/
+    --accent: #515b71;              /*Accent*/
+    --lite-accent: #8e9ab4;         /*Lite Accent*/
     --accent2: #889FC3;             /*Accent 2*/
     --accent2-lite: #9DB2CF;        /*Lite Accent 2*/
     --dark-accent: #333A49;         /*Dark Accent*/
     --deep-dark-accent: #222731;    /*Deep Dark Accent*/
-    --table: #242D3D;               /*Lines*/
+    --table: #242b3d;               /*Lines*/
 
-    /*Section: Graph Colors*/
-    --graph-bg: var(--note);    /*Graph Background*/
-    --graph-lines: #293E64;   /*Graph Lines*/
-}
+    --graph-lines: #323946;   /*Graph Lines*/
 
-    
-.theme-light {
+    --sphd-pre-1: var(--lite-accent);
+    --sphd-pre-2: var(--code-text);
+    --sphd-pre-3: var(--accent);
+    --sphd-pre-4: var(--inactive);
+    --sphd-pre-5: var(--table);
+    --sphd-pre-6: var(--aside-bg);
+    --sphd-ed-1: var(--lite-accent);
+    --sphd-ed-2: var(--code-text);
+    --sphd-ed-3: var(--accent);
+    --sphd-ed-4: var(--inactive);
+    --sphd-ed-5: var(--table);
+    --sphd-ed-6: var(--aside-bg);
+}    
+.theme-light.slrvb-g {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -84,27 +87,55 @@
     --text-highlight-bg: rgba(129,155,199,0.25);
     --text-highlight-bg-active: rgba(172,210,255,0.25);
 
-    /*----Colors----*/
-    /*Section: Workspace > Colors*/
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--lite-accent);
+
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--headers);
+    --interactive-accent-hover: var(--lite-accent);
+
+    --outer-bar:#eef3fd;
+    --side-bar: var(--note);
     --dark-sidebar: #F1F7FF;    /*Dark Sidebar*/
     --f-icon: #A6B4CC;          /*File*/
-    --folder: #8296A6;          /*Folder*/
+    --folder: #99accf;          /*Folder*/
+    --note: #f8fbff;
     
-    /*Section: Text > Colors*/
-    --headers: #748092;     /*Headings*/
-    --text: #8A949D;        /*Text*/
-    --soft-text: #9AADBA;   /*Faint Text*/
-    --code-text: #819AB5;   /*Code Text*/
+    --headers: #6e7a92;     /*Headings*/
+    --text: #76859c;        /*Text*/
+    --soft-text: #90a0c3;   /*Faint Text*/
+    --code-text: #8193b5;   /*Code Text*/
     --i-at: #8FAABE;        /*<i></i>*/
     
-    /*Section: Other Colors*/
-    --accent: #939BA3;              /*Accent*/
-    --lite-accent: #B4C6D2;         /*Lite Accent*/
+    --accent: #aebdd4;              /*Accent*/
+    --lite-accent: #a6aec7;         /*Lite Accent*/
+    --accent2: #404c62;
     --accent2-lite: #000000;        /*Lite Accent 2*/
     --dark-accent: #EBF2F9;         /*Dark Accent*/
     --deep-dark-accent: #171C22;    /*Deep Dark Accent*/
     --inactive: #C0C8D6;            /*Inactive*/
+    --table: #ccd6eb;
 
-    /*Section: Tags > Tag Color*/
-    --tag: #8999B3;
+    --tag: #7485a3;
+
+    --hr: #d6deea;
+    --embed-bg: var(--dark-sidebar);
+    --aside-bg: var(--dark-sidebar);
+
+    --sphd-pre-1: var(--lite-accent);
+    --sphd-pre-2: var(--folder);
+    --sphd-pre-3: var(--code-text);
+    --sphd-pre-4: var(--headers);
+    --sphd-pre-5: var(--accent2);
+    --sphd-pre-6: var(--deep-dark-accent);
+    --sphd-ed-1: var(--lite-accent);
+    --sphd-ed-2: var(--folder);
+    --sphd-ed-3: var(--code-text);
+    --sphd-ed-4: var(--headers);
+    --sphd-ed-5: var(--accent2);
+    --sphd-ed-6: var(--deep-dark-accent);
+
 }

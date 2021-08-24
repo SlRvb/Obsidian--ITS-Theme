@@ -1,9 +1,17 @@
-:root {
+/*----Theme: SlRvb Blue----*/
+.theme-light.slrvb-b,
+.theme-dark.slrvb-b {
     --font: 'Recursive Sans Linear Static Black', 'Oleo Script', 'Calisto MT'; /*Works, but if it doesn't, needs !important*/
-    --font-monospace:  "Fira Code";
+    --font-monospace: "Fira Code";    
 }
+.theme-dark.slrvb-b {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
 
-.theme-dark {
+    --background-modifier-border: var(--table);
+
     --background-modifier-form-field-highlighted: rgba(41, 57, 90, 0.48); /*Searched Highlight Color*/
     --background-modifier-error-rgb: 54, 70, 105; /*??*/
     
@@ -17,6 +25,12 @@
     --interactive-accent-rgb: 60, 102, 168; /*Publish item select*/
     --interactive-accent-hover: #29395a; /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--lite-accent);
 
     /*--DEFAULT VARIABLES--*/
 
@@ -63,9 +77,28 @@
     --graph-404: #727e93;
     --graph-img: var(--accent2) /*#ff86be*/;
     --graph-tag: var(--headers);
-}
 
-.theme-light {
+    --sphd-pre-1: var(--accent2);
+    --sphd-pre-2: var(--headers);
+    --sphd-pre-3: var(--dark-accent);
+    --sphd-pre-4: var(--deep-dark-accent);
+    --sphd-pre-5: var(--accent);
+    --sphd-pre-6: var(--soft-text);
+    --sphd-ed-1: var(--accent2);
+    --sphd-ed-2: var(--headers);
+    --sphd-ed-3: var(--dark-accent);
+    --sphd-ed-4: var(--deep-dark-accent);
+    --sphd-ed-5: var(--accent);
+    --sphd-ed-6: var(--soft-text);
+}
+.theme-light.slrvb-b {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
     --background-modifier-form-field-highlighted: rgba(131, 190, 240, 0.22); /*Search Bar Active Highlight*/
 
     --background-modifier-error-rgb: 131, 190, 240; /*Ctrl F Search Background*/
@@ -75,6 +108,16 @@
     --text-highlight-bg-active: rgba(115, 184, 253, 0.4); /*Search Highlight*/
     --text-selection: rgba(149, 195, 229, 0.37); /*Cursor dragged highlights*/
     
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--lite-accent);
+
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--headers);
+    --interactive-accent-hover: var(--lite-accent);
+
     /*--DEFAULT VARIABLES--*/    
     --deep-dark-accent: #101b2f;
     --dark-accent: #edf4ff;
@@ -85,7 +128,7 @@
     --bg: #dde4ef;
     --fg: #025d9f;
     --side-bar: var(--note);
-    --outer-bar: #dfe7ef;
+    --outer-bar: #eef3fd;
     --dark-sidebar: var(--embed-bg);
     --inactive: #a6bbde /*#91a3c1*/;
     
@@ -96,11 +139,12 @@
     
     --headers: #4378c1;
     --note: #f8fbff;
-    --text: #697580;
+    --text: #667e95;
     --soft-text: #4e99d0;
     --code-bg: #eef6ff;
     --code-text: #4296ea;
     --embed-bg: #f1f5ff /*#ebf1f8*/;
+    --aside-bg: var(--dark-sidebar);
     --footnote: #8996a0;
     
     --th: #587aa8;
@@ -117,5 +161,18 @@
     --graph-fill: #2e5db2;
     --graph-404: #727e93;
     --graph-img: var(--accent2) /*#5469de*/;
-    --graph-tag: #000000;    
+    --graph-tag: #000000;
+
+    --sphd-pre-1: var(--accent);
+    --sphd-pre-2: var(--headers);
+    --sphd-pre-3: var(--th);
+    --sphd-pre-4: var(--text);
+    --sphd-pre-5: var(--file);
+    --sphd-pre-6: var(--inactive);
+    --sphd-ed-1: var(--accent);
+    --sphd-ed-2: var(--headers);
+    --sphd-ed-3: var(--th);
+    --sphd-ed-4: var(--text);
+    --sphd-ed-5: var(--file);
+    --sphd-ed-6: var(--inactive);
 }

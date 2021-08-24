@@ -1,11 +1,10 @@
-/*Theme: Drowned*/
-.theme-dark,
-.theme-light {
+/*----Theme: Drowned----*/
+.theme-dark.drwn, .theme-light.drwn {
     --hr-sym: "\f1cd";
     --hr-f: var(--mdi);
 }
 
-.theme-dark {
+.theme-dark.drwn {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -55,9 +54,24 @@
     --background-modifier-form-field-highlighted: rgba(52,237,181,0.13);
     --text-selection: rgba(23,77,59,0.27);
     --td: rgba(6,11,12,0.38);
+
+    --graph-lines: #04303d;
+
+    --sphd-pre-1: var(--headers);
+    --sphd-pre-2: var(--accent);
+    --sphd-pre-3: var(--inactive);
+    --sphd-pre-4: var(--f-icon);
+    --sphd-pre-5: var(--table);
+    --sphd-pre-6: var(--code-bg);
+    --sphd-ed-1: var(--headers);
+    --sphd-ed-2: var(--accent);
+    --sphd-ed-3: var(--inactive);
+    --sphd-ed-4: var(--f-icon);
+    --sphd-ed-5: var(--table);
+    --sphd-ed-6: var(--code-bg);
 }
 
-.theme-light {
+.theme-light.drwn {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -97,11 +111,11 @@
 
     --hr: #D6EAE9;
     --lines: #b8e5e7;
-    --tag: #80c7c7;
+    --tag: #49b99d;
     --accent: #43C1A5;
-    --lite-accent: #51A397;
+    --lite-accent: #51a38e;
     --accent2: #D6EAE3;
-    --accent2-lite: #55D0B9;
+    --accent2-lite: #75c8b9;
     --dark-accent: #def7f5;
     --deep-dark-accent: #102F26;
     --inactive: #A6DED4;
@@ -116,4 +130,16 @@
     --td: rgba(145, 212, 199, 0.27);
     --slide-shadow: rgba(0,74,52,0.08);
 
+    --sphd-pre-1: var(--code-text);
+    --sphd-pre-2: var(--accent2-lite);
+    --sphd-pre-3: var(--accent);
+    --sphd-pre-4: var(--lite-accent);
+    --sphd-pre-5: var(--fg);
+    --sphd-pre-6: var(--deep-dark-accent);
+    --sphd-ed-1: var(--code-text);
+    --sphd-ed-2: var(--accent2-lite);
+    --sphd-ed-3: var(--headers);
+    --sphd-ed-4: var(--lite-accent);
+    --sphd-ed-5: var(--fg);
+    --sphd-ed-6: var(--deep-dark-accent);
 }

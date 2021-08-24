@@ -1,11 +1,10 @@
-/*Theme: Tangerine Dunes*/
-.theme-dark,
-.theme-light {
+/*----Theme: Tangerine Dunes----*/
+.theme-dark.t-d, .theme-light.t-d {
     --hr-sym: "\e564";
     --hr-f: var(--mdi);
 }
 
-.theme-dark {
+.theme-dark.t-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -50,8 +49,21 @@
     --text-highlight-bg-active: rgba(253,162,115,0.25);
     --text-selection: rgba(126,57,26,0.27);
     --td: rgba(12,9,6,0.38);
+
+    --sphd-pre-1: var(--i-at);
+    --sphd-pre-2: var(--headers);
+    --sphd-pre-3: var(--accent2);
+    --sphd-pre-4: var(--tag);
+    --sphd-pre-5: var(--table);
+    --sphd-pre-6: var(--dark-sidebar);
+    --sphd-ed-1: var(--i-at);
+    --sphd-ed-2: var(--headers);
+    --sphd-ed-3: var(--accent2);
+    --sphd-ed-4: var(--tag);
+    --sphd-ed-5: var(--table);
+    --sphd-ed-6: var(--dark-sidebar);
 }
-.theme-light {
+.theme-light.t-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -95,4 +107,18 @@
     --text-highlight-bg: rgba(223, 148, 102, 0.25);
     --text-highlight-bg-active: rgba(253,157,115,0.25);
     --text-selection: rgba(251, 180, 147, 0.27);
+
+
+    --sphd-pre-1: var(--headers);
+    --sphd-pre-2: var(--soft-text);
+    --sphd-pre-3: var(--i-at);
+    --sphd-pre-4: var(--f-icon);
+    --sphd-pre-5: var(--tag);
+    --sphd-pre-6: var(--file);
+    --sphd-ed-1: var(--headers);
+    --sphd-ed-2: var(--soft-text);
+    --sphd-ed-3: var(--i-at);
+    --sphd-ed-4: var(--f-icon);
+    --sphd-ed-5: var(--tag);
+    --sphd-ed-6: var(--file);
 }

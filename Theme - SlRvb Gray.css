@@ -1,11 +1,11 @@
 /*----Theme: SlRvb Gray----*/
-.theme-dark.slrvb-g,
-.theme-light.slrvb-g {
+.theme-dark,
+.theme-light {
     --font: 'Norwester', 'Staatliches', 'Racing Sans One', 'Heavitas', 'Playfair Display', serif;
     --font-monospace: 'Fira Code';
     --hr-sym: "🏴";
 }
-.theme-dark.slrvb-g {
+.theme-dark {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -73,7 +73,7 @@
     --sphd-ed-5: var(--table);
     --sphd-ed-6: var(--aside-bg);
 }    
-.theme-light.slrvb-g {
+.theme-light {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);

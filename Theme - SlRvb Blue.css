@@ -1,10 +1,10 @@
 /*----Theme: SlRvb Blue----*/
-.theme-light.slrvb-b,
-.theme-dark.slrvb-b {
+.theme-light,
+.theme-dark {
     --font: 'Recursive Sans Linear Static Black', 'Oleo Script', 'Calisto MT'; /*Works, but if it doesn't, needs !important*/
     --font-monospace: "Fira Code";    
 }
-.theme-dark.slrvb-b {
+.theme-dark {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -91,7 +91,7 @@
     --sphd-ed-5: var(--accent);
     --sphd-ed-6: var(--soft-text);
 }
-.theme-light.slrvb-b {
+.theme-light {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);

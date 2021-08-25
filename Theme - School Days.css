@@ -1,6 +1,6 @@
 /*----Theme: School Days----*/
-.theme-dark.s-d,
-.theme-light.s-d  {
+.theme-dark,
+.theme-light {
     /*FONTS*/
     --font: /*'Recursive Sans Casual Static',*/ 'Recursive Sans Linear Static Black', 'RocknRoll One Regular';
 	--vault-f: "CollegiateBlackFLF", "Jersey M54";
@@ -12,7 +12,7 @@
     --bullet: "\e80c";
     --bul-f: var(--mdi);
 }
-.theme-dark.s-d {
+.theme-dark{
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -109,7 +109,7 @@
     --sphd-ed-5: var(--tag);
     --sphd-ed-6: var(--deep-dark-accent);
 }
-.theme-light.s-d {    
+.theme-light{    
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -199,32 +199,32 @@
 }
 
 /*Vault Name*/
-.s-d .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
+.nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
     font-family: var(--vault-f);
     color: var(--folder);
     font-weight: 10 !important;
 }
 
-.s-d ul li::before { margin-left: -24px; }
+ul li::before { margin-left: -24px; }
 
-.s-d:not(.illusion) h1,
-.s-d:not(.illusion) h2,
-.s-d:not(.illusion) h3,
-.s-d:not(.illusion) h4,
-.s-d:not(.illusion) h5,
-.s-d:not(.illusion) h6 {
+:not(.illusion) h1,
+:not(.illusion) h2,
+:not(.illusion) h3,
+:not(.illusion) h4,
+:not(.illusion) h5,
+:not(.illusion) h6 {
     color: var(--lite-accent);
 }
 /*--Mathjax Edit--*/
-.s-d .mjx-math{
+.mjx-math{
     font-style: normal;
 }
-.s-d .MJX-TEX { 
+.MJX-TEX { 
     font-size: 130%;
     color: var(--latex);
 }
 /*Math Block Margin Reduction*/
-.s-d .mjx-container[jax="CHTML"][display="true"] {
+.mjx-container[jax="CHTML"][display="true"] {
     margin: 3% 0 !important;
 }
 /*Math Editor*/
@@ -232,8 +232,8 @@
     color: var(--latex-c);
 }
 
-.s-d .cm-s-obsidian span.cm-math,
-.s-d .cm-s-obsidian span.hmd-fold-math-placeholder {
+.cm-s-obsidian span.cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder {
     color: var(--latex-s);
     font-style: normal;
 }
@@ -241,32 +241,32 @@
 
 /*--Solve Page--*/
 /*Header*/
-.s-d .solve h1,
-.s-d .solve h2,
-.s-d .solve h3,
-.s-d .solve h4,
-.s-d .solve h5,
-.s-d .solve h6 {
+.solve h1,
+.solve h2,
+.solve h3,
+.solve h4,
+.solve h5,
+.solve h6 {
     color: var(--header-solve);
 }
-.s-d .solve h3,
-.s-d .solve h4,
-.s-d .solve h5,
-.s-d .solve h6 {
+.solve h3,
+.solve h4,
+.solve h5,
+.solve h6 {
     font-family: var(--solve-f) !important;
 }
 /*Table*/
-.s-d .solve table { margin: auto auto 5% 5px; }
-.s-d .solve th, 
-.s-d .solve td:nth-child(1){
+.solve table { margin: auto auto 5% 5px; }
+.solve th, 
+.solve td:nth-child(1){
     background-color: var(--outer-bar);
     border-right: transparent;
     border-left: transparent;
 }
-.s-d .solve td mark{
+.solve td mark{
     color: var(--answer);
     background-color: var(--answer-bg);
     font-weight: 600;
     padding: 2px;
 }
-.s-d .solve tr { width: 10% !important; }
+.solve tr { width: 10% !important; }

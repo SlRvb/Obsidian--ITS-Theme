@@ -1,5 +1,5 @@
 /*----Theme: ITS Dark----*/
-.theme-dark.its-d {
+.theme-dark {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -73,14 +73,14 @@
 /*Bullet Edits*/
 
 /*Hide bullet*/
-.its-d ul li::before {
+ul li::before {
     display: none;
 }
-.cm-hmd-list-indent.its-d .cm-tab::before {
+.cm-hmd-list-indent.cm-tab::before {
     border-left: 2px solid var(--dark-accent);
 }
 
-.its-d .markdown-preview-view .list-collapse-indicator {
+.markdown-preview-view .list-collapse-indicator {
     position: absolute;
     padding-left: 25px;
 }

@@ -1,6 +1,6 @@
 /*----Theme: D&D----*/
-.theme-dark.dnd,
-.theme-light.dnd {    
+.theme-dark,
+.theme-light{    
     --font: 'Cinzel Decorative', 'Amarante', 'Oleo Script', 'Lobster 1.3';
     --font-monospace: 'Fira Code Medium', 'Recursive Mono Linear Static Medium', 'Source Code Pro';
     --slide-shadow: rgba(0, 28, 74, 0.15);
@@ -11,7 +11,7 @@
     --statblock-background-color: transparent;
     --statblock-bar-color: var(--accent);
 }
-.theme-dark.dnd {
+.theme-dark{
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -93,7 +93,7 @@
     --sphd-ed-6: var(--outer-bar);
 
 }
-.theme-light.dnd {
+.theme-light{
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -180,7 +180,7 @@
 
 /*Headings*/
 /*Heading Line*/
-.dnd:not(.illusion) h1:after {
+:not(.illusion) h1:after {
     content: "";
     display: block;
     width: 100%;
@@ -189,7 +189,7 @@
     left: 0;
 }
 
-.dnd:not(.illusion) h2:after {
+:not(.illusion) h2:after {
     content: "";
     display: block;
     width: 85%;
@@ -198,7 +198,7 @@
     left: 0;
 }
 
-.dnd:not(.illusion) h3:after {
+:not(.illusion) h3:after {
     content: "";
     display: block;
     width: 70%;
@@ -208,12 +208,12 @@
 }
 
 /*Writing Class Headings*/
-.dnd .hcl h1:before,
-.dnd .hcl h1:after,
-.dnd .hcl h2:before, 
-.dnd .hcl h2:after,
-.dnd .hcl h3:before,
-.dnd .hcl h3:after {
+.hcl h1:before,
+.hcl h1:after,
+.hcl h2:before, 
+.hcl h2:after,
+.hcl h3:before,
+.hcl h3:after {
     content: "";
     display: block;
     width: 100%;
@@ -222,51 +222,51 @@
     border: none;
 }
 
-.dnd .hcl h1::after {
+.hcl h1::after {
     background: linear-gradient(to right, var(--h1), transparent);
 }
-.dnd .hcl h1::before {
+.hcl h1::before {
     background: linear-gradient(to left, var(--h1), transparent);
 }
-.dnd .hcl h2::after {
+.hcl h2::after {
     background: linear-gradient(to right, var(--h2), transparent);
 }
-.dnd .hcl h2::before {
+.hcl h2::before {
     background: linear-gradient(to left, var(--h2), transparent);
 }
-.dnd .hcl h3::after {
+.hcl h3::after {
     background: linear-gradient(to right, var(--h3), transparent);
 }
-.dnd .hcl h3::before {
+.hcl h3::before {
     background: linear-gradient(to left, var(--h3), transparent);
 }
 
 /*Embed Headings*/
-.dnd .markdown-embed h1,
-.dnd .markdown-embed h2, 
-.dnd .markdown-embed h3,
-.dnd .markdown-embed h4,
-.dnd .markdown-embed h5,
-.dnd .markdown-embed h6 {
+.markdown-embed h1,
+.markdown-embed h2, 
+.markdown-embed h3,
+.markdown-embed h4,
+.markdown-embed h5,
+.markdown-embed h6 {
     color: var(--embed-h);
     font-style: normal;
 }
 
 /*Table*/
-.dnd table {
+table {
     margin-left: auto;
     margin-right: auto;
 }
 
 /*Plugin: 5e Statblock*/
-.dnd .obsidian-statblock-plugin .creature-heading > .name {
+.obsidian-statblock-plugin .creature-heading > .name {
     color: var(--embed-h) !important;
 }
 
-.dnd .obsidian-statblock-plugin .property-name {
+.obsidian-statblock-plugin .property-name {
     color: var(--headers);
 }
 
-.dnd .obsidian-statblock-plugin .section-header {
+.obsidian-statblock-plugin .section-header {
     color: var(--embed-h) !important;
 }

@@ -6319,19 +6319,19 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 /*Dim First Column Link*/
 .dv .dataview td:nth-child(1) {
-    color: var(--headers) !important;
+    color: var(--headers);
 }
 .dv-lk .dataview td:nth-child(1) .internal-link {
-    color: var(--lines) !important;
+    color: var(--lines);
 }
 .dv-lk .dataview td:nth-child(1) .internal-link:hover {
-    color: var(--accent2) !important;
+    color: var(--accent2);
 }
 .dv .dataview td:nth-child(1) .external-link {
-    color: var(--inactive) !important;
+    color: var(--inactive);
 }
 .dv .dataview td:nth-child(1) .external-link:hover {
-    color: var(--accent2) !important;
+    color: var(--accent2);
 }
 .dvl .list-view-ul li {
     padding: 10px;

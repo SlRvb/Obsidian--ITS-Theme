@@ -75,6 +75,22 @@
 .aside-in .markdown-embed {
     width:100%;
 }
+
+
+/*Aside Without Other Styling*/
+.aside-clean {
+    text-decoration: unset;
+    text-align: justify;
+    font-weight: unset;
+    float: right;
+    position: relative;
+    margin-right: -25.3em;
+    margin-bottom: .2em;
+    clear: right;
+    width: 400px;
+    padding: 1em;
+}
+
 /*Shrink Scrollbar*/
 .aside > ::-webkit-scrollbar {
     width: 5px;

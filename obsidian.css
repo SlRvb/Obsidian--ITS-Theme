@@ -1582,10 +1582,10 @@ settings:
     border-radius: var(--radius) !important;
     box-shadow: 5px 5px var(--outline);
 }
+.menu-item.selected:not(.is-disabled):not(.is-label),
 .menu-item:hover:not(.is-disabled):not(.is-label):hover {
     background-color: var(--outer-bar);
 }
-
 
 /*Ribbon Icons*/
 .side-dock-ribbon-tab,

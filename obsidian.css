@@ -3515,7 +3515,9 @@ iframe {
 
 /*Kanban Mobile*/
 .is-mobile .kanban ul, 
-.is-mobile .kanban ol {
+.is-mobile .kanban ol,
+.is-mobile ul.kanban, 
+.is-mobile ol.kanban {
     padding-inline-start: 0;
 }
 

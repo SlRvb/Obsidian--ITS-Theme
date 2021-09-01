@@ -1624,6 +1624,10 @@ button.mod-cta {
     font-family: var(--default-font);
 }
 
+button.mod-warning {
+    color: var(--text-error);
+}
+
 /*Pinned Pane Button Color*/
 .view-action:hover,
 .view-action.is-active {
@@ -4295,6 +4299,17 @@ em mark em {
     line-height: 1em;
 }
 
+/* Video w/ Aspect Ratio: <div><iframe></iframe></div> */
+#vid {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+#vid iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 /*--Special Blockquote Formatting--*/
 blockquote mark strong {
 	display: block;
@@ -5956,6 +5971,15 @@ h3.breadcrumbs-matrix-header:after { display: none; }
     color: #bdba26 !important;
     font-weight: 10 !important;
 }
+
+#quick-explorer .explorable { opacity: unset !important; }
+
+
+
+
+
+
+
 
 
 

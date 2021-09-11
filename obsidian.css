@@ -549,15 +549,6 @@ settings:
         level: 2        
         collapsed: true
     -
-        title: Writing
-        description: Minimalistic/distraction free layout design.
-        id: writing
-        type: class-toggle
-    -
-        title: Hide Vault Name
-        id: v-non
-        type: class-toggle
-    -
         title: Display Folder Arrow On Hover
         id: fhvr
         type: class-toggle
@@ -570,6 +561,11 @@ settings:
         id: nt-g
         type: class-toggle
     -
+        title: Raise Right Sidebar
+        description: Raise the right sidebar if the status bar is covering part of it.
+        id: rsb-up
+        type: class-toggle
+    -
         title: Resize Scrollbars
         id: scroll-size
         type: variable-number-slider
@@ -579,8 +575,44 @@ settings:
         max: 15
         step: 1
     -
+        title: Minimalist Workspace
+        description: Hide UI unless hovered over the edges of the app.
+        id: min-wrkspce
+        type: heading
+        level: 3
+    -
+        title: Writing
+        description: Minimalistic/distraction free layout design for notes.
+        id: writing
+        type: class-toggle
+    -
+        title: Hide All UI
+        description: Hide everything listed below with just 1 toggle
+        id: h-wksp
+        type: class-toggle
+    -
         title: Hide Resize Handles
         id: h-rh
+        type: class-toggle
+    -
+        title: Hide Vault Name
+        id: v-non
+        type: class-toggle
+    - 
+        title: Hide Ribbon
+        id: h-rib
+        type: class-toggle
+    - 
+        title: Hide Note Title
+        id: h-nt
+        type: class-toggle
+    - 
+        title: Hide Title Bar
+        id: h-titlebar
+        type: class-toggle
+    -
+        title: Hide Status Bar
+        id: h-stbr
         type: class-toggle
     -
         title: Workspace Resize
@@ -1603,6 +1635,7 @@ settings:
     border: none;
     background-color: var(--outer-bar);
 }
+.workspace-ribbon { transition: none; }
 
 
 /*Buttons*/
@@ -6304,26 +6337,82 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 .lig .cm-s-obsidian .cm-line  {
     font-variant-ligatures: normal;
 }
-/*Hide Resize Handles*/
+
+
+
+/*----Minimalist Workspace----*/
+/*Hide Resize Handle*/
 .h-rh .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .h-rh .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
-.h-rh .workspace-tabs .workspace-leaf-resize-handle {
+.h-rh .workspace-tabs .workspace-leaf-resize-handle,
+.h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
+.h-wksp .workspace-tabs .workspace-leaf-resize-handle {
     background-color: var(--side-bar);
 }
-.h-rh .workspace-leaf-resize-handle {
-    background: var(--note);
-}
+.h-rh .workspace-leaf-resize-handle,
+.h-wksp .workspace-leaf-resize-handle { background: var(--note); }
 
 .h-rh .workspace-leaf-resize-handle:hover,
 .h-rh .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
-.h-rh .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
+.h-rh .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
+.h-wksp .workspace-leaf-resize-handle:hover,
+.h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+.h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
     background-color: var(--accent);
 }
 
+/*Hide Note Title*/
+.h-nt .view-header:not(:hover),
+.h-wksp .view-header:not(:hover) {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    z-index: 5;
+}
+.h-nt .view-content,
+.h-wksp .view-content { height: 100%; }
+
+/*Hide Left Ribbon*/
+.h-rib .side-dock-ribbon.mod-left:not(:hover),
+.h-rib .side-dock-ribbon.mod-right:not(:hover),
+.h-wksp .side-dock-ribbon.mod-left:not(:hover),
+.h-wksp .side-dock-ribbon.mod-right:not(:hover) {
+    opacity: 0;
+    flex: 0 0 12px;
+}
+
+/*Hide Title Bar*/
+.theme-dark.h-titlebar,
+.theme-light.h-titlebar,
+.theme-dark.h-wksp,
+.theme-light.h-wksp { padding-top: 0 !important; }
+.h-titlebar .titlebar,
+.h-wksp .titlebar {
+    display: block;
+    position: relative;
+}
+.h-titlebar .titlebar:not(:hover),
+.h-wksp .titlebar:not(:hover) {
+    width: 100%;
+    height: 2px !important;
+    opacity: 0;
+}
+.h-titlebar .app-container .status-bar,
+.h-wksp .status-bar { bottom: 2px; height: 100%; }
+
+/*Hide Status Bar*/
+.h-stbr .status-bar:not(:hover),
+.h-wksp .status-bar:not(:hover) { opacity: 0; }
+
+/**/
 .nt-g .workspace-leaf.mod-active .view-header {
     background: var(--dark-accent);
 }
 
+.rsb-up .mod-right-split .workspace-leaf-content {
+    padding-bottom: 22px;
+}
 
 
 

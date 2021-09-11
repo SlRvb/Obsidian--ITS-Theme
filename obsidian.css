@@ -5686,6 +5686,10 @@ g.classGroup line {
 .workspace-leaf-content[data-type="kanban"] .view-content {
     overflow: auto;
 }
+.kanban-plugin__scroll-container.kanban-plugin__vertical::-webkit-scrollbar {
+    width: 4px;
+}
+
 /*Board Background*/
 .kanban-plugin {
     background-color: var(--note) !important;
@@ -6499,9 +6503,10 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
     font-size: 14px !important;
 }
 /*Title: Sizing*/
-.kbn .kanban-plugin__item-title-wrapper {
+.kbn .kanban-plugin__lane-header-wrapper {
+    border: none !important;
     padding: 2px 8px !important;
-    /*background-color: var(--aside-bg) !important;*/
+    padding-top: 10px !important;
 }
 
 /*Title: Link Styling*/

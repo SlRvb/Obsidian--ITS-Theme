@@ -767,6 +767,11 @@ settings:
         id: org-em
         type: class-toggle
     -
+        title: Embed Heading Undo
+        description: Revert embed headings to the default sizes and colors
+        id: em-hd
+        type: class-toggle
+    -
         title: Justify Text
         description: Justify preview and editor text
         id: justified
@@ -3193,16 +3198,14 @@ a.tag:hover {
 }
 
 /* Recolor Embed Headings*/
-.markdown-embed h1,
-.markdown-embed h2,
-.markdown-embed h3,
-.markdown-embed h4,
-.markdown-embed h5,
-.markdown-embed h6 {
+body:not(.em-hd) .markdown-embed h1,
+body:not(.em-hd) .markdown-embed h2,
+body:not(.em-hd) .markdown-embed h3,
+body:not(.em-hd) .markdown-embed h4,
+body:not(.em-hd) .markdown-embed h5,
+body:not(.em-hd) .markdown-embed h6 {
     font-size: 20px;
-    line-height: 1em;
     color: var(--accent);
-    font-family: var(--font);
 }
 
 .markdown-preview-view .markdown-embed,
@@ -5687,7 +5690,7 @@ g.classGroup line {
     overflow: auto;
 }
 .kanban-plugin__scroll-container.kanban-plugin__vertical::-webkit-scrollbar {
-    width: 4px;
+    width: var(--scroll-size);
 }
 
 /*Board Background*/

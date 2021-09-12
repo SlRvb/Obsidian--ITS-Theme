@@ -6508,8 +6508,10 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 /*Title: Sizing*/
 .kbn .kanban-plugin__lane-header-wrapper {
     border: none !important;
-    padding: 2px 8px !important;
     padding-top: 10px !important;
+}
+.kbn .kanban-plugin__item-title-wrapper {
+    padding: 2px 8px !important;
 }
 
 /*Title: Link Styling*/

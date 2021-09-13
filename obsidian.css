@@ -598,6 +598,14 @@ settings:
         title: Hide Vault Name
         id: v-non
         type: class-toggle
+    -
+        title: Hide File Explorer/Search Buttons
+        id: h-fexp
+        type: class-toggle
+    -
+        title: Hide Sidebar Tab Icons
+        id: h-tab-i
+        type: class-toggle
     - 
         title: Hide Ribbon
         id: h-rib
@@ -605,6 +613,10 @@ settings:
     - 
         title: Hide Note Title
         id: h-nt
+        type: class-toggle
+    -
+        title: Hide Note Title Icons
+        id: h-nt-i
         type: class-toggle
     - 
         title: Hide Title Bar
@@ -1681,6 +1693,7 @@ button.mod-warning {
     border-radius: var(--radius);
 }
 /*Recolor Top*/
+.workspace-tabs,
 .workspace-tab-container-before.is-before-active,
 .workspace-tab-container-after.is-after-active,
 .workspace-tab-header.is-before-active,
@@ -1689,7 +1702,7 @@ button.mod-warning {
 .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
 .workspace-tab-header.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-    background-color: transparent;
+    background-color: var(--side-bar);
     border-radius: var(--radius);
 }
 .workspace-tab-header-container {
@@ -6370,8 +6383,8 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 
 /*Hide Note Title*/
-.h-nt .view-header:not(:hover),
-.h-wksp .view-header:not(:hover) {
+.h-nt .view-header:not(:hover):not(:focus-within),
+.h-wksp .view-header:not(:hover):not(:focus-within) {
     position: absolute;
     width: 100%;
     opacity: 0;
@@ -6379,6 +6392,16 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 .h-nt .view-content,
 .h-wksp .view-content { height: 100%; }
+
+/*Hide Note Title Icons*/
+.h-nt-i .view-header:not(:hover):not(:focus-within) .view-header-icon, 
+.h-nt-i .view-header:not(:hover):not(:focus-within) .view-actions,
+.h-wksp .view-header:not(:hover):not(:focus-within) .view-header-icon, 
+.h-wksp .view-header:not(:hover):not(:focus-within) .view-actions {
+    opacity: 0;
+    width: 0;
+    padding: 0 5px;
+}
 
 /*Hide Left Ribbon*/
 .h-rib .side-dock-ribbon.mod-left:not(:hover),
@@ -6412,11 +6435,20 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 .h-stbr .status-bar:not(:hover),
 .h-wksp .status-bar:not(:hover) { opacity: 0; }
 
+/*Hide File Explorer Buttons*/
+.h-fexp .nav-buttons-container:not(:hover),
+.h-wksp .nav-buttons-container:not(:hover),
+.h-tab-i .workspace-tab-header-container:not(:hover),
+.h-wksp .workspace-tab-header-container:not(:hover) { 
+    opacity: 0;
+    height: 6px;
+}
+
 /**/
 .nt-g .workspace-leaf.mod-active .view-header {
     background: var(--dark-accent);
 }
-
+/*Move Ribbon Up*/
 .rsb-up .mod-right-split .workspace-leaf-content {
     padding-bottom: 22px;
 }

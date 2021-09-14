@@ -20,6 +20,12 @@ settings:
         type: variable-text
         default: "'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif"
     -
+        title: Vault Font
+        description: Vault Title Specific Font, otherwise Headings above replaces both.
+        id: vault-f
+        type: variable-text
+        default: "'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif"
+    -
         title: Text
         description: Changes text font for preview and edit mode. 
         id: default-font
@@ -1262,6 +1268,7 @@ settings:
     --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif; /*Works, but if it doesn't, needs !important*/
     --pre-font: var(--default-font) !important;
     --ed-font: var(--default-font) !important;
+    
 
     --rmx: 'remixicon';
     --mdi: 'Material Icons Sharp';
@@ -1294,6 +1301,7 @@ settings:
     /*Sizes*/
     --scroll-size: 7px;
     --lh: 1.5em;
+    --vault-f: var(--font);
     --f-text: 16px;
     --f-small: .88em;
     --f-tag: 13px;
@@ -1779,7 +1787,7 @@ button.mod-warning {
 .nav-folder.mod-root > .nav-file-title,
 .nav-folder.mod-root > .nav-folder-title {
     color: var(--headers);
-    font-family: var(--font);
+    font-family: var(--vault-f);
     font-size: calc(var(--f-s-h) - 10px);
     /*border-bottom: 3px solid var(--accent);*/
     padding-left: .2em !important;
@@ -5804,18 +5812,14 @@ g.classGroup line {
 
 
 /*Copy Codeblock Plugin*/
-.copy-code-button { 
-    display: none !important;
-    color: var(--note) !important;
+.copy-code-button {
+    margin: 0 !important;
+    color: var(--text) !important;
     font-family: var(--font-monospace);
-    background-color: var(--inactive) !important;
-    text-transform: uppercase;
+    background-color: var(--inactive);
 }
 .copy-code-button:hover { color: var(--text-dl) !important; }
 
-.has-copy-button:hover .copy-code-button {
-    display: unset !important;
-}
 
 /*--Style Settings Plugin--*/
 /*--Style Settings Menu--*/

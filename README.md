@@ -114,9 +114,16 @@ Classes | Description
 `writing` | Centers Headings, justifies text, auto sets readable line width
 `poem` | Centers text
 `kanban` | Turn lists into kanban-like boards
-`table` | First column background darker and text bolded
+`k-o` | Adds border and bullet to sub list of a kanban list
+`table` | First column has a darker background and text is bolded
 `t-c` | Center tables
 `t-w` | Table expands to fill the whole width of the file
+`hc` | Center headings
+`hcl` | Center headings with a line on each side
+`illusion` | Apply Illusion Theme inspired styling to headings
+`dvl` | Stylize Dataview Lists to be more spaced out and have a background
+`s-li` | Space out lists
+`img-grid` | Apply image grid to all pictures on page
 
 ## Ids 
 
@@ -126,6 +133,7 @@ Classes | Description
 ---|---|
 `#col` | Show/Create a color block
 `#font` | Showcase a font in huge sized text
+`#vid` | 16:9 aspect ratio for videos. Used before an iframe:<br>`<div id=vid><iframe></iframe></div>`
 
 **Examples:**
 ![](https://i.imgur.com/FHYhFcR.png)

@@ -35,10 +35,9 @@ settings:
 }
 
 /*Restyle Checkboxes*/
-.markdown-preview-view li:not(li[data-task="x"]) .task-list-item-checkbox {
+.markdown-preview-view li:not(li[data-task="x"]) .task-list-item-checkbox.is-checked {
     -webkit-appearance: none;
     border: 1px solid var(--interactive-accent);
-    border-radius: 4px;
     position: relative;
     width: 14px;
     height: 14px;

@@ -36,7 +36,7 @@ settings:
 .markdown-preview-view .task-list-item-checkbox {
     -webkit-appearance: none;
     border: 1px solid var(--interactive-accent);
-    border-radius: var(--radius);
+    border-radius: 4px;
     position: relative;
     width: 14px;
     height: 14px;

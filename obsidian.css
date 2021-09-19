@@ -1854,6 +1854,12 @@ settings:
 }
 
 
+
+
+
+
+
+
 :root {
     /*FONTS*/
     --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
@@ -1962,6 +1968,8 @@ settings:
     --statblock-background-color: transparent;
     --statblock-bar-color: var(--accent);
 }
+
+
 
 .theme-dark {
     --background-primary: var(--note); /*Note background*/
@@ -3621,31 +3629,7 @@ input[type=checkbox]:checked::before {
     color: var(--soft-text);
 }
 
-[data-task="-"] > input[type=checkbox]:checked {
-    background-color: var(--outline) !important;   
-}
-[data-task="-"] > input[type=checkbox]:checked::before {
-    content: "-";
-}
 
-[data-task=">"] > input[type=checkbox]:checked {
-    background-color: var(--lines) !important;
-}
-[data-task=">"] > input[type=checkbox]:checked::before {
-    content: ">";
-}
-[data-task="?"] > input[type=checkbox]:checked::before {
-    content: "?";
-}
-[data-task="!"] > input[type=checkbox]:checked::before {
-    content: "!";
-}
-[data-task="/"] > input[type=checkbox]:checked::before {
-    content: "/";
-}
-[data-task="+"] > input[type=checkbox]:checked::before {
-    content: "+";
-}
 
 /*Table Checkboxes*/
 input[type="checkbox" i] {

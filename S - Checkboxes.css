@@ -44,7 +44,7 @@ settings:
     cursor: pointer;
 }
 /* Hide Checkbox Border */
-.markdown-preview-view  :not(li[data-task="x"]) .task-list-item-checkbox:checked {
+.markdown-preview-view li:not(li[data-task="x"]) .task-list-item-checkbox:checked {
     border: none;
     background-color: var(--interactive-accent);
 }

@@ -33,7 +33,7 @@ settings:
 }
 
 /*Restyle Checkboxes*/
-.markdown-preview-view .task-list-item-checkbox {
+.markdown-preview-view li:not(li[data-task="x"]) .task-list-item-checkbox {
     -webkit-appearance: none;
     border: 1px solid var(--interactive-accent);
     border-radius: 4px;
@@ -44,12 +44,12 @@ settings:
     cursor: pointer;
 }
 /* Hide Checkbox Border */
-.markdown-preview-view .task-list-item-checkbox:checked {
+.markdown-preview-view  :not(li[data-task="x"]) .task-list-item-checkbox:checked {
     border: none;
     background-color: var(--interactive-accent);
 }
 /* Checkbox Icon Setup*/
-.markdown-preview-view .task-list-item-checkbox:checked::before {
+.markdown-preview-view :not(li[data-task="x"]) > .task-list-item-checkbox:checked::before {
     content: ' ';
     position: absolute;
     width: 12px;
@@ -76,13 +76,13 @@ settings:
 /*--Theme Specific Fixes--*/
 /* Yin & Yang Theme */
 .is-flashing input[type="checkbox"]:checked:before,
-input[type="checkbox"]:checked:before {
+:not(li[data-task="x"]) > input[type="checkbox"]:checked:before {
     background-image: url();
 }
 /* Minimal Theme */
 .todo-list .group .item.compact > .toggle .checked,
 .is-flashing input[type=checkbox]:checked,
-input[type=checkbox]:checked {
+:not(li[data-task="x"]) > input[type=checkbox]:checked {
     background-image: url();
     background-color: transparent !important;
 }
@@ -97,7 +97,6 @@ input[type=checkbox]:checked {
 /*--Checkbox Type Icons--*/
 
 /* SVG check mark for done ('- [x]') */
-.markdown-preview-view li[data-task="x"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="X"]>.task-list-item-checkbox:checked::before {
     background-color: var(--accent2-lite, var(--text-accent));
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='14' height='14' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'%3E%3Cg fill='none'%3E%3Cpath d='M8.818 19.779l-6.364-6.364l2.83-2.83l3.534 3.544l9.898-9.908l2.83 2.83L8.818 19.779z' fill='currentColor'/%3E%3C/g%3E%3C/svg%3E");

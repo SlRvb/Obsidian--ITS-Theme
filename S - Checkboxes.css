@@ -35,7 +35,7 @@ settings:
 }
 
 /*Restyle Checkboxes*/
-.markdown-preview-view li:not(li[data-task="x"]) .task-list-item-checkbox.is-checked {
+.markdown-preview-view li:not(li[data-task="x"]) .task-list-item-checkbox:checked {
     -webkit-appearance: none;
     border: 1px solid var(--interactive-accent);
     position: relative;
@@ -77,13 +77,13 @@ settings:
 /*--Theme Specific Fixes--*/
 /* Yin & Yang Theme */
 .is-flashing input[type="checkbox"]:checked:before,
-:not(li[data-task="x"]) > input[type="checkbox"]:checked:before {
+li:not(li[data-task="x"]) > input[type="checkbox"]:checked:before {
     background-image: url();
 }
 /* Minimal Theme */
 .todo-list .group .item.compact > .toggle .checked,
 .is-flashing input[type=checkbox]:checked,
-:not(li[data-task="x"]) > input[type=checkbox]:checked {
+li:not(li[data-task="x"]) > input[type=checkbox]:checked {
     background-image: url();
     background-color: transparent !important;
 }

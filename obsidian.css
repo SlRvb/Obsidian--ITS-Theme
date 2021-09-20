@@ -3653,7 +3653,7 @@ input[type=checkbox]:checked::before {
     --R: #9fbadf;
 }
 /* Hide Checkbox Border */
-.markdown-preview-view li:not(li[data-task="x"]) .task-list-item-checkbox:checked {
+.markdown-preview-view li:not(li[data-task="x"]) > .task-list-item-checkbox:checked {
     border: none;
     background-color: transparent;
 }

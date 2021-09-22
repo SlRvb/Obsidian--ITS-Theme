@@ -6518,9 +6518,16 @@ g.classGroup line {
     color: var(--text-dl) !important;
 }
 
-.kanban-plugin .task-list-item-checkbox {
-    -webkit-appearance: checkbox;
-} 
+/*Kanban Checkboxes */
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox],
+.kanban-plugin__item.is-complete .task-list-item-checkbox {
+    filter: unset !important;
+}
+.kanban-plugin__item.is-complete .task-list-item-checkbox {
+    border: none;
+    background-color: var(--accent);
+}
+
 
 /*Metadata*/
 .kanban-plugin__item-metadata-wrapper:not(:empty) {

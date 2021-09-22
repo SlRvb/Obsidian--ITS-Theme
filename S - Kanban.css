@@ -33,7 +33,7 @@ Full credit to Manedblackwolf for such amazing work!
     margin-top: 2px;
 }
 
-.kanban-plugin .task-list-item-checkbox {
+.kanban-plugin__item-title-wrapper .task-list-item-checkbox {
     -webkit-appearance: none !important;
     margin-right: .3em;
 }

@@ -3527,6 +3527,13 @@ ul li > p {
     margin-block-end: unset;
 }
 
+/*Fix - 1. collapse Error*/
+ul li.is-collapsed::before {
+    float: unset;
+    position: relative;
+}
+
+
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
 .cm-s-obsidian span.cm-formatting-list-ul::before,

@@ -6455,7 +6455,7 @@ g.classGroup line {
 /*Outer box*/
 .kanban-plugin__lane { 
     background-color: var(--note) !important;
-    border-radius: var(--border-radius) !important;
+    border-radius: var(--radius) !important;
     border: 3px solid var(--outline) !important;
     box-shadow: -.2em .2em var(--outline) !important;
 }
@@ -6465,15 +6465,15 @@ g.classGroup line {
 .kanban-plugin__item {
     border: 0 !important;
     border-left: 3px solid var(--accent) !important;
-    border-radius: var(--border-radius) !important;
+    border-radius: var(--radius) !important;
 }
 .kanban-plugin__item-content-wrapper {
     background-color: var(--outer-bar) !important;
-    border-radius: var(--border-radius) !important; 
+    border-radius: var(--radius) !important; 
 }
 .kanban-plugin__item-content-wrapper:hover { 
     background-color: var(--hvr2) !important;
-    border-radius: var(--border-radius) !important;
+    border-radius: var(--radius) !important;
 
 }
 .kanban-plugin__item-title .markdown-preview-view {
@@ -6481,9 +6481,7 @@ g.classGroup line {
 }
 
 .kanban-plugin__lane-input,
-.kanban-plugin__item-input { 
-    border-radius: var(--border-radius) !important;
-}
+.kanban-plugin__item-input,
 .kanban-plugin__lane-items {
     border-radius: var(--radius) !important;
 }
@@ -6522,6 +6520,7 @@ g.classGroup line {
 .kanban-plugin__item-prefix-button-wrapper input[type=checkbox],
 .kanban-plugin__item.is-complete .task-list-item-checkbox {
     filter: unset !important;
+    margin-right: 5px !important;
 }
 .kanban-plugin__item.is-complete .task-list-item-checkbox {
     border: none;

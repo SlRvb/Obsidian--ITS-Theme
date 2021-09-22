@@ -32,6 +32,12 @@ Full credit to Manedblackwolf for such amazing work!
     margin-left: 20px;
     margin-top: 2px;
 }
+
+.kanban-plugin .task-list-item-checkbox {
+    -webkit-appearance: none !important;
+    margin-right: .3em;
+}
+
 /*Fix List Checkbox Margins*/
 .kanban ol .task-list-item-checkbox {
     margin-left: 4px;

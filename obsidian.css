@@ -3092,7 +3092,6 @@ input[type='range']::-webkit-slider-thumb {
 /*Remove Note Padding*/
 .workspace-split.mod-root .view-content {
     padding: 0;
-    overflow: hidden;
 }
 
 /*Editor Resize*/

@@ -6954,8 +6954,8 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 
 .b-li-o ol::marker,
-.b-li-o ul li:nth-child(odd)::before,
-.b-li-o ul li:nth-child(even)::before {
+.b-li-o .workspace-leaf-content:not([data-type="cross-reference-navigation"]) ul li:nth-child(odd)::before,
+.b-li-o .workspace-leaf-content:not([data-type="cross-reference-navigation"]) ul li:nth-child(even)::before {
     color: var(--fg);
 }
 

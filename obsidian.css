@@ -1213,6 +1213,10 @@ settings:
         title: Swap Sliding Pane Icons
         id: slp
         type: class-toggle
+    -
+        title: Cross Reference Plugin Adjustments
+        id: crs-ref
+        type: class-toggle
 */
 
 /*Fonts*/
@@ -6793,12 +6797,10 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 /*Top Page Tags*/
 .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
     white-space: nowrap;
-    border: 0 !important;
-    background-color: var(--tag);
 }
-.theme-light .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
-    border: var(--tag-o) solid var(--tag) !important;
-    background-color: transparent;
+.crs-ref .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
+    border: 0 !important;
+    background-color: var(--bg);
 }
 .workspace-leaf-content[data-type="cross-reference-navigation"] .btn.selected {
     color: var(--text-dl) !important;

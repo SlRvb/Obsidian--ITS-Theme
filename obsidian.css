@@ -1094,7 +1094,7 @@ settings:
         format: rgb
         opacity: true
         default-dark: '#a83c3c40'
-        default-light: '#c7818140'
+        default-light: '#ff000036'
     -
         title: Search Highlight
         description: Search result highlight color.
@@ -2128,7 +2128,7 @@ settings:
     --text-error: #ff3333; /*??*/
     --text-error-hover: #990000; /*??*/
     
-    --text-highlight-bg: rgba(255, 185, 185, 0.253); /*Text highlights*/
+    --text-highlight-bg: rgba(255, 0, 0, 0.212); /*Text highlights*/
     --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Search Highlight*/
     --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
     
@@ -3547,7 +3547,7 @@ ul li > p {
     content:'';
     border-left: var(--b-line) solid var(--accent);
     position: absolute;
-    left: 6px;
+    left: 7px;
     top: -5px;
     bottom: -4px; 
 }
@@ -6793,9 +6793,15 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 /*Top Page Tags*/
 .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
     white-space: nowrap;
-    background: var(--tag);
     border: 0 !important;
-    color: var(--text-dl)
+    background-color: var(--tag);
+}
+.theme-light .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
+    border: var(--tag-o) solid var(--tag) !important;
+    background-color: transparent;
+}
+.workspace-leaf-content[data-type="cross-reference-navigation"] .btn.selected {
+    color: var(--text-dl) !important;
 }
 .workspace-leaf-content[data-type="cross-reference-navigation"] .hscroll {
     padding-bottom: 10px;
@@ -6911,11 +6917,13 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 
 /*Tags*/
-.tag-notion a.tag {
-    border-radius: 5px;
+.tag-notion a.tag,
+.tag-notion .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
+    border-radius: 5px !important;
 }
-.tag-bubble a.tag {
-    border-radius: 25px;
+.tag-bubble a.tag,
+.tag-bubble .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
+    border-radius: 25px !important;
 }
 .tag-outline a.tag {
     background-color: transparent;

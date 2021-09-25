@@ -5279,6 +5279,10 @@ blockquote mark strong {
     padding-left: 0px;
 }
 
+.kanban ul li {
+    padding-left: 0;
+}
+
 
 /*Hide Bullet*/
 .kanban ul, 

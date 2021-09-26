@@ -5267,7 +5267,7 @@ blockquote mark strong {
 
 /*Remove Text Spacing from bullet/number*/
 .kanban .task-list-item-checkbox {
-    margin-left: 20px;
+    margin-left: 23px;
     margin-right: 5px;
     margin-top: 2px;
 }
@@ -5279,7 +5279,7 @@ blockquote mark strong {
     padding-left: 0px;
 }
 
-.kanban ul li {
+.kanban:not(.k-o) ul li {
     padding-left: 0;
 }
 
@@ -5452,6 +5452,10 @@ ol.kanban .task-list-item .list-collapse-indicator {
     border-left: 5px solid var(--accent);
     margin-left: -5px;
     background: var(--outline);
+}
+
+.k-o ul ul ul li::before {
+    content: '';
 }
 
 /*Display Embed Title*/

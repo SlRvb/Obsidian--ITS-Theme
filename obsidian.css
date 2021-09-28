@@ -6979,10 +6979,10 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 
 
 /*Bullet Line Original (Adjusted)*/
-.b-li-o ul:not(.dataview) li,
-.b-li-o ol:not(.dataview) li,
-.b-li-o ul:not(.dataview) li:nth-child(even),
-.b-li-o ol:not(.dataview) li:nth-child(even) {
+.b-li-o ul:not(table .dataview) li,
+.b-li-o ol:not(table .dataview) li,
+.b-li-o ul:not(table .dataview) li:nth-child(even),
+.b-li-o ol:not(table .dataview) li:nth-child(even) {
     border: none;
 }
 

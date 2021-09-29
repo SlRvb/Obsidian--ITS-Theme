@@ -1034,9 +1034,29 @@ settings:
     --sphd-ed-5: var(--f-icon);
     --sphd-ed-6: var(--code-bg);
 }
+.theme-light.its-d {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
 
+    --background-modifier-border: var(--table);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    --note: #e6edf8;
+    --outer-bar: #d5e1f3;
+    --dark-sidebar: #dce4f6;
+    --dark-accent: #f3d8dd;
+
+    --bg:#d9e4f0;
+    --code-bg: #e6ebf8;
+
+}
 /*Bullet Edits*/
-
 /*Hide bullet*/
 .its-d ul li::before {
     display: none;
@@ -1049,6 +1069,8 @@ settings:
     position: absolute;
     padding-left: 25px;
 }
+
+
 
 /*----Theme: Tangerine Dunes----*/
 .theme-dark.t-d, .theme-light.t-d {

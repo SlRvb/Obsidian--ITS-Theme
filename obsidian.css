@@ -6539,6 +6539,14 @@ g.classGroup line {
 .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
     color: var(--text-dl) !important;
 }
+/*Regular Text Card Button Fix*/
+.kanban-plugin__item button.kanban-plugin__item-prefix-button, 
+.kanban-plugin__item button.kanban-plugin__item-postfix-button {
+    position: absolute;
+    right: 10px;
+    background: var(--outline) !important;
+}
+
 .kanban-plugin__lane-form-wrapper {
     border-radius: 0 !important;
 }

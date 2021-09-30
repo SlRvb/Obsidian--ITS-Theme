@@ -6539,7 +6539,9 @@ g.classGroup line {
 .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
     color: var(--text-dl) !important;
 }
-
+.kanban-plugin__lane-form-wrapper {
+    border-radius: 0 !important;
+}
 /*Kanban Checkboxes */
 .kanban-plugin__item-prefix-button-wrapper input[type=checkbox],
 .kanban-plugin__item.is-complete .task-list-item-checkbox {

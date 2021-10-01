@@ -171,6 +171,14 @@ Example | Description |
 ---|---|
 `![[image.png\|clear]]`| `clear` will allow that image to sit below another image<br>If it's on the same side instead of sitting in the middle of the page.
 
+### Image Grid
+
+Example | Description |
+---|---|
+`![[image.png\|grid]]` | `grid` will allow that image and others with this to display side-by-side in a grid
+
+![](Images/Image_Adjustments-Image-Grids.png)
+
 ### Cover (Mostly for Customizable Version)
 
 Example | Description |

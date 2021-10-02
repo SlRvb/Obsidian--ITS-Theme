@@ -6540,7 +6540,6 @@ g.classGroup line {
     color: var(--text-dl) !important;
 }
 /*Regular Text Card Button Fix*/
-.kanban-plugin__item-content-wrapper:not(:hover) .kanban-plugin__item-prefix-button-wrapper, 
 .kanban-plugin__item-content-wrapper:not(:hover) .kanban-plugin__item-postfix-button-wrapper {
     width: 0px;
 }

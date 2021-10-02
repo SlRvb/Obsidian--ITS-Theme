@@ -299,14 +299,16 @@ Example | Description |
 
 # Embed Adjustments
 
-> **Embed Adjustments use the same [parameters](#sizing) as the images for resizing it and [moving it](#left-right-center) (except for `c`).**
+> **Embed Adjustments use the same [parameters](#sizing) as the images for resizing it and [moving it](#left-right-center).**
 
 Example | Description
 ---|---|
-`![[Embed Page\|no-lk]]` | Hide the link
+`![[Embed Page\|nlk]]` | Hide the link until hovered over embed
 `![[Embed Page\|lk-l]]` | Move link to the left
 `![[Embed Page\|lk-clear]]` | Make background of the link transparent
-`![[Embed Page\|no-m]]` | Will remove margins and padding
+`![[Embed Page\|nmg]]` | Will remove margins and padding
+`![[Embed Page\|full]]` | Display the full embed
+`![[Embed Page\|clean]]` | Removes borders/etc to hide embed design 
 
 ## Heading & Titles
 

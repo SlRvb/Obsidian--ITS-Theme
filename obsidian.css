@@ -3534,24 +3534,20 @@ ul li > p {
 
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
-
-.cm-s-obsidian span.cm-formatting-list-ul::after,
+.cm-s-obsidian span.cm-formatting-list-ul::before,
 .cm-s-obsidian span.cm-formatting-list-ol {
     color: var(--soft-text);
 }
 
-.cm-s-obsidian span.cm-formatting-list-ul {
-    margin-left: .2em;
-    margin-right: .1em;
-}
-.cm-s-obsidian span.cm-formatting-list-ol {
-    margin-left: -.2em;
-    margin-right: -.05em;
-}
-.cm-s-obsidian span.cm-formatting-list-ul::after {
+.cm-s-obsidian span.cm-formatting-list-ul::before {
     content: var(--bullet);
     font-family: var(--bul-f);
-    margin-left: -1.3em;/**/
+    margin-left: -.3em;
+    margin-right: -.7em;
+}
+/*Adjust Padding*/
+.cm-s-obsidian span.cm-formatting-list-ol {
+    margin-left: -.2em;
 }
 
 /*Editor Bullet Lines*/
@@ -3562,7 +3558,7 @@ ul li > p {
     content:'';
     border-left: var(--b-line) solid var(--accent);
     position: absolute;
-    left: .094em;
+    left: .2em;
     top: -5px;
     bottom: -4px; 
 }

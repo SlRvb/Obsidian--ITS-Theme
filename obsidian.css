@@ -5297,7 +5297,7 @@ blockquote mark strong {
     padding-left: 0px;
 }
 
-.kanban:not(.k-o) ul li {
+.kanban:not(.k-o):not(.dvl) ul li {
     padding-left: 0;
 }
 

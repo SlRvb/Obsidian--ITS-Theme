@@ -2324,7 +2324,7 @@ button.mod-warning {
 .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
 .workspace-tab-header.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-    background-color: var(--side-bar);
+    background-color: transparent;
     border-radius: var(--radius);
 }
 .workspace-tab-header-container {
@@ -3049,7 +3049,7 @@ input[type='range']::-webkit-slider-thumb {
 
 /*--NOTE TITLEBAR--*/
 .view-header {
-    border: 0;
+    border: 0 !important;
     background: var(--note);
 }
 .view-header-title,
@@ -3111,6 +3111,7 @@ input[type='range']::-webkit-slider-thumb {
     box-sizing: content-box;
     font-family: var(--font-monospace);
     text-align: right;
+    background: transparent !important;
 }
 
 
@@ -3533,15 +3534,24 @@ ul li > p {
 
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
-.cm-s-obsidian span.cm-formatting-list-ul::before,
+
+.cm-s-obsidian span.cm-formatting-list-ul::after,
 .cm-s-obsidian span.cm-formatting-list-ol {
     color: var(--soft-text);
 }
 
-.cm-s-obsidian span.cm-formatting-list-ul::before {
+.cm-s-obsidian span.cm-formatting-list-ul {
+    margin-left: .2em;
+    margin-right: .1em;
+}
+.cm-s-obsidian span.cm-formatting-list-ol {
+    margin-left: -.2em;
+    margin-right: -.05em;
+}
+.cm-s-obsidian span.cm-formatting-list-ul::after {
     content: var(--bullet);
     font-family: var(--bul-f);
-    margin-right: -10px;
+    margin-left: -1.3em;/**/
 }
 
 /*Editor Bullet Lines*/
@@ -3552,7 +3562,7 @@ ul li > p {
     content:'';
     border-left: var(--b-line) solid var(--accent);
     position: absolute;
-    left: 7px;
+    left: .094em;
     top: -5px;
     bottom: -4px; 
 }
@@ -5469,6 +5479,14 @@ ol.kanban .task-list-item .list-collapse-indicator {
 .k-o ul ul ul li::before {
     content: '';
 }
+.k-o ul ul .collapse-icon svg {
+    color: transparent;
+    margin-left: -10px;
+}
+.k-o .kanban ul ul,
+ul.kanban ul {
+    border: none;
+}
 
 /*Display Embed Title*/
 .kanban-o .internal-embed::before{
@@ -6999,17 +7017,17 @@ h3.breadcrumbs-matrix-header:after { display: none; }
     color: var(--fg);
 }
 
-.b-li-o .markdown-preview-view:not(.kanban) ol ul,
-.b-li-o .markdown-preview-view:not(.kanban) ul ol,
-.b-li-o .markdown-preview-view:not(.kanban) ul ul,
-.b-li-o .markdown-preview-view:not(.kanban) ul ul,
-.b-li-o .markdown-preview-view:not(.kanban) ol ol {
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ol ul,
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ul ol,
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ul ul,
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ul ul,
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ol ol {
     margin-left: -15px;
     padding-left: 35px;
     border-left: var(--b-line) solid var(--accent);
 }
 
-.b-li-o .markdown-preview-view:not(.kanban) .task-list-item-checkbox {
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) .task-list-item-checkbox {
     margin-left: 1px;
     margin-right: 6px;
 }

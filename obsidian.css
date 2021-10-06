@@ -2959,10 +2959,9 @@ input[type='range']::-webkit-slider-thumb {
     padding: 3px 7px 0 0;
 }
 
-.prompt .suggestion-item:nth-child(even) {
-    background-color: var(--aside-bg);
+.prompt .suggestion-item:nth-child(even):not(.is-selected) {
+    background-color: var(--td);
 }
-
 
 
 /*--Publish Settings--*/

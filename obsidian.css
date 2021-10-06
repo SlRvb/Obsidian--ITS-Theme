@@ -2930,6 +2930,41 @@ input[type='range']::-webkit-slider-thumb {
     margin-right: 5px;
 }
 
+
+/*Settings: Community Themes*/
+.community-theme { background-color: var(--note); }
+.community-theme,
+.community-theme.is-selected {
+    border-radius: var(--radius);
+    box-shadow: 4px 4px var(--outline);
+    border: 2px solid var(--outline);
+    margin: 10px 10px;
+    max-width: 300px;
+}
+/*Resize Images*/
+.community-theme-screenshot { 
+    max-width: 260px;
+    max-height: 150px;
+}
+/* Fix Selected Colors*/
+.community-theme.is-selected { color: var(--text-dl) }
+.community-theme.is-selected .clickable-icon { color: var(--text-dl); }
+
+
+/*Command Palette*/
+.prompt .suggestion-prefix::after { display: none; }
+.prompt .suggestion-prefix {
+    color: var(--headers);
+    font-weight: 600;
+    padding: 3px 7px 0 0;
+}
+
+.prompt .suggestion-item:nth-child(even) {
+    background-color: var(--aside-bg);
+}
+
+
+
 /*--Publish Settings--*/
 .modal-bg {
     background-color: var(--background-modifier-form-field-highlighted);

@@ -2960,7 +2960,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .prompt .suggestion-item:nth-child(even):not(.is-selected) {
-    background-color: var(--td);
+    background-color: var(--aside-bg);
 }
 
 

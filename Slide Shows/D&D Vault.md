@@ -48,6 +48,8 @@ Items | Weapons, food, treasure, supplies, etc
 Entities | Usually Stats, or lore about creatures
 Organizations | Clans, groups, governments, etc
 
+<br>
+
 - Sometimes includes other folders like:
 	- Encounters
 	- Brainstorm

@@ -2025,7 +2025,7 @@ settings:
     --interactive-hover: var(--embed-bg);/*Button Color*/
     --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
-    --interactive-accent-hover: var(--accent); /*Menu Button Hover*/
+    --interactive-accent-hover: var(--dark-accent); /*Menu Button Hover*/
     --interactive-success: #599049; /*??*/
     
     --scrollbar-bg: rgba(160, 214, 255, 0.07);

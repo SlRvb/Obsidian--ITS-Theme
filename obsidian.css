@@ -2128,7 +2128,7 @@ settings:
     --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-success: #deedd9; /*Publish Upload Success Background*/
-    --background-modifier-error: var(--accent); /*Delete Screen Button*/
+    --background-modifier-error: #990000; /*Delete Screen Button*/
     --background-modifier-error-rgb: 240, 131, 131; /*Ctrl F Search Background*/
     --background-modifier-error-hover: #470000; /*??*/
     --background-modifier-cover: var(--deep-dark-accent); /*Obsidian Title Bar*/

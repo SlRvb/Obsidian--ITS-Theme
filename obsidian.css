@@ -2749,10 +2749,9 @@ input[type='number']:hover {
     transition: transform 100ms ease-in-out;
     color: var(--lines);
 }
-.collapse-icon {
-    margin-top: -.1em;
-}
-
+.collapse-icon { margin-top: 0; }
+.markdown-preview-view .heading-collapse-indicator { margin-top: calc(var(--f-s-h) * -.3); }
+.publish-section-header-toggle-collapsed-button { margin-top: 2px;}
 
 /*Slider Colors*/
 input[type='range'] {
@@ -2977,7 +2976,8 @@ input[type='range']::-webkit-slider-thumb {
 .modal-bg {
     background-color: var(--background-modifier-form-field-highlighted);
 }
-.list-item-part mod-extended publish-upload-item-title {
+.publish-upload-item.mod-completed > *,
+.list-item-part .mod-extended .publish-upload-item-title {
     color: var(--text-dl);
 }
 

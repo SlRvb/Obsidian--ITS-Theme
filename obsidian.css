@@ -2984,17 +2984,18 @@ input[type='range']::-webkit-slider-thumb {
 /*Published flair*/
 .flair {
     background-color: var(--interactive-normal);
-    color: var(--text-dl);
+    color: var(--text);
     border-radius: var(--radius);
 }
-.publish-upload-item:before {
-    border-radius: var(--radius);
-}
+.publish-upload-item:before { border-radius: var(--radius); }
+.file-tree-item-icon { margin-left: 8px; }
 
 /*Publish item select*/
 .file-tree-item-header.is-selected {
     background-color: rgba(var(--interactive-accent-rgb), 0.2);
 }
+.file-tree .tree-item-inner { border-radius: var(--radius); }
+.file-tree .mod-new .tree-item-flair { color: var(--text); }
 
 /*--Graph View--*/
 /*Graph Pane BG*/

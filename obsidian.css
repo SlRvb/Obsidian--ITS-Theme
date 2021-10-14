@@ -2979,7 +2979,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 .publish-upload-item.mod-completed > *,
 .list-item-part .mod-extended .publish-upload-item-title {
-    color: var(--text-dl);
+    color: var(--text);
 }
 
 /*Published flair*/

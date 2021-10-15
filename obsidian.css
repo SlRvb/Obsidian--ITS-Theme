@@ -2751,7 +2751,7 @@ input[type='number']:hover {
 }
 .collapse-icon { margin-top: 0; }
 .markdown-preview-view .collapse-icon { margin-top: -2px; }
-.markdown-preview-view .heading-collapse-indicator { margin-top: calc(var(--f-s-h) * -.3); }
+.markdown-preview-view .heading-collapse-indicator { margin-top: calc(var(--f-s-h) * -.3px); }
 .publish-section-header-toggle-collapsed-button { margin-top: 2px;}
 
 /*Slider Colors*/
@@ -7007,6 +7007,28 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 }
 /*Hide List Spacer*/
 .workspace-leaf-content[data-type="cross-reference-navigation"] ul + .spacer { display: none; }
+
+
+.workspace-leaf-content[data-type="FANTASY_CALENDAR"] .view-content {
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

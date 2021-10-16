@@ -1226,6 +1226,11 @@ settings:
         title: Workspace Tab Note Adjustments
         id: starp
         type: class-toggle
+    -
+        title: Mobile Toolbar Adjustment
+        description: Multi-row bar sorts properly, but scrolls vertically now.
+        id: mtb
+        type: class-toggle
 */
 
 /*Fonts*/
@@ -7011,6 +7016,11 @@ h3.breadcrumbs-matrix-header:after { display: none; }
 
 .workspace-leaf-content[data-type="FANTASY_CALENDAR"] .view-content {
     padding: 10px;
+}
+
+body.mtb.AT-multirow .mobile-toolbar-options-container { 
+    flex-flow: row wrap;
+    overflow-y: auto; 
 }
 
 

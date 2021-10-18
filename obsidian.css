@@ -917,43 +917,43 @@ settings:
 		id: b-l-1
 		type: variable-themed-color
 		format: hex
-		default-dark: '#683732'
-		default-light: '#683732'
+		default-dark: '#7c2929'
+		default-light: '#e45858'
 	-
 		title: Bullet Line 2 Color
 		id: b-l-2
 		type: variable-themed-color
 		format: hex
-		default-dark: '#a13531'
-		default-light: '#ff1702'
+		default-dark: '#a56146'
+		default-light: '#fd9268'
 	-
 		title: Bullet Line 3 Color
 		id: b-l-3
 		type: variable-themed-color
 		format: hex
-		default-dark: '#fc4435'
-		default-light: '#e27777'
+		default-dark: '#386b3f'
+		default-light: '#4fd160'
 	-
 		title: Bullet Line 4 Color
 		id: b-l-4
 		type: variable-themed-color
 		format: hex
-		default-dark: '#ff6a79'
-		default-light: '#ff7482'
+		default-dark: '#3e7779'
+		default-light: '#43bfc3'
 	-
 		title: Bullet Line 5 Color
 		id: b-l-5
 		type: variable-themed-color
 		format: hex
-		default-dark: '#ac7782'
-		default-light: '#ad8f8f'
+		default-dark: '#435aa5'
+		default-light: '#5c7eee'
 	-
 		title: Bullet Line 6 Color
 		id: b-l-6
 		type: variable-themed-color
 		format: hex
-		default-dark: '#d6b6bc'
-		default-light: '#d6b6bc'
+		default-dark: '#687286'
+		default-light: '#adbad3'
     - 
         title: Tags
         id: Tags
@@ -2093,19 +2093,19 @@ body:not(.its-i) svg.clock-glyph {
 
 
     /*CSS Specifics*/
-    --b-l-1: #683732;
-    --b-l-2: #a13531;
-    --b-l-3: #fc4435;
-    --b-l-4: #ff6a79;
-    --b-l-5: #ac7782;
-    --b-l-6: #d6b6bc;
+    --b-l-1: #7c2929;
+    --b-l-2: #a56146;
+    --b-l-3: #386b3f;
+    --b-l-4: #3e7779;
+    --b-l-5: #435aa5;
+    --b-l-6: #687286;
 
     --sphd-pre-1: #7c2929;
     --sphd-pre-2: #652121;
     --sphd-pre-3: #571d1d;
     --sphd-pre-4: #381919;
     --sphd-pre-5: #424c61;
-    --sphd-pre-6: #2e333d;
+    --sphd-pre-6: #687286;
     --sphd-ed-1: #7c2929;
     --sphd-ed-2: #652121;
     --sphd-ed-3: #571d1d;
@@ -2223,12 +2223,12 @@ body:not(.its-i) svg.clock-glyph {
     
     
     /*CSS Specifics*/
-    --b-l-1: #683732;
-    --b-l-2: #ff1702;
-    --b-l-3: #e27777;
-    --b-l-4: #ff7482;
-    --b-l-5: #ad8f8f;
-    --b-l-6: #d6b6bc;
+    --b-l-1: #e45858;
+    --b-l-2: #fd9268;
+    --b-l-3: #4fd160;
+    --b-l-4: #43bfc3;
+    --b-l-5: #5c7eee;
+    --b-l-6: #adbad3;
 
     --sphd-pre-1: #bb5555;
     --sphd-pre-2: #a53f3f;
@@ -7176,7 +7176,7 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .bul-li-col ol ol ol > li, 
 .bul-li-col ol ol ol,
 .bul-li-col ol ol ol::before,
-.bul-col ul ul ul.task-list-item-checkbox
+.bul-col ul ul ul .task-list-item-checkbox
 { border-color: var(--b-l-3) !important; }
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(4):before,
 .bul-li-col ul ul ul ul > li, 
@@ -7185,7 +7185,7 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .bul-li-col ol ol ol ol > li, 
 .bul-li-col ol ol ol ol,
 .bul-li-col ol ol ol ol::before,
-.bul-col ul ul ul ul.task-list-item-checkbox
+.bul-col ul ul ul ul .task-list-item-checkbox
 { border-color: var(--b-l-4) !important; }
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(5):before,
 .bul-li-col ul ul ul ul ul > li, 
@@ -7194,7 +7194,7 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .bul-li-col ol ol ol ol ol > li, 
 .bul-li-col ol ol ol ol ol,
 .bul-li-col ol ol ol ol ol::before,
-.bul-col ul ul ul ul ul.task-list-item-checkbox
+.bul-col ul ul ul ul ul .task-list-item-checkbox
 { border-color: var(--b-l-5) !important; }
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(6):before,
 .bul-li-col ul ul ul ul ul ul > li, 
@@ -7202,7 +7202,8 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .bul-li-col ul ul ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol ol ol > li,
 .bul-li-col ol ol ol ol ol ol,
-.bul-li-col ol ol ol ol ol ol::before
+.bul-li-col ol ol ol ol ol ol::before,
+.bul-col ul ul ul ul ul ul .task-list-item-checkbox
 { border-color: var(--b-l-6) !important; }
 
 /*Colored Bullets*/

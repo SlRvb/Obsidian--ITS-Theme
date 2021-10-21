@@ -252,11 +252,11 @@
     font-style: normal;
 }
 
-/*Table*/
+/*Table
 table {
     margin-left: auto;
     margin-right: auto;
-}
+}*/
 
 /*Plugin: 5e Statblock*/
 .obsidian-statblock-plugin .creature-heading > .name {

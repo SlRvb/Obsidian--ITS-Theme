@@ -3145,7 +3145,8 @@ input[type='range']::-webkit-slider-thumb {
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar-thumb:active {
-    background-color: var(--lite-accent);
+    border: 0;
+    background-color: var(--accent);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar {
@@ -3360,7 +3361,8 @@ h4:after { width: 40%; }
 
 /*-Code-*/
 .markdown-preview-view code,
-.markdown-preview-view pre {
+.markdown-preview-view pre,
+code {
     color: var(--code-text);
     z-index: 0 !important;
     background-color: var(--code-bg);
@@ -7327,33 +7329,33 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 /*Neon Edit*/
 .bul-li-neon .cm-hmd-list-indent .cm-tab::before { 
     box-shadow:
-    0 0 10px var(--b-l-1),
-    0 0 10px  var(--b-l-1); 
+    -2px 0 20px var(--b-l-1),
+    6px 0 12px  var(--b-l-1); 
 }
 .bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(2):before {
     box-shadow:
-    0 0 10px var(--b-l-2),
-    0 0 10px  var(--b-l-2);
+    -2px 0 20px var(--b-l-2),
+    6px 0 12px  var(--b-l-2);
 }
 .bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(3):before {
     box-shadow:
-    0 0 10px var(--b-l-3),
-    0 0 10px  var(--b-l-3);
+    -2px 0 20px var(--b-l-3),
+    6px 0 12px  var(--b-l-3);
 }
 .bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(4):before {
     box-shadow:
-    0 0 10px var(--b-l-4),
-    0 0 10px  var(--b-l-4);
+    -2px 0 20px var(--b-l-4),
+    6px 0 12px  var(--b-l-4);
 }
 .bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(5):before {
     box-shadow:
-    0 0 10px var(--b-l-5),
-    0 0 10px  var(--b-l-5);
+    -2px 0 20px var(--b-l-5),
+    6px 0 12px  var(--b-l-5);
 }
 .bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(6):before {
     box-shadow:
-    0 0 10px var(--b-l-6),
-    0 0 10px  var(--b-l-6);
+    -2px 0 20px var(--b-l-6),
+    6px 0 12px  var(--b-l-6);
 }
 
 
@@ -7600,6 +7602,7 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 /*Hide Scrollbar*/
 .h-scrl ::-webkit-scrollbar-thumb:not(:hover) {
     background-color: transparent;
+
 }
 .h-scrl ::-webkit-scrollbar:not(:hover) {
     visibility: hidden;

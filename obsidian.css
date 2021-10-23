@@ -2574,10 +2574,11 @@ button.mod-warning {
 .tag-container .tree-item-children {
     margin-left: .7em;
     border-left: 1px solid var(--lines);
-    border-bottom: 1px solid var(--note);  /*Removes Dot!!*/
     transition: all 0.5s ease-in-out;
     padding: 0;
 }
+/*Remove Dot*/
+.tag-container .tree-item-children > div:first-child { display: none; }
 
 .tag-container .tree-item-children:hover {
     border-left: 1px solid var(--accent);

@@ -10,9 +10,11 @@ settings:
         collapsed: true
     -
         title: Fonts
+        description: Change ITS Theme fonts
         id: text-fonts
         type: heading
         level: 3
+        collapsed: true
     -
         title: Headings
         description: Heading and Vault Title fonts.
@@ -43,9 +45,11 @@ settings:
         type: class-toggle
     -
         title: Size
+        description: Change text size and/or margin spacing
         id: text-size
         type: heading
         level: 3
+        collapsed: true
     -
         title: Mobile Note Text Size
         description: Toggle on to use the resize on mobile.
@@ -89,9 +93,11 @@ settings:
         step: .1
     -
         title: Colors
+        description: Change text colors
         id: text-colors
         type: heading
         level: 3
+        collapsed: true
     - 
         title: Text
         id: text
@@ -146,6 +152,7 @@ settings:
         default-light: '#8996a0'
     -
         title: Specific View Changes
+        description: Change text in both preview/edit mode or change it for either mode separately
         id: Font-Specific
         type: heading
         level: 3
@@ -179,6 +186,7 @@ settings:
         step: 2
     -
         title: Specific Decoration Changes
+        description: Change bold, italic, strikethrough elements
         id: Dec-Spec
         type: heading
         level: 3
@@ -193,6 +201,7 @@ settings:
         id: Dec-Spec-Fonts
         type: heading
         level: 4
+		collapsed: true
     -
         title: Preview Italic Font
         id: em-pre-f
@@ -228,6 +237,7 @@ settings:
         id: Dec-Spec-Colors
         type: heading
         level: 4
+		collapsed: true
     -
         title: Preview Italic Color
         id: em-pre-c
@@ -272,6 +282,7 @@ settings:
         default-light: '#697580'
     -
         title: Specific View Heading Changes
+        description: Change Headings in preview/edit mode
         id: Heading-Specific
         type: heading
         level: 3
@@ -286,6 +297,7 @@ settings:
 		id: Spec-Font-Head
 		type: heading
 		level: 4
+		collapsed: true
 	- 
 		title: Heading 1 Font Preview
 		id: sphd-pre-ff-1
@@ -351,6 +363,7 @@ settings:
         id: Spec-Size-Head
         type: heading
         level: 4
+		collapsed: true
 	-
 		title: Heading 1 Size Preview
 		id: sphd-pre-fs-1
@@ -463,7 +476,8 @@ settings:
         title: Heading Colors
         id: Spec-Colors-Head
         type: heading
-        level: 4		
+        level: 4
+		collapsed: true
 	-
 		title: Heading 1 Color Preview
 		id: sphd-pre-1
@@ -577,20 +591,12 @@ settings:
         id: rsb-up
         type: class-toggle
     -
-        title: Resize Scrollbars
-        id: scroll-size
-        type: variable-number-slider
-        default: 7
-        format: px
-        min: 0
-        max: 15
-        step: 1
-    -
         title: Minimalist Workspace
         description: Hide UI unless hovered over the edges of the app.
         id: min-wrkspce
         type: heading
         level: 3
+        collapsed: true
     -
         title: Writing
         description: Minimalistic/distraction free layout design for notes.
@@ -639,11 +645,23 @@ settings:
         type: class-toggle
     -
         title: Workspace Resize
+        description: Resize UI Elements (Scrollbar, Menu, Sidebars, Note Titlebars)
         id: WS-Resize
         type: heading
         level: 3
+        collapsed: true
+    -
+        title: Resize Scrollbars
+        id: scroll-size
+        type: variable-number-slider
+        default: 7
+        format: px
+        min: 0
+        max: 15
+        step: 1
     -
         title: Toggle Resize
+        description: Toggle to resize UI Elements. (Not necessary for Resize Scrollbars)
         id: resize
         type: class-toggle
     -
@@ -678,9 +696,11 @@ settings:
         step: 1
     -
         title: Workspace Colors
+        description: Recolor some UI colors
         id: Workspace-Colors
         type: heading
         level: 3
+        collapsed: true
     - 
         title: Note
         description: Note and sidebar colors.
@@ -742,6 +762,31 @@ settings:
         type: heading
         level: 2        
         collapsed: true
+    -
+        title: Hide Frontmatter 
+        id: no-m
+        type: class-toggle
+    -
+        title: Justify Text
+        description: Justify preview and editor text
+        id: justified
+        type: class-toggle
+    - 
+        title: Centered Tables
+        description: Move all tables to the center of the page.
+        id: t-c
+        type: class-toggle
+    -
+        title: Center Images
+        description: Center images by default
+        id: imgctr
+        type: class-toggle
+    -
+        title: Horizontal Line
+        id: hztl-ln
+        type: heading
+        level: 3 
+        collapsed: true
     - 
         title: Horizontal Line Symbol
         description: Add quotations around symbol for it to work. For Example "⚡". Use the codepoint for symbols from supported font icons. For Example "\e800".
@@ -766,19 +811,11 @@ settings:
         id: hr-tog
         type: class-toggle
     -
-        title: Hide Frontmatter 
-        id: no-m
-        type: class-toggle
-    - 
-        title: Centered Tables
-        description: Move all tables to the center of the page.
-        id: t-c
-        type: class-toggle
-    -
-        title: Center Images
-        description: Center images by default
-        id: imgctr
-        type: class-toggle
+        title: Embeds
+        id: Embeds
+        type: heading
+        level: 3 
+        collapsed: true
     - 
         title: Naked Embeds
         description: Embeds that look like they're part of the note.
@@ -795,15 +832,11 @@ settings:
         id: em-hd
         type: class-toggle
     -
-        title: Justify Text
-        description: Justify preview and editor text
-        id: justified
-        type: class-toggle
-    -
         title: Headers
         id: Headers
         type: heading
         level: 3
+        collapsed: true
     -
         title: Header Tags Above Header
         description: Move the editor header hastags # to above the header instead.
@@ -831,6 +864,7 @@ settings:
         id: Note-Element-Colors
         type: heading
         level: 3
+        collapsed: true
     - 
         title: Embed/Blockquote
         description: Embed/Blockquote color.
@@ -866,6 +900,7 @@ settings:
         id: Lists
         type: heading
         level: 3
+        collapsed: true
     - 
         title: Colorful Task Text
         description: Add color to the text of the task.
@@ -897,7 +932,7 @@ settings:
         max: 3
         step: 1
 	-
-		title: Specific Line Color
+		title: Colorful Lists
 		id: Bullet-Line-Color
 		type: heading
 		level: 4
@@ -959,6 +994,7 @@ settings:
         id: Tags
         type: heading
         level: 3
+        collapsed: true
     -
         title: Bubble Tags
         id: tag-bubble
@@ -1039,7 +1075,7 @@ settings:
         default-light: '#5599d0'
     -
         title: Dark Accent
-        description: File selected and Note Gradient, frontmatter tag color.
+        description: File selected and Note Gradient, frontmatter tag, scrollbar color.
         id: dark-accent
         type: variable-themed-color
         format: hex
@@ -1223,7 +1259,8 @@ settings:
         id: crs-ref
         type: class-toggle
     -
-        title: Workspace Tab Note Adjustments
+        title: Sidebar Notes Adjustments
+        description: Adjustments to padding for better displays of notes moved into sidebars.
         id: starp
         type: class-toggle
     -
@@ -1950,6 +1987,7 @@ body:not(.its-i) svg.clock-glyph {
     --bullet: "\e802";
     --bul-f: var(--its);
     --b-line: 2px;
+    --otl-sym: "H";
 
     /*--Specific--*/
     /*Fonts*/
@@ -2060,15 +2098,15 @@ body:not(.its-i) svg.clock-glyph {
     --f-hover: var(--accent);
     --lines: var(--hr)/*#465164*/;
         
-    --note: #1a1e24 /*#0d131c*/;
-    --text: #bccad8 /*#dcddde*/;
+    --note: #1a1e24; /*#0d131c*/
+    --text: #bccad8; /*#dcddde*/
     --headers: #c14343;
-    --soft-text: #aab3ca/*#d04e4e*/;
+    --soft-text: #aab3ca;/*#d04e4e*/
     --code-text: #fa4545;
-    --footnote: #6e7e89;
+    --footnote: #63778f;/*#6e7e89*/
 
     --code-bg: #232831;
-    --embed-bg: var(--dark-sidebar) /*#111417*/;
+    --embed-bg: var(--dark-sidebar);/*#111417*/
     --aside-bg: #11151d;
 
     --th: var(--dark-accent);
@@ -2444,7 +2482,12 @@ button.mod-warning {
     content: '\e800';
     text-align: center;
     color: var(--file);
-}
+}/*
+.nav-file-tag + .nav-file-title-content::before {
+    content: '\ed1e';
+    font-family: var(--rmx);
+}*/
+
 
 /*Move File Extension to Right*/
 .nav-folder-title-content,
@@ -2452,7 +2495,7 @@ button.mod-warning {
     width: 100%;
     line-height: 20px;
 }
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title {
+:not(.type-undo) .nav-file-title {
     flex-direction: row-reverse;
 }
 
@@ -2598,7 +2641,7 @@ button.mod-warning {
 }
 
 
-/*Outline*/
+/*Outline Pane*/
 /*Set Outline Padding*/
 .outline {
     margin: .2em .5em;
@@ -2606,34 +2649,33 @@ button.mod-warning {
 }
 /*Outline Pane Lines*/
 .outline .tree-item-children {
-    margin-left: .7em;
+    margin-left: 15px;
     border-left: 1px solid var(--lines);
     transition: all 0.3s ease-in-out;
-    padding: 0;
 }
 .outline .tree-item-children:hover {
     border-color: var(--headers);
     border-radius: var(--radius);
 }
-/*
-.outline .tree-item-self .collapse-icon:before {
-    content: "H";
-    color: var(--table);
-}
-.outline .tree-item-self:hover .collapse-icon:before {
-    content: none;
-    color: var(--accent);
-}
 
-.outline .tree-item-self {
-    padding-left: .3em;
-}
+/*Outline Header*/
 .outline .tree-item-self:before {
-    content: "H";
-    color: var(--table);
-    padding-right: .3em;
+    content: var(--otl-sym);
+    font-family: var(--default-font);
+    font-weight: 900;
+    color: var(--headers);
+    /*background-color: var(--td);*/
+    margin-left: -15px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
-*/
+.outline .collapse-icon svg { visibility: hidden; }
+
+/*Collapsed Outline Header*/
+.outline .tree-item.is-collapsed .collapse-icon svg { visibility: visible; }
+.outline .tree-item.is-collapsed .tree-item-self:before { display: none; }
+.outline .tree-item.is-collapsed { padding-left: 5.5px; }
+
 
 /*--Outgoing Links--*/
 .search-result-file-match-destination-file {
@@ -3083,11 +3125,11 @@ input[type='range']::-webkit-slider-thumb {
 /*--Scrollbars--*/
 /*Scrollbar*/
 ::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
+    background-color: var(--th);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar-thumb:active {
-    background-color: var(--lite-accent);
+    background-color: var(--accent);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar {
@@ -6297,7 +6339,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon,
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
-    margin: inherit;
+    margin-left: 2px;
 }
 
 
@@ -6317,7 +6359,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 .plugin-tabs .mod-active .view-header-title::before {
     background-color: transparent !important;
 }
-.plugin-tabs .view-actions {
+.plugin-tabs:not(.plugin-sliding-panes) .view-actions {
     margin-top: -.05em;
 }
 
@@ -7030,6 +7072,14 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
     flex-flow: row wrap;
     overflow-y: auto; 
 }
+
+/*Plugin: Obsidian Icon Folder*/
+.obsidian-icon-folder-icon + .nav-file-title-content,
+.obsidian-icon-folder-icon + .nav-folder-title-content { padding: unset; }
+
+.obsidian-icon-folder-icon + .nav-file-title-content::before,
+.obsidian-icon-folder-icon + .nav-folder-title-content::before { display: none; }
+
 
 
 

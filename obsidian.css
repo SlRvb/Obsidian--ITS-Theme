@@ -6271,27 +6271,34 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     border: 0 !important;
 }
 
-/*Display Border When Header Rotation is Off
-body.plugin-sliding-panes .workspace-split.mod-root .view-content {
-    border-left: 3px solid var(--bg);
-}*/
 .title-wrap.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header  {
     width: auto !important;
     writing-mode: vertical-rl;
 }
 
 /*Rotate Gradient for Sliding Panes*/
-body.plugin-sliding-panes .workspace-leaf.mod-active .view-header {
+body.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-sideway .workspace-leaf.mod-active .view-header {
     border: 0 !important;
     background: linear-gradient(to top, var(--outer-bar), var(--dark-accent));
 }
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
     border: 0 !important;
+    line-height: var(--lh);
 }
+
+/*Fix Margins*/
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
-    margin: auto !important;
+    /*margin: auto !important;*/
     margin-top: 8px !important;
 }
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
+    line-height: 32px;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+    margin: inherit;
+}
+
 
 /*--Obsidian Tabs Plugin--*/
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf,
@@ -7485,6 +7492,15 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .h-wksp .side-dock-ribbon.mod-right:not(:hover) {
     opacity: 0;
     flex: 0 0 12px;
+}
+
+.h-rib .workspace-drawer.mod-left .workspace-drawer-inner:not(:hover),
+.h-wksp .workspace-drawer.mod-left .workspace-drawer-inner:not(:hover) {
+    padding-left: 12px;
+}
+.h-rib .side-dock-ribbon .mod-left .workspace-drawer-ribbon:not(:hover),
+.h-wksp .side-dock-ribbon .mod-left .workspace-drawer-ribbon:not(:hover) {
+    width: 12px;
 }
 
 /*Hide Title Bar*/

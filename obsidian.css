@@ -954,7 +954,7 @@ settings:
 		type: class-toggle
     -
 		title: Neon Lines
-		description: Toggle on to use colorful bullet lines
+		description: Toggle on for lines to have a neon glow effect
 		id: bul-li-neon
 		type: class-toggle
 	-

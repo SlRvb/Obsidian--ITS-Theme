@@ -612,6 +612,11 @@ settings:
         id: h-rh
         type: class-toggle
     -
+        title: Hide Scrollbars
+        description: Recommend increasing the scrollbar width with this
+        id: h-scrl
+        type: class-toggle
+    -
         title: Hide Vault Name
         id: v-non
         type: class-toggle
@@ -938,14 +943,19 @@ settings:
 		level: 4
         collapsed: true
 	-
-		title: Toggle Colorful Bullet Line Color
+		title: Colorful Bullet Line Color
 		description: Toggle on to use colorful bullet lines
 		id: bul-li-col
 		type: class-toggle
     -
-		title: Toggle Colorful Bullet Color
+		title: Colorful Bullet Color
 		description: Toggle on to use colorful bullets
 		id: bul-col
+		type: class-toggle
+    -
+		title: Neon Lines
+		description: Toggle on to use colorful bullet lines
+		id: bul-li-neon
 		type: class-toggle
 	-
 		title: Bullet Line 1 Color
@@ -1268,6 +1278,12 @@ settings:
         description: Multi-row bar sorts properly, but scrolls vertically now.
         id: mtb
         type: class-toggle
+    -
+        title: Mobile Indent Style
+        description: Alternate style to differentiate lists sublevels in edit mode on mobile.
+        id: mbl-ind
+        type: class-toggle
+
 */
 
 /*Fonts*/
@@ -3125,11 +3141,11 @@ input[type='range']::-webkit-slider-thumb {
 /*--Scrollbars--*/
 /*Scrollbar*/
 ::-webkit-scrollbar-thumb {
-    background-color: var(--th);
+    background-color: var(--accent);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar-thumb:active {
-    background-color: var(--accent);
+    background-color: var(--lite-accent);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar {
@@ -7307,6 +7323,72 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 { color: var(--b-l-6); }
 .bul-col ul ul ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-6); }
 
+/*Neon Bullet List Line*/
+/*Neon Edit*/
+.bul-li-neon .cm-hmd-list-indent .cm-tab::before { 
+    box-shadow:
+    0 0 10px var(--b-l-1),
+    0 0 10px  var(--b-l-1); 
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(2):before {
+    box-shadow:
+    0 0 10px var(--b-l-2),
+    0 0 10px  var(--b-l-2);
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(3):before {
+    box-shadow:
+    0 0 10px var(--b-l-3),
+    0 0 10px  var(--b-l-3);
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(4):before {
+    box-shadow:
+    0 0 10px var(--b-l-4),
+    0 0 10px  var(--b-l-4);
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(5):before {
+    box-shadow:
+    0 0 10px var(--b-l-5),
+    0 0 10px  var(--b-l-5);
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(6):before {
+    box-shadow:
+    0 0 10px var(--b-l-6),
+    0 0 10px  var(--b-l-6);
+}
+
+
+/*Neon Preview*/
+.bul-li-neon ul li, 
+.bul-li-neon ol li {
+    box-shadow: 0 0 12px var(--b-l-1);
+    clip-path: inset(0px 0px .1px -60px);
+}
+.bul-li-neon ul ul li, 
+.bul-li-neon ol ol li {
+    box-shadow: 0 0 12px var(--b-l-2);
+    clip-path: inset(0px 0px -30px -60px);
+}
+.bul-li-neon ul ul ul li, 
+.bul-li-neon ol ol ol li {
+    box-shadow: 0 0 12px var(--b-l-3);
+    clip-path: inset(0px 0px -30px -60px);
+}
+.bul-li-neon ul ul ul ul li, 
+.bul-li-neon ol ol ol ol li {
+    box-shadow: 0 0 12px var(--b-l-4);
+    clip-path: inset(0px 0px -30px -60px);
+}
+.bul-li-neon ul ul ul ul ul li, 
+.bul-li-neon ol ol ol ol ol li {
+    box-shadow: 0 0 12px var(--b-l-5);
+    clip-path: inset(0px 0px -30px -60px);
+}
+.bul-li-neon ul ul ul ul ul ul li, 
+.bul-li-neon ol ol ol ol ol ol li {
+    box-shadow: 0 0 10px var(--b-l-6);
+    clip-path: inset(0px 0px -30px -60px);
+}
+
 
 
 /*Note Title Wrap*/
@@ -7513,6 +7595,14 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
 .h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
     background-color: var(--accent);
+}
+
+/*Hide Scrollbar*/
+.h-scrl ::-webkit-scrollbar-thumb:not(:hover) {
+    background-color: transparent;
+}
+.h-scrl ::-webkit-scrollbar:not(:hover) {
+    visibility: hidden;
 }
 
 /*Hide Note Title*/
@@ -7741,3 +7831,23 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .cm-s-obsidian .cm-cursor {
     border-left: 1px solid var(--text);
 }
+
+/*Mobile Indent Style*/
+.mbl-ind.is-mobile .HyperMD-list-line .cm-hmd-list-indent {
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+
+.mbl-ind.is-mobile .HyperMD-list-line-2 .cm-hmd-list-indent  { background-color: var(--b-l-1); }
+.mbl-ind.is-mobile .HyperMD-list-line-3 .cm-hmd-list-indent  { background-color: var(--b-l-2); }
+.mbl-ind.is-mobile .HyperMD-list-line-4 .cm-hmd-list-indent  { background-color: var(--b-l-3); }
+.mbl-ind.is-mobile .HyperMD-list-line-5 .cm-hmd-list-indent  { background-color: var(--b-l-4); }
+.mbl-ind.is-mobile .HyperMD-list-line-6 .cm-hmd-list-indent  { background-color: var(--b-l-5); }
+.mbl-ind.is-mobile .HyperMD-list-line-7 .cm-hmd-list-indent  { background-color: var(--b-l-6); }
+.mbl-ind.is-mobile .HyperMD-list-line-8 .cm-hmd-list-indent  { background-color: var(--sphd-ed-1); }
+.mbl-ind.is-mobile .HyperMD-list-line-9 .cm-hmd-list-indent  { background-color: var(--sphd-ed-2); }
+.mbl-ind.is-mobile .HyperMD-list-line-10 .cm-hmd-list-indent { background-color: var(--sphd-ed-3); }
+.mbl-ind.is-mobile .HyperMD-list-line-11 .cm-hmd-list-indent { background-color: var(--sphd-ed-4); }
+.mbl-ind.is-mobile .HyperMD-list-line-12 .cm-hmd-list-indent { background-color: var(--sphd-ed-5); }
+.mbl-ind.is-mobile .HyperMD-list-line-13 .cm-hmd-list-indent { background-color: var(--sphd-ed-6); }

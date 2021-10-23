@@ -7684,3 +7684,10 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .tg-f a.tag {
     font-size: var(--f-tag);
 }
+
+
+/*Cursor Manual fix*/
+.CodeMirror-cursor,
+.cm-s-obsidian .cm-cursor {
+    border-left: 1px solid var(--text);
+}

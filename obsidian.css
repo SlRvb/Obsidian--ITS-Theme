@@ -7368,27 +7368,27 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .bul-li-neon ul ul li, 
 .bul-li-neon ol ol li {
     box-shadow: 0 0 12px var(--b-l-2);
-    clip-path: inset(0px 0px -30px -60px);
+    clip-path: inset(0px 0px .1px -60px);
 }
 .bul-li-neon ul ul ul li, 
 .bul-li-neon ol ol ol li {
     box-shadow: 0 0 12px var(--b-l-3);
-    clip-path: inset(0px 0px -30px -60px);
+    clip-path: inset(0px 0px .1px -60px);
 }
 .bul-li-neon ul ul ul ul li, 
 .bul-li-neon ol ol ol ol li {
     box-shadow: 0 0 12px var(--b-l-4);
-    clip-path: inset(0px 0px -30px -60px);
+    clip-path: inset(0px 0px .1px -60px);
 }
 .bul-li-neon ul ul ul ul ul li, 
 .bul-li-neon ol ol ol ol ol li {
     box-shadow: 0 0 12px var(--b-l-5);
-    clip-path: inset(0px 0px -30px -60px);
+    clip-path: inset(0px 0px .1px -60px);
 }
 .bul-li-neon ul ul ul ul ul ul li, 
 .bul-li-neon ol ol ol ol ol ol li {
     box-shadow: 0 0 10px var(--b-l-6);
-    clip-path: inset(0px 0px -30px -60px);
+    clip-path: inset(0px 0px .1px -60px);
 }
 
 

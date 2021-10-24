@@ -3414,6 +3414,7 @@ code {
     color: var(--code-text);
     font-family: var(--font-monospace);
     z-index: 0 !important;
+    text-align: left; /*Fix Codeblock Justify Error*/
 }
 
 /*Hide weird Tokening BG Coloring*/

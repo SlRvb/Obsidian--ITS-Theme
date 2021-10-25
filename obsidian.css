@@ -1974,7 +1974,7 @@ body:not(.its-i) svg.clock-glyph {
     --tall: 700px;
     
     /*Colors*/
-    --slide-shadow: rgba(0, 28, 74, 0.15);
+    --slide-shadow: var(--td);
     --text-dl: #e5ebee;
     
     /*Sizes*/
@@ -2777,8 +2777,7 @@ input[type='number']:hover {
     color: var(--inactive);
     width: 16px;
     height: 16px;
-}*/
-
+}*
 
 
 /*-Graph Settings-*/
@@ -3361,8 +3360,7 @@ h4:after { width: 40%; }
 
 /*-Code-*/
 .markdown-preview-view code,
-.markdown-preview-view pre,
-code {
+.markdown-preview-view pre {
     color: var(--code-text);
     z-index: 0 !important;
     background-color: var(--code-bg);
@@ -3410,6 +3408,7 @@ code {
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
 .cm-s-obsidian div.HyperMD-codeblock-bg,
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    border-radius: var(--radius);
     background-color: var(--code-bg);
     color: var(--code-text);
     font-family: var(--font-monospace);
@@ -7871,3 +7870,5 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .mbl-ind.is-mobile .HyperMD-list-line-11 .cm-hmd-list-indent { background-color: var(--sphd-ed-4); }
 .mbl-ind.is-mobile .HyperMD-list-line-12 .cm-hmd-list-indent { background-color: var(--sphd-ed-5); }
 .mbl-ind.is-mobile .HyperMD-list-line-13 .cm-hmd-list-indent { background-color: var(--sphd-ed-6); }
+
+

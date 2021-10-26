@@ -139,6 +139,7 @@ settings:
         title: <i></i>
         description: <i></i> text color.
         id: i-at
+        hub: ignore
         type: variable-themed-color
         format: hex
         default-dark: '#bf5e5e'

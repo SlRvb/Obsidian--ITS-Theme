@@ -137,7 +137,7 @@ settings:
         default-light: '#ea4262'
     -
         title: "`<i></i>` Text"
-        description: <i></i> text color.
+        description: "Html `<i></i>` text color."
         id: i-at
         type: variable-themed-color
         format: hex

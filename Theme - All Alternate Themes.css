@@ -19,6 +19,11 @@ settings:
         id: dnd
         type: class-toggle
     -
+        title: D&D WOTC
+        description: Inspired by Wizards of the Coast D&D handbook designs.
+        id: wotc
+        type: class-toggle
+    -
         title: Tangerine Dunes
         id: t-d
         type: class-toggle
@@ -959,6 +964,142 @@ settings:
 
 .dnd .obsidian-statblock-plugin .section-header {
     color: var(--embed-h) !important;
+}
+
+
+/*Theme: Wizards Of The Coast*/
+.theme-dark.wotc,
+.theme-light.wotc {
+    --font: 'Draconis';
+    --f-w-h: 500;
+
+    --hr-sym: "\0EDD";
+
+    --statblock-primary-color: var(--soft-text) !important;
+    --statblock-background-color: transparent;
+    --statblock-bar-color: var(--accent);
+}
+
+.theme-dark.wotc {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-cover: black;
+    --background-modifier-border: var(--table);
+
+    --background-modifier-border: #2d3034; /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-form-field-highlighted: rgba(253, 114, 114, 0.22); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 0, 23, 13;
+    
+    --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 0, 0, 0.4); /*Search Highlight*/
+    --text-selection: rgba(138, 23, 23, 0.46); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--accent); /*Button Color*/
+    --interactive-hover: var(--accent2);/*Button Color*/
+    --interactive-accent: var(--dark-accent); /*Workspace Note Title Underline*/
+    --interactive-accent-hover: var(--accent2); /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+
+    --deep-dark-accent: #3f1010;
+    --dark-accent: #652121;
+    --lite-accent: #e06c75;
+    --accent: #863737;
+
+    --outer-bar: #0b0f13;
+    --dark-sidebar: #0d1014;
+    --note: #1a1e24;
+
+    --outline: #0000008c;
+    --side-bar: #14181b;
+    --aside-bg: #0e1116;
+
+    --table: #ff4a4a52;
+    --accent2: #35485f;
+    --accent2-lite: #e95e5e;
+    
+}
+.theme-light.wotc {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-cover: var(--deep-dark-accent);
+    --background-modifier-border: var(--table); /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-form-field-highlighted: rgba(253, 114, 114, 0.22); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 0, 23, 13;
+    
+    --interactive-normal: var(--accent); /*Button Color*/
+    --interactive-hover: var(--accent2);/*Button Color*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent-hover: var(--accent2); /*Menu Button Hover*/
+    
+    --text-highlight-bg: rgba(168, 139, 60, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Search Highlight*/
+    --text-selection: rgba(255, 0, 0, 0.198); /*Cursor dragged highlights*/
+
+    --note: #fffcf0;
+    --side-bar: #fff6e4;
+    --outer-bar: #f6e3cd;
+    --dark-sidebar: #f6e3cd;
+    --deep-dark-accent: #2f1010;
+    --outline: #fbb4577e;
+
+    --table: var(--outline);
+    --aside-bg: #ffedd7;
+    --inactive: #d4a38c;
+    --f-icon: #ebbd92;
+
+    --accent: #c75959;
+    --dark-accent: #f6e8d0;
+    --bg: var(--dark-sidebar);
+    --embed-bg: var(--note);
+    --td: #fae0be60;
+    --code-bg: #fff9f0;
+    --accent2: #000000;
+    --hr: var(--table);
+    --lines: var(--inactive);
+
+    --text: #412f2f;
+    --code-text: #681010;
+    --accent2-lite: #df6262;
+}
+
+.wotc .markdown-source-view,
+.wotc .markdown-preview-view:not(.internal-embed .markdown-preview-view),
+.wotc .workspace-leaf:not(.mod-active) .view-header,
+.wotc .modal.mod-settings .vertical-tab-content-container {
+    box-shadow: 0 0 60px var(--outline) inset;
+}
+
+.wotc .markdown-preview-view .markdown-embed,
+.wotc .workspace-tabs,
+.wotc .modal.mod-settings .vertical-tab-header {
+    box-shadow: 0 0 25px var(--outline) inset;
+}
+.wotc .CodeMirror-gutter.CodeMirror-linenumbers, 
+.wotc .CodeMirror-gutter.CodeMirror-foldgutter,
+.wotc .workspace-leaf:not(.mod-active) .workspace-tab-header-container,
+.wotc .workspace-tabs .workspace-leaf,
+.wotc .workspace-tab-header-container,
+.wotc .horizontal-tab-content,
+.wotc .vertical-tab-content,
+.wotc .horizontal-tab-nav-item:not(.is-active),
+.wotc .vertical-tab-nav-item:not(.is-active) {
+    background: transparent;
+}
+.wotc .view-header-title-container:after { display: none }
+
+
+.wotc .markdown-preview-view .markdown-embed,
+.wotc .markdown-preview-view .file-embed,
+.wotc .internal-embed.is-loaded:not(.image-embed) {
+    box-shadow: none;
+    border-top: 2px solid var(--accent2);
+    border-bottom: 2px solid var(--accent2);
 }
 
 

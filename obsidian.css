@@ -3156,8 +3156,8 @@ input[type='range']::-webkit-slider-thumb {
 
 
 /*--NOTE TITLEBAR--*/
-.view-header {
-    border: 0 !important;
+.workspace-leaf .view-header {
+    border: 0;
     background: var(--note);
 }
 .view-header-title,
@@ -6372,7 +6372,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 /*Rotate Gradient for Sliding Panes*/
-body.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-sideway .workspace-leaf.mod-active .view-header {
+body.plugin-sliding-panes-rotate-header .workspace-leaf.mod-active .view-header {
     border: 0 !important;
     background: linear-gradient(to top, var(--outer-bar), var(--dark-accent));
 }

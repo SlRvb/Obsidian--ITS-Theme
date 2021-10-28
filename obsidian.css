@@ -3583,7 +3583,8 @@ Enlarge Image:*/
 
 /*--List--*/
 /*Colored List Markers*/
-li::marker, .cm-s-obsidian span.cm-formatting-list {
+li::marker, 
+body:not(.is-mobile) .cm-s-obsidian span.cm-formatting-list {
     color: transparent;
 }
 /*Lighten Numbered List Marker Color*/
@@ -3796,8 +3797,8 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 body.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task {
     border: 1px solid var(--accent, var(--interactive-accent));
     background-image: url();
-    height: 15px;
-    width: 14px;
+    height: 1em;
+    width: 0;
     position: relative;
     vertical-align: -1px;
 }

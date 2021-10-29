@@ -864,8 +864,8 @@ settings:
 
 /*Headings*/
 /*Heading Line*/
-.dnd:not(.illusion) h1:after,
-.wotc:not(.illusion) h1:after {
+.dnd:not(.illusion):not(.h-line) h1:after,
+.wotc:not(.illusion):not(.h-line) h1:after {
     content: "";
     display: block;
     width: 100%;
@@ -874,8 +874,8 @@ settings:
     left: 0;
 }
 
-.dnd:not(.illusion) h2:after,
-.wotc:not(.illusion) h2:after {
+.dnd:not(.illusion):not(.h-line) h2:after,
+.wotc:not(.illusion):not(.h-line) h2:after {
     content: "";
     display: block;
     width: 85%;
@@ -884,8 +884,8 @@ settings:
     left: 0;
 }
 
-.dnd:not(.illusion) h3:after,
-.wotc:not(.illusion) h3:after {
+.dnd:not(.illusion):not(.h-line) h3:after,
+.wotc:not(.illusion):not(.h-line) h3:after {
     content: "";
     display: block;
     width: 70%;
@@ -952,11 +952,11 @@ settings:
 }*/
 
 /*Plugin: 5e Statblock*/
-.dnd .obsidian-statblock-plugin .creature-heading > .name
+.dnd .obsidian-statblock-plugin .creature-heading > .name,
 .wotc .obsidian-statblock-plugin .creature-heading > .name { color: var(--embed-h) !important; }
-.dnd .obsidian-statblock-plugin .property-name
+.dnd .obsidian-statblock-plugin .property-name,
 .wotc .obsidian-statblock-plugin .property-name { color: var(--headers); }
-.dnd .obsidian-statblock-plugin .section-header
+.dnd .obsidian-statblock-plugin .section-header,
 .wotc .obsidian-statblock-plugin .section-header { color: var(--embed-h) !important; }
 
 

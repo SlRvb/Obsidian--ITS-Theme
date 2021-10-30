@@ -591,6 +591,10 @@ settings:
         id: rsb-up
         type: class-toggle
     -
+        title: Hide Outline Pane H
+        id: op-h
+        type: class-toggle
+    -
         title: Minimalist Workspace
         description: Hide UI unless hovered over the edges of the app.
         id: min-wrkspce
@@ -924,7 +928,7 @@ settings:
         default: '⬥'
     - 
         title: Original Bullet Lines
-        description: Lines appear under bullet, not beside it. ⚠Causes scrolling glitches. Recommended this is turned off, but use if you wish.
+        description: Lines appear under bullet, not beside it. Won't connect to bullet if it's longer than 1 line.
         id: b-li-o
         type: class-toggle
 	-
@@ -2663,6 +2667,8 @@ button.mod-warning {
     margin: .2em .5em;
     user-select: text;
 }
+.outline .tree-item-self { padding-left: 25px; }
+
 /*Outline Pane Lines*/
 .outline .tree-item-children {
     margin-left: 15px;
@@ -2675,22 +2681,20 @@ button.mod-warning {
 }
 
 /*Outline Header*/
-.outline .tree-item-self:before {
+body:not(.op-h) .outline .tree-item-self:before {
     content: var(--otl-sym);
     font-family: var(--default-font);
     font-weight: 900;
     color: var(--headers);
     /*background-color: var(--td);*/
     margin-left: -15px;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 4.5px;
 }
-.outline .collapse-icon svg { visibility: hidden; }
+body:not(.op-h) .outline .collapse-icon svg { visibility: hidden; }
 
 /*Collapsed Outline Header*/
-.outline .tree-item.is-collapsed .collapse-icon svg { visibility: visible; }
-.outline .tree-item.is-collapsed .tree-item-self:before { display: none; }
-.outline .tree-item.is-collapsed { padding-left: 5.5px; }
+body:not(.op-h) .outline .tree-item.is-collapsed .collapse-icon svg { visibility: visible; }
+body:not(.op-h) .outline .tree-item.is-collapsed .tree-item-self:before { display: none; }
 
 
 /*--Outgoing Links--*/
@@ -6522,14 +6526,6 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
     padding: 0 0 0 5px !important;
 }
 
-/*ABC JS*/
-.abcjs-container svg {    
-    fill: white !important;
-}
-
-.abcjs-container svg path {    
-    fill: white !important;
-}
 
 
 
@@ -7243,10 +7239,10 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 
 
 /*Bullet Line Original (Adjusted)*/
-.b-li-o ul:not(table .dataview) li,
-.b-li-o ol:not(table .dataview) li,
-.b-li-o ul:not(table .dataview) li:nth-child(even),
-.b-li-o ol:not(table .dataview) li:nth-child(even) {
+.b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li,
+.b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li,
+.b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li:nth-child(even),
+.b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li:nth-child(even) {
     border: none;
 }
 

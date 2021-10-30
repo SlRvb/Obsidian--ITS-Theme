@@ -927,6 +927,11 @@ settings:
         type: variable-text
         default: '⬥'
     - 
+        title: 1 Color Bullets & Lines
+        description: Bullet and Line colors no longer alternates. Bullet color is set to Accent 2.
+        id: bl-c
+        type: class-toggle
+    - 
         title: Original Bullet Lines
         description: Lines appear under bullet, not beside it. Won't connect to bullet if it's longer than 1 line.
         id: b-li-o
@@ -6818,7 +6823,7 @@ g.classGroup line {
 }
 
 .style-settings-heading[data-level="3"]  {
-    border-bottom: 2px solid var(--accent2) !important;
+    border-bottom: 2px solid var(--lines) !important;
 }
 
 .style-settings-heading .setting-item-name { 
@@ -7144,6 +7149,12 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
     --plyr-color-main: var(--soft-text);
 }
 
+/*Block Reference*/
+body .block-ref-count:hover {
+    color: var(--text-dl);
+    background: var(--interactive-accent);
+    border: 0;
+}
 
 
 
@@ -7237,6 +7248,10 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
     color: var(--accent);
 }
 
+/*Single Bullet/1 Bullet Color*/
+.bl-c li::marker,
+.bl-c li::before { color: var(--accent2); }
+.bl-c li { border-color: var(--accent) !important; }
 
 /*Bullet Line Original (Adjusted)*/
 .b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li,
@@ -7244,12 +7259,6 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li:nth-child(even),
 .b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li:nth-child(even) {
     border: none;
-}
-
-.b-li-o ol::marker,
-.b-li-o .workspace-leaf-content:not([data-type="cross-reference-navigation"]) ul li:nth-child(odd)::before,
-.b-li-o .workspace-leaf-content:not([data-type="cross-reference-navigation"]) ul li:nth-child(even)::before {
-    color: var(--fg);
 }
 
 .b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ol ul,

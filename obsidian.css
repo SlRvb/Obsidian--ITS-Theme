@@ -2791,7 +2791,7 @@ input[type='number']:hover {
 
 /*-Graph Settings-*/
 .graph-controls.is-close {
-    /* background-color: var(--background-primary); */
+    padding: 6px 8px;
 }
 /*Opened Settings*/
 .graph-controls {
@@ -3592,8 +3592,8 @@ Enlarge Image:*/
 
 /*--List--*/
 /*Colored List Markers*/
-li::marker, 
-body:not(.is-mobile) .cm-s-obsidian span.cm-formatting-list {
+li::marker/*, 
+body:not(.is-mobile) .cm-s-obsidian span.cm-formatting-list*/ {
     color: transparent;
 }
 /*Lighten Numbered List Marker Color*/

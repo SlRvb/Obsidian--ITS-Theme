@@ -3140,19 +3140,16 @@ input[type='range']::-webkit-slider-thumb {
 
 /*--Scrollbars--*/
 /*Scrollbar*/
+::-webkit-scrollbar,
 ::-webkit-scrollbar-thumb {
-    background-color: var(--hr);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:active {
     border: 0;
     background-color: var(--accent);
-    -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar {
-    background-color: #6072aa20;
-    -webkit-border-radius: var(--radius); /*Remove Rounding*/
     width: var(--scroll-size);
     height: var(--scroll-size);
 }

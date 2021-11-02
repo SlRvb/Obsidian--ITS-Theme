@@ -2142,7 +2142,7 @@ body:not(.its-i) svg.clock-glyph {
     
     --tag: var(--th);
     --table: #283846;
-    --hr: #2a3b55/*#3c5274*/;
+    --hr: #2f3b4d; /*#2a3b55, #3c5274*/
     --i-at: #bf5e5e;
     
     --graph-bg: var(--outer-bar);
@@ -2425,15 +2425,6 @@ button.mod-warning {
     border-color: var(--accent);
     background-color: var(--dark-sidebar);
     border-radius: var(--radius);
-}
-/*Align Sidebar Icons*/
-.workspace-tab-container-before,
-.workspace-tab-container-after {
-    display: none;
-}
-.workspace-tab-header-container {
-    align-items: center;
-    justify-content: center;
 }
 
 /*Sidebar Icons: Remove Animation*/
@@ -3150,21 +3141,21 @@ input[type='range']::-webkit-slider-thumb {
 /*--Scrollbars--*/
 /*Scrollbar*/
 ::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
+    background-color: var(--hr);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
+::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:active {
     border: 0;
     background-color: var(--accent);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 ::-webkit-scrollbar {
-    background-color: var(--bg);
+    background-color: #6072aa20;
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
     width: var(--scroll-size);
     height: var(--scroll-size);
 }
-
 
 /*--NOTE TITLEBAR--*/
 .view-header,

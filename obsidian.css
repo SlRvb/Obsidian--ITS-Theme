@@ -92,65 +92,6 @@ settings:
         max: 2
         step: .1
     -
-        title: Colors
-        description: Change text colors
-        id: text-colors
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        title: Text
-        id: text
-        type: variable-themed-color
-        format: hex
-        default-dark: '#bccad8'
-        default-light: '#697580'
-    - 
-        title: Faint Text
-        id: soft-text
-        type: variable-themed-color
-        format: hex
-        default-dark: '#aab3ca'
-        default-light: '#d04e4e'
-    - 
-        title: Headings
-        description: Heading, Vault title, HR Symbol, blockquote quotation mark, and open folder icon colors.
-        id: headers
-        type: variable-themed-color
-        format: hex
-        default-dark: '#c14343'
-        default-light: '#d04e4e'
-    - 
-        title: File Title
-        description: File text color.
-        id: file
-        type: variable-themed-color
-        format: hex
-        default-dark: '#aab3ca'
-        default-light: '#7e8ea3'
-    - 
-        title: Code Text
-        id: code-text
-        type: variable-themed-color
-        format: hex
-        default-dark: '#fa4545'
-        default-light: '#ea4262'
-    -
-        title: "`<i></i>` Text"
-        description: "Html `<i></i>` text color."
-        id: i-at
-        type: variable-themed-color
-        format: hex
-        default-dark: '#bf5e5e'
-        default-light: '#c14343'
-    - 
-        title: Footnotes
-        id: footnote
-        type: variable-themed-color
-        format: hex
-        default-dark: '#6e7e89'
-        default-light: '#8996a0'
-    -
         title: Specific View Changes
         description: Change text in both preview/edit mode or change it for either mode separately
         id: Font-Specific
@@ -704,68 +645,6 @@ settings:
         max: 20
         step: 1
     -
-        title: Workspace Colors
-        description: Recolor some UI colors
-        id: Workspace-Colors
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        title: Note
-        description: Note and sidebar colors.
-        id: note
-        type: variable-themed-color
-        format: hex
-        default-dark: '#1a1e24'
-        default-light: '#f8fbff'
-    - 
-        title: Outer Sidebar
-        id: outer-bar
-        type: variable-themed-color
-        format: hex
-        default-dark: '#0e0f15'
-        default-light: '#dfe7ef'
-    - 
-        title: Sidebar
-        description: Change only sidebar, right settings pane colors.
-        id: side-bar
-        type: variable-themed-color
-        format: hex
-        default-dark: '#1a1e24'
-        default-light: '#f8fbff'
-    - 
-        title: Dark Sidebar
-        description: Left settings bar, <i></i> background, graph background, and pane separator colors.
-        id: dark-sidebar
-        type: variable-themed-color
-        format: hex
-        default-dark: '#10161d'
-        default-light: '#7e8ea3'
-    - 
-        title: File
-        description: File icon color.
-        id: f-icon
-        type: variable-themed-color
-        format: hex
-        default-dark: '#586477'
-        default-light: '#a6bbde'
-    - 
-        title: Folder
-        description: Open folder icon color.
-        id: folder
-        type: variable-themed-color
-        format: hex
-        default-dark: '#e05858'
-        default-light: '#ce6d6d'
-    -
-        title: Sliding Panes Dropshadow
-        id: slide-shadow
-        type: variable-themed-color
-        format: rgb
-        opacity: true
-        default-dark: '#001c4a15'
-        default-light: '#001c4a15'
-    -
         title: Note Elements
         id: Other-Note
         type: heading
@@ -868,42 +747,6 @@ settings:
         title: Illusion Theme Inspired Headings
         id: illusion
         type: class-toggle
-    -
-        title: Colors
-        id: Note-Element-Colors
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        title: Embed/Blockquote
-        description: Embed/Blockquote color.
-        id: embed-bg
-        type: variable-themed-color
-        format: hex
-        default-dark: '#10161d'
-        default-light: '#f1f5ff'
-    - 
-        title: Code Background
-        id: code-bg
-        type: variable-themed-color
-        format: hex
-        default-dark: '#232831'
-        default-light: '#eef6ff'
-    - 
-        title: Horizontal Line
-        id: hr
-        type: variable-themed-color
-        format: hex
-        default-dark: '#3c5274'
-        default-light: '#d6deea'
-    -
-		title: Aside Background Color
-		id: aside-bg
-		description: Aside background color and dark theme setting alternating setting item color.
-		type: variable-themed-color
-		format: hex
-		default-dark: '#11151d'
-		default-light: '#f1f5ff'
     -
         title: Lists
         id: Lists
@@ -1049,6 +892,139 @@ settings:
         max: 20
         step: 1
     - 
+        title: Colors
+        id: Other Colors
+        type: heading
+        level: 2        
+        collapsed: true
+    -
+        title: Text
+        description: Change text colors
+        id: text-colors
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        title: Text
+        id: text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bccad8'
+        default-light: '#697580'
+    - 
+        title: Faint Text
+        id: soft-text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#aab3ca'
+        default-light: '#d04e4e'
+    - 
+        title: Headings
+        description: Heading, Vault title, HR Symbol, blockquote quotation mark, and open folder icon colors.
+        id: headers
+        type: variable-themed-color
+        format: hex
+        default-dark: '#c14343'
+        default-light: '#d04e4e'
+    - 
+        title: File Title
+        description: File text color.
+        id: file
+        type: variable-themed-color
+        format: hex
+        default-dark: '#aab3ca'
+        default-light: '#7e8ea3'
+    - 
+        title: Code Text
+        id: code-text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#fa4545'
+        default-light: '#ea4262'
+    -
+        title: "`<i></i>` Text"
+        description: "Html `<i></i>` text color."
+        id: i-at
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bf5e5e'
+        default-light: '#c14343'
+    - 
+        title: Footnotes
+        id: footnote
+        type: variable-themed-color
+        format: hex
+        default-dark: '#6e7e89'
+        default-light: '#8996a0'
+    -
+        title: Workspace
+        description: Recolor some UI colors
+        id: Workspace-Colors
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        title: Note
+        description: Note and sidebar colors.
+        id: note
+        type: variable-themed-color
+        format: hex
+        default-dark: '#1a1e24'
+        default-light: '#f8fbff'
+    - 
+        title: Outer Sidebar
+        id: outer-bar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#0e0f15'
+        default-light: '#dfe7ef'
+    - 
+        title: Sidebar
+        description: Change only sidebar, right settings pane colors.
+        id: side-bar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#1a1e24'
+        default-light: '#f8fbff'
+    - 
+        title: Dark Sidebar
+        description: Left settings bar, <i></i> background, graph background, and pane separator colors.
+        id: dark-sidebar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#10161d'
+        default-light: '#7e8ea3'
+    - 
+        title: File
+        description: File icon color.
+        id: f-icon
+        type: variable-themed-color
+        format: hex
+        default-dark: '#586477'
+        default-light: '#a6bbde'
+    - 
+        title: Folder
+        description: Open folder icon color.
+        id: folder
+        type: variable-themed-color
+        format: hex
+        default-dark: '#e05858'
+        default-light: '#ce6d6d'
+    -
+        title: Sliding Panes Dropshadow
+        id: slide-shadow
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#001c4a15'
+        default-light: '#001c4a15'
+    -
+        title: Note Elements
+        id: Note-Element-Colors
+        type: heading
+        level: 3
+        collapsed: true
+    - 
         title: Tag Color
         id: tag
         type: variable-themed-color
@@ -1056,10 +1032,40 @@ settings:
         default-dark: '#571a1a'
         default-light: '#c65656'
     - 
-        title: Other Colors
-        id: Other Colors
+        title: Embed/Blockquote
+        description: Embed/Blockquote color.
+        id: embed-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#10161d'
+        default-light: '#f1f5ff'
+    - 
+        title: Code Background
+        id: code-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#232831'
+        default-light: '#eef6ff'
+    - 
+        title: Horizontal Line
+        id: hr
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3c5274'
+        default-light: '#d6deea'
+    -
+		title: Aside Background Color
+		id: aside-bg
+		description: Aside background color and dark theme setting alternating setting item color.
+		type: variable-themed-color
+		format: hex
+		default-dark: '#11151d'
+		default-light: '#f1f5ff'
+    -
+        title: Other
+        id: Other-Colors
         type: heading
-        level: 2        
+        level: 3
         collapsed: true
     - 
         title: Accent
@@ -1099,7 +1105,6 @@ settings:
         type: variable-themed-color
         format: hex
         default-dark: '#652121'
-
         default-light: '#ffeded'
     -
         title: Deep Dark Accent
@@ -1146,6 +1151,7 @@ settings:
         id: RGBA
         type: heading
         level: 3
+        collapsed: true
     -
         title: Text Highlight
         description: Markdown highlight color.
@@ -1196,6 +1202,7 @@ settings:
         id: Graph
         type: heading
         level: 3
+        collapsed: true
     - 
         title: Graph Background
         id: graph-bg
@@ -3538,8 +3545,10 @@ div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
 .cm-s-obsidian pre.HyperMD-hr {
     text-align: center;
     margin: 0px;
+    /*
     margin-block-start: .1%;
     margin-block-end: .1%;
+    */
 }   
 
 /*Hide --- Lines*/

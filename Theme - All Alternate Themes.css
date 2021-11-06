@@ -1452,7 +1452,7 @@ settings:
     --text-highlight-bg-active: rgba(255, 0, 0, 0.4); /*Search Highlight*/
     --text-selection: rgba(138, 23, 23, 0.46); /*Cursor dragged highlights*/
     
-    --text-accent: var(--accent);
+    --text-accent: var(--lite-accent);
     --text-accent-hover: var(--accent2);
 
     --interactive-normal: var(--accent); /*Button Color*/
@@ -1463,7 +1463,7 @@ settings:
 
     --deep-dark-accent: #3f1010;
     --dark-accent: #652121;
-    --lite-accent: #e06c75;
+    --lite-accent: #e06c6c;
     --accent: #863737;
 
     --outer-bar: #0b0f13;

@@ -4043,7 +4043,7 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='2 0 24 24'%3E%3Cpath d='M1 11.6V16h8.31l-1.12 5.38L9.83 23L17 15.82V3H4.69zM19 3h4v12h-4z' fill='currentColor'/%3E%3C/svg%3E");
     border: 0;
     width: 15px;
-    height: 18.3px;
+    height: 18px;
 }
 .check-color.check-color ul li[data-task="C"].task-list-item.is-checked {
     color: var(--chbx-C);
@@ -7509,32 +7509,32 @@ body .block-ref-count:hover {
 .bul-li-neon ul li, 
 .bul-li-neon ol li {
     box-shadow: 0 0 12px var(--b-l-1);
-    clip-path: inset(0px 0px .1px -60px);
+    clip-path: inset(0px 1px .2px -60px);
 }
 .bul-li-neon ul ul li, 
 .bul-li-neon ol ol li {
     box-shadow: 0 0 12px var(--b-l-2);
-    clip-path: inset(0px 0px .1px -60px);
+    clip-path: inset(0px 1px .2px -60px);
 }
 .bul-li-neon ul ul ul li, 
 .bul-li-neon ol ol ol li {
     box-shadow: 0 0 12px var(--b-l-3);
-    clip-path: inset(0px 0px .1px -60px);
+    clip-path: inset(0px 1px .2px -60px);
 }
 .bul-li-neon ul ul ul ul li, 
 .bul-li-neon ol ol ol ol li {
     box-shadow: 0 0 12px var(--b-l-4);
-    clip-path: inset(0px 0px .1px -60px);
+    clip-path: inset(0px 1px .2px -60px);
 }
 .bul-li-neon ul ul ul ul ul li, 
 .bul-li-neon ol ol ol ol ol li {
     box-shadow: 0 0 12px var(--b-l-5);
-    clip-path: inset(0px 0px .1px -60px);
+    clip-path: inset(0px 1px .2px -60px);
 }
 .bul-li-neon ul ul ul ul ul ul li, 
 .bul-li-neon ol ol ol ol ol ol li {
     box-shadow: 0 0 10px var(--b-l-6);
-    clip-path: inset(0px 0px .1px -60px);
+    clip-path: inset(0px 1px .2px -60px);
 }
 
 

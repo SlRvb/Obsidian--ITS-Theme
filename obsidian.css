@@ -7799,11 +7799,14 @@ body .block-ref-count:hover {
 
 .h-fm .frontmatter-container:not(:hover) {
     visibility: hidden;
-    float: right;
-    top: -20px;
-    max-width: 0;
-    max-height: 0;
+    width: 0;
+    height: 0;
     z-index: 5;
+    float: right;
+}
+.h-fm .frontmatter-container:not(:hover) > div {
+    overflow: hidden;
+    display: none;
 }
 
 .h-fm .frontmatter-container:not(:hover)::before {
@@ -7816,7 +7819,7 @@ body .block-ref-count:hover {
     margin-left: -15px;
     box-shadow: 2px 2px 0 var(--outline);
     border: 1px solid var(--outline);
-    overflow: hidden;
+    z-index: 5;
 }
 
 .h-fm .frontmatter-container {

@@ -7800,8 +7800,9 @@ body .block-ref-count:hover {
 .h-fm .frontmatter-container:not(:hover) {
     visibility: hidden;
     float: right;
-    width: 0;
-    overflow: hidden;
+    top: -20px;
+    max-width: 0;
+    max-height: 0;
     z-index: 5;
 }
 
@@ -7815,6 +7816,7 @@ body .block-ref-count:hover {
     margin-left: -15px;
     box-shadow: 2px 2px 0 var(--outline);
     border: 1px solid var(--outline);
+    overflow: hidden;
 }
 
 .h-fm .frontmatter-container {

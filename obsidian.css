@@ -655,14 +655,6 @@ settings:
         level: 2        
         collapsed: true
     -
-        title: Minimized Frontmater
-        id: h-fm
-        type: class-toggle
-    -
-        title: Hide Frontmatter 
-        id: no-m
-        type: class-toggle
-    -
         title: Justify Text
         description: Justify preview and editor text
         id: justified
@@ -705,6 +697,24 @@ settings:
         title: No Horizontal Line Symbol
         description: Hide the horizontal Line Symbol entirely
         id: hr-tog
+        type: class-toggle
+    -
+        title: Frontmatter
+        id: Frontmatter
+        type: heading
+        level: 3 
+        collapsed: true
+    -
+        title: Minimized Frontmater
+        id: h-fm
+        type: class-toggle
+    -
+        title: Hide Frontmatter 
+        id: no-m
+        type: class-toggle
+    -
+        title: Notion Style
+        id: ntn
         type: class-toggle
     -
         title: Embeds
@@ -4159,6 +4169,24 @@ a.tag:hover {
     background-color: var(--tag);
     border: none;
 }
+
+.markdown-preview-view pre.frontmatter.language-yaml .token.key + .punctuation {
+    display: none;
+}
+.markdown-preview-view pre.frontmatter.language-yaml .token.key {
+    float:left;
+    width: 10vh;
+    color: var(--inactive);
+    font-weight: bold;
+}
+.ntn .markdown-preview-view pre.frontmatter.language-yaml code {
+    background: transparent;
+    border: 0;
+    font-family: var(--default-font);
+}
+
+.ntn .markdown-preview-view pre.frontmatter.language-yaml { font-size: var(--f-s-nt); }
+
 
 
 
@@ -7796,19 +7824,22 @@ body .block-ref-count:hover {
     opacity: 0;
     height: 6px;
 }
-
+/*Minimize Frontmatter*/
+.h-fm .markdown-preview-view pre.frontmatter:not(:hover),
 .h-fm .frontmatter-container:not(:hover) {
     visibility: hidden;
-    width: 0;
-    height: 0;
-    z-index: 5;
     float: right;
+    z-index: 5;
+    position: absolute;
+    right: 20px;
 }
+.h-fm .markdown-preview-view.show-frontmatter pre.frontmatter + .frontmatter-container,
+.h-fm .markdown-preview-view pre.frontmatter:not(:hover) > .language-yaml,
 .h-fm .frontmatter-container:not(:hover) > div {
     overflow: hidden;
     display: none;
 }
-
+.h-fm .markdown-preview-view pre.frontmatter:not(:hover)::before,
 .h-fm .frontmatter-container:not(:hover)::before {
     content: "\e800";
     font-family: var(--its);
@@ -7816,12 +7847,9 @@ body .block-ref-count:hover {
     color: var(--accent2);
     background-color: var(--note);
     padding: 7px;
-    margin-left: -15px;
     box-shadow: 2px 2px 0 var(--outline);
     border: 1px solid var(--outline);
-    z-index: 5;
 }
-
 .h-fm .frontmatter-container {
     padding: 10px 20px;
     border-radius: var(--radius);

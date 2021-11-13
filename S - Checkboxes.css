@@ -136,10 +136,12 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 /* Yin & Yang Theme */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task='x']),
 .is-flashing input[type="checkbox"]:checked:before,
-input[type="checkbox"]:checked:before,
+input[type="checkbox"]:checked:not([data-task='x']):before,
 li:not(li[data-task="x"]) > input[type="checkbox"]:checked:before {
     background-image: url();
     margin-top: 0;
+    border-radius: 0;
+    content: ''; /*California Coast*/
 }
 /* Minimal Theme */
 .todo-list .group .item.compact > .toggle .checked,

@@ -3623,7 +3623,8 @@ Enlarge Image:*/
 /*--List--*/
 /*Colored List Markers*/
 li::marker,
-.cm-s-obsidian .cm-formatting-list-ul.cm-formatting-list {
+.cm-s-obsidian:not(.mod-cm6) .cm-formatting-list-ul.cm-formatting-list,
+.list-bullet {
     color: transparent;
 }
 /*Lighten Numbered List Marker Color*/
@@ -3688,17 +3689,20 @@ ul li > p {
 
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
+.list-bullet::before,
 .cm-s-obsidian span.cm-formatting-list-ul::before,
 .cm-s-obsidian span.cm-formatting-list-ol {
     color: var(--soft-text);
 }
-
-.cm-s-obsidian span.cm-formatting-list-ul::before {
+.list-bullet::before,
+.cm-s-obsidian:not(.mod-cm6) span.cm-formatting-list-ul::before,
+.cm-s-obsidian .cm-active span.cm-formatting-list-ul .list-bullet::before {
     content: var(--bullet);
     font-family: var(--bul-f);
     margin-left: -.3em;
     margin-right: -.7em;
 }
+
 /*Adjust Padding*/
 .cm-s-obsidian span.cm-formatting-list-ol {
     margin-left: -.2em;
@@ -3789,7 +3793,9 @@ body:not(.chkbx-strike) li.task-list-item.is-checked li:not(.is-checked) {
     font-weight: initial; 
     color: var(--text)
 }
-
+/*Live Preview List Adjustment*/
+.markdown-source-view.mod-cm6 .HyperMD-list-line.cm-line { margin-left: 4px; }
+.markdown-source-view.mod-cm6 .task-list-item-checkbox{ margin-left: -11px;}
 
 /*Different/Alternate Checkbox*/
 input[type=checkbox]:checked::before {
@@ -3860,10 +3866,15 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="x"]::before { 
     background: var(--accent, var(--interactive-accent)); 
 }
+.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task=' ']) + .cm-list-1 + .cm-list-1 {
+    font-weight: bold;
+    color: var(--lines);
+}
 
 /*--Checkbox Type Icons--*/
 
 /* SVG check mark for done ('- [x]') */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="X"],
 .markdown-preview-view li[data-task="X"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="X"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="X"]::before {
@@ -3871,13 +3882,14 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='1 0 17 17'%3E%3Cpath d='M13.5 2L6 9.5L2.5 6L0 8.5l6 6l10-10z' fill='currentColor'/%3E%3C/svg%3E");
     border: 0;
 }
-
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="X"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="X"].task-list-item.is-checked {
     color: var(--text-faint);
 }
 
 
 /* SVG Plane for Forward ('- [>]') */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"],
 .markdown-preview-view li[data-task=">"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task=">"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=">"]::before {
@@ -3886,39 +3898,44 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     border: 0;
     height: 15px;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task=">"].task-list-item.is-checked {
     color: var(--text-normal);
 }
 
 
 /* SVG Calendar for deferred/scheduled ('- [D]') */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="D"],
 .markdown-preview-view li[data-task="D"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="D"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="D"]::before {
     background-color: var(--chbx-h);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='1 2 24 24'%3E%3Cpath d='M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM5 7h14v2H5V7z' fill='currentColor'/%3E%3C/svg%3E");
     border: 0;
-
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="D"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="D"].task-list-item.is-checked {
     color: var(--chbx-h);
 }
 
 
 /* SVG line for cancelled/non-task ('- [-]') */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"],
 .markdown-preview-view li[data-task="-"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="-"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"]::before {
     background-color: var(--chbx-d);
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='14' height='14' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1200 1200'%3E%3Cpath d='M0 430.078h1200v339.844H0V430.078z' fill='currentColor'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1200 1200'%3E%3Cpath d='M0 430.078h1200v339.844H0V430.078z' fill='currentColor'/%3E%3C/svg%3E");
     border: 0;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="-"].task-list-item.is-checked {
     color: var(--chbx-d);
 }
 
 
 /* '?' for question/more info task ('- [?]') */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"],
 .markdown-preview-view li[data-task="?"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="?"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"]::before {
@@ -3927,15 +3944,14 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     border: 0;
     height: 15px;
 }
-.check-color.check-color ul li[data-task="?"].task-list-item.is-checked {
-    color: var(--chbx-q);
-}
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="?"].task-list-item.is-checked {
     color: var(--chbx-q);
 }
 
 
 /* '!' for important task ('- [!]') */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"],
 .markdown-preview-view li[data-task="!"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="!"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"]::before {
@@ -3945,12 +3961,14 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     width: 15px;
     height: 14px;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="!"].task-list-item.is-checked {
     color: var(--chbx-i);
 }
 
 
 /* '+' for adding a task ('- [+]') */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"],
 .markdown-preview-view li[data-task="+"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="+"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"]::before {
@@ -3958,14 +3976,16 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='14' height='14' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1250 1250'%3E%3Cpath d='M430.078 0v430.078H0v339.844h430.078V1200h339.844V769.922H1200V430.078H769.922V0H430.078z' fill='currentColor'/%3E%3C/svg%3E");
     border: 0;
     width: 14px;
-    height: 14.4px;
+    height: 14px;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="+"].task-list-item.is-checked {
     color: var(--chbx-a);
 }
 
 
 /* "/" Half done */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"],
 .markdown-preview-view li[data-task="/"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="/"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="/"]::before {
@@ -3979,14 +3999,20 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .workspace-tabs .markdown-preview-view li[data-task="/"]>.task-list-item-checkbox:checked::before {
     border-bottom: 14px solid var(--background-secondary);
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="/"].task-list-item.is-checked {
     background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 10%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"] + .cm-list-1 + .cm-list-1 {
+    background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 80%);
+    -webkit-background-clip: text;
+}
 
 
 /* "R" Research */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="R"],
 .markdown-preview-view li[data-task="R"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="R"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="R"]::before {
@@ -3994,11 +4020,13 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='16' height='15' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1330 1330'%3E%3Cg transform='translate(1200 0) scale(-1 1)'%3E%3Cpath d='M672.633 0C389.326 0 159.634 229.652 159.634 512.958c0 100.662 28.986 194.563 79.083 273.79c-.368.16-.729.305-1.098.471l-223.21 223.172L204.019 1200l231.249-231.288c-.069-.326-.162-.651-.234-.979c71.035 37.19 151.865 58.224 237.6 58.224c283.309 0 512.959-229.69 512.959-512.997C1185.59 229.652 955.939 0 672.633 0zm0 227.877c157.441 0 285.041 127.639 285.041 285.081s-127.6 285.081-285.041 285.081c-157.442 0-285.082-127.639-285.082-285.081S515.19 227.877 672.633 227.877z' fill='currentColor'/%3E%3C/g%3E%3C/svg%3E");
     border: 0;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="R"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="R"].task-list-item.is-checked {
     color: var(--chbx-R);
 }
 
 /* "i" Idea */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="i"],
 .markdown-preview-view li[data-task="i"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="i"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="i"]::before {
@@ -4008,11 +4036,13 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     width: 14.7px;
     height: 14.7px;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="i"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="i"].task-list-item.is-checked {
     color: var(--chbx-id);
 }
 
 /* "B" Brainstorm */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="B"],
 .markdown-preview-view li[data-task="B"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="B"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="B"]::before {
@@ -4020,12 +4050,14 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='3 3 22 22'%3E%3Crect x='0' y='0' width='24' height='24' fill='none' stroke='none' /%3E%3Ccircle cx='7.2' cy='14.4' r='3.2' fill='currentColor'/%3E%3Ccircle cx='14.8' cy='18' r='2' fill='currentColor'/%3E%3Ccircle cx='15.2' cy='8.8' r='4.8' fill='currentColor'/%3E%3C/svg%3E");
     border: 0;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="B"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="B"].task-list-item.is-checked {
     color: var(--chbx-B);
 }
 
 
 /* "P" Pro */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="P"],
 .markdown-preview-view li[data-task="P"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="P"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="P"]::before {
@@ -4033,13 +4065,15 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='2 0 24 24'%3E%3Crect x='0' y='0' width='24' height='24' fill='none' stroke='none' /%3E%3Cpath d='M14.17 1L7 8.18V21h12.31L23 12.4V8h-8.31l1.12-5.38zM1 9h4v12H1z' fill='currentColor'/%3E%3C/svg%3E");
     border: 0;
     width: 15px;
-    height: 14px;
+    height: 17px;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="P"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="P"].task-list-item.is-checked {
     color: var(--chbx-P);
 }
 
 /* "C" Con */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="C"],
 .markdown-preview-view li[data-task="C"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="C"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="C"]::before {
@@ -4049,6 +4083,7 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     width: 15px;
     height: 18px;
 }
+.check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="C"] + .cm-list-1 + .cm-list-1,
 .check-color.check-color ul li[data-task="C"].task-list-item.is-checked {
     color: var(--chbx-C);
 }

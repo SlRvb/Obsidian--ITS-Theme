@@ -3763,7 +3763,7 @@ li:nth-child(even) {
     margin-right: 10px;
     margin-top: 3px;
     cursor: pointer;
-    vertical-align: center;
+    vertical-align: .1em;
 }
 
 /*Checkbox Checked color*/

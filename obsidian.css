@@ -783,6 +783,11 @@ settings:
         id: check-bg
         type: class-toggle
         default: true
+    - 
+        title: Normal Task Text
+        description: Reapply regular text color to the text of the task.
+        id: check-text
+        type: class-toggle
     -
         title: Restore Crossed Checkbox
         id: chkbx-strike
@@ -3904,6 +3909,13 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 body.check-bg:not(.chkbx-strike) li.task-list-item.is-checked > a,
 body.check-bg:not(.chkbx-strike) li.task-list-item.is-checked > code {
     opacity: unset;
+}
+
+/* Checkbox Text Normal */
+.check-text .markdown-source-view.mod-cm6 .task-list-item-checkbox,
+.check-text.check-text ul li:not([data-task="x"]).task-list-item.is-checked {
+    color: var(--text-normal) !important;
+    font-weight: unset;
 }
 
 /*--Checkbox Type Icons--*/

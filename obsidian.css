@@ -777,6 +777,12 @@ settings:
         id: check-color
         type: class-toggle
         default: true
+    - 
+        title: Colorful Task Backgrounds
+        description: Add color to the background of the task.
+        id: check-bg
+        type: class-toggle
+        default: true
     -
         title: Restore Crossed Checkbox
         id: chkbx-strike
@@ -3806,35 +3812,35 @@ input[type=checkbox]:checked::before {
 }
 
 .theme-dark {
-    --chbx-q: #fdaf00;
-    --chbx-h: #5c7699;
-    --chbx-d: #3e4552;
-    --chbx-i: #c22a2a;
-    --chbx-a: #f872b5;
-    --chbx-R: #aab3ca;
-    --chbx-id: #e7e7ab;
-    --chbx-I: #528bd4;
-    --chbx-P: #4fa54f;
-    --chbx-C: #cf4343;
-    --chbx-N: #855b41;
-    --chbx-b: #e6813f;
-    --chbx-B: #885ee9;
+    --chbx-q: 253, 175, 0; /*#fdaf00*/
+    --chbx-h: 92, 118, 153; /*#5c7699*/
+    --chbx-d: 62, 69, 82; /*#3e4552*/
+    --chbx-i: 194, 42, 42; /*#c22a2a*/
+    --chbx-a: 248, 114, 181; /*#f872b5*/
+    --chbx-R: 170, 179, 202; /*#aab3ca*/
+    --chbx-id:231, 231, 171; /* #e7e7ab*/
+    --chbx-I: 82, 139, 212; /*#528bd4*/
+    --chbx-P: 79, 165, 79; /*#4fa54f*/
+    --chbx-C: 207, 67, 67; /*#cf4343*/
+    --chbx-N: 133, 91, 65; /*#855b41*/
+    --chbx-b: 230, 129, 63; /*#e6813f*/
+    --chbx-B: 136, 94, 233; /*#885ee9*/
 }
 
 .theme-light {
-    --chbx-q: #fdaf00;
-    --chbx-h: #a8b1bd;
-    --chbx-d: #cad3eb;
-    --chbx-i: #db0101;
-    --chbx-a: #f872b5;
-    --chbx-R: #9fbadf;
-    --chbx-id: #cac700;
-    --chbx-B: #528bd4;
-    --chbx-P: #4fa54f;
-    --chbx-C: #d66c6c;
-    --chbx-N: #a16a49;
-    --chbx-b: #fb924c;
-    --chbx-I: #b676ff;
+    --chbx-q: 253, 175, 0; /*#fdaf00*/
+    --chbx-h: 168, 177, 189; /*#a8b1bd*/
+    --chbx-d: 203, 212, 235; /*#cad3eb*/
+    --chbx-i: 219, 1, 1; /*#db0101*/
+    --chbx-a: 248, 114, 181; /*#f872b5*/
+    --chbx-R: 159, 186, 223; /*#9fbadf*/
+    --chbx-id:202, 199, 0; /* #cac700*/
+    --chbx-B: 82, 139, 212; /*#528bd4*/
+    --chbx-P: 79, 165, 79; /*#4fa54f*/
+    --chbx-C: 214, 108, 108; /*#d66c6c*/
+    --chbx-N: 161, 106, 73; /*#a16a49*/
+    --chbx-b: 251, 146, 76; /*#fb924c*/
+    --chbx-I: 182, 118, 255; /*#b676ff*/
 }
 /* Hide Checkbox Border */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]),
@@ -3848,9 +3854,11 @@ input[type=checkbox]:checked::before {
 .markdown-preview-view :not(li[data-task="x"]) > .task-list-item-checkbox:checked::before,
 .markdown-preview-view :not(li[data-task="x"]) p .task-list-item-checkbox:checked::before {
     content: ' ';
+    position: relative;
     font-family: var(--its);
     padding-left: 0px;
     font-size: 1.2em;
+    top: -2px;
     font-weight: 10;
     border: none;
     width: initial;
@@ -3887,6 +3895,16 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     color: var(--lines);
 }
 
+/* Check Background Styling */
+.check-bg ul li:not([data-task=" "]).task-list-item.is-checked,
+.check-color.check-bg ul li:not([data-task=" "]).task-list-item.is-checked {
+    color: var(--text, var(--text-normal));
+    margin-bottom: 5px;
+}
+body.check-bg:not(.chkbx-strike) li.task-list-item.is-checked > a,
+body.check-bg:not(.chkbx-strike) li.task-list-item.is-checked > code {
+    opacity: unset;
+}
 
 /*--Checkbox Type Icons--*/
 
@@ -3897,12 +3915,15 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="X"]::before {
     color: var(--accent2-lite, var(--text-accent));
     content: "\EC01";
-    
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="X"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="X"] + span + span,
 .check-color.check-color ul li[data-task="X"].task-list-item.is-checked {
     color: var(--text-faint);
+}
+.check-bg ul li[data-task="X"].task-list-item.is-checked {
+    border-left: 2px solid rgb(var(--chbx-R));
+    background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
 }
 
 
@@ -3919,6 +3940,10 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .check-color.check-color ul li[data-task=">"].task-list-item.is-checked {
     color: var(--text-normal);
 }
+.check-bg ul li[data-task=">"].task-list-item.is-checked {
+    border-left: 3px double rgb(var(--chbx-h));
+    background: rgba(var(--chbx-h), 20%); 
+}
 
 
 /* SVG Calendar for deferred/scheduled ('- [D]') */
@@ -3926,29 +3951,36 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="D"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="D"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="D"]::before {
-    color: var(--chbx-h);
+    color: rgb(var(--chbx-h));
     content: "\EC04";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="D"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="D"] + span + span,
 .check-color.check-color ul li[data-task="D"].task-list-item.is-checked {
-    color: var(--chbx-h);
+    color: rgb(var(--chbx-h));
 }
-
+.check-bg ul li[data-task="D"].task-list-item.is-checked {
+    border-left: 2px solid rgb(var(--chbx-h));
+    background: rgba(var(--chbx-h), 20%); 
+}
 
 /* SVG line for cancelled/non-task ('- [-]') */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]::before,
 .markdown-preview-view li[data-task="-"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="-"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"]::before {
-    color: var(--chbx-d);
+    color: rgb(var(--chbx-d));
     content: "\EC02";
     
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"] + span + span,
 .check-color.check-color ul li[data-task="-"].task-list-item.is-checked {
-    color: var(--chbx-d);
+    color: rgb(var(--chbx-d));
+}
+.check-bg ul li[data-task="-"].task-list-item.is-checked {
+    border-left: 2px solid rgb(var(--chbx-d));
+    background: rgba(var(--chbx-d), 20%); 
 }
 
 
@@ -3957,13 +3989,17 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="?"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="?"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"]::before {
-    color: var(--chbx-q);
+    color: rgb(var(--chbx-q));
     content: "\EC05";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"] + span + span,
 .check-color.check-color ul li[data-task="?"].task-list-item.is-checked {
-    color: var(--chbx-q);
+    color: rgb(var(--chbx-q));
+}
+.check-bg ul li[data-task="?"].task-list-item.is-checked {
+    border-left: 2px dashed rgb(var(--chbx-q));
+    background: rgba(var(--chbx-q), 20%); /*#fac35d17*/
 }
 
 
@@ -3972,28 +4008,35 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="!"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="!"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"]::before {
-    color: var(--chbx-i);
+    color: rgb(var(--chbx-i));
     content: "\EC08";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"] + span + span,
 .check-color.check-color ul li[data-task="!"].task-list-item.is-checked {
-    color: var(--chbx-i);
+    color: rgb(var(--chbx-i));
 }
-
+.check-bg ul li[data-task="!"].task-list-item.is-checked {
+    border-left: 3px solid rgb(var(--chbx-i));
+    background: rgba(var(--chbx-i), 20%); 
+}
 
 /* '+' for adding a task ('- [+]') */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"]::before,
 .markdown-preview-view li[data-task="+"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="+"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"]::before {
-    color: var(--chbx-a);
+    color: rgb(var(--chbx-a));
     content: "\EC06";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"] + span + span,
 .check-color.check-color ul li[data-task="+"].task-list-item.is-checked {
-    color: var(--chbx-a);
+    color: rgb(var(--chbx-a));
+}
+.check-bg ul li[data-task="+"].task-list-item.is-checked {
+    border-left: 2px dashed rgb(var(--chbx-a));
+    background: rgba(var(--chbx-a), 20%); 
 }
 
 
@@ -4011,27 +4054,33 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 10%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-}*/
+}
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"] + span + span {
     background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 80%);
     -webkit-background-clip: text;
+}*/
+.check-bg ul li[data-task="/"].task-list-item.is-checked {
+    border-left: 3px dashed rgb(var(--chbx-R));
+    background: linear-gradient(to left, var(--accent, var(--interactive-accent)) 0%,transparent 1%);
 }
-
 
 /* "R" Research */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="R"]::before,
 .markdown-preview-view li[data-task="R"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="R"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="R"]::before {
-    color: var(--chbx-R);
+    color: rgb(var(--chbx-R));
     content: "\EC07";
-    
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="R"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="R"] + span + span,
 .check-color.check-color ul li[data-task="R"].task-list-item.is-checked {
-    color: var(--chbx-R);
+    color: rgb(var(--chbx-R));
+}
+.check-bg ul li[data-task="R"].task-list-item.is-checked {
+    border-left: 3px dashed rgb(var(--chbx-R));
+    background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
 }
 
 /* "i" Idea */
@@ -4039,13 +4088,17 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="i"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="i"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="i"]::before {
-    color: var(--chbx-id);
+    color: rgb(var(--chbx-id));
     content: "\EC09";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="i"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="i"] + span + span,
 .check-color.check-color ul li[data-task="i"].task-list-item.is-checked {
-    color: var(--chbx-id);
+    color: rgb(var(--chbx-id));
+}
+.check-bg ul li[data-task="i"].task-list-item.is-checked {
+    border-left: 2px dashed rgb(var(--chbx-id));
+    background: rgba(var(--chbx-id), 20%); 
 }
 
 /* "B" Brainstorm */
@@ -4053,29 +4106,35 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="B"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="B"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="B"]::before {
-    color: var(--chbx-B);
+    color: rgb(var(--chbx-B));
     content: "\EC10";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="B"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="B"] + span + span,
 .check-color.check-color ul li[data-task="B"].task-list-item.is-checked {
-    color: var(--chbx-B);
+    color: rgb(var(--chbx-B));
 }
-
+.check-bg li[data-task="B"].task-list-item.is-checked {
+    border-left: 3px double rgb(var(--chbx-B));
+    background: rgba(var(--chbx-B), 20%); /*#945dfa25*/
+}
 
 /* "P" Pro */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="P"]::before,
 .markdown-preview-view li[data-task="P"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="P"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="P"]::before {
-    color: var(--chbx-P);
+    color: rgb(var(--chbx-P));
     content: "\EC11";
-    
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="P"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="P"] + span + span,
 .check-color.check-color ul li[data-task="P"].task-list-item.is-checked {
-    color: var(--chbx-P);
+    color: rgb(var(--chbx-P));
+}
+.check-bg ul li[data-task="P"].task-list-item.is-checked {
+    border-left: 2px solid rgb(var(--chbx-P));
+    background: rgba(var(--chbx-P), 20%); 
 }
 
 /* "C" Con */
@@ -4083,13 +4142,17 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="C"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="C"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="C"]::before {
-    color: var(--chbx-C);
+    color: rgb(var(--chbx-C));
     content: "\EC12";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="C"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="C"] + span + span,
 .check-color.check-color ul li[data-task="C"].task-list-item.is-checked {
-    color: var(--chbx-C);
+    color: rgb(var(--chbx-C));
+}
+.check-bg ul li[data-task="C"].task-list-item.is-checked {
+    border-left: 2px solid rgb(var(--chbx-C));
+    background: rgba(var(--chbx-C), 20%); 
 }
 
 /* "I" Info */
@@ -4097,13 +4160,17 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="I"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="I"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="I"]::before {
-    color: var(--chbx-I);
+    color: rgb(var(--chbx-I));
     content: "\EC16";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="I"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="I"] + span + span,
 .check-color.check-color ul li[data-task="I"].task-list-item.is-checked {
-    color: var(--chbx-I);
+    color: rgb(var(--chbx-I));
+}
+.check-bg ul li[data-task="I"].task-list-item.is-checked {
+    border-left: 2px solid rgb(var(--chbx-I));
+    background: rgba(var(--chbx-I), 20%); 
 }
 
 /* "Q" Quote */
@@ -4111,27 +4178,37 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="Q"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="Q"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="Q"]::before {
-    color: var(--chbx-R);
+    color: rgb(var(--chbx-R));
     content: "\EC13";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="Q"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="Q"] + span + span,
 .check-color.check-color ul li[data-task="Q"].task-list-item.is-checked {
-    color: var(--chbx-R);
+    color: rgb(var(--chbx-R));
 }
+.check-bg ul li[data-task="Q"].task-list-item.is-checked {
+    border-left:  3px solid rgb(var(--chbx-R));
+    border-right: 3px solid rgb(var(--chbx-R));
+    background: rgba(var(--chbx-R), 20%);
+}
+
 
 /* "N" Note */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="N"]::before,
 .markdown-preview-view li[data-task="N"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="N"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="N"]::before {
-    color: var(--chbx-N);
+    color: rgb(var(--chbx-N));
     content: "\EC14";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="N"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="N"] + span + span,
 .check-color.check-color ul li[data-task="N"].task-list-item.is-checked {
-    color: var(--chbx-N);
+    color: rgb(var(--chbx-N));
+}
+.check-bg ul li[data-task="N"].task-list-item.is-checked {
+    border-left: 2px solid rgb(var(--chbx-N));
+    background: rgba(var(--chbx-N), 20%); 
 }
 
 /* "b" Bookmark */
@@ -4139,13 +4216,17 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .markdown-preview-view li[data-task="b"]>.task-list-item-checkbox:checked::before,
 .markdown-preview-view li[data-task="b"] p .task-list-item-checkbox:checked::before,
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="b"]::before {
-    color: var(--chbx-b);
+    color: rgb(var(--chbx-b));
     content: "\EC15";
 }
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="b"] + span,
 .check-color .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="b"] + span + span,
 .check-color.check-color ul li[data-task="b"].task-list-item.is-checked {
-    color: var(--chbx-b);
+    color: rgb(var(--chbx-b));
+}
+.check-bg ul li[data-task="b"].task-list-item.is-checked {
+    border-left: 2px solid rgb(var(--chbx-b));
+    background: rgba(var(--chbx-b), 20%); 
 }
 
 

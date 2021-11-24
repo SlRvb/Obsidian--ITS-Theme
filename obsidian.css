@@ -1048,13 +1048,21 @@ settings:
         default-dark: '#586477'
         default-light: '#a6bbde'
     - 
-        title: Folder
+        title: Open Folder
         description: Open folder icon color.
         id: folder
         type: variable-themed-color
         format: hex
         default-dark: '#e05858'
         default-light: '#ce6d6d'
+    - 
+        title: Folder Title Hover
+        description: Open folder icon color.
+        id: f-hover
+        type: variable-themed-color
+        format: hex
+        default-dark: '#883737'
+        default-light: '#c14343'
     -
         title: Sliding Panes Dropshadow
         id: slide-shadow

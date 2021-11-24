@@ -1274,6 +1274,7 @@ settings:
         id: graph-focused
         type: variable-themed-color
         format: hex
+        opacity: true
         default-dark: '#fd737366'
         default-light: '#fd737366'
     -

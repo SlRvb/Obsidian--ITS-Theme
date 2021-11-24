@@ -950,12 +950,19 @@ settings:
         default-dark: '#bccad8'
         default-light: '#697580'
     - 
-        title: Faint Text
+        title: Soft Text
         id: soft-text
         type: variable-themed-color
         format: hex
         default-dark: '#aab3ca'
         default-light: '#d04e4e'
+    - 
+        title: Faint Text
+        id: text-faint
+        type: variable-themed-color
+        format: hex
+        default-dark: '#4e5b6f'
+        default-light: '#4e5b6f'
     - 
         title: Headings
         description: Heading, Vault title, HR Symbol, blockquote quotation mark, and open folder icon colors.

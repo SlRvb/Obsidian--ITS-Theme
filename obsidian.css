@@ -1335,6 +1335,11 @@ settings:
         id: slp
         type: class-toggle
     -
+        title: Icon Folder Icon Swaps
+        description: Swap the order of icons back to default. (Will also revert file types).
+        id: type-undo
+        type: class-toggle
+    -
         title: Cross Reference Plugin Adjustments
         id: crs-ref
         type: class-toggle
@@ -2569,7 +2574,7 @@ button.mod-warning {
     width: 100%;
     line-height: 20px;
 }
-:not(.type-undo) .nav-file-title {
+body:not(.type-undo) .nav-file-title {
     flex-direction: row-reverse;
 }
 
@@ -3908,6 +3913,7 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="x"]::before { 
     background: var(--accent, var(--interactive-accent)); 
 }
+.markdown-source-view.mod-cm6 span[data-task]:not([data-task=" "]),
 .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task=' ']),
 .markdown-source-view.mod-cm6 span:not(.cm-link):not(.cm-inline-code) span[data-task='x'] {
     font-weight: bold;
@@ -7439,6 +7445,7 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 .obsidian-icon-folder-icon + .nav-file-title-content,
 .obsidian-icon-folder-icon + .nav-folder-title-content { padding: unset; }
 
+.obsidian-icon-folder-icon + .nav-file-title-content::before,
 .obsidian-icon-folder-icon + .nav-file-title-content::before,
 .obsidian-icon-folder-icon + .nav-folder-title-content::before { display: none; }
 

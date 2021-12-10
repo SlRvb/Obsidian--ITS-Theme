@@ -3594,15 +3594,17 @@ a:hover {
 }
 
 /*--Horizontal Linebreak, HR--*/ 
-.markdown-preview-view hr {
-    border-top: 2px solid var(--hr);
-}
+.markdown-preview-view hr,
+.hr.cm-line,
 .HyperMD-hr-bg {
     border-top: 2px solid var(--hr);
 }
-
+.hr.cm-line hr {
+    border: 0;
+}
 
 /*Stylized HR/Horizontal Line*/
+.hr.cm-line::after,
 .markdown-preview-view hr::after, 
 div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
     font-family: var(--hr-f) !important;
@@ -4451,9 +4453,13 @@ a.tag:hover {
 .markdown-embed .markdown-preview-view {
     padding: 5px 10px;
 }
-
-.markdown-source-view.mod-cm6 .cm-embed-block {
+/*Live Preview Adjustments*/
+.markdown-source-view.mod-cm6 .cm-embed-block,
+.markdown-source-view .markdown-embed:not(.mod-empty),
+.markdown-source-view .file-embed:not(.mod-empty) {
     border-radius: var(--radius);
+    border: 0;
+    padding: 0;
 }
 
 /* Recolor Embed Title*/

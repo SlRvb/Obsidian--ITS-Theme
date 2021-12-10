@@ -3752,6 +3752,10 @@ ul li > p {
     padding-left: 4px; 
     margin-right: -10px;
 }
+.list-bullet::before {    
+    padding: 0;
+    margin-right: -8px;
+}
 
 
 /*Adjust Padding*/

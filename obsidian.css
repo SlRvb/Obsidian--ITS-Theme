@@ -2496,7 +2496,7 @@ button.mod-warning {
     padding: .2em .5em;
     margin: 0px .2em;
 }
-.workspace-tab-header.is-active .workspace-tab-header-inner-icon { color: var(--text-dl); }
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon { color: var(--text-on-accent); }
 
 /*Sidebar Icons: Add Padding to All*/
 .workspace-tab-header {
@@ -3305,6 +3305,7 @@ body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
     padding-right: .5em;
 }
 /*Editor Line Numbers*/
+.markdown-source-view.mod-cm6 .cm-gutters,
 .CodeMirror-gutter,
 .CodeMirror-gutters,
 .CodeMirror-linenumber {

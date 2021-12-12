@@ -2220,7 +2220,7 @@ body:not(.its-i) svg.clock-glyph {
     --table: #283846;
     --hr: #2f3b4d; /*#2a3b55, #3c5274*/
     --i-at: #bf5e5e;
-    --bttn: var(--sphd-ed-1);
+    --bttn: var(--dark-accent);
     
     --graph-bg: var(--outer-bar);
     --graph-lines: var(--dark-accent);

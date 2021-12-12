@@ -1043,6 +1043,13 @@ settings:
         format: hex
         default-dark: '#10161d'
         default-light: '#7e8ea3'
+    -
+        title: Sidebar Tab Colors
+        id: bttn
+        type: variable-themed-color
+        format: hex
+        default-dark: '#7c2929'
+        default-light: '#c24747'
     - 
         title: File
         description: File icon color.
@@ -2128,8 +2135,6 @@ body:not(.its-i) svg.clock-glyph {
     --statblock-bar-color: var(--accent);
 }
 
-
-
 .theme-dark {
     --background-primary: var(--note); /*Note background*/
     --background-primary-alt: var(--outer-bar); /*Note Title background active*/
@@ -2211,10 +2216,11 @@ body:not(.its-i) svg.clock-glyph {
     --hvr: var(--text-highlight-bg);
     --hvr2: var(--text-selection);
     
-    --tag: var(--th);
+    --tag: var(--dark-accent);
     --table: #283846;
     --hr: #2f3b4d; /*#2a3b55, #3c5274*/
     --i-at: #bf5e5e;
+    --bttn: var(--sphd-ed-1);
     
     --graph-bg: var(--outer-bar);
     --graph-lines: var(--dark-accent);
@@ -2345,6 +2351,7 @@ body:not(.its-i) svg.clock-glyph {
     --table: #ccd6eb;
     --hr: #d6deea;
     --i-at: var(--headers)/*#804848*/;
+    --bttn: var(--headers);
     
     --graph-bg: var(--note);
     --graph-lines: #e4e7f8;
@@ -2489,14 +2496,16 @@ button.mod-warning {
     padding: .2em .5em;
     margin: 0px .2em;
 }
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon { color: var(--text-dl); }
+
 /*Sidebar Icons: Add Padding to All*/
 .workspace-tab-header {
     padding-top: .17em;
     border-top: 2px solid transparent;
 }
 .workspace-tab-header.is-active {
-    border-color: var(--accent);
-    background-color: var(--dark-sidebar);
+    border-top: 1px solid transparent;
+    background-color: var(--bttn);
     border-radius: var(--radius);
 }
 
@@ -6081,6 +6090,9 @@ ul.kanban ul {
 .nobg {
     background-color: transparent !important;
 }
+
+
+
 
 
 /*---- Sidepane Pages ----*/

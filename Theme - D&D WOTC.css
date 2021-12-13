@@ -48,7 +48,7 @@
     --h3: var(--embed-h);
 }
 
-.theme-light.wotc{
+.theme-light{
     --embed-h: #d05858;
     --h1: var(--headers);
     --h2: sandybrown;

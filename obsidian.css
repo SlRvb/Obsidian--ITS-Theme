@@ -300,6 +300,43 @@ settings:
 		type: variable-text
 		default: "'Calisto MT', 'Palatino Black', 'Suez One', 'serif'"
 	-
+		title: Heading Underlines
+		description: Remove heading underlines individually. Overridden by the group setting in Note Elements -> Headers
+		id: Spec-Underline-Head
+		type: heading
+		level: 4
+		collapsed: true
+	-
+		title: Hide H1 Underline
+		id: sphd-und-1
+		type: class-toggle
+		default: false
+	-
+		title: Hide H2 heading underline.
+		id: sphd-und-2
+		type: class-toggle
+		default: false
+	-
+		title: Hide H3 heading underline.
+		id: sphd-und-3
+		type: class-toggle
+		default: false
+	-
+		title: Hide H4 heading underline.
+		id: sphd-und-4
+		type: class-toggle
+		default: false
+	-
+		title: Hide H5 heading underline.
+		id: sphd-und-5
+		type: class-toggle
+		default: false
+	-
+		title: Hide H6 heading underline.
+		id: sphd-und-6
+		type: class-toggle
+		default: false
+	-
         title: Heading Size
         id: Spec-Size-Head
         type: heading
@@ -2120,6 +2157,7 @@ body:not(.its-i) svg.clock-glyph {
     --sphd-ed-fs-4: 22px;
     --sphd-ed-fs-5: 20px;
     --sphd-ed-fs-6: 18px;
+
 
     /**/
     --em-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -7976,6 +8014,12 @@ body .block-ref-count:hover {
 
 
 /*Hide Header Line*/
+.sphd-und-1 h1:after,
+.sphd-und-2 h2:after,
+.sphd-und-3 h3:after,
+.sphd-und-4 h4:after,
+.sphd-und-5 h5:after,
+.sphd-und-6 h6:after,
 .h-line h1:after,
 .h-line h2:after,
 .h-line h3:after,

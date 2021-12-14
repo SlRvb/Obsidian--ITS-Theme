@@ -3636,6 +3636,9 @@ a:hover {
 }
 
 /*--Horizontal Linebreak, HR--*/ 
+.markdown-source-view.mod-cm6 .hr,
+.markdown-source-view.mod-cm6 .HyperMD-hr { contain: unset; }
+
 .markdown-preview-view hr,
 .hr.cm-line,
 .HyperMD-hr-bg {

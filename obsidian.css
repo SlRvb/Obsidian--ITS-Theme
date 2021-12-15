@@ -2635,6 +2635,7 @@ body:not(.type-undo) .nav-file-title {
 }
 
 
+
 /*Inactive Folder Color*/
 .is-collapsed .nav-folder-title-content:before {
     color: var(--headers);
@@ -7676,7 +7677,10 @@ body .block-ref-count:hover {
     border: 0;
 }
 
-
+/*AidenLX Folder Fix*/
+.nav-folder.nav-folder.alx-folder-with-note .nav-folder-title-content {
+    width: unset;
+}
 
 
 

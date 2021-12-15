@@ -7700,10 +7700,6 @@ body .block-ref-count:hover {
 
 
 
-
-
-
-
 /*--CSS Class Toggles--*/
 /*Hide Vault Title*/
 .v-non .nav-folder.mod-root > .nav-folder-title {
@@ -8434,6 +8430,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
     color: var(--text);
 }
 /*Folder Hover Arrow*/
+.nav-folder.alx-folder-with-note .nav-folder-title:hover .nav-folder-collapse-indicator,
 .fhvr .nav-folder-title:hover .nav-folder-collapse-indicator {
     display: unset;
     margin-left: 9px;

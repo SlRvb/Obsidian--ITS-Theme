@@ -1987,6 +1987,7 @@ settings:
   --note: #2E3440;
   --aside-bg: #242933;
   --embed-bg: #1d2129;
+  --side-bar: var(--note);
   --code-bg: var(--dark-sidebar);
   --code-text: #81A1C1;
   --lite-accent: #5E81AC;
@@ -2089,7 +2090,3 @@ settings:
   --sphd-ed-5: #A48EAD;
   --sphd-ed-6: var(--soft-text);
 }
-
-/* Alternate Color Schemes*/
-
-/*# sourceMappingURL=ITS%20Alt%20Themes.css.map */

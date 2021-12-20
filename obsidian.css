@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* @settings
 name: In The Shadows Settings
 id: ITS
@@ -2935,11 +2934,9 @@ button.mod-warning {
   display: block;
 }
 
-/*Remove Empty Div to Fix Folder Adjusting When Open*/
-.nav-folder-children > div:not(.nav-folder):not(.nav-file) {
-  display: none;
-}
-
+/*Remove Empty Div to Fix Folder Adjusting When Open
+.nav-folder-children > div:not(.nav-folder):not(.nav-file) { display: none; }
+*/
 /*Nav Folder/File Icons*/
 .nav-folder-children .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
@@ -4122,7 +4119,6 @@ iframe {
 }
 
 /*Show More Embed in Popover*/
-/*Must fit within the Max-Height value^^*/
 .popover.hover-popover .markdown-embed {
   height: 500px;
 }
@@ -4133,13 +4129,13 @@ iframe {
 }
 
 /*Fit image in popover*/
-.popover.hover-popover img {
+.popover.hover-popover img:not([alt]) {
   max-width: 100%;
   height: auto;
 }
 
 /*Crop Image in Popover*/
-.popover.hover-popover img:not(.emoji) {
+.popover.hover-popover img:not([alt]):not(.emoji) {
   object-fit: cover;
   height: 200px;
   width: 100%;
@@ -4580,18 +4576,17 @@ img[src*="#ctr"], img[src*="#center"] .image-embed[alt*=center],
 /*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
-img[alt*=left],
-.image-embed[src*="#left"],
-img[src*="#left"] {
+img[alt*=left], img[src*="#left"],
+.image-embed[alt*=left],
+.image-embed[src*="#left"] {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
-img[alt*=right],
-.image-embed[src*="#right"],
-img[src*="#right"] {
+img[alt*=right], img[src*="#right"],
+.image-embed[alt*=right],
+.image-embed[src*="#right"] {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
@@ -4599,7 +4594,8 @@ img[src*="#right"] {
 
 /*Image Shapes*/
 /*Banners*/
-img[alt*=banner],
+img[alt*=banner], img[src*="#banner"],
+.image-embed[alt*=banner],
 .image-embed[src*="#banner"] {
   display: block;
   object-fit: cover;
@@ -5400,100 +5396,50 @@ img[alt*=sprf] {
 }
 
 /*--Illusion Headers--*/
-.illusion h1,
-.illusion h2,
-.illusion h3,
-.illusion h4,
-.illusion h5,
-.illusion h6,
-.illusion .cm-s-obsidian .HyperMD-header {
+body .illusion h1, body .illusion h2, body .illusion h3, body .illusion h4, body .illusion h5, body .illusion h6, body .illusion .cm-s-obsidian .HyperMD-header {
   padding: 7px;
   color: var(--text-dl);
   box-shadow: 5px 5px var(--outline);
 }
-
-.illusion .HyperMD-header.CodeMirror-line {
+body .illusion .HyperMD-header.CodeMirror-line {
   box-shadow: 0px 2px var(--outline);
   padding: 2px;
   padding-bottom: 5px;
 }
-
-.illusion .cm-s-obsidian .cm-header {
-  color: var(--text-dl);
+body .illusion h1:after, body .illusion h2:after, body .illusion h3:after, body .illusion h4:after, body .illusion h5:after, body .illusion h6:after, body .illusion .cm-s-obsidian .HyperMD-header:after {
+  height: 0;
 }
-
-.illusion .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+body .illusion h1, body .illusion .HyperMD-header-1.CodeMirror-line {
+  background-color: var(--sphd-ed-1);
+}
+body .illusion h2, body .illusion .HyperMD-header-2.CodeMirror-line {
+  background-color: var(--sphd-ed-2);
+}
+body .illusion h3, body .illusion .HyperMD-header-3.CodeMirror-line {
+  background-color: var(--sphd-ed-3);
+}
+body .illusion h4, body .illusion .HyperMD-header-4.CodeMirror-line {
+  background-color: var(--sphd-ed-4);
+}
+body .illusion h5, body .illusion .HyperMD-header-5.CodeMirror-line {
+  background-color: var(--sphd-ed-5);
+}
+body .illusion h6, body .illusion .HyperMD-header-6.CodeMirror-line {
+  background-color: var(--sphd-ed-6);
+}
+body .illusion .markdown-preview-view .heading-collapse-indicator svg, body .illusion .cm-s-obsidian .cm-header body .illusion .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
   display: block;
   color: var(--text-dl);
 }
-
-.illusion .markdown-preview-view .heading-collapse-indicator svg,
-.markdown-preview-view.illusion .heading-collapse-indicator svg {
-  color: var(--text-dl);
-}
-
-.illusion .markdown-preview-view .heading-collapse-indicator,
-.markdown-preview-view.illusion .heading-collapse-indicator {
+body .illusion .markdown-preview-view .heading-collapse-indicator {
   padding-left: 40px;
 }
 
-.illusion h1:after,
-.illusion h2:after,
-.illusion h3:after,
-.illusion h4:after,
-.illusion h5:after,
-.illusion h6:after,
-.illusion .cm-s-obsidian pre.HyperMD-header:after {
-  height: 0;
+.markdown-preview-view.illusion .heading-collapse-indicator svg {
+  color: var(--text-dl);
 }
-
-/*Illusion Header: Colors*/
-.illusion h1 {
-  background-color: var(--sphd-pre-1);
-}
-
-.illusion .HyperMD-header-1.CodeMirror-line {
-  background-color: var(--sphd-ed-1);
-}
-
-.illusion h2 {
-  background-color: var(--sphd-pre-2);
-}
-
-.illusion .HyperMD-header-2.CodeMirror-line {
-  background-color: var(--sphd-ed-2);
-}
-
-.illusion h3 {
-  background-color: var(--sphd-pre-3);
-}
-
-.illusion .HyperMD-header-3.CodeMirror-line {
-  background-color: var(--sphd-ed-3);
-}
-
-.illusion h4 {
-  background-color: var(--sphd-pre-4);
-}
-
-.illusion .HyperMD-header-4.CodeMirror-line {
-  background-color: var(--sphd-ed-4);
-}
-
-.illusion h5 {
-  background-color: var(--sphd-pre-5);
-}
-
-.illusion .HyperMD-header-5.CodeMirror-line {
-  background-color: var(--sphd-ed-5);
-}
-
-.illusion h6 {
-  background-color: var(--sphd-pre-6);
-}
-
-.illusion .HyperMD-header-6.CodeMirror-line {
-  background-color: var(--sphd-ed-6);
+.markdown-preview-view.illusion .heading-collapse-indicator {
+  padding-left: 40px;
 }
 
 /*--Kanban--*/

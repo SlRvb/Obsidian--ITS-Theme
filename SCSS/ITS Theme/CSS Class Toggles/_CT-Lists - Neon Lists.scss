@@ -1,0 +1,67 @@
+
+/*Neon Bullet List Line*/
+/*Neon Edit*/
+.bul-li-neon .cm-hmd-list-indent .cm-tab::before { 
+    box-shadow:
+    -2px 0 20px var(--b-l-1),
+    6px 0 12px  var(--b-l-1); 
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(2):before {
+    box-shadow:
+    -2px 0 20px var(--b-l-2),
+    6px 0 12px  var(--b-l-2);
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(3):before {
+    box-shadow:
+    -2px 0 20px var(--b-l-3),
+    6px 0 12px  var(--b-l-3);
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(4):before {
+    box-shadow:
+    -2px 0 20px var(--b-l-4),
+    6px 0 12px  var(--b-l-4);
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(5):before {
+    box-shadow:
+    -2px 0 20px var(--b-l-5),
+    6px 0 12px  var(--b-l-5);
+}
+.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(6):before {
+    box-shadow:
+    -2px 0 20px var(--b-l-6),
+    6px 0 12px  var(--b-l-6);
+}
+
+
+/*Neon Preview*/
+.bul-li-neon ul li, 
+.bul-li-neon ol li {
+    box-shadow: 0 0 12px var(--b-l-1);
+    clip-path: inset(0px 1px .2px -60px);
+}
+.bul-li-neon ul ul li, 
+.bul-li-neon ol ol li {
+    box-shadow: 0 0 12px var(--b-l-2);
+    clip-path: inset(0px 1px .2px -60px);
+}
+.bul-li-neon ul ul ul li, 
+.bul-li-neon ol ol ol li {
+    box-shadow: 0 0 12px var(--b-l-3);
+    clip-path: inset(0px 1px .2px -60px);
+}
+.bul-li-neon ul ul ul ul li, 
+.bul-li-neon ol ol ol ol li {
+    box-shadow: 0 0 12px var(--b-l-4);
+    clip-path: inset(0px 1px .2px -60px);
+}
+.bul-li-neon ul ul ul ul ul li, 
+.bul-li-neon ol ol ol ol ol li {
+    box-shadow: 0 0 12px var(--b-l-5);
+    clip-path: inset(0px 1px .2px -60px);
+}
+.bul-li-neon ul ul ul ul ul ul li, 
+.bul-li-neon ol ol ol ol ol ol li {
+    box-shadow: 0 0 10px var(--b-l-6);
+    clip-path: inset(0px 1px .2px -60px);
+}
+

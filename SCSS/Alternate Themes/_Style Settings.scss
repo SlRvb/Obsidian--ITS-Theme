@@ -1,0 +1,440 @@
+/* @settings
+name: ITS Alternate Themes
+id: ITS-AT
+settings:
+    -
+        title: Alternate Themes
+        id: Alt-Themes
+        type: heading
+        level: 2
+    -
+        title: SlRvb Blue
+        id: slrvb-b
+        type: class-toggle
+    -
+        title: SlRvb Gray
+        id: slrvb-g
+        type: class-toggle
+    - 
+        title: School Days
+        id: s-d
+        type: class-toggle
+    -
+        title: D&D
+        id: dnd
+        type: class-toggle
+    -
+        title: D&D WOTC
+        description: Inspired by Wizards of the Coast D&D handbook designs.
+        id: wotc
+        type: class-toggle
+    -
+        title: Tangerine Dunes
+        id: t-d
+        type: class-toggle
+    -
+        title: Drowned
+        id: drwn
+        type: class-toggle
+    -
+        title: Nord
+        id: nord
+        type: class-toggle
+    -
+        title: ITS Dark
+        id: its-d
+        type: class-toggle
+    -
+        title: Adjustments
+        id: Adjustments
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Paper Shadow
+        id: paper
+        type: class-toggle
+    -
+        title: Colors
+        description: Some colors may not change anything (If you're not using the ITS Theme).
+        id: Alt-Colors
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Text
+        description: Change text colors
+        id: text-colors
+        type: heading
+        level: 4
+        collapsed: true
+    - 
+        title: Text
+        id: text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Faint Text
+        id: soft-text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Headings
+        description: Heading, Vault title, HR Symbol, blockquote quotation mark, and open folder icon colors.
+        id: headers
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: File Title
+        description: File text color.
+        id: file
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Code Text
+        id: code-text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: "`<i></i>` Text"
+        description: "Html `<i></i>` text color."
+        id: i-at
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Footnotes
+        id: footnote
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Workspace
+        description: Recolor some UI colors
+        id: Workspace-Colors
+        type: heading
+        level: 4
+        collapsed: true
+    - 
+        title: Note
+        description: Note and sidebar colors.
+        id: note
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Outer Sidebar
+        id: outer-bar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Sidebar
+        description: Change only sidebar, right settings pane colors.
+        id: side-bar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Dark Sidebar
+        description: Left settings bar, <i></i> background, graph background, and pane separator colors.
+        id: dark-sidebar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: File
+        description: File icon color.
+        id: f-icon
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Folder
+        description: Open folder icon color.
+        id: folder
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Sliding Panes Dropshadow
+        id: slide-shadow
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Note Elements
+        id: Note-Element-Colors
+        type: heading
+        level: 4
+        collapsed: true
+    - 
+        title: Tag Color
+        id: tag
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Embed/Blockquote
+        description: Embed/Blockquote color.
+        id: embed-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Code Background
+        id: code-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Horizontal Line
+        id: hr
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+		title: Aside Background Color
+		id: aside-bg
+		description: Aside background color and dark theme setting alternating setting item color.
+		type: variable-themed-color
+		format: hex
+		default-dark: '#00000000'
+		default-light: '#00000000'
+    -
+        title: Other
+        id: Other-Colors
+        type: heading
+        level: 4
+        collapsed: true
+    - 
+        title: Accent
+        id: accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Lite Accent
+        description: Link hover, scrollbar active, tags, embed titles and links colors.
+        id: lite-accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Accent 2
+        description: Arrows, lines, even bullet list line colors.
+        id: accent2
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Lite Accent 2
+        description: Link color.
+        id: accent2-lite
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Dark Accent
+        description: File selected and Note Gradient, frontmatter tag, scrollbar color.
+        id: dark-accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Deep Dark Accent
+        description: Darkmode Mobile Toolbar and Lightmode Obsidian titlebar background color.
+        id: deep-dark-accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Inactive
+        description: Inactive note; file text; unresolved and external link, editor and external link hover; and mermaid text color.
+        id: inactive
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Background
+        description: Scrollbar background color
+        id: bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Lines
+        description: Explorer, heading, input box, settings, frontmatter, and mermaidjs lines
+        id: table
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+		title: Foreground
+		description: Active file selected title color, Graph Node Color, Kanban Plugin Button color.
+		id: fg
+		type: variable-themed-color
+		format: hex
+		default-dark: '#00000000'
+		default-light: '#00000000'
+    -
+        title: Highlights
+        id: RGBA
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        title: Text Highlight
+        description: Markdown highlight color.
+        id: text-highlight-bg
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Search Highlight
+        description: Search result highlight color.
+        id: text-highlight-bg-active
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Search 2
+        description: Search match highlight and background transparent color for settings.
+        id: background-modifier-form-field-highlighted
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Text Selection
+        description: Cursor dragged highlights
+        id: text-selection
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#00000000'
+        default-light: '#00000000'
+	-
+		title: Table
+		description: Alternating row/column color for table.
+		id: td
+		type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#00000000'
+		default-light: '#00000000'
+    -
+        title: Graph Colors
+        id: Graph
+        type: heading
+        level: 4
+        collapsed: true
+    - 
+        title: Graph Background
+        id: graph-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Graph Lines
+        id: graph-lines
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    - 
+        title: Graph Node
+        id: graph-node
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Graph Current Node
+        id: graph-focused
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Graph Attachment
+        id: graph-img
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+    -
+        title: Graph Tags
+        id: graph-tag
+        type: variable-themed-color
+        format: hex
+        default-dark: '#00000000'
+        default-light: '#00000000'
+*/
+
+
+
+/*Plugin: 5e Statblock*/
+.dnd .obsidian-statblock-plugin .creature-heading > .name,
+.wotc .obsidian-statblock-plugin .creature-heading > .name { color: var(--embed-h) !important; }
+.dnd .obsidian-statblock-plugin .property-name,
+.wotc .obsidian-statblock-plugin .property-name { color: var(--headers); }
+.dnd .obsidian-statblock-plugin .section-header,
+.wotc .obsidian-statblock-plugin .section-header { color: var(--embed-h) !important; }
+
+
+.theme-dark.dnd,
+.theme-dark.wotc {
+    --embed-h: #c93c3c;
+    --h1: var(--headers);
+    --h2: sandybrown;
+    --h3: var(--embed-h);
+}
+.theme-light.dnd,
+.theme-light.wotc{
+    --embed-h: #d05858;
+    --h1: var(--headers);
+    --h2: sandybrown;
+    --h3: var(--embed-h);
+}
+
+

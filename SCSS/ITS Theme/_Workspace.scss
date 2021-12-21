@@ -1,0 +1,326 @@
+
+/*----WORKSPACE----*/
+
+/*Obsidian Title Bar Cover*/
+.titlebar { background-color: var(--background-modifier-cover); }
+.titlebar-text,
+.titlebar-button { 
+    color: var(--text-dl);
+    opacity: 1;
+}
+
+/*Drop Menu*/
+.menu {
+    border-radius: var(--radius) !important;
+    box-shadow: 5px 5px var(--outline);
+}
+.menu-item.selected:not(.is-disabled):not(.is-label),
+.menu-item:hover:not(.is-disabled):not(.is-label):hover {
+    background-color: var(--outer-bar);
+}
+
+/*Ribbon Icons*/
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action,
+.workspace-tab-header-inner-icon {
+    color: var(--soft-text);
+    text-align: center;
+    cursor: pointer;
+    stroke-width: 2px;
+}
+.side-dock-settings {
+    margin-bottom: 1em;
+}
+.workspace-ribbon.is-collapsed {
+    border: none;
+    background-color: var(--outer-bar);
+}
+.workspace-ribbon { transition: none; }
+
+
+/*Buttons*/
+.nav-action-button.is-active {
+    background-color: var(--th);
+    color: var(--text-dl);
+}
+/*Button Hover Color*/
+.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button:hover,
+.modal button:not(.mod-cta):not(.mod-warning):hover, 
+button:hover, button.mod-cta:hover {
+    background-color: var(--interactive-accent-hover);
+    color: var(--text-dl);
+}
+
+button, 
+button.mod-cta,
+.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button {
+    border-radius: var(--radius);
+    font-size: calc(var(--f-text) - .12em);
+    font-family: var(--default-font);
+}
+
+button.mod-warning {
+    color: var(--text-error);
+}
+
+/*Pinned Pane Button Color*/
+.view-action:hover,
+.view-action.is-active {
+    color: var(--accent);
+}
+
+
+/*--Sidebar--*/
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf,
+.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+    border-radius: var(--radius);
+}
+/*Recolor Top*/
+.workspace-tabs,
+.workspace-tab-container-before.is-before-active,
+.workspace-tab-container-after.is-after-active,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active, 
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner {
+    background-color: transparent;
+    border-radius: var(--radius);
+}
+.workspace-tab-header-container {
+    background-color: var(--side-bar);
+    border-radius: var(--radius);
+    padding-top: .2em;
+    height: 36px;
+}
+
+/*Sidebar: Icons*/
+.workspace-tab-header-inner {
+    padding: .2em .5em;
+    margin: 0px .2em;
+}
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon { color: var(--text-on-accent); }
+
+/*Sidebar Icons: Add Padding to All*/
+.workspace-tab-header {
+    padding-top: .17em;
+    border-top: 2px solid transparent;
+}
+.workspace-tab-header.is-active {
+    border-top: 1px solid transparent;
+    background-color: var(--bttn);
+    border-radius: var(--radius);
+}
+
+/*Sidebar Icons: Remove Animation*/
+.workspace-tab-header,
+.workspace-tab-header-inner,
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+    transition: none;
+}
+
+/*Sidebar Resize Handle*/
+.workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    background-color: var(--dark-sidebar);
+    height: 100%;
+}
+.workspace-leaf-resize-handle:hover,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
+    background-color: var(--accent);
+}
+
+/*Word Wrap Pane*/
+.tree-item-inner {
+    word-wrap: break-word;
+    width: 100%;
+}
+
+
+
+
+/*-File Navbar-*/
+/*Adjusting Padding of Navbar Icons*/
+.nav-header {
+    padding: 3% 0px 5px;
+}
+/*Adjusting Button Padding*/
+.nav-action-button {
+    padding: 5px 8px 0 8px;
+    margin: 0 3px 0px 3px;
+    border-radius: var(--radius);
+}
+
+/*Remove Bottom Scrollbar*/
+.nav-files-container {
+    overflow-x: hidden;
+    /*padding-top: 2.5em;*/
+}
+
+/*Vault Name*/
+.nav-folder.mod-root > .nav-file-title,
+.nav-folder.mod-root > .nav-folder-title {
+    color: var(--headers);
+    font-family: var(--vault-f);
+    font-size: calc(var(--f-s-h) - 10px);
+    /*border-bottom: 3px solid var(--accent);*/
+    padding-left: .2em !important;
+    /*position: fixed;
+    top: 1.5em;
+    background-color: var(--side-bar);
+    padding-top: .7em;*/
+    display: block;
+}
+
+/*Remove Empty Div to Fix Folder Adjusting When Open
+.nav-folder-children > div:not(.nav-folder):not(.nav-file) { display: none; }
+*/
+/*Nav Folder/File Icons*/
+.nav-folder-children .nav-folder-title-content::before,
+.nav-file-title .nav-file-title-content::before {
+    font-family: 'its';
+    margin-right: 6px;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 10 !important;
+}
+
+.nav-folder-children .nav-folder-title-content::before {
+    content: '\e801';
+    color: var(--folder);
+}
+.nav-file-title .nav-file-title-content::before {
+    content: '\e800';
+    text-align: center;
+    color: var(--file);
+}/*
+.nav-file-tag + .nav-file-title-content::before {
+    content: '\ed1e';
+    font-family: var(--rmx);
+}*/
+
+
+/*Move File Extension to Right*/
+.nav-folder-title-content,
+.nav-file-title-content {
+    width: 100%;
+    line-height: 20px;
+}
+body:not(.type-undo) .nav-file-title {
+    flex-direction: row-reverse;
+}
+
+
+
+/*Inactive Folder Color*/
+.is-collapsed .nav-folder-title-content:before {
+    color: var(--headers);
+}
+
+/*Nav Folder Lines*/
+.nav-folder,
+.nav-file {
+    margin: 0 -2px;
+    margin-right: 0px;
+    border-left: 2px solid var(--table);
+}
+/*Align Folder Line*/
+.nav-folder-children {
+    padding-left: 18px;
+}
+/*Nav Hover Line Colors*/
+.nav-folder:hover,
+.nav-file:hover {
+    border-color: var(--accent);
+}
+
+/*Text wrap*/
+.nav-file-title,
+.nav-folder-title {
+    white-space: normal;
+    width: auto;
+    border-radius: var(--radius);
+    border: 0;
+    font-size: calc(var(--f-text) - .12em);
+}
+
+/*Folder Bold*/
+.nav-folder-title-content {
+    font-weight: 600;
+}
+
+/*Folder Push Left*/
+.nav-folder-title {
+    padding-left: 4px;
+}
+.nav-folder-title:hover {
+    color: var(--f-hover) !important;
+}
+
+/*File Colors|File Under Folder*/
+.nav-file-title {
+    padding-left: 5px;
+    color: var(--file);
+}
+.nav-file-title:hover {
+    color: var(--f-hover) !important;
+    font-weight: 600; 
+}
+.nav-folder-children .nav-file-title-content::before{
+    color: var(--f-icon);
+}
+
+
+/*File selected*/
+.nav-file-title.is-active {
+    background-color: var(--dark-accent);
+    color: var(--fg);
+}
+.nav-file-title.is-active .nav-file-title-content::before {
+    color: var(--soft-text);
+}
+
+/*Dragged*/
+.nav-folder-title.is-being-dragged-over,
+.drag-ghost,
+.workspace-drop-overlay:before {
+    border:none;
+    border-radius: var(--radius);
+}
+
+/*File: Move Further In*/
+.nav-file-icon {
+    top: 5px;
+    display: none;
+}
+
+
+/*Arrows*/
+.nav-folder .collapse-icon {
+    display: none;
+}
+
+/*Tooltip Popup*/
+.tooltip {
+    border-radius: var(--radius);
+}
+
+
+
+/*--Bottom Bar--*/
+.app-container .status-bar {
+    position: absolute;
+    background-color: var(--outer-bar);
+    color: var(--text-muted);
+    bottom: 0;
+    right: 0;
+    padding: 0 .1em;
+    border-left: 1px solid var(--th);
+    border-top: 1px solid var(--th);
+}

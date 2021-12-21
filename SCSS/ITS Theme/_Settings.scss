@@ -1,0 +1,188 @@
+
+/*--Settings Menu--*/
+/*Settings Menu: Font Sizes*/
+.modal.mod-settings .modal-content {
+    font-size: var(--f-text);
+}
+.setting-item-description,
+.vertical-tab-header-group-title {
+    font-size: calc(var(--f-text) - .12em);
+}
+
+
+/*Square Settings & Quick Switcher/Command Palatte*/
+.modal,
+.prompt {
+    border-radius: var(--radius);
+    box-shadow: .5em .5em var(--outline);
+    border: 0;
+    font-size: var(--f-text);
+    max-height: 90%;
+    overflow: auto;
+}
+.suggestion-container {
+    border-radius: var(--radius);
+    box-shadow: 3px 3px var(--outline);
+    border: 2px solid var(--outline);
+    font-size: var(--f-text);
+    overflow: auto;
+}
+.notice {
+    color: var(--text-dl);
+    background-color: var(--accent);
+    border-radius: var(--radius);
+    box-shadow: 3px 3px var(--outline);
+    border: 0;
+}
+/*Resize Settings*/
+.modal.mod-settings {
+    width: 55vw;
+    height: 90vh;
+    overflow: visible;
+}
+.modal.mod-settings .vertical-tab-content-container,
+.modal.mod-settings .vertical-tab-header {
+    height: 90vh;
+}
+
+/*Setting Header Underline*/
+.setting-item-heading {
+    border-bottom: 2px solid var(--headers);
+}
+/*Setting Item Title*/
+.setting-item-name {
+    font-weight: 700;
+    font-size: 17px;
+}
+.setting-item-description {
+    color: var(--footnote);
+}
+
+/*Setting Items*/
+.setting-item:not(.setting-item-heading) { 
+    padding: .5em 1.5em; 
+    border: 0;
+}
+.setting-item:not(.setting-item-heading):nth-child(even) {
+    background-color: var(--aside-bg);
+    border: 0;
+}
+/*Settings Item Hover*/
+.modal.mod-settings .setting-item:not(.setting-item-heading):hover .setting-item-name {
+    color: var(--headers);
+}
+.n-s-ani .modal.mod-settings .setting-item:not(.setting-item-heading):hover .setting-item-name { 
+    padding-left: 1em;
+    transition-duration: .2s;
+}
+.n-s-ani .modal.mod-settings .setting-item:not(.setting-item-heading):hover .setting-item-description {
+    padding-left: 1.2em;
+    transition-duration: .2s;
+}
+
+.setting-item ul li::before {
+    position: relative;
+    margin-right: .5em;
+}
+
+
+
+/*Settings Right*/
+.modal.mod-settings .vertical-tab-content-container {
+    padding: 35px 20px 20px 0;
+    background-color: var(--side-bar);
+}
+.horizontal-tab-content, .vertical-tab-content {
+    background-color: var(--side-bar);
+    padding: 5px 0px 5px 30px;
+}
+
+/*Settings Left*/
+.vertical-tab-header {
+    background-color: var(--dark-sidebar);
+}
+.horizontal-tab-nav-item,
+.vertical-tab-nav-item {
+    background-color: var(--dark-sidebar);
+    padding: 8px 6px 8px 24px;
+    cursor: default;
+    font-size: var(--f-text);
+    line-height: 26px;
+}
+/*Selected Item*/
+.horizontal-tab-nav-item.is-active,
+.vertical-tab-nav-item.is-active {
+    background-color: var(--dark-accent);
+}
+
+
+/*Account Header 2*/
+.vertical-tab-content h2 {
+    font-size: var(--f-s-h);
+    font-weight: 900;
+    text-align: left;
+    font-family: var(--font) !important;
+}
+
+/*Hotkey*/
+.setting-hotkey,
+.suggestion-hotkey {
+    border-radius: var(--radius);
+    background-color: var(--code-bg);
+    color: var(--soft-text);
+    font-size: 12px;
+    
+    box-shadow: 0 .2em #00000010;
+}
+
+/*Settings: Sync: Image Fit*/
+.sync-history-content-container {
+    overflow: auto;
+}
+/*Settings: Sync: */
+.file-tree-item-header {
+    border-radius: var(--radius);
+}
+.file-tree-item-header input[type="checkbox" i] {
+    margin-right: 5px;
+}
+
+
+/*Settings: Community Themes*/
+.community-theme { background-color: var(--note); }
+.community-theme,
+.community-theme.is-selected {
+    border-radius: var(--radius);
+    box-shadow: 4px 4px var(--outline);
+    border: 2px solid var(--outline);
+    margin: 10px 10px;
+    max-width: 300px;
+}
+/*Resize Images*/
+.community-theme-screenshot { 
+    max-width: 260px;
+    max-height: 150px;
+}
+/* Fix Selected Colors*/
+.community-theme.is-selected { color: var(--text-dl) }
+.community-theme.is-selected .clickable-icon { color: var(--text-dl); }
+
+
+
+/*Settings Toggle*/
+.checkbox-container {
+    cursor: pointer;
+    background-color: var(--bg);
+    border-radius: var(--radius);
+    width: 22px;
+}
+/*Checkbox*/
+.checkbox-container:after {
+    display: none;
+    border-radius: var(--radius);
+}
+
+.suggestion-item.is-selected {
+    background-color: var(--dark-accent);
+}
+

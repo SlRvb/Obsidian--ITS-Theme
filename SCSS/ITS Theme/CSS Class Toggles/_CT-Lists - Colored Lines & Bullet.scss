@@ -1,0 +1,94 @@
+
+/*Colored Bullet Lines*/
+.bul-li-col .cm-hmd-list-indent .cm-tab::before,
+.bul-li-col ul > li,
+.bul-li-col ul,
+.bul-li-col ul ul::before,
+.bul-li-col ol > li, 
+.bul-li-col ol, 
+.bul-li-col ol ol::before,
+.bul-col ul .task-list-item-checkbox
+{ border-color: var(--b-l-1) !important; }
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(2):before,
+.bul-li-col ul ul > li, 
+.bul-li-col ul ul, 
+.bul-li-col ul ul ul::before,
+.bul-li-col ol ol > li, 
+.bul-li-col ol ol,
+.bul-li-col ol ol::before,
+.bul-col ul ul .task-list-item-checkbox
+{ border-color: var(--b-l-2) !important; }
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(3):before,
+.bul-li-col ul ul ul > li, 
+.bul-li-col ul ul ul,
+.bul-li-col ul ul ul ul::before,
+.bul-li-col ol ol ol > li, 
+.bul-li-col ol ol ol,
+.bul-li-col ol ol ol::before,
+.bul-col ul ul ul .task-list-item-checkbox
+{ border-color: var(--b-l-3) !important; }
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(4):before,
+.bul-li-col ul ul ul ul > li, 
+.bul-li-col ul ul ul ul,
+.bul-li-col ul ul ul ul ul::before,
+.bul-li-col ol ol ol ol > li, 
+.bul-li-col ol ol ol ol,
+.bul-li-col ol ol ol ol::before,
+.bul-col ul ul ul ul .task-list-item-checkbox
+{ border-color: var(--b-l-4) !important; }
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(5):before,
+.bul-li-col ul ul ul ul ul > li, 
+.bul-li-col ul ul ul ul ul,
+.bul-li-col ul ul ul ul ul ul::before,
+.bul-li-col ol ol ol ol ol > li, 
+.bul-li-col ol ol ol ol ol,
+.bul-li-col ol ol ol ol ol::before,
+.bul-col ul ul ul ul ul .task-list-item-checkbox
+{ border-color: var(--b-l-5) !important; }
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(6):before,
+.bul-li-col ul ul ul ul ul ul > li, 
+.bul-li-col ul ul ul ul ul ul,
+.bul-li-col ul ul ul ul ul ul ul::before,
+.bul-li-col ol ol ol ol ol ol > li,
+.bul-li-col ol ol ol ol ol ol,
+.bul-li-col ol ol ol ol ol ol::before,
+.bul-col ul ul ul ul ul ul .task-list-item-checkbox
+{ border-color: var(--b-l-6) !important; }
+
+/*Colored Bullets*/
+.bul-col .HyperMD-list-line-1 .cm-formatting-list:before,
+.bul-col ul li::before,
+.bul-col ol li::marker
+{ color: var(--b-l-1); }
+.bul-col ul .task-list-item-checkbox:checked { background: var(--b-l-1); }
+
+.bul-col .HyperMD-list-line-2 .cm-formatting-list:before,
+.bul-col ul ul li::before,
+.bul-col ol ol li::marker 
+{ color: var(--b-l-2); }
+.bul-col ul ul .task-list-item-checkbox:checked { background: var(--b-l-2); }
+
+.bul-col .HyperMD-list-line-3 .cm-formatting-list:before,
+.bul-col ul ul ul li::before,
+.bul-col ol ol ol li::marker 
+{ color: var(--b-l-3); }
+.bul-col ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-3); }
+
+.bul-col .HyperMD-list-line-4 .cm-formatting-list:before,
+.bul-col ul ul ul ul li::before,
+.bul-col ol ol ol ol li::marker 
+{ color: var(--b-l-4); }
+.bul-col ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-4); }
+
+.bul-col .HyperMD-list-line-5 .cm-formatting-list:before,
+.bul-col .HyperMD-list-line-5 .cm-formatting-list,
+.bul-col ul ul ul ul ul li::before,
+.bul-col ol ol ol ol ol li::marker 
+{ color: var(--b-l-5); }
+.bul-col ul ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-5); }
+
+.bul-col .HyperMD-list-line-6 .cm-formatting-list:before,
+.bul-col ul ul ul ul ul ul li::before,
+.bul-col ol ol ol ol ol ol li::marker 
+{ color: var(--b-l-6); }
+.bul-col ul ul ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-6); }

@@ -1,0 +1,257 @@
+
+.theme-dark {
+    --background-primary: var(--note); /*Note background*/
+    --background-primary-alt: var(--outer-bar); /*Note Title background active*/
+    --background-secondary: var(--side-bar); /*Sidebar background*/
+    --background-secondary-alt: var(--outer-bar); /*Sidebar Title background*/
+    
+    --background-modifier-border: var(--table); /*Border outline of quotes, tables, line breaks*/
+    
+    --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*Search Field Bg Color*/
+    --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*Searched Highlight Color*/
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*Outershadow*/
+    --background-modifier-success: #197300; /*Publish Upload Success Background*/
+    --background-modifier-error: #3d0000; /*Delete Screen Button*/
+    --background-modifier-error-rgb: 61, 0, 0; /*??*/
+    --background-modifier-error-hover: #470000; /*??*/
+    --background-modifier-cover: black; /*Obsidian Title Bar Bg*/
+    
+    --text-on-accent: #dcddde; /*Program Title bar Text*/
+    --text-muted: var(--soft-text); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+    --text-normal: var(--text); /*Text body of note*/
+    --text-accent: var(--accent2-lite); /*Links*/
+    --text-accent-hover: var(--accent); /*Links hover*/
+    --text-faint: #4e5b6f; /*Link brackets color & Gutter Numbers*/
+    --text-error: #ff3333; /*??*/
+    --text-error-hover: #990000; /*??*/
+    
+    --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Searched Result Highlight*/
+    --text-selection: rgba(122, 20, 20, 0.4); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--dark-accent); /*Button Color*/
+    --interactive-hover: var(--embed-bg);/*Button Color*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
+    --interactive-accent-hover: var(--dark-accent); /*Menu Button Hover*/
+    --interactive-success: #599049; /*??*/
+    
+    --scrollbar-bg: rgba(160, 214, 255, 0.07);
+    --scrollbar-thumb-bg: rgba(162, 191, 255, 0.13);
+    --highlight-mix-blend-mode: lighten;
+
+    /*--DEFAULT VARIABLES--*/
+
+    /*Compatibility Color Recoloring*/    
+    --deep-dark-accent: #3f1010 /*#2f1010*/;
+    --dark-accent: #652121 /*#571a1a, #53201F*/;
+    --lite-accent: #e06c75;
+    --accent: #863737/*#883737, #c14343*/;
+    --accent2: #42536e/*#4c78cc*/;
+    --accent2-lite: #61afef;
+    --bg: #252c36;
+    --fg: #cfd7dd;
+    --side-bar: var(--note);
+    --outer-bar: #0b0f13 /*#0e0f15*/;
+    --dark-sidebar: #0d1014;
+    --inactive: #586477;
+    --outline: var(--outer-bar);
+
+    --folder: #e05858;
+    --file: #aab3ca;
+    --f-icon: var(--inactive);
+    --f-hover: var(--accent);
+    --lines: var(--hr)/*#465164*/;
+        
+    --note: #1a1e24; /*#0d131c*/
+    --text: #bccad8; /*#dcddde*/
+    --headers: #c14343;
+    --soft-text: #aab3ca;/*#d04e4e*/
+    --code-text: #fa4545;
+    --footnote: #63778f;/*#6e7e89*/
+
+    --code-bg: #232831;
+    --embed-bg: var(--dark-sidebar);/*#111417*/
+    --aside-bg: #11151d;
+
+    --th: var(--dark-accent);
+    --td: #06080c60;
+    
+    --hvr: var(--text-highlight-bg);
+    --hvr2: var(--text-selection);
+    
+    --tag: var(--dark-accent);
+    --table: #283846;
+    --hr: #2f3b4d; /*#2a3b55, #3c5274*/
+    --i-at: #bf5e5e;
+    --bttn: var(--dark-accent);
+    
+    --graph-bg: var(--outer-bar);
+    --graph-lines: var(--dark-accent);
+    --graph-node: var(--fg);
+    --graph-fill: var(--headers);
+    --graph-404: #727e93;
+    --graph-img: #4c78cc /*#ff86be*/;
+    --graph-tag: var(--headers);
+    --graph-focused: var(--text-highlight-bg-active);
+
+
+    /*CSS Specifics*/
+    --b-l-1: #7c2929;
+    --b-l-2: #a56146;
+    --b-l-3: #386b3f;
+    --b-l-4: #3e7779;
+    --b-l-5: #435aa5;
+    --b-l-6: #687286;
+
+    --sphd-pre-1: #7c2929;
+    --sphd-pre-2: #652121;
+    --sphd-pre-3: #571d1d;
+    --sphd-pre-4: #381919;
+    --sphd-pre-5: #424c61;
+    --sphd-pre-6: #687286;
+    --sphd-ed-1: #7c2929;
+    --sphd-ed-2: #652121;
+    --sphd-ed-3: #571d1d;
+    --sphd-ed-4: #381919;
+    --sphd-ed-5: #424c61;
+    --sphd-ed-6: #2e333d;
+
+    --em-pre-c: var(--text);
+    --em-ed-c: var(--text);
+    --b-pre-c: var(--text);
+    --b-ed-c: var(--text);
+    --del-pre-c: var(--text);
+    --del-ed-c: var(--text);
+}
+
+.theme-light {
+    --background-primary: var(--note); /*Note background*/
+    --background-primary-alt: var(--outer-bar); /*Note Title background active*/
+    --background-secondary: var(--side-bar); /*Sidebar background*/
+    --background-secondary-alt: var(--outer-bar); /*Sidebar Title background*/
+    
+    --background-modifier-border: var(--table); /*Border outline of quotes, tables, line breaks*/
+    
+    --background-modifier-form-field: rgba(0, 0, 0, 0.3); /*??*/
+    --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
+    --background-modifier-success: #deedd9; /*Publish Upload Success Background*/
+    --background-modifier-error: #990000; /*Delete Screen Button*/
+    --background-modifier-error-rgb: 240, 131, 131; /*Ctrl F Search Background*/
+    --background-modifier-error-hover: #470000; /*??*/
+    --background-modifier-cover: var(--deep-dark-accent); /*Obsidian Title Bar*/
+    
+    --text-on-accent: #dcddde; /*Program Title bar text*/
+    --text-muted: var(--soft-text); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+    --text-normal: var(--text); /*Text body of note*/
+    --text-accent: var(--accent2-lite); /*Links*/
+    --text-accent-hover: var(--accent); /*Links hover*/
+    --text-faint: #4e5b6f; /*Link brackets color*/
+    --text-error: #ff3333; /*??*/
+    --text-error-hover: #990000; /*??*/
+    
+    --text-highlight-bg: rgba(255, 0, 0, 0.212); /*Text highlights*/
+    --text-highlight-bg-active: rgba(253, 115, 115, 0.4); /*Search Highlight*/
+    --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--outer-bar); /*Button background Color*/
+    --interactive-hover: var(--embed-bg)/*#5d2b2b*/; /*Button hover text*/
+    --interactive-accent: var(--headers); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 52, 123, 237; /*Publish item select, Resize Handle*/
+    --interactive-accent-hover: var(--lite-accent); /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+    
+    --scrollbar-bg: rgba(134, 173, 218, 0.157);
+    --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);
+    --highlight-mix-blend-mode: darken; /*Search Highlight Mode*/
+
+    /*--DEFAULT VARIABLES--*/    
+    
+    /*Compatibility Color Recoloring*/    
+    --deep-dark-accent: #2f1010;
+    --dark-accent: #ffeded;
+    --lite-accent: #a35158;
+    --accent: #912e2e;
+    --accent2: #aac1d3/*#4c78cc*/;
+    --accent2-lite: #5599d0;
+    --bg: #e1e9f6;
+    --fg: var(--accent) /*#9f0202*/;
+    --side-bar: var(--note);
+    --outer-bar: #eef3fd;
+    --dark-sidebar: #f1f5ff;
+    --inactive: #a6bbde /*#91a3c1*/;
+    --outline: var(--bg);
+    
+    --folder: #ce6d6d;
+    --file: #7e8ea3;
+    --f-icon: var(--inactive);
+    --f-hover: var(--accent);
+    --lines: #b5c2d8;
+    
+    --headers: #c14343;
+    --note: #f8fbff;
+    --text: #697580;
+    --soft-text: #d04e4e;
+    --code-text: #ea4262;
+    --footnote: #8996a0;
+
+    --code-bg: var(--embed-bg) /*#eef6ff*/;
+    --embed-bg: var(--dark-sidebar) /*#ebf1f8*/;
+    --aside-bg: var(--dark-sidebar);
+    
+    --th: var(--headers);
+    --td: #d0ddef62;
+    
+    /*Highlights*/
+    --hl-md: rgba(199, 129, 129, 0.4);
+    --hl-search: rgba(253, 115, 115, 0.4);
+    --hl-cursor: rgba(229, 149, 149, 0.37);
+    
+    --hvr: var(--text-highlight-bg);
+    --hvr2: var(--text-selection);
+
+    --tag: #c65656;
+    --table: #ccd6eb;
+    --hr: #d6deea;
+    --i-at: var(--headers)/*#804848*/;
+    --bttn: var(--headers);
+    
+    --graph-bg: var(--note);
+    --graph-lines: #e4e7f8;
+    --graph-node: var(--headers);
+    --graph-fill: var(--folder);
+    --graph-404: #727e93;
+    --graph-img: #4c78cc /*#5469de*/;
+    --graph-tag: #000000; 
+    --graph-focused: var(--text-highlight-bg-active);
+    
+    
+    /*CSS Specifics*/
+    --b-l-1: #e45858;
+    --b-l-2: #fd9268;
+    --b-l-3: #4fd160;
+    --b-l-4: #43bfc3;
+    --b-l-5: #5c7eee;
+    --b-l-6: #adbad3;
+
+    --sphd-pre-1: #bb5555;
+    --sphd-pre-2: #a53f3f;
+    --sphd-pre-3: #862c2c;
+    --sphd-pre-4: #662828;
+    --sphd-pre-5: #697795;
+    --sphd-pre-6: #8a92a3;
+    --sphd-ed-1: #bb5555;
+    --sphd-ed-2: #a53f3f;
+    --sphd-ed-3: #862c2c;
+    --sphd-ed-4: #662828;
+    --sphd-ed-5: #697795;
+    --sphd-ed-6: #8a92a3;
+
+    --em-pre-c: var(--text);
+    --em-ed-c: var(--text);
+    --b-pre-c: var(--text);
+    --b-ed-c: var(--text);
+    --del-pre-c: var(--text);
+    --del-ed-c: var(--text);
+}

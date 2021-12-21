@@ -1,0 +1,56 @@
+
+/*--Style Settings Plugin--*/
+/*--Style Settings Menu--*/
+.style-settings-container {
+    padding-bottom: 0 !important;
+}
+.style-settings-container:hover { 
+    border-color: var(--accent); 
+}
+
+/*Indentation*/
+.style-settings-heading + .style-settings-container {
+    padding-left: 30px;
+    border-left: 2px solid var(--table);
+}
+
+/*Text Adjustments*/
+/*Headings*/
+.style-settings-heading {
+    padding-bottom: 1px !important;
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+.style-settings-heading[data-level="2"] {
+    padding-bottom: 1px !important;
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+.style-settings-heading[data-level="3"]  {
+    border-bottom: 2px solid var(--lines) !important;
+}
+
+.style-settings-heading .setting-item-name { 
+    color: var(--headers);
+    font-weight: 900;
+    font-size: 1.1em !important;
+}
+.style-settings-container .setting-item-name {
+    font-weight: 900;
+    font-size: var(--f-text) !important;
+}
+.style-settings-container .setting-item-description {
+    line-height: 1.2em;
+    color: var(--footnote);
+}
+.style-settings-container .setting-item-description small {
+    line-height: 1.2em;
+    color: var(--inactive);
+}
+
+.themed-color-wrapper > div {
+    padding: .1em !important;
+    padding-left: .3em !important;
+    padding-right: .3em !important;
+    border-radius: var(--radius) !important;
+}

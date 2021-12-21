@@ -1,0 +1,19 @@
+
+/*Plugin: Breadcrumbs*/
+div.breadcrumbs-matrix-square {
+    border: 2px solid var(--outline) !important;
+    box-shadow: 4px 4px var(--outline);
+    border-radius: var(--radius);
+}
+
+h5.breadcrumbs-matrix-header {
+    font-size: 14px !important;
+    font-family: var(--default-font) !important;
+    font-weight: 700 !important;
+}
+h3.breadcrumbs-matrix-header {
+    font-size: 18px !important;
+    text-transform: capitalize;
+    color: var(--headers) !important;
+}
+h3.breadcrumbs-matrix-header:after { display: none; }

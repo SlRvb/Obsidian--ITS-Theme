@@ -1,0 +1,18 @@
+
+/*--Scrollbars--*/
+/*Scrollbar*/
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: var(--radius); /*Remove Rounding*/
+}
+body:not(.scrl-d) ::-webkit-scrollbar-thumb { background-color: var(--accent); }
+body:not(.scrl-d) ::-webkit-scrollbar-thumb:active
+body:not(.scrl-d) ::-webkit-scrollbar-thumb:hover,
+body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
+    background-color: var(--accent);
+}
+::-webkit-scrollbar {
+    border: 0;
+    width: var(--scroll-size);
+    height: var(--scroll-size);
+}

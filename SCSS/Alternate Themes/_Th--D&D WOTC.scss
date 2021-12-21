@@ -1,0 +1,234 @@
+
+/*Theme: Wizards Of The Coast*/
+.theme-dark.wotc,
+.theme-light.wotc {
+    --font: 'Draconis';
+    --font-monospace: 'Fira code';
+    --f-w-h: 500;
+    --default-font: 'Bookerly';
+
+    --hr-sym: "\E803";
+    --hr-f: var(--its);
+}
+
+.theme-dark.wotc {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-cover: black;
+    --background-modifier-border: var(--table);
+
+    --background-modifier-border: #2d3034; /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-form-field-highlighted: rgba(255, 28, 28, 0.22); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 0, 23, 13;
+    --interactive-accent-rgb: 253, 114, 114;
+    
+    --text-highlight-bg: rgba(168, 60, 60, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 0, 0, 0.4); /*Search Highlight*/
+    --text-selection: rgba(138, 23, 23, 0.46); /*Cursor dragged highlights*/
+    
+    --text-accent: var(--lite-accent);
+    --text-accent-hover: var(--accent2);
+
+    --interactive-normal: var(--accent); /*Button Color*/
+    --interactive-hover: var(--accent2);/*Button Color*/
+    --interactive-accent: var(--dark-accent); /*Workspace Note Title Underline*/
+    --interactive-accent-hover: var(--accent2); /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+
+    --deep-dark-accent: #3f1010;
+    --dark-accent: #652121;
+    --lite-accent: #e06c6c;
+    --accent: #863737;
+
+    --outer-bar: #0b0f13;
+    --dark-sidebar: #0d1014;
+    --note: #1a1e24;
+
+    --outline: #0000008c;
+    --side-bar: #14181b;
+    --aside-bg: #0e1116;
+
+    --table: #ff4a4a52;
+    --accent2: #35485f;
+    --accent2-lite: #e95e5e;
+    
+    --graph-lines: #25293b;
+    --graph-img: #ca9a6d;
+
+    /*
+    --outer-bar: #130e0b;
+    --dark-sidebar: #140f0d;
+    --outline: #0000008c;
+    --side-bar: #221d1b;
+    --aside-bg: #0e1116;
+    --note: #2a2423;
+    --code-bg: #201a18;
+    --bg: #312a28;
+
+    --f-icon: #775c50;
+    --folder: #ca8a6d;
+    --lines: #68492c;
+    --hr: var(--lines);
+
+    --table: #ff7d4a52;
+    --accent2: #5f4135;
+    --accent2-lite: #e95e5e;*/
+    
+}
+.theme-light.wotc {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-cover: var(--deep-dark-accent);
+    --background-modifier-border: var(--table); /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-form-field-highlighted: rgba(253, 114, 114, 0.22); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 0, 23, 13;
+    --interactive-accent-rgb: 253, 114, 114;
+
+    --text-normal: var(--text);
+    --text-accent: var(--accent);
+    --text-accent-hover: var(--accent2);
+    --text-on-accent:#dcddde;
+    
+    --interactive-normal: var(--accent); /*Button Color*/
+    --interactive-hover: var(--lite-accent);/*Button Color*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent-hover: var(--accent2); /*Menu Button Hover*/
+    
+    --text-highlight-bg: rgba(209, 119, 119, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Search Highlight*/
+    --text-selection: rgba(255, 0, 0, 0.198); /*Cursor dragged highlights*/
+
+    --note: #fffcf0;
+    --side-bar: #fff6e4;
+    --outer-bar: #fbe2c5;
+    --dark-sidebar: #f6e3cd;
+    --deep-dark-accent: #2f1010;
+    --outline: #fbb4577e;
+
+    --table: var(--outline);
+    --aside-bg: #ffedd7;
+    --inactive: #e2b7a3;
+    --f-icon: #ebbd92;
+    --file: var(--text);
+
+    --accent: #c75959;
+    --lite-accent: #a35158;
+    --dark-accent: #ffefda;
+    --bg: var(--dark-sidebar);
+    --embed-bg: var(--aside-bg);
+    --td: #fae0be60;
+    --code-bg: #fff9f0;
+    --accent2: #000000;
+    --hr: var(--table);
+    --lines: var(--inactive);
+
+    --text: #412f2f;
+    --code-text: #681010;
+    --accent2-lite: #df6262;
+
+
+    --graph-bg: var(--note);
+    --graph-lines: #fae0d0;
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
+    --graph-404: #727e93;
+    --graph-img: var(--accent2) /*#5469de*/;
+    --graph-tag: #000000;    
+
+    --sphd-pre-1: var(--accent);
+    --sphd-pre-2: var(--headers);
+    --sphd-pre-3: var(--code-text);
+    --sphd-pre-4: var(--deep-dark-accent);
+    --sphd-pre-5: var(--accent2);
+    --sphd-pre-6: var(--file);
+    --sphd-ed-1: var(--accent);
+    --sphd-ed-2: var(--headers);
+    --sphd-ed-3: var(--code-text);
+    --sphd-ed-4: var(--deep-dark-accent);
+    --sphd-ed-5: var(--accent2);
+    --sphd-ed-6: var(--file);
+}
+
+/*Burnt Paper Edges*/
+.paper .markdown-source-view,
+.paper .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme),
+.paper .workspace-leaf:not(.mod-active) .view-header,
+.paper .modal.mod-settings .vertical-tab-content-container,
+.paper canvas,
+.paper .workspace-drawer-inner,
+.paper .modal,
+.paper .community-plugin-search,
+.paper .prompt,
+.wotc .markdown-source-view,
+.wotc .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme),
+.wotc .workspace-leaf:not(.mod-active) .view-header,
+.wotc .modal.mod-settings .vertical-tab-content-container,
+.wotc canvas,
+.wotc .workspace-drawer-inner,
+.wotc .modal,
+.wotc .community-plugin-search,
+.wotc .prompt {
+    box-shadow: 
+        0 0 60px var(--outline) inset;
+}
+.paper .markdown-preview-view .markdown-embed,
+.paper .workspace-tabs,
+.paper .modal.mod-settings .vertical-tab-header,
+.wotc .markdown-preview-view .markdown-embed,
+.wotc .workspace-tabs,
+.wotc .modal.mod-settings .vertical-tab-header {
+    box-shadow: 
+        0 0 25px var(--outline) inset;
+}
+/*Transparent BGs*/
+.paper .CodeMirror-gutter.CodeMirror-linenumbers, 
+.paper .CodeMirror-gutter.CodeMirror-foldgutter,
+.paper .markdown-source-view.mod-cm6 .cm-gutters,
+.paper .workspace-leaf:not(.mod-active) .workspace-tab-header-container,
+.paper .workspace-tabs .workspace-leaf,
+.paper .workspace-tab-header-container,
+.paper .horizontal-tab-content,
+.paper .vertical-tab-content,
+.paper .horizontal-tab-nav-item:not(.is-active),
+.paper .vertical-tab-nav-item:not(.is-active),
+.wotc .CodeMirror-gutter.CodeMirror-linenumbers, 
+.wotc .CodeMirror-gutter.CodeMirror-foldgutter,
+.wotc .markdown-source-view.mod-cm6 .cm-gutters,
+.wotc .workspace-leaf:not(.mod-active) .workspace-tab-header-container,
+.wotc .workspace-tabs .workspace-leaf,
+.wotc .workspace-tab-header-container,
+.wotc .horizontal-tab-content,
+.wotc .vertical-tab-content,
+.wotc .horizontal-tab-nav-item:not(.is-active),
+.wotc .vertical-tab-nav-item:not(.is-active) {
+    background: transparent;
+}
+.wotc .view-header-title-container:after { display: none }
+
+/*Embed Design*/
+.wotc .markdown-preview-view .markdown-embed,
+.wotc .markdown-preview-view .file-embed,
+.wotc .internal-embed.is-loaded:not(.image-embed) {
+    border-top: 2px solid var(--accent2);
+    border-bottom: 2px solid var(--accent2);
+}
+
+/*Note Title*/
+.wotc .workspace-leaf.mod-active .view-header {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, transparent, var(--accent), transparent) 1;
+}
+
+/*Paper Textures
+.markdown-preview-view {
+    background-size: 100% 1.5em;
+    background-image:
+    linear-gradient(90deg, transparent 24px, var(--lines) 24px, var(--lines) 26px, transparent 26px),
+    linear-gradient(var(--td) .1em, transparent .1em);
+}*/

@@ -1,0 +1,107 @@
+
+/*----Theme: ITS Dark----*/
+.theme-dark.its-d {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+    
+    --background-modifier-form-field-highlighted: rgba(60, 8, 8, 0.46); 
+    --text-highlight-bg: rgba(139, 6, 6, 0.4);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--hr);
+
+    
+    /*Theme Dark Colors*/
+    --deep-dark-accent: #270f0f;
+    --dark-accent: var(--aside-bg);
+    --outer-bar: black;
+    --dark-sidebar: #000000;
+    --side-bar: var(--outer-bar);
+
+    --note: #070b11;
+    --hr: #571a1a;
+    --file: var(--text);
+    
+    --accent: #803232;
+    --accent2: var(--text);
+    --accent2-lite: #c5575b;
+    
+    --headers: #aa3333;
+    --text: #475569;
+    --soft-text: var(--accent);
+    --code-text: var(--accent);
+    --footnote: #577093;
+
+    --fg: var(--headers);
+    --bg: var(--inactive);
+    --code-bg: var(--aside-bg);
+    --embed-bg: black;
+    --aside-bg: #04070c;
+
+    
+    --th: var(--hr);
+    --td: #03000054;
+    
+    --table: #380b13;
+    --tag: var(--table);
+    
+    --inactive: #1b262f;
+    
+    --graph-bg: rgba(13, 20, 29, 0.51);
+    --graph-lines: var(--hr);
+
+    --sphd-pre-1: var(--headers);
+    --sphd-pre-2: var(--accent);
+    --sphd-pre-3: var(--hr);
+    --sphd-pre-4: var(--table);
+    --sphd-pre-5: var(--f-icon);
+    --sphd-pre-6: var(--code-bg);
+    --sphd-ed-1: var(--headers);
+    --sphd-ed-2: var(--accent);
+    --sphd-ed-3: var(--hr);
+    --sphd-ed-4: var(--table);
+    --sphd-ed-5: var(--f-icon);
+    --sphd-ed-6: var(--code-bg);
+}
+.theme-light.its-d {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    --note: #e6edf8;
+    --outer-bar: #d5e1f3;
+    --dark-sidebar: #dce4f6;
+    --dark-accent: #f3d8dd;
+
+    --bg:#d9e4f0;
+    --code-bg: #e6ebf8;
+
+}
+/*Bullet Edits*/
+/*Hide bullet*/
+.its-d ul li::before {
+    display: none;
+}
+.cm-hmd-list-indent.its-d .cm-tab::before {
+    border-left: 2px solid var(--dark-accent);
+}
+
+.its-d .markdown-preview-view .list-collapse-indicator {
+    position: absolute;
+    padding-left: 25px;
+}

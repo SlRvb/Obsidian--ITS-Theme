@@ -1,0 +1,7 @@
+/*Text Expander: Hide Code in Preview Mode*/
+.h-exp .markdown-preview-view pre[class*="language-expander"],
+.h-exp .markdown-preview-view code[class*="language-expander"],
+.h-exp pre[class*="language-expander"],
+.h-exp code[class*="language-expander"] {
+    display: none;
+}

@@ -1,0 +1,67 @@
+/*--Special Blockquote Formatting--*/
+blockquote mark strong {
+	display: block;
+	color: var(--headers);
+	text-align: right;
+    background-color: transparent;
+    font-style: italic;
+}
+
+
+em mark,
+em mark em {
+    text-decoration: unset;
+    color: transparent;
+    font-style: normal;
+    text-align: justify;
+    font-weight: unset;
+    float: right;
+    position: relative;
+    margin-right: -25.3em;
+    margin-bottom: .2em;
+    clear: right;
+    width: 400px;
+    padding: 0 1em;
+}
+em mark em {
+    font-style: unset;
+}
+
+
+/*--Blockquote Adjustments--*/
+/*Turn b into a blockquote without the quotations*/
+.markdown-preview-view b {
+    display: flow-root;
+    border: 0px solid var(--lines);
+    background-color: var(--outer-bar);
+    border-left-width: 8px;
+    border-radius: var(--radius);
+    position: relative;
+    font-weight: unset;
+    padding: 10px 20px;
+    margin-left: 2%;
+}
+/*Quotes*/
+#quote {
+    padding-right: 2em;
+    text-align: justify;
+    border-color: var(--bg);
+    background-color: var(--embed-bg);
+}
+#quote:before {
+    content: '\201D';
+    position: absolute;
+    top: .4em;
+    right: .2em;
+    font-size: 50px;
+    font-family: var(--font);
+    color: var(--headers);
+}
+/*Quote Author*/
+b mark strong {
+	display: block;
+	color: var(--lite-accent) !important;
+	text-align: right;
+    background-color: transparent !important;
+    font-style: italic;
+}

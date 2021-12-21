@@ -1,0 +1,15 @@
+
+/*--Settings Specific--*/
+.ed-pre .markdown-preview-section {
+    font-family: var(--pre-font);
+}
+.ed-pre .cm-s-obsidian .CodeMirror-line,
+.ed-pre .cm-s-obsidian .cm-line:not(.HyperMD-codeblock):not(.cm-comment) {
+    font-family: var(--ed-font);
+}
+
+.ed-pre .markdown-preview-section p,
+.ed-pre .markdown-preview-section li,
+.ed-pre .markdown-preview-section pre {
+    font-size: var(--f-s-pre);
+}

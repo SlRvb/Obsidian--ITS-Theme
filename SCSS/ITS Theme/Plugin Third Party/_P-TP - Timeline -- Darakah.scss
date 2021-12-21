@@ -1,0 +1,44 @@
+
+/*--Timeline Plugin--*/
+.timeline-card {
+    background-color: var(--embed-bg) !important;
+    border-radius: var(--radius) !important;
+}
+.timeline-content {
+    padding: 0px !important;
+}
+.timeline-card .thumb {
+    border-radius: var(--radius) !important;
+}
+
+.timeline-container {
+    padding: 5px 15px !important;
+}
+
+/*Line*/
+.timeline::after {
+    background-color: var(--outer-bar) !important;
+}
+
+/*Circle*/
+.timeline-container::after {
+    width: 10px !important;
+    height: 10px !important;
+    right: -11px !important;
+    border: 4px solid var(--accent) !important;
+}
+.timeline-right::after{
+    left: -7px !important;
+}
+
+/*Arrows*/
+.timeline-left::before, .timeline-right::before {
+    top: 16px !important;
+}
+.timeline-left::before {
+    border-color: transparent transparent transparent var(--background-secondary-alt) !important;
+}
+.timeline-right::before {
+    border-color: transparent var(--background-secondary-alt) transparent transparent !important;
+}
+

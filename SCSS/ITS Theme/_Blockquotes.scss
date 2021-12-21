@@ -1,0 +1,33 @@
+/*--Blockquote--*/
+.markdown-preview-view blockquote {
+    display: flow-root;
+    border: 0px solid var(--bg);
+    background-color: var(--embed-bg);
+    border-left-width: 8px;
+    border-radius: var(--radius);
+    position: relative;
+    margin: 1em;
+    padding-right: 40px; /*Don't overlap with "*/
+}
+
+/*Quotation Mark*/
+.markdown-preview-view blockquote:before {
+    content: '\201D';
+    position: absolute;
+    top: .4em;
+    right: .2em;
+    font-size: 50px;
+    font-family: var(--font);
+    color: var(--headers);
+}
+/*Remove Margin From Block embedding*/
+
+
+/*Fix Blockquote Mark*/
+.markdown-preview-view li blockquote:before { top: .3em; }
+
+/*Flush Table Embed of Blockquotes*/
+table .markdown-embed-content > .markdown-preview-view blockquote {
+    margin: 0;
+    overflow: hidden !important;
+}

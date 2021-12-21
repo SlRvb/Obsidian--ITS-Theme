@@ -1,0 +1,59 @@
+
+/*----Slides----*/
+/*Slides: Background*/
+.slides-container,
+.reveal-viewport {
+    background-color: var(--note);
+}
+
+/*Slides: Text*/
+.reveal {
+    color: var(--text);
+    font-size: calc(var(--f-s-nt) + .3em);
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-weight: 900;
+    text-transform: unset;
+    font-size: calc(var(--f-s-h) + 1em);
+}
+.reveal h2:after {
+    width: 100%;
+}
+.reveal h1:after,
+.reveal h2:after,
+.reveal h3:after,
+.reveal h4:after,
+.reveal h5:after,
+.reveal h6:after {
+    margin: auto;
+}
+
+.reveal code {
+    color: var(--code-text);
+    background: var(--code-bg);
+    padding: 4px;
+    font-family: var(--font-monospace);
+    font-size: calc(var(--f-text) - .12em);
+    box-shadow: 0 .2em #00000010;
+}
+
+
+/*Slides: Progress*/
+.reveal .progress {
+    color: var(--lite-accent);
+}
+
+.reveal .controls {
+    color: var(--lite-accent);
+}
+
+.reveal img {
+    margin: 5px;
+}
+

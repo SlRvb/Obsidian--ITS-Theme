@@ -1,0 +1,13 @@
+/*Plugin: Longform*/
+.new-scene-container,
+.tab-list,
+.new-draft-container,
+.compile-container {
+    border-color: var(--hr) !important;
+}
+.tab-list button { color: var(--headers) !important; }
+.tab-list .selected {
+    border-color: var(--accent) !important;
+    background-color: var(--aside-bg);
+    color: var(--text) !important;
+}

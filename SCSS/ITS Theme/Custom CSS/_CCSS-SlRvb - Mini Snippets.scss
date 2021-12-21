@@ -1,0 +1,109 @@
+/*CSS class, Hide Frontmatter*/
+.no-m .frontmatter-container,
+.reveal pre.frontmatter {
+    display: none;
+}
+
+
+
+/*Justify text*/
+.justified .markdown-preview-section,
+.justified .cm-s-obsidian {
+    text-align: justify;
+}
+
+
+/*Readable Text Width.*/ /*Thanks @foreveryone*/
+.markdown-preview-view.readable .markdown-preview-sizer {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/*Poems*/
+.poem p {
+    text-align: center;
+    line-height: 1.3em;
+    margin-block-end: 4%;
+}
+
+
+/*Spaced Lists*/
+.s-li li {
+    margin-top: 10px;
+}
+
+/*-Table-*/
+/*Bolded Right Side Table*/
+.table td:nth-child(1) {
+    background-color: var(--outer-bar);
+    font-weight: 900;
+}
+.table th, .table td {
+    border: 0px;
+}
+
+/*Table Centered*/
+.t-c table {
+    margin-left: auto;
+    margin-right: auto
+}
+/*Table Widened*/
+.t-w table {
+    width: 100%;
+}
+
+
+
+/*Unclear Asides*/
+#un-c,
+.un-c {
+    clear: none;
+}
+
+#col {
+    display: block;
+    width: 100%;
+    padding-bottom:100%; 
+}
+
+#font {
+    display: block;
+    text-decoration: unset;
+    text-align: center;
+    font-size: 7rem;
+    line-height: 1em;
+}
+
+/* Video w/ Aspect Ratio: <div><iframe></iframe></div> */
+#vid {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+#vid iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/*--chbx-Recall--*/
+.recall { 
+    text-decoration: unset;
+    color: transparent;
+    text-shadow: 0 0 10px var(--text-normal);
+}
+.recall:hover {
+    color: var(--text-normal);
+    text-shadow: 0 0 0px var(--text-normal);
+}
+
+
+

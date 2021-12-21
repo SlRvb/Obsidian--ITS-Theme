@@ -1,0 +1,19 @@
+
+/*Note Title Wrap*/
+.title-wrap .view-header-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    line-height: 22px;
+}
+.title-wrap .view-header,
+.is-mobile.title-wrap .view-header-title-container {
+    height: auto;
+    width: auto !important;
+}
+.is-mobile.title-wrap .view-header-title {
+    padding: 10px 0;
+}
+.plugin-tabs.title-wrap .view-header {
+    height: auto !important;
+}

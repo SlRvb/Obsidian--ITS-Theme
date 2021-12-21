@@ -1,0 +1,21 @@
+
+/*Quick Switcher*/
+/*Add Note Icon**
+.prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"])::before {
+    content: "📄";
+    color: transparent;
+    text-shadow: 0 0 0 var(--file);
+    margin-right: 5px;
+    font-size: var(--f-text);
+}
+.prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"]) {
+    margin: auto;
+    margin-right: 6px;
+}
+
+/*Recolor Create Note Icon**
+.prompt .suggestion-flair[aria-label="Not created yet, select to create"] svg {
+    color: var(--inactive);
+    width: 16px;
+    height: 16px;
+}*/

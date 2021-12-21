@@ -1,0 +1,51 @@
+
+/*--Horizontal Linebreak, HR--*/ 
+.markdown-source-view.mod-cm6 .hr,
+.markdown-source-view.mod-cm6 .HyperMD-hr { 
+    contain: unset; 
+}
+
+.markdown-preview-view hr,
+.hr.cm-line,
+.HyperMD-hr-bg {
+    border-top: 2px solid var(--hr);
+}
+.hr.cm-line hr {
+    border: 0;
+}
+
+/*Stylized HR/Horizontal Line*/
+.hr.cm-line::after,
+.markdown-preview-view hr::after, 
+div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
+    font-family: var(--hr-f) !important;
+    content: var(--hr-sym);
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    font-size: var(--f-text);
+    transform-origin: 50% 50%;
+    color: transparent;
+    text-shadow: 0 0 0 var(--headers);
+    padding: 0 .2em; /*Symbol Padding*/
+    background-color: var(--background-primary); /*Color bg to cover line*/
+}
+
+/*Center --- Lines*/
+.cm-s-obsidian pre.HyperMD-hr {
+    text-align: center;
+    margin: 0px;
+    /*
+    margin-block-start: .1%;
+    margin-block-end: .1%;
+    */
+}   
+
+/*Hide --- Lines*/
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
+    color: transparent;
+    margin: 0px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}   

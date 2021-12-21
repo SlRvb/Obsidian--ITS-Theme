@@ -1,0 +1,74 @@
+
+/*--NOTE TITLEBAR--*/
+.view-header,
+.workspace-leaf .view-header,
+.workspace-leaf.mod-active .view-header,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+    border: 0;
+}
+.workspace-leaf .view-header {
+    background: var(--note);
+}
+.view-header-title,
+.view-header-title-container {
+    font-size: var(--f-text);
+    line-height: 36px;
+}
+
+.view-header-title-container:after {
+    background: linear-gradient(to right, transparent, var(--note));
+}
+.workspace-leaf.mod-active .view-header {
+    background: linear-gradient(to left, var(--outer-bar), var(--dark-accent));
+}
+.workspace-leaf.mod-active .view-header-title-container:after {
+    background: transparent !important;
+}
+
+/*Inactive Note Titlebar*/
+.view-header-title,
+.view-header-icon,
+.view-action {
+    color: var(--inactive);
+}
+
+/*Active Note Titlebar*/
+.workspace-leaf.mod-active .view-header-title,
+.workspace-leaf.mod-active .view-header-icon,
+.workspace-leaf.mod-active .view-action {
+    color: var(--soft-text);
+}
+
+.workspace-leaf.mod-active .view-header-icon:hover,
+.workspace-leaf.mod-active .view-action:hover {
+    color: var(--accent);
+}
+
+/*Center Note Icons*/
+.view-header-icon, .view-actions {
+    margin: auto;
+}
+
+
+
+
+
+
+/*--Notes Paddings--*/
+/*Remove Note Padding*/
+.workspace-split.mod-root .view-content {
+    padding: 0;
+}
+
+/*Editor Resize*/
+.markdown-source-view.mod-cm5 {
+    padding-left: 0;
+    padding-right: .5em;
+}
+
+
+/*Cursor Manual fix*/
+.CodeMirror-cursor,
+.cm-s-obsidian .cm-cursor {
+    border-left: 1px solid var(--text);
+}

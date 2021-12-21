@@ -1,0 +1,141 @@
+
+/*----Theme: SlRvb Gray----*/
+.theme-dark.slrvb-g,
+.theme-light.slrvb-g {
+    --font: 'Norwester', 'Staatliches', 'Racing Sans One', 'Heavitas', 'Playfair Display', serif;
+    --font-monospace: 'Fira Code';
+    --hr-sym: "🏴";
+}
+.theme-dark.slrvb-g {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(113,132,162,0.13);
+
+    --text-selection: rgba(61, 82, 107, 0.25);
+    --text-highlight-bg: rgba(87, 113, 156, 0.4);
+    --text-highlight-bg-active: rgba(134, 168, 197, 0.4);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    --interactive-normal: var(--outer-bar);
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--hr);
+    --interactive-accent-hover: var(--dark-accent);
+
+    --outer-bar: #0E0F15;       
+    --dark-sidebar: #090C0E;    
+    --side-bar: var(--note);      
+    --f-icon: #586277;          
+    --folder: #F1F7FF;          
+    --note: #171B21;            
+    
+    --headers: #9DB1CA;     
+    --text: #778495;        
+    --soft-text: #AAB3CA;   
+    --code-text: #707a90;   
+    --i-at: #5D7B98;
+    --footnote: #576571;    
+    --inactive: #3c4a64;
+    
+    --tag: #353d52;
+    
+    --hr: #414a5f;          
+    --embed-bg: #0E0F15;    
+    --aside-bg: #12151d;    
+    
+    --accent: #515b71;              
+    --lite-accent: #8e9ab4;         
+    --accent2: #889FC3;             
+    --accent2-lite: #9DB2CF;        
+    --dark-accent: #333A49;         
+    --deep-dark-accent: #222731;    
+    --table: #242b3d;               
+
+    --graph-lines: #323946;   
+
+    --sphd-pre-1: var(--lite-accent);
+    --sphd-pre-2: var(--code-text);
+    --sphd-pre-3: var(--accent);
+    --sphd-pre-4: var(--inactive);
+    --sphd-pre-5: var(--table);
+    --sphd-pre-6: var(--aside-bg);
+    --sphd-ed-1: var(--lite-accent);
+    --sphd-ed-2: var(--code-text);
+    --sphd-ed-3: var(--accent);
+    --sphd-ed-4: var(--inactive);
+    --sphd-ed-5: var(--table);
+    --sphd-ed-6: var(--aside-bg);
+}    
+.theme-light.slrvb-g {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(131,185,240,0.13);
+
+    --text-selection: rgba(163, 188, 218, 0.22);
+    --text-highlight-bg: rgba(129,155,199,0.25);
+    --text-highlight-bg-active: rgba(172,210,255,0.25);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--lite-accent);
+
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--headers);
+    --interactive-accent-hover: var(--lite-accent);
+
+    --outer-bar:#eef3fd;
+    --side-bar: var(--note);
+    --dark-sidebar: #F1F7FF;    
+    --f-icon: #A6B4CC;          
+    --folder: #99accf;          
+    --note: #f8fbff;
+    
+    --headers: #6e7a92;     
+    --text: #76859c;        
+    --soft-text: #90a0c3;   
+    --code-text: #8193b5;   
+    --i-at: #8FAABE;
+    
+    --accent: #aebdd4;              
+    --lite-accent: #a6aec7;         
+    --accent2: #404c62;
+    --accent2-lite: #000000;        
+    --dark-accent: #EBF2F9;         
+    --deep-dark-accent: #171C22;    
+    --inactive: #C0C8D6;            
+    --table: #ccd6eb;
+
+    --tag: #7485a3;
+
+    --hr: #d6deea;
+    --embed-bg: var(--dark-sidebar);
+    --aside-bg: var(--dark-sidebar);
+
+    --sphd-pre-1: var(--lite-accent);
+    --sphd-pre-2: var(--folder);
+    --sphd-pre-3: var(--code-text);
+    --sphd-pre-4: var(--headers);
+    --sphd-pre-5: var(--accent2);
+    --sphd-pre-6: var(--deep-dark-accent);
+    --sphd-ed-1: var(--lite-accent);
+    --sphd-ed-2: var(--folder);
+    --sphd-ed-3: var(--code-text);
+    --sphd-ed-4: var(--headers);
+    --sphd-ed-5: var(--accent2);
+    --sphd-ed-6: var(--deep-dark-accent);
+}

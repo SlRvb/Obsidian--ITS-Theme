@@ -1,0 +1,19 @@
+/*Default Bullets*/
+.def-bull .cm-s-obsidian span.cm-formatting-list-ul:before,
+.def-bull .kanban li:before {
+    visibility: hidden;
+}
+.def-bull .cm-s-obsidian span.cm-formatting-list-ul:before {
+    visibility: visible;
+    content: "•";
+    padding-left: 1.5px;
+    font-size: 20px;
+}
+.def-bull ul li:before {
+    content: "•";
+    padding-left: 1.5px;
+    font-size: 20px;
+}
+.def-bull ul li:nth-child(even):before {
+    color: var(--accent);
+}

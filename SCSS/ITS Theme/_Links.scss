@@ -1,0 +1,64 @@
+
+/*--Links--*/
+/*Active Link*/
+.markdown-source-view.mod-cm6 .cm-underline,
+a, .markdown-preview-view .internal-link {
+    text-decoration: none; /*No underline*/
+}
+a:hover {
+    color: var(--lite-accent);
+}
+
+/*Link to No Page*/
+.markdown-preview-view .internal-link.is-unresolved {
+    opacity: 1;
+    color: var(--inactive);
+}
+.markdown-preview-view .internal-link.is-unresolved:hover {
+    color: var(--headers);
+}
+
+/*-External Links-*/
+/*Hide SVG Image*/
+.external-link {
+    background-image: url();
+    padding-right: unset;
+}
+/*Hover Color*/
+.external-link:hover {
+    color: var(--inactive);
+}
+
+/*Change External Link Symbol*/
+.external-link:after {
+    content: "\e809";
+    font-family: var(--its);
+    padding-left: 2px;
+    display: inline-block;
+    font-size: inherit;
+    opacity: .5;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+/*Editor Links*/
+/*Internal Link Hover color*/
+.cm-s-obsidian span.cm-hmd-internal-link:hover {
+    text-decoration: none;
+    color: var(--inactive);
+}
+
+/*Markdown Links*/
+/*Text in Brackets
+.cm-s-obsidian span.cm-link {
+    color: var(--inactive);
+}*/
+/*Link in parentheses*/
+.cm-s-obsidian span.cm-url {
+    color: var(--headers);
+    text-decoration: none;
+}
+/*Link Hover Color*/
+.cm-s-obsidian span.cm-url:hover {
+    color: var(--inactive);
+}

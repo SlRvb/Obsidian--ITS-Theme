@@ -1,0 +1,138 @@
+
+/*--List--*/
+/*Colored List Markers*/
+li::marker,
+.cm-s-obsidian:not(.mod-cm6) .cm-formatting-list-ul.cm-formatting-list,
+.list-bullet {
+    color: transparent;
+}
+/*Lighten Numbered List Marker Color*/
+ol li::marker {
+    color: var(--headers);
+}
+
+/*Bullet Shape*/
+ul:nth-child(odd), ul:nth-child(even) {
+    list-style-type: "";
+}
+
+ul li::before {
+    content: var(--bullet);
+    font-family: var(--bul-f);
+    margin-left: -22px;
+    color: var(--accent);
+    position: relative; /*For Spaced Lists*/
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: var(--f-text);
+}
+ul li:nth-child(even)::before {
+    color: var(--accent2);
+}
+li.task-list-item::before,
+ol li::before {
+    visibility: collapse;
+}
+ol ul > li::before {
+    visibility: visible;
+}
+
+/*Smaller Indentation*/
+ul, ol { 
+    padding-inline-start: 25px;
+    /*margin-block-start: 0;*/
+}
+.markdown-preview-view ol > li.task-list-item {
+    padding-left: 10px;
+}
+.markdown-preview-view ul > li.task-list-item {
+    list-style: none;
+    text-indent: calc(var(--f-s-nt) * -1.6);
+}
+/*Checkbox: Fix Spaced Checkboxes*/
+.markdown-preview-view ul li.task-list-item > p { text-indent: -25px; }
+.markdown-preview-view ul > li.task-list-item {
+    padding-left: 5px;
+}
+/*Checkbox: Fix Tags On Space Checkbox*/
+.markdown-preview-view ul li.task-list-item > p > a { text-indent: 0px; }
+
+/*Fix breaking when Space in between Lists*/
+ul li.task-list-item > p {
+    margin-block-end: unset;
+}
+ul li > p {
+    margin-block-end: unset;
+}
+
+/*-Bullet Points-*/
+/*Editor Bullet Points*/
+.list-bullet::before,
+.cm-s-obsidian span.cm-formatting-list-ul::before,
+.cm-s-obsidian span.cm-formatting-list-ol {
+    color: var(--soft-text);
+}
+/*Live Preview List Adjustment*/
+.list-bullet::before,
+.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
+    content: var(--bullet);
+    font-family: var(--bul-f);
+    padding-left: 4px; 
+    margin-right: -10px;
+}
+.list-bullet::before {    
+    padding: 0;
+    margin-right: -8px;
+}
+
+
+/*Adjust Padding*/
+.cm-s-obsidian span.cm-formatting-list-ol {
+    margin-left: -.2em;
+}
+
+/*Editor Bullet Lines*/
+.cm-hmd-list-indent .cm-tab {
+    position: relative;
+}
+.cm-hmd-list-indent .cm-tab::before {
+    content:'';
+    border-left: var(--b-line) solid var(--accent);
+    position: absolute;
+    left: .7em;
+    top: -5px;
+    bottom: -4px; 
+}
+
+.cm-s-obsidian .HyperMD-list-line {
+    padding-top: 0;
+}
+
+/*Preview Bullet Lines*/
+/*Bullet Line New*/
+li {
+    padding-left: 5px;
+    border-left: var(--b-line) solid var(--accent);
+    line-height: var(--lh);
+}
+
+li:nth-child(even) {
+    border-left: var(--b-line) solid var(--accent2);
+}
+
+
+/*List Arrows*/
+.markdown-preview-view ul .list-collapse-indicator {
+    padding-left: 1em;
+    color: var(--soft-text);
+    position: relative;
+}
+.markdown-preview-view ol .list-collapse-indicator {
+    padding-left: .5em;
+    position: relative;
+}
+.markdown-preview-view .task-list-item .list-collapse-indicator {
+    padding-left: .5em;
+    position: relative;
+}

@@ -1,0 +1,81 @@
+
+/*--Dataview Table--*/
+.table-view-table > thead > tr > th {
+    font-weight: 900 !important;
+    font-family: var(--font);
+    color: var(--headers);
+    border-bottom: solid var(--accent) !important;
+    background-color: var(--embed-bg);
+}
+
+.dataview-error { font-family: var(--font-monospace); color: var(--code-text) }
+
+/*Inline Bracket Syntax*/
+body .dataview.inline-field-standalone-value {
+    padding-left: 0;
+    padding-right: 0;
+    display: inline;
+    border-radius: 0;
+    font-family: inherit;
+    background-color: transparent;
+}
+body .dataview.inline-field-key,
+body .dataview.inline-field-value {
+    border-radius: 0;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0 10px;
+}
+body .dataview.inline-field-key { background-color: var(--deep-dark-accent); color: var(--text-dl) }
+body .dataview.inline-field-value { background-color: var(--dark-accent); }
+body .dataview.inline-field-value a.tag:first-child { display: none; }
+
+
+
+
+
+/*Dataview: Compact and Hide Bullets*/
+.dv .dataview-ul li::before {
+    visibility: hidden;
+}
+.dv .dataview-ul {
+    list-style-type: none;
+    margin-inline-start: -32px;
+}
+/*Dim First Column Link*/
+.dv .dataview td:nth-child(1) {
+    color: var(--headers);
+}
+.dv-lk .dataview td:nth-child(1) .internal-link {
+    color: var(--lines);
+}
+.dv-lk .dataview td:nth-child(1) .internal-link:hover {
+    color: var(--accent2);
+}
+.dv .dataview td:nth-child(1) .external-link {
+    color: var(--inactive);
+}
+.dv .dataview td:nth-child(1) .external-link:hover {
+    color: var(--accent2);
+}
+/*Dataview List Adjustments*/
+.dvl .list-view-ul li {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: var(--aside-bg);
+}
+.dvl .dataview.list-view-ul li::before {
+    margin-left: -27px;
+}
+
+/*Kanban*/
+.kanban.dvl .list-view-ul li {
+    background-color: var(--aside-bg);
+}
+.kanban.dvl ul li {
+    flex: 1 1 200px !important;
+}
+.kanban .dataview-ul {
+    display: block !important;
+    padding-inline-start: 1em !important;
+}

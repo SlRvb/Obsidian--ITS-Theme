@@ -1,0 +1,30 @@
+
+
+/*--Tags--*/
+a.tag {
+    background-color: var(--tag);
+    border: none;
+    color: var(--text-dl);
+    font-size: calc(var(--f-s-text) - .2em);
+    padding: 1px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 0px;
+    cursor: pointer;
+    line-height: var(--lh);
+}
+
+/*Hover Underline*/
+a.tag:hover {
+    color: var(--text-dl);
+    text-decoration: underline;
+}
+/*Editor Tags*/
+.cm-s-obsidian span.cm-hashtag {
+    text-decoration: none;
+    color: var(--lite-accent);
+}
+.cm-s-obsidian span.cm-hashtag:hover {
+    text-decoration: none;
+}

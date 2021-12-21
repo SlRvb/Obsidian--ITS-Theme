@@ -1,0 +1,15 @@
+
+/*Super Charged Links*/
+.scl .frontmatter-values-grid {
+    display: inline-block;
+}
+/*Sliding Panes Icon Swap*/
+body.slp.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+    position: absolute;
+    padding-left: 3px !important;
+}
+body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-sideway .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+}

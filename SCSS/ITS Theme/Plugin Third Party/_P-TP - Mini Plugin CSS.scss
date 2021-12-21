@@ -1,0 +1,24 @@
+#quick-explorer .explorable { opacity: unset !important; }
+
+
+
+
+.workspace-leaf-content[data-type="FANTASY_CALENDAR"] .view-content {
+    padding: 10px;
+}
+
+
+
+
+
+/*Block Reference*/
+body .block-ref-count:hover {
+    color: var(--text-dl);
+    background: var(--interactive-accent);
+    border: 0;
+}
+
+/*AidenLX Folder Fix*/
+.nav-folder.nav-folder.alx-folder-with-note .nav-folder-title-content {
+    width: unset;
+}

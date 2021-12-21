@@ -1,0 +1,12 @@
+
+/*Command Palette*/
+.prompt .suggestion-prefix::after { display: none; }
+.prompt .suggestion-prefix {
+    color: var(--headers);
+    font-weight: 600;
+    padding: 3px 7px 0 0;
+}
+
+.prompt .suggestion-item:nth-child(even):not(.is-selected) {
+    background-color: var(--aside-bg);
+}

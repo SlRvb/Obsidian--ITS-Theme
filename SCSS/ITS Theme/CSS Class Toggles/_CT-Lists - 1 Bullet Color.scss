@@ -1,0 +1,5 @@
+
+/*Single Bullet/1 Bullet Color*/
+.bl-c li::marker,
+.bl-c li::before { color: var(--accent2); }
+.bl-c li { border-color: var(--accent) !important; }

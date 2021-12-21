@@ -1,0 +1,134 @@
+
+/*----Minimalist Workspace----*/
+/*Hide Resize Handle*/
+.h-rh .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.h-rh .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
+.h-rh .workspace-tabs .workspace-leaf-resize-handle,
+.h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
+.h-wksp .workspace-tabs .workspace-leaf-resize-handle {
+    background-color: var(--side-bar);
+}
+.h-rh .workspace-leaf-resize-handle,
+.h-wksp .workspace-leaf-resize-handle { background: var(--note); }
+
+.h-rh .workspace-leaf-resize-handle:hover,
+.h-rh .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+.h-rh .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
+.h-wksp .workspace-leaf-resize-handle:hover,
+.h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+.h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
+    background-color: var(--accent);
+}
+
+/*Hide Scrollbar*/
+.h-scrl ::-webkit-scrollbar-thumb:not(:hover) {
+    background-color: transparent;
+
+}
+.h-scrl ::-webkit-scrollbar:not(:hover) {
+    visibility: hidden;
+}
+
+/*Hide Note Title*/
+.h-nt .view-header:not(:hover):not(:focus-within),
+.h-wksp .view-header:not(:hover):not(:focus-within) {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    z-index: 5;
+}
+.h-nt .view-content,
+.h-wksp .view-content { height: 100%; }
+
+/*Hide Note Title Icons*/
+.h-nt-i .view-header:not(:hover):not(:focus-within) .view-header-icon, 
+.h-nt-i .view-header:not(:hover):not(:focus-within) .view-actions,
+.h-wksp .view-header:not(:hover):not(:focus-within) .view-header-icon, 
+.h-wksp .view-header:not(:hover):not(:focus-within) .view-actions {
+    opacity: 0;
+    width: 0;
+    padding: 0 5px;
+}
+
+/*Hide Left Ribbon*/
+.h-rib .side-dock-ribbon.mod-left:not(:hover),
+.h-rib .side-dock-ribbon.mod-right:not(:hover),
+.h-wksp .side-dock-ribbon.mod-left:not(:hover),
+.h-wksp .side-dock-ribbon.mod-right:not(:hover) {
+    opacity: 0;
+    flex: 0 0 12px;
+}
+
+.h-rib .workspace-drawer.mod-left .workspace-drawer-inner:not(:hover),
+.h-wksp .workspace-drawer.mod-left .workspace-drawer-inner:not(:hover) {
+    padding-left: 12px;
+}
+.h-rib .side-dock-ribbon .mod-left .workspace-drawer-ribbon:not(:hover),
+.h-wksp .side-dock-ribbon .mod-left .workspace-drawer-ribbon:not(:hover) {
+    width: 12px;
+}
+
+/*Hide Title Bar*/
+.theme-dark.h-titlebar,
+.theme-light.h-titlebar,
+.theme-dark.h-wksp,
+.theme-light.h-wksp { padding-top: 0 !important; }
+.h-titlebar .titlebar,
+.h-wksp .titlebar {
+    display: block;
+    position: relative;
+}
+.h-titlebar .titlebar:not(:hover),
+.h-wksp .titlebar:not(:hover) {
+    width: 100%;
+    height: 4px !important;
+    opacity: 0;
+}
+.h-titlebar .app-container .status-bar,
+.h-wksp .status-bar { bottom: 2px; height: 100%; }
+
+/*Hide Status Bar*/
+.h-stbr .status-bar:not(:hover),
+.h-wksp .status-bar:not(:hover) { opacity: 0; }
+
+/*Hide File Explorer Buttons*/
+.h-fexp .nav-buttons-container:not(:hover),
+.h-wksp .nav-buttons-container:not(:hover),
+.h-tab-i .workspace-tab-header-container:not(:hover),
+.h-wksp .workspace-tab-header-container:not(:hover) { 
+    opacity: 0;
+    height: 6px;
+}
+/*Minimize Frontmatter*/
+.h-fm .markdown-preview-view pre.frontmatter:not(:hover),
+.h-fm .frontmatter-container:not(:hover) {
+    visibility: hidden;
+    float: right;
+    z-index: 5;
+    margin-bottom: -40px;
+}
+.h-fm .markdown-preview-view.show-frontmatter pre.frontmatter + .frontmatter-container,
+.h-fm .markdown-preview-view pre.frontmatter:not(:hover) > .language-yaml,
+.h-fm .frontmatter-container:not(:hover) > div {
+    overflow: hidden;
+    display: none;
+}
+.h-fm .markdown-preview-view pre.frontmatter:not(:hover)::before,
+.h-fm .frontmatter-container:not(:hover)::before {
+    content: "\e800";
+    font-family: var(--its);
+    visibility: visible;
+    color: var(--accent2);
+    background-color: var(--note);
+    padding: 7px;
+    box-shadow: 2px 2px 0 var(--outline);
+    border: 1px solid var(--outline);
+}
+.h-fm .frontmatter-container {
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    border: 2px solid var(--outline);
+    box-shadow: 4px 4px 0 var(--outline);
+}
+

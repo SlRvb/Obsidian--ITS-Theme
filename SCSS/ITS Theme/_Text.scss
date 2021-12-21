@@ -1,0 +1,242 @@
+
+/*Editor Line Numbers*/
+.markdown-source-view.mod-cm6 .cm-gutters,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber {
+    box-sizing: content-box;
+    font-family: var(--font-monospace);
+    text-align: right;
+    background: transparent !important;
+}
+
+
+/*Note Text Adjustments*/
+.cm-s-obsidian .CodeMirror-line,
+.cm-s-obsidian .cm-line,
+.markdown-preview-section {
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: none;
+    font-family: var(--default-font);
+    line-height: var(--lh);
+    color: var(--text-normal);
+    z-index: 0 !important;
+}
+/*Comments*/
+.cm-comment,
+.cm-comment + .cm-url,
+.cm-formatting-link-string {
+    font-family: var(--font-monospace);
+}
+
+/*Fix Cursor Highlight*/
+.is-mobile .CodeMirror-selected,
+.CodeMirror-selected,
+.CodeMirror-selected.is-mobile {
+    z-index: 3 !important;
+}
+.CodeMirror .CodeMirror-line,
+.CodeMirror .CodeMirror-line-like {
+    z-index: 0;
+}
+/*Font Sizes*/
+p,
+li,
+table, 
+.markdown-preview-section code,
+.cm-s-obsidian .CodeMirror-lines {
+    font-size: var(--f-s-text);
+}
+
+
+/*--Headings--*/
+h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
+    font-weight: var(--f-w-h);
+    font-family: var(--font);
+    color: var(--headers);
+}
+
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+    margin-bottom: calc(var(--head-h) - 1.5em) !important;
+}
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+    margin: var(--head-h) 0 !important;
+    line-height: calc(var(--lh) - .3em) !important;
+}
+
+/*Font Sizes*/
+.markdown-preview-view h1,
+.cm-s-obsidian .cm-header-1 { font-size: var(--f-s-h); }
+.markdown-preview-view h2 { font-size: calc(var(--f-s-h) - 4px); }
+.cm-s-obsidian .cm-header-2 { font-size: calc(var(--f-s-h) - 6px); }
+.markdown-preview-view h3 { font-size: calc(var(--f-s-h) - 8px); }
+.cm-s-obsidian .cm-header-3 { font-size: calc(var(--f-s-h) - 10px); }
+.markdown-preview-view h4 { font-size: calc(var(--f-s-h) - 10px); }
+.cm-s-obsidian .cm-header-4 { font-size: calc(var(--f-s-h) - 12px); }
+.markdown-preview-view h5,
+.cm-s-obsidian .cm-header-5 { font-size: calc(var(--f-s-h) - 14px); }
+.markdown-preview-view h6,
+.cm-s-obsidian .cm-header-6 { font-size: calc(var(--f-s-h) - 16px); }
+
+/*Heading: Inline Code Size Fix*/
+.cm-s-obsidian span.cm-inline-code.cm-header-1:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
+.cm-s-obsidian span.cm-inline-code.cm-header-1,
+.markdown-preview-view h1 code { font-size: calc(var(--f-s-h) - 6px); }
+.cm-s-obsidian span.cm-inline-code.cm-header-2:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
+.cm-s-obsidian span.cm-inline-code.cm-header-2,
+.markdown-preview-view h2 code { font-size: calc(var(--f-s-h) - 10px); }
+.cm-s-obsidian span.cm-inline-code.cm-header-3:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
+.cm-s-obsidian span.cm-inline-code.cm-header-3,
+.markdown-preview-view h3 code { font-size: calc(var(--f-s-h) - 13px); }
+.cm-s-obsidian span.cm-inline-code.cm-header-4:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
+.cm-s-obsidian span.cm-inline-code.cm-header-4,
+.markdown-preview-view h4 code { font-size: calc(var(--f-s-h) - 17px); }
+.cm-s-obsidian span.cm-inline-code.cm-header-5:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
+.cm-s-obsidian span.cm-inline-code.cm-header-5,
+.markdown-preview-view h5 code { font-size: calc(var(--f-s-h) - 19px); }
+.cm-s-obsidian span.cm-inline-code.cm-header-6:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
+.cm-s-obsidian span.cm-inline-code.cm-header-6,
+.markdown-preview-view h6 code { font-size: calc(var(--f-s-h) - 21px); }
+
+
+/*Editor Heading Re-size*/
+/*Inspired by Red Graphite*/
+.cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+    font-size: 10px;
+    color: var(--lines);
+}
+
+/*Heading Line*/
+h1:after, 
+h2:after, 
+h3:after, 
+h4:after {
+    content: "";
+    display: block;
+    background: var(--table);
+    height: 4px;
+    left: 0;
+}
+
+h1:after { width: 100%; }
+h2:after { width: 85%; }
+h3:after { width: 65%; }
+h4:after { width: 40%; }
+
+
+/*Editor Heading Lines*/
+.cm-s-obsidian pre.HyperMD-header:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--table);
+    left: 0;
+}
+
+/*-Code-*/
+code,
+.markdown-preview-view code,
+.markdown-preview-view pre {
+    color: var(--code-text);
+    z-index: 0 !important;
+    background-color: var(--code-bg);
+    line-height: 1.4em;
+    border-radius: var(--radius);
+    font-size: calc(var(--f-s-text) - .05em);
+    font-family: var(--font-monospace);
+    overflow: auto;
+}
+
+.markdown-preview-view pre[class*="language-"],
+.markdown-preview-view code[class*="language-"] {
+    background: var(--code-bg);
+    line-height: 1.4em;
+    display: block;
+    white-space: pre-wrap !important;
+    color: var(--text);
+    border-radius: var(--radius);
+    z-index: 0 !important;
+}
+
+/*Apply Dropshadow*/
+.markdown-preview-view pre,
+.markdown-preview-view pre[class*="language-"],
+.markdown-preview-view code,
+.cm-s-obsidian pre.HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code {
+    box-shadow: 0 .2em #00000010;
+}
+
+.markdown-preview-view pre,
+.markdown-preview-view pre[class*="language-"],
+.markdown-preview-view code {
+    border: 1px solid var(--td);
+}
+
+/*Hide box shadow inside codeblock*/
+.markdown-preview-view pre > code {
+    box-shadow: none;
+}
+
+/*Editor Code*/
+.cm-s-obsidian pre.HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.cm-s-obsidian div.HyperMD-codeblock-bg,
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    border-radius: var(--radius);
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    font-family: var(--font-monospace);
+    z-index: 0 !important;
+    text-align: left; /*Fix Codeblock Justify Error*/
+}
+/*Hide weird Tokening BG Coloring*/
+.token.operator {
+    color: var(--headers) !important;
+    background: transparent !important;
+}
+
+/*.is-live-preview .cm-line:not(.cm-active) .cm-inline-code { padding: 2px 4px; }*/
+
+
+
+/*--Latex Math--*/
+.MJX-TEX { 
+    font-size: 130%;
+    color: var(--lite-accent);
+}
+/*Math Block Margin Reduction*/
+mjx-container[jax="CHTML"][display="true"] {
+    margin: 3% 0 !important;
+}
+/*Math Editor $$ and Text*/
+.cm-s-obsidian span.cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder {
+    color: var(--accent2-lite);
+    font-style: normal;
+}
+/*Math Editor Text*/
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end){
+    color: var(--headers);
+}
+
+/*Hide Collapsed Header Line
+.CodeMirror-linebackground {
+    margin-bottom: 2em;
+}*/
+
+

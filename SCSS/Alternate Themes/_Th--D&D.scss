@@ -1,0 +1,255 @@
+
+/*----Theme: D&D----*/
+.theme-dark.dnd,
+.theme-light.dnd {    
+    --font: 'Cinzel Decorative', 'Amarante', 'Oleo Script', 'Lobster 1.3';
+    --font-monospace: 'Fira Code Medium', 'Recursive Mono Linear Static Medium', 'Source Code Pro';
+    --slide-shadow: rgba(0, 28, 74, 0.15);
+
+    --hr-sym: "\e88c";
+    --hr-f: var(--mdi);
+}
+.theme-dark.dnd {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-border: #2d3034; /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-form-field-highlighted: rgba(52, 237, 152, 0.22); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 0, 23, 13;
+    
+    --text-highlight-bg: rgba(60, 168, 122, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Search Highlight*/
+    --text-selection: rgba(23, 77, 46, 0.46); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--accent)/*#216546*/; /*Button Color*/
+    --interactive-hover: var(--dark-accent);/*Button Color*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 69, 180, 128; /*Publish item select*/
+    --interactive-accent-hover: var(--dark-accent); /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+
+    /*--DEFAULT VARIABLES--*/
+    --deep-dark-accent: #1b2c25;
+    --dark-accent: #2e4d3c;
+    --lite-accent: #45b480;
+    --accent: #548b67;
+    --accent2: #cc824c;
+    --accent2-lite: #61efc9;
+    --bg: #1e3831;
+    --fg: white;
+    --side-bar: var(--note);
+    --outer-bar: #0e0f15;
+    --dark-sidebar: #1c2f2b;
+    --inactive: #587770;
+    
+    --file: var(--soft-text);
+    --folder: #9a5f3b;
+    --f-hover: var(--accent);
+    
+    --note: #1a1e24;
+    --text: #dcdedd;
+    --headers: #3eb281;
+    --soft-text: #aacac9;
+    --code-bg: #222e31;
+    --code-text: #71dfac;
+    --embed-bg: var(--outer-bar);
+    
+    --tag: var(--dark-accent);
+    --table: #2c3836;
+    --hr: #2b4e41;
+    --i-at: #5ebfa9;
+    
+    --graph-bg: var(--note);/*#060f08;*/
+    --graph-lines: #244047;
+    --graph-node: var(--headers);
+    --graph-fill: var(--headers);
+    --graph-404: #1f6f29;
+    --graph-img: var(--accent2) /*#ff86be*/;
+    --graph-tag: saddlebrown;
+
+    --sphd-pre-1: var(--accent);
+    --sphd-pre-2: var(--accent2);
+    --sphd-pre-3: var(--h3);
+    --sphd-pre-4: var(--hr);
+    --sphd-pre-5: var(--dark-sidebar);
+    --sphd-pre-6: var(--outer-bar);
+    --sphd-ed-1: var(--accent);
+    --sphd-ed-2: var(--accent2);
+    --sphd-ed-3: var(--h3);
+    --sphd-ed-4: var(--hr);
+    --sphd-ed-5: var(--dark-sidebar);
+    --sphd-ed-6: var(--outer-bar);
+
+}
+.theme-light.dnd {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(52, 237, 152, 0.22); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 130, 196, 167;
+    
+    --text-highlight-bg: rgba(60, 168, 122, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Search Highlight*/
+    --text-selection: rgba(123, 255, 179, 0.29); /*Cursor dragged highlights*/
+    
+    --text-faint: var(--accent2);
+    --text-on-accent: var(--bg);
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    /*--DEFAULT VARIABLES--*/    
+    --deep-dark-accent: #1b2c25;
+    --dark-accent: #e3fcef;
+    --lite-accent: #ac7c10;
+    --accent: #79c78e;
+    --accent2: #cca04c;
+    --accent2-lite: #35be89;
+    --bg: #cbe2d5;
+    --fg: #029f08;
+    --side-bar: var(--note);
+    --outer-bar: #dfefe6;
+    --dark-sidebar: var(--embed-bg);
+    --inactive: #91c1ad /*#91a3c1*/;
+    
+    --file-select: #64c9a3;
+    --file: #64896d;
+    --folder: #6dcebf;
+    --f-hover: #2e9163;
+    --lines: var(--inactive);
+    
+    --headers: #0e934c;
+    --note: #f8fbff;
+    --text: #697580;
+    --soft-text: #52ad67;
+    --code-bg: #f1f5ff;
+    --code-text: #35ad76;
+    --embed-bg: var(--code-bg) /*#ebf1f8*/;
+    --aside-bg: #ecf6f1;
+
+    --tag: #56c681;
+    --table: #ccd6eb;
+    --th: #549f54;
+    --hr: #d6deea;
+    --i-at: #48804e;
+    
+    --graph-bg: var(--note);
+    --graph-lines: #e4e7f8;
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
+    --graph-404: #727e93;
+    --graph-img: var(--accent2) /*#5469de*/;
+    --graph-tag: #000000;    
+
+    --sphd-pre-1: var(--accent);
+    --sphd-pre-2: var(--accent2);
+    --sphd-pre-3: var(--h3);
+    --sphd-pre-4: var(--headers);
+    --sphd-pre-5: var(--code-text);
+    --sphd-pre-6: var(--file);
+    --sphd-ed-1: var(--accent);
+    --sphd-ed-2: var(--accent2);
+    --sphd-ed-3: var(--h3);
+    --sphd-ed-4: var(--headers);
+    --sphd-ed-5: var(--code-text);
+    --sphd-ed-6: var(--file);
+}
+
+
+/*Headings*/
+/*Heading Line*/
+.dnd:not(.illusion):not(.h-line) h1:after,
+.wotc:not(.illusion):not(.h-line) h1:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--h1), transparent);
+    left: 0;
+}
+
+.dnd:not(.illusion):not(.h-line) h2:after,
+.wotc:not(.illusion):not(.h-line) h2:after {
+    content: "";
+    display: block;
+    width: 85%;
+    height: 4px;
+    background: linear-gradient(to right, var(--h2), transparent);
+    left: 0;
+}
+
+.dnd:not(.illusion):not(.h-line) h3:after,
+.wotc:not(.illusion):not(.h-line) h3:after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(to right, var(--h3), transparent);
+    left: 0;
+}
+
+/*Writing Class Headings*/
+.dnd .hcl h1:before,
+.dnd .hcl h1:after,
+.dnd .hcl h2:before, 
+.dnd .hcl h2:after,
+.dnd .hcl h3:before,
+.dnd .hcl h3:after,
+.wotc .hcl h1:before,
+.wotc .hcl h1:after,
+.wotc .hcl h2:before,
+.wotc .hcl h2:after,
+.wotc .hcl h3:before,
+.wotc .hcl h3:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    border: none;
+}
+
+.dnd .hcl h1::after,
+.wotc .hcl h1::after { background: linear-gradient(to right, var(--h1), transparent); }
+.dnd .hcl h1::before,
+.wotc .hcl h1::before { background: linear-gradient(to left, var(--h1), transparent); }
+.dnd .hcl h2::after,
+.wotc .hcl h2::after { background: linear-gradient(to right, var(--h2), transparent); }
+.dnd .hcl h2::before,
+.wotc .hcl h2::before { background: linear-gradient(to left, var(--h2), transparent); }
+.dnd .hcl h3::after,
+.wotc .hcl h3::after { background: linear-gradient(to right, var(--h3), transparent); }
+.dnd .hcl h3::before,
+.wotc .hcl h3::before { background: linear-gradient(to left, var(--h3), transparent); }
+
+/*Embed Headings*/
+.dnd .markdown-embed h1,
+.dnd .markdown-embed h2, 
+.dnd .markdown-embed h3,
+.dnd .markdown-embed h4,
+.dnd .markdown-embed h5,
+.dnd .markdown-embed h6,
+.wtoc .markdown-embed h1,
+.wtoc .markdown-embed h2, 
+.wtoc .markdown-embed h3,
+.wtoc .markdown-embed h4,
+.wtoc .markdown-embed h5,
+.wtoc .markdown-embed h6 {
+    color: var(--embed-h);
+    font-style: normal;
+}
+
+/*Table
+.dnd table {
+    margin-left: auto;
+    margin-right: auto;
+}*/

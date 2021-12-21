@@ -1,0 +1,53 @@
+
+/*--Sliding Panes--*/
+/*Hide the gradient of the Title Pane*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:after {
+    background: none !important;
+}
+/*Recolored and Eased Dropshadow*/
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
+    box-shadow: 0px 0px 20px 20px var(--slide-shadow) !important;
+}
+
+/*Note Title Bar*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+    border-right: 2px solid var(--headers);
+    border-bottom: none;
+    padding-right: 2px;
+}
+
+/*Hide Black Border When Header is Rotated*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-content {
+    border: 0 !important;
+}
+
+.title-wrap.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header  {
+    width: auto !important;
+    writing-mode: vertical-rl;
+}
+
+/*Rotate Gradient for Sliding Panes*/
+body.plugin-sliding-panes-rotate-header .workspace-leaf.mod-active .view-header {
+    border: 0 !important;
+    background: linear-gradient(to top, var(--outer-bar), var(--dark-accent));
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+    border: 0 !important;
+    line-height: var(--lh);
+}
+
+/*Fix Margins*/
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+    /*margin: auto !important;*/
+    margin-top: 8px !important;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
+    line-height: 32px;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+    margin-left: 2px;
+}

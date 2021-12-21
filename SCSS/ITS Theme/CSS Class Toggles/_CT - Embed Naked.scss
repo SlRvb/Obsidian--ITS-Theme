@@ -1,0 +1,28 @@
+/*Naked Embeds*/
+.naked-em .markdown-preview-view .markdown-embed,
+.naked-em .markdown-preview-view .file-embed,
+.naked-em .internal-embed,
+.naked-em .markdown-embed .markdown-preview-view,
+.naked-em .markdown-embed li,
+.naked-em .markdown-embed p {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none !important;
+    border: var(--radius) !important;
+}
+.naked-em .internal-embed-link{
+    background-color: var(--background-secondary);
+    color: transparent;
+    padding: 10px 10px 5px 10px;
+}
+.naked-em .internal-embed:hover {
+    color: var(--accent2-lite);
+}
+.naked-em .internal-embed .markdown-embed-content > ::-webkit-scrollbar {
+    width: 0px;
+}
+.naked-em .internal-embed:not(.image-embed) {
+	display: inline-flex;
+}

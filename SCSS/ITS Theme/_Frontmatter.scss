@@ -1,0 +1,48 @@
+
+/*--Frontmatter/Metadata--*/
+
+/*No Background Color, Smaller Padding*/
+.frontmatter-container {
+    border-radius: var(--radius);
+    background-color: transparent;
+    border: 2.5px solid var(--td);
+    padding: 7px 14px;
+    box-shadow: 4px 4px 0 var(--td);
+}
+
+.frontmatter-container .frontmatter-container-header { border-bottom: 0; }
+.CodeMirror-line .cm-s-obsidian .cm-hmd-frontmatter {
+    font-size: 12px;
+    line-height: 2px !important;
+}
+/*Tags*/
+.frontmatter-container .tag {
+    background-color: var(--tag);
+    border-radius: var(--radius);
+    color: var(--text-dl);
+}
+.frontmatter-container .frontmatter-alias {
+    border-radius: var(--radius);
+}
+/*Tags Hover*/
+.frontmatter-container .tag:hover {
+    background-color: var(--tag);
+    border: none;
+}
+
+.markdown-preview-view pre.frontmatter.language-yaml .token.key + .punctuation {
+    display: none;
+}
+.markdown-preview-view pre.frontmatter.language-yaml .token.key {
+    float:left;
+    width: 10vh;
+    color: var(--inactive);
+    font-weight: bold;
+}
+.ntn .markdown-preview-view pre.frontmatter.language-yaml code {
+    background: transparent;
+    border: 0;
+    font-family: var(--default-font);
+}
+
+.ntn .markdown-preview-view pre.frontmatter.language-yaml { font-size: var(--f-s-nt); }

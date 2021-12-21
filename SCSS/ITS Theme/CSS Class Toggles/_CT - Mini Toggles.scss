@@ -1,0 +1,53 @@
+/*Hide Vault Title*/
+.v-non .nav-folder.mod-root > .nav-folder-title {
+    display: none;
+}
+
+/*Hide HR Icon*/
+.hr-tog .markdown-preview-view hr::after, 
+.markdown-preview-view.hr-tog hr::after, 
+.hr-tog div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
+    display: none;
+}
+
+
+/*Heading/Header Hash Above Text*/
+.hash-top .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+    display: block;
+    margin-bottom: -8px;
+}
+
+
+
+/*Show Ligatures*/
+.lig .markdown-preview-section {
+    font-variant-ligatures: unset !important;
+}
+.lig .cm-s-obsidian .HyperMD-list-line, 
+.lig .cm-s-obsidian .CodeMirror-line
+.lig .cm-s-obsidian .cm-line  {
+    font-variant-ligatures: normal;
+}
+
+
+/*Remove Note Titlebar Gradient*/
+.nt-g .workspace-leaf.mod-active .view-header {
+    background: var(--dark-accent);
+}
+
+/*Move Right Sidebar Up*/
+.rsb-up .mod-right-split .workspace-leaf-content {
+    padding-bottom: 22px;
+}
+
+/*Folder Hover Arrow*/
+.fhvr .nav-folder-title:hover .nav-folder-collapse-indicator {
+    display: unset;
+    margin-left: 9px;
+    margin-top: 2px;
+}
+
+
+.tg-f a.tag {
+    font-size: var(--f-tag);
+}

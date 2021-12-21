@@ -1,0 +1,27 @@
+/*Bullet Line Original (Adjusted)*/
+.b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li,
+.b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li,
+.b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li:nth-child(even),
+.b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li:nth-child(even) {
+    border-left: none;
+}
+
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ol ul,
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ul ol,
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ul ul,
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ul ul,
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ol ol {
+    margin-left: -15px;
+    padding-left: 35px;
+    border-left: var(--b-line) solid var(--accent);
+}
+
+.b-li-o .markdown-preview-view:not(.kanban):not(.k-o) .task-list-item-checkbox {
+    margin-left: 1px;
+    margin-right: 6px;
+}
+.b-li-o .markdown-preview-view ul > li.task-list-item { padding-left: 7px; }
+.b-li-o .markdown-preview-view ol > li.task-list-item { padding: 0; }
+.b-li-o .markdown-preview-view .task-list-item ol .list-collapse-indicator {
+    margin-left: -35px;
+}

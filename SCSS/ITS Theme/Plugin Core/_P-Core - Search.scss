@@ -1,0 +1,58 @@
+
+/*--Search--*/
+/*Highlight Search Result*/
+.search-result-file-matched-text {
+    color: var(--text);
+    background-color: var(--background-modifier-form-field-highlighted);
+    padding: 2px;
+}
+
+/*Text Input Field*/
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    background-color: var(--note);
+    border-radius: var(--radius);
+    border: 1px solid var(--table);
+    color: var(--soft-text);
+    font-size: var(--f-text);
+}
+
+input[type='text']:hover,
+input[type='search']:hover,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='number']:hover {
+    background-color: var(--bg);
+    z-index: 0;
+}
+.document-search-container {
+    background-color: var(--dark-sidebar);
+}
+.document-search-button {
+    color: var(--text-normal);
+}
+
+.document-search-button:hover {
+    background-color: var(--interactive-accent);
+    color: var(--text-dl);
+}
+/*Search Downdown*/
+.suggestion { 
+    overflow-x: none;
+}
+.suggestion-item { 
+    overflow-wrap: anywhere;
+    font-size: var(--f-text);
+}
+.suggestion-container.mod-search-suggestion {
+    border-radius: var(--radius);
+    padding: 0;
+}
+.search-suggest-item.is-selected, 
+.suggestion-container,
+.suggestion {
+    border-radius: var(--radius) !important;
+}

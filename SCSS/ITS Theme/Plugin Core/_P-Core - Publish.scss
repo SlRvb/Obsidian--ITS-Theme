@@ -1,0 +1,103 @@
+
+
+
+/*--Publish Settings--*/
+.modal-bg {
+    background-color: var(--background-modifier-form-field-highlighted);
+}
+.publish-upload-item.mod-completed > *,
+.list-item-part .mod-extended .publish-upload-item-title {
+    color: var(--text);
+}
+
+/*Published flair*/
+.flair {
+    background-color: var(--interactive-normal);
+    color: var(--text);
+    border-radius: var(--radius);
+}
+.publish-upload-item:before { border-radius: var(--radius); }
+.file-tree-item-icon { margin-left: 8px; }
+
+/*Publish item select*/
+.file-tree-item-header.is-selected {
+    background-color: rgba(var(--interactive-accent-rgb), 0.2);
+}
+.file-tree .tree-item-inner { border-radius: var(--radius); }
+.file-tree .mod-new .tree-item-flair { color: var(--text); }
+
+
+
+/*----Publish----*/
+.site-header {
+    font-family: var(--font);
+    text-align: left;
+    border: 0;
+}
+.site-header-text {
+    font-weight: 800;
+    color: var(--headers);
+}
+
+.site-header-logo {
+    max-height: 25px;
+    margin-right: -5px;
+}
+@media screen and (max-width: 750px){
+    .site-footer {
+        visibility: hidden;
+    }
+}
+
+.site-footer {
+    font-size: 13px;
+    right: 12px;
+    bottom: 0;
+    position: absolute;
+    visibility: visible;
+}
+.page-header {
+    font-size: 0px;
+    font-family: var(--font);
+    color: transparent;
+    line-height: 0px;
+}
+
+.site-body-left-column-site-name {
+    font-family: var(--font);
+    color: var(--headers);
+    text-align: center;
+}
+.site-body-left-column-site-name:hover {
+    text-decoration: unset;
+    color: var(--lite-accent);
+}
+
+.site-body {
+    background-color: var(--side-bar);
+}
+
+.site-body-left-column {
+    background-color: var(--outer-bar);
+}
+
+.site-body-left-column:before {
+    content: ' ';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--outer-bar);
+    z-index: 0;
+}
+
+
+.graph-view-container {
+    position: relative;
+    height: 300px;
+    border: 1px solid var(--table);
+    border-radius: 10px;
+    background-color: var(--graph-bg);
+    padding: 4px;
+}

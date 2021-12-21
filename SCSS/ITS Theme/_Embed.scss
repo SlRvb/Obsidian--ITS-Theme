@@ -1,0 +1,99 @@
+
+/*--Embeds--*/
+/*Remove Top Padding*/
+.markdown-embed .markdown-preview-view {
+    padding: 5px 10px;
+}
+/*Live Preview Adjustments*/
+.markdown-source-view.mod-cm6 .cm-embed-block,
+.markdown-source-view .markdown-embed:not(.mod-empty),
+.markdown-source-view .file-embed:not(.mod-empty) {
+    border-radius: var(--radius);
+    border: 0;
+    padding: 0;
+}
+
+/* Recolor Embed Title*/
+.markdown-embed-title, .file-embed-title {
+    color: var(--lite-accent);
+    font-size: 1.5em;
+    font-family: var(--font);
+    line-height: 1em; /*Lower Height Title*/
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-weight: 900;
+    padding: 1% 8% 0% 1%;
+    white-space: normal;
+}
+
+/* Recolor Embed Headings*/
+body:not(.em-hd) .markdown-embed h1,
+body:not(.em-hd) .markdown-embed h2,
+body:not(.em-hd) .markdown-embed h3,
+body:not(.em-hd) .markdown-embed h4,
+body:not(.em-hd) .markdown-embed h5,
+body:not(.em-hd) .markdown-embed h6 {
+    font-size: 20px;
+    color: var(--accent);
+}
+
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed,
+.internal-embed.is-loaded:not(.image-embed) {
+    border: 1px solid var(--td);
+    background-color: var(--note);
+    box-shadow: -.3em .3em var(--td);
+    border-radius: var(--radius);
+}
+
+.internal-embed .markdown-embed-content > ::-webkit-scrollbar {
+    width: 5px;
+}
+
+/*Embed Note Doesn't Exist Hover*/
+.markdown-preview-view .file-embed:hover {
+    background-color: var(--dark-accent);
+}
+
+/*Embed Link Color*/
+.markdown-embed-link, .file-embed-link {
+    color: var(--lite-accent);
+    background-color: var(--note);
+    padding: 5px 5px 0px 5px;
+}
+/*Hide Embed Link*/
+.markdown-embed .markdown-embed-link, .file-embed-link { display: none; }
+/*Display Link on Hover*/
+.markdown-embed:hover .markdown-embed-link { display: unset; }
+
+
+/*Shrink margins*/
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
+    margin: 0;
+}
+
+
+/*Display Embed Path**
+/*https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/264**
+.internal-embed::before{
+    content: attr(alt);
+    color: var(--headers);
+    position: absolute;
+    margin-top: -24px;
+} */
+
+
+/*Iframe Borderless*/
+iframe {
+    border-width: var(--radius);
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+
+
+

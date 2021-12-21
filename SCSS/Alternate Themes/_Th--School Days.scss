@@ -1,0 +1,273 @@
+
+/*----Theme: School Days----*/
+.theme-dark.s-d,
+.theme-light.s-d  {
+    /*FONTS*/
+    --font: /*'Recursive Sans Casual Static',*/ 'Recursive Sans Linear Static Black', 'RocknRoll One Regular';
+	--vault-f: "CollegiateBlackFLF", "Jersey M54";
+    --font-monospace: "Recursive Mono Linear Static Medium";
+    --solve-f: 'Recursive Sans Linear Static Regular';
+
+    --hr-sym: "\e3c9";
+    --hr-f: var(--mdi);
+    --bullet: "\e80c";
+    --bul-f: var(--mdi);
+}
+.theme-dark.s-d {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+    --background-modifier-cover: var(--deep-dark-accent);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*Searched Highlight Color*/
+    
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*Outershadow*/
+    --background-modifier-cover: black; /*Obsidian Title Bar Bg*/
+    
+    --text-on-accent: #dcddde; /*Program Title bar Text*/
+    --text-muted: var(--soft-text); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+    --text-normal: var(--text); /*Text body of note*/
+    --text-accent: #808fac; /*Links*/
+    --text-accent-hover: var(--accent); /*Links hover*/
+    --text-faint: #4e5b6f; /*Link brackets color*/
+    
+    --text-highlight-bg: rgba(60, 93, 168, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
+    --text-selection: rgba(65, 82, 119, 0.31); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--accent); /*Button Color*/
+    --interactive-hover: #293846; /*Button Hover*/
+    --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
+    --interactive-accent-hover: #2f5486; /*Menu Button Hover*/
+    --interactive-success: #197300; /*??*/
+    
+    --scrollbar-bg: rgba(255, 255, 255, 0.05);
+    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+    --highlight-mix-blend-mode: lighten;
+
+    /*--DEFAULT VARIABLES--*/
+    
+    /*Compatibility Color Recoloring*/
+    --deep-dark-accent: #212731;
+    --dark-accent: #2b3550;
+    --lite-accent: #d0913d/*#6c99e0*/;
+    --accent: #485b76;
+    --accent2: var(--lite-accent);
+    --bg: #232a34;
+    --fg: white;
+    --side-bar: var(--note);
+    --outer-bar: #0e0f15;
+    --dark-sidebar: #10161d;
+    --inactive: #586477;
+    
+    --file-select: var(--dark-accent);
+    --file: var(--soft-text);
+    --folder: var(--lite-accent);
+	--f-hover: var(--folder);						 
+    
+    --note: #1a1e24;
+    --text: #dcddde;
+    --soft-text: #aab3ca;
+    --headers: #4378c1;
+    --code-bg: #232831;
+    --code-text: #e6a210;
+    --embed-bg: #12151a;
+    
+    --tag: #273346;
+    --table: #2f3440;
+    --hr: #414b5c;
+    --i-at: var(--lite-accent);
+    
+    --latex: #b2cfff;
+    --latex-s: #61afef;
+    --latex-c: #ebbd3e;
+    --header-solve: #c7c7c7;
+    --answer: darkseagreen;
+    --answer-bg: #293c33;
+    
+    --graph-bg: var(--dark-sidebar);
+    --graph-lines: #1f3353;
+    --graph-node: #cfd7dd;
+    --graph-fill: var(--headers);
+    --graph-404: #727e93;
+    --graph-img: #4c78cc /*#ff86be*/;
+    --graph-tag: var(--headers);
+
+    --sphd-pre-1: var(--accent2);
+    --sphd-pre-2: var(--headers);
+    --sphd-pre-3: var(--accent);
+    --sphd-pre-4: var(--dark-accent);
+    --sphd-pre-5: var(--tag);
+    --sphd-pre-6: var(--deep-dark-accent);
+    --sphd-ed-1: var(--accent2);
+    --sphd-ed-2: var(--headers);
+    --sphd-ed-3: var(--accent);
+    --sphd-ed-4: var(--dark-accent);
+    --sphd-ed-5: var(--tag);
+    --sphd-ed-6: var(--deep-dark-accent);
+}
+.theme-light.s-d {    
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+    --background-modifier-cover: var(--deep-dark-accent);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-border: #bed5e6; /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-error-hover: #987831;
+
+    --background-modifier-form-field-highlighted: rgba(131, 177, 240, 0.22); /*Search Bar Active Highlight*/
+    --text-highlight-bg: rgba(145, 176, 208, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*??*/
+    --text-selection: rgba(149, 192, 229, 0.37); /*Cursor dragged highlights*/
+    
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-on-accent: var(--note);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--lite-accent);
+
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--headers);
+    --interactive-accent-hover: var(--lite-accent);
+
+    /*--DEFAULT VARIABLES--*/
+    --deep-dark-accent: #6c8bb4;
+    --dark-accent: #d8ecfd;
+    --lite-accent: #e6af66 /*#5599d0*/;
+    --accent: #6d99d4;
+    --accent2: var(--lite-accent);
+    --bg: #e1e6ed;
+    --fg: #025d9f;
+    --side-bar: var(--note);
+    --outer-bar: #e3f0fd;
+    --dark-sidebar: var(--embed-bg);
+    --inactive: #91a3c1;
+    
+    --file-select: #83a6ca;
+    --file: var(--soft-text);
+    --folder: var(--lite-accent);
+	--f-hover: var(--lite-accent);				   
+    
+    --headers: #4382c1;
+    --note: #f8fbff;
+    --text: #697580;
+    --soft-text: #6f8fd8;
+    --code-text: #ebab16/*#4290ea*/;
+    --embed-bg: #f1f5ff;
+
+    --tag: #5685c6;
+    --table: #c9ced9;
+    --th: #b48c55;
+    --hr: #d6deea;
+    --i-at: var(--th);
+    
+    --latex: #5895fa;
+    --latex-s: #9ed3ff;
+    --latex-c: #fdaf00;
+    --header-solve: #a87643;
+    --answer: #4f904f;
+    --answer-bg: #dbe8e2;
+    
+    --graph-bg: var(--note);
+    --graph-lines: #ecedf8;
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
+    --graph-404: #727e93;
+    --graph-img: #4c78cc;
+    --graph-tag: #000000;
+    --graph-focused: var(--lite-accent);
+
+    --sphd-pre-1: var(--accent2);
+    --sphd-pre-2: var(--fg);
+    --sphd-pre-3: var(--headers);
+    --sphd-pre-4: var(--accent);
+    --sphd-pre-5: var(--th);
+    --sphd-pre-6: var(--graph-404);
+    --sphd-ed-1: var(--accent2);
+    --sphd-ed-2: var(--fg);
+    --sphd-ed-3: var(--headers);
+    --sphd-ed-4: var(--accent);
+    --sphd-ed-5: var(--th);
+    --sphd-ed-6: var(--graph-404);
+}
+
+/*Vault Name*/
+.s-d .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
+    font-family: var(--vault-f);
+    color: var(--folder);
+    font-weight: 10 !important;
+}
+
+.s-d ul li::before { margin-left: -24px; }
+
+.s-d:not(.illusion) h1,
+.s-d:not(.illusion) h2,
+.s-d:not(.illusion) h3,
+.s-d:not(.illusion) h4,
+.s-d:not(.illusion) h5,
+.s-d:not(.illusion) h6 {
+    color: var(--lite-accent);
+}
+/*--Mathjax Edit--*/
+.s-d .mjx-math{
+    font-style: normal;
+}
+.s-d .MJX-TEX { 
+    font-size: 130%;
+    color: var(--latex);
+}
+/*Math Block Margin Reduction*/
+.s-d .mjx-container[jax="CHTML"][display="true"] {
+    margin: 3% 0 !important;
+}
+/*Math Editor*/
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end) {
+    color: var(--latex-c);
+}
+
+.s-d .cm-s-obsidian span.cm-math,
+.s-d .cm-s-obsidian span.hmd-fold-math-placeholder {
+    color: var(--latex-s);
+    font-style: normal;
+}
+
+
+/*--Solve Page--*/
+/*Header*/
+.s-d .solve h1,
+.s-d .solve h2,
+.s-d .solve h3,
+.s-d .solve h4,
+.s-d .solve h5,
+.s-d .solve h6 {
+    color: var(--header-solve);
+}
+.s-d .solve h3,
+.s-d .solve h4,
+.s-d .solve h5,
+.s-d .solve h6 {
+    font-family: var(--solve-f) !important;
+}
+/*Table*/
+.s-d .solve table { margin: auto auto 5% 5px; }
+.s-d .solve th, 
+.s-d .solve td:nth-child(1){
+    background-color: var(--outer-bar);
+    border-right: transparent;
+    border-left: transparent;
+}
+.s-d .solve td mark{
+    color: var(--answer);
+    background-color: var(--answer-bg);
+    font-weight: 600;
+    padding: 2px;
+}
+.s-d .solve tr { width: 10% !important; }

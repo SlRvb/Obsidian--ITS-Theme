@@ -1,0 +1,104 @@
+:root {
+    /*FONTS*/
+    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
+    --mermaid-font: var(--default-font); /*mermaidjs text*/
+    --reveal-font: var(--default-font); /*revealjs slide text*/
+    --font-monospace: 'Fira Code', 'Fira Code Medium', /*'JetBrains Mono Medium', 'Recursive Mono Casual Static Medium', 'Menlo Bold',*/ 'Source Code Pro', monospace; /*Code block text*/
+    --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif; /*Works, but if it doesn't, needs !important*/
+    --pre-font: var(--default-font) !important;
+    --ed-font: var(--default-font) !important;
+    
+
+    --rmx: 'remixicon';
+    --mdi: 'Material Icons Sharp';
+    --its: 'its';
+    --fa5: 'Font Awesome 5 Free Solid';
+    --rpg: 'rpg-awesome';
+}
+
+.workspace {
+    background-color: var(--background-secondary);
+}
+
+.theme-dark, .theme-light {
+    /*Sizes*/
+    --radius: 0px;
+
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 200px;
+    --small-med: 300px;
+    --med-small: 400px;
+    --medium: 500px;
+    --med-tall: 600px;
+    --tall: 700px;
+    
+    /*Colors*/
+    --slide-shadow: var(--td);
+    --text-dl: #e5ebee;
+    
+    /*Sizes*/
+    --scroll-size: 7px;
+    --lh: 1.5em;
+    --vault-f: var(--font);
+    --f-text: 16px;
+    --f-small: .88em;
+    --f-tag: 13px;
+
+    --f-s-ui: 16px;
+    --f-s-sb: 16px;
+    --f-s-nt: 16px;
+
+    --f-s-pre: 16px;
+    --f-s-text: 1em;
+    --f-s-h: 34px;
+    --f-w-h: 600;
+    --h-line: 100%;
+    --head-h: 15px;
+    
+    /*Other*/
+    --hr-sym: "\e817";
+    --hr-f: var(--its);
+    --tag-o: 1px;
+    --bullet: "\e802";
+    --bul-f: var(--its);
+    --b-line: 2px;
+    --otl-sym: "H";
+
+    /*--Specific--*/
+    /*Fonts*/
+    --sphd-pre-ff-1: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-2: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-3: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-4: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-5: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-6: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-1: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-2: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-3: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-4: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-5: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-ed-ff-6: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+
+    /*Size*/
+    --sphd-pre-fs-1: 34px;
+    --sphd-pre-fs-2: 30px;
+    --sphd-pre-fs-3: 26px;
+    --sphd-pre-fs-4: 24px;
+    --sphd-pre-fs-5: 20px;
+    --sphd-pre-fs-6: 18px;
+    --sphd-ed-fs-1: 34px;
+    --sphd-ed-fs-2: 28px;
+    --sphd-ed-fs-3: 24px;
+    --sphd-ed-fs-4: 22px;
+    --sphd-ed-fs-5: 20px;
+    --sphd-ed-fs-6: 18px;
+
+    /**/
+    --em-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --em-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --b-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --b-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --del-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --del-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,15 @@
+
+.theme-dark, .theme-light {
+    /*Plugin: Media Extended*/
+    --plyr-audio-controls-background: var(--outer-bar);
+    --plyr-tooltip-background: var(--bg);
+    
+    --plyr-range-fill-background: var(--accent);
+    --plyr-audio-progress-buffered-background: var(--table);
+
+    --plyr-tooltip-color: var(--soft-text);
+    --plyr-audio-control-color: var(--soft-text);
+    --plyr-control-radius: var(--radius);
+    --plyr-audio-control-background-hover: var(--dark-accent);
+    --plyr-color-main: var(--soft-text);
+}

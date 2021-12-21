@@ -1,0 +1,48 @@
+
+/*--Plugin: 5e Statblock--*/
+body.theme-dark,
+body.theme-light {
+    /*Plugin: 5e Statblock*/
+    --statblock-primary-color: var(--text);
+    --statblock-background-color: var(--note);
+    --statblock-bar-color: var(--accent);
+    --statblock-rule-color: var(--accent);
+    --statblock-alt: var(--td);
+}
+
+body .obsidian-statblock-plugin .heading {
+    font-family: var(--font);
+    color: var(--headers);
+    font-size: var(--f-s-h);
+    font-weight: var(--f-w-h);
+    font-variant: unset;
+}
+
+body .obsidian-statblock-plugin > .statblock-content {
+    border: none;
+    box-shadow: 0px 0px 20px var(--outline);
+    font-family: inherit;
+}
+body .statblock-item-container:nth-child(odd) .line,
+body .statblock-item-container:nth-child(odd) .property {
+    background: var(--statblock-alt);
+}
+
+body .obsidian-statblock-plugin .property-name {
+    color: var(--headers);
+    font-style: normal;
+    font-size: var(--f-text);
+}
+body .obsidian-statblock-plugin .section-header {
+    border: none;
+    color: var(--accent2-lite);
+    font-weight: var(--f-w-h);
+    text-transform: uppercase;
+}
+body .obsidian-statblock-plugin > .bar {
+    border: none;
+}
+
+.obsidian-statblock-plugin .subheading {
+    font-size: .9em !important;
+}

@@ -1,0 +1,146 @@
+
+/*----Theme: Drowned----*/
+.theme-dark.drwn, .theme-light.drwn {
+    --hr-sym: "\f1cd";
+    --hr-f: var(--mdi);
+}
+
+.theme-dark.drwn {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+    
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    --interactive-normal: var(--accent);
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--accent);
+    --interactive-accent-hover: var(--lite-accent);
+
+    --side-bar: var(--note);
+    --outer-bar: #0b0f13;
+    --note: #1a1e24;
+    --text: #bccad8;
+
+    --headers: #399F94;
+    --file: #71a6b7;
+    --code-text: #72cdd0;
+    --i-at: #5EBFA9;
+    --f-icon: #204c5d;
+    --folder: #58c8e0;
+    --slide-shadow: rgba(0,74,63,0.08);
+    --hr: #0f465d;
+    --tag: #1A5753;
+    --accent: #378876;
+    --lite-accent: #6CE0D3;
+    --accent2: #5cb2d6;
+    --accent2-lite: #49d8e2;
+    --dark-accent: #216565;
+    --deep-dark-accent: #103F3D;
+    --inactive: #2b5b77;
+    --td: rgba(6,12,12,0.38);
+
+    --lines: #1e4765;
+    --bg: #1e2f33;
+    --table: #2b4448;
+    
+    --text-highlight-bg: rgba(60,168,131,0.25);
+    --text-highlight-bg-active: rgba(115,253,190,0.25);
+    --background-modifier-form-field-highlighted: rgba(52,237,181,0.13);
+    --text-selection: rgba(23,77,59,0.27);
+    --td: rgba(6,11,12,0.38);
+
+    --graph-lines: #04303d;
+
+    --sphd-pre-1: var(--headers);
+    --sphd-pre-2: var(--accent);
+    --sphd-pre-3: var(--inactive);
+    --sphd-pre-4: var(--f-icon);
+    --sphd-pre-5: var(--table);
+    --sphd-pre-6: var(--code-bg);
+    --sphd-ed-1: var(--headers);
+    --sphd-ed-2: var(--accent);
+    --sphd-ed-3: var(--inactive);
+    --sphd-ed-4: var(--f-icon);
+    --sphd-ed-5: var(--table);
+    --sphd-ed-6: var(--code-bg);
+}
+
+.theme-light.drwn {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+    
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    
+    --text-on-accent: var(--note);
+    --text-accent-hover: var(--accent2);
+
+    --interactive-normal: var(--accent);
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--headers);
+    --interactive-accent-hover: var(--lite-accent);
+
+    --side-bar: var(--note);
+    --outer-bar: #eef3fd;
+    --note: #f8fbff;
+    --text: #697580;
+
+
+    --soft-text: #4ED0B8;
+    --headers: #40B1A4;
+    --file: #7EA3A2;
+    --code-text: #69cfd2;
+    --i-at: #43C1AE;
+    --footnote: #89A09E;
+    --f-icon: #A6DED8;
+    --folder: #a1d9ff;
+
+    --dark-sidebar: #e8f9f7;
+    --embed-bg: #f1f5ff;
+
+    --hr: #D6EAE9;
+    --lines: #b8e5e7;
+    --tag: #49b99d;
+    --accent: #43C1A5;
+    --lite-accent: #51a38e;
+    --accent2: #D6EAE3;
+    --accent2-lite: #75c8b9;
+    --dark-accent: #def7f5;
+    --deep-dark-accent: #102F26;
+    --inactive: #A6DED4;
+    --table: #CCEBE2;
+    --fg: #2E918A;
+    --bg: var(--table);
+    
+    --text-highlight-bg: rgba(129,199,194,0.25);
+    --text-highlight-bg-active: rgba(115,253,227,0.25);
+    --background-modifier-form-field-highlighted: rgba(131,240,207,0.13);
+    --text-selection: rgba(149,229,220,0.22);
+    --td: rgba(145, 212, 199, 0.27);
+    --slide-shadow: rgba(0,74,52,0.08);
+
+    --sphd-pre-1: var(--code-text);
+    --sphd-pre-2: var(--accent2-lite);
+    --sphd-pre-3: var(--accent);
+    --sphd-pre-4: var(--lite-accent);
+    --sphd-pre-5: var(--fg);
+    --sphd-pre-6: var(--deep-dark-accent);
+    --sphd-ed-1: var(--code-text);
+    --sphd-ed-2: var(--accent2-lite);
+    --sphd-ed-3: var(--headers);
+    --sphd-ed-4: var(--lite-accent);
+    --sphd-ed-5: var(--fg);
+    --sphd-ed-6: var(--deep-dark-accent);
+}

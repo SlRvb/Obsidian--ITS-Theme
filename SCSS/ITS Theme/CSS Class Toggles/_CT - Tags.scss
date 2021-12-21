@@ -1,0 +1,16 @@
+/*Tags*/
+.tag-notion a.tag,
+.tag-notion .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
+    border-radius: 5px !important;
+}
+.tag-bubble a.tag,
+.tag-bubble .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
+    border-radius: 25px !important;
+}
+.tag-outline a.tag {
+    background-color: transparent;
+    border: var(--tag-o) solid var(--tag);
+    color: var(--tag);
+    line-height: 1.3em;
+}
+

@@ -1,0 +1,43 @@
+
+/*--Tag Pane--*/
+/*Text*/
+.tree-item-self {
+    color: var(--soft-text);
+    border-radius: var(--radius);
+}
+.tag-container .tree-item-self:hover {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/*Count Squared*/
+.tree-item-flair {
+    border-radius: var(--radius);
+}
+
+/*Tag Pane Lines*/
+.tag-container .tree-item-children {
+    margin-left: .7em;
+    border-left: 1px solid var(--lines);
+    transition: all 0.5s ease-in-out;
+    padding: 0;
+}
+/*Remove Dot*/
+.tag-container .tree-item-children > div:first-child { display: none; }
+
+.tag-container .tree-item-children:hover {
+    border-left: 1px solid var(--accent);
+}
+
+/*Add # For Tag Pane*/
+/*From California Coast.*/
+.tag-pane-tag-text:before {
+    content: "#";
+    padding-right: 1.3em;
+    position: relative;
+    margin: -1em;
+    color: var(--headers);
+}
+.collapse-icon + .tree-item-inner > .tag-pane-tag-text:before {
+    content: none;
+}

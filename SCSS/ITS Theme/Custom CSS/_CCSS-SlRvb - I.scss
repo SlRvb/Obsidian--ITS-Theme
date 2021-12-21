@@ -1,0 +1,40 @@
+
+/*Italicized Text <i></i>*/
+.markdown-preview-section i,
+.i-at,
+.cm-html-embed i,
+.reveal i { /*I used for image description, em is just regular italics*/
+    display: block;
+    font-style: unset;
+    color: var(--i-at);
+    text-align: center;
+    background-color: var(--outer-bar);
+    padding: 0 1em;
+}
+
+#right,
+.markdown-preview-section .right {
+    display: block;
+    text-align: right !important;
+    background-color: var(--outer-bar);
+    padding-right: .8em;
+}
+
+
+#left,
+.markdown-preview-section .left {
+    display: block;
+    text-align: left !important;
+    background-color: var(--outer-bar);
+    padding-left: .8em;
+}
+
+#clear,
+.clear {
+    clear: both !important;
+}
+
+#nobg,
+.nobg {
+    background-color: transparent !important;
+}

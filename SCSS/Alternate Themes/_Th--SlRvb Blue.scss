@@ -1,0 +1,179 @@
+/*----Theme: SlRvb Blue----*/
+.theme-light.slrvb-b,
+.theme-dark.slrvb-b {
+    --font: 'Recursive Sans Linear Static Black', 'Oleo Script', 'Calisto MT'; /*Works, but if it doesn't, needs !important*/
+    --font-monospace: "Fira Code";    
+}
+.theme-dark.slrvb-b {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(41, 57, 90, 0.48); /*Searched Highlight Color*/
+    --background-modifier-error-rgb: 54, 70, 105; /*??*/
+    
+    --text-highlight-bg: rgba(60, 102, 168, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(0, 137, 255, 0.4); /*??*/
+    --text-selection: rgba(34, 71, 114, 0.25); /*Cursor dragged highlights*/
+    
+    --interactive-normal: var(--accent);
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--accent);
+    --interactive-accent-rgb: 60, 102, 168;
+    --interactive-accent-hover: #29395a; 
+    --interactive-success: #599049;
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent);
+    --interactive-accent: var(--lite-accent);
+    --interactive-accent-hover: var(--dark-accent);
+
+    /*--DEFAULT VARIABLES--*/
+
+    /*Compatibility Color Recoloring*/
+    --deep-dark-accent: #1f283b /*#2f1010*/;
+    --dark-accent: #293e64 /*#53201F*/;
+    --lite-accent: #6ca6e0;
+    --accent: #394d64/*#c14343*/;
+    --accent2: #4c78cc;
+    --accent2-lite: #4c87cc;
+    --bg: #252c36;
+    --fg: #cfd7dd;
+    --side-bar: var(--note);
+    --outer-bar: #0e0f15;
+    --dark-sidebar: #10161d;
+    --inactive: #586477;
+    
+    --file: #aab3ca;
+    --folder: #63748d;
+    --f-hover: var(--accent);
+    --lines: #465164;
+        
+    --note: #1a1e24 /*#0d131c*/;
+    --text: #778495 /*#bccad8*/;
+    --headers: #2b61aa;
+    --soft-text: #6d7a9b/*#d04e4e*/;
+    --code-bg: #232831;
+    --code-text: slategray;
+    --embed-bg: var(--dark-sidebar);
+    --footnote: #6e7e89;
+    
+    --th: var(--dark-accent);
+    --td: #030a1495;
+    
+    --tag: var(--dark-accent);
+    --table: #283846;
+    --hr: #3c5274;
+    --i-at: #5d7b98;
+    
+    --graph-bg: var(--dark-sidebar);
+    --graph-lines: var(--dark-accent);
+    --graph-node: var(--fg);
+    --graph-fill: var(--headers);
+    --graph-404: #727e93;
+    --graph-img: var(--accent2) /*#ff86be*/;
+    --graph-tag: var(--headers);
+
+    --sphd-pre-1: var(--accent2);
+    --sphd-pre-2: var(--headers);
+    --sphd-pre-3: var(--dark-accent);
+    --sphd-pre-4: var(--deep-dark-accent);
+    --sphd-pre-5: var(--accent);
+    --sphd-pre-6: var(--soft-text);
+    --sphd-ed-1: var(--accent2);
+    --sphd-ed-2: var(--headers);
+    --sphd-ed-3: var(--dark-accent);
+    --sphd-ed-4: var(--deep-dark-accent);
+    --sphd-ed-5: var(--accent);
+    --sphd-ed-6: var(--soft-text);
+}
+.theme-light.slrvb-b {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(131, 190, 240, 0.22); /*Search Bar Active Highlight*/
+
+    --background-modifier-error-rgb: 131, 190, 240; /*Ctrl F Search Background*/
+    --background-modifier-error-hover: #470000; /*??*/
+    --background-modifier-cover: var(--deep-dark-accent); /*Obsidian Title Bar*/
+    --text-highlight-bg: rgba(129, 172, 199, 0.4); /*Text highlights*/
+    --text-highlight-bg-active: rgba(115, 184, 253, 0.4); /*Search Highlight*/
+    --text-selection: rgba(149, 195, 229, 0.37); /*Cursor dragged highlights*/
+    
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --interactive-accent: var(--lite-accent);
+
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--headers);
+    --interactive-accent-hover: var(--lite-accent);
+
+    /*--DEFAULT VARIABLES--*/    
+    --deep-dark-accent: #101b2f;
+    --dark-accent: #edf4ff;
+    --lite-accent: #5174a3;
+    --accent: #64a0db;
+    --accent2: #4c78cc;
+    --accent2-lite: #5599d0;
+    --bg: #dde4ef;
+    --fg: #025d9f;
+    --side-bar: var(--note);
+    --outer-bar: #eef3fd;
+    --dark-sidebar: var(--embed-bg);
+    --inactive: #a6bbde /*#91a3c1*/;
+    
+    --file: #8897b4;
+    --folder: #6da5ce;
+    --f-hover: #3685e0;
+    --lines: #b5c2d8;
+    
+    --headers: #4378c1;
+    --note: #f8fbff;
+    --text: #667e95;
+    --soft-text: #4e99d0;
+    --code-bg: #eef6ff;
+    --code-text: #4296ea;
+    --embed-bg: #f1f5ff /*#ebf1f8*/;
+    --aside-bg: var(--dark-sidebar);
+    --footnote: #8996a0;
+    
+    --th: #587aa8;
+    --td: #d0ddef62;
+
+    --tag: #5885b2;
+    --table: #ccd6eb;
+    --hr: #d6deea;
+    --i-at: var(--headers)/*#804848*/;
+    
+    --graph-bg: var(--note);
+    --graph-lines: #e4e7f8;
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
+    --graph-404: #727e93;
+    --graph-img: var(--accent2) /*#5469de*/;
+    --graph-tag: #000000;
+
+    --sphd-pre-1: var(--accent);
+    --sphd-pre-2: var(--headers);
+    --sphd-pre-3: var(--th);
+    --sphd-pre-4: var(--text);
+    --sphd-pre-5: var(--file);
+    --sphd-pre-6: var(--inactive);
+    --sphd-ed-1: var(--accent);
+    --sphd-ed-2: var(--headers);
+    --sphd-ed-3: var(--th);
+    --sphd-ed-4: var(--text);
+    --sphd-ed-5: var(--file);
+    --sphd-ed-6: var(--inactive);
+}

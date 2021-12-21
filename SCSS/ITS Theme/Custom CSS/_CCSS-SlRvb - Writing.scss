@@ -1,0 +1,201 @@
+
+/*Writing*/
+.writing h1,
+.writing h2,
+.writing h3,
+.writing h4,
+.writing h5,
+.writing h6 {
+    text-align: center;
+}
+.writing h1:after,
+.writing h2:after,
+.writing h3:after,
+.writing h4:after,
+.writing h5:after,
+.writing h6:after {
+    height: 0 !important;
+}
+
+.writing .markdown-preview-section,
+.writing .cm-s-obsidian .CodeMirror-line {
+    text-align: justify;
+}
+.markdown-preview-view.writing .markdown-preview-sizer,
+.writing .markdown-preview-view .markdown-preview-sizer {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Writing: Link*/
+.writing .internal-link,
+.writing .external-link {
+    color: var(--text);
+}
+.writing .internal-link:hover,
+.writing .external-link:hover {
+    background: var(--hvr2);
+    border: 0;
+    color: var(--soft-text);
+}
+/*Writing: Link Type Icons*/
+.writing .internal-link::after,
+.writing .external-link::after {
+    font-family: var(--its);
+    font-size: calc(var(--f-s-text) - 2px);
+    font-style: normal !important;
+    font-weight: 10 !important;
+    vertical-align: 2px;
+    color: var(--accent);
+    margin-right: -7px;
+    opacity: unset;
+}
+.writing .internal-link::after { content: "\e819"; }
+.writing .external-link::after { content: "\e818"; }
+
+.writing hr::after {
+    display: none;
+}
+/*Writing: Aside Edits*/
+.writing .aside-hide,
+.writing .aside-hide:hover,
+.writing .aside-in,
+.writing .aside-show {
+    box-shadow: none;
+    background: none;
+}
+.writing .aside-in,
+.writing .aside-show {
+    border-left: 2px solid var(--headers);
+    width: 40%;
+}
+.writing .aside-show {
+    margin-right: -42%;
+}
+.writing .aside-hide:hover {
+    width: 15vw;
+}
+.writing .aside-hide:before {
+    background: transparent;
+    text-shadow: 0 0 0 var(--hr);
+}
+/*Writing: Code*/
+.writing .markdown-preview-view code,
+.writing .markdown-preview-view pre,
+.markdown-preview-view.writing code,
+.markdown-preview-view.writing pre {
+    color: var(--text) !important;
+    border-color: var(--note);
+    box-shadow: none;
+    padding: 0;
+    background-color: var(--aside-bg);
+}
+.writing .markdown-preview-view pre,
+.markdown-preview-view.writing pre {
+    padding-left: .5em;
+    border-left: 5px solid var(--code-bg);
+    border-right: 5px solid var(--code-text);
+}
+.writing .markdown-preview-view pre[class*="language-"],
+.writing .markdown-preview-view code[class*="language-"],
+.markdown-preview-view.writing pre[class*="language-"],
+.markdown-preview-view.writing code[class*="language-"] {
+    filter: saturate(70%);
+}
+
+/*Writing: Footnotes*/
+.writing .footnote-link {
+    color: var(--footnote);
+}
+.writing .footnote-backref.footnote-link:before {
+    content: "\E81A"/*\1F815*/;
+    transform: unset;
+    font-size: .5em;
+}
+/*Writing: Blockquotes*/
+.writing .markdown-preview-view blockquote,
+.markdown-preview-view.writing blockquote {
+    background: none;
+    border-left: 3px solid var(--accent);
+    margin-left: 4em;
+    margin-right: 3em;
+}
+.writing blockquote mark strong {
+    color: var(--inactive);
+}
+/*Writing: No List Line*/
+.writing li,
+.writing li:nth-child(even) {
+    border: 0;
+}
+/*Arrows*/
+.writing .collapse-icon svg {
+    color: var(--scrollbar-thumb-bg);
+}
+.writing .CodeMirror-foldgutter-open:after {
+    color: var(--inactive);
+}
+
+.writing .markdown-preview-section i {
+    color: var(--footnote);
+    background: var(--td);
+}
+.writing mark {
+    background-color: var(--scrollbar-bg);
+}
+
+/*-Writing: Editor Adjustments-*/
+/*Writing: Links Recolor*/
+.writing .cm-s-obsidian span.cm-hmd-internal-link,
+.writing .cm-s-obsidian .cm-link,
+.writing .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+    color: var(--text);
+    box-shadow: 0 0.2em #00000000;
+}
+.writing .cm-s-obsidian .CodeMirror-line .cm-string.cm-url,
+.writing .cm-s-obsidian span.cm-hmd-barelink {
+    color: var(--footnote);
+}
+.writing .cm-s-obsidian span.cm-hmd-internal-link:hover,
+.writing .cm-s-obsidian span.cm-url:hover {
+    background: var(--text-highlight-bg);
+    color: var(--text) !important;
+}
+.writing .cm-s-obsidian span.cm-highlight {
+    background: var(--scrollbar-bg);
+}
+/*Writing: Formatting Recolor*/
+.writing .cm-s-obsidian span.cm-tag,
+.writing .cm-s-obsidian .cm-formatting:not(.cm-formatting-list),
+.writing .cm-s-obsidian span.cm-formatting-link,
+.writing .cm-s-obsidian .cm-attribute,
+.writing .cm-s-obsidian .cm-string,
+.writing .cm-s-obsidian .cm-formatting-code {
+    color: var(--inactive);
+    box-shadow: 0 0.2em #00000000;
+}
+/*Writing: Codeblock*/
+.writing .cm-s-obsidian pre.HyperMD-codeblock:not(.cm-formatting-code-block) {
+    background: var(--note);
+    filter: saturate(70%);
+    padding-left: .5em;
+    border-left: 5px solid var(--code-bg);
+    border-right: 5px solid var(--code-text);
+    box-shadow: 0 0.2em #00000000;
+}
+
+/*Writing: Editor HR*/
+.writing div:not(.CodeMirror-activeline) > .HyperMD-hr-bg::after {
+    content: '';
+}
+/*Writing: Blockquote*/
+.writing .HyperMD-quote {
+    border-left: 3px solid var(--accent);
+}
+
+.writing .cm-s-obsidian pre.HyperMD-header:after {
+    height: 0;
+}
+.writing .cm-s-obsidian .CodeMirror-linenumber {
+    color: var(--inactive);
+}

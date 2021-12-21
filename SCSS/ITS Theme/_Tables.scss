@@ -1,0 +1,46 @@
+
+/*--Table--*/
+table { border-collapse: collapse; }
+.markdown-preview-view td,
+.reveal table td {
+    border: none;
+}
+
+.markdown-preview-view th,
+.reveal table th {
+    background-color: var(--th);
+    color: #edf7ff;
+    border: 0px;
+}
+.is-live-preview table th:nth-child(even),
+.markdown-preview-view th:nth-child(even),
+.reveal table th:nth-child(even) {
+    opacity: 80%;
+    border-left: 1px solid var(--note);
+    border-right: 1px solid var(--note);
+}
+.is-live-preview table td:nth-child(odd),
+.markdown-preview-view td:nth-child(odd),
+.reveal table td:nth-child(odd),
+.is-live-preview table tr:nth-child(even),
+.markdown-preview-view tr:nth-child(even),
+.reveal table tr:nth-child(even)  {
+    background-color: var(--td);
+    border-bottom: 1px solid var(--note);
+}
+
+.is-live-preview table th,
+.is-live-preview table tr td {
+    padding: 6px 10px;
+}
+
+.markdown-preview-sizer {
+    min-height: auto !important;
+}
+
+
+/*Plugin: Advanced Table*/
+.cm-s-obsidian .HyperMD-table-row {
+    font-family: var(--font-monospace);
+}
+

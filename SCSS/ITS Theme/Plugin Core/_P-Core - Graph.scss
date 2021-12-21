@@ -1,0 +1,76 @@
+
+/*-Graph Settings-*/
+.graph-controls.is-close {
+    padding: 6px 8px;
+}
+/*Opened Settings*/
+.graph-controls {
+    background-color: var(--side-bar);
+    border: 1px solid var(--table);
+    border-radius: var(--radius);
+    padding: .5em;
+    padding-left: .2em;
+    max-width: 17em;
+}
+.graph-control-section:not(.is-collapsed) .graph-control-section-header {
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
+}
+.graph-controls .setting-item:not(.setting-item-heading) {
+    padding: .5em .8em;
+}
+.graph-controls .setting-item-name {
+    color: var(--text);
+}
+.graph-controls .setting-item:hover {
+    color: var(--accent);
+}
+
+
+/*--Graph View--*/
+/*Graph Pane BG*/
+.workspace-leaf-content[data-type = "graph"] .view-content{
+    background-color: var(--graph-bg); 
+}
+
+.graph-view.color-fill {
+    color: var(--graph-node); /*Created notes color*/
+}
+
+.graph-view.color-line {
+    color: var(--graph-lines);
+}
+.graph-view.color-text {
+    color: var(--soft-text);
+}
+/*Hover Node*/
+.graph-view.color-fill-highlight {
+    color: var(--graph-fill); /*Circle color*/
+}
+.graph-view.color-circle {
+    color: var(--text-dl); /*Outline color*/
+}
+
+.graph-view.color-line-highlight {
+    color: var(--accent);
+}
+
+.graph-view.color-arrow {
+    color: var(--soft-text);
+}
+
+.graph-view.color-fill-tag {
+    color: var(--graph-tag) !important;
+}
+
+.graph-view.color-fill-attachment {
+    color: var(--graph-img) !important;
+}
+
+.graph-view.color-fill-unresolved {
+    color: var(--graph-404) !important; 
+}
+
+.graph-view.color-fill-focused {
+    color: var(--graph-focused) !important;
+}

@@ -1,0 +1,42 @@
+/*--Query--*/
+/*Remove Borders and Outer Margins*/
+.markdown-preview-view .internal-query.is-embed {
+    border: none;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+
+/*Query Header*/
+.markdown-preview-view .internal-query.is-embed .internal-query-header{
+    background-color: var(--code-bg);
+    padding: 0.5%;
+}
+
+/*Smaller Query Titles*/
+.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--soft-text);
+    line-height: 18px;
+}
+
+
+/*Reduce Query Result Margins and Remove Borders*/
+.internal-query.is-embed .search-result-file-matches {
+    border: none;
+    padding: 0;
+    margin-right: 10px;
+    margin-bottom: .5%;
+}
+/*Add border Under Query search result*/
+.internal-query.is-embed .search-result {
+    border-bottom: 1px solid var(--bg);
+    background-color: var(--note);
+    margin-bottom: 0;
+}
+/*Query No Matches Found*/
+.internal-query.is-embed .search-empty-state {
+    margin: 0;
+    color: var(--headers);
+}

@@ -1,0 +1,151 @@
+
+.ntsz {
+    --nt-f: 16px;
+}
+.ntsz .markdown-preview-view code,
+.ntsz .markdown-preview-view pre {
+    font-size: calc(var(--nt-f) - 2px);
+}
+
+.ntsz a.tag {
+    font-size: calc(var(--nt-f) - 3px);
+}
+.ntsz p,
+.ntsz li,
+.ntsz table, 
+.ntsz .cm-s-obsidian .CodeMirror-lines {
+    font-size: var(--nt-f);
+}
+
+
+
+/*--Workspace Resize--*/
+/*Resize: Menu*/
+.resize button, 
+.resize button.mod-cta {
+    font-size: calc(var(--f-s-ui) - 2px);
+}
+
+.resize input[type='text'],
+.resize input[type='search'],
+.resize input[type='email'],
+.resize input[type='password'],
+.resize input[type='number'] {
+    font-size: var(--f-s-ui);
+}
+
+.resize .suggestion-item { 
+    font-size: var(--f-s-ui);
+}
+/*Quick Switcher*/
+.resize .prompt .suggestion-flair:not(.suggestion-flair[aria-label="Not created yet, select to create"])::before {
+    font-size: var(--f-s-ui);
+}
+.resize .prompt .suggestion-flair[aria-label="Not created yet, select to create"] svg {
+    width: var(--f-s-ui);
+    height: var(--f-s-ui);
+}
+/*Settings*/
+.resize .modal.mod-settings .modal-content,
+.resize .vertical-tab-header-group-items {
+    font-size: var(--f-s-ui);
+}
+.resize .setting-item-description,
+.resize .vertical-tab-header-group-title,
+.resize .setting-hotkey,
+.resize .graph-controls .setting-item-name {
+    font-size: calc(var(--f-s-ui) - 2px);
+}
+.resize .modal,
+.resize .prompt,
+.resize .dropdown {
+    font-size: var(--f-s-ui);
+}
+.resize .setting-item-name {
+    font-size: calc(var(--f-s-ui) - 0px);
+}
+.resize .horizontal-tab-nav-item,
+.resize .modal.mod-settings .vertical-tab-nav-item {
+    font-size: var(--f-s-ui);
+    line-height: calc(var(--f-s-ui) + 10px);
+}
+
+
+/*Resize: Note*/
+.resize .view-header {
+    height: calc(var(--f-s-nt) + 20px);
+}
+.resize .view-header-title,
+.resize .view-header-title-container {
+    font-size: var(--f-s-nt);
+    line-height: calc(var(--f-s-nt) + 20px);
+}
+.resize .view-header-icon svg,
+.resize .view-action svg {
+    height: var(--f-s-nt);
+    width: var(--f-s-nt);
+}
+
+/*Resize: Sidebars*/
+/*Left Panes*/
+.resize .nav-file-title,
+.resize .nav-folder-title {
+    line-height: calc(var(--f-s-sb) + 2px);
+    font-size: calc(var(--f-s-sb) - 2px);
+}
+.resize .nav-folder-children .nav-folder-title-content::before {
+    font-size: calc(var(--f-s-sb) - 3px);
+}
+.resize .nav-folder-children .nav-file-title-content::before {
+    font-size: calc(var(--f-s-sb) - 3px);
+}
+.resize .nav-file-title-content {
+    line-height: calc(var(--f-s-sb) + 4px);
+}
+
+/*Right Panes*/
+.resize .view-content,
+.resize .view-content > .tree-item-self,
+.resize .view-content .pane-empty,
+.resize .tag-pane-tag-text,
+.resize .view-content > .search-results-children,
+.resize .view-content > .search-empty-state,
+.resize .view-content > .search-result-file-matches,
+.resize .workspace-tabs .tree-item-self,
+.resize .workspace-tabs .search-result-file-matches {
+    font-size: calc(var(--f-s-sb) - 2px);
+    line-height: calc(var(--f-s-sb) + 8px);
+}
+.resize .workspace-leaf-content .tree-item-flair {
+    font-size: calc(var(--f-s-sb) - 5px);
+}
+
+
+/*Mobile: Resize*/
+.is-mobile.resize .nav-file-title,
+.is-mobile.resize .nav-folder-title,
+.is-mobile.resize .outline,
+.is-mobile.resize .tag-container,
+.is-mobile.resize .nav-folder-title-content,
+.is-mobile.resize .nav-file-title-content {
+    font-size: var(--f-s-sb) !important;
+    line-height: calc(var(--f-s-sb) + 10px);
+}
+.is-mobile.resize  .view-header-title {
+    font-size: calc(var(--f-s-nt) + 4px);
+    line-height: calc(var(--f-s-nt) + 30px);
+}
+.is-mobile.resize .view-header-icon svg,
+.is-mobile.resize .view-action svg {
+    height: calc(var(--f-s-nt) + 4px);
+    width: calc(var(--f-s-nt) + 4px);
+}
+.is-mobile.resize .view-header-icon {
+    padding: calc(var(--f-s-nt) - 5px) 10px;
+}
+.is-mobile.resize .view-actions {
+    padding: calc(var(--f-s-nt) - 24px) 10px;
+}
+.is-mobile.resize .view-header {
+    height: calc(var(--f-s-nt) + 30px);
+}

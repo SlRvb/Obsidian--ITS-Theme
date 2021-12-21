@@ -1,0 +1,181 @@
+
+/*----Mobile----*/
+@media (max-width: 500px) {
+    
+    .theme-dark, .theme-light {
+        /*Mobile Sizes*/
+        --radius: 0px;
+
+        --micro: 70px;
+        --tiny: 100px;
+        --small: 150px;
+        --small-med: 200px;
+        --med-small: 250px;
+        --medium: 300px;
+        --med-tall: 450px;
+        --tall: 500px;
+    }
+    /*Popover Hover Fits Mobile Screen*/
+    .popover.hover-popover.is-loaded {
+        width:100%;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .aside-hide:hover {
+        width: 100%;
+    }
+    .modal.mod-settings {
+        width: 100%;
+        min-width: 300px;
+    }
+}
+
+/*Minimize Sidebar Spacing*/
+.workspace-drawer-header-info {
+    margin: 0;
+}
+.workspace-drawer-active-tab-header {
+    margin: 1em 0 0 0;
+}
+.workspace-drawer-ribbon {
+    background-color: var(--outer-bar);
+}
+
+.workspace-drawer.mod-left,
+.workspace-drawer.mod-right {
+    border: none;
+}
+
+.is-mobile .status-bar {
+    display: none;
+}
+/*Unset Mobile Changes*/
+.is-mobile .modal.mod-settings {
+    width: calc(100% - 20px);
+    height: 70vh;
+}
+
+/*Mobile: Square UI*/
+.is-mobile .modal,
+.is-mobile .workspace, 
+.is-mobile .prompt,
+.is-mobile .suggestion-item {
+    border-radius: var(--radius) !important;
+}
+
+/*Fix Slider*/
+.is-mobile .setting-item.mod-slider .setting-item-control {
+    margin-top: .5em !important;
+    margin-bottom: 1em;
+}
+
+/*Wrap Nav and Search Buttons*/
+.is-mobile .workspace-drawer-actions,
+.is-mobile .nav-buttons-container {
+    flex-wrap: wrap;
+}
+
+
+/*Hide Vault Title*/
+.is-mobile .nav-folder.mod-root > .nav-file-title,
+.is-mobile .nav-folder.mod-root > .nav-folder-title {
+    display: none;
+}
+/*Fix Outline Spacing*/
+.is-mobile .outline {
+    margin: 0 -.2em;
+}
+.is-mobile .view-content {
+    height: calc(100% - .5em);
+}
+
+/*Mobile Fold*/
+.is-mobile .cm-foldPlaceholder {
+    background-color: var(--note);
+    border: 0;
+    color: var(--lite-accent);
+}
+
+/*Kanban Mobile*/
+.is-mobile .kanban ul, 
+.is-mobile .kanban ol,
+.is-mobile ul.kanban, 
+.is-mobile ol.kanban {
+    padding-inline-start: 0;
+}
+
+
+/*Style Settings Mobile Fix*/
+.is-mobile .style-settings-container > .style-settings-heading {
+    margin-left: 1em;
+}
+.is-mobile .style-settings-heading + .style-settings-container {
+    padding-left: 0;
+    border: none;
+}
+.is-mobile .style-settings-container .setting-item-control .pcr-button {
+    width: 2em;
+}
+
+/*Mobile: Resize*/
+.is-mobile .nav-file-title,
+.is-mobile .nav-folder-title,
+.is-mobile .outline,
+.is-mobile .tag-container,
+.is-mobile .nav-folder-title-content,
+.is-mobile .nav-file-title-content {
+    font-size: var(--f-s-sb) !important;
+    line-height: calc(var(--f-s-sb) + 10px);
+}
+.is-mobile .view-header-title {
+    font-size: calc(var(--f-s-nt) + 5px);
+    line-height: calc(var(--f-s-nt) + 36px);
+}
+.is-mobile .view-header-icon svg,
+.is-mobile .view-action svg {
+    height: calc(var(--f-s-nt) + 4px);
+    width: calc(var(--f-s-nt) + 4px);
+}
+.is-mobile .view-header-icon {
+    padding: 14px 10px;
+}
+
+
+/*Mobile: Toolbar Recolor*/
+.mobile-toolbar {
+    border: 0;
+}
+.theme-dark .mobile-toolbar {
+    background-color: var(--deep-dark-accent);
+}
+.theme-light .mobile-toolbar {
+    background-color: var(--dark-accent);
+}
+
+
+/*--Device Sizes--*/
+@media (max-width: 1500px) {
+    .modal.mod-settings {
+        width: 80%;
+    }
+    
+    .style-settings-heading + .style-settings-container {
+        padding-left: 25px !important;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    .modal.mod-settings {
+        width: 100%;
+    }
+    .modal.mod-settings .vertical-tab-header {
+        flex: 0 0 150px;
+    }
+    .style-settings-heading + .style-settings-container {
+        padding-left: 0 !important;
+        border: none !important;
+    }
+}

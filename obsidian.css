@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* @settings
 name: In The Shadows Settings
 id: ITS
@@ -564,8 +565,8 @@ settings:
         id: fhvr
         type: class-toggle
     -
-        title: Raise Right Sidebar
-        description: Raise the right sidebar if the status bar is covering part of it.
+        title: Raise Right Sidebar & Doc Search
+        description: Raise the right sidebar and the document search modal if the status bar is covering part of it.
         id: rsb-up
         type: class-toggle
     -
@@ -6760,6 +6761,7 @@ input[type=number]:hover {
   z-index: 0;
 }
 
+/*Note Search*/
 .document-search-container {
   background-color: var(--dark-sidebar);
 }
@@ -8200,9 +8202,14 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   background: var(--dark-accent);
 }
 
-/*Move Right Sidebar Up*/
+/*Move/Raise Right Sidebar Up*/
 .rsb-up .mod-right-split .workspace-leaf-content {
   padding-bottom: 22px;
+}
+
+.rsb-up .document-search-container, .rsb-up .document-search-container.mod-replace-mode {
+  padding-bottom: 20px;
+  height: fit-content;
 }
 
 /*Folder Hover Arrow*/

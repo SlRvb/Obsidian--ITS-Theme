@@ -28,17 +28,18 @@ input[type='number']:hover {
     background-color: var(--bg);
     z-index: 0;
 }
+/*Note Search*/
 .document-search-container {
     background-color: var(--dark-sidebar);
 }
 .document-search-button {
     color: var(--text-normal);
 }
-
 .document-search-button:hover {
     background-color: var(--interactive-accent);
     color: var(--text-dl);
 }
+
 /*Search Downdown*/
 .suggestion { 
     overflow-x: none;

@@ -1,4 +1,4 @@
-//Settings
+//---Settings
 @use 'Style Settings' as StSe;
 @use 'Fonts';
 @use 'Font - Icon' as FI;
@@ -7,7 +7,7 @@
 @use 'Icons';
 
 
-//Theme
+//---Theme
 @use 'Variables - Colors' as VC;
 @use 'Settings';
 @use 'Scrollbars';
@@ -30,7 +30,8 @@
 @use 'Footnotes';
 
 
-//SlRvb Custom CSS
+//---Custom CSS
+//-SlRvb
 @use 'Custom CSS/CCSS-SlRvb - Mini Snippets' as S-MS;
 @use 'Custom CSS/CCSS-SlRvb - Image Adjustments' as S-IA;
 @use 'Custom CSS/CCSS-SlRvb - Embed Adjustments' as S-EA;
@@ -38,17 +39,25 @@
 @use 'Custom CSS/CCSS-SlRvb - I' as S-I;
 @use 'Custom CSS/CCSS-SlRvb - Headings' as S-H;
 @use 'Custom CSS/CCSS-SlRvb - Kanban' as S-K;
+
+//-Alernate Checkboxes
+@use '../Alternate Checkboxes/Colors' as S-ACC;
+@use '../Alternate Checkboxes/Default Checkbox' as S-ACCHK;
 @use 'Custom CSS/CCSS-SlRvb - Alternate Checkboxes' as S-AC;
+@use '../Alternate Checkboxes/Checkbox Types' as AC-CT;
+
+//-
 @use 'Custom CSS/CCSS-SlRvb - Resize' as S-R;
 @use 'Custom CSS/CCSS-SlRvb - Side Panel Note Adjustments' as S-SP;
 @use 'Custom CSS/CCSS-SlRvb - Asides' as S-A;
 @use 'Custom CSS/CCSS-SlRvb - Blockquotes' as S-BQ;
-//Other's Custom CSS
+//-Other's Custom CSS
 @use 'Custom CSS/CCSS-Kepano - Image Zoom' as imgZoom;
+//---
 
 
-//Plugins
-//Core
+//---Plugins
+//-Core
 @use 'Plugin Core/P-Core - Outline' as plc-O;
 @use 'Plugin Core/P-Core - Tags' as plc-T;
 @use 'Plugin Core/P-Core - Search' as plc-Se;
@@ -59,7 +68,7 @@
 @use 'Plugin Core/P-Core - Mermaid' as plc-M;
 @use 'Plugin Core/P-Core - Copy Codeblock' as plc-CCB;
 //@use 'Plugin Core/P-Core - Quick Switcher' as plc-QS;
-//Third Party Plugins
+//-Third Party Plugins
 @use 'Plugin Third Party/P-TP - Breadcrumbs' as ptp-bc;
 @use 'Plugin Third Party/P-TP - Button' as ptp-bttn;
 @use 'Plugin Third Party/P-TP - Checklist Plugin' as ptp-chlst;
@@ -83,7 +92,7 @@
 @use 'Plugin Third Party/P-TP - Timeline -- Darakah' as ptp-tld;
 //@use 'Plugin Third Party/P-TP - Templater' as ptp-t;
 
-//CSS Class Toggles
+//---CSS Class Toggles
 @use 'CSS Class Toggles/CT - Mini Toggles' as S-MT;
 @use 'CSS Class Toggles/CT-Spec - Heading Adjustments' as S-SHA;
 @use 'CSS Class Toggles/CT-Spec - Heading Underline' as S-HU;
@@ -103,5 +112,5 @@
 @use 'CSS Class Toggles/CT-Lists - Original Bullet Lines' as S-OBL;
 
 
-//Other
+//---Other
 @use 'Export';

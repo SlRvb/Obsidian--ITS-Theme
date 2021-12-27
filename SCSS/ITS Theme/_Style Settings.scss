@@ -867,6 +867,84 @@ settings:
         description: Alternate style to differentiate lists sublevels in edit mode on cm6.
         id: alt-ind
         type: class-toggle
+    -
+        title: Checkbox Strike Specific
+        id: Checkbox-Strike-Specific
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        title: "[x] Regular"
+        id: chst-reg
+        type: class-toggle
+    -
+        title: "[X] Checked"
+        id: chst-chk
+        type: class-toggle
+    -
+        title: "[-] Dropped"
+        id: chst-drop
+        type: class-toggle
+    -
+        title: "[>] Forward"
+        id: chst-frwd
+        type: class-toggle
+    -
+        title: "[D] Defer"
+        id: chst-defr
+        type: class-toggle
+    -
+        title: "[?] Question"
+        id: chst-q
+        type: class-toggle
+    -
+        title: "[/] Half"
+        id: chst-half
+        type: class-toggle
+    -
+        title: "[+] Add"
+        id: chst-add
+        type: class-toggle
+    -
+        title: "[R] Research"
+        id: chst-rsrch
+        type: class-toggle
+    -
+        title: "[!] Important"
+        id: chst-imp
+        type: class-toggle
+    -
+        title: "[i] Idea"
+        id: chst-idea
+        type: class-toggle
+    -
+        title: "[B] Brainstorm"
+        id: chst-brn
+        type: class-toggle
+    -
+        title: "[P] Pro"
+        id: chst-pro
+        type: class-toggle
+    -
+        title: "[C] Con"
+        id: chst-con
+        type: class-toggle
+    -
+        title: "[Q] Quote"
+        id: chst-quot
+        type: class-toggle
+    -
+        title: "[N] Note"
+        id: chst-brn
+        type: class-toggle
+    -
+        title: "[b] Bookmark"
+        id: chst-book
+        type: class-toggle
+    -
+        title: "[I] info"
+        id: chst-info
+        type: class-toggle
 	-
 		title: Colorful Lists
 		id: Bullet-Line-Color

@@ -30,28 +30,20 @@
         position: absolute;
     }
 
-    & h1:before,
-    & h2:before,
-    & h3:before,
-    & h4:before,
-    & h5:before,
-    & h6:before {
-        content: '';
-        height: 0;
-        margin-right: .3em;
-        flex: 1;
-    }
-
-    & h1:after,
-    & h2:after,
-    & h3:after,
-    & h4:after,
-    & h5:after,
-    & h6:after {
-        content: '';
-        height: 0px;
-        margin-left: .3em;
-        flex: 1;
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+        &:before,
+        &:after {
+            content: '';
+            height: 0;
+            flex: 1;
+        }
+        &:before { margin-right: .3em; }
+        &:after { margin-left: .3em; }
     }
 
     & h1:before,
@@ -151,4 +143,18 @@ body .illusion {
 }
 
 
+.is-live-preview .HyperMD-header {
+    &::before {
+        font-family: var(--font-monospace);
+        padding-right: 5px;
+        color: var(--footnote);
+        font-size: calc(var(--f-s-text) - 4px);
+    }
 
+    &.HyperMD-header-1::before { content: "H1"; }
+    &.HyperMD-header-2::before { content: "H2"; }
+    &.HyperMD-header-3::before { content: "H3"; }
+    &.HyperMD-header-4::before { content: "H4"; }
+    &.HyperMD-header-5::before { content: "H5"; }
+    &.HyperMD-header-6::before { content: "H6"; }
+} 

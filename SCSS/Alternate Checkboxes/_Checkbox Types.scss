@@ -1,0 +1,431 @@
+
+
+
+
+/*--Checkbox Type Icons--*/
+
+/* [X]: Checked: Checkmark */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="X"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="X"],
+.markdown-preview-view li[data-task="X"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="X"] p .task-list-item-checkbox:checked
+{ 
+    &::before {
+    color: var(--accent2-lite, var(--text-accent));
+    content: "\EC01"; 
+    }
+}
+/* [>]: Forward: SVG Plane */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=">"],
+.markdown-preview-view li[data-task=">"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=">"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: var(--text-normal);
+    content: "\EC03";
+    }
+}
+/* [D]: Deferred/Scheduled: Calendar */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="D"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="D"],
+.markdown-preview-view li[data-task="D"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="D"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-h));
+    content: "\EC04";
+    }
+}
+/* [-]: Cancelled/Non-Task: Line */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"],
+.markdown-preview-view li[data-task="-"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="-"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-d));
+    content: "\EC02";
+    }
+}
+/* [?]: Question: Question Mark */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"],
+.markdown-preview-view li[data-task="?"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="?"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-q));
+    content: "\EC05";
+    }
+}
+/* [!]: Important: Exclamation Mark */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"],
+.markdown-preview-view li[data-task="!"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="!"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-i));
+    content: "\EC08";
+    }
+}
+/* [+]: Add: Plus */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"],
+.markdown-preview-view li[data-task="+"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="+"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-a));
+    content: "\EC06";
+    }
+}
+/* [/]: Half Done: Right Triangle */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="/"],
+.markdown-preview-view li[data-task="/"] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="/"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: var(--accent, var(--interactive-accent));
+    content: "\EC17";
+    }
+}
+/* [R]: Research: Magnifying Glass */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="R"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="R"],
+.markdown-preview-view li[data-task="R"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="R"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-R));
+    content: "\EC07";
+    }
+}
+/* [i]: Idea: Lightbulb */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="i"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="i"],
+.markdown-preview-view li[data-task="i"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="i"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-id));
+    content: "\EC09";
+    }
+}
+/* [B]: Brainstorm: Bubbles */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="B"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="B"],
+.markdown-preview-view li[data-task="B"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="B"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-B));
+    content: "\EC10";
+    }
+}
+/* [P]: Pro: Thumbs Up */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="P"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="P"],
+.markdown-preview-view li[data-task="P"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="P"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-P));
+    content: "\EC11";
+    }
+}
+/* [C]: Con: Thumbs Down */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="C"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="C"],
+.markdown-preview-view li[data-task="C"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="C"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-C));
+    content: "\EC12";
+    }
+}
+/* [I]: Info: Italicized I */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="I"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="I"],
+.markdown-preview-view li[data-task="I"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="I"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-I));
+    content: "\EC16";
+    }
+}
+/* [Q]: Quote: Closing Quotation Mark */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="Q"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="Q"],
+.markdown-preview-view li[data-task="Q"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="Q"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-R));
+    content: "\EC13";
+    }
+}
+/* [N]: Note: Open Scroll */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="N"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="N"],
+.markdown-preview-view li[data-task="N"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="N"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-N));
+    content: "\EC14";
+    }
+}
+/* [b]: Bookmark: Bookmark Flag */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="b"],
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="b"],
+.markdown-preview-view li[data-task="b"]>.task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="b"] p .task-list-item-checkbox:checked
+{
+    &::before {
+    color: rgb(var(--chbx-b));
+    content: "\EC15";
+    }
+}
+
+
+
+
+
+/*--Checkbox Text Colors--*/
+.check-color {
+    //[X]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="X"],
+    &.check-color ul li[data-task="X"].task-list-item.is-checked
+    { color: var(--text-faint); }
+    
+    //[>]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task=">"],
+    &.check-color ul li[data-task=">"].task-list-item.is-checked 
+    { color: var(--text-normal); }
+    
+    //[D]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="D"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="D"],
+    &.check-color ul li[data-task="D"].task-list-item.is-checked 
+    { color: rgb(var(--chbx-h)); }
+    
+    //[-]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
+    & span[data-task="-"],
+    &.check-color ul li[data-task="-"].task-list-item.is-checked
+    { color: rgb(var(--chbx-d)); }
+
+    //[?]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="?"],
+    &.check-color ul li[data-task="?"].task-list-item.is-checked 
+    { color: rgb(var(--chbx-q)); }
+
+    //[!]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="!"],
+    &.check-color ul li[data-task="!"].task-list-item.is-checked 
+    { color: rgb(var(--chbx-i)); }
+
+    //[+]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="+"],
+    &.check-color ul li[data-task="+"].task-list-item.is-checked {
+        color: rgb(var(--chbx-a));
+    }
+
+    //[/]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="/"],
+    &.check-color ul li[data-task="/"].task-list-item.is-checked:not(::before) {
+        background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 10%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="/"] {
+        background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 80%);
+        -webkit-background-clip: text;
+    }
+
+    //[R]    
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="R"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="R"],
+    &.check-color ul li[data-task="R"].task-list-item.is-checked {
+        color: rgb(var(--chbx-R));
+    }
+
+    //[i]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="i"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="i"],
+    &.check-color ul li[data-task="i"].task-list-item.is-checked {
+        color: rgb(var(--chbx-id));
+    }
+
+    //[B]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="B"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="B"],
+    &.check-color ul li[data-task="B"].task-list-item.is-checked {
+        color: rgb(var(--chbx-B));
+    }
+
+    //[P]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="P"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="P"],
+    &.check-color ul li[data-task="P"].task-list-item.is-checked {
+        color: rgb(var(--chbx-P));
+    }
+
+    //[C]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="C"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="C"],
+    &.check-color ul li[data-task="C"].task-list-item.is-checked {
+        color: rgb(var(--chbx-C));
+    }
+
+    //[I]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="I"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="I"],
+    &.check-color ul li[data-task="I"].task-list-item.is-checked {
+        color: rgb(var(--chbx-I));
+    }
+
+    //[Q]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="Q"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="Q"],
+    &.check-color ul li[data-task="Q"].task-list-item.is-checked {
+        color: rgb(var(--chbx-R));
+    }
+
+    //[N]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="N"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="N"],
+    &.check-color ul li[data-task="N"].task-list-item.is-checked {
+        color: rgb(var(--chbx-N));
+    }
+    
+    //[b]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="b"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="b"],
+    &.check-color ul li[data-task="b"].task-list-item.is-checked {
+        color: rgb(var(--chbx-b));
+    }
+}
+
+
+
+
+
+/*--Checkbox Background--*/
+.check-bg {
+    //[X]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"],
+    & li[data-task="X"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-R));
+        background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
+    }
+    //[>]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
+    & li[data-task=">"].task-list-item.is-checked {
+        border-left: 2px double rgb(var(--chbx-h));
+        background: rgba(var(--chbx-h), 20%); 
+    }
+    //[D]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="D"],
+    & li[data-task="D"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-h));
+        background: rgba(var(--chbx-h), 20%); 
+    }
+    //[-]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
+    & li[data-task="-"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-d));
+        background: rgba(var(--chbx-d), 20%); 
+    }
+    //[?]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
+    & li[data-task="?"].task-list-item.is-checked {
+        border-left: 2px dashed rgb(var(--chbx-q));
+        background: rgba(var(--chbx-q), 20%); /*#fac35d17*/
+    }
+    //[!]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
+    & li[data-task="!"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-i));
+        background: rgba(var(--chbx-i), 20%); 
+    }
+    //[+]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
+    & li[data-task="+"].task-list-item.is-checked {
+        border-left: 2px dashed rgb(var(--chbx-a));
+        background: rgba(var(--chbx-a), 20%); 
+    }
+    //[/]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
+    & li[data-task="/"].task-list-item.is-checked {
+        border-left: 2px dashed rgb(var(--chbx-R));
+        background: linear-gradient(to left, var(--accent, var(--interactive-accent)) 0%,transparent 1%);
+    }
+    //[R]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="R"],
+    & li[data-task="R"].task-list-item.is-checked {
+        border-left: 2px dashed rgb(var(--chbx-R));
+        background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
+    }
+    //[i]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="i"],
+    & li[data-task="i"].task-list-item.is-checked {
+        border-left: 2px dashed rgb(var(--chbx-id));
+        background: rgba(var(--chbx-id), 20%); 
+    }
+    //[B]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="B"],
+    & li[data-task="B"].task-list-item.is-checked {
+        border-left: 2px double rgb(var(--chbx-B));
+        background: rgba(var(--chbx-B), 20%); /*#945dfa25*/
+    }
+    //[P]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="P"],
+    & li[data-task="P"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-P));
+        background: rgba(var(--chbx-P), 20%); 
+    }
+    //[C]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="C"],
+    & li[data-task="C"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-C));
+        background: rgba(var(--chbx-C), 20%); 
+    }
+    //[I]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="I"],
+    & li[data-task="I"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-I));
+        background: rgba(var(--chbx-I), 20%); 
+    }
+    //[Q]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="Q"],
+    & li[data-task="Q"].task-list-item.is-checked {
+        border-left:  2px solid rgb(var(--chbx-R));
+        border-right: 2px solid rgb(var(--chbx-R));
+        background: rgba(var(--chbx-R), 20%);
+    }
+    //[N]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="N"],
+    & li[data-task="N"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-N));
+        background: rgba(var(--chbx-N), 20%); 
+    }
+    //[b]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="b"],
+    & li[data-task="b"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-b));
+        background: rgba(var(--chbx-b), 20%); 
+    }
+}

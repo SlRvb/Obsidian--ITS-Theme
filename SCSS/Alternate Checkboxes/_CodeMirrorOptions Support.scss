@@ -1,0 +1,19 @@
+
+/*CodeMirrorOptions Plugin Support*/
+body.theme-dark.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task,
+body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task { filter: unset; }
+
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task::before {
+    position: absolute;
+    content: " ";
+    font-family: var(--its);
+    border: 1px solid var(--accent, var(--interactive-accent));
+    height: .9em;
+    width: .9em;
+    margin-top: var(--chbx-ed-height);
+    margin-left: 4px;
+    border-radius: 50%;
+}
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="x"]::before { 
+    background: var(--accent, var(--interactive-accent)); 
+}

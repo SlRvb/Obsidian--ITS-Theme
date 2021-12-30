@@ -88,7 +88,10 @@ img[src*="#ctr"], img[src*="#center"]
 img,
 .image-embed {
     &[alt*="left"],
-    &[src*="#left"] {
+    &[src*="#left"],
+    &[alt*="locl"],
+    &[src*="#locl"] img 
+    {
         float:left;
         margin-right: 2%;
         margin-top: 0px;
@@ -96,7 +99,10 @@ img,
     }
 
     &[alt*="right"],
-    &[src*="#right"] {
+    &[src*="#right"],
+    &[alt*="locr"],
+    &[src*="#locr"] img 
+    {
         float:right;
         margin-left: 2%;
         margin-bottom: 0px;
@@ -362,23 +368,6 @@ img[alt*="p+bcc"],
 .image-embed[src*="#p+bcc"] img{
     object-fit: cover;
     object-position: 50% 90%;
-}
-
-/*Image Locations*/
-img[alt*="locl"],
-.image-embed[src*="#locl"] img {
-    float:left;
-    margin-right: 2%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-img[alt*="locr"],
-.image-embed[src*="#locr"] img {
-    float:right;
-    margin-left: 2%;
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 

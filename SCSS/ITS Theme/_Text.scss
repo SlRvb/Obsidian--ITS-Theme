@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 .markdown-preview-view h4,
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
-    margin: var(--head-h) 0 !important;
+    margin: var(--head-h) 0;
     line-height: calc(var(--lh) - .3em) !important;
 }
 

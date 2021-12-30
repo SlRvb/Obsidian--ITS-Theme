@@ -51,12 +51,13 @@ ul, ol {
     text-indent: calc(var(--f-s-nt) * -1.6);
 }
 /*Checkbox: Fix Spaced Checkboxes*/
-.markdown-preview-view ul li.task-list-item > p { text-indent: -25px; }
-.markdown-preview-view ul > li.task-list-item {
-    padding-left: 5px;
-}
+.markdown-preview-view ul li.task-list-item > p 
+{ text-indent: -25px; }
+.markdown-preview-view ul > li.task-list-item 
+{ padding-left: 5px; }
 /*Checkbox: Fix Tags On Space Checkbox*/
-.markdown-preview-view ul li.task-list-item > p > a { text-indent: 0px; }
+.markdown-preview-view ul li.task-list-item > p > a 
+{ text-indent: 0px; }
 
 /*Fix breaking when Space in between Lists*/
 ul li.task-list-item > p {
@@ -68,22 +69,23 @@ ul li > p {
 
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
-.list-bullet::before,
+.markdown-source-view.mod-cm6 .list-bullet::after,
 .cm-s-obsidian span.cm-formatting-list-ul::before,
 .cm-s-obsidian span.cm-formatting-list-ol {
     color: var(--soft-text);
 }
 /*Live Preview List Adjustment*/
-.list-bullet::before,
+.markdown-source-view.mod-cm6 .list-bullet::after,
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
     content: var(--bullet);
     font-family: var(--bul-f);
     padding-left: 4px; 
     margin-right: -10px;
 }
-.list-bullet::before {    
-    padding: 0;
-    margin-right: -8px;
+.markdown-source-view.mod-cm6 .list-bullet::after
+{ padding-left: 0; margin-right: 0; }
+.markdown-source-view.mod-cm6 .list-bullet {
+    padding-right: 10px;
 }
 
 

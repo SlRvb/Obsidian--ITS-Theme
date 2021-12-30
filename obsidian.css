@@ -8033,10 +8033,6 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
 }
 
 /*Plugin: Fantasy Calendar*/
-.workspace-leaf-content[data-type=FANTASY_CALENDAR] .view-content {
-  padding: 10px;
-}
-
 /*Block Reference*/
 body .block-ref-count:hover {
   color: var(--text-dl);
@@ -8468,6 +8464,72 @@ body .encounter-instance ul li:not(:hover) .xp-parent.xp-parent.xp-parent {
 
 .h-pcs .encounter-players {
   display: none;
+}
+
+/*Plugin: Fantasy Calendar*/
+.workspace-leaf-content[data-type=FANTASY_CALENDAR] .view-content {
+  padding: 10px;
+}
+
+textarea,
+body .fantasy-calendar-element details[open],
+body .fantasy-calendar-create-calendar details[open],
+body .fantasy-day.day {
+  border-radius: var(--radius);
+}
+
+.fantasy-day.day.active {
+  background-color: var(--bttn);
+  color: var(--text-dl);
+}
+.fantasy-day.day.viewing {
+  border: none;
+  background-color: var(--lite-accent);
+  color: var(--text-dl);
+}
+.fantasy-day.day.viewing .dots-container {
+  padding: 2px;
+}
+
+:not(.dnd):not(.wotc) h3.fantasy-title::after {
+  display: none;
+}
+
+.fantasy-calendar-create-calendar .modal {
+  padding: 20px;
+  min-width: 70vw;
+}
+.fantasy-calendar-create-calendar .modal-content {
+  padding: 0 30px;
+}
+.fantasy-calendar-create-calendar h3 {
+  font-size: var(--f-s-h);
+  text-align: center;
+  margin: 10px 0;
+}
+.fantasy-calendar-create-calendar h3::after {
+  width: 100%;
+  margin-top: 10px;
+}
+
+body .fantasy-calendar-date-fields {
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 30px;
+}
+
+body .fantasy-calendar-element details[open],
+body .fantasy-calendar-create-calendar details[open] {
+  margin: 10px 0;
+  border: 2px solid var(--outline);
+  box-shadow: 4px 4px 0 var(--outline);
+}
+
+.fantasy-calendar-container .event {
+  padding: 10px;
+}
+.fantasy-calendar-container .event:nth-child(even) {
+  box-shadow: 0 0 10px var(--outline);
 }
 
 /*Hide Vault Title*/

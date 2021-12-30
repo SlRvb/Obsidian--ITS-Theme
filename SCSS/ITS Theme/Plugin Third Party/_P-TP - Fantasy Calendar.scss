@@ -1,0 +1,72 @@
+/*Plugin: Fantasy Calendar*/
+.workspace-leaf-content[data-type="FANTASY_CALENDAR"] .view-content { padding: 10px; }
+
+//Square
+textarea,
+body .fantasy-calendar-element details[open],
+body .fantasy-calendar-create-calendar details[open],
+body .fantasy-day.day { border-radius: var(--radius); }
+
+//Day Restyled
+.fantasy-day.day{
+    &.active { 
+        background-color: var(--bttn); 
+        color: var(--text-dl);
+    }
+
+    &.viewing {
+        border: none;
+        background-color: var(--lite-accent);
+        color: var(--text-dl);
+    }
+    //Dot BG
+    &.viewing .dots-container { padding: 2px; }
+}
+//Hide Heading Line
+:not(.dnd):not(.wotc) h3.fantasy-title::after { display: none; }
+
+//Settings
+.fantasy-calendar-create-calendar {
+    //Modal Width
+    & .modal {
+        padding: 20px;
+        min-width: 70vw;
+    }
+    //Modal Padding
+    & .modal-content { padding: 0 30px; }
+    
+    //Settings Title
+    & h3 { 
+        font-size: var(--f-s-h); 
+        text-align: center; 
+        margin: 10px 0; 
+       
+        &::after {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+//Basic Info Current Date
+body .fantasy-calendar-date-fields {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 30px;
+}
+//Modal Setting Elements
+body .fantasy-calendar-element details[open],
+body .fantasy-calendar-create-calendar details[open] {
+    margin: 10px 0;
+    border: 2px solid var(--outline);
+    box-shadow: 4px 4px 0 var(--outline);
+}
+
+//Events
+.fantasy-calendar-container .event {
+    padding: 10px;
+    
+    &:nth-child(even) {
+        box-shadow: 0 0 10px var(--outline);
+    }
+}

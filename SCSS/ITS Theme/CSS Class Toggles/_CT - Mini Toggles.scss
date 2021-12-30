@@ -36,10 +36,11 @@
 }
 
 /*Move/Raise Right Sidebar Up*/
-.rsb-up .mod-right-split .workspace-leaf-content {
-    padding-bottom: 22px;
-}
 .rsb-up {
+    & .mod-right-split .workspace-leaf-content {
+        padding-bottom: 22px;
+    }
+    
     & .document-search-container,
     & .document-search-container.mod-replace-mode {
         padding-bottom: 20px;

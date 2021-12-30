@@ -1,0 +1,77 @@
+/* RAINBOW INDENT COLORS */
+:root,
+.theme-dark,
+.theme-light {
+    --rb-indent-width: 1.13em; /*Bullet Spacing*/
+
+    --rb-color-count: 8;
+    --rb-indent-1: var(--sphd-pre-1); /*#6854c1*/
+    --rb-indent-2: var(--sphd-pre-2); /*#c724b1*/
+    --rb-indent-3: var(--sphd-pre-3); /*#ff6900*/
+    --rb-indent-4: var(--sphd-pre-4); /*#f6be00*/
+    --rb-indent-5: var(--sphd-pre-5); /*#e4002b*/
+    --rb-indent-6: var(--sphd-ed-1);  /*#97d700*/
+    --rb-indent-7: var(--sphd-ed-2);  /*#00ab84*/
+    --rb-indent-8: var(--sphd-ed-3);  /*#00a3e0*/
+}
+.theme-dark.bul-li-col,
+.theme-light.bul-li-col {
+    --rb-indent-1: var(--b-l-1);
+    --rb-indent-2: var(--b-l-2);
+    --rb-indent-3: var(--b-l-3);
+    --rb-indent-4: var(--b-l-4);
+    --rb-indent-5: var(--b-l-5);
+    --rb-indent-6: var(--b-l-6);
+    --rb-indent-7: var(--b-l-5); 
+    --rb-indent-8: var(--b-l-4); 
+}
+
+.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
+    padding-left: 0;
+}
+
+.HyperMD-list-line.cm-line,
+.mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
+    overflow: hidden;
+}
+.HyperMD-list-line.cm-line .cm-hmd-list-indent,
+.mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+    position: relative;
+}
+.HyperMD-list-line.cm-line .cm-hmd-list-indent::before,
+.mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -1.6em;
+    padding-bottom: 999em;
+
+    /*Line Colors*/
+    background-image: linear-gradient(
+        to right,
+        var(--rb-indent-1) 0 var(--b-line),
+        transparent var(--b-line) calc(1 * var(--rb-indent-width)),
+        var(--rb-indent-2) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--b-line)),
+        transparent calc(1 * var(--rb-indent-width) + var(--b-line)) calc(2 * var(--rb-indent-width)),
+        var(--rb-indent-3) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--b-line)),
+        transparent calc(2 * var(--rb-indent-width) + var(--b-line)) calc(3 * var(--rb-indent-width)),
+        var(--rb-indent-4) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--b-line)),
+        transparent calc(3 * var(--rb-indent-width) + var(--b-line)) calc(4 * var(--rb-indent-width)),
+        var(--rb-indent-5) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--b-line)),
+        transparent calc(4 * var(--rb-indent-width) + var(--b-line)) calc(5 * var(--rb-indent-width)),
+        var(--rb-indent-6) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--b-line)),
+        transparent calc(5 * var(--rb-indent-width) + var(--b-line)) calc(6 * var(--rb-indent-width)),
+        var(--rb-indent-7) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--b-line)),
+        transparent calc(6 * var(--rb-indent-width) + var(--b-line)) calc(7 * var(--rb-indent-width)),
+        var(--rb-indent-8) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--b-line)),
+        transparent calc(7 * var(--rb-indent-width) + var(--b-line)) calc(8 * var(--rb-indent-width))
+    );
+
+    /*Line Width?
+    background-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
+    */
+    
+    /*Line Offset*/
+    left: 7px;
+}

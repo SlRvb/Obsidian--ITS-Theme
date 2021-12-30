@@ -813,27 +813,6 @@ settings:
         level: 3
         collapsed: true
     - 
-        title: Colorful Task Text
-        description: Add color to the text of the task.
-        id: check-color
-        type: class-toggle
-        default: true
-    - 
-        title: Colorful Task Backgrounds
-        description: Add color to the background of the task.
-        id: check-bg
-        type: class-toggle
-        default: true
-    - 
-        title: Normal Task Text
-        description: Reapply regular text color to the text of the task.
-        id: check-text
-        type: class-toggle
-    -
-        title: Restore Crossed Checkbox
-        id: chkbx-strike
-        type: class-toggle
-    - 
         title: Default Bullet Disc Shape
         id: def-bull
         type: class-toggle
@@ -863,15 +842,51 @@ settings:
         max: 3
         step: 1
     -
+        title: Murf's Rainbow Line Spacing
+		id: rb-indent-width
+		type: variable-number-slider
+        default: 1.13
+        format: em
+        min: 1
+        max: 2
+        step: .01
+    -
         title: Live Preview Alternate Indent Style
         description: Alternate style to differentiate lists sublevels in edit mode on cm6.
         id: alt-ind
         type: class-toggle
     -
+        title: Checkboxes
+        id: Checkboxes
+        type: heading
+        level: 4
+        collapsed: true
+    - 
+        title: Colorful Task Text
+        description: Add color to the text of the task.
+        id: check-color
+        type: class-toggle
+        default: true
+    - 
+        title: Colorful Task Backgrounds
+        description: Add color to the background of the task.
+        id: check-bg
+        type: class-toggle
+        default: true
+    - 
+        title: Normal Task Text
+        description: Reapply regular text color to the text of the task.
+        id: check-text
+        type: class-toggle
+    -
+        title: Restore Checkbox Strike
+        id: chkbx-strike
+        type: class-toggle
+    -
         title: Checkbox Strike Specific
         id: Checkbox-Strike-Specific
         type: heading
-        level: 4
+        level: 5
         collapsed: true
     -
         title: "[x] Regular"

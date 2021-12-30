@@ -7296,6 +7296,53 @@ h3.breadcrumbs-matrix-header:after {
   display: none;
 }
 
+/* Side Panel */
+div.BC-Matrix > div {
+  border: 0 !important;
+  box-shadow: -4px 4px 0 var(--outline);
+}
+
+div.BC-Matrix-square {
+  border: 3px solid var(--outline) !important;
+}
+div.BC-Matrix-square ol {
+  text-align: left;
+}
+div.BC-Matrix-square > .BC-Matrix-headers + .BC-Matrix-headers {
+  display: none !important;
+}
+
+/*Banner + Breadcrumbs Trail Fixes*/
+body .markdown-preview-view:not(.is-live-preview).bc-ban .markdown-preview-section.BC-trail {
+  margin-top: 200px !important;
+}
+
+/*Remove Banner Margins If Breadcrumbs Trail is near*/
+.BC-trail + div > .obsidian-banner-wrapper {
+  margin: 0;
+}
+
+/*Trail*/
+body .BC-trail {
+  padding: 0;
+  border: 2px solid var(--outline);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0px var(--outline);
+  background-color: var(--note);
+  justify-content: center;
+  text-align: center;
+}
+body .BC-trail div.BC-trail-grid, body .BC-trail div.BC-trail-grid-item {
+  border: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+body .BC-trail div.BC-trail-grid-item {
+  margin: 5px;
+  background-color: var(--outer-bar);
+  text-align: center;
+}
+
 /*Button Plugin*/
 .button-default {
   border-radius: var(--radius) !important;
@@ -7896,6 +7943,10 @@ body .dataview.inline-field-value a.tag:first-child {
   line-height: 14px !important;
 }
 
+body .kanban-plugin__item-tags .kanban-plugin__item-tag {
+  border-radius: var(--radius);
+}
+
 /*Card: Link Styling*/
 .kbn .kanban-plugin__item .markdown-preview-view a.internal-link {
   font-weight: 600;
@@ -7981,6 +8032,12 @@ body .block-ref-count:hover {
 /*AidenLX Folder Fix*/
 .nav-folder.nav-folder.alx-folder-with-note .nav-folder-title-content {
   width: unset;
+}
+
+/*Plugin: Link Favicons*/
+object.link-favicon {
+  height: inherit !important;
+  margin-right: 5px;
 }
 
 body.mtb.AT-multirow .mobile-toolbar-options-container {
@@ -8263,7 +8320,124 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   border-color: transparent var(--background-secondary-alt) transparent transparent !important;
 }
 
+/*Plugin: Initiative Tracker*/
+/*Difficulty Rating*/
+body .obsidian-initiative-tracker span meter.difficulty-bar.difficulty-bar {
+  border: 0;
+  border-radius: var(--radius);
+}
 
+body .obsidian-initiative-tracker span ::-webkit-meter-bar {
+  background-color: var(--outer-bar);
+  border: 1px var(--accent2);
+  border-radius: var(--radius);
+}
+
+/*Encounters*/
+body .encounter-container > .encounter-instance {
+  margin: 5px;
+  padding: 15px;
+  border: 2px solid var(--outline, var(--background-modifier-box-shadow));
+  box-shadow: 4px 4px 0px var(--outline, var(--background-modifier-box-shadow));
+  border-radius: var(--radius, 0.5em);
+}
+
+body .block-language-encounter .encounter-container {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+body .block-language-encounter .encounter-name.encounter-name {
+  display: block;
+}
+
+body .encounter-instance .encounter-name h3 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: -5px !important;
+}
+body .encounter-instance .encounter-name h3::after {
+  content: "";
+  display: block;
+  background: linear-gradient(to right, var(--interactive-accent), transparent);
+  height: 4px;
+}
+body .encounter-instance .encounter-creatures h4 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--text, var(--text-normal));
+  font-family: var(--default-font);
+  font-weight: bold;
+}
+body .encounter-instance .encounter-creatures h4:after {
+  display: none;
+}
+body .encounter-instance .setting-editor-extra-setting-button.clickable-icon {
+  float: right;
+  margin-right: -5px;
+  right: 0;
+}
+body .encounter-instance ul {
+  margin-left: -25px;
+}
+body .encounter-instance ul li.creature-li.creature-li {
+  width: unset;
+}
+body .encounter-instance ul li::before {
+  display: none;
+}
+body .encounter-instance ul li:nth-child(even) {
+  background: var(--aside-bg, var(--background-modifier-box-shadow));
+}
+body .encounter-instance .dice-roller-result {
+  font-family: var(--font-monospace);
+  color: var(--lite-accent);
+}
+body .encounter-instance .dice-roller-button {
+  color: var(--text-faint);
+  vertical-align: -2px;
+  margin-right: -5px;
+}
+body .encounter-instance .encounter-xp, body .encounter-instance .xp-parent {
+  color: var(--h2, var(--interactive-accent));
+  font-weight: bold;
+  margin: 0;
+}
+body .encounter-instance .xp-parent:after {
+  content: "\f102";
+  /*"\e4fb" f753*/
+  font-family: var(--fa5);
+  color: var(--h2, var(--interactive-accent));
+  font-weight: 10 !important;
+  padding-left: 5px;
+}
+body .encounter-instance .xp-parent .paren.left, body .encounter-instance .xp-parent .paren.right, body .encounter-instance .xp.text {
+  display: none;
+}
+body .encounter-instance ul li:not(:hover) .xp-parent.xp-parent.xp-parent {
+  display: none;
+}
+
+/*Difficulty*/
+.encounter-xp em {
+  visibility: visible !important;
+  text-transform: capitalize;
+  font-style: normal;
+  color: var(--h1);
+}
+
+.encounter-xp > .medium > .difficulty-label {
+  color: #66ad66;
+}
+
+.encounter-xp em em {
+  padding-left: 5px;
+  color: var(--h2, var(--interactive-accent));
+}
+
+.h-pcs .encounter-players {
+  display: none;
+}
 
 /*Hide Vault Title*/
 .v-non .nav-folder.mod-root > .nav-folder-title {

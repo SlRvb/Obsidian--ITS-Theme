@@ -23,7 +23,6 @@
     box-shadow: -.2em .2em var(--outline) !important;
 }
 
-
 /*Items*/
 .kanban-plugin__item {
     border: 0 !important;
@@ -187,6 +186,9 @@
 .kbn .kanban-plugin__item .markdown-preview-view a.tag {
     font-size: 11px !important;
     line-height: 14px !important;
+}
+body .kanban-plugin__item-tags .kanban-plugin__item-tag {
+    border-radius: var(--radius);
 }
 /*Card: Link Styling*/
 .kbn .kanban-plugin__item .markdown-preview-view a.internal-link {

@@ -17,3 +17,56 @@ h3.breadcrumbs-matrix-header {
     color: var(--headers) !important;
 }
 h3.breadcrumbs-matrix-header:after { display: none; }
+
+/* Side Panel */
+div.BC-Matrix > div { 
+    border: 0 !important; 
+    box-shadow: -4px 4px 0 var(--outline);
+}
+div.BC-Matrix-square {
+    border: 3px solid var(--outline) !important;
+
+    //Align List item text to Left
+    & ol { text-align: left; }
+    
+    //Remove Empty Space in Implied Panel
+    & > .BC-Matrix-headers + .BC-Matrix-headers { display: none !important; }
+}
+
+
+
+
+/*Banner + Breadcrumbs Trail Fixes*/
+body .markdown-preview-view:not(.is-live-preview).bc-ban .markdown-preview-section.BC-trail {
+    margin-top: 200px !important;
+}
+/*Remove Banner Margins If Breadcrumbs Trail is near*/
+.BC-trail + div > .obsidian-banner-wrapper { margin: 0; }
+
+
+/*Trail*/
+body .BC-trail { 
+    padding: 0;
+    border: 2px solid var(--outline);
+    border-radius: var(--radius);
+    box-shadow: 3px 3px 0px var(--outline);
+    background-color: var(--note);
+    //Center Text
+    justify-content: center;
+    text-align: center;
+
+    //Inner Div
+    & div.BC-trail-grid,
+    & div.BC-trail-grid-item  {
+        border: 0;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    //Color Div Item
+    & div.BC-trail-grid-item {
+        margin: 5px;
+        background-color: var(--outer-bar);
+        text-align: center;
+    }
+}

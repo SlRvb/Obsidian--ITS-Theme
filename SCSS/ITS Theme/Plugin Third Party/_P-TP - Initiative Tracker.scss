@@ -1,4 +1,13 @@
 /*Plugin: Initiative Tracker*/
+.initiative-tracker-creature td {
+    border: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.initiative-tracker-creature:hover{ background: var(--outer-bar); }
+
 
 /*Difficulty Rating*/
 body .obsidian-initiative-tracker span meter.difficulty-bar.difficulty-bar {
@@ -11,6 +20,19 @@ body .obsidian-initiative-tracker span ::-webkit-meter-bar {
     border-radius: var(--radius);
 }
 
+.encounter-xp em { 
+    visibility: visible !important;
+    text-transform: capitalize; 
+    font-style: normal;
+    color: var(--h1);
+}
+.encounter-xp > .medium > .difficulty-label {
+    color: rgb(102, 173, 102);
+}
+.encounter-xp em em {
+    padding-left: 5px;
+    color: var(--h2, var(--interactive-accent));
+}
 
 
 
@@ -106,22 +128,6 @@ body .encounter-instance {
     & ul li:not(:hover) .xp-parent.xp-parent.xp-parent { display: none; }
 } 
 
-
-
-/*Difficulty*/
-.encounter-xp em { 
-    visibility: visible !important;
-    text-transform: capitalize; 
-    font-style: normal;
-    color: var(--h1);
-}
-.encounter-xp > .medium > .difficulty-label {
-    color: rgb(102, 173, 102);
-}
-.encounter-xp em em {
-    padding-left: 5px;
-    color: var(--h2, var(--interactive-accent));
-}
 
 //Hide Player Characters
 .h-pcs .encounter-players {

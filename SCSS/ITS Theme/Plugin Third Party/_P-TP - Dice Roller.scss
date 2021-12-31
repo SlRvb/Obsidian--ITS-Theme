@@ -1,0 +1,28 @@
+/*Dice Roller*/
+//Reduce Dice Spacing
+.dice-button .clickable-icon { margin: 0 7px; }
+
+//Center Dice
+body .dice-roller-view .dice-roller-grid .dice-buttons { width: auto; }
+//Recolor Dice
+.dice-button .clickable-icon .cls-1 { 
+    fill: var(--interactive-accent);
+    stroke: var(--interactive-accent);
+}
+body .dice-button:hover .cls-1 {
+    fill: var(--interactive-accent-hover);
+    stroke: var(--interactive-accent-hover);
+}
+body .dice-button svg g { 
+    color: var(--text-dl); 
+    fill: var(--text-dl);
+}
+
+body .dice-roller-view .dice-roller-grid .advantage-disadvantage {
+    & button { 
+        background: var(--interactive-success); 
+        color: var(--text-dl); 
+    }
+    & button:hover{ background-color: var(--interactive-accent-hover); }
+    & button + button { background: var(--interactive-failure); }
+}

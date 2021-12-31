@@ -3,7 +3,8 @@
 /*Colored List Markers*/
 li::marker,
 .cm-s-obsidian:not(.mod-cm6) .cm-formatting-list-ul.cm-formatting-list,
-.list-bullet {
+.list-bullet,
+.cm-s-obsidian span.cm-formatting-list-ul {
     color: transparent;
 }
 /*Lighten Numbered List Marker Color*/
@@ -71,7 +72,7 @@ ul li > p {
 /*Editor Bullet Points*/
 .markdown-source-view.mod-cm6 .list-bullet::after,
 .cm-s-obsidian span.cm-formatting-list-ul::before,
-.cm-s-obsidian span.cm-formatting-list-ol {
+.cm-s-obsidian span.cm-formatting-list-ol::before {
     color: var(--soft-text);
 }
 /*Live Preview List Adjustment*/

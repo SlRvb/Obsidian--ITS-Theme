@@ -34,7 +34,8 @@
     --interactive-accent: var(--accent); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select*/
     --interactive-accent-hover: var(--dark-accent); /*Menu Button Hover*/
-    --interactive-success: #599049; /*??*/
+    --interactive-success: #599049;
+    --interactive-failure: #772d2d;
     
     --scrollbar-bg: rgba(160, 214, 255, 0.07);
     --scrollbar-thumb-bg: rgba(162, 191, 255, 0.13);
@@ -137,7 +138,7 @@
     --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-success: #deedd9; /*Publish Upload Success Background*/
-    --background-modifier-error: #990000; /*Delete Screen Button*/
+    --background-modifier-error: var(--interactive-failure); /*Delete Screen Button*/
     --background-modifier-error-rgb: 240, 131, 131; /*Ctrl F Search Background*/
     --background-modifier-error-hover: #470000; /*??*/
     --background-modifier-cover: var(--deep-dark-accent); /*Obsidian Title Bar*/
@@ -156,11 +157,12 @@
     --text-selection: rgba(229, 149, 149, 0.37); /*Cursor dragged highlights*/
     
     --interactive-normal: var(--outer-bar); /*Button background Color*/
-    --interactive-hover: var(--embed-bg)/*#5d2b2b*/; /*Button hover text*/
+    --interactive-hover: var(--embed-bg); /*Button hover text*/
     --interactive-accent: var(--headers); /*Workspace Note Title Underline*/
     --interactive-accent-rgb: 52, 123, 237; /*Publish item select, Resize Handle*/
     --interactive-accent-hover: var(--lite-accent); /*Menu Button Hover*/
-    --interactive-success: #197300; /*??*/
+    --interactive-success: #599049;
+    --interactive-failure: #863e3e;
     
     --scrollbar-bg: rgba(134, 173, 218, 0.157);
     --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);

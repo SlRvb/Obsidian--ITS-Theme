@@ -2383,7 +2383,7 @@ body:not(.its-i) svg.clock-glyph {
   --interactive-accent-hover: var(--dark-accent);
   /*Menu Button Hover*/
   --interactive-success: #599049;
-  /*??*/
+  --interactive-failure: #772d2d;
   --scrollbar-bg: rgba(160, 214, 255, 0.07);
   --scrollbar-thumb-bg: rgba(162, 191, 255, 0.13);
   --highlight-mix-blend-mode: lighten;
@@ -2485,7 +2485,7 @@ body:not(.its-i) svg.clock-glyph {
   /*??*/
   --background-modifier-success: #deedd9;
   /*Publish Upload Success Background*/
-  --background-modifier-error: #990000;
+  --background-modifier-error: var(--interactive-failure);
   /*Delete Screen Button*/
   --background-modifier-error-rgb: 240, 131, 131;
   /*Ctrl F Search Background*/
@@ -2517,7 +2517,7 @@ body:not(.its-i) svg.clock-glyph {
   /*Cursor dragged highlights*/
   --interactive-normal: var(--outer-bar);
   /*Button background Color*/
-  --interactive-hover: var(--embed-bg)/*#5d2b2b*/;
+  --interactive-hover: var(--embed-bg);
   /*Button hover text*/
   --interactive-accent: var(--headers);
   /*Workspace Note Title Underline*/
@@ -2525,8 +2525,8 @@ body:not(.its-i) svg.clock-glyph {
   /*Publish item select, Resize Handle*/
   --interactive-accent-hover: var(--lite-accent);
   /*Menu Button Hover*/
-  --interactive-success: #197300;
-  /*??*/
+  --interactive-success: #599049;
+  --interactive-failure: #863e3e;
   --scrollbar-bg: rgba(134, 173, 218, 0.157);
   --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);
   --highlight-mix-blend-mode: darken;
@@ -3658,7 +3658,8 @@ a:hover {
 /*Colored List Markers*/
 li::marker,
 .cm-s-obsidian:not(.mod-cm6) .cm-formatting-list-ul.cm-formatting-list,
-.list-bullet {
+.list-bullet,
+.cm-s-obsidian span.cm-formatting-list-ul {
   color: transparent;
 }
 
@@ -3740,7 +3741,7 @@ ul li > p {
 /*Editor Bullet Points*/
 .markdown-source-view.mod-cm6 .list-bullet::after,
 .cm-s-obsidian span.cm-formatting-list-ul::before,
-.cm-s-obsidian span.cm-formatting-list-ol {
+.cm-s-obsidian span.cm-formatting-list-ol::before {
   color: var(--soft-text);
 }
 
@@ -5912,62 +5913,17 @@ ul.kanban ul {
   font-weight: bold;
 }
 
-/*Restore Strike Throughs*/
-.check-strike .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]), .check-strike .markdown-preview-view ul > li.task-list-item.is-checked, .check-strike .markdown-preview-view ol > li.task-list-item.is-checked {
-  text-decoration: line-through;
-}
-
-.chst-reg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
-.chst-reg ul li[data-task=x].task-list-item.is-checked,
-.chst-chk .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X],
-.chst-chk ul li[data-task=X].task-list-item.is-checked,
-.chst-drop .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
-.chst-drop ul li[data-task="-"].task-list-item.is-checked,
-.chst-frwd .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
-.chst-frwd ul li[data-task=">"].task-list-item.is-checked,
-.chst-defr .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D],
-.chst-defr ul li[data-task=D].task-list-item.is-checked,
-.chst-q .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
-.chst-q ul li[data-task="?"].task-list-item.is-checked,
-.chst-half .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
-.chst-half ul li[data-task="/"].task-list-item.is-checked,
-.chst-add .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
-.chst-add ul li[data-task="+"].task-list-item.is-checked,
-.chst-rsrch .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R],
-.chst-rsrch ul li[data-task=R].task-list-item.is-checked,
-.chst-imp .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
-.chst-imp ul li[data-task="!"].task-list-item.is-checked,
-.chst-idea .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i],
-.chst-idea ul li[data-task=i].task-list-item.is-checked,
-.chst-brn .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B],
-.chst-brn ul li[data-task=B].task-list-item.is-checked,
-.chst-pro .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P],
-.chst-pro ul li[data-task=P].task-list-item.is-checked,
-.chst-con .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C],
-.chst-con ul li[data-task=C].task-list-item.is-checked,
-.chst-quot .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q],
-.chst-quot ul li[data-task=Q].task-list-item.is-checked,
-.chst-note .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N],
-.chst-note ul li[data-task=N].task-list-item.is-checked,
-.chst-book .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b],
-.chst-book ul li[data-task=b].task-list-item.is-checked,
-.chst-info .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
-.chst-info ul li[data-task=I].task-list-item.is-checked {
-  text-decoration: line-through;
-}
-
 /*Different/Alternate Checkbox*/
 input[type=checkbox]:checked::before {
   padding-left: 0.2em;
-  font-family: var(--font-monospace);
+  font-family: var(--its, var(--font-monospace));
   font-weight: 900;
   color: var(--soft-text);
 }
 
 /* Hide Checkbox Border */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task=x]):not([data-task=" "]),
-.markdown-preview-view li:not(li[data-task=x]) > .task-list-item-checkbox:checked,
-.markdown-preview-view li:not(li[data-task=x]) p .task-list-item-checkbox:checked {
+.markdown-preview-view .task-list-item:not([data-task=x]):not([data-task=" "]) .task-list-item-checkbox:checked {
   border: none;
   background-color: transparent;
 }
@@ -5980,7 +5936,6 @@ input[type=checkbox]:checked::before {
   position: relative;
   font-family: var(--its);
   padding-left: 0px;
-  top: -2px;
   font-weight: 10;
   border: none;
   width: initial;
@@ -6051,6 +6006,50 @@ body.check-text.check-text ul li:not([data-task=x]).task-list-item.is-checked {
 /*Hide Border For LP (Aligns Items Strangely) */
 body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   border: 0;
+}
+
+/*Restore Strike Throughs*/
+.check-strike .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]), .check-strike .markdown-preview-view ul > li.task-list-item.is-checked, .check-strike .markdown-preview-view ol > li.task-list-item.is-checked {
+  text-decoration: line-through;
+}
+
+.chst-reg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
+.chst-reg ul li[data-task=x].task-list-item.is-checked,
+.chst-chk .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X],
+.chst-chk ul li[data-task=X].task-list-item.is-checked,
+.chst-drop .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
+.chst-drop ul li[data-task="-"].task-list-item.is-checked,
+.chst-frwd .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
+.chst-frwd ul li[data-task=">"].task-list-item.is-checked,
+.chst-defr .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D],
+.chst-defr ul li[data-task=D].task-list-item.is-checked,
+.chst-q .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
+.chst-q ul li[data-task="?"].task-list-item.is-checked,
+.chst-half .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
+.chst-half ul li[data-task="/"].task-list-item.is-checked,
+.chst-add .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
+.chst-add ul li[data-task="+"].task-list-item.is-checked,
+.chst-rsrch .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R],
+.chst-rsrch ul li[data-task=R].task-list-item.is-checked,
+.chst-imp .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
+.chst-imp ul li[data-task="!"].task-list-item.is-checked,
+.chst-idea .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i],
+.chst-idea ul li[data-task=i].task-list-item.is-checked,
+.chst-brn .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B],
+.chst-brn ul li[data-task=B].task-list-item.is-checked,
+.chst-pro .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P],
+.chst-pro ul li[data-task=P].task-list-item.is-checked,
+.chst-con .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C],
+.chst-con ul li[data-task=C].task-list-item.is-checked,
+.chst-quot .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q],
+.chst-quot ul li[data-task=Q].task-list-item.is-checked,
+.chst-note .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N],
+.chst-note ul li[data-task=N].task-list-item.is-checked,
+.chst-book .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b],
+.chst-book ul li[data-task=b].task-list-item.is-checked,
+.chst-info .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
+.chst-info ul li[data-task=I].task-list-item.is-checked {
+  text-decoration: line-through;
 }
 
 /*--Checkbox Type Icons--*/
@@ -7696,6 +7695,107 @@ body .dataview.inline-field-value a.tag:first-child {
   padding-inline-start: 1em !important;
 }
 
+/*Dice Roller*/
+.dice-button .clickable-icon {
+  margin: 0 7px;
+}
+
+body .dice-roller-view .dice-roller-grid .dice-buttons {
+  width: auto;
+}
+
+.dice-button .clickable-icon .cls-1 {
+  fill: var(--interactive-accent);
+  stroke: var(--interactive-accent);
+}
+
+body .dice-button:hover .cls-1 {
+  fill: var(--interactive-accent-hover);
+  stroke: var(--interactive-accent-hover);
+}
+
+body .dice-button svg g {
+  color: var(--text-dl);
+  fill: var(--text-dl);
+}
+
+body .dice-roller-view .dice-roller-grid .advantage-disadvantage button {
+  background: var(--interactive-success);
+  color: var(--text-dl);
+}
+body .dice-roller-view .dice-roller-grid .advantage-disadvantage button:hover {
+  background-color: var(--interactive-accent-hover);
+}
+body .dice-roller-view .dice-roller-grid .advantage-disadvantage button + button {
+  background: var(--interactive-failure);
+}
+
+/*Plugin: Fantasy Calendar*/
+.workspace-leaf-content[data-type=FANTASY_CALENDAR] .view-content {
+  padding: 10px;
+}
+
+textarea,
+body .fantasy-calendar-element details[open],
+body .fantasy-calendar-create-calendar details[open],
+body .fantasy-day.day {
+  border-radius: var(--radius);
+}
+
+.fantasy-day.day.active {
+  background-color: var(--bttn);
+  color: var(--text-dl);
+}
+.fantasy-day.day.viewing {
+  border: none;
+  background-color: var(--lite-accent);
+  color: var(--text-dl);
+}
+.fantasy-day.day.viewing .dots-container {
+  padding: 2px;
+}
+
+:not(.dnd):not(.wotc) h3.fantasy-title::after {
+  display: none;
+}
+
+.fantasy-calendar-create-calendar .modal {
+  padding: 20px;
+  min-width: 70vw;
+}
+.fantasy-calendar-create-calendar .modal-content {
+  padding: 0 30px;
+}
+.fantasy-calendar-create-calendar h3 {
+  font-size: var(--f-s-h);
+  text-align: center;
+  margin: 10px 0;
+}
+.fantasy-calendar-create-calendar h3::after {
+  width: 100%;
+  margin-top: 10px;
+}
+
+body .fantasy-calendar-date-fields {
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 30px;
+}
+
+body .fantasy-calendar-element details[open],
+body .fantasy-calendar-create-calendar details[open] {
+  margin: 10px 0;
+  border: 2px solid var(--outline);
+  box-shadow: 4px 4px 0 var(--outline);
+}
+
+.fantasy-calendar-container .event {
+  padding: 10px;
+}
+.fantasy-calendar-container .event:nth-child(even) {
+  box-shadow: 0 0 10px var(--outline);
+}
+
 /*Plugin: File Tree Alternative*/
 .oz-folder-contents {
   border-left: 2px solid var(--lines) !important;
@@ -7756,6 +7856,136 @@ body .dataview.inline-field-value a.tag:first-child {
 
 .gallery-info-section-value {
   color: var(--text) !important;
+}
+
+/*Plugin: Initiative Tracker*/
+.initiative-tracker-creature td {
+  border: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.initiative-tracker-creature:hover {
+  background: var(--outer-bar);
+}
+
+/*Difficulty Rating*/
+body .obsidian-initiative-tracker span meter.difficulty-bar.difficulty-bar {
+  border: 0;
+  border-radius: var(--radius);
+}
+
+body .obsidian-initiative-tracker span ::-webkit-meter-bar {
+  background-color: var(--outer-bar);
+  border: 1px var(--accent2);
+  border-radius: var(--radius);
+}
+
+.encounter-xp em {
+  visibility: visible !important;
+  text-transform: capitalize;
+  font-style: normal;
+  color: var(--h1);
+}
+
+.encounter-xp > .medium > .difficulty-label {
+  color: #66ad66;
+}
+
+.encounter-xp em em {
+  padding-left: 5px;
+  color: var(--h2, var(--interactive-accent));
+}
+
+/*Encounters*/
+body .encounter-container > .encounter-instance {
+  margin: 5px;
+  padding: 15px;
+  border: 2px solid var(--outline, var(--background-modifier-box-shadow));
+  box-shadow: 4px 4px 0px var(--outline, var(--background-modifier-box-shadow));
+  border-radius: var(--radius, 0.5em);
+}
+
+body .block-language-encounter .encounter-container {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+body .block-language-encounter .encounter-name.encounter-name {
+  display: block;
+}
+
+body .encounter-instance .encounter-name h3 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: -5px !important;
+}
+body .encounter-instance .encounter-name h3::after {
+  content: "";
+  display: block;
+  background: linear-gradient(to right, var(--interactive-accent), transparent);
+  height: 4px;
+}
+body .encounter-instance .encounter-creatures h4 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--text, var(--text-normal));
+  font-family: var(--default-font);
+  font-weight: bold;
+}
+body .encounter-instance .encounter-creatures h4:after {
+  display: none;
+}
+body .encounter-instance .setting-editor-extra-setting-button.clickable-icon {
+  float: right;
+  margin-right: -5px;
+  right: 0;
+}
+body .encounter-instance ul {
+  margin-left: -25px;
+}
+body .encounter-instance ul li.creature-li.creature-li {
+  width: unset;
+}
+body .encounter-instance ul li::before {
+  display: none;
+}
+body .encounter-instance ul li:nth-child(even) {
+  background: var(--aside-bg, var(--background-modifier-box-shadow));
+}
+body .encounter-instance .dice-roller-result {
+  font-family: var(--font-monospace);
+  color: var(--lite-accent);
+}
+body .encounter-instance .dice-roller-button {
+  color: var(--text-faint);
+  vertical-align: -2px;
+  margin-right: -5px;
+}
+body .encounter-instance .encounter-xp, body .encounter-instance .xp-parent {
+  color: var(--h2, var(--interactive-accent));
+  font-weight: bold;
+  margin: 0;
+}
+body .encounter-instance .xp-parent:after {
+  content: "\f102";
+  /*"\e4fb" f753*/
+  font-family: var(--fa5);
+  color: var(--h2, var(--interactive-accent));
+  font-weight: 10 !important;
+  padding-left: 5px;
+}
+body .encounter-instance .xp-parent .paren.left, body .encounter-instance .xp-parent .paren.right, body .encounter-instance .xp.text {
+  display: none;
+}
+body .encounter-instance ul li:not(:hover) .xp-parent.xp-parent.xp-parent {
+  display: none;
+}
+
+.h-pcs .encounter-players {
+  display: none;
 }
 
 /*--Kanban Plugin--*/
@@ -8032,7 +8262,6 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
   opacity: unset !important;
 }
 
-/*Plugin: Fantasy Calendar*/
 /*Block Reference*/
 body .block-ref-count:hover {
   color: var(--text-dl);
@@ -8345,191 +8574,6 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 
 .timeline-right::before {
   border-color: transparent var(--background-secondary-alt) transparent transparent !important;
-}
-
-/*Plugin: Initiative Tracker*/
-/*Difficulty Rating*/
-body .obsidian-initiative-tracker span meter.difficulty-bar.difficulty-bar {
-  border: 0;
-  border-radius: var(--radius);
-}
-
-body .obsidian-initiative-tracker span ::-webkit-meter-bar {
-  background-color: var(--outer-bar);
-  border: 1px var(--accent2);
-  border-radius: var(--radius);
-}
-
-/*Encounters*/
-body .encounter-container > .encounter-instance {
-  margin: 5px;
-  padding: 15px;
-  border: 2px solid var(--outline, var(--background-modifier-box-shadow));
-  box-shadow: 4px 4px 0px var(--outline, var(--background-modifier-box-shadow));
-  border-radius: var(--radius, 0.5em);
-}
-
-body .block-language-encounter .encounter-container {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
-
-body .block-language-encounter .encounter-name.encounter-name {
-  display: block;
-}
-
-body .encounter-instance .encounter-name h3 {
-  font-size: 20px;
-  font-weight: 900;
-  margin-top: -5px !important;
-}
-body .encounter-instance .encounter-name h3::after {
-  content: "";
-  display: block;
-  background: linear-gradient(to right, var(--interactive-accent), transparent);
-  height: 4px;
-}
-body .encounter-instance .encounter-creatures h4 {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: var(--text, var(--text-normal));
-  font-family: var(--default-font);
-  font-weight: bold;
-}
-body .encounter-instance .encounter-creatures h4:after {
-  display: none;
-}
-body .encounter-instance .setting-editor-extra-setting-button.clickable-icon {
-  float: right;
-  margin-right: -5px;
-  right: 0;
-}
-body .encounter-instance ul {
-  margin-left: -25px;
-}
-body .encounter-instance ul li.creature-li.creature-li {
-  width: unset;
-}
-body .encounter-instance ul li::before {
-  display: none;
-}
-body .encounter-instance ul li:nth-child(even) {
-  background: var(--aside-bg, var(--background-modifier-box-shadow));
-}
-body .encounter-instance .dice-roller-result {
-  font-family: var(--font-monospace);
-  color: var(--lite-accent);
-}
-body .encounter-instance .dice-roller-button {
-  color: var(--text-faint);
-  vertical-align: -2px;
-  margin-right: -5px;
-}
-body .encounter-instance .encounter-xp, body .encounter-instance .xp-parent {
-  color: var(--h2, var(--interactive-accent));
-  font-weight: bold;
-  margin: 0;
-}
-body .encounter-instance .xp-parent:after {
-  content: "\f102";
-  /*"\e4fb" f753*/
-  font-family: var(--fa5);
-  color: var(--h2, var(--interactive-accent));
-  font-weight: 10 !important;
-  padding-left: 5px;
-}
-body .encounter-instance .xp-parent .paren.left, body .encounter-instance .xp-parent .paren.right, body .encounter-instance .xp.text {
-  display: none;
-}
-body .encounter-instance ul li:not(:hover) .xp-parent.xp-parent.xp-parent {
-  display: none;
-}
-
-/*Difficulty*/
-.encounter-xp em {
-  visibility: visible !important;
-  text-transform: capitalize;
-  font-style: normal;
-  color: var(--h1);
-}
-
-.encounter-xp > .medium > .difficulty-label {
-  color: #66ad66;
-}
-
-.encounter-xp em em {
-  padding-left: 5px;
-  color: var(--h2, var(--interactive-accent));
-}
-
-.h-pcs .encounter-players {
-  display: none;
-}
-
-/*Plugin: Fantasy Calendar*/
-.workspace-leaf-content[data-type=FANTASY_CALENDAR] .view-content {
-  padding: 10px;
-}
-
-textarea,
-body .fantasy-calendar-element details[open],
-body .fantasy-calendar-create-calendar details[open],
-body .fantasy-day.day {
-  border-radius: var(--radius);
-}
-
-.fantasy-day.day.active {
-  background-color: var(--bttn);
-  color: var(--text-dl);
-}
-.fantasy-day.day.viewing {
-  border: none;
-  background-color: var(--lite-accent);
-  color: var(--text-dl);
-}
-.fantasy-day.day.viewing .dots-container {
-  padding: 2px;
-}
-
-:not(.dnd):not(.wotc) h3.fantasy-title::after {
-  display: none;
-}
-
-.fantasy-calendar-create-calendar .modal {
-  padding: 20px;
-  min-width: 70vw;
-}
-.fantasy-calendar-create-calendar .modal-content {
-  padding: 0 30px;
-}
-.fantasy-calendar-create-calendar h3 {
-  font-size: var(--f-s-h);
-  text-align: center;
-  margin: 10px 0;
-}
-.fantasy-calendar-create-calendar h3::after {
-  width: 100%;
-  margin-top: 10px;
-}
-
-body .fantasy-calendar-date-fields {
-  flex-wrap: wrap;
-  flex-direction: column;
-  padding: 30px;
-}
-
-body .fantasy-calendar-element details[open],
-body .fantasy-calendar-create-calendar details[open] {
-  margin: 10px 0;
-  border: 2px solid var(--outline);
-  box-shadow: 4px 4px 0 var(--outline);
-}
-
-.fantasy-calendar-container .event {
-  padding: 10px;
-}
-.fantasy-calendar-container .event:nth-child(even) {
-  box-shadow: 0 0 10px var(--outline);
 }
 
 /*Hide Vault Title*/

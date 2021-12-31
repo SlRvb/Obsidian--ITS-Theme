@@ -44,6 +44,7 @@
 @use '../Alternate Checkboxes/Colors' as S-ACC;
 @use '../Alternate Checkboxes/Default Checkbox' as S-ACCHK;
 @use 'Custom CSS/CCSS-SlRvb - Alternate Checkboxes' as S-AC;
+@use '../Alternate Checkboxes/Toggles Strike' as S-TS;
 @use '../Alternate Checkboxes/Checkbox Types' as AC-CT;
 
 //-
@@ -74,8 +75,11 @@
 @use 'Plugin Third Party/P-TP - Checklist Plugin' as ptp-chlst;
 @use 'Plugin Third Party/P-TP - Cross Reference' as ptp-cr;
 @use 'Plugin Third Party/P-TP - Dataview' as ptp-dv;
+@use 'Plugin Third Party/P-TP - Dice Roller' as ptp-dr;
+@use 'Plugin Third Party/P-TP - Fantasy Calendar' as ptp-fc;
 @use 'Plugin Third Party/P-TP - File Tree Alternative' as ptp-fta;
 @use 'Plugin Third Party/P-TP - Gallery' as ptp-g;
+@use 'Plugin Third Party/P-TP - Initiative Tracker' as ptp-ini;
 @use 'Plugin Third Party/P-TP - Kanban' as ptp-k;
 @use 'Plugin Third Party/P-TP - Leaflet' as ptp-lflt;
 @use 'Plugin Third Party/P-TP - Longform' as ptp-lf;
@@ -91,8 +95,6 @@
 @use 'Plugin Third Party/P-TP - Text Expander' as ptp-te;
 @use 'Plugin Third Party/P-TP - Timeline -- Darakah' as ptp-tld;
 //@use 'Plugin Third Party/P-TP - Templater' as ptp-t;
-@use 'Plugin Third Party/P-TP - Initiative Tracker' as ptp-ini;
-@use 'Plugin Third Party/P-TP - Fantasy Calendar' as ptp-fc;
 
 //---CSS Class Toggles
 @use 'CSS Class Toggles/CT - Mini Toggles' as S-MT;

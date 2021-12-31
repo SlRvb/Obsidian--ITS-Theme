@@ -2,15 +2,14 @@
 /*Different/Alternate Checkbox*/
 input[type=checkbox]:checked::before {
     padding-left: .2em;
-    font-family: var(--font-monospace);
+    font-family: var(--its, var(--font-monospace));
     font-weight: 900;
     color: var(--soft-text);
 }
 
 /* Hide Checkbox Border */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]),
-.markdown-preview-view li:not(li[data-task="x"]) > .task-list-item-checkbox:checked,
-.markdown-preview-view li:not(li[data-task="x"]) p .task-list-item-checkbox:checked /* Spaced Checklist */ {
+.markdown-preview-view .task-list-item:not([data-task="x"]):not([data-task=" "]) .task-list-item-checkbox:checked {
     border: none;
     background-color: transparent;
 }
@@ -22,7 +21,6 @@ input[type=checkbox]:checked::before {
     position: relative;
     font-family: var(--its);
     padding-left: 0px;
-    top: -2px;
     font-weight: 10;
     border: none;
     width: initial;

@@ -6,7 +6,10 @@
 @use 'Colors' as AC-Colors;
 @use 'Default Checkbox' as AC-DC;
 @use 'CodeMirrorOptions Support' as AC-CMO;
+@use 'Theme Specific Fixes' as AC-TSF;
 
 //Other Checkboxes
-@use '../ITS Theme/Custom CSS/CCSS-SlRvb - Alternate Checkboxes' as ITS-AC;
 @use 'Checkbox Types' as AC-CT;
+
+//Checkbox Toggles
+@use 'Toggles Strike' as AC-TS;

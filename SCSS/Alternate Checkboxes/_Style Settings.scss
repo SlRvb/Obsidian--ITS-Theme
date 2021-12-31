@@ -18,19 +18,35 @@ settings:
         id: check-text
         type: class-toggle
     -
+        title: Checkbox Strikethrough
+        description: Restore default strike through
+        id: check-strike
+        type: class-toggle
+    -
+        title: Checkbox Fixes
+        id: Checkbox-Fixes
+        type: heading
+        level: 2
+        collapsed: true
+    -
         title: Checkbox Padding Fix
         description: Toggle off if checklists are misaligned for your current theme.
         id: chck-pad
         type: class-toggle
         default: true
-    -
-        title: Checkbox Strikethrough
-        description: Restore default strike through
-        id: check-strike
-        type: class-toggle
     - 
-        title: Checkbox Height Adjustment
-        description: Fix the height of the checkboxes for Live Preview
+        title: Checkbox Height Adjustment (LP/P/R)
+        description: Preview/Reading Mode Icon adjustment slider.
+        id: chbx-pre-height
+        type: variable-number-slider
+        default: 0
+        format: px
+        min: -8
+        max: 8
+        step: 1
+    - 
+        title: Checkbox Height Adjustment (S)
+        description: Source Mode Icon adjustment slider.
         id: chbx-ed-height
         type: variable-number-slider
         default: 4

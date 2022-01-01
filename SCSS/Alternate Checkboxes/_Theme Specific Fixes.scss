@@ -19,7 +19,8 @@ input[type=checkbox]:not([data-task="x"]) //Pink Topaz
     padding: initial; //Pink Topaz
 }
 
+li:not([data-task=x]) input[type=checkbox i]:checked,
 .cm-s-obsidian input[type=checkbox]:not([data-task="x"]):checked
 {
-    background-color: transparent !important;
+    background-color: transparent !important; //Minimal
 }

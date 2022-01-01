@@ -1,5 +1,22 @@
 
 /*Restyle Checkboxes*/
+/*Different/Alternate Checkbox*/
+//Fix For Devices using Input Instead
+.task-list-item.is-checked:not([data-task=x]) input[type=checkbox]:checked::before,
+.task-list-item.is-checked:not([data-task=x]) input[type=checkbox i]:checked,
+.task-list-item.is-checked:not([data-task=x]) input[type=checkbox i]:checked::before {
+  font: var(--its);
+  font-family: var(--its);
+  font-weight: 10;
+  top: var(--chbx-pre-height);
+  background: none;
+  border: 0;
+}
+.task-list-item.is-checked:not([data-task=x]) input[type=checkbox i]:checked {
+    appearance: none;
+    filter: none;
+}
+
 .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task='x']):not([data-task=' ']),
 .markdown-preview-view li:not(li[data-task="x"]) .task-list-item-checkbox:checked {
     background-image: url();
@@ -15,9 +32,7 @@
     border: none;
 }
 /* Hide Checkbox Styling */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]),
-.markdown-preview-view li:not(li[data-task="x"]) > .task-list-item-checkbox:checked,
-.markdown-preview-view li:not(li[data-task="x"]) p .task-list-item-checkbox:checked /* Spaced Checklist */ {
+.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]) /* Spaced Checklist */ {
     background: transparent;
     -webkit-mask-image: none;
     border: none;

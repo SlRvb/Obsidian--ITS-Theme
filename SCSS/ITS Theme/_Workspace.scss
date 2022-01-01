@@ -53,7 +53,7 @@ button:hover, button.mod-cta:hover {
 
 button, 
 button.mod-cta,
-.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button {
+.markdown-source-view.mod-cm6 .cm-embed-block .edit-block-button {
     border-radius: var(--radius);
     font-size: calc(var(--f-text) - .12em);
     font-family: var(--default-font);

@@ -2899,7 +2899,7 @@ button:hover, button.mod-cta:hover {
 
 button,
 button.mod-cta,
-.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button {
+.markdown-source-view.mod-cm6 .cm-embed-block .edit-block-button {
   border-radius: var(--radius);
   font-size: calc(var(--f-text) - 0.12em);
   font-family: var(--default-font);
@@ -3764,8 +3764,12 @@ ul li > p {
 }
 
 /*Adjust Padding*/
-.cm-s-obsidian span.cm-formatting-list-ol {
+.cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol {
   margin-left: -0.2em;
+}
+
+.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol {
+  padding-left: 5px;
 }
 
 /*Editor Bullet Lines*/
@@ -3918,9 +3922,8 @@ table .markdown-embed-content > .markdown-preview-view blockquote {
 }
 
 /*--Horizontal Linebreak, HR--*/
-.markdown-source-view.mod-cm6 .hr,
-.markdown-source-view.mod-cm6 .HyperMD-hr {
-  contain: unset;
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+  contain: style;
 }
 
 .markdown-preview-view hr,
@@ -8424,6 +8427,7 @@ body.theme-light {
   --statblock-alt: var(--td);
 }
 
+body .obsidian-statblock-plugin .creature-heading > .name,
 body .obsidian-statblock-plugin .heading {
   font-family: var(--font);
   color: var(--headers);
@@ -8432,6 +8436,7 @@ body .obsidian-statblock-plugin .heading {
   font-variant: unset;
 }
 
+body .obsidian-statblock-plugin > .content-wrap,
 body .obsidian-statblock-plugin > .statblock-content {
   border: none;
   box-shadow: 0px 0px 20px var(--outline);
@@ -8443,6 +8448,7 @@ body .statblock-item-container:nth-child(odd) .property {
   background: var(--statblock-alt);
 }
 
+body .obsidian-statblock-plugin .property > .property-name,
 body .obsidian-statblock-plugin .property-name {
   color: var(--headers);
   font-style: normal;

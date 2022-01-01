@@ -1,8 +1,8 @@
 
 /*--Horizontal Linebreak, HR--*/ 
-.markdown-source-view.mod-cm6 .hr,
-.markdown-source-view.mod-cm6 .HyperMD-hr { 
-    contain: unset; 
+//Unset Live Preview's Contain Paint for HR & Plugins
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] { 
+    contain: style; 
 }
 
 .markdown-preview-view hr,

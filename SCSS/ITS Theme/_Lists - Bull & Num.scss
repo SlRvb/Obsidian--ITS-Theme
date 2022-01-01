@@ -32,7 +32,7 @@ ul li:nth-child(even)::before {
     color: var(--accent2);
 }
 li.task-list-item::before,
-ol li::before {
+.markdown-preview-view ol li::before {
     visibility: collapse;
 }
 ol ul > li::before {
@@ -91,8 +91,11 @@ ul li > p {
 
 
 /*Adjust Padding*/
-.cm-s-obsidian span.cm-formatting-list-ol {
+.cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol {
     margin-left: -.2em;
+}
+.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol {
+    padding-left: 5px;
 }
 
 /*Editor Bullet Lines*/

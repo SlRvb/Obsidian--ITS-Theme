@@ -3691,7 +3691,7 @@ ul li:nth-child(even)::before {
 }
 
 li.task-list-item::before,
-ol li::before {
+.markdown-preview-view ol li::before {
   visibility: collapse;
 }
 

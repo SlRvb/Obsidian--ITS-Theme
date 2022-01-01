@@ -2525,8 +2525,8 @@ body:not(.its-i) svg.clock-glyph {
   /*Publish item select, Resize Handle*/
   --interactive-accent-hover: var(--lite-accent);
   /*Menu Button Hover*/
-  --interactive-success: #599049;
-  --interactive-failure: #863e3e;
+  --interactive-success: #66ad66;
+  --interactive-failure: #be4e4e;
   --scrollbar-bg: rgba(134, 173, 218, 0.157);
   --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);
   --highlight-mix-blend-mode: darken;
@@ -6025,7 +6025,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 
 /*Restore Strike Throughs*/
 .check-strike .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]), .check-strike .markdown-preview-view ul > li.task-list-item.is-checked, .check-strike .markdown-preview-view ol > li.task-list-item.is-checked {
-  text-decoration: line-through solid var(--text-faint) 2px;
+  text-decoration: line-through 2px;
 }
 
 .chst-reg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
@@ -6064,7 +6064,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 .chst-book ul li[data-task=b].task-list-item.is-checked,
 .chst-info .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
 .chst-info ul li[data-task=I].task-list-item.is-checked {
-  text-decoration: line-through solid var(--text-faint) 2px;
+  text-decoration: line-through 2px;
 }
 
 /*--Checkbox Type Icons--*/
@@ -7905,8 +7905,14 @@ body .obsidian-initiative-tracker span ::-webkit-meter-bar {
   color: var(--h1);
 }
 
-.encounter-xp > .medium > .difficulty-label {
-  color: #66ad66;
+body .encounter-xp > .easy.easy > .difficulty-label {
+  color: var(--interactive-success);
+}
+body .encounter-xp > .medium.medium > .difficulty-label {
+  color: #ff8800;
+}
+body .encounter-xp > .deadly.deadly > .difficulty-label {
+  color: var(--interactive-failure);
 }
 
 .encounter-xp em em {

@@ -26,8 +26,10 @@ body .obsidian-initiative-tracker span ::-webkit-meter-bar {
     font-style: normal;
     color: var(--h1);
 }
-.encounter-xp > .medium > .difficulty-label {
-    color: rgb(102, 173, 102);
+body .encounter-xp {
+    & > .easy.easy > .difficulty-label { color: var(--interactive-success); }
+    & > .medium.medium > .difficulty-label { color: #ff8800; }
+    & > .deadly.deadly > .difficulty-label { color: var(--interactive-failure); }
 }
 .encounter-xp em em {
     padding-left: 5px;

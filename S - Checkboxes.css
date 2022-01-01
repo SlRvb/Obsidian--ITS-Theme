@@ -601,7 +601,7 @@ li:not([data-task=x]) input[type=checkbox i]:checked,
 
 /*Restore Strike Throughs*/
 .check-strike .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]), .check-strike .markdown-preview-view ul > li.task-list-item.is-checked, .check-strike .markdown-preview-view ol > li.task-list-item.is-checked {
-  text-decoration: line-through solid var(--text-faint) 2px;
+  text-decoration: line-through 2px;
 }
 
 .chst-reg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
@@ -640,7 +640,7 @@ li:not([data-task=x]) input[type=checkbox i]:checked,
 .chst-book ul li[data-task=b].task-list-item.is-checked,
 .chst-info .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
 .chst-info ul li[data-task=I].task-list-item.is-checked {
-  text-decoration: line-through solid var(--text-faint) 2px;
+  text-decoration: line-through 2px;
 }
 
 /*# sourceMappingURL=S%20-%20Checkboxes.css.map */

@@ -233,6 +233,11 @@ settings:
 		description: Toggle on to edit headings individually.
 		id: head-spec
 		type: class-toggle
+    -
+		title: Specific Heading Notes Only
+		description: Toggle on to only affect notes. (Disable Adjustments toggle)
+		id: head-spec-note
+		type: class-toggle
 	-
 		title: Heading Fonts
 		id: Spec-Font-Head

@@ -21,25 +21,24 @@
     
     --interactive-normal: var(--accent);
     --interactive-hover: var(--embed-bg);
-    --interactive-accent: var(--accent);
     --interactive-accent-rgb: 60, 102, 168;
-    --interactive-accent-hover: #29395a; 
-    --interactive-success: #599049;
+    --interactive-success: #66ad66;
+    --interactive-failure: #be4e4e;
 
     --text-normal: var(--text); 
     --text-muted: var(--soft-text);
     --text-accent: var(--accent2-lite);
     --text-accent-hover: var(--accent);
-    --interactive-accent: var(--lite-accent);
-    --interactive-accent-hover: var(--dark-accent);
+    --interactive-accent: var(--bttn);
+    --interactive-accent-hover: var(--accent);
 
     /*--DEFAULT VARIABLES--*/
 
     /*Compatibility Color Recoloring*/
-    --deep-dark-accent: #1f283b /*#2f1010*/;
-    --dark-accent: #293e64 /*#53201F*/;
+    --deep-dark-accent: #1f283b;
+    --dark-accent: #293e64;
     --lite-accent: #6ca6e0;
-    --accent: #394d64/*#c14343*/;
+    --accent: #394d64;
     --accent2: #4c78cc;
     --accent2-lite: #4c87cc;
     --bg: #252c36;
@@ -54,10 +53,10 @@
     --f-hover: var(--accent);
     --lines: #465164;
         
-    --note: #1a1e24 /*#0d131c*/;
-    --text: #778495 /*#bccad8*/;
+    --note: #1a1e24;
+    --text: #778495;
     --headers: #2b61aa;
-    --soft-text: #6d7a9b/*#d04e4e*/;
+    --soft-text: #6d7a9b;
     --code-bg: #232831;
     --code-text: slategray;
     --embed-bg: var(--dark-sidebar);
@@ -113,10 +112,9 @@
     --text-muted: var(--soft-text);
     --text-accent: var(--accent2-lite);
     --text-accent-hover: var(--accent2);
-    --interactive-accent: var(--lite-accent);
-
+    --interactive-normal: var(--outer-bar);
     --interactive-hover: var(--embed-bg);
-    --interactive-accent: var(--headers);
+    --interactive-accent: var(--headers); 
     --interactive-accent-hover: var(--lite-accent);
 
     /*--DEFAULT VARIABLES--*/    

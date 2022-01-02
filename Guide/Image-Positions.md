@@ -13,7 +13,7 @@ Example | Description |
 ---|---|
 `![[image.png\|grid]]` | `grid` will allow that image and others with this to display side-by-side in a grid
 
-![](Images/Image_Adjustments-Image-Grids.png)
+![](../Images/Image_Adjustments-Image-Grids.png)
 
 ### Cover (Mostly for Customizable Version)
 
@@ -38,12 +38,12 @@ Example | Description |
 `![[image.png\|right]`| `right` will move the image to the right.
 `![[image.png\|ctr]`| `ctr` will move the image to the center.
 
-![](Images/Image_Adjustments-Simple-Positions.png)
+![](../Images/Image_Adjustments-Simple-Positions.png)
 
 
 ### Types
 
-![](Images/Image_Adjustments-Simple-Sizing.png)
+![](../Images/Image_Adjustments-Simple-Sizing.png)
 
 #### Banner
 
@@ -82,7 +82,7 @@ Example | Description |
 
 ### Inner Image Position
 
-![](Images/Image_Adjustments-Custom-Inner_Position_Precise.png)
+![](../Images/Image_Adjustments-Custom-Inner_Position_Precise.png)
 
 Example | Description |
 ---|---|
@@ -111,7 +111,7 @@ Example | Description |
 `![[image.png\|p+bcc]]`| `p+bcc` will move the inside of the image to the center bottom, slightly higher than `p+bc`|
 
 ### Sizing
-![](Images/Image_Adjustments-Custom-Sizing.png)
+![](../Images/Image_Adjustments-Custom-Sizing.png)
 
 Example | Description |
 ---|---|

@@ -6,8 +6,8 @@
 ## SlRvb Gray
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb%20Gray.css)
 
-![](Images/Theme-SlRvb-Gray--Darkmode.png)
-![](Images/Theme-SlRvb-Gray--Lightmode.png)
+![](../Images/Theme-SlRvb-Gray--Darkmode.png)
+![](../Images/Theme-SlRvb-Gray--Lightmode.png)
 
 **Fonts used:**
 - Headings: [Norwester](https://jamiewilson.io/norwester/)
@@ -19,8 +19,8 @@
 
 ## SlRvb Blue
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20SlRvb%20Blue.css)
-![](Images/Theme-SlRvb-Blue--Darkmode.png)
-![](Images/Theme-SlRvb-Blue--Lightmode.png)
+![](../Images/Theme-SlRvb-Blue--Darkmode.png)
+![](../Images/Theme-SlRvb-Blue--Lightmode.png)
 
 **Fonts used:**
 - Headings: [Recursive Sans Linear Static Black](https://www.recursive.design/)
@@ -28,8 +28,8 @@
 
 ## D&D
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20DnD.css)
-![](Images/Theme-DnD--Darkmode.png)
-![](Images/Theme-DnD--Lightmode.png)
+![](../Images/Theme-DnD--Darkmode.png)
+![](../Images/Theme-DnD--Lightmode.png)
 
 **Fonts used:**
 - Headings: [Cinzel Decorative](https://fonts.google.com/specimen/Cinzel+Decorative)
@@ -39,8 +39,8 @@
 
 ## School Days
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20School%20Days.css)
-![](Images/Theme-School-Days--Darkmode.png)
-![](Images/Theme-School-Days--Lightmode.png)
+![](../Images/Theme-School-Days--Darkmode.png)
+![](../Images/Theme-School-Days--Lightmode.png)
 
 **Fonts used:**
 - Vault Name: [Collegiate](https://www.dafont.com/collegiateflf.font)
@@ -51,15 +51,15 @@
 
 ## Tangerine Dunes
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20Tangerine%20Dunes.css)
-![](Images/Theme-Tangerine-Dunes--Darkmode.png)
-![](Images/Theme-Tangerine-Dunes--Lightmode.png)
+![](../Images/Theme-Tangerine-Dunes--Darkmode.png)
+![](../Images/Theme-Tangerine-Dunes--Lightmode.png)
 
 ## Drowned
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20Drowned.css)
-![](Images/Theme-Drowned--Darkmode.png)
-![](Images/Theme-Drowned--Lightmode.png)
+![](../Images/Theme-Drowned--Darkmode.png)
+![](../Images/Theme-Drowned--Lightmode.png)
 
 ## ITS Dark
 [Link](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20ITS%20Dark.css)
 
-![](Images/Theme-ITS-Dark.png)
+![](../Images/Theme-ITS-Dark.png)

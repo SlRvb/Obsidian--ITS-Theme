@@ -10,4 +10,4 @@ Class | Description |
 
 **Examples:**
 Aside code is highlighted.
-![](Images/Aside-Snippet.png)
+![](../Images/Aside-Snippet.png)

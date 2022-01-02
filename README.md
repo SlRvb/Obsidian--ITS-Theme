@@ -10,12 +10,12 @@
 ---
 # Guide/Reference
 
-- [CSS Classes](Guide/CSS-Classes)
-- [\<i>\</i>](Guide/HTML-I-Attributes)
-- [Asides](Guide/Asides)
-- [Image Positions](Guide/Image-Positions)
-- [Embed Adjustments](Guide/Embed-Adjustments)
-- [Alternate Themes](Guide/Alternate-Themes)
+- [CSS Classes](Guide/CSS-Classes.md)
+- [\<i>\</i>](Guide/HTML-I-Attributes.md)
+- [Asides](Guide/Asides.md)
+- [Image Positions](Guide/Image-Positions.md)
+- [Embed Adjustments](Guide/Embed-Adjustments.md)
+- [Alternate Themes](Guide/Alternate-Themes.md)
 
 # Features
 - **Dark and Light mode**

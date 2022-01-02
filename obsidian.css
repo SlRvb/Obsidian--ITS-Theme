@@ -4499,6 +4499,18 @@ iframe {
   padding-bottom: 2px;
 }
 
+progress {
+  border-radius: var(--radius);
+}
+
+progress::-webkit-progress-bar {
+  background: var(--bg);
+}
+
+progress::-webkit-progress-value {
+  background: var(--c2, var(--accent));
+}
+
 /*CSS class, Hide Frontmatter*/
 .no-m .frontmatter-container,
 .reveal pre.frontmatter {

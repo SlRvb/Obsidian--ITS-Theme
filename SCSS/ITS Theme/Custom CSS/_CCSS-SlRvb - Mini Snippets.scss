@@ -4,14 +4,11 @@
     display: none;
 }
 
-
-
 /*Justify text*/
 .justified .markdown-preview-section,
 .justified .cm-s-obsidian {
     text-align: justify;
 }
-
 
 /*Readable Text Width.*/ /*Thanks @foreveryone*/
 .markdown-preview-view.readable .markdown-preview-sizer {
@@ -20,16 +17,18 @@
     margin-right: auto;
 }
 
-
-
-
+/*Center*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*Poems*/
 .poem p {
     text-align: center;
     line-height: 1.3em;
     margin-block-end: 4%;
 }
-
 
 /*Spaced Lists*/
 .s-li li {

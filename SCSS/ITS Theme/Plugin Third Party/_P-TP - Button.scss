@@ -1,26 +1,14 @@
 
 /*Button Plugin*/
-.button-default {
-    border-radius: var(--radius) !important;
-    box-shadow: none !important;
-    background-color: var(--th) !important;
-    border: 0 !important;
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    color: var(--text-dl) !important;
+.block-language-button button,
+body .button-default.button-default {
+    border-radius: var(--radius);
+    box-shadow: none;
+    background-color: var(--th);
+    border: 0;
+    color: var(--text-dl);
 }
-.button-default:hover {
-    box-shadow: 0 .5em var(--embed-bg) !important;
-    color: var(--text-dl) !important;
-}
-
-/*Admonition*/
-.admonition { 
-    border-radius: var(--radius) !important;
-    box-shadow: 5px 5px var(--outline) !important; 
-}
-.admonition-title { padding: 10px 15px !important; }
-.admonition-content { 
-    padding: 0 0 0 5px !important;
+body .button-default.button-default:hover {
+    box-shadow: 0 .5em var(--embed-bg);
+    color: var(--text-dl);
 }

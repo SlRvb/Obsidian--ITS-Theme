@@ -1,68 +1,74 @@
 
 /*--Checklist Plugin Edit--*/
 /*Square Checklist*/
-.checklist-plugin-main li,
-.checklist-plugin-main .checkbox,
-.checklist-plugin-main .count {
-    border-radius: var(--radius) !important;
-}
-.checklist-plugin-main li { 
-    border-left: 4px solid var(--accent) !important;
-    background-color: var(--code-bg) !important;
-}
-.checklist-plugin-main li:nth-child(even) {
-    border-left: 4px solid var(--accent2) !important;
-}
-.checklist-plugin-main li:hover,
-.checklist-plugin-main li:nth-child(even):hover { 
-    background-color: var(--outer-bar) !important;
+body .checklist-plugin-main.checklist-plugin-main {
+    margin-top: -.8em;
+    padding: .4em; 
+
+    //Square
+    & li,
+    & .checkbox,
+    & .count { border-radius: var(--radius); }
+
+    //Reduce Padding
+    & .content { padding: 0; }
+    & li.compact {
+        padding: 0;
+        margin-bottom: .4em;
+    }
+
+    //Checkboxes
+    & li { 
+        border-left: 4px solid var(--accent);
+        background-color: var(--code-bg);
+    }
+    & li:nth-child(even) {
+        border-left: 4px solid var(--accent2);
+    }
+    & li:hover,
+    & li:nth-child(even):hover { 
+        background-color: var(--outer-bar);
+    }
+    //Hide Bullet
+    & li.compact:before,
+    & li.classic:before { 
+        display: none; 
+    }
+    //Resize Checkbox
+    & .compact .toggle { padding: 0 .4em; }
+    & .checkbox {
+        border-width: 2px;
+        min-width: .5em;
+        min-height: .5em;
+        border-color: var(--accent);
+    }
+
+    & .toggle:hover { 
+        background-color: transparent; 
+    }
+    & .compact .checkbox { 
+        width: 1.2em;
+        height: 1.2em;
+    }
+    & .classic .checkbox { 
+        width: 1.5em;
+        height: 1.5em;
+    }
+    /*Fix Checked Item*/
+    & .compact .checked {
+        border-radius: var(--radius);
+        position: relative;
+        top: -2px;
+        left: -2px;
+        background-color: var(--accent);
+    }
+    & .classic .checked {
+        border-radius: var(--radius);
+        position: absolute;
+        background-color: var(--accent);
+    }
 }
 
-/*Reduce Padding*/
-.checklist-plugin-main { 
-    margin-top: -.8em !important;
-    padding: .4em !important; 
-}
-.checklist-plugin-main .content { padding: 0 !important; }
-.checklist-plugin-main li.compact {
-    padding: .1em;
-    margin-bottom: .4em !important;
-}
 
-/*Hide Bullet*/
-.checklist-plugin-main li.compact:before,
-.checklist-plugin-main li.classic:before { 
-    display: none !important; 
-}
-/*Resize Checkbox*/
-.checklist-plugin-main .compact .toggle { padding: 0 .4em !important; }
-.checklist-plugin-main .checkbox {
-    border-width: 2px !important;
-    min-width: .5em !important;
-    min-height: .5em !important;
-    border-color: var(--accent) !important;
-}
-.checklist-plugin-main .toggle:hover { 
-    background-color: transparent !important; 
-}
-.checklist-plugin-main .compact .checkbox { 
-    width: 1.2em !important;
-    height: 1.2em !important;
-}
-.checklist-plugin-main .classic .checkbox { 
-    width: 1.5em !important;
-    height: 1.5em !important;
-}
-/*Fix Checked Item*/
-.checklist-plugin-main .compact .checked {
-    border-radius: var(--radius) !important;
-    position: relative !important;
-    top: -2px !important;
-    left: -2px !important;
-    background-color: var(--accent) !important;
-}
-.checklist-plugin-main .classic .checked {
-    border-radius: var(--radius) !important;
-    position: absolute !important;
-    background-color: var(--accent) !important;
-}
+
+

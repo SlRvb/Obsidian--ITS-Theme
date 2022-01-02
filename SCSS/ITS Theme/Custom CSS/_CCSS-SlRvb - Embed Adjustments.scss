@@ -27,7 +27,9 @@
 }
 
 /*Title Hide/Show*/
-.internal-embed[alt*="no-title"] .markdown-embed-title, .file-embed-title{
+.internal-embed[alt*="no-t"] .markdown-embed-title,
+.internal-embed[alt*="no-title"] .markdown-embed-title,
+.file-embed-title {
     display: none;
 }
 

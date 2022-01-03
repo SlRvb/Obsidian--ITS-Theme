@@ -3592,12 +3592,17 @@ mjx-container[jax=CHTML][display=true] {
 }*/
 /*--Links--*/
 /*Active Link*/
+.reveal a {
+  color: var(--interactive-normal);
+}
+
 .markdown-source-view.mod-cm6 .cm-underline,
 a, .markdown-preview-view .internal-link {
   text-decoration: none;
   /*No underline*/
 }
 
+.reveal a:hover,
 a:hover {
   color: var(--lite-accent);
 }
@@ -3891,6 +3896,7 @@ input[type=checkbox]:checked {
 }
 
 /*--Blockquote--*/
+.reveal blockquote,
 .markdown-preview-view blockquote {
   display: flow-root;
   border: 0px solid var(--bg);
@@ -3904,6 +3910,7 @@ input[type=checkbox]:checked {
 }
 
 /*Quotation Mark*/
+.reveal blockquote:before,
 .markdown-preview-view blockquote:before {
   content: "”";
   position: absolute;
@@ -3914,7 +3921,19 @@ input[type=checkbox]:checked {
   color: var(--headers);
 }
 
-/*Remove Margin From Block embedding*/
+/*Undo Slides Styling*/
+.reveal blockquote {
+  box-shadow: none;
+  font-style: initial;
+  margin: auto;
+}
+
+.reveal blockquote:before {
+  top: 10px;
+  right: 10px;
+  font-size: 70px;
+}
+
 /*Fix Blockquote Mark*/
 .markdown-preview-view li blockquote:before {
   top: 0.3em;
@@ -5560,9 +5579,11 @@ body .illusion .markdown-preview-view .heading-collapse-indicator {
 
 .is-live-preview .HyperMD-header::before {
   font-family: var(--font-monospace);
-  padding-right: 5px;
+  margin-left: -15px;
+  margin-right: 5px;
   color: var(--footnote);
   font-size: calc(var(--f-s-text) - 4px);
+  margin-top: -10px;
 }
 .is-live-preview .HyperMD-header.HyperMD-header-1::before {
   content: "H1";

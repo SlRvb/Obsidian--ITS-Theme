@@ -1,10 +1,12 @@
 
 /*--Links--*/
 /*Active Link*/
+.reveal a { color: var(--interactive-normal); }
 .markdown-source-view.mod-cm6 .cm-underline,
 a, .markdown-preview-view .internal-link {
     text-decoration: none; /*No underline*/
 }
+.reveal a:hover,
 a:hover {
     color: var(--lite-accent);
 }

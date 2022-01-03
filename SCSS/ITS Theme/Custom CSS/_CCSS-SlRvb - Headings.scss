@@ -146,9 +146,11 @@ body .illusion {
 .is-live-preview .HyperMD-header {
     &::before {
         font-family: var(--font-monospace);
-        padding-right: 5px;
+        margin-left: -15px;
+        margin-right: 5px;
         color: var(--footnote);
         font-size: calc(var(--f-s-text) - 4px);
+        margin-top: -10px;
     }
 
     &.HyperMD-header-1::before { content: "H1"; }

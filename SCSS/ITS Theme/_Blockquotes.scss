@@ -1,4 +1,5 @@
 /*--Blockquote--*/
+.reveal blockquote,
 .markdown-preview-view blockquote {
     display: flow-root;
     border: 0px solid var(--bg);
@@ -11,6 +12,7 @@
 }
 
 /*Quotation Mark*/
+.reveal blockquote:before,
 .markdown-preview-view blockquote:before {
     content: '\201D';
     position: absolute;
@@ -20,8 +22,17 @@
     font-family: var(--font);
     color: var(--headers);
 }
-/*Remove Margin From Block embedding*/
-
+/*Undo Slides Styling*/
+.reveal blockquote {
+    box-shadow: none;
+    font-style: initial;
+    margin: auto;
+}
+.reveal blockquote:before {
+    top: 10px;
+    right: 10px;
+    font-size: 70px;
+}
 
 /*Fix Blockquote Mark*/
 .markdown-preview-view li blockquote:before { top: .3em; }

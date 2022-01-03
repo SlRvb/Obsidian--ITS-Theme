@@ -5579,11 +5579,11 @@ body .illusion .markdown-preview-view .heading-collapse-indicator {
 
 .is-live-preview .HyperMD-header::before {
   font-family: var(--font-monospace);
-  margin-left: -15px;
-  margin-right: 5px;
   color: var(--footnote);
   font-size: calc(var(--f-s-text) - 4px);
-  margin-top: -10px;
+  position: relative;
+  margin-left: -15px;
+  left: -12px;
 }
 .is-live-preview .HyperMD-header.HyperMD-header-1::before {
   content: "H1";

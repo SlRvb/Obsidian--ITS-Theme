@@ -5603,6 +5603,9 @@ body .illusion .markdown-preview-view .heading-collapse-indicator {
 .is-live-preview .HyperMD-header.HyperMD-header-6::before {
   content: "H6";
 }
+.is-live-preview .HyperMD-header .cm-fold-indicator .collapse-indicator {
+  right: -5px;
+}
 
 /*--Kanban--*/
 /*Credit: https://github.com/Braweria/Spectrum*/

@@ -159,4 +159,7 @@ body .illusion {
     &.HyperMD-header-4::before { content: "H4"; }
     &.HyperMD-header-5::before { content: "H5"; }
     &.HyperMD-header-6::before { content: "H6"; }
+    & .cm-fold-indicator .collapse-indicator {
+        right: -5px;
+    }
 } 

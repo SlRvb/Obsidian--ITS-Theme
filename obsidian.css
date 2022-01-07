@@ -3347,154 +3347,6 @@ table,
   font-size: var(--f-s-text);
 }
 
-/*--Headings--*/
-h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
-  font-weight: var(--f-w-h);
-  font-family: var(--font);
-  color: var(--headers);
-}
-
-.cm-header-1,
-.cm-header-2,
-.cm-header-3,
-.cm-header-4,
-.cm-header-5,
-.cm-header-6 {
-  margin-bottom: calc(var(--head-h) - 1.5em) !important;
-}
-
-.markdown-preview-view h1,
-.markdown-preview-view h2,
-.markdown-preview-view h3,
-.markdown-preview-view h4,
-.markdown-preview-view h5,
-.markdown-preview-view h6 {
-  margin: var(--head-h) 0;
-  line-height: calc(var(--lh) - 0.3em) !important;
-}
-
-/*Font Sizes*/
-.markdown-preview-view h1,
-.cm-s-obsidian .cm-header-1 {
-  font-size: var(--f-s-h);
-}
-
-.markdown-preview-view h2 {
-  font-size: calc(var(--f-s-h) - 4px);
-}
-
-.cm-s-obsidian .cm-header-2 {
-  font-size: calc(var(--f-s-h) - 6px);
-}
-
-.markdown-preview-view h3 {
-  font-size: calc(var(--f-s-h) - 8px);
-}
-
-.cm-s-obsidian .cm-header-3 {
-  font-size: calc(var(--f-s-h) - 10px);
-}
-
-.markdown-preview-view h4 {
-  font-size: calc(var(--f-s-h) - 10px);
-}
-
-.cm-s-obsidian .cm-header-4 {
-  font-size: calc(var(--f-s-h) - 12px);
-}
-
-.markdown-preview-view h5,
-.cm-s-obsidian .cm-header-5 {
-  font-size: calc(var(--f-s-h) - 14px);
-}
-
-.markdown-preview-view h6,
-.cm-s-obsidian .cm-header-6 {
-  font-size: calc(var(--f-s-h) - 16px);
-}
-
-/*Heading: Inline Code Size Fix*/
-.cm-s-obsidian span.cm-inline-code.cm-header-1:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-1,
-.markdown-preview-view h1 code {
-  font-size: calc(var(--f-s-h) - 6px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-2:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-2,
-.markdown-preview-view h2 code {
-  font-size: calc(var(--f-s-h) - 10px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-3:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-3,
-.markdown-preview-view h3 code {
-  font-size: calc(var(--f-s-h) - 13px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-4:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-4,
-.markdown-preview-view h4 code {
-  font-size: calc(var(--f-s-h) - 17px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-5:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-5,
-.markdown-preview-view h5 code {
-  font-size: calc(var(--f-s-h) - 19px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-6:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-6,
-.markdown-preview-view h6 code {
-  font-size: calc(var(--f-s-h) - 21px);
-}
-
-/*Editor Heading Re-size*/
-/*Inspired by Red Graphite*/
-.cm-s-obsidian pre.HyperMD-header > span > span:first-child {
-  font-size: 10px;
-  color: var(--lines);
-}
-
-/*Heading Line*/
-h1:after,
-h2:after,
-h3:after,
-h4:after {
-  content: "";
-  display: block;
-  background: var(--table);
-  height: 4px;
-  left: 0;
-}
-
-h1:after {
-  width: 100%;
-}
-
-h2:after {
-  width: 85%;
-}
-
-h3:after {
-  width: 65%;
-}
-
-h4:after {
-  width: 40%;
-}
-
-/*Editor Heading Lines*/
-.cm-s-obsidian pre.HyperMD-header:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: var(--table);
-  left: 0;
-}
-
 /*-Code-*/
 code,
 .markdown-preview-view code,
@@ -3668,8 +3520,7 @@ a:hover {
 /*Colored List Markers*/
 li::marker,
 .cm-s-obsidian:not(.mod-cm6) .cm-formatting-list-ul.cm-formatting-list,
-.list-bullet,
-.cm-s-obsidian span.cm-formatting-list-ul {
+.list-bullet {
   color: transparent;
 }
 
@@ -5478,6 +5329,158 @@ img[alt*=sprf] {
 #nobg,
 .nobg {
   background-color: transparent !important;
+}
+
+/*--Headings--*/
+h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
+  font-weight: var(--f-w-h);
+  font-family: var(--font);
+  color: var(--headers);
+}
+
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  margin-bottom: calc(var(--head-h) - 1.5em) !important;
+}
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  margin: var(--head-h) 0;
+  line-height: calc(var(--lh) - 0.3em) !important;
+}
+
+/*Font Sizes*/
+.markdown-preview-view h1,
+.cm-s-obsidian .cm-header-1 {
+  font-size: var(--f-s-h);
+}
+
+.markdown-preview-view h2 {
+  font-size: calc(var(--f-s-h) - 4px);
+}
+
+.cm-s-obsidian .cm-header-2 {
+  font-size: calc(var(--f-s-h) - 6px);
+}
+
+.markdown-preview-view h3 {
+  font-size: calc(var(--f-s-h) - 8px);
+}
+
+.cm-s-obsidian .cm-header-3 {
+  font-size: calc(var(--f-s-h) - 10px);
+}
+
+.markdown-preview-view h4 {
+  font-size: calc(var(--f-s-h) - 10px);
+}
+
+.cm-s-obsidian .cm-header-4 {
+  font-size: calc(var(--f-s-h) - 12px);
+}
+
+.markdown-preview-view h5,
+.cm-s-obsidian .cm-header-5 {
+  font-size: calc(var(--f-s-h) - 14px);
+}
+
+.markdown-preview-view h6,
+.cm-s-obsidian .cm-header-6 {
+  font-size: calc(var(--f-s-h) - 16px);
+}
+
+/*Heading: Inline Code Size Fix*/
+.cm-s-obsidian span.cm-inline-code.cm-header-1:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-1,
+.markdown-preview-view h1 code {
+  font-size: calc(var(--f-s-h) - 6px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-2:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-2,
+.markdown-preview-view h2 code {
+  font-size: calc(var(--f-s-h) - 10px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-3:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-3,
+.markdown-preview-view h3 code {
+  font-size: calc(var(--f-s-h) - 13px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-4:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-4,
+.markdown-preview-view h4 code {
+  font-size: calc(var(--f-s-h) - 17px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-5:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-5,
+.markdown-preview-view h5 code {
+  font-size: calc(var(--f-s-h) - 19px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-6:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-6,
+.markdown-preview-view h6 code {
+  font-size: calc(var(--f-s-h) - 21px);
+}
+
+/*Editor Heading Re-size*/
+/*Inspired by Red Graphite*/
+.cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+  font-size: 10px;
+  color: var(--lines);
+}
+
+/*Heading Line*/
+/*Editor Heading Lines*/
+.cm-s-obsidian pre.HyperMD-header:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--table);
+  left: 0;
+}
+
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+.HyperMD-header-1::after,
+.HyperMD-header-2::after,
+.HyperMD-header-3::after,
+.HyperMD-header-4::after {
+  content: "";
+  display: block;
+  background: var(--table);
+  height: 4px;
+  left: 0;
+}
+
+h1::after, .HyperMD-header-1::after {
+  width: 100%;
+}
+
+h2::after, .HyperMD-header-2::after {
+  width: 85%;
+}
+
+h3::after, .HyperMD-header-3::after {
+  width: 65%;
+}
+
+h4::after, .HyperMD-header-4::after {
+  width: 40%;
 }
 
 /*--Center Headings--*/
@@ -7722,9 +7725,9 @@ body .dataview.inline-field-value a.tag:first-child {
 }
 
 /*Dataview List Adjustments*/
+.dvl .block-language-dataviewjs .dataview-result-list-li,
 .dvl .list-view-ul li {
   padding: 10px;
-  margin-top: 15px;
   background-color: var(--aside-bg);
 }
 
@@ -7733,17 +7736,21 @@ body .dataview.inline-field-value a.tag:first-child {
 }
 
 /*Kanban*/
+.kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
 .kanban.dvl .list-view-ul li {
   background-color: var(--aside-bg);
 }
 
-.kanban.dvl ul li {
-  flex: 1 1 200px !important;
+.kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
+.kanban.dvl .list-view-ul li {
+  flex: 1 1 200px;
+  box-shadow: 4px 4px 0 var(--outline);
+  border: 1px solid var(--outline);
 }
 
-.kanban .dataview-ul {
-  display: block !important;
-  padding-inline-start: 1em !important;
+.kanban table td > .dataview-ul {
+  display: block;
+  padding-inline-start: 1em;
 }
 
 /*Dice Roller*/

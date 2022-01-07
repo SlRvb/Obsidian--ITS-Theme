@@ -59,9 +59,9 @@ body .dataview.inline-field-value a.tag:first-child { display: none; }
     color: var(--accent2);
 }
 /*Dataview List Adjustments*/
+.dvl .block-language-dataviewjs .dataview-result-list-li,
 .dvl .list-view-ul li {
     padding: 10px;
-    margin-top: 15px;
     background-color: var(--aside-bg);
 }
 .dvl .dataview.list-view-ul li::before {
@@ -69,13 +69,18 @@ body .dataview.inline-field-value a.tag:first-child { display: none; }
 }
 
 /*Kanban*/
+.kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
 .kanban.dvl .list-view-ul li {
     background-color: var(--aside-bg);
 }
-.kanban.dvl ul li {
-    flex: 1 1 200px !important;
+
+.kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
+.kanban.dvl .list-view-ul li {
+    flex: 1 1 200px;
+    box-shadow: 4px 4px 0 var(--outline);
+    border: 1px solid var(--outline);
 }
-.kanban .dataview-ul {
-    display: block !important;
-    padding-inline-start: 1em !important;
+.kanban table td > .dataview-ul {
+    display: block;
+    padding-inline-start: 1em;
 }

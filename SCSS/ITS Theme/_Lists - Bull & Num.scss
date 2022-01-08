@@ -79,18 +79,21 @@ ul li > p {
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
     content: var(--bullet);
     font-family: var(--bul-f);
-    //padding-left: 4px; 
-    margin-right: -15px;
+    padding-left: 4px; 
+    margin-right: -10px;
 }
-.markdown-source-view.mod-cm6 .list-bullet::after { 
-    padding-left: 0; 
-    margin-right: 0; 
-}
+.markdown-source-view.mod-cm6 .list-bullet::after
+{ padding-left: 0; margin-right: 0; }
 .markdown-source-view.mod-cm6 .list-bullet {
-    padding-right: 8px;
+    padding-right: 10px;
 }
+/*Fix Bullet Alignment*/
 .fix-dbull .markdown-source-view.mod-cm6 .list-bullet {
     padding-right: unset;
+    left: -5px;
+}
+.fix-dbull .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
+    content: unset;
 }
 
 /*Adjust Padding*/

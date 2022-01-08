@@ -63,6 +63,8 @@ body .dataview.inline-field-value a.tag:first-child { display: none; }
 .dvl .list-view-ul li {
     padding: 10px;
     background-color: var(--aside-bg);
+    box-shadow: 2px 2px 0 var(--outline);
+    margin-bottom: 5px;
 }
 .dvl .dataview.list-view-ul li::before {
     margin-left: -27px;
@@ -79,6 +81,7 @@ body .dataview.inline-field-value a.tag:first-child { display: none; }
     flex: 1 1 200px;
     box-shadow: 4px 4px 0 var(--outline);
     border: 1px solid var(--outline);
+    margin-bottom: 10px;
 }
 .kanban table td > .dataview-ul {
     display: block;

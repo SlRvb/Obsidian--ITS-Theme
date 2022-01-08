@@ -856,6 +856,10 @@ settings:
         max: 2
         step: .01
     -
+        title: Disable Murf's Rainbow Lines
+        id: murf-rbl
+        type: class-toggle
+    -
         title: Live Preview Alternate Indent Style
         description: Alternate style to differentiate lists sublevels in edit mode on cm6.
         id: alt-ind

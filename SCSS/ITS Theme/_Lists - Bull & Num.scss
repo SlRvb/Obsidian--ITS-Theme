@@ -75,17 +75,19 @@ ul li > p {
     color: var(--soft-text);
 }
 /*Live Preview List Adjustment*/
-.markdown-source-view.mod-cm6 .list-bullet::after,
+.markdown-source-view.mod-cm6 .list-bullet:first-child:after,
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
     content: var(--bullet);
     font-family: var(--bul-f);
-    padding-left: 4px; 
+    //padding-left: 4px; 
     margin-right: -10px;
 }
-.markdown-source-view.mod-cm6 .list-bullet::after
-{ padding-left: 0; margin-right: 0; }
+.markdown-source-view.mod-cm6 .list-bullet::after { 
+    padding-left: 0; 
+    margin-right: 0; 
+}
 .markdown-source-view.mod-cm6 .list-bullet {
-    padding-right: 10px;
+    padding-right: 8px;
 }
 
 

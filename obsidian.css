@@ -3607,11 +3607,10 @@ ul li > p {
 }
 
 /*Live Preview List Adjustment*/
-.markdown-source-view.mod-cm6 .list-bullet::after,
+.markdown-source-view.mod-cm6 .list-bullet:first-child:after,
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
   content: var(--bullet);
   font-family: var(--bul-f);
-  padding-left: 4px;
   margin-right: -10px;
 }
 
@@ -3621,7 +3620,7 @@ ul li > p {
 }
 
 .markdown-source-view.mod-cm6 .list-bullet {
-  padding-right: 10px;
+  padding-right: 8px;
 }
 
 /*Adjust Padding*/

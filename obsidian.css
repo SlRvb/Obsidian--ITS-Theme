@@ -862,6 +862,11 @@ settings:
         id: alt-ind
         type: class-toggle
     -
+        title: Fix Double Bullet Issue
+        description: Bandaid solution that doesn't look good but fixes the double bullet LP issue.
+        id: fix-dbull
+        type: class-toggle
+    -
         title: Checkboxes
         id: Checkboxes
         type: heading
@@ -3607,11 +3612,11 @@ ul li > p {
 }
 
 /*Live Preview List Adjustment*/
-.markdown-source-view.mod-cm6 .list-bullet:first-child:after,
+.markdown-source-view.mod-cm6 .list-bullet::after,
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
   content: var(--bullet);
   font-family: var(--bul-f);
-  margin-right: -10px;
+  margin-right: -15px;
 }
 
 .markdown-source-view.mod-cm6 .list-bullet::after {
@@ -3621,6 +3626,10 @@ ul li > p {
 
 .markdown-source-view.mod-cm6 .list-bullet {
   padding-right: 8px;
+}
+
+.fix-dbull .markdown-source-view.mod-cm6 .list-bullet {
+  padding-right: unset;
 }
 
 /*Adjust Padding*/

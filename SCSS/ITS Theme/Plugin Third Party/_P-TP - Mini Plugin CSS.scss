@@ -17,11 +17,12 @@ body .block-ref-count:hover {
 object.link-favicon { height: inherit !important; margin-right: 5px; }
 
 /*Plugin: Indent Group*/
-.ig-lists .HyperMD-list-line .ig-tab::before,
-.ig-code .HyperMD-codeblock .ig-tab::before {
-    width: var(--b-line) !important;
-    margin-left: 7px;
+body.ig-lists .HyperMD-list-line .ig-tab::before,
+body.ig-code .HyperMD-codeblock .ig-tab::before {
+  width: var(--b-line);
+  margin-left: 7px;
 }
+
 /*
 .ig-tab.ig-indent-group-level::before { background: var(--lite-accent) !important; }
 .ig-tab:not(.ig-indent-group-level)::before                 { background-color: var(--b-l-1) !important; }

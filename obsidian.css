@@ -8367,9 +8367,9 @@ object.link-favicon {
 }
 
 /*Plugin: Indent Group*/
-.ig-lists .HyperMD-list-line .ig-tab::before,
-.ig-code .HyperMD-codeblock .ig-tab::before {
-  width: var(--b-line) !important;
+body.ig-lists .HyperMD-list-line .ig-tab::before,
+body.ig-code .HyperMD-codeblock .ig-tab::before {
+  width: var(--b-line);
   margin-left: 7px;
 }
 

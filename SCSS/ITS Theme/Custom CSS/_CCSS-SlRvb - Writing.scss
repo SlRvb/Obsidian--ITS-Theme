@@ -8,13 +8,20 @@
 .writing h6 {
     text-align: center;
 }
-.writing h1:after,
-.writing h2:after,
-.writing h3:after,
-.writing h4:after,
-.writing h5:after,
-.writing h6:after {
-    height: 0 !important;
+.writing {
+    & h1:after,
+    & h2:after,
+    & h3:after,
+    & h4:after,
+    & h5:after,
+    & h6:after,
+    & .HyperMD-header-1::after,
+    & .HyperMD-header-2::after,
+    & .HyperMD-header-3::after,
+    & .HyperMD-header-4::after {
+        height: 0 !important;
+    }
+
 }
 
 .writing .markdown-preview-section,

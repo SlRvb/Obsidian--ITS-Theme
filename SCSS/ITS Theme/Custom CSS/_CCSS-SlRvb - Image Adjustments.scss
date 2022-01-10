@@ -73,7 +73,8 @@ img[alt*="circle"] {
 
 /*Center Image*/
 img[alt*="ctr"],
-img[src*="#ctr"], img[src*="#center"]
+img[src*="#ctr"],
+img[src*="#center"]
 .image-embed[alt*="center"],
 .imgctr img {
     display:block;
@@ -85,27 +86,29 @@ img[src*="#ctr"], img[src*="#center"]
 /*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
-img,
-.image-embed {
-    &[alt*="left"],
-    &[src*="#left"],
-    &[alt*="locl"],
-    &[src*="#locl"] img 
-    {
-        float:left;
-        margin-right: 2%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
+.view-content > :not(.is-live-preview) {
+    & img,
+    & .image-embed {
+        &[alt*="left"],
+        &[src*="#left"],
+        &[alt*="locl"],
+        &[src*="#locl"] img 
+        {
+            float:left;
+            margin-right: 2%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
 
-    &[alt*="right"],
-    &[src*="#right"],
-    &[alt*="locr"],
-    &[src*="#locr"] img 
-    {
-        float:right;
-        margin-left: 2%;
-        margin-bottom: 0px;
+        &[alt*="right"],
+        &[src*="#right"],
+        &[alt*="locr"],
+        &[src*="#locr"] img 
+        {
+            float:right;
+            margin-left: 2%;
+            margin-bottom: 0px;
+        }
     }
 }
 

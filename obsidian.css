@@ -2403,16 +2403,21 @@ body:not(.its-i) svg.clock-glyph {
   --highlight-mix-blend-mode: lighten;
   /*--DEFAULT VARIABLES--*/
   /*Compatibility Color Recoloring*/
-  --deep-dark-accent: #3f1010 /*#2f1010*/;
-  --dark-accent: #652121 /*#571a1a, #53201F*/;
+  --deep-dark-accent: #3f1010;
+  /*#2f1010*/
+  --dark-accent: #652121;
+  /*#571a1a, #53201F*/
   --lite-accent: #e06c75;
-  --accent: #863737/*#883737, #c14343*/;
-  --accent2: #42536e/*#4c78cc*/;
+  --accent: #863737;
+  /*#883737, #c14343*/
+  --accent2: #42536e;
+  /*#4c78cc*/
   --accent2-lite: #61afef;
   --bg: #252c36;
   --fg: #cfd7dd;
   --side-bar: var(--note);
-  --outer-bar: #0b0f13 /*#0e0f15*/;
+  --outer-bar: #0b0f13;
+  /*#0e0f15*/
   --dark-sidebar: #0d1014;
   --inactive: #586477;
   --outline: var(--outer-bar);
@@ -3881,7 +3886,8 @@ table {
 .markdown-preview-view th,
 .reveal table th {
   background-color: var(--th);
-  color: #edf7ff;
+  color: var(--text-dl);
+  /*#edf7ff*/
   border: 0px;
 }
 
@@ -4583,7 +4589,8 @@ img[alt*=circle] {
 
 /*Center Image*/
 img[alt*=ctr],
-img[src*="#ctr"], img[src*="#center"] .image-embed[alt*=center],
+img[src*="#ctr"],
+img[src*="#center"] .image-embed[alt*=center],
 .imgctr img {
   display: block;
   margin-left: auto;
@@ -4593,21 +4600,13 @@ img[src*="#ctr"], img[src*="#center"] .image-embed[alt*=center],
 /*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
-img[alt*=left], img[src*="#left"], img[alt*=locl], img[src*="#locl"] img,
-.image-embed[alt*=left],
-.image-embed[src*="#left"],
-.image-embed[alt*=locl],
-.image-embed[src*="#locl"] img {
+.view-content > :not(.is-live-preview) img[alt*=left], .view-content > :not(.is-live-preview) img[src*="#left"], .view-content > :not(.is-live-preview) img[alt*=locl], .view-content > :not(.is-live-preview) img[src*="#locl"] img, .view-content > :not(.is-live-preview) .image-embed[alt*=left], .view-content > :not(.is-live-preview) .image-embed[src*="#left"], .view-content > :not(.is-live-preview) .image-embed[alt*=locl], .view-content > :not(.is-live-preview) .image-embed[src*="#locl"] img {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-img[alt*=right], img[src*="#right"], img[alt*=locr], img[src*="#locr"] img,
-.image-embed[alt*=right],
-.image-embed[src*="#right"],
-.image-embed[alt*=locr],
-.image-embed[src*="#locr"] img {
+.view-content > :not(.is-live-preview) img[alt*=right], .view-content > :not(.is-live-preview) img[src*="#right"], .view-content > :not(.is-live-preview) img[alt*=locr], .view-content > :not(.is-live-preview) img[src*="#locr"] img, .view-content > :not(.is-live-preview) .image-embed[alt*=right], .view-content > :not(.is-live-preview) .image-embed[src*="#right"], .view-content > :not(.is-live-preview) .image-embed[alt*=locr], .view-content > :not(.is-live-preview) .image-embed[src*="#locr"] img {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
@@ -4945,12 +4944,11 @@ img[alt*=sprf] {
   display: block;
 }
 
-.internal-embed[alt*=right] {
+.view-content > :not(.is-live-preview) .internal-embed[alt*=right] {
   float: right;
   margin-left: 0.5em;
 }
-
-.internal-embed[alt*=left] {
+.view-content > :not(.is-live-preview) .internal-embed[alt*=left] {
   float: left;
   margin-right: 0.5em;
 }
@@ -5086,12 +5084,7 @@ img[alt*=sprf] {
   text-align: center;
 }
 
-.writing h1:after,
-.writing h2:after,
-.writing h3:after,
-.writing h4:after,
-.writing h5:after,
-.writing h6:after {
+.writing h1:after, .writing h2:after, .writing h3:after, .writing h4:after, .writing h5:after, .writing h6:after, .writing .HyperMD-header-1::after, .writing .HyperMD-header-2::after, .writing .HyperMD-header-3::after, .writing .HyperMD-header-4::after {
   height: 0 !important;
 }
 

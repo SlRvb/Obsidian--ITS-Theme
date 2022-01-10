@@ -813,6 +813,11 @@ settings:
         id: illusion
         type: class-toggle
     -
+        title: Header Color Override
+        description: Header color always applied over other markdown in the header
+        id: hd-ovr
+        type: class-toggle
+    -
         title: Lists
         id: Lists
         type: heading
@@ -5620,6 +5625,11 @@ body .illusion .markdown-preview-view .heading-collapse-indicator {
 }
 .is-live-preview .HyperMD-header .cm-fold-indicator .collapse-indicator {
   right: -5px;
+}
+
+/*Apply Header Color Over Link*/
+body.hd-ovr h1 > *, body.hd-ovr h2 > *, body.hd-ovr h3 > *, body.hd-ovr h4 > *, body.hd-ovr h5 > *, body.hd-ovr h6 > *, body.hd-ovr .cm-s-obsidian .cm-header > * {
+  color: var(--headers);
 }
 
 /*--Kanban--*/

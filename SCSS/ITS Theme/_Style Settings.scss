@@ -812,6 +812,11 @@ settings:
         id: illusion
         type: class-toggle
     -
+        title: Header Color Override
+        description: Header color always applied over other markdown in the header
+        id: hd-ovr
+        type: class-toggle
+    -
         title: Lists
         id: Lists
         type: heading

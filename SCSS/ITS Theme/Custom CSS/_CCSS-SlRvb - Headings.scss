@@ -268,3 +268,15 @@ body .illusion {
         right: -5px;
     }
 } 
+
+/*Apply Header Color Over Link*/
+body.hd-ovr {
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6,
+    & .cm-s-obsidian .cm-header
+    { & > * { color: var(--headers); } }
+}

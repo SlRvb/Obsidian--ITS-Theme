@@ -7815,7 +7815,22 @@ body .dice-roller-view .dice-roller-grid .advantage-disadvantage button + button
 
 /*Plugin: Fantasy Calendar*/
 .workspace-leaf-content[data-type=FANTASY_CALENDAR] .view-content {
-  padding: 10px;
+  padding: 0 10px;
+}
+
+body .fantasy-calendar .weekdays.weekdays, body .fantasy-calendar .weeks {
+  font-weight: 900;
+  background-color: var(--th);
+  border-radius: var(--radius);
+}
+
+body .fantasy-calendar .weekdays .weekday, body .fantasy-calendar .weeks .week-num {
+  padding: 0px;
+  border-radius: var(--radius);
+}
+body .fantasy-calendar .weeks .week-num-container {
+  padding: 0px 5px;
+  background-color: var(--outer-bar);
 }
 
 textarea,

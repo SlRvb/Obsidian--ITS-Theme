@@ -9,6 +9,7 @@ body .fantasy-calendar {
     & .weeks {
         font-weight: 900;
         background-color: var(--th);
+        color: var(--text-dl);
         border-radius: var(--radius);
     }
 }
@@ -20,6 +21,7 @@ body .fantasy-calendar {
     }
     & .weeks .week-num-container {
         padding: 0px 5px;
+        color: var(--text);
         background-color: var(--outer-bar);
     }
 }

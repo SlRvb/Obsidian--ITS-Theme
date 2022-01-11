@@ -1275,6 +1275,22 @@ settings:
 		default-dark: '#11151d'
 		default-light: '#f1f5ff'
     -
+        title: Progress Bar Value Color
+        description: HTML <progress> value color
+        id: progress
+        type: variable-themed-color
+		format: hex
+		default-dark: '#863737'
+		default-light: '#912e2e'
+    -
+        title: Progress Bar Background Color
+        description: HTML <progress> value color
+        id: progress
+        type: variable-themed-color
+		format: hex
+		default-dark: '#252c36'
+		default-light: '#e1e9f6'
+    -
         title: Other
         id: Other-Colors
         type: heading

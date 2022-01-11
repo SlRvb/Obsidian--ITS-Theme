@@ -4,8 +4,8 @@ progress {
     appearance: none;
 }
 progress::-webkit-progress-bar {
-    background: var(--bg);
+    background: var(--progress-bg);
 }
 progress::-webkit-progress-value {
-    background: var(--c2, var(--accent));
+    background: var(--progress);
 }

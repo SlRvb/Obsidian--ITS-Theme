@@ -1276,6 +1276,22 @@ settings:
 		default-dark: '#11151d'
 		default-light: '#f1f5ff'
     -
+        title: Progress Bar Value Color
+        description: HTML <progress> value color
+        id: progress
+        type: variable-themed-color
+		format: hex
+		default-dark: '#863737'
+		default-light: '#912e2e'
+    -
+        title: Progress Bar Background Color
+        description: HTML <progress> value color
+        id: progress
+        type: variable-themed-color
+		format: hex
+		default-dark: '#252c36'
+		default-light: '#e1e9f6'
+    -
         title: Other
         id: Other-Colors
         type: heading
@@ -2455,6 +2471,8 @@ body:not(.its-i) svg.clock-glyph {
   /*#2a3b55, #3c5274*/
   --i-at: #bf5e5e;
   --bttn: var(--dark-accent);
+  --progress: var(--accent);
+  --progress-bg: var(--bg);
   --graph-bg: var(--outer-bar);
   --graph-lines: var(--dark-accent);
   --graph-node: var(--fg);
@@ -2597,6 +2615,8 @@ body:not(.its-i) svg.clock-glyph {
   --hr: #d6deea;
   --i-at: var(--headers)/*#804848*/;
   --bttn: var(--headers);
+  --progress: var(--accent);
+  --progress-bg: var(--bg);
   --graph-bg: var(--note);
   --graph-lines: #e4e7f8;
   --graph-node: var(--headers);
@@ -4509,11 +4529,11 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-  background: var(--bg);
+  background: var(--progress-bg);
 }
 
 progress::-webkit-progress-value {
-  background: var(--c2, var(--accent));
+  background: var(--progress);
 }
 
 /*CSS class, Hide Frontmatter*/

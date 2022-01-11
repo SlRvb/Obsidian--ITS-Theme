@@ -86,6 +86,8 @@
     --hr: #2f3b4d; /*#2a3b55, #3c5274*/
     --i-at: #bf5e5e;
     --bttn: var(--dark-accent);
+    --progress: var(--accent);
+    --progress-bg: var(--bg);
     
     --graph-bg: var(--outer-bar);
     --graph-lines: var(--dark-accent);
@@ -218,6 +220,8 @@
     --hr: #d6deea;
     --i-at: var(--headers)/*#804848*/;
     --bttn: var(--headers);
+    --progress: var(--accent);
+    --progress-bg: var(--bg);
     
     --graph-bg: var(--note);
     --graph-lines: #e4e7f8;

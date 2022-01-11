@@ -17,7 +17,15 @@ https://yoksel.github.io/url-encoder/
     height: 16px;
     vertical-align: text-top;
 }
+/*----Align Subfolders----*/
+.nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
+    padding-left: 0px;
+}
 
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) {
+    margin-top: 4px;
+    padding-bottom: 4px;
+}
 
 /*Theme: Add Your Colors and Icons Here*/
 .theme-dark {
@@ -29,6 +37,7 @@ https://yoksel.github.io/url-encoder/
     Change c to whatever variable name you want*/
     --c: gray;
     --c2: #000000;
+    --c-t: #00000030; /*This is the Root Folder background color*/
 }
 
 .theme-light {
@@ -40,6 +49,7 @@ https://yoksel.github.io/url-encoder/
     Change c to whatever variable name you want*/
     --c: gray;
     --c2: #000000;
+    --c-t: #00000030; /*This is the Root Folder background color*/
 }
 
 
@@ -70,7 +80,11 @@ https://yoksel.github.io/url-encoder/
 .nav-file-title[data-path*=""]:hover { 
     border-color: var(--c);
 }
-
+/*Opened Root Folder Background Color & Bottom Border*/
+.nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title[data-path^=""] + .nav-folder-children {
+    background-color: var(--c-t);
+    border-bottom: 2px solid var(--c2);
+}
 
 
 
@@ -122,6 +136,11 @@ Skip this if you only want to add icons.*/
 .nav-file-title[data-path*="Template"]:hover { 
     border-color: var(--f-c);
 }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title[data-path^="Template"] + .nav-folder-children {
+    background-color: var(--c-t);
+    border-bottom: 2px solid var(--c2);
+}
+
 /*----Example End (Delete Me)----*/
 
 

@@ -11,49 +11,53 @@
     padding-right: 40px; /*Don't overlap with "*/
 }
 
-/*Quotation Mark*/
-.reveal blockquote:before,
-.markdown-preview-view blockquote:before {
-    content: '\201D';
-    position: absolute;
-    top: .4em;
-    right: .2em;
-    font-size: 50px;
-    font-family: var(--font);
-    color: var(--headers);
-}
-/*Undo Slides Styling*/
-.reveal blockquote {
-    box-shadow: none;
-    font-style: initial;
-    margin: auto;
-}
-.reveal blockquote:before {
-    top: 10px;
-    right: 10px;
-    font-size: 70px;
-}
-
-/*Fix Blockquote Mark*/
-.markdown-preview-view li blockquote:before { top: .3em; }
-
-/*Flush Table Embed of Blockquotes*/
-table .markdown-embed-content > .markdown-preview-view blockquote {
-    margin: 0;
-    overflow: hidden !important;
-}
-
 /*Live Preview Quotes*/
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
 	background-color: var(--embed-bg);
     border-color: var(--bg);
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-right: 15px;
 }
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover {
     border-color: var(--hr);
 }
 
+
+/*Quotation Mark*/
+.reveal blockquote:before,
+.markdown-preview-view blockquote:before,
+.HyperMD-quote-1 .cm-formatting-quote::before {
+    content: '\201D';
+    font-family: var(--font);
+    color: var(--headers);
+    transform: scale(3.2);
+}
+.reveal blockquote:before,
+.markdown-preview-view blockquote:before {
+    position: absolute;
+    top: 1.4em;
+    right: 1.2em;
+}
+.HyperMD-quote-1 .cm-formatting-quote::before {    
+    float: right;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 2px;
+}
+
+/*Undo Slides Styling*/
+.reveal blockquote {
+    box-shadow: none;
+    font-style: initial;
+    margin: 10px auto;
+}
+.reveal blockquote p { margin: 10px; }
+.reveal blockquote:before {
+    top: 1.5em;
+    right: 1em;
+    transform: scale(3.2);
+}
 
 /*Paraphrase Quotes*/
 blockquote > blockquote::before { display: none; }
@@ -74,18 +78,29 @@ blockquote > blockquote::before { display: none; }
     border-left-width: 2px;
 }
 
+
 /*--Special Blockquote Formatting--*/
+.cm-line:not(.cm-active) .cm-quote.cm-quote-3,
+.markdown-preview-view blockquote > blockquote > blockquote,
 blockquote mark strong {
 	display: block;
 	color: var(--headers);
 	text-align: right;
     background-color: transparent;
     font-style: italic;
+    font-weight: 900;
+    border: 0;
 }
-//.cm-line:not(.cm-active) .cm-quote.cm-highlight.cm-strong {
-//    background: transparent;
-//    color: var(--headers)
-//}
+.cm-line:not(.cm-active) .cm-quote.cm-quote-3 {
+    display: unset;
+    float: right;
+    margin-top: 0;
+}
+.markdown-preview-view blockquote > blockquote > blockquote {
+    padding-right: 37px;
+}
+//Remove LP Quote Borders
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 .cm-blockquote-border { border: 0; }
 
 em mark,
 em mark em {
@@ -105,6 +120,26 @@ em mark em {
 em mark em {
     font-style: unset;
 }
+
+
+
+
+
+/*Fix Blockquote Mark*/
+.markdown-preview-view li blockquote:before { top: .3em; }
+
+/*Flush Table Embed of Blockquotes*/
+table .markdown-embed-content > .markdown-preview-view blockquote {
+    margin: 0;
+    overflow: hidden !important;
+}
+
+
+
+
+
+
+
 
 
 /*--Blockquote Adjustments--*/

@@ -17,24 +17,26 @@
 - [Alternate Themes](Guide/Alternate-Themes.md)
 - [\<i>\</i>](Guide/HTML-I-Attributes.md)
 - [Alternate Admonitions](Guide/Alternate-Admonitions.md)
+- [Folder Styles](Guide/Snippet-Folder-Styles.md)
 
 ---
-**Download:**
-(Download these for a better experience)
-- **[Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings)**
-	Allows you to customize the ITS Theme to your liking
+###### Download
+Download these for a better experience
 
-- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Encoded%20Icons.css)**
-	Other icon fonts that are used in the [Alternate Themes Snippet](Guide/Alternate-Themes.md)
+- **[Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings)** <br> Allows you to customize the ITS Theme to your liking
 
-**Snippets already included in the ITS Theme:** 
-(No need to download these if you're using the ITS Theme)
+- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Encoded%20Icons.css)** <br> Other icon fonts that are used in the [Alternate Themes Snippet](Guide/Alternate-Themes.md)
+
+###### Snippets Already Included
+No need to download these snippets to your vault if you're using the ITS Theme, they work out of the box the moment you install ITS
+
 - S - Checkboxes
 - S - Image Adjustments
 - S - Aside
 - S - Embed Adjustments
 - S - Kanban
 
+---
 # Features
 - **Dark and Light mode**
 - Colored Graph

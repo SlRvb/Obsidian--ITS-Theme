@@ -1,0 +1,42 @@
+
+
+# Alternate Checkboxes
+
+> Different checkbox types
+
+#  Checkbox Types
+```markdown
+- [ ] Unchecked
+- [x] Regular
+- [X] Checked
+- [-] Dropped
+- [>] Forward
+- [D] Defer
+- [?] Question
+- [/] Half Done
+- [+] Add
+- [R] Research
+- [!] Important
+- [i] Idea
+- [B] Brainstorm
+- [P] Pro
+- [C] Con
+- [Q] Quote
+- [N] Note
+- [b] Bookmark
+- [I] Information
+```
+
+# Styling
+Style Settings found under:
+`Note Elements > Lists > Checkboxes`
+
+**Colorful Text**
+Toggled on by default 
+![](../Images/Alternate_Checkbox-Colored-Text.png)
+
+**Dim Text**
+![](../Images/Alternate_Checkbox-Dim-Text.png)
+
+**Colorful Backgrounds:**
+![](../Images/Alternate_Checkbox-Colored-Background.png)

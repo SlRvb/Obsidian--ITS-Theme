@@ -1,7 +1,6 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N64JN4L)
 
-# ITS Theme
-**By SlRvb**
+# ITS Theme by SlRvb
 
 > Theme for my Obsidian Story Vault: **In The Shadows**.
 
@@ -11,11 +10,30 @@
 # Guide/Reference
 
 - [CSS Classes](Guide/CSS-Classes.md)
-- [\<i>\</i>](Guide/HTML-I-Attributes.md)
 - [Asides](Guide/Asides.md)
-- [Image Positions](Guide/Image-Positions.md)
+- [Alternate Checkboxes](Alternate-Checkboxes.md)
+- [Image Positions/Adjustments](Guide/Image-Positions.md)
 - [Embed Adjustments](Guide/Embed-Adjustments.md)
 - [Alternate Themes](Guide/Alternate-Themes.md)
+- [\<i>\</i>](Guide/HTML-I-Attributes.md)
+- [Alternate Admonitions](Guide/Alternate-Admonitions.md)
+
+---
+**Download:**
+(Download these for a better experience)
+- **[Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings)**
+	Allows you to customize the ITS Theme to your liking
+
+- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Encoded%20Icons.css)**
+	Other icon fonts that are used in the [Alternate Themes Snippet](Guide/Alternate-Themes.md)
+
+**Snippets already included in the ITS Theme:** 
+(No need to download these if you're using the ITS Theme)
+- S - Checkboxes
+- S - Image Adjustments
+- S - Aside
+- S - Embed Adjustments
+- S - Kanban
 
 # Features
 - **Dark and Light mode**

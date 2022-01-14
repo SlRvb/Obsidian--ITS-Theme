@@ -1,5 +1,5 @@
 # CSS Classes
-CSS Classes to add in the frontmatter/yaml to change the way a page looks.
+> CSS Classes to add in the frontmatter/yaml to change the way a page looks.
 
 **Example:**
 ```
@@ -22,10 +22,10 @@ Classes | Description
 `t-w` | Table expands to fill the whole width of the file
 `hc` | Center headings
 `hcl` | Center headings with a line on each side
-`illusion` | Apply Illusion Theme inspired styling to headings
+`illusion` | Apply [Illusion Theme](https://github.com/ZaherAlMajed/Illusion-Theme.md) inspired styling to headings
 `dvl` | Stylize Dataview Lists to be more spaced out and have a background
 `s-li` | Space out lists
-`img-grid` | Apply image grid to all pictures on page
+`img-grid` | Apply [image grid](Image-Positions#image%20grid) to all pictures on page
 
 ## Ids 
 

@@ -6213,27 +6213,6 @@ input[type=checkbox]:checked::before {
   color: var(--soft-text);
 }
 
-/* Hide Checkbox Border */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task=x]):not([data-task=" "]),
-.markdown-preview-view .task-list-item:not([data-task=x]):not([data-task=" "]) .task-list-item-checkbox:checked {
-  border: none;
-  background-color: transparent;
-}
-
-/* Checkbox Icon Setup*/
-.markdown-source-view.mod-cm6 .task-list-item-checkbox::before,
-.markdown-preview-view :not(li[data-task=x]) > .task-list-item-checkbox:checked::before,
-.markdown-preview-view :not(li[data-task=x]) p .task-list-item-checkbox:checked::before {
-  content: " ";
-  position: relative;
-  font-family: var(--its);
-  padding-left: 0px;
-  font-weight: 10;
-  border: none;
-  width: initial;
-  height: initial;
-}
-
 /*CodeMirrorOptions Plugin Support*/
 body.theme-dark.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task,
 body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task {
@@ -7367,17 +7346,12 @@ input[type=number]:hover {
   margin-right: -5px;
 }
 
-@media screen and (max-width: 750px) {
-  .site-footer {
-    visibility: hidden;
-  }
-}
 .site-footer {
   font-size: 13px;
   right: 12px;
   bottom: 0;
   position: absolute;
-  visibility: visible;
+  display: none;
 }
 
 .page-header {
@@ -7404,6 +7378,7 @@ input[type=number]:hover {
 
 .site-body-left-column {
   background-color: var(--outer-bar);
+  flex: 0 0 280px;
 }
 
 .site-body-left-column:before {
@@ -7417,11 +7392,39 @@ input[type=number]:hover {
   z-index: 0;
 }
 
+.tree-item-children .tree-item-children {
+  margin-left: 10px;
+  border-left: 2px solid var(--lines);
+}
+
+.outline-view .tree-item-children {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 2px solid var(--lines);
+}
+
+.outline-view .tree-item-self .tree-item-inner:before {
+  content: "H";
+  padding-right: 5px;
+  margin-left: -13px;
+  font-weight: 900;
+  font-family: "Fira Code";
+  color: var(--lite-accent);
+}
+
+.outline-view .tree-item-children .tree-item-self .tree-item-inner:before {
+  content: "\e802";
+  font-family: var(--its);
+  padding-right: 5px;
+  margin-left: -16px;
+  color: var(--accent2);
+}
+
 .graph-view-container {
   position: relative;
   height: 300px;
   border: 1px solid var(--table);
-  border-radius: 10px;
+  border-radius: var(--radius);
   background-color: var(--graph-bg);
   padding: 4px;
 }

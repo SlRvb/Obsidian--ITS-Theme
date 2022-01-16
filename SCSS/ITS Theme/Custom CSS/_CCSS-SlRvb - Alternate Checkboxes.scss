@@ -7,26 +7,6 @@ input[type=checkbox]:checked::before {
     color: var(--soft-text);
 }
 
-/* Hide Checkbox Border */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]),
-.markdown-preview-view .task-list-item:not([data-task="x"]):not([data-task=" "]) .task-list-item-checkbox:checked {
-    border: none;
-    background-color: transparent;
-}
-/* Checkbox Icon Setup*/
-.markdown-source-view.mod-cm6 .task-list-item-checkbox::before,
-.markdown-preview-view :not(li[data-task="x"]) > .task-list-item-checkbox:checked::before,
-.markdown-preview-view :not(li[data-task="x"]) p .task-list-item-checkbox:checked::before {
-    content: ' ';
-    position: relative;
-    font-family: var(--its);
-    padding-left: 0px;
-    font-weight: 10;
-    border: none;
-    width: initial;
-    height: initial;
-}
-
 /*CodeMirrorOptions Plugin Support*/
 body.theme-dark.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task,
 body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task { filter: unset; }

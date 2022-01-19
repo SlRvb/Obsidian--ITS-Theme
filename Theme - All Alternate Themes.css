@@ -1526,12 +1526,12 @@ settings:
   /*Burnt Paper Edges*/
   /*Transparent BGs*/
 }
-.paper .markdown-source-view, .paper .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme), .paper .workspace-leaf:not(.mod-active) .view-header, .paper .modal.mod-settings .vertical-tab-content-container, .paper canvas, .paper .workspace-drawer-inner, .paper .modal, .paper .community-plugin-search, .paper .prompt,
+.paper .markdown-source-view, .paper .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme), .paper .workspace-leaf:not(.mod-active) .view-header, .paper .modal.mod-settings .vertical-tab-content-container, .paper .workspace-leaf-content[data-type="graph"] > canvas, .paper .workspace-drawer-inner, .paper .modal, .paper .community-plugin-search, .paper .prompt,
 .wotc .markdown-source-view,
 .wotc .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme),
 .wotc .workspace-leaf:not(.mod-active) .view-header,
 .wotc .modal.mod-settings .vertical-tab-content-container,
-.wotc canvas,
+.wotc .workspace-leaf-content[data-type="graph"] > canvas,
 .wotc .workspace-drawer-inner,
 .wotc .modal,
 .wotc .community-plugin-search,

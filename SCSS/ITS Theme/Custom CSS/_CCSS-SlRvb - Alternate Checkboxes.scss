@@ -3,8 +3,8 @@
 input[type=checkbox]:checked::before {
     padding-left: .2em;
     font-family: var(--its, var(--font-monospace));
-    font-weight: 900;
     color: var(--soft-text);
+    font-weight: 10;
 }
 
 /*CodeMirrorOptions Plugin Support*/
@@ -23,6 +23,7 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
     width: .9em;
     margin-top: .3em;
     margin-left: .25em;
+    font-weight: 10;
 }
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task:not([data-task=" "]):not([data-task="x"])::before {
     border: none;

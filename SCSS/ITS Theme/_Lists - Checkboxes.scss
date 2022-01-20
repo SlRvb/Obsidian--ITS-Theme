@@ -1,6 +1,8 @@
 
 /*--Checkboxes--*/
-.markdown-preview-view .task-list-item-checkbox {
+.markdown-source-view.mod-cm6 .task-list-item-checkbox,
+.markdown-preview-view .task-list-item-checkbox
+{
     -webkit-appearance: none;
     box-sizing: border-box;
     border: 1px solid var(--accent);
@@ -9,20 +11,27 @@
     width: var(--f-s-nt);
     height: var(--f-s-nt);
     filter: none;
+    cursor: pointer;
+    
+    font: var(--its);
+    font-family: var(--its);
+    font-size: inherit;
+}
+.markdown-preview-view .task-list-item-checkbox,
+.task-list-item input[type=checkbox],
+li.task-list-item {
+    vertical-align: 1px;
     margin-left: 0px;
     margin-right: 10px;
-    margin-top: 3px;
-    cursor: pointer;
-    vertical-align: .1em;
 }
 
 /*Checkbox Checked color*/
-.markdown-preview-view .task-list-item-checkbox:checked {
+.task-list-item-checkbox:checked {
     border: none;
     background-color: var(--accent);
 }
 
-/*Checked Checkbox*/
+/*Checked Checkbox*
 body:not(.chkbx-strike) .markdown-preview-view ul > li.task-list-item.is-checked, 
 body:not(.chkbx-strike) .markdown-preview-view ol > li.task-list-item.is-checked {
     text-decoration: unset;
@@ -34,7 +43,7 @@ body:not(.chkbx-strike) li.task-list-item.is-checked > code {
     opacity: 65%;
 }
 /*Uncheck Subchecklists*/
-/*Thanks @foreveryone*/
+/*Thanks @foreveryone*
 body:not(.chkbx-strike) li.task-list-item.is-checked li:not(.is-checked) {
     font-weight: initial; 
     color: var(--text)

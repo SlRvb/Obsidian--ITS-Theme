@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report the bug found in the ITS Theme or it's Snippets
+about: Report the bug found in the ITS Theme or its Snippets
 title: "[Bug] "
 labels: bug
 assignees: SlRvb

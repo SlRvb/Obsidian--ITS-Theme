@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an idea for the ITS Theme or it's Snippets
+about: Suggest an idea for the ITS Theme or its Snippets
 title: "[FR] "
 labels: enhancement
 assignees: SlRvb

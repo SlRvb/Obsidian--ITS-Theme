@@ -24,15 +24,14 @@
     border: 0;
     vertical-align: 0px;
 }
-
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task:not([data-task=" "]):not([data-task="x"])::before {
     border: none;
 }
 
 /*Checked Text*/
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
-ul > li.task-list-item.is-checked, 
-ol > li.task-list-item.is-checked {
+:not(.check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
+:not(.check-text) ul > li.task-list-item.is-checked, 
+:not(.check-text) ol > li.task-list-item.is-checked {
     color: var(--lines, var(--text-faint));
     font-weight: bold;
 }

@@ -411,3 +411,8 @@
         background: rgba(var(--chbx-b), 20%); 
     }
 }
+
+
+/*Hide Border For LP (Aligns Items Strangely) */
+body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] { border: 0; }
+

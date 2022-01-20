@@ -14,7 +14,7 @@
 }
 
 /*Smaller Query Titles*/
-.markdown-preview-view .internal-query .internal-query-header-title {
+.internal-query .internal-query-header-title {
     font-size: 13px;
     font-weight: 600;
     color: var(--soft-text);
@@ -29,6 +29,7 @@
 //Border Line Adjust Height
 .internal-query .search-result-file-match::after { 
     bottom: 0;
+    background-color: var(--bg);
 }
 /*Style Query Match*/
 .internal-query .search-results-children .tree-item {
@@ -42,15 +43,21 @@
 .internal-query .search-results-children .tree-item:nth-child(odd) {
     border-color: var(--accent2);
 }
+//Recolor Text
+.internal-query .tree-item-self,
+.internal-query .search-result-file-matches {
+    color: var(--text);
+}
 //Text Match Styling
 .internal-query .search-result-file-match {
-    padding: 5px 10px;
+    padding: 10px;
     margin: 0;
     margin-left: -4px;
-    border-radius: var(--radius);
     width: calc(100% - 15px);
     font-size: var(--f-s-text);
 }
+.search-result-file-match { border-radius: var(--radius); }
+
 //Hover & Search Title Style
 .workspace-split.mod-root .internal-query .search-result-file-match:hover,
 .internal-query .search-result-file-title {
@@ -62,6 +69,7 @@
     color: var(--text-error);
     font-family: var(--font-monospace);
     text-align: center;
+    margin: 10px;
 }
 
 /*Query Number*/

@@ -2815,6 +2815,10 @@ body:not(.its-i) svg.clock-glyph {
   margin-right: 5px;
 }
 
+.sync-log-container {
+  color: var(--text);
+}
+
 /*Settings: Community Themes*/
 .community-theme {
   background-color: var(--note);
@@ -7062,6 +7066,10 @@ input[type=number]:hover {
   border-radius: var(--radius) !important;
 }
 
+.search-result-hover-button {
+  border-radius: var(--radius);
+}
+
 /*-Graph Settings-*/
 .graph-controls.is-close {
   padding: 6px 8px;
@@ -7167,7 +7175,7 @@ input[type=number]:hover {
 }
 
 /*Smaller Query Titles*/
-.markdown-preview-view .internal-query .internal-query-header-title {
+.internal-query .internal-query-header-title {
   font-size: 13px;
   font-weight: 600;
   color: var(--soft-text);
@@ -7182,6 +7190,7 @@ input[type=number]:hover {
 
 .internal-query .search-result-file-match::after {
   bottom: 0;
+  background-color: var(--bg);
 }
 
 /*Style Query Match*/
@@ -7197,13 +7206,21 @@ input[type=number]:hover {
   border-color: var(--accent2);
 }
 
+.internal-query .tree-item-self,
+.internal-query .search-result-file-matches {
+  color: var(--text);
+}
+
 .internal-query .search-result-file-match {
-  padding: 5px 10px;
+  padding: 10px;
   margin: 0;
   margin-left: -4px;
-  border-radius: var(--radius);
   width: calc(100% - 15px);
   font-size: var(--f-s-text);
+}
+
+.search-result-file-match {
+  border-radius: var(--radius);
 }
 
 .workspace-split.mod-root .internal-query .search-result-file-match:hover,
@@ -7217,6 +7234,7 @@ input[type=number]:hover {
   color: var(--text-error);
   font-family: var(--font-monospace);
   text-align: center;
+  margin: 10px;
 }
 
 /*Query Number*/

@@ -11,9 +11,9 @@
     --background-modifier-form-field-highlighted: rgba(52, 123, 237, 0.22); /*Searched Highlight Color*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*Outershadow*/
     --background-modifier-success: #197300; /*Publish Upload Success Background*/
-    --background-modifier-error: #3d0000; /*Delete Screen Button*/
+    --background-modifier-error: #610505; /*Delete Screen Button*/
     --background-modifier-error-rgb: 61, 0, 0; /*??*/
-    --background-modifier-error-hover: #470000; /*??*/
+    --background-modifier-error-hover: #3d0000; /*Delete Screen Button Hover*/
     --background-modifier-cover: black; /*Obsidian Title Bar Bg*/
     
     --text-on-accent: #dcddde; /*Program Title bar Text*/
@@ -140,9 +140,9 @@
     --background-modifier-form-field-highlighted: rgba(240, 131, 131, 0.22); /*Search Bar Active Highlight*/
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3); /*??*/
     --background-modifier-success: #deedd9; /*Publish Upload Success Background*/
-    --background-modifier-error: var(--interactive-failure); /*Delete Screen Button*/
+    --background-modifier-error: #470000; /*Delete Screen Button*/
     --background-modifier-error-rgb: 240, 131, 131; /*Ctrl F Search Background*/
-    --background-modifier-error-hover: #470000; /*??*/
+    --background-modifier-error-hover: var(--text-error-hover); /*??*/
     --background-modifier-cover: var(--deep-dark-accent); /*Obsidian Title Bar*/
     
     --text-on-accent: #dcddde; /*Program Title bar text*/

@@ -2381,12 +2381,12 @@ body:not(.its-i) svg.clock-glyph {
   /*Outershadow*/
   --background-modifier-success: #197300;
   /*Publish Upload Success Background*/
-  --background-modifier-error: #3d0000;
+  --background-modifier-error: #610505;
   /*Delete Screen Button*/
   --background-modifier-error-rgb: 61, 0, 0;
   /*??*/
-  --background-modifier-error-hover: #470000;
-  /*??*/
+  --background-modifier-error-hover: #3d0000;
+  /*Delete Screen Button Hover*/
   --background-modifier-cover: black;
   /*Obsidian Title Bar Bg*/
   --text-on-accent: #dcddde;
@@ -2531,11 +2531,11 @@ body:not(.its-i) svg.clock-glyph {
   /*??*/
   --background-modifier-success: #deedd9;
   /*Publish Upload Success Background*/
-  --background-modifier-error: var(--interactive-failure);
+  --background-modifier-error: #470000;
   /*Delete Screen Button*/
   --background-modifier-error-rgb: 240, 131, 131;
   /*Ctrl F Search Background*/
-  --background-modifier-error-hover: #470000;
+  --background-modifier-error-hover: var(--text-error-hover);
   /*??*/
   --background-modifier-cover: var(--deep-dark-accent);
   /*Obsidian Title Bar*/
@@ -2955,10 +2955,6 @@ button.mod-cta,
   border-radius: var(--radius);
   font-size: calc(var(--f-text) - 0.12em);
   font-family: var(--default-font);
-}
-
-button.mod-warning {
-  color: var(--text-error);
 }
 
 /*Pinned Pane Button Color*/
@@ -6181,6 +6177,14 @@ ul.kanban ul {
 
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task:not([data-task=" "]):not([data-task=x])::before {
   border: none;
+}
+
+/*Checked Text*/
+:not(.check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
+:not(.check-text) ul > li.task-list-item.is-checked,
+:not(.check-text) ol > li.task-list-item.is-checked {
+  color: var(--lines, var(--text-faint));
+  font-weight: bold;
 }
 
 :not(.chkbx-strike) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),

@@ -42,11 +42,11 @@
 @use 'Custom CSS/CCSS-SlRvb - Kanban' as S-K;
 
 //-Alernate Checkboxes
-@use '../Alternate Checkboxes/Colors' as S-ACC;
-@use '../Alternate Checkboxes/Default Checkbox' as S-ACCHK;
+@use 'Alternate Checkboxes/Colors' as S-ACC;
+@use 'Alternate Checkboxes/Default Checkbox' as S-ACCHK;
 //@use 'Custom CSS/CCSS-SlRvb - Alternate Checkboxes' as S-AC;
-@use '../Alternate Checkboxes/Toggles Strike' as S-TS;
-@use '../Alternate Checkboxes/Checkbox Types' as AC-CT;
+@use 'Alternate Checkboxes/Toggles Strike' as S-TS;
+@use 'Alternate Checkboxes/Checkbox Types' as AC-CT;
 
 //-
 @use 'Custom CSS/CCSS-SlRvb - Resize' as S-R;

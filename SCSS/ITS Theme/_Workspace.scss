@@ -9,6 +9,9 @@
     opacity: 1;
 }
 
+/*Loading Screen*/
+.progress-bar { border-radius: var(--radius); }
+
 /*Drop Menu*/
 .menu {
     border-radius: var(--radius) !important;

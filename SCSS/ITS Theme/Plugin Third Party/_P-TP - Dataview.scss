@@ -1,14 +1,17 @@
 
 /*--Dataview Table--*/
-.table-view-table > thead > tr > th {
-    font-weight: 900 !important;
+body .table-view-table > thead > tr > th {
+    font-weight: 900;
     font-family: var(--font);
     color: var(--headers);
-    border-bottom: solid var(--accent) !important;
+    border-bottom: 2px solid var(--accent);
     background-color: var(--embed-bg);
 }
 
-.dataview-error { font-family: var(--font-monospace); color: var(--code-text) }
+.dataview-error { 
+    font-family: var(--font-monospace);
+    color: var(--code-text)
+}
 
 /*Inline Bracket Syntax*/
 body .dataview.inline-field-standalone-value {
@@ -26,7 +29,10 @@ body .dataview.inline-field-value {
     font-weight: bold;
     padding: 0 10px;
 }
-body .dataview.inline-field-key { background-color: var(--deep-dark-accent); color: var(--text-dl) }
+body .dataview.inline-field-key { 
+    background-color: var(--deep-dark-accent);
+    color: var(--text-dl)
+}
 body .dataview.inline-field-value { background-color: var(--dark-accent); }
 body .dataview.inline-field-value a.tag:first-child { display: none; }
 

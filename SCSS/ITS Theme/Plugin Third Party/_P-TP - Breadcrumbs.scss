@@ -1,37 +1,30 @@
 
 /*Plugin: Breadcrumbs*/
-div.breadcrumbs-matrix-square {
-    border: 2px solid var(--outline) !important;
-    box-shadow: 4px 4px var(--outline);
-    border-radius: var(--radius);
+div.BC-Matrix-square {
+    border: 2px solid var(--outline);
 }
 
-h5.breadcrumbs-matrix-header {
-    font-size: 14px !important;
-    font-family: var(--default-font) !important;
-    font-weight: 700 !important;
-}
-h3.breadcrumbs-matrix-header {
-    font-size: 18px !important;
+h4.BC-Matrix-header {
     text-transform: capitalize;
-    color: var(--headers) !important;
+    color: var(--headers);
 }
-h3.breadcrumbs-matrix-header:after { display: none; }
+h4.BC-Matrix-header::after { display: none; }
 
 /* Side Panel */
 div.BC-Matrix > div { 
     border: 0 !important; 
-    box-shadow: -4px 4px 0 var(--outline);
+    //box-shadow: -4px 4px 0 var(--outline);
 }
-div.BC-Matrix-square {
+body div.BC-Matrix-square {
     border: 3px solid var(--outline) !important;
+    box-shadow: 4px 4px var(--outline);
+    border-radius: var(--radius);
 
     //Align List item text to Left
     & ol { text-align: left; }
-    
-    //Remove Empty Space in Implied Panel
-    & > .BC-Matrix-headers + .BC-Matrix-headers { display: none !important; }
 }
+//Remove Second Scrollbar
+body .BC-Matrix.markdown-preview-view { height: unset; }
 
 
 

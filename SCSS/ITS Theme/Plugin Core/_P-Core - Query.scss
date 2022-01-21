@@ -25,6 +25,7 @@
 .internal-query .search-result-file-matches {
     border: 0;
     padding: 0;
+    margin-left: 0;
 }
 //Border Line Adjust Height
 .internal-query .search-result-file-match::after { 
@@ -39,7 +40,7 @@
     box-shadow: 2px 2px 0 var(--outline);
 }
 //Odd Border Color
-.bl-c .internal-query .search-results-children .tree-item,
+.bl-c .search-results-children .tree-item,
 .internal-query .search-results-children .tree-item:nth-child(odd) {
     border-color: var(--accent2);
 }
@@ -53,7 +54,7 @@
     padding: 10px;
     margin: 0;
     margin-left: -4px;
-    width: calc(100% - 15px);
+    width: 100%;
     font-size: var(--f-s-text);
 }
 .search-result-file-match { border-radius: var(--radius); }
@@ -61,7 +62,7 @@
 //Hover & Search Title Style
 .workspace-split.mod-root .internal-query .search-result-file-match:hover,
 .internal-query .search-result-file-title {
-    background: var(--aside-bg);
+    background: var(--td);
     box-shadow: 0 2px 0 var(--td);
 }
 /*Query No Matches Found*/
@@ -73,7 +74,7 @@
 }
 
 /*Query Number*/
-.internal-query .tree-item-flair {
+.search-result-file-title .tree-item-flair {
     background-color: var(--note);
     box-shadow: 0 3px var(--outline);
     font-family: var(--font-monospace);

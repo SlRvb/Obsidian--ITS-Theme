@@ -2,8 +2,9 @@
 
 /*--Outgoing Links--*/
 body .search-result-file-match-destination-file-container .search-result-file-match-destination-file {
-    border-radius: var(--radius) !important;
+    border-radius: var(--radius);
     border: 0;
+    font-weight: 900;
 }
 
 .outgoing-link-item.outgoing-link-item:nth-child(odd) {

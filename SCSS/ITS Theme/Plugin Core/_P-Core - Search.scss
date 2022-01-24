@@ -52,24 +52,34 @@ input[type='number']:hover {
     border-radius: var(--radius);
     padding: 0;
 }
-.search-result-hover-button,
-.search-suggest-item.is-selected, 
-.suggestion-container,
-.suggestion {
-    border-radius: var(--radius) !important;
+body .search-result-hover-button,
+body .search-suggest-item.is-selected, 
+body .suggestion-container,
+body .suggestion {
+    border-radius: var(--radius);
 }
+
+
 
 /*Search Styling*/
 .search-results-children .search-result {
-    box-shadow: 2px 2px 0 var(--outline);
-    border-left: var(--b-line) solid var(--bg); 
-    //border: var(--b-line) solid var(--outline);
-    background: var(--note);
     margin-right: 7px;
+    margin-bottom: 10px; 
+    
+    background: var(--note);
+    border: 2px solid var(--outline); 
+    box-shadow: 2px 2px 0 var(--outline);
 }
+.search-result-file-match:after { left: -7px; }
+.internal-query .search-result-file-match:after { left: 0; }
+
 .search-result-file-title {
-    background: var(--aside-bg);
+    //background: var(--aside-bg);
+    background: var(--code-bg);
     box-shadow: 0 2px 0 var(--td);
+    padding: 5px;
+    padding-left: 20px;
+    line-height: var(--lh);
 }
 /*
 .search-result-file-title .tree-item-inner::before {
@@ -77,22 +87,27 @@ input[type='number']:hover {
     font-family: var(--its);
     padding-right: 5px;
 }*/
+.search-result .collapse-icon svg {
+    color: var(--soft-text);
+}
+
 .search-result-file-match {
     margin: auto;
     width: auto;
     z-index: 0;
+    padding: 8px 10px;
+    color: var(--text);
 }
-.workspace-leaf-content[data-type='search'] .search-result-file-matches,
 .search-result-file-matches {
     margin: 0;
-    padding: 0;
+    padding: 0; 
     border: 0;
+    //box-shadow: 2px 2px 0 var(--outline); 
+    //background-color: var(--td);
 }
-.search-result-file-match:not(:last-child) {
-    margin-bottom: 2px;
-}
-
+.search-result-file-match:not(:last-child) { margin-bottom: 5px; }
 .search-result-file-match:after {
     bottom: 0;
     background-color: var(--bg);
 }
+.search-result:last-child .search-result-file-matches { border-color: var(--outline); }

@@ -2,14 +2,15 @@
 /*Remove Borders and Outer Margins*/
 .internal-query {
     margin: 10px 0;
-    border: 3px solid var(--outer-bar);
+    border: 3px solid var(--code-bg);
     border-top: 0;
+    background: var(--note);
 }
 .internal-query .search-result-container { padding: 0 4px; }
 
 /*Query Header*/
 .internal-query .internal-query-header {
-    background-color: var(--outer-bar);
+    background-color: var(--code-bg);
     padding: 5px;
 }
 
@@ -35,15 +36,11 @@
 /*Style Query Match*/
 .internal-query .search-results-children .tree-item {
     background: var(--note);
-    margin: 5px 0;
-    border-left: 2px solid var(--accent);
-    box-shadow: 2px 2px 0 var(--outline);
+    margin: 10px 0;
+    //border: 2px solid var(--outline);
+    //box-shadow: 2px 2px 0 var(--outline);
 }
-//Odd Border Color
-.bl-c .search-results-children .tree-item,
-.internal-query .search-results-children .tree-item:nth-child(odd) {
-    border-color: var(--accent2);
-}
+
 //Recolor Text
 .internal-query .tree-item-self,
 .internal-query .search-result-file-matches {
@@ -62,7 +59,7 @@
 //Hover & Search Title Style
 .workspace-split.mod-root .internal-query .search-result-file-match:hover,
 .internal-query .search-result-file-title {
-    background: var(--td);
+    //background: var(--td);
     box-shadow: 0 2px 0 var(--td);
 }
 /*Query No Matches Found*/
@@ -73,9 +70,9 @@
     margin: 10px;
 }
 
-/*Query Number*/
-.search-result-file-title .tree-item-flair {
+/*Query Number
+.tree-item.search-result:not(.is-collapsed) .search-result-file-title .tree-item-flair {
     background-color: var(--note);
-    box-shadow: 0 3px var(--outline);
+    box-shadow: 0 2px var(--outline);
     font-family: var(--font-monospace);
-}
+}*/

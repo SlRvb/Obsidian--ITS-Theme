@@ -5,9 +5,10 @@ body .search-result-file-match-destination-file-container .search-result-file-ma
     border-radius: var(--radius);
     border: 0;
     font-weight: 900;
+    box-shadow: 0px 2px 0 var(--outline);
 }
 
-.outgoing-link-item.outgoing-link-item:nth-child(odd) {
+.outgoing-link-item.outgoing-link-item:nth-child(odd):not(:hover) {
     background-color: var(--td);
 }
 

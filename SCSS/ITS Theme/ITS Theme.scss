@@ -1,6 +1,7 @@
 //---Settings
 @use 'Style Settings' as StSe;
 @use 'Fonts';
+//@use '../Alternate Themes/Fonts' as Alt-F;
 @use 'Font - Icon' as FI;
 
 @use 'Variables - Global' as VG;
@@ -121,3 +122,15 @@
 
 //---Other
 @use 'Export';
+
+//--Alt Themes
+@use '../Alternate Themes/Th--SlRvb Blue' as sblue;
+@use '../Alternate Themes/Th--SlRvb Gray' as sGray;
+@use '../Alternate Themes/Th--School Days' as sd;
+@use '../Alternate Themes/Th--D&D' as DND;
+@use '../Alternate Themes/Th--D&D WOTC-Beyond' as WOTC-Beyond;
+@use '../Alternate Themes/Th--D&D WOTC' as WOTC;
+@use '../Alternate Themes/Th--Tangerine Dunes' as td;
+@use '../Alternate Themes/Th--Drowned';
+@use '../Alternate Themes/Th--Minimalist';
+@use '../Alternate Themes/Th--ITS Dark' as itsd;

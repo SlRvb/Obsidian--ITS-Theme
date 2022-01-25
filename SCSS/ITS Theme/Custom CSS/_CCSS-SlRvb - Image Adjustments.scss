@@ -84,9 +84,9 @@ img[alt*="ctr"],
 /*Image Locations*/
 /*Left & Right*/
 .view-content > :not(.is-live-preview) {
+    & img,
     & .image-embed {
         &[alt*="left"],
-        &[src*="#left"],
         &[alt*="locl"],
         &[src*="#locl"] img 
         {
@@ -97,7 +97,6 @@ img[alt*="ctr"],
         }
 
         &[alt*="right"],
-        &[src*="#right"],
         &[alt*="locr"],
         &[src*="#locr"] img 
         {

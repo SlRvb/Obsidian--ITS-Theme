@@ -269,9 +269,13 @@ body:not(.type-undo) .nav-file-title {
     padding-left: 5px;
     color: var(--file);
 }
-.nav-file-title:hover {
-    color: var(--f-hover) !important;
-    font-weight: 600; 
+.nav-file-title.is-active, 
+.nav-folder-title.is-active, 
+body:not(.is-grabbing) .nav-file-title:hover, 
+body:not(.is-grabbing) .nav-folder-title:hover {
+    color: var(--f-hover);
+    font-weight: 600;
+    background: var(--outer-bar);
 }
 .nav-folder-children .nav-file-title-content::before{
     color: var(--f-icon);

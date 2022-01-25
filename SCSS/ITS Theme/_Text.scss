@@ -110,11 +110,11 @@ code,
     z-index: 0 !important;
     text-align: left; /*Fix Codeblock Justify Error*/
 }
-/*Hide weird Tokening BG Coloring*/
+/*Hide weird Tokening BG Coloring
 .token.operator {
     color: var(--headers) !important;
     background: transparent !important;
-}
+}*/
 
 /*.is-live-preview .cm-line:not(.cm-active) .cm-inline-code { padding: 2px 4px; }*/
 

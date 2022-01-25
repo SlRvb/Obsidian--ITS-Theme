@@ -111,3 +111,9 @@ body .suggestion {
     background-color: var(--bg);
 }
 .search-result:last-child .search-result-file-matches { border-color: var(--outline); }
+
+
+.search-result-file-match:hover {
+    background: var(--outer-bar);
+    color: var(--text-on-accent);
+}

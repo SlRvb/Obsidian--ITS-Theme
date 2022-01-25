@@ -13,7 +13,8 @@
 .ntsz p,
 .ntsz li,
 .ntsz table, 
-.ntsz .cm-s-obsidian .CodeMirror-lines {
+.ntsz .cm-s-obsidian .CodeMirror-lines,
+.ntsz .cm-s-obsidian {
     font-size: var(--nt-f);
 }
 

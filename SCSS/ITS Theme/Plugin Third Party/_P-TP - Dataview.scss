@@ -6,11 +6,18 @@ body .table-view-table > thead > tr > th {
     color: var(--headers);
     border-bottom: 2px solid var(--accent);
     background-color: var(--embed-bg);
+    white-space: pre;
+}
+.table-view-table > tbody > tr > td {
+    word-wrap: normal;
+    word-break: normal;
 }
 
-.dataview-error { 
+.dataview.dataview-error {
     font-family: var(--font-monospace);
-    color: var(--code-text)
+    color: var(--code-text);
+    word-wrap: normal;
+    white-space: pre-wrap;
 }
 
 /*Inline Bracket Syntax*/

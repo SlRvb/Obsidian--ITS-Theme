@@ -1,5 +1,17 @@
 
 /*--Settings Menu--*/
+.vertical-tab-header-group { 
+    padding: 0; 
+    margin-bottom: 10px;
+}
+.vertical-tab-header-group-title {
+    padding-top: 10px;
+    font-weight: 900;
+    background-color: var(--td);
+    border-bottom: 2px solid var(--accent);
+    color: var(--headers);
+}
+
 /*Settings Menu: Font Sizes*/
 .modal.mod-settings .modal-content {
     font-size: var(--f-text);
@@ -8,6 +20,7 @@
 .vertical-tab-header-group-title {
     font-size: calc(var(--f-text) - .12em);
 }
+
 
 
 /*Square Settings & Quick Switcher/Command Palatte*/
@@ -43,6 +56,7 @@
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .vertical-tab-header {
     height: 90vh;
+    padding: 0;
 }
 
 /*Setting Header Underline*/
@@ -169,7 +183,12 @@
 /* Fix Selected Colors*/
 .community-theme.is-selected { color: var(--text-dl) }
 .community-theme.is-selected .clickable-icon { color: var(--text-dl); }
-
+.community-theme-remove-button {
+    background-color: var(--background-modifier-error);
+    color: var(--text-dl);
+    border-radius: var(--radius);
+    padding-top: 7px;
+}
 
 
 /*Settings Toggle*/

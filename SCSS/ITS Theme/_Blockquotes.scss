@@ -9,6 +9,7 @@
     position: relative;
     margin: 1em;
     padding-right: 40px; /*Don't overlap with "*/
+    box-shadow: 2px 2px 0 var(--td);
 }
 
 /*Live Preview Quotes*/
@@ -18,6 +19,7 @@
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 15px;
+    box-shadow: 2px 2px 0 var(--td);
 }
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover {
     border-color: var(--hr);
@@ -27,7 +29,7 @@
 /*Quotation Mark*/
 .reveal blockquote:before,
 .markdown-preview-view blockquote:before,
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1 .cm-formatting-quote::before {
+.is-live-preview .HyperMD-quote::after {
     content: '\201D';
     font-family: var(--font);
     color: var(--headers);
@@ -39,11 +41,14 @@
     top: 1.4em;
     right: 1.2em;
 }
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1 .cm-formatting-quote::before {    
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1::after {    
     float: right;
-    padding-left: 5px;
+    padding-left: 20px;
     padding-top: 5px;
     padding-right: 2px;
+}
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
+    display: none;
 }
 
 /*Undo Slides Styling*/
@@ -80,8 +85,8 @@ blockquote > blockquote::before { display: none; }
 
 
 /*--Special Blockquote Formatting--*/
-.cm-line:not(.cm-active) .cm-quote.cm-quote-3,
-.markdown-preview-view blockquote > blockquote > blockquote,
+body:not(.dis-tri-quote) .cm-line:not(.cm-active) .cm-quote.cm-quote-3,
+body:not(.dis-tri-quote) .markdown-preview-view blockquote > blockquote > blockquote,
 blockquote mark strong {
 	display: block;
 	color: var(--headers);
@@ -91,16 +96,16 @@ blockquote mark strong {
     font-weight: 900;
     border: 0;
 }
-.cm-line:not(.cm-active) .cm-quote.cm-quote-3 {
+body:not(.dis-tri-quote) .cm-line:not(.cm-active) .cm-quote.cm-quote-3 {
     display: unset;
     float: right;
     margin-top: 0;
 }
-.markdown-preview-view blockquote > blockquote > blockquote {
+body:not(.dis-tri-quote) .markdown-preview-view blockquote > blockquote > blockquote {
     padding-right: 37px;
 }
 //Remove LP Quote Borders
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 .cm-blockquote-border { border: 0; }
+body:not(.dis-tri-quote) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 .cm-blockquote-border { border: 0; }
 
 em mark,
 em mark em {

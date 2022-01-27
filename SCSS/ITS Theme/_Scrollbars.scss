@@ -1,11 +1,12 @@
 
 /*--Scrollbars--*/
 /*Scrollbar*/
-::-webkit-scrollbar-thumb:active
+::-webkit-scrollbar-thumb:active,
 ::-webkit-scrollbar,
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
     border-radius: var(--radius);
-    -webkit-border-radius: var(--radius) !important; /*Remove Rounding*/
+    -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
 body:not(.scrl-d) ::-webkit-scrollbar-thumb { background-color: var(--accent); }
 body:not(.scrl-d) ::-webkit-scrollbar-thumb:hover,

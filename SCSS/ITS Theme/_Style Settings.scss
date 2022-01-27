@@ -64,7 +64,7 @@ settings:
         format: px
         min: 10
         max: 20
-        step: 2
+        step: 1
     -
         title: Header Weights
         id: f-w-h
@@ -714,6 +714,10 @@ settings:
         title: Center Images
         description: Center images by default
         id: imgctr
+        type: class-toggle
+    -
+        title: Disable Triple Blockquote Syntax
+        id: dis-tri-quote
         type: class-toggle
     -
         title: Horizontal Line

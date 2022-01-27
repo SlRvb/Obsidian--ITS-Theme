@@ -10,7 +10,7 @@
 }
 
 /*Loading Screen*/
-.progress-bar { border-radius: var(--radius); }
+.progress-bar-indicator { border-radius: var(--radius); }
 
 /*Drop Menu*/
 .menu {
@@ -103,7 +103,9 @@ button.mod-cta,
     padding: .2em .5em;
     margin: 0px .2em;
 }
-.workspace-tab-header.is-active .workspace-tab-header-inner-icon { color: var(--text-on-accent); }
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon { 
+    color: var(--text-dl);
+}
 
 /*Sidebar Icons: Add Padding to All*/
 .workspace-tab-header {

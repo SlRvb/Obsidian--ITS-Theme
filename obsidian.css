@@ -65,7 +65,7 @@ settings:
         format: px
         min: 10
         max: 20
-        step: 2
+        step: 1
     -
         title: Header Weights
         id: f-w-h
@@ -715,6 +715,10 @@ settings:
         title: Center Images
         description: Center images by default
         id: imgctr
+        type: class-toggle
+    -
+        title: Disable Triple Blockquote Syntax
+        id: dis-tri-quote
         type: class-toggle
     -
         title: Horizontal Line
@@ -2709,6 +2713,19 @@ body:not(.its-i) svg.clock-glyph {
 }
 
 /*--Settings Menu--*/
+.vertical-tab-header-group {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.vertical-tab-header-group-title {
+  padding-top: 10px;
+  font-weight: 900;
+  background-color: var(--td);
+  border-bottom: 2px solid var(--accent);
+  color: var(--headers);
+}
+
 /*Settings Menu: Font Sizes*/
 .modal.mod-settings .modal-content {
   font-size: var(--f-text);
@@ -2756,6 +2773,7 @@ body:not(.its-i) svg.clock-glyph {
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .vertical-tab-header {
   height: 90vh;
+  padding: 0;
 }
 
 /*Setting Header Underline*/
@@ -2900,6 +2918,13 @@ body:not(.its-i) svg.clock-glyph {
   color: var(--text-dl);
 }
 
+.community-theme-remove-button {
+  background-color: var(--background-modifier-error);
+  color: var(--text-dl);
+  border-radius: var(--radius);
+  padding-top: 7px;
+}
+
 /*Settings Toggle*/
 .checkbox-container {
   cursor: pointer;
@@ -2920,8 +2945,11 @@ body:not(.its-i) svg.clock-glyph {
 
 /*--Scrollbars--*/
 /*Scrollbar*/
+::-webkit-scrollbar-thumb:active,
 ::-webkit-scrollbar,
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+  border-radius: var(--radius);
   -webkit-border-radius: var(--radius);
   /*Remove Rounding*/
 }
@@ -2954,7 +2982,7 @@ body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
 }
 
 /*Loading Screen*/
-.progress-bar {
+.progress-bar-indicator {
   border-radius: var(--radius);
 }
 
@@ -3056,7 +3084,7 @@ button.mod-cta,
 }
 
 .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-  color: var(--text-on-accent);
+  color: var(--text-dl);
 }
 
 /*Sidebar Icons: Add Padding to All*/
@@ -3877,6 +3905,7 @@ input[type=checkbox]:checked {
   margin: 1em;
   padding-right: 40px;
   /*Don't overlap with "*/
+  box-shadow: 2px 2px 0 var(--td);
 }
 
 /*Live Preview Quotes*/
@@ -3886,6 +3915,7 @@ input[type=checkbox]:checked {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 15px;
+  box-shadow: 2px 2px 0 var(--td);
 }
 
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover {
@@ -3895,7 +3925,7 @@ input[type=checkbox]:checked {
 /*Quotation Mark*/
 .reveal blockquote:before,
 .markdown-preview-view blockquote:before,
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1 .cm-formatting-quote::before {
+.is-live-preview .HyperMD-quote::after {
   content: "”";
   font-family: var(--font);
   color: var(--headers);
@@ -3909,11 +3939,15 @@ input[type=checkbox]:checked {
   right: 1.2em;
 }
 
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1 .cm-formatting-quote::before {
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1::after {
   float: right;
-  padding-left: 5px;
+  padding-left: 20px;
   padding-top: 5px;
   padding-right: 2px;
+}
+
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
+  display: none;
 }
 
 /*Undo Slides Styling*/
@@ -3955,8 +3989,8 @@ blockquote > blockquote::before {
 }
 
 /*--Special Blockquote Formatting--*/
-.cm-line:not(.cm-active) .cm-quote.cm-quote-3,
-.markdown-preview-view blockquote > blockquote > blockquote,
+body:not(.dis-tri-quote) .cm-line:not(.cm-active) .cm-quote.cm-quote-3,
+body:not(.dis-tri-quote) .markdown-preview-view blockquote > blockquote > blockquote,
 blockquote mark strong {
   display: block;
   color: var(--headers);
@@ -3967,17 +4001,17 @@ blockquote mark strong {
   border: 0;
 }
 
-.cm-line:not(.cm-active) .cm-quote.cm-quote-3 {
+body:not(.dis-tri-quote) .cm-line:not(.cm-active) .cm-quote.cm-quote-3 {
   display: unset;
   float: right;
   margin-top: 0;
 }
 
-.markdown-preview-view blockquote > blockquote > blockquote {
+body:not(.dis-tri-quote) .markdown-preview-view blockquote > blockquote > blockquote {
   padding-right: 37px;
 }
 
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 .cm-blockquote-border {
+body:not(.dis-tri-quote) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 .cm-blockquote-border {
   border: 0;
 }
 
@@ -7826,11 +7860,19 @@ body .table-view-table > thead > tr > th {
   color: var(--headers);
   border-bottom: 2px solid var(--accent);
   background-color: var(--embed-bg);
+  white-space: pre;
 }
 
-.dataview-error {
+.table-view-table > tbody > tr > td {
+  word-wrap: normal;
+  word-break: normal;
+}
+
+.dataview.dataview-error {
   font-family: var(--font-monospace);
   color: var(--code-text);
+  word-wrap: normal;
+  white-space: pre-wrap;
 }
 
 /*Inline Bracket Syntax*/
@@ -11050,7 +11092,7 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-6: var(--file);
 }
 
-.is-active {
+.wotc .is-active {
   color: var(--text-on-accent);
 }
 

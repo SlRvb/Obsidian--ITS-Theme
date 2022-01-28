@@ -18,7 +18,7 @@
     border-color: var(--bg);
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-right: 15px;
+    padding-right: 7px;
     box-shadow: 2px 2px 0 var(--td);
 }
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover {
@@ -29,7 +29,7 @@
 /*Quotation Mark*/
 .reveal blockquote:before,
 .markdown-preview-view blockquote:before,
-.is-live-preview .HyperMD-quote::after {
+.cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {
     content: '\201D';
     font-family: var(--font);
     color: var(--headers);
@@ -41,14 +41,11 @@
     top: 1.4em;
     right: 1.2em;
 }
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1::after {    
+.cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {    
     float: right;
     padding-left: 20px;
     padding-top: 5px;
     padding-right: 2px;
-}
-.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
-    display: none;
 }
 
 /*Undo Slides Styling*/

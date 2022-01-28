@@ -29,11 +29,13 @@
 /*Quotation Mark*/
 .reveal blockquote:before,
 .markdown-preview-view blockquote:before,
-.cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {
+.cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
     content: '\201D';
     font-family: var(--font);
     color: var(--headers);
     transform: scale(3.2);
+    //font-size: 50px;
+    //margin-top: 10px;
 }
 .reveal blockquote:before,
 .markdown-preview-view blockquote:before {
@@ -41,12 +43,12 @@
     top: 1.4em;
     right: 1.2em;
 }
-.cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {    
+.cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {    
     float: right;
-    padding-left: 20px;
     padding-top: 5px;
-    padding-right: 2px;
+    padding-left: 1.3em;
 }
+.is-mobile .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before { display: none; }
 
 /*Undo Slides Styling*/
 .reveal blockquote {

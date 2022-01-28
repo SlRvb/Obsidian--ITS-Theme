@@ -3926,7 +3926,7 @@ input[type=checkbox]:checked {
 /*Quotation Mark*/
 .reveal blockquote:before,
 .markdown-preview-view blockquote:before,
-.cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {
+.cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
   content: "”";
   font-family: var(--font);
   color: var(--headers);
@@ -3940,11 +3940,14 @@ input[type=checkbox]:checked {
   right: 1.2em;
 }
 
-.cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {
+.cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
   float: right;
-  padding-left: 20px;
   padding-top: 5px;
-  padding-right: 2px;
+  padding-left: 1.3em;
+}
+
+.is-mobile .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
+  display: none;
 }
 
 /*Undo Slides Styling*/
@@ -4085,7 +4088,8 @@ b mark strong {
 }
 
 /*--Horizontal Linebreak, HR--*/
-.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+.markdown-source-view.mod-cm6 .cm-content .hr,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-hr {
   contain: style;
 }
 
@@ -4287,7 +4291,6 @@ a.tag:hover {
 .markdown-source-view .file-embed:not(.mod-empty) {
   border-radius: var(--radius);
   border: 0;
-  padding: 0;
 }
 
 /* Recolor Embed Title*/
@@ -11340,9 +11343,7 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-form-field-highlighted: rgba(81, 120, 138, 0.48);
   /*Searched Highlight Color*/
   --background-modifier-error-rgb: 54, 70, 105;
-  /*??*/
   --text-highlight-bg: rgba(60, 159, 168, 0.4);
-  /*Text highlights*/
   --text-highlight-bg-active: #88C0D090;
   --text-selection: #88C0D020;
   /*Cursor dragged highlights*/
@@ -11446,6 +11447,7 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --table: var(--lines);
   --bg: #bdcce6;
   --hr: #D8DEE9;
+  --inactive: var(--soft-text);
   --text: #4C566A;
   --soft-text: #7e8dac;
   --graph-bg: var(--outer-bar);

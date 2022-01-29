@@ -105,7 +105,8 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
 .hc h3,
 .hc h4,
 .hc h5,
-.hc h6 { text-align: center; }
+.hc h6,
+.hc .HyperMD-header { text-align: center; }
 
 
 
@@ -125,7 +126,8 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
         align-items: center;
         text-align: center;
 
-        & > :not(.collapse-indicator) { padding: 0 10px; }
+        & > :not(.collapse-indicator):nth-child(2) { padding: 0 10px; }
+        & > :not(.collapse-indicator):nth-child(2):not(:last-child) { padding: 0 10px; }
     }
 
     & .heading-collapse-indicator { position: absolute; }
@@ -143,7 +145,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
             flex: 1;
         }
         &:before { margin-right: .3em; }
-        &:after { margin-left: .3em; }
+        &:after  { margin-left: .3em; }
     }
 
     & h1:before,

@@ -27,7 +27,7 @@
 }
 
 /*Crop Image in Popover*/
-.popover.hover-popover img:not([alt]):not(.emoji) {
+.popover.hover-popover img:not([alt]):not(.emoji):not(.link-favicon) {
     object-fit: cover;
     height: 200px;
     width: 100%;

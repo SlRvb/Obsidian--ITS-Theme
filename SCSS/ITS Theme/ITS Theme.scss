@@ -14,6 +14,7 @@
 @use 'Scrollbars';
 @use 'Workspace';
 @use 'Workspace - Notes' as WN;
+@use 'File-Folder Explorer' as FFE;
 @use 'Arrows-Sliders' as AS;
 
 @use 'Text';
@@ -124,14 +125,14 @@
 @use 'Export';
 
 //--Alt Themes
-@use '../Alternate Themes/Th--D&D' as DND;
-@use '../Alternate Themes/Th--D&D WOTC-Beyond' as WOTC-Beyond;
-//@use '../Alternate Themes/Th--D&D WOTC' as WOTC;
-@use '../Alternate Themes/Th--SlRvb Blue' as sblue;
-@use '../Alternate Themes/Th--SlRvb Gray' as sGray;
-@use '../Alternate Themes/Th--School Days' as sd;
-@use '../Alternate Themes/Th--Tangerine Dunes' as td;
-@use '../Alternate Themes/Th--Drowned';
-@use '../Alternate Themes/Th--Nord';
-@use '../Alternate Themes/Th--Minimalist';
-@use '../Alternate Themes/Th--ITS Dark' as itsd;
+  @use 'Alternate Themes/Th--D&D' as DND;
+  @use 'Alternate Themes/Th--D&D WOTC-Beyond' as WOTC-Beyond;
+//@use 'Alternate Themes/Th--D&D WOTC' as WOTC;
+  @use 'Alternate Themes/Th--SlRvb Blue' as sblue;
+  @use 'Alternate Themes/Th--SlRvb Gray' as sGray;
+  @use 'Alternate Themes/Th--School Days' as sd;
+  @use 'Alternate Themes/Th--Tangerine Dunes' as td;
+  @use 'Alternate Themes/Th--Drowned';
+  @use 'Alternate Themes/Th--Nord';
+  @use 'Alternate Themes/Th--Minimalist';
+  @use 'Alternate Themes/Th--ITS Dark' as itsd;

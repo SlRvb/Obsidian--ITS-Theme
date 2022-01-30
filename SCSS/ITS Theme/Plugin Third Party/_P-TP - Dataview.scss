@@ -37,10 +37,10 @@ body .dataview.inline-field-value {
     padding: 0 10px;
 }
 body .dataview.inline-field-key { 
-    background-color: var(--deep-dark-accent);
-    color: var(--text-dl)
+    background-color: var(--dark-accent);
+    color: var(--text-dl);
 }
-body .dataview.inline-field-value { background-color: var(--dark-accent); }
+body .dataview.inline-field-value { background-color: var(--deep-dark-accent); }
 body .dataview.inline-field-value a.tag:first-child { display: none; }
 
 

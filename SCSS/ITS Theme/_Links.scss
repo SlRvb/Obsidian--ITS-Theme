@@ -12,6 +12,8 @@ a:hover {
 }
 
 /*Link to No Page*/
+body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
+.markdown-source-view.mod-cm6 .is-unresolved,
 .markdown-preview-view .internal-link.is-unresolved {
     opacity: 1;
     color: var(--inactive);

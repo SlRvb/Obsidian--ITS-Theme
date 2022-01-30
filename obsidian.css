@@ -3125,6 +3125,95 @@ button.mod-cta,
   width: 100%;
 }
 
+/*Tooltip Popup*/
+.tooltip {
+  border-radius: var(--radius);
+}
+
+/*--Bottom Bar--*/
+.app-container .status-bar {
+  position: absolute;
+  background-color: var(--outer-bar);
+  color: var(--text-muted);
+  bottom: 0;
+  right: 0;
+  padding: 0 0.1em;
+  border-left: 1px solid var(--th);
+  border-top: 1px solid var(--th);
+}
+
+/*--NOTE TITLEBAR--*/
+.view-header,
+.workspace-leaf .view-header,
+.workspace-leaf.mod-active .view-header,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+  border: 0;
+}
+
+.workspace-leaf .view-header {
+  background: var(--note);
+}
+
+.view-header-title,
+.view-header-title-container {
+  font-size: var(--f-text);
+  line-height: 36px;
+}
+
+.view-header-title-container:after {
+  background: linear-gradient(to right, transparent, var(--note));
+}
+
+.workspace-leaf.mod-active .view-header {
+  background: linear-gradient(to left, var(--outer-bar), var(--dark-accent));
+}
+
+.workspace-leaf.mod-active .view-header-title-container:after {
+  background: transparent !important;
+}
+
+/*Inactive Note Titlebar*/
+.view-header-title,
+.view-header-icon,
+.view-action {
+  color: var(--inactive);
+}
+
+/*Active Note Titlebar*/
+.workspace-leaf.mod-active .view-header-title,
+.workspace-leaf.mod-active .view-header-icon,
+.workspace-leaf.mod-active .view-action {
+  color: var(--soft-text);
+}
+
+.workspace-leaf.mod-active .view-header-icon:hover,
+.workspace-leaf.mod-active .view-action:hover {
+  color: var(--accent);
+}
+
+/*Center Note Icons*/
+.view-header-icon, .view-actions {
+  margin: auto;
+}
+
+/*--Notes Paddings--*/
+/*Remove Note Padding*/
+.workspace-split.mod-root .view-content {
+  padding: 0;
+}
+
+/*Editor Resize*/
+.markdown-source-view.mod-cm5 {
+  padding-left: 0;
+  padding-right: 0.5em;
+}
+
+/*Cursor Manual fix*/
+.CodeMirror-cursor,
+.cm-s-obsidian .cm-cursor {
+  border-left: 1px solid var(--text);
+}
+
 /*-File Navbar-*/
 /*Adjusting Padding of Navbar Icons*/
 .nav-header {
@@ -3293,95 +3382,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /*Arrows*/
 .nav-folder .collapse-icon {
   display: none;
-}
-
-/*Tooltip Popup*/
-.tooltip {
-  border-radius: var(--radius);
-}
-
-/*--Bottom Bar--*/
-.app-container .status-bar {
-  position: absolute;
-  background-color: var(--outer-bar);
-  color: var(--text-muted);
-  bottom: 0;
-  right: 0;
-  padding: 0 0.1em;
-  border-left: 1px solid var(--th);
-  border-top: 1px solid var(--th);
-}
-
-/*--NOTE TITLEBAR--*/
-.view-header,
-.workspace-leaf .view-header,
-.workspace-leaf.mod-active .view-header,
-.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-  border: 0;
-}
-
-.workspace-leaf .view-header {
-  background: var(--note);
-}
-
-.view-header-title,
-.view-header-title-container {
-  font-size: var(--f-text);
-  line-height: 36px;
-}
-
-.view-header-title-container:after {
-  background: linear-gradient(to right, transparent, var(--note));
-}
-
-.workspace-leaf.mod-active .view-header {
-  background: linear-gradient(to left, var(--outer-bar), var(--dark-accent));
-}
-
-.workspace-leaf.mod-active .view-header-title-container:after {
-  background: transparent !important;
-}
-
-/*Inactive Note Titlebar*/
-.view-header-title,
-.view-header-icon,
-.view-action {
-  color: var(--inactive);
-}
-
-/*Active Note Titlebar*/
-.workspace-leaf.mod-active .view-header-title,
-.workspace-leaf.mod-active .view-header-icon,
-.workspace-leaf.mod-active .view-action {
-  color: var(--soft-text);
-}
-
-.workspace-leaf.mod-active .view-header-icon:hover,
-.workspace-leaf.mod-active .view-action:hover {
-  color: var(--accent);
-}
-
-/*Center Note Icons*/
-.view-header-icon, .view-actions {
-  margin: auto;
-}
-
-/*--Notes Paddings--*/
-/*Remove Note Padding*/
-.workspace-split.mod-root .view-content {
-  padding: 0;
-}
-
-/*Editor Resize*/
-.markdown-source-view.mod-cm5 {
-  padding-left: 0;
-  padding-right: 0.5em;
-}
-
-/*Cursor Manual fix*/
-.CodeMirror-cursor,
-.cm-s-obsidian .cm-cursor {
-  border-left: 1px solid var(--text);
 }
 
 /*Arrows*/
@@ -3589,6 +3589,8 @@ a:hover {
 }
 
 /*Link to No Page*/
+body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
+.markdown-source-view.mod-cm6 .is-unresolved,
 .markdown-preview-view .internal-link.is-unresolved {
   opacity: 1;
   color: var(--inactive);
@@ -3740,7 +3742,7 @@ ul li > p {
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
   content: var(--bullet);
   font-family: var(--bul-f);
-  padding-left: 4px;
+  padding-left: 5px;
   margin-right: -10px;
 }
 
@@ -3750,7 +3752,7 @@ ul li > p {
 }
 
 .markdown-source-view.mod-cm6 .list-bullet {
-  padding-right: 7px;
+  padding-right: 9px;
 }
 
 /*Fix Bullet Alignment*/
@@ -3923,7 +3925,7 @@ input[type=checkbox]:checked {
 /*Quotation Mark*/
 .reveal blockquote:before,
 .markdown-preview-view blockquote:before,
-.cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
   content: "”";
   font-family: var(--font);
   color: var(--headers);
@@ -3937,7 +3939,7 @@ input[type=checkbox]:checked {
   right: 1.2em;
 }
 
-.cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
   float: right;
   padding-top: 5px;
   padding-left: 1.3em;
@@ -6212,8 +6214,8 @@ ul.kanban ul {
   /*#9fbadf*/
   --chbx-id:202, 199, 0;
   /* #cac700*/
-  --chbx-B: 82, 139, 212;
-  /*#528bd4*/
+  --chbx-B: 182, 118, 255;
+  /*#b676ff*/
   --chbx-P: 79, 165, 79;
   /*#4fa54f*/
   --chbx-C: 214, 108, 108;
@@ -6222,8 +6224,8 @@ ul.kanban ul {
   /*#a16a49*/
   --chbx-b: 251, 146, 76;
   /*#fb924c*/
-  --chbx-I: 182, 118, 255;
-  /*#b676ff*/
+  --chbx-I: 82, 139, 212;
+  /*#528bd4*/
 }
 
 /*Restyle Checkboxes*/
@@ -6332,74 +6334,107 @@ body:not(.alt-chkbx-off) {
   /* [Q]: Quote: Closing Quotation Mark */
   /* [N]: Note: Open Scroll */
   /* [b]: Bookmark: Bookmark Flag */
+  /* [p]: Paraphrase */
+  /* [E]: Example */
+  /* [L]: Location */
+  /* [A]: Answer */
+  /* [r]: Answer */
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] > input[type=checkbox]:checked::before {
   color: var(--accent2-lite, var(--text-accent));
   content: "\ec01";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=">"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=">"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] > input[type=checkbox]:checked::before {
   color: var(--text-normal);
   content: "\ec03";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=D]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=D]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=D]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=D]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-h));
   content: "\ec04";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="-"] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="-"] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-d));
   content: "\ec02";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="?"] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="?"] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-q));
   content: "\ec05";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="!"] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="!"] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-i));
   content: "\ec08";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="+"] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="+"] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-a));
   content: "\ec06";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="/"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="/"] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="/"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="/"] > input[type=checkbox]:checked::before {
   color: var(--accent, var(--interactive-accent));
   content: "\ec17";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=R]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=R]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=R] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=R]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=R]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=R] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-R));
   content: "\ec07";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=i]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=i]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=i] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=i]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=i]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=i] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-id));
   content: "\ec09";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=B]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=B]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=B] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=B]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=B]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=B] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-B));
   content: "\ec10";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=P]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=P]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=P] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=P]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=P]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=P] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-P));
   content: "\ec11";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=C]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=C]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=C] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=C]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=C]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=C] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-C));
   content: "\ec12";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=I]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=I]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=I] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=I]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=I]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=I] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-I));
   content: "\ec16";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=Q]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=Q]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=Q] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=Q]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=Q]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=Q] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-R));
   content: "\ec13";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=N]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=N]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=N] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=N]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=N]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=N] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-N));
   content: "\ec14";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=b]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=b]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=b] input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=b]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=b]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=b] > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-b));
   content: "\ec15";
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=p]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=p]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=p] > input[type=checkbox]:checked::before {
+  color: rgb(var(--chbx-R));
+  content: "\f101";
+  font-family: var(--fa5);
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=E]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=E]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=E] > input[type=checkbox]:checked::before {
+  color: rgb(var(--chbx-I));
+  content: "\f0c6";
+  font-family: var(--fa5);
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=L]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=L]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=L] > input[type=checkbox]:checked::before {
+  color: rgb(var(--chbx-N));
+  content: "\f041";
+  font-family: var(--fa5);
+  margin-left: 1px;
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=A]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=A]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=A] > input[type=checkbox]:checked::before {
+  color: rgb(var(--chbx-P));
+  content: "\f46c";
+  font-family: var(--fa5);
+  margin-left: 1px;
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=r]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=r]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=r] > input[type=checkbox]:checked::before {
+  color: rgb(var(--chbx-b));
+  content: "\f091";
+  font-family: var(--fa5);
+  margin-left: -2px;
 }
 
 /*--Checkbox Text Colors--*/
@@ -6458,6 +6493,21 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   color: rgb(var(--chbx-N));
 }
 .check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=b], .check-color.check-color ul li[data-task=b].task-list-item.is-checked {
+  color: rgb(var(--chbx-b));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=p], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=p], .check-color.check-color ul li[data-task=p].task-list-item.is-checked {
+  color: rgb(var(--chbx-R));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=L], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=L], .check-color.check-color ul li[data-task=L].task-list-item.is-checked {
+  color: rgb(var(--chbx-P));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=E], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=E], .check-color.check-color ul li[data-task=E].task-list-item.is-checked {
+  color: rgb(var(--chbx-b));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=A], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=A], .check-color.check-color ul li[data-task=A].task-list-item.is-checked {
+  color: rgb(var(--chbx-P));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=r], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=r], .check-color.check-color ul li[data-task=r].task-list-item.is-checked {
   color: rgb(var(--chbx-b));
 }
 
@@ -6532,6 +6582,26 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   background: rgba(var(--chbx-N), 20%);
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b], .check-bg li[data-task=b].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-b));
+  background: rgba(var(--chbx-b), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=p], .check-bg li[data-task=p].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-R));
+  background: rgba(var(--chbx-R), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=L], .check-bg li[data-task=L].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-N));
+  background: rgba(var(--chbx-N), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=E], .check-bg li[data-task=E].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-I));
+  background: rgba(var(--chbx-I), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=A], .check-bg li[data-task=A].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-P));
+  background: rgba(var(--chbx-P), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=r], .check-bg li[data-task=r].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-b));
   background: rgba(var(--chbx-b), 20%);
 }
@@ -7887,12 +7957,12 @@ body .dataview.inline-field-value {
 }
 
 body .dataview.inline-field-key {
-  background-color: var(--deep-dark-accent);
+  background-color: var(--dark-accent);
   color: var(--text-dl);
 }
 
 body .dataview.inline-field-value {
-  background-color: var(--dark-accent);
+  background-color: var(--deep-dark-accent);
 }
 
 body .dataview.inline-field-value a.tag:first-child {
@@ -11306,10 +11376,12 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-secondary: var(--note);
   --background-secondary-alt: var(--note);
   --background-modifier-cover: var(--note);
+  --text-accent: var(--accent2-lite);
   --note: #1a1e24;
   --dark-accent: var(--note);
   --accent: #3b424e;
   --lite-accent: #aab3ca;
+  --deep-dark-accent: var(--note);
   --dark-sidebar: var(--note);
   --outer-bar: var(--note);
   --side-bar: var(--note);
@@ -11329,13 +11401,18 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-secondary: var(--note);
   --background-secondary-alt: var(--note);
   --background-modifier-cover: var(--note);
-  --interactive-accent: var(--text-dl);
+  --interactive-accent: var(--inactive);
+  --background-modifier-error: var(--interactive-failure);
+  --text-highlight-bg: #99a4bb20;
+  --text-highlight-bg-active: #99a4bb20;
   --note: #f8fbff;
   --dark-accent: var(--note);
   --accent: #b5c2d8;
   --lite-accent: #aab3ca;
-  --soft-text: #b4bfd6;
-  --text-dl: black;
+  --soft-text: #99a4bb;
+  --text-dl: #000000;
+  --inactive: #d2daee;
+  --deep-dark-accent: var(--note);
   --dark-sidebar: var(--note);
   --outer-bar: var(--note);
   --side-bar: var(--note);
@@ -11354,13 +11431,16 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 .mini .nav-folder-children .nav-folder-title-content::before {
-  content: "\ec02";
+  content: "";
 }
 .mini .nav-file-title .nav-file-title-content::before {
   content: var(--bullet);
 }
 .mini .workspace-tab-header-inner-icon {
   color: var(--inactive);
+}
+.mini button {
+  box-shadow: 2px 2px 0 var(--outline);
 }
 
 /*----Theme: ITS Dark----*/

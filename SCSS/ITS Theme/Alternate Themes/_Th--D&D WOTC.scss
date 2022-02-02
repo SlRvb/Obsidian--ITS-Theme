@@ -1,0 +1,244 @@
+
+/*Theme: Wizards Of The Coast*/
+
+.theme-dark.wotc,
+.theme-dark .wotc {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-cover: var(--deep-dark-accent);
+    --background-modifier-border: var(--table);
+    --background-modifier-form-field-highlighted: rgba(204, 65, 65, 0.22);
+    --background-modifier-error-rgb: 0, 23, 13;
+    --interactive-accent-rgb: 253, 114, 114;
+
+    --text-normal: var(--text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+    --text-on-accent:#dcddde;
+    
+    --interactive-normal: var(--accent);
+    --interactive-hover: var(--lite-accent);
+    --interactive-accent: var(--accent);
+    --interactive-accent-hover: var(--accent2);
+    
+    --text-highlight-bg: rgba(209, 119, 119, 0.4);
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+    --text-selection: rgba(255, 0, 0, 0.198);
+/* 
+    --note: #7B5B3F;
+    --outer-bar: #432817;
+    --dark-sidebar: #7B5B3F;
+    --deep-dark-accent: #361D0D;
+    --outline: #311402a6;
+
+    --table: var(--outline);
+    --aside-bg: var(--dark-sidebar);
+    --inactive: #624235;
+    --folder: var(--lite-accent);
+    --f-icon: #b98a5d;
+    --f-hover: var(--f-icon);
+    --file: var(--text);
+
+    --accent: #c04040;
+    --lite-accent: #f3ae9d;
+    --dark-accent: #2D1B14;
+    --bg: var(--dark-sidebar);
+    --embed-bg: var(--note);
+    --td: #fbe0be1e;
+    --code-bg: #745744;
+    --accent2: #000000;
+    --hr: var(--table);
+    --lines: var(--inactive);
+
+    --headers: #691f1f;
+    --text: #f1caa5;
+    --footnote: #402216;
+    --soft-text: #daa77e;
+    --code-text: #681010;
+    --accent2-lite: #df6262;
+
+
+    --deep-dark-accent: #181310;
+    --outer-bar: #130e0b;
+    --dark-sidebar: #140f0d;
+    --outline: #000000b2;
+
+    --side-bar: #221d1b;
+    --aside-bg: #16110e;
+    --note: #2a2623;
+    --code-bg: #201a18;
+    --bg: #312a28;
+
+    --f-icon: #775c50;
+    --folder: #ca8a6d;
+    --lines: #68492c;
+    --hr: var(--lines);
+
+    --table: #ff7d4a52;
+    --accent2: #5f4135;
+    --accent2-lite: #e95e5e;
+    --lite-accent: var(--accent2-lite);
+    
+    
+    --deep-dark-accent: #3F3427;
+    --outer-bar: #927c54;
+    --dark-sidebar: #a38c65;
+    --side-bar: #b49d75;
+    --aside-bg: #a88f63;
+    --embed-bg: #af966b;
+    
+    --outline: #3b2618;
+    --note: #B9A076;
+    --code-bg: #ad976c;
+    --bg: #9c855c;
+
+    --text: #000000;
+    --soft-text: #020101;
+    --inactive: #5d4035;
+    --code-text: #753a3a;
+    --headers: #a02d2d;
+    --footnote: var(--inactive);
+    --i-at: var(--code-text);
+
+    --f-icon: #8f7a54;
+    --folder: #000000;
+    --file: var(--soft-text);
+    --lines: #9b7e5b;
+    --hr: var(--lines);
+
+    --td: #3b2e2930;
+    --table: #8d7456;
+    --dark-accent: #b19668;
+    --accent2: #C4B38B;
+    --accent2-lite: #000000;
+    --lite-accent: var(--accent2-lite);
+    */
+
+    --deep-dark-accent: #42170a;
+    --outer-bar: #7c4e34;
+    --dark-sidebar: #8f6340;
+    --outline: #5f2c11;
+    //--side-bar: #be7d57;
+    
+    --aside-bg: #926e50;
+    --embed-bg: var(--aside-bg);
+    --note: #9c7555; //#835c3d
+    --code-bg: #4b2010;
+    --bg: #885e43;
+    
+    --folder: #ca8a6d;
+    --file: var(--text);
+    --f-icon: var(--file); //#7a4e3b
+    --f-hover: var(--code-text);
+    
+    --headers: #611e1e;
+    --text: #d3b4a9;
+    //--text: #000000;
+    --soft-text: #ebc8a0;
+    --inactive: #ccab9e;
+    --footnote: var(--inactive);
+    --text-faint: #aa9389;
+    --code-text: #d14a4a;
+    --text-error: #ad0606;
+    --i-at: #2f0202;
+    
+    --table: #5f2c11;
+    --td: #5a2e1c30;
+    --lines: #947150;
+    --hr: var(--lines);
+
+    --accent: #5c1616;
+    --accent2: #5f4135;
+    --accent2-lite: #fff6f2;
+    --lite-accent: var(--accent2-lite);
+    --bttn: var(--accent);
+
+    --graph-bg: var(--note);
+    --graph-lines: var(--soft-text);
+    --graph-node: var(--headers);
+    --graph-fill: #2e5db2;
+    --graph-404: #727e93;
+    --graph-img: var(--accent2) /*#5469de*/;
+    --graph-tag: #000000;    
+
+    --sphd-pre-1: var(--accent);
+    --sphd-pre-2: var(--headers);
+    --sphd-pre-3: var(--code-text);
+    --sphd-pre-4: var(--deep-dark-accent);
+    --sphd-pre-5: var(--accent2);
+    --sphd-pre-6: var(--file);
+    --sphd-ed-1: var(--accent);
+    --sphd-ed-2: var(--headers);
+    --sphd-ed-3: var(--code-text);
+    --sphd-ed-4: var(--deep-dark-accent);
+    --sphd-ed-5: var(--accent2);
+    --sphd-ed-6: var(--file);
+}
+
+.wotc .is-active { color: var(--text-on-accent); }
+
+// .wotc,
+// .wotc-beyond
+// {
+//     & .markdown-source-view,
+//     & .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme),
+//     //& .workspace-leaf:not(.mod-active) .view-header,
+//     & .modal.mod-settings .vertical-tab-content-container,
+//     & .workspace-leaf-content[data-type="graph"] > canvas,
+//     & .workspace-drawer-inner,
+//     & .modal,
+//     & .community-plugin-search,
+//     & .prompt {
+//         box-shadow: 
+//         0 0 100px var(--outline) inset,
+//         0 0 20px var(--outline) inset;
+//         //background: radial-gradient(circle, var(--note) 70%, var(--outline) 99%);
+//     }
+//     & .workspace-tabs,
+//     & .modal.mod-settings .vertical-tab-header
+//     {
+//         box-shadow: 
+//         0 0 80px var(--outline) inset;
+//     }
+//     & .setting-item:not(.setting-item-heading):nth-child(even)
+//     {
+//         box-shadow: 
+//         0 0 50px var(--outline) inset;
+//     }
+
+    
+//     & .CodeMirror-gutter.CodeMirror-linenumbers, 
+//     & .CodeMirror-gutter.CodeMirror-foldgutter,
+//     & .markdown-source-view.mod-cm6 .cm-gutters,
+//     & .workspace-leaf:not(.mod-active) .workspace-tab-header-container,
+//     & .workspace-tabs .workspace-leaf,
+//     & .workspace-tab-header-container,
+//     & .horizontal-tab-content,
+//     & .vertical-tab-content,
+//     & .horizontal-tab-nav-item:not(.is-active),
+//     & .vertical-tab-nav-item:not(.is-active),
+//     & .setting-item:not(.setting-item-heading):nth-child(even)
+//     {
+//         background: transparent;
+//     }
+// }
+
+.wotc {
+    & .markdown-embed-title,
+    & .file-embed-title {
+        font-weight: 500;
+    }
+
+    //& input[type=text],
+    //& input[type=search],
+    //& input[type=email],
+    //& input[type=password],
+    //& input[type=number],
+    //& textarea {
+    //    background: var(--aside-bg);
+    //}
+
+}

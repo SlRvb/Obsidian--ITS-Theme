@@ -1,0 +1,89 @@
+.mini {
+
+}
+
+.theme-dark.mini {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--note);
+    --background-secondary: var(--note);
+    --background-secondary-alt: var(--note);
+    --background-modifier-cover: var(--note);
+
+    --text-accent: var(--accent2-lite);
+
+    --note: #1a1e24;
+    --dark-accent: var(--note);
+    --accent: #3b424e;
+    --lite-accent: #aab3ca;
+    
+    --deep-dark-accent: var(--note);
+    --dark-sidebar: var(--note);
+    --outer-bar: var(--note);
+    --side-bar: var(--note);
+    --aside-bg: var(--note);
+    --embed-bg: var(--note);
+    --folder: var(--text-dl);
+    
+    --i-at: var(--text-faint);
+    --accent2-lite: var(--text-dl);
+    --headers: var(--text);
+    --code-text: var(--text);
+
+    --graph-img: var(--accent2);
+}
+.theme-light.mini {
+    --background-primary: var(--note);
+    --background-primary-alt: var(--note);
+    --background-secondary: var(--note);
+    --background-secondary-alt: var(--note);
+    --background-modifier-cover: var(--note);
+
+    --interactive-accent: var(--inactive);
+    --background-modifier-error: var(--interactive-failure);
+
+    --text-highlight-bg: #99a4bb20;
+    --text-highlight-bg-active: #99a4bb20;
+
+    --note: #f8fbff;
+    --dark-accent: var(--note);
+    --accent: #b5c2d8;
+    --lite-accent: #aab3ca;
+    --soft-text: #99a4bb;
+    --text-dl: #000000;
+    
+    --inactive: #d2daee;
+    
+    --deep-dark-accent: var(--note);
+    --dark-sidebar: var(--note);
+    --outer-bar: var(--note);
+    --side-bar: var(--note);
+    --aside-bg: var(--note);
+    --embed-bg: var(--note);
+    --bttn: var(--note);
+    --tag: var(--note);
+    --th: var(--note);
+    --text-on-accent: var(--text-dl);
+    --folder: var(--text-dl);
+
+    --i-at: var(--soft-text);
+    --accent2-lite: var(--text-dl);
+    --headers: var(--text);
+    --code-text: var(--text);
+
+    --graph-img: var(--accent2);
+}
+
+.mini{
+    & .nav-folder-children .nav-folder-title-content::before {
+        content: "";
+    }
+    & .nav-file-title .nav-file-title-content::before {
+        content: var(--bullet);
+    }
+    & .workspace-tab-header-inner-icon {
+        color: var(--inactive);
+    }
+    & button {
+        box-shadow: 2px 2px 0 var(--outline);
+    }
+} 

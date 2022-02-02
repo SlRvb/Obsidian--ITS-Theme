@@ -24,6 +24,7 @@ body:not(.alt-chkbx-off) {
         font-weight: 10;
         border: 0;
         vertical-align: 0px;
+        //margin-left: -2px;
     }
 }
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task:not([data-task=" "]):not([data-task="x"])::before {

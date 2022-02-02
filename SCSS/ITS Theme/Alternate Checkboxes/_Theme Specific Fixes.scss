@@ -4,12 +4,11 @@
 .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]) {
     padding-left: 0px;
     font-family: var(--its);
-    background: transparent;
-    position: relative;
+    //background: transparent;
+    //position: relative;
     font-weight: 10;
     vertical-align: 0px;
 }
-
 
 /*Fixes*/
 body .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):before,
@@ -33,8 +32,11 @@ input[type=checkbox]:not([data-task="x"]) //Pink Topaz
     padding: initial; //Pink Topaz
 }
 
-li:not([data-task=x]) input[type=checkbox i]:checked,
-.cm-s-obsidian input[type=checkbox]:not([data-task="x"]):checked
-{
+.minimal-light,
+.minimal-dark {
+    & li:not([data-task="x"]) input[type=checkbox i]:checked,
+    & .cm-s-obsidian input[type=checkbox]:not([data-task="x"]):checked
+    {
     background-color: transparent !important; //Minimal
-}
+}}
+

@@ -60,6 +60,7 @@ button.mod-cta,
     border-radius: var(--radius);
     font-size: calc(var(--f-text) - .12em);
     font-family: var(--default-font);
+    box-shadow: 0 2px 0 var(--outline);
 }
 
 //button.mod-warning { color: var(--text-error); }

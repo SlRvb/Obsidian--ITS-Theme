@@ -1,5 +1,31 @@
 
 /*----Image Positions/Adjustments----*/
+.theme-dark, .theme-light {
+    /*Sizes*/
+    --radius: 0px;
+
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 200px;
+    --small-med: 300px;
+    --med-small: 400px;
+    --medium: 500px;
+    --med-tall: 600px;
+    --tall: 700px;
+}
+.popover.hover-popover {
+    --radius: 0px;
+
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 150px;
+    --small-med: 200px;
+    --med-small: 250px;
+    --medium: 300px;
+    --med-tall: 450px;
+    --tall: 500px;
+}
+
 
 /*Captions*/
 .img-cap .image-embed::after,
@@ -83,6 +109,7 @@ img[alt*="ctr"],
 /*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
+.popover.hover-popover,
 .view-content > :not(.is-live-preview) {
     & img,
     & .image-embed {

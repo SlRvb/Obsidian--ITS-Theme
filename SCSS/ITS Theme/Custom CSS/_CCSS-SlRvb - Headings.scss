@@ -106,7 +106,9 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
 .hc h4,
 .hc h5,
 .hc h6,
-.hc .HyperMD-header { text-align: center; }
+.hc .HyperMD-header,
+.hcl .HyperMD-header
+{ text-align: center; }
 
 
 
@@ -137,7 +139,8 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & h3,
     & h4,
     & h5,
-    & h6 {
+    & h6
+    {
         &:before,
         &:after {
             content: '';
@@ -149,7 +152,8 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     }
 
     & h1:before,
-    & h1:after {
+    & h1:after
+    {
         border-top: 6px solid var(--accent);
     }
     & h2:before,
@@ -242,7 +246,7 @@ body .illusion {
     }
 }
 
-
+/* Heading Indicators */
 .is-live-preview .HyperMD-header {
     &::before {
         font-family: var(--font-monospace);
@@ -263,6 +267,26 @@ body .illusion {
         right: -5px;
     }
 } 
+
+.hc,
+.hcl,
+.writing
+{ 
+    &.is-live-preview,
+    & .is-live-preview {
+        & .HyperMD-header::before {
+            position: absolute;
+            font-size: 16px;
+            left: 10px;
+            margin: auto;
+        }
+        & .HyperMD-header-1 > .cm-fold-indicator {
+            font-size: unset;
+            float: left;
+            left: 10px;
+        }
+    }
+}
 
 /*Apply Header Color Over Link*/
 body.hd-ovr {

@@ -243,7 +243,7 @@ body:not(.alt-chkbx-off) {
 	& .task-list-item.is-checked[data-task="r"] p > input[type=checkbox]:checked
     {
         &::before {
-        color: rgb(var(--chbx-b));
+        color: rgb(var(--chbx-r));
         content: "\EC22";
         }
     }
@@ -414,7 +414,7 @@ body:not(.alt-chkbx-off) {
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="r"],
     & span:not(.cm-link):not(.cm-inline-code) span[data-task="r"],
     &.check-color ul li[data-task="r"].task-list-item.is-checked {
-        color: rgb(var(--chbx-b));
+        color: rgb(var(--chbx-r));
     }
     //[c]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="c"],
@@ -561,8 +561,8 @@ body:not(.alt-chkbx-off) {
     //[r]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="r"],
     & li[data-task="r"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-b));
-        background: rgba(var(--chbx-b), 20%); 
+        border-left: 2px solid rgb(var(--chbx-r));
+        background: rgba(var(--chbx-r), 20%); 
     }
     //[c]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="c"],

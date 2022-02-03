@@ -11,10 +11,18 @@
 
     --text-accent: var(--accent2-lite);
 
-    --note: #1a1e24;
+    //--note: #1a1e24;
     --dark-accent: var(--note);
-    --accent: #3b424e;
+    --accent: #414958;
     --lite-accent: #aab3ca;
+    --table: var(--bg);
+
+    //--bg: #191d22;
+    --inactive: #586477;
+    --file: #aab3ca;
+    --code-bg: #232831;
+    --td: #06080c50;
+    --outline: #0b0f13;
     
     --deep-dark-accent: var(--note);
     --dark-sidebar: var(--note);
@@ -41,17 +49,20 @@
     --interactive-accent: var(--inactive);
     --background-modifier-error: var(--interactive-failure);
 
+    --background-modifier-form-field-highlighted: transparent;
     --text-highlight-bg: #99a4bb20;
     --text-highlight-bg-active: #99a4bb20;
 
-    --note: #f8fbff;
+    //--note: #f8fbff;
     --dark-accent: var(--note);
     --accent: #b5c2d8;
     --lite-accent: #aab3ca;
     --soft-text: #99a4bb;
     --text-dl: #000000;
     
+    --bg: #eef3ff;
     --inactive: #d2daee;
+    --outline: #e1e9f6;
     
     --deep-dark-accent: var(--note);
     --dark-sidebar: var(--note);
@@ -83,7 +94,7 @@
     & .workspace-tab-header-inner-icon {
         color: var(--inactive);
     }
-    & button {
-        box-shadow: 2px 2px 0 var(--outline);
+    & th {
+        border-bottom: 2px solid var(--accent);
     }
 } 

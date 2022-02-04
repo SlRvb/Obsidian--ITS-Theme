@@ -1,11 +1,12 @@
 
 /*----Theme: Drowned----*/
-.theme-dark.drwn, .theme-light.drwn {
+.drwn {
     --hr-sym: "\f1cd";
     --hr-f: var(--mdi);
 }
 
-.theme-dark.drwn {
+.theme-dark.drwn,
+.theme-dark .drwn {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -72,7 +73,8 @@
     --sphd-ed-6: var(--code-bg);
 }
 
-.theme-light.drwn {
+.theme-light.drwn,
+.theme-light .drwn {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);

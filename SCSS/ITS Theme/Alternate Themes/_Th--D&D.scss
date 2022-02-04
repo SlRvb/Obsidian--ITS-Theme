@@ -9,6 +9,11 @@
 
     --hr-sym: "\e88c";
     --hr-f: var(--mdi);
+
+    --embed-h: #c93c3c;
+    --h1: var(--headers);
+    --h2: sandybrown;
+    --h3: var(--embed-h);
 }
 .theme-dark.dnd,
 .theme-dark .dnd {

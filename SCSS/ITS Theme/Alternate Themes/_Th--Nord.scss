@@ -1,10 +1,10 @@
-.theme-dark.nord,
-.theme-light.nord {
+.nord {
     --hr-sym: "\e564";
     --hr-f: var(--mdi);
 }
 
-.theme-dark.nord {
+.theme-dark.nord,
+.theme-dark .nord {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -84,7 +84,8 @@
     --sphd-ed-6: var(--lines);
 }
 
-.theme-light.nord {
+.theme-light.nord,
+.theme-light .nord {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);

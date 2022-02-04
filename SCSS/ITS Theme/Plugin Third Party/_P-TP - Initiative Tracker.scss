@@ -56,6 +56,17 @@ body .block-language-encounter .encounter-name.encounter-name {
     display: block;
 }
 
+// body:not(.hcl) :not(.hcl) .encounter-instance {
+//     //Encounter Name Gradient Line
+//     & .encounter-name h3::after {
+//         content: "";
+//         display: block;
+//         background: linear-gradient(to right, var(--interactive-accent), transparent);
+//         height: 4px;
+//     }
+
+//     & .encounter-creatures h4:after { display: none; }
+// }
 body .encounter-instance {
     //Encounter Name
     & .encounter-name h3 {
@@ -63,14 +74,6 @@ body .encounter-instance {
         font-weight: 900;
         margin-top: -5px !important;
     }
-    //Encounter Name Gradient Line
-    & .encounter-name h3::after {
-        content: "";
-        display: block;
-        background: linear-gradient(to right, var(--interactive-accent), transparent);
-        height: 4px;
-    }
-
     //Creatures Header
     & .encounter-creatures h4 {
         font-size: 16px;
@@ -80,9 +83,6 @@ body .encounter-instance {
         font-family: var(--default-font);
         font-weight: bold;
     }
-    & .encounter-creatures h4:after { display: none; }
-    
-
     //Sword
     & .setting-editor-extra-setting-button.clickable-icon {
         float: right;

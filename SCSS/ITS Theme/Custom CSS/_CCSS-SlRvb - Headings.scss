@@ -105,12 +105,18 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
 .hc h3,
 .hc h4,
 .hc h5,
-.hc h6,
-.hc .HyperMD-header,
-.hcl .HyperMD-header
+.hc h6
 { text-align: center; }
 
-
+.hc,
+.hcl  {
+    &.is-live-preview,
+    & .is-live-preview 
+    {
+        & .HyperMD-header
+        { text-align: center; }
+    }
+}
 
 
 
@@ -122,12 +128,14 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & h3,
     & h4,
     & h5,
-    & h6 {
+    & h6
+    {
         display: flex;
         width: 100%;
         align-items: center;
         text-align: center;
 
+        //
         & > :not(.collapse-indicator):nth-child(2) { padding: 0 10px; }
         & > :not(.collapse-indicator):nth-child(2):not(:last-child) { padding: 0 10px; }
     }
@@ -144,7 +152,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
         &:before,
         &:after {
             content: '';
-            height: 0;
+            //height: 0;
             flex: 1;
         }
         &:before { margin-right: .3em; }
@@ -152,29 +160,57 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     }
 
     & h1:before,
-    & h1:after
-    {
-        border-top: 6px solid var(--accent);
+    & h1:after,
+    & .HyperMD-header-1::after
+    { 
+        height: 6px;
+        background-color: var(--accent); 
+        width: auto;
     }
+    
     & h2:before,
-    & h2:after {
-        border-top: 5px solid var(--headers);
-    }    
+    & h2:after,
+    & .HyperMD-header-2::after
+    { 
+        height: 5px;
+        background-color: var(--headers);
+        width: auto;
+    }
+
     & h3:before,
-    & h3:after {
-        border-top: 4px solid var(--i-at);
+    & h3:after,
+    & .HyperMD-header-3::after
+    { 
+        height: 4px;
+        background-color: var(--i-at); 
+        width: auto;
     }
+
     & h4:before,
-    & h4:after {
-        border-top: 3px solid var(--accent2-lite);
+    & h4:after,
+    & .HyperMD-header-4::after
+    { 
+        height: 3px;
+        background-color: var(--accent2-lite); 
+        width: 100%;
     }
+
     & h5:before,
-    & h5:after {
-        border-top: 3px solid var(--lines);
+    & h5:after,
+    & .HyperMD-header-5::after
+    { 
+        height: 3px;
+        background-color: var(--lines); 
+        width: auto;
     }
+
     & h6:before,
-    & h6:after {
-        border-top: 3px solid var(--table);
+    & h6:after,
+    & .HyperMD-header-6::after
+    { 
+        height: 3px;
+        background-color: var(--table); 
+        width: auto;
     }
 }
 
@@ -280,7 +316,7 @@ body .illusion {
             left: 10px;
             margin: auto;
         }
-        & .HyperMD-header-1 > .cm-fold-indicator {
+        & .HyperMD-header > .cm-fold-indicator {
             font-size: unset;
             float: left;
             left: 10px;

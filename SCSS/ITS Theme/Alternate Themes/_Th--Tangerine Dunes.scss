@@ -1,11 +1,12 @@
 
 /*----Theme: Tangerine Dunes----*/
-.theme-dark.t-d, .theme-light.t-d {
+.t-d {
     --hr-sym: "\e564";
     --hr-f: var(--mdi);
 }
 
-.theme-dark.t-d {
+.theme-dark.t-d,
+.theme-dark .t-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -64,7 +65,8 @@
     --sphd-ed-5: var(--table);
     --sphd-ed-6: var(--dark-sidebar);
 }
-.theme-light.t-d {
+.theme-light.t-d,
+.theme-light .t-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);

@@ -3010,7 +3010,7 @@ body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
 
 /*Buttons*/
 .nav-action-button.is-active {
-  background-color: var(--dark-sidebar);
+  background-color: var(--th);
   color: var(--text-dl);
 }
 
@@ -4910,68 +4910,87 @@ img[alt*=ctr],
 
 /*Image Shapes*/
 /*Banners*/
-.image-embed[alt*=banner], .image-embed[src*="#banner"] {
+img[alt*=banner],
+.image-embed[alt*=banner] img,
+.image-embed[src*="#banner"] {
   display: block;
   object-fit: cover;
-  height: 150px;
+  height: var(--small);
   width: 100%;
   margin-bottom: 0px;
+  clear: both;
 }
 
-img[alt*="banner+small"],
-.image-embed[src*="#banner+small"] {
+img[alt*="ban.ner+small"],
+.image-embed[alt*="ban.ner+small"] img,
+.image-embed[src*="#ban.ner+small"] {
   display: block;
   object-fit: cover;
   height: var(--tiny);
   width: 100%;
   margin-bottom: 0px;
+  clear: both;
 }
 
-img[alt*="banner+tall"],
-.image-embed[src*="#banner+tall"] {
+img[alt*="ban.ner+tall"],
+.image-embed[alt*="ban.ner+tall"] img,
+.image-embed[src*="#ban.ner+tall"] {
   display: block;
   object-fit: cover;
   height: var(--medium);
   width: 100%;
   margin-bottom: 0px;
+  clear: both;
 }
 
 /*Portait*/
 img[alt*=portrait],
+.image-embed[alt*=portrait] img,
 .image-embed[src*="#portrait"] {
   object-fit: cover;
   height: var(--small-med);
   width: 40%;
 }
 
-img[alt*="portrait+small"],
-.image-embed[src*="#portrait+small"] {
+img[alt*="por.trait+small"],
+.image-embed[alt*="por.trait+small"] img,
+.image-embed[src*="#por.trait+small"] {
   height: var(--small);
   width: 20%;
   object-fit: cover;
 }
 
-img[alt*="portrait+tall"],
-.image-embed[src*="#portrait+tall"] {
+img[alt*="por.trait+tall"],
+.image-embed[alt*="por.trait+tall"] img,
+.image-embed[src*="#por.trait+tall"] {
   height: 500px;
   width: 50%;
   object-fit: cover;
 }
 
 /*Profile*/
-img[alt*="p.rofile"],
-.image-embed[src*="#p.rofile"] {
+img[alt*=profile],
+.image-embed[alt*=profile] img,
+.image-embed[src*="#profile"] {
   object-fit: cover;
-  height: 100px;
-  width: 100px;
-  object-position: center !important;
+  height: var(--tiny);
+  width: var(--tiny);
 }
 
-img[alt*="p.rofile+medium"],
-.image-embed[src*="#p.rofile+medium"] {
+img[alt*="pro.file+medium"],
+.image-embed[alt*="pro.file+medium"] img,
+.image-embed[src*="#pro.file+medium"] {
   object-fit: cover;
-  height: 250px;
-  width: 250px;
+  height: var(--small);
+  width: var(--small);
+}
+
+img[alt*="pro.file+tall"],
+.image-embed[alt*="pro.file+tall"] img,
+.image-embed[src*="#pro.file+tall"] {
+  object-fit: cover;
+  height: var(--medium);
+  width: var(--medium);
 }
 
 /*--Customizable Version--*/
@@ -5079,20 +5098,20 @@ img[alt*=wtall],
 
 /*--Image Position--*/
 /*Inner Image*/
-img[alt*=pt],
-.image-embed[src*="#pt"] img {
+img[alt*="p+t"],
+.image-embed[src*="#p+t"] img {
   object-fit: cover;
   object-position: top;
 }
 
-img[alt*=pb],
-.image-embed[src*="#pb"] img {
+img[alt*="p+b"],
+.image-embed[src*="#p+b"] img {
   object-fit: cover;
   object-position: bottom;
 }
 
-img[alt*=pl],
-.image-embed[src*="#pl"] img {
+img[alt*="p+l"],
+.image-embed[src*="#p+l"] img {
   object-fit: cover;
   object-position: left;
 }
@@ -5103,8 +5122,8 @@ img[alt*="p+cl"],
   object-position: 25%;
 }
 
-img[alt*=pr],
-.image-embed[src*="#pr"] img {
+img[alt*="p+r"],
+.image-embed[src*="#p+r"] img {
   object-fit: cover;
   object-position: right;
 }
@@ -5115,8 +5134,8 @@ img[alt*="p+cr"],
   object-position: 75%;
 }
 
-img[alt*=pc],
-.image-embed[src*="#pc"] img {
+img[alt*="p+c"],
+.image-embed[src*="#p+c"] img {
   object-fit: cover;
   object-position: center;
 }
@@ -9963,8 +9982,7 @@ body.fix-dbull .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body.fix-
   }
 }
 /*----Theme: D&D----*/
-.theme-dark.dnd,
-.theme-light.dnd .dnd {
+.dnd {
   --font: "Cinzel Decorative", "Amarante", "Oleo Script", "Lobster 1.3", Inter;
   --font-monospace: "Fira Code Medium", "Recursive Mono Linear Static Medium", "Source Code Pro", Inter;
   --slide-shadow: rgba(0, 28, 74, 0.15);
@@ -10487,14 +10505,14 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
     linear-gradient(var(--td) .1em, transparent .1em);
 }*/
 /*----Theme: SlRvb Blue----*/
-.theme-light.slrvb-b,
-.theme-dark.slrvb-b {
+.slrvb-b {
   --font: "Recursive Sans Linear Static Black", "Oleo Script", "Calisto MT";
   /*Works, but if it doesn't, needs !important*/
   --font-monospace: "Fira Code";
 }
 
-.theme-dark.slrvb-b {
+.theme-dark.slrvb-b,
+.theme-dark .slrvb-b {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -10574,7 +10592,8 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-6: var(--soft-text);
 }
 
-.theme-light.slrvb-b {
+.theme-light.slrvb-b,
+.theme-light .slrvb-b {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -10779,8 +10798,7 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 /*----Theme: School Days----*/
-.theme-dark.s-d,
-.theme-light.s-d {
+.s-d {
   /*FONTS*/
   --font: /*'Recursive Sans Casual Static',*/ "Recursive Sans Linear Static Black", "RocknRoll One Regular";
   --vault-f: "CollegiateBlackFLF", "Jersey M54";
@@ -10792,7 +10810,8 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --bul-f: var(--mdi);
 }
 
-.theme-dark.s-d {
+.theme-dark.s-d,
+.theme-dark .s-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -10893,7 +10912,8 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-6: var(--deep-dark-accent);
 }
 
-.theme-light.s-d {
+.theme-light.s-d,
+.theme-light .s-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -11063,12 +11083,13 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 /*----Theme: Tangerine Dunes----*/
-.theme-dark.t-d, .theme-light.t-d {
+.t-d {
   --hr-sym: "";
   --hr-f: var(--mdi);
 }
 
-.theme-dark.t-d {
+.theme-dark.t-d,
+.theme-dark .t-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--deep-dark-accent);
   --background-secondary: var(--side-bar);
@@ -11120,7 +11141,8 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-6: var(--dark-sidebar);
 }
 
-.theme-light.t-d {
+.theme-light.t-d,
+.theme-light .t-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--deep-dark-accent);
   --background-secondary: var(--side-bar);
@@ -11459,6 +11481,7 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-selection: rgba(61, 82, 107, 0.472);
   --text-highlight-bg: rgba(87, 113, 156, 0.4);
   --text-highlight-bg-active: rgba(112, 132, 160, 0.4);
+  --note: #1a1e24;
   --dark-accent: var(--note);
   --accent: #414958;
   --lite-accent: #aab3ca;
@@ -11501,6 +11524,7 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-form-field-highlighted: #99a4bb20;
   --text-highlight-bg: #99a4bb20;
   --text-highlight-bg-active: #99a4bb20;
+  --note: #f8fbff;
   --dark-accent: var(--note);
   --accent: #b5c2d8;
   --lite-accent: #aab3ca;
@@ -11549,7 +11573,8 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 /*----Theme: ITS Dark----*/
-.theme-dark.its-d {
+.theme-dark.its-d,
+.theme-dark .its-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--deep-dark-accent);
   --background-secondary: var(--side-bar);
@@ -11605,7 +11630,8 @@ body.wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-6: var(--code-bg);
 }
 
-.theme-light.its-d {
+.theme-light.its-d,
+.theme-light .its-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--deep-dark-accent);
   --background-secondary: var(--side-bar);

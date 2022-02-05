@@ -1,7 +1,6 @@
 
 /*----Theme: School Days----*/
-.theme-dark.s-d,
-.theme-light.s-d  {
+.s-d  {
     /*FONTS*/
     --font: /*'Recursive Sans Casual Static',*/ 'Recursive Sans Linear Static Black', 'RocknRoll One Regular';
 	--vault-f: "CollegiateBlackFLF", "Jersey M54";
@@ -13,7 +12,8 @@
     --bullet: "\e80c";
     --bul-f: var(--mdi);
 }
-.theme-dark.s-d {
+.theme-dark.s-d,
+.theme-dark .s-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -110,7 +110,8 @@
     --sphd-ed-5: var(--tag);
     --sphd-ed-6: var(--deep-dark-accent);
 }
-.theme-light.s-d {    
+.theme-light.s-d,
+.theme-light .s-d {    
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);

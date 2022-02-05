@@ -1,6 +1,7 @@
 
 /*----Theme: ITS Dark----*/
-.theme-dark.its-d {
+.theme-dark.its-d,
+.theme-dark .its-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);
@@ -70,7 +71,8 @@
     --sphd-ed-5: var(--f-icon);
     --sphd-ed-6: var(--code-bg);
 }
-.theme-light.its-d {
+.theme-light.its-d,
+.theme-light .its-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--deep-dark-accent);
     --background-secondary: var(--side-bar);

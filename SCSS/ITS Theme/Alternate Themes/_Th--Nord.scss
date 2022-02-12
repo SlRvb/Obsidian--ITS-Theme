@@ -1,6 +1,8 @@
 .nord {
     --hr-sym: "\e564";
     --hr-f: var(--mdi);
+
+    background: var(--note);
 }
 
 .theme-dark.nord,

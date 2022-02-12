@@ -15,7 +15,7 @@ body:not(.alt-chkbx-off) {
         appearance: none;
         filter: none;
         cursor: pointer;
-        background: none;
+        background-color: transparent !important;
         
         font: var(--its);
         font-family: var(--its);
@@ -26,6 +26,9 @@ body:not(.alt-chkbx-off) {
         vertical-align: 0px;
         //margin-left: -2px;
     }
+}
+.markdown-source-view.mod-cm6 .task-list-item-checkbox {
+    vertical-align: -2px;
 }
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task:not([data-task=" "]):not([data-task="x"])::before {
     border: none;

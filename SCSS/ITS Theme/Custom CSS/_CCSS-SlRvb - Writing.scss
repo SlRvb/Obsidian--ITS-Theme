@@ -9,17 +9,21 @@
     text-align: center;
 }
 .writing {
-    & h1:after,
-    & h2:after,
-    & h3:after,
-    & h4:after,
-    & h5:after,
-    & h6:after,
-    & .HyperMD-header-1::after,
-    & .HyperMD-header-2::after,
-    & .HyperMD-header-3::after,
-    & .HyperMD-header-4::after {
-        height: 0 !important;
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6,
+    & .HyperMD-header-1,
+    & .HyperMD-header-2,
+    & .HyperMD-header-3,
+    & .HyperMD-header-4
+    {
+        &::after,
+        &::before {
+            height: 0 !important;
+        }
     }
 
 }

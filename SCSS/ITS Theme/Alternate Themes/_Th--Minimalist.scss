@@ -1,5 +1,7 @@
 .mini {
     --hr-sym: "";
+
+    background: var(--note);
 }
 
 .theme-dark.mini,
@@ -38,6 +40,8 @@
     --aside-bg: var(--note);
     --embed-bg: var(--note);
     --folder: var(--text-dl);
+    --th: var(--note);
+    --tag: var(--note);
     
     --i-at: var(--text-faint);
     --accent2-lite: var(--text-dl);

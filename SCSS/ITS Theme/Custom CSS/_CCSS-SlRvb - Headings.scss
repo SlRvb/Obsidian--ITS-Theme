@@ -159,57 +159,57 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
         &:after  { margin-left: .3em; }
     }
 
-    & h1:before,
-    & h1:after,
+    & h1::before,
+    & h1::after,
     & .HyperMD-header-1::after
     { 
         height: 6px;
-        background-color: var(--accent); 
+        background: var(--accent); 
         width: auto;
     }
     
-    & h2:before,
-    & h2:after,
+    & h2::before,
+    & h2::after,
     & .HyperMD-header-2::after
     { 
         height: 5px;
-        background-color: var(--headers);
+        background: var(--headers);
         width: auto;
     }
 
-    & h3:before,
-    & h3:after,
+    & h3::before,
+    & h3::after,
     & .HyperMD-header-3::after
     { 
         height: 4px;
-        background-color: var(--i-at); 
+        background: var(--i-at); 
         width: auto;
     }
 
-    & h4:before,
-    & h4:after,
+    & h4::before,
+    & h4::after,
     & .HyperMD-header-4::after
     { 
         height: 3px;
-        background-color: var(--accent2-lite); 
+        background: var(--accent2-lite); 
         width: 100%;
     }
 
-    & h5:before,
-    & h5:after,
+    & h5::before,
+    & h5::after,
     & .HyperMD-header-5::after
     { 
         height: 3px;
-        background-color: var(--lines); 
+        background: var(--lines); 
         width: auto;
     }
 
-    & h6:before,
-    & h6:after,
+    & h6::before,
+    & h6::after,
     & .HyperMD-header-6::after
     { 
         height: 3px;
-        background-color: var(--table); 
+        background: var(--table); 
         width: auto;
     }
 }
@@ -284,13 +284,21 @@ body .illusion {
 
 /* Heading Indicators */
 .is-live-preview .HyperMD-header {
-    &::before {
+    &::before,
+    & .cm-fold-indicator
+    {
+        float: left;
+    }
+    
+    
+    &::before
+    {
         font-family: var(--font-monospace);
         color: var(--footnote);
         font-size: calc(var(--f-s-text) - 4px);
-        position: relative;
-        margin-left: -15px;
-        left: -12px;
+        
+        padding-top: 2px;
+        margin-left: -30px;
     }
 
     &.HyperMD-header-1::before { content: "H1"; }
@@ -299,30 +307,7 @@ body .illusion {
     &.HyperMD-header-4::before { content: "H4"; }
     &.HyperMD-header-5::before { content: "H5"; }
     &.HyperMD-header-6::before { content: "H6"; }
-    & .cm-fold-indicator .collapse-indicator {
-        right: -5px;
-    }
 } 
-
-.hc,
-.hcl,
-.writing
-{ 
-    &.is-live-preview,
-    & .is-live-preview {
-        & .HyperMD-header::before {
-            position: absolute;
-            font-size: 16px;
-            left: 10px;
-            margin: auto;
-        }
-        & .HyperMD-header > .cm-fold-indicator {
-            font-size: unset;
-            float: left;
-            left: 10px;
-        }
-    }
-}
 
 /*Apply Header Color Over Link*/
 body.hd-ovr {

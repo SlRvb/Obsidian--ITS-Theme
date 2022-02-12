@@ -50,6 +50,7 @@
     --lines: #1e4765;
     --bg: #1e2f33;
     --table: #2b4448;
+    --th: var(--dark-accent);
     
     --text-highlight-bg: rgba(60,168,131,0.25);
     --text-highlight-bg-active: rgba(115,253,190,0.25);
@@ -125,6 +126,7 @@
     --table: #CCEBE2;
     --fg: #2E918A;
     --bg: var(--table);
+    --th: var(--headers);
     
     --text-highlight-bg: rgba(129,199,194,0.25);
     --text-highlight-bg-active: rgba(115,253,227,0.25);

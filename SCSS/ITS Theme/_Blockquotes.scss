@@ -17,7 +17,7 @@
 	background-color: var(--embed-bg);
     border-color: var(--bg);
     padding-top: 5px;
-    padding-bottom: 5px;
+    //padding-bottom: 5px;
     padding-right: 7px;
     box-shadow: 2px 2px 0 var(--td);
 }
@@ -29,7 +29,7 @@
 /*Quotation Mark*/
 .reveal blockquote:before,
 .markdown-preview-view blockquote:before,
-.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {
     content: '\201D';
     font-family: var(--font);
     color: var(--headers);
@@ -43,7 +43,7 @@
     top: 1.4em;
     right: 1.2em;
 }
-.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {    
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {    
     float: right;
     padding-top: 5px;
     padding-left: 1.3em;

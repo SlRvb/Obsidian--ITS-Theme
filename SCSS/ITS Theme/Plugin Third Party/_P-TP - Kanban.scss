@@ -7,6 +7,11 @@
     width: var(--scroll-size);
 }
 
+/*Image Span Across Card Block*/
+.kanban-plugin__meta-value.kanban-plugin__meta-value {
+    display: block;
+}
+
 /*Board Background*/
 .kanban-plugin {
     background-color: var(--note) !important;
@@ -42,10 +47,13 @@
     font-size: var(--f-text) !important; /*calc(var(--f-s-text) -.*/
 }
 
-.kanban-plugin__lane-input,
-.kanban-plugin__item-input,
-.kanban-plugin__lane-items {
-    border-radius: var(--radius) !important;
+body .kanban-plugin__autocomplete,
+body .kanban-plugin__lane-form-wrapper,
+body .kanban-plugin__lane-input,
+body .kanban-plugin__item-input,
+body .kanban-plugin__lane-items>.kanban-plugin__placeholder:only-child,
+body .kanban-plugin__lane-items {
+    border-radius: var(--radius);
 }
 
 /*Buttons*/
@@ -82,9 +90,6 @@
     width: 0px;
 }
 
-.kanban-plugin__lane-form-wrapper {
-    border-radius: 0 !important;
-}
 /*Kanban Checkboxes */
 .kanban-plugin__item-prefix-button-wrapper input[type=checkbox],
 .kanban-plugin__item.is-complete .task-list-item-checkbox {
@@ -114,6 +119,8 @@
     padding: unset;
 }
 
+
+/**/
 
 
 

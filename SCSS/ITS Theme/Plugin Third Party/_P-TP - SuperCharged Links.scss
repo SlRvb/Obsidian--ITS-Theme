@@ -3,6 +3,12 @@
 .scl .frontmatter-values-grid {
     display: inline-block;
 }
+.scl .frontmatter-value-selector-container,
+.scl .frontmatter-value-selector-toggler {
+    margin-bottom: 0;
+    padding-top: 0;
+}
+
 /*Sliding Panes Icon Swap*/
 body.slp.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
     position: absolute;

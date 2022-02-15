@@ -3811,11 +3811,11 @@ li:nth-child(even) {
   position: relative;
 }
 
-ol li:nth-child(n+10):nth-child(-n+99) .list-collapse-indicator {
+ol li:nth-child(n+10):nth-child(-n+99) > .list-collapse-indicator {
   padding-left: 0em;
 }
 
-ol li:nth-child(n+100):nth-child(-n+999) .list-collapse-indicator {
+ol li:nth-child(n+100):nth-child(-n+999) > .list-collapse-indicator {
   padding-left: 0em;
   margin-left: -57px;
 }
@@ -4933,9 +4933,9 @@ img[alt*=banner],
   clear: both;
 }
 
-img[alt*="ban.ner+small"],
-.image-embed[alt*="ban.ner+small"] img,
-.image-embed[src*="#ban.ner+small"] {
+img[alt*="banner+small"],
+.image-embed[alt*="banner+small"] img,
+.image-embed[src*="#banner+small"] {
   display: block;
   object-fit: cover;
   height: var(--tiny);
@@ -4944,9 +4944,9 @@ img[alt*="ban.ner+small"],
   clear: both;
 }
 
-img[alt*="ban.ner+tall"],
-.image-embed[alt*="ban.ner+tall"] img,
-.image-embed[src*="#ban.ner+tall"] {
+img[alt*="banner+tall"],
+.image-embed[alt*="banner+tall"] img,
+.image-embed[src*="#banner+tall"] {
   display: block;
   object-fit: cover;
   height: var(--medium);
@@ -4964,17 +4964,17 @@ img[alt*=portrait],
   width: 40%;
 }
 
-img[alt*="por.trait+small"],
-.image-embed[alt*="por.trait+small"] img,
-.image-embed[src*="#por.trait+small"] {
+img[alt*="portrait+small"],
+.image-embed[alt*="portrait+small"] img,
+.image-embed[src*="#portrait+small"] {
   height: var(--small);
   width: 20%;
   object-fit: cover;
 }
 
-img[alt*="por.trait+tall"],
-.image-embed[alt*="por.trait+tall"] img,
-.image-embed[src*="#por.trait+tall"] {
+img[alt*="portrait+tall"],
+.image-embed[alt*="portrait+tall"] img,
+.image-embed[src*="#portrait+tall"] {
   height: 500px;
   width: 50%;
   object-fit: cover;
@@ -4989,17 +4989,17 @@ img[alt*=profile],
   width: var(--tiny);
 }
 
-img[alt*="pro.file+medium"],
-.image-embed[alt*="pro.file+medium"] img,
-.image-embed[src*="#pro.file+medium"] {
+img[alt*="profile+medium"],
+.image-embed[alt*="profile+medium"] img,
+.image-embed[src*="#profile+medium"] {
   object-fit: cover;
   height: var(--small);
   width: var(--small);
 }
 
-img[alt*="pro.file+tall"],
-.image-embed[alt*="pro.file+tall"] img,
-.image-embed[src*="#pro.file+tall"] {
+img[alt*="profile+tall"],
+.image-embed[alt*="profile+tall"] img,
+.image-embed[src*="#profile+tall"] {
   object-fit: cover;
   height: var(--medium);
   width: var(--medium);
@@ -5109,94 +5109,94 @@ img[alt*=wtall],
 }
 
 /*--Image Position--*/
+img[alt*="p+"],
+.image-embed[src*="#p+"] img {
+  object-fit: cover;
+}
+
 /*Inner Image*/
+img[alt*="p+c"],
+.image-embed[src*="#p+c"] img {
+  object-position: center;
+}
+
 img[alt*="p+t"],
 .image-embed[src*="#p+t"] img {
-  object-fit: cover;
   object-position: top;
 }
 
 img[alt*="p+b"],
 .image-embed[src*="#p+b"] img {
-  object-fit: cover;
   object-position: bottom;
 }
 
 img[alt*="p+l"],
 .image-embed[src*="#p+l"] img {
-  object-fit: cover;
   object-position: left;
-}
-
-img[alt*="p+cl"],
-.image-embed[src*="#p+cl"] img {
-  object-fit: cover;
-  object-position: 25%;
 }
 
 img[alt*="p+r"],
 .image-embed[src*="#p+r"] img {
-  object-fit: cover;
   object-position: right;
+}
+
+img[alt*="p+cl"],
+.image-embed[src*="#p+cl"] img {
+  object-position: 15%;
+}
+
+img[alt*="p+ccl"],
+.image-embed[src*="#p+ccl"] img {
+  object-position: 25%;
 }
 
 img[alt*="p+cr"],
 .image-embed[src*="#p+cr"] img {
-  object-fit: cover;
-  object-position: 75%;
+  object-position: 60%;
 }
 
-img[alt*="p+c"],
-.image-embed[src*="#p+c"] img {
-  object-fit: cover;
-  object-position: center;
+img[alt*="p+ccr"],
+.image-embed[src*="#p+ccr"] img {
+  object-position: 75%;
 }
 
 img[alt*="p+tc"],
 .image-embed[src*="#p+tc"] img {
-  object-fit: cover;
   object-position: 50% 10%;
 }
 
 img[alt*="p+tcc"],
 .image-embed[src*="#p+tcc"] img {
-  object-fit: cover;
   object-position: 50% 20%;
 }
 
 img[alt*="p+cct"],
 .image-embed[src*="#p+cct"] img {
-  object-fit: cover;
   object-position: 50% 30%;
 }
 
 img[alt*="p+ct"],
 .image-embed[src*="#p+ct"] img {
-  object-fit: cover;
   object-position: 50% 40%;
 }
 
 img[alt*="p+cb"],
 .image-embed[src*="#p+cb"] img {
-  object-fit: cover;
   object-position: 50% 60%;
 }
 
 img[alt*="p+ccb"],
 .image-embed[src*="#p+ccb"] img {
-  object-fit: cover;
   object-position: 50% 70%;
 }
 
 img[alt*="p+bc"],
 .image-embed[src*="#p+bc"] img {
-  object-fit: cover;
   object-position: 50% 80%;
 }
 
 img[alt*="p+bcc"],
 .image-embed[src*="#p+bcc"] img {
-  object-fit: cover;
   object-position: 50% 90%;
 }
 

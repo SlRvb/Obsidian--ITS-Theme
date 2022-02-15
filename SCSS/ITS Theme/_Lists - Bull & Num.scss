@@ -144,6 +144,13 @@ li:nth-child(even) {
     padding-left: .5em;
     position: relative;
 }
+ol li:nth-child(n+10):nth-child(-n+99) .list-collapse-indicator {
+    padding-left: 0em;
+}
+ol li:nth-child(n+100):nth-child(-n+999) .list-collapse-indicator {
+    padding-left: 0em;
+    margin-left: -57px;
+}
 .markdown-preview-view .task-list-item .list-collapse-indicator {
     padding-left: .5em;
     position: relative;

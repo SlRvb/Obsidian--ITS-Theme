@@ -52,9 +52,19 @@
 
 
 
-
-
 /*--Notes Paddings--*/
+// .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer,
+// .markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row),
+// .markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content,
+// .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+//     max-width: 1000px;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+.markdown-source-view.mod-cm6 .cm-scroller {
+    padding: 10px 20px;
+}
 /*Remove Note Padding*/
 .workspace-split.mod-root .view-content {
     padding: 0;

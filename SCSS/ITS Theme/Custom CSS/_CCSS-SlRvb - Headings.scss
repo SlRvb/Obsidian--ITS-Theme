@@ -62,8 +62,9 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 
 /*Editor Heading Re-size*/
 /*Inspired by Red Graphite*/
+.cm-s-obsidian .cm-formatting-header,
 .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
-    font-size: 10px;
+    font-size: 13px;
     color: var(--lines);
 }
 
@@ -286,10 +287,7 @@ body .illusion {
 .is-live-preview .HyperMD-header {
     &::before,
     & .cm-fold-indicator
-    {
-        float: left;
-    }
-    
+    { float: left; }
     
     &::before
     {

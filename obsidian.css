@@ -3188,6 +3188,10 @@ button.mod-cta,
 }
 
 /*--Notes Paddings--*/
+.markdown-source-view.mod-cm6 .cm-scroller {
+  padding: 10px 20px;
+}
+
 /*Remove Note Padding*/
 .workspace-split.mod-root .view-content {
   padding: 0;
@@ -3425,7 +3429,7 @@ input[type=range]::-webkit-slider-thumb {
   box-sizing: content-box;
   font-family: var(--font-monospace);
   text-align: right;
-  background: transparent !important;
+  background: transparent;
 }
 
 /*Note Text Adjustments*/
@@ -3805,6 +3809,15 @@ li:nth-child(even) {
 .markdown-preview-view ol .list-collapse-indicator {
   padding-left: 0.5em;
   position: relative;
+}
+
+ol li:nth-child(n+10):nth-child(-n+99) .list-collapse-indicator {
+  padding-left: 0em;
+}
+
+ol li:nth-child(n+100):nth-child(-n+999) .list-collapse-indicator {
+  padding-left: 0em;
+  margin-left: -57px;
 }
 
 .markdown-preview-view .task-list-item .list-collapse-indicator {
@@ -5745,8 +5758,9 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 
 /*Editor Heading Re-size*/
 /*Inspired by Red Graphite*/
+.cm-s-obsidian .cm-formatting-header,
 .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--lines);
 }
 

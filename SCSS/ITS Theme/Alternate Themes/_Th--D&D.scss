@@ -175,34 +175,36 @@
 
 /*Headings*/
 /*Heading Line*/
-.dnd:not(.illusion):not(.h-line):not(.hcl) h1:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl) h1:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, var(--h1), transparent);
-    left: 0;
-}
-
-.dnd:not(.illusion):not(.h-line):not(.hcl) h2:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl) h2:after {
-    content: "";
-    display: block;
-    width: 85%;
-    height: 4px;
-    background: linear-gradient(to right, var(--h2), transparent);
-    left: 0;
-}
-
-.dnd:not(.illusion):not(.h-line):not(.hcl) h3:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl) h3:after {
-    content: "";
-    display: block;
-    width: 70%;
-    height: 4px;
-    background: linear-gradient(to right, var(--h3), transparent);
-    left: 0;
+.dnd:not(.illusion):not(.h-line):not(.hcl),
+.wotc:not(.illusion):not(.h-line):not(.hcl),
+.wotc-beyond:not(.illusion):not(.h-line):not(.hcl) {
+    &:not(.sphd-und-1) h1:after,
+    &:not(.sphd-und-1) .HyperMD-header-1:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right, var(--h1), transparent);
+        left: 0;
+    }
+    &:not(.sphd-und-2) h2:after,
+    &:not(.sphd-und-2) .HyperMD-header-2:after {
+        content: "";
+        display: block;
+        width: 85%;
+        height: 4px;
+        background: linear-gradient(to right, var(--h2), transparent);
+        left: 0;
+    }
+    &:not(.sphd-und-3) h3:after,
+    &:not(.sphd-und-3) .HyperMD-header-3:after {
+        content: "";
+        display: block;
+        width: 70%;
+        height: 4px;
+        background: linear-gradient(to right, var(--h3), transparent);
+        left: 0;
+    }
 }
 
 /*Writing Class Headings*/

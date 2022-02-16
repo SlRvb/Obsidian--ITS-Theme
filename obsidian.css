@@ -1511,6 +1511,11 @@ settings:
         id: kbn
         type: class-toggle
     -
+        title: Kanban Plugin Notion Style
+        description: Style the kanban plugin like a Notion Kanban Board
+        id: notion-kbn
+        type: class-toggle
+    -
         title: Image Zoom
         description: Hold and click an image to zoom into it.
         id: img-zoom
@@ -1584,6 +1589,10 @@ settings:
     -   
         title: Minimalist
         id: mini
+        type: class-toggle
+    -   
+        title: Notion
+        id: notion
         type: class-toggle
     -
         title: ITS Dark
@@ -2942,13 +2951,9 @@ body:not(.its-i) svg.clock-glyph {
   /*Remove Rounding*/
 }
 
-body:not(.scrl-d) ::-webkit-scrollbar-thumb {
-  background-color: var(--accent);
-}
-
 body:not(.scrl-d) ::-webkit-scrollbar-thumb:hover,
 body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
-  background-color: var(--accent);
+  background-color: var(--lite-accent);
 }
 
 ::-webkit-scrollbar {
@@ -3010,7 +3015,7 @@ body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
 
 /*Buttons*/
 .nav-action-button.is-active {
-  background-color: var(--th);
+  background-color: var(--bttn);
   color: var(--text-dl);
 }
 
@@ -7094,6 +7099,7 @@ body:not(.op-h) .outline .tree-item.is-collapsed .tree-item-self:before {
 .tag-container .tree-item-self:hover {
   color: var(--accent);
   font-weight: 600;
+  background: var(--outline);
 }
 
 /*Count Squared*/
@@ -8439,7 +8445,7 @@ body .encounter-instance ul li:not(:hover) .xp-parent.xp-parent.xp-parent {
 }
 
 .kanban-plugin__scroll-container.kanban-plugin__vertical::-webkit-scrollbar {
-  width: var(--scroll-size);
+  width: calc(var(--scroll-size) + 5px);
 }
 
 /*Image Span Across Card Block*/
@@ -8448,41 +8454,41 @@ body .encounter-instance ul li:not(:hover) .xp-parent.xp-parent.xp-parent {
 }
 
 /*Board Background*/
-.kanban-plugin {
-  background-color: var(--note) !important;
+.kanban-plugin.kanban-plugin {
+  background-color: var(--note);
 }
 
-.kanban-plugin__lane-header-wrapper {
-  margin: 0 !important;
+.kanban-plugin__lane-header-wrapper.kanban-plugin__lane-header-wrapper {
+  margin: 0;
 }
 
 /*Outer box*/
-.kanban-plugin__lane {
-  background-color: var(--note) !important;
-  border-radius: var(--radius) !important;
-  border: 3px solid var(--outline) !important;
-  box-shadow: -0.2em 0.2em var(--outline) !important;
+.kanban-plugin__lane.kanban-plugin__lane {
+  background-color: var(--note);
+  border-radius: var(--radius);
+  border: 3px solid var(--outline);
+  box-shadow: -0.2em 0.2em var(--outline);
 }
 
 /*Items*/
-.kanban-plugin__item {
-  border: 0 !important;
-  border-left: 3px solid var(--accent) !important;
-  border-radius: var(--radius) !important;
+.kanban-plugin__item.kanban-plugin__item {
+  border: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
 }
 
-.kanban-plugin__item-content-wrapper {
-  background-color: var(--outer-bar) !important;
-  border-radius: var(--radius) !important;
+body .kanban-plugin__item-content-wrapper.kanban-plugin__item-content-wrapper {
+  background-color: var(--outer-bar);
+  border-radius: var(--radius);
 }
 
-.kanban-plugin__item-content-wrapper:hover {
-  background-color: var(--hvr2) !important;
-  border-radius: var(--radius) !important;
+.kanban-plugin__item-content-wrapper.kanban-plugin__item-content-wrapper:hover {
+  background-color: var(--hvr2);
+  border-radius: var(--radius);
 }
 
-.kanban-plugin__item-title .markdown-preview-view {
-  font-size: var(--f-text) !important;
+.kanban-plugin__item-title.kanban-plugin__item-title .markdown-preview-view {
+  font-size: var(--f-s-text);
   /*calc(var(--f-s-text) -.*/
 }
 
@@ -8496,31 +8502,31 @@ body .kanban-plugin__lane-items {
 }
 
 /*Buttons*/
-.kanban-plugin__item-button-wrapper {
-  border: 0 !important;
-  background-color: var(--code-bg) !important;
-  padding: 0 !important;
+.kanban-plugin__item-button-wrapper.kanban-plugin__item-button-wrapper {
+  border: 0;
+  background-color: var(--code-bg);
+  padding: 0;
 }
 
-.kanban-plugin__new-item-button {
-  background-color: transparent !important;
-  padding: 1em !important;
+.kanban-plugin__new-item-button.kanban-plugin__new-item-button {
+  background-color: transparent;
+  padding: 1em;
 }
 
-.kanban-plugin__new-lane-button-wrapper {
+.kanban-plugin__new-lane-button-wrapper.kanban-plugin__new-lane-button-wrapper {
   position: fixed;
-  width: auto !important;
+  width: auto;
   bottom: 2em;
   right: 50%;
 }
 
-.kanban-plugin__new-lane-button {
-  background-color: var(--outer-bar) !important;
+.kanban-plugin__new-lane-button.kanban-plugin__new-lane-button {
+  background-color: var(--outer-bar);
   padding: 0 0.3em;
   color: var(--fg);
-  text-align: center !important;
+  text-align: center;
   border: 1px solid var(--bg);
-  box-shadow: -0.1em 0.1em var(--bg) !important;
+  box-shadow: -0.1em 0.1em var(--bg);
 }
 
 .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
@@ -8546,8 +8552,8 @@ body .kanban-plugin__lane-items {
 }
 
 /*Metadata*/
-.kanban-plugin__item-metadata-wrapper:not(:empty) {
-  background-color: var(--note) !important;
+body .kanban-plugin__item-metadata-wrapper:not(:empty) {
+  background-color: var(--note);
 }
 
 .kanban-plugin__item-title-wrapper:not(:only-child) {
@@ -8563,7 +8569,6 @@ body .kanban-plugin__lane-items {
   padding: unset;
 }
 
-/**/
 /*Minimalist Kanban Plugin Adjustments*/
 /*----Lane----*/
 .kbn .kanban-plugin__lane-title p {
@@ -8645,6 +8650,100 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
 .kbn .kanban-plugin__item .markdown-preview-view a.internal-link {
   font-weight: 600;
   color: var(--text);
+}
+
+/*Notion Inspired Kanban*/
+.notion.notion .kanban-plugin__item-metadata-wrapper,
+.notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper {
+  padding: 0;
+}
+.notion.notion .kanban-plugin__meta-row .kanban-plugin__markdown-preview-view:not(.inline) p,
+.notion-kbn.notion-kbn .kanban-plugin__meta-row .kanban-plugin__markdown-preview-view:not(.inline) p {
+  margin: 0 10px;
+}
+.notion.notion .kanban-plugin__meta-table td.kanban-plugin__meta-key,
+.notion-kbn.notion-kbn .kanban-plugin__meta-table td.kanban-plugin__meta-key {
+  padding-left: 10px;
+}
+.notion.notion tr.kanban-plugin__meta-row:last-child p,
+.notion-kbn.notion-kbn tr.kanban-plugin__meta-row:last-child p {
+  padding-bottom: 5px;
+}
+.notion.notion .kanban-plugin__item-metadata-wrapper:not(:empty),
+.notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper:not(:empty) {
+  padding-top: 0px;
+}
+.notion.notion .kanban-plugin__item-metadata-wrapper:not(:empty), .notion.notion .kanban-plugin__item-title-wrapper:not(:only-child),
+.notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper:not(:empty),
+.notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper:not(:only-child) {
+  background: var(--outer-bar);
+}
+.notion.notion .kanban-plugin__item-title-wrapper:not(:only-child),
+.notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper:not(:only-child) {
+  padding: 8px 10px 3px 10px;
+}
+.notion.notion .kanban-plugin__item.kanban-plugin__item,
+.notion-kbn.notion-kbn .kanban-plugin__item.kanban-plugin__item {
+  box-shadow: var(--outline) 0px 0px 0px 1px, var(--outline) 0px 2px 4px;
+}
+.notion.notion .kanban-plugin__new-item-button.kanban-plugin__new-item-button,
+.notion-kbn.notion-kbn .kanban-plugin__new-item-button.kanban-plugin__new-item-button {
+  padding: 5px 15px;
+}
+.notion.notion .kanban-plugin a.tag,
+.notion-kbn.notion-kbn .kanban-plugin a.tag {
+  background: var(--inactive);
+}
+.notion.notion .kanban-plugin__new-item-button,
+.notion-kbn.notion-kbn .kanban-plugin__new-item-button {
+  opacity: 70%;
+}
+.notion.notion .kanban-plugin__lane-header-wrapper,
+.notion-kbn.notion-kbn .kanban-plugin__lane-header-wrapper {
+  padding: 2px 15px;
+}
+.notion.notion .kanban-plugin__lane-items,
+.notion-kbn.notion-kbn .kanban-plugin__lane-items {
+  padding-top: 0;
+}
+.notion.notion .kanban-plugin__lane-header-wrapper .kanban-plugin__lane-grip,
+.notion-kbn.notion-kbn .kanban-plugin__lane-header-wrapper .kanban-plugin__lane-grip {
+  float: right;
+}
+.notion.notion .kanban-plugin__lane-header-wrapper:not(:hover) .kanban-plugin__lane-grip, .notion.notion .kanban-plugin__lane-header-wrapper:not(:hover) .kanban-plugin__lane-settings-button-wrapper,
+.notion-kbn.notion-kbn .kanban-plugin__lane-header-wrapper:not(:hover) .kanban-plugin__lane-grip,
+.notion-kbn.notion-kbn .kanban-plugin__lane-header-wrapper:not(:hover) .kanban-plugin__lane-settings-button-wrapper {
+  display: none;
+}
+.notion.notion .kanban-plugin__lane-header-wrapper, .notion.notion .kanban-plugin__lane.kanban-plugin__lane, .notion.notion .kanban-plugin__item.kanban-plugin__item,
+.notion-kbn.notion-kbn .kanban-plugin__lane-header-wrapper,
+.notion-kbn.notion-kbn .kanban-plugin__lane.kanban-plugin__lane,
+.notion-kbn.notion-kbn .kanban-plugin__item.kanban-plugin__item {
+  border: 0;
+}
+.notion.notion .kanban-plugin__new-lane-button.kanban-plugin__new-lane-button, .notion.notion button.kanban-plugin__new-item-button, .notion.notion .kanban-plugin__lane.kanban-plugin__lane,
+.notion-kbn.notion-kbn .kanban-plugin__new-lane-button.kanban-plugin__new-lane-button,
+.notion-kbn.notion-kbn button.kanban-plugin__new-item-button,
+.notion-kbn.notion-kbn .kanban-plugin__lane.kanban-plugin__lane {
+  box-shadow: none;
+}
+.notion.notion .kanban-plugin__item-button-wrapper,
+.notion-kbn.notion-kbn .kanban-plugin__item-button-wrapper {
+  background: transparent;
+}
+.notion.notion .kanban-plugin__lane-wrapper,
+.notion-kbn.notion-kbn .kanban-plugin__lane-wrapper {
+  margin-right: 5px;
+}
+
+.theme-light.notion.notion .kanban-plugin__item-metadata-wrapper:not(:empty),
+.theme-light.notion.notion .kanban-plugin__item-title-wrapper:not(:only-child) {
+  background: var(--note);
+}
+
+.notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper:not(:empty),
+.notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper:not(:only-child) {
+  background: var(--note);
 }
 
 /*Plugin: Leaflet*/
@@ -11576,6 +11675,163 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-4: #88A073;
   --sphd-ed-5: #A48EAD;
   --sphd-ed-6: var(--soft-text);
+}
+
+/*Notion Colors*/
+.notion {
+  --font: var(--default-font);
+  --f-w-h: 900 !important;
+  --hr-sym: "";
+  background: var(--note);
+}
+
+.theme-dark.notion,
+.theme-dark .notion {
+  --background-primary: var(--note);
+  --background-primary-alt: var(--side-bar);
+  --background-secondary: var(--side-bar);
+  --background-secondary-alt: var(--side-bar);
+  --background-modifier-cover: var(--side-bar);
+  --text-normal: var(--text);
+  --text-muted: var(--soft-text);
+  --text-accent: var(--accent2-lite);
+  --background-modifier-form-field: rgb(255, 255, 255, 0.1);
+  --background-modifier-form-field-highlighted: rgb(255, 255, 255, 0.1);
+  --text-highlight-bg: rgb(255, 255, 255, 0.1);
+  --text-highlight-bg-active: rgb(255, 255, 255, 0.1);
+  --text-selection: rgb(255, 255, 255, 0.1);
+  --text-faint: var(--inactive);
+  --interactive-accent: var(--bttn);
+  --text-on-accent: var(--text-dl);
+  --scrollbar-bg: #3b4044;
+  --scrollbar-thumb-bg: #474C50;
+  --text: #EBEBEB;
+  --headers: var(--text);
+  --accent2-lite: #2EA1CF;
+  --lite-accent: var(--bttn);
+  --soft-text: #A8ABAC;
+  --inactive: #5D6265;
+  --footnote: #7A7D7F;
+  --file: var(--text);
+  --code-text: var(--text);
+  --code-bg: #3F4447;
+  --note: #2F3437;
+  --outline: #0b0f1330;
+  --bttn: transparent;
+  --bg: #3C4144;
+  --side-bar: #373C3F;
+  --outer-bar: var(--embed-bg);
+  --embed-bg: #3F4447;
+  --code-bg: var(--bg);
+  --th: var(--side-bar);
+  --td: #0f0f0f33;
+  --hr: #3C3F43;
+  --table: #4C5153;
+  --lines: var(--table);
+  /*#3E4245*/
+  --bttn: #43B3E0;
+  /*#889FC3*/
+  --tag: var(--bttn);
+  --folder: var(--bttn);
+  --text-dl: white;
+  --i-at: var(--bttn);
+  --f-hover: var(--text);
+  --accent: var(--bttn);
+  /*#474C50*/
+  --accent2: var(--soft-text);
+  --dark-accent: #4B5053;
+  /*#26292B*/
+  --dark-sidebar: var(--side-bar);
+  --aside-bg: var(--note);
+}
+
+.theme-light.notion,
+.theme-light .notion {
+  --background-primary: var(--note);
+  --background-primary-alt: var(--side-bar);
+  --background-secondary: var(--side-bar);
+  --background-secondary-alt: var(--side-bar);
+  --background-modifier-cover: var(--side-bar);
+  --background-modifier-form-field: rgba(242, 241, 238, 0.6);
+  --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
+  --text-highlight-bg: rgba(55, 53, 47, 0.078);
+  --text-highlight-bg-active: rgba(55, 53, 47, 0.078);
+  --text-selection: rgba(55, 53, 47, 0.09);
+  --scrollbar-bg: #EDECE9;
+  --scrollbar-thumb-bg: #D3D1CB;
+  --interactive-accent: var(--bttn);
+  --text-accent: var(--text);
+  --text-on-accent: white;
+  --text-faint: var(--inactive);
+  --note: #FFFFFF;
+  --side-bar: #F7F6F3;
+  --accent: #D3D1CB;
+  --dark-accent: #E8E7E4;
+  --outer-bar: #F1F1EF;
+  --inactive: #CFCECD;
+  --bg: #EDECE9;
+  --embed-bg: #F1F1EF;
+  --dark-sidebar: var(--side-bar);
+  --aside-bg: var(--note);
+  --headers: var(--text);
+  --text: #37352f;
+  /*#8D8C89*/
+  --accent2-lite: #2EA1CF;
+  --lite-accent: var(--bttn);
+  --soft-text: #82817C;
+  --hr: #EDEDEC;
+  --td: #37352F10;
+  --outline: var(--td);
+  --file: #69685f;
+  --th: var(--side-bar);
+  --hr: rgba(55, 53, 47, 0.1);
+  --lines: var(--hr);
+  --table:#e9e9e7;
+  --bttn: #43B3E0;
+  --tag: var(--bttn);
+  --folder: var(--bttn);
+  --text-dl: white;
+  --i-at: var(--bttn);
+  --f-hover: var(--text);
+  --accent: #43B3E0;
+  --accent2: var(--soft-text);
+  --footnote: #A09E9A;
+  --code-bg: rgb(247, 246, 243);
+  --code-text: var(--text);
+}
+
+.notion .modal.mod-settings .vertical-tab-content-container,
+.notion .vertical-tab-content,
+.notion .community-plugin-info {
+  background: var(--note);
+}
+
+.notion.markdown-source-view.mod-cm6 .cm-underline,
+.notion.markdown-preview-view .internal-link,
+.notion .internal-link,
+.notion .external-link,
+.notion .cm-underline {
+  color: var(--text);
+  border-bottom: 1px solid var(--table);
+  font-weight: 600;
+}
+
+.notion a {
+  font-weight: 600;
+}
+
+.notion .external-link {
+  color: var(--soft-text);
+}
+
+.notion .external-link:hover,
+.notion .internal-link:hover,
+.notion .cm-underline:hover {
+  background: var(--text-highlight-bg);
+}
+
+.notion .titlebar * {
+  color: var(--text) !important;
 }
 
 .mini {

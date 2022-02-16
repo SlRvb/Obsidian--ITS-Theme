@@ -8,10 +8,10 @@
     border-radius: var(--radius);
     -webkit-border-radius: var(--radius); /*Remove Rounding*/
 }
-body:not(.scrl-d) ::-webkit-scrollbar-thumb { background-color: var(--accent); }
+//body:not(.scrl-d) ::-webkit-scrollbar-thumb { background-color: var(--accent); }
 body:not(.scrl-d) ::-webkit-scrollbar-thumb:hover,
 body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
-    background-color: var(--accent);
+    background-color: var(--lite-accent);
 }
 ::-webkit-scrollbar {
     border: 0;

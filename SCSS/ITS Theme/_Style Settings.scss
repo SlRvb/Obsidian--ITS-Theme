@@ -1510,6 +1510,11 @@ settings:
         id: kbn
         type: class-toggle
     -
+        title: Kanban Plugin Notion Style
+        description: Style the kanban plugin like a Notion Kanban Board
+        id: notion-kbn
+        type: class-toggle
+    -
         title: Image Zoom
         description: Hold and click an image to zoom into it.
         id: img-zoom
@@ -1583,6 +1588,10 @@ settings:
     -   
         title: Minimalist
         id: mini
+        type: class-toggle
+    -   
+        title: Notion
+        id: notion
         type: class-toggle
     -
         title: ITS Dark

@@ -2519,6 +2519,7 @@ body:not(.its-i) svg.clock-glyph {
   /*#111417*/
   --aside-bg: #11151d;
   --th: var(--dark-accent);
+  --th-text: var(--text-dl);
   --td: #06080c60;
   --hvr: var(--text-highlight-bg);
   --hvr2: var(--text-selection);
@@ -2660,6 +2661,7 @@ body:not(.its-i) svg.clock-glyph {
   --embed-bg: var(--dark-sidebar) /*#ebf1f8*/;
   --aside-bg: var(--dark-sidebar);
   --th: var(--headers);
+  --th-text: var(--text-dl);
   --td: #d0ddef62;
   /*Highlights*/
   --hl-md: rgba(199, 129, 129, 0.4);
@@ -4161,7 +4163,7 @@ table {
 .markdown-preview-view th,
 .reveal table th {
   background-color: var(--th);
-  color: var(--text-dl);
+  color: var(--th-text);
   /*#edf7ff*/
   border: 0px;
 }
@@ -4259,27 +4261,6 @@ a.tag:hover {
 .frontmatter-container .tag:hover {
   background-color: var(--tag);
   border: none;
-}
-
-.markdown-preview-view pre.frontmatter.language-yaml .token.key + .punctuation {
-  display: none;
-}
-
-.markdown-preview-view pre.frontmatter.language-yaml .token.key {
-  float: left;
-  width: 10vh;
-  color: var(--inactive);
-  font-weight: bold;
-}
-
-.ntn .markdown-preview-view pre.frontmatter.language-yaml code {
-  background: transparent;
-  border: 0;
-  font-family: var(--default-font);
-}
-
-.ntn .markdown-preview-view pre.frontmatter.language-yaml {
-  font-size: var(--f-s-nt);
 }
 
 /*--Embeds--*/
@@ -7820,7 +7801,7 @@ body .BC-trail div.BC-trail-grid-item {
 body .button-default.button-default {
   border-radius: var(--radius);
   box-shadow: none;
-  background-color: var(--th);
+  background-color: var(--bttn);
   border: 0;
   color: var(--text-dl);
 }
@@ -8174,7 +8155,7 @@ body .dice-roller-view .dice-roller-grid .advantage-disadvantage button + button
 body .fantasy-calendar .weekdays.weekdays, body .fantasy-calendar .weeks {
   font-weight: 900;
   background-color: var(--th);
-  color: var(--text-dl);
+  color: var(--th-text);
   border-radius: var(--radius);
 }
 
@@ -8554,6 +8535,7 @@ body .kanban-plugin__lane-items {
 /*Metadata*/
 body .kanban-plugin__item-metadata-wrapper:not(:empty) {
   background-color: var(--note);
+  z-index: 0;
 }
 
 .kanban-plugin__item-title-wrapper:not(:only-child) {
@@ -8578,7 +8560,7 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 .kbn .kanban-plugin__lane {
   background: var(--note) !important;
   box-shadow: none !important;
-  border-width: 2px !important;
+  border-width: 0px !important;
 }
 
 .kbn .kanban-plugin__meta-table td {
@@ -8597,7 +8579,8 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 /*Title: Sizing*/
 .kbn .kanban-plugin__lane-header-wrapper {
   border: none !important;
-  padding-top: 10px !important;
+  padding: 5px 10px !important;
+  padding-bottom: 0 !important;
 }
 
 .kbn .kanban-plugin__item-title-wrapper {
@@ -8605,8 +8588,19 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 }
 
 /*Title: Link Styling*/
-.kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link {
-  color: var(--text) !important;
+body.kbn .kanban-plugin__item-content-wrapper.kanban-plugin__item-content-wrapper,
+.kbn .kanban-plugin__item-metadata-wrapper:not(:empty) {
+  background: transparent;
+}
+
+.kbn.kbn .kanban-plugin__item-title-wrapper:not(:only-child) {
+  background: var(--code-bg);
+  border-bottom: 1px solid var(--table);
+  box-shadow: 0px 2px 0 var(--outline);
+}
+
+.kbn.kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link {
+  color: var(--headers);
 }
 
 .kbn .kanban-plugin__item-title .markdown-preview-view a.internal-link:after {
@@ -8625,9 +8619,12 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
   padding: 2px 6px !important;
 }
 
+.kbn .kanban-plugin__lane,
 .kbn .kanban-plugin__item {
-  -webkit-font-smoothing: subpixel-antialiased !important;
-  border-left: 2px solid var(--table) !important;
+  -webkit-font-smoothing: subpixel-antialiased;
+  border-left: 0;
+  margin-bottom: 4px;
+  box-shadow: 2px 2px 0 var(--outline);
 }
 
 /*Card: Key*/
@@ -8673,8 +8670,9 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
 .notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper:not(:empty) {
   padding-top: 0px;
 }
-.notion.notion .kanban-plugin__item-metadata-wrapper:not(:empty), .notion.notion .kanban-plugin__item-title-wrapper:not(:only-child),
+.notion.notion .kanban-plugin__item-metadata-wrapper:not(:empty), .notion.notion .kanban-plugin__item-title-wrapper, .notion.notion .kanban-plugin__item-title-wrapper:not(:only-child),
 .notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper:not(:empty),
+.notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper,
 .notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper:not(:only-child) {
   background: var(--outer-bar);
 }
@@ -8736,8 +8734,10 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
   margin-right: 5px;
 }
 
-.theme-light.notion.notion .kanban-plugin__item-metadata-wrapper:not(:empty),
-.theme-light.notion.notion .kanban-plugin__item-title-wrapper:not(:only-child) {
+.theme-light.notion.notion .kanban-plugin__item-title-wrapper, .theme-light.notion.notion .kanban-plugin__item-metadata-wrapper:not(:empty), .theme-light.notion.notion .kanban-plugin__item-title-wrapper:not(:only-child),
+.theme-light.notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper,
+.theme-light.notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper:not(:empty),
+.theme-light.notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper:not(:only-child) {
   background: var(--note);
 }
 
@@ -11723,7 +11723,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --outer-bar: var(--embed-bg);
   --embed-bg: #3F4447;
   --code-bg: var(--bg);
-  --th: var(--side-bar);
+  --th: #373c3f;
   --td: #0f0f0f33;
   --hr: #3C3F43;
   --table: #4C5153;
@@ -11756,7 +11756,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
   --text-highlight-bg: rgba(55, 53, 47, 0.078);
   --text-highlight-bg-active: rgba(55, 53, 47, 0.078);
-  --text-selection: rgba(55, 53, 47, 0.09);
+  --text-selection: rgba(55, 53, 47, 0.078);
   --scrollbar-bg: #EDECE9;
   --scrollbar-thumb-bg: #D3D1CB;
   --interactive-accent: var(--bttn);
@@ -11780,10 +11780,11 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --lite-accent: var(--bttn);
   --soft-text: #82817C;
   --hr: #EDEDEC;
-  --td: #37352F10;
   --outline: var(--td);
   --file: #69685f;
+  --td: #37352F10;
   --th: var(--side-bar);
+  --th-text: var(--text);
   --hr: rgba(55, 53, 47, 0.1);
   --lines: var(--hr);
   --table:#e9e9e7;

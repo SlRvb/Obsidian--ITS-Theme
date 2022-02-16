@@ -9,7 +9,7 @@ table { border-collapse: collapse; }
 .markdown-preview-view th,
 .reveal table th {
     background-color: var(--th);
-    color: var(--text-dl); /*#edf7ff*/
+    color: var(--th-text); /*#edf7ff*/
     border: 0px;
 }
 .is-live-preview table th:nth-child(even),

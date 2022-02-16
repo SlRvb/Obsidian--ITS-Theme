@@ -54,7 +54,7 @@
     --embed-bg: #3F4447;
     --code-bg: var(--bg);
     
-    --th: var(--side-bar);
+    --th: #373c3f;
     --td: #0f0f0f33;
     
     --hr: #3C3F43;
@@ -89,7 +89,7 @@
     --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
     --text-highlight-bg: rgba(55, 53, 47, 0.078);
     --text-highlight-bg-active: rgba(55, 53, 47, 0.078);
-    --text-selection: rgba(55, 53, 47, 0.09);
+    --text-selection: rgba(55, 53, 47, 0.078);
 
     --scrollbar-bg: #EDECE9;
     --scrollbar-thumb-bg: #D3D1CB;
@@ -117,10 +117,12 @@
     --lite-accent: var(--bttn);
     --soft-text: #82817C;
     --hr: #EDEDEC;
-    --td: #37352F10;
     --outline: var(--td);
     --file: #69685f;
+    
+    --td: #37352F10;
     --th: var(--side-bar);
+    --th-text: var(--text);
 
     --hr: rgba(55, 53, 47, 0.1);
     --lines: var(--hr);

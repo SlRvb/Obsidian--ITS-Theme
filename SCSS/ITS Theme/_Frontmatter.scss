@@ -30,19 +30,20 @@
     border: none;
 }
 
-.markdown-preview-view pre.frontmatter.language-yaml .token.key + .punctuation {
-    display: none;
-}
-.markdown-preview-view pre.frontmatter.language-yaml .token.key {
-    float:left;
-    width: 10vh;
-    color: var(--inactive);
-    font-weight: bold;
-}
-.ntn .markdown-preview-view pre.frontmatter.language-yaml code {
-    background: transparent;
-    border: 0;
-    font-family: var(--default-font);
-}
+// Notion Style Frontmatter
+// .markdown-preview-view pre.frontmatter.language-yaml .token.key + .punctuation {
+//     display: none;
+// }
+// .markdown-preview-view pre.frontmatter.language-yaml .token.key {
+//     float:left;
+//     width: 10vh;
+//     color: var(--inactive);
+//     font-weight: bold;
+// }
+// .ntn .markdown-preview-view pre.frontmatter.language-yaml code {
+//     background: transparent;
+//     border: 0;
+//     font-family: var(--default-font);
+// }
 
-.ntn .markdown-preview-view pre.frontmatter.language-yaml { font-size: var(--f-s-nt); }
+// .ntn .markdown-preview-view pre.frontmatter.language-yaml { font-size: var(--f-s-nt); }

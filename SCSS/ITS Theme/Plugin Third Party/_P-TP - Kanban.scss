@@ -258,6 +258,7 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
     & .kanban-plugin__item-title-wrapper,
     & .kanban-plugin__item-metadata-wrapper:not(:empty),
     & .kanban-plugin__item-title-wrapper:not(:only-child) { background: var(--note); }
+    & .kanban-plugin a.tag { background: var(--bttn); }
 }
 
 .notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper:not(:empty),

@@ -8907,6 +8907,10 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
 .theme-light.notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper:not(:only-child) {
   background: var(--note);
 }
+.theme-light.notion.notion .kanban-plugin a.tag,
+.theme-light.notion-kbn.notion-kbn .kanban-plugin a.tag {
+  background: var(--bttn);
+}
 
 .notion-kbn.notion-kbn .kanban-plugin__item-metadata-wrapper:not(:empty),
 .notion-kbn.notion-kbn .kanban-plugin__item-title-wrapper:not(:only-child) {

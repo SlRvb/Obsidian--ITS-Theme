@@ -11950,6 +11950,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   /*#26292B*/
   --dark-sidebar: var(--side-bar);
   --aside-bg: var(--note);
+  --deep-dark-accent: var(--outer-bar);
   --graph-bg: var(--note);
   --graph-lines: #5D626555;
   --graph-node: var(--headers);
@@ -12001,6 +12002,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --embed-bg: #F1F1EF;
   --dark-sidebar: var(--side-bar);
   --aside-bg: var(--note);
+  --deep-dark-accent: var(--outer-bar);
   --headers: var(--text);
   --text: #37352f;
   /*#8D8C89*/

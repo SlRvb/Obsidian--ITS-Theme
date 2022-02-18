@@ -66,6 +66,14 @@ settings:
         max: 20
         step: 1
     -
+        title: Note Text Weights
+        id: f-w-t
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 700
+        step: 100
+    -
         title: Header Weights
         id: f-w-h
         type: variable-number-slider

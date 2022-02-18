@@ -67,6 +67,14 @@ settings:
         max: 20
         step: 1
     -
+        title: Note Text Weights
+        id: f-w-t
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 700
+        step: 100
+    -
         title: Header Weights
         id: f-w-h
         type: variable-number-slider
@@ -1709,6 +1717,7 @@ settings:
   --h-line: 100%;
   --head-h: 15px;
   --f-w-v: 600;
+  --f-w-t: 500;
   /*Other*/
   --hr-sym: "";
   --hr-f: var(--its);
@@ -3550,8 +3559,14 @@ p,
 li,
 table,
 .markdown-preview-section code,
-.cm-s-obsidian .CodeMirror-lines {
+.cm-s-obsidian .CodeMirror-lines,
+.cm-s-obsidian .cm-line {
   font-size: var(--f-s-text);
+  font-weight: var(--f-w-t);
+}
+
+strong {
+  font-weight: 900;
 }
 
 /*-Code-*/
@@ -5881,11 +5896,11 @@ h4::after, .HyperMD-header-4::after {
   align-items: center;
   text-align: center;
 }
-.hcl h1 > :not(.collapse-indicator):nth-child(2), .hcl h2 > :not(.collapse-indicator):nth-child(2), .hcl h3 > :not(.collapse-indicator):nth-child(2), .hcl h4 > :not(.collapse-indicator):nth-child(2), .hcl h5 > :not(.collapse-indicator):nth-child(2), .hcl h6 > :not(.collapse-indicator):nth-child(2) {
-  padding: 0 10px;
+.hcl h1 > :not(.collapse-indicator), .hcl h2 > :not(.collapse-indicator), .hcl h3 > :not(.collapse-indicator), .hcl h4 > :not(.collapse-indicator), .hcl h5 > :not(.collapse-indicator), .hcl h6 > :not(.collapse-indicator) {
+  margin: 0 10px;
 }
-.hcl h1 > :not(.collapse-indicator):nth-child(2):not(:last-child), .hcl h2 > :not(.collapse-indicator):nth-child(2):not(:last-child), .hcl h3 > :not(.collapse-indicator):nth-child(2):not(:last-child), .hcl h4 > :not(.collapse-indicator):nth-child(2):not(:last-child), .hcl h5 > :not(.collapse-indicator):nth-child(2):not(:last-child), .hcl h6 > :not(.collapse-indicator):nth-child(2):not(:last-child) {
-  padding: 0 10px;
+.hcl h1 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h2 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h3 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h4 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h5 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h6 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) {
+  margin: 0 10px;
 }
 .hcl .heading-collapse-indicator {
   position: absolute;
@@ -9015,6 +9030,11 @@ body.ig-code .HyperMD-codeblock .ig-tab::before {
 .ig-tab:not(.ig-indent-group-level):nth-child(5n):before    { background-color: var(--b-l-5) !important; }
 .ig-tab:not(.ig-indent-group-level):nth-child(6n):before    { background-color: var(--b-l-6) !important; }
 */
+/*Emoji Toolbar*/
+img.emoji.emoji {
+  object-fit: cover;
+}
+
 body.mtb.AT-multirow .mobile-toolbar-options-container {
   flex-flow: row wrap;
   overflow-y: auto;

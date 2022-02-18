@@ -32,3 +32,6 @@ body.ig-code .HyperMD-codeblock .ig-tab::before {
 .ig-tab:not(.ig-indent-group-level):nth-child(5n):before    { background-color: var(--b-l-5) !important; }
 .ig-tab:not(.ig-indent-group-level):nth-child(6n):before    { background-color: var(--b-l-6) !important; }
 */
+
+/*Emoji Toolbar*/
+img.emoji.emoji { object-fit: cover; }

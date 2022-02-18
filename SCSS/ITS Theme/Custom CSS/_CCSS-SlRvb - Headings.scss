@@ -137,8 +137,8 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
         text-align: center;
 
         //Other Elements In Heading
-        & > :not(.collapse-indicator):nth-child(2) { padding: 0 10px; }
-        & > :not(.collapse-indicator):nth-child(2):not(:last-child) { padding: 0 10px; }
+        & > :not(.collapse-indicator) { margin: 0 10px; }
+        & > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) { margin: 0 10px; }
     }
 
     & .heading-collapse-indicator { position: absolute; }

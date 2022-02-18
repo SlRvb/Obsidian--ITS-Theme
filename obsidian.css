@@ -3266,10 +3266,7 @@ button.mod-cta,
 }
 
 /*--Notes Paddings--*/
-.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer,
-.markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row),
-.markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content,
-.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+.is-readable-line-width.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row), .is-readable-line-width.markdown-source-view.mod-cm6 .markdown-preview-sizer.markdown-preview-sizer, .is-readable-line-width.markdown-preview-view .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-preview-view .cm-content.cm-content.cm-content, .is-readable-line-width.markdown-preview-view .cm-line.cm-line.cm-line:not(.HyperMD-table-row), .is-readable-line-width.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
   max-width: var(--note-width);
   margin-left: auto;
   margin-right: auto;
@@ -5732,11 +5729,6 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
   color: var(--headers);
 }
 
-.hc h6,
-.hc .cm-header-6 {
-  color: var(--text-muted);
-}
-
 .cm-header-1,
 .cm-header-2,
 .cm-header-3,
@@ -5888,7 +5880,12 @@ h4::after, .HyperMD-header-4::after {
   text-align: center;
 }
 
-.hc h1::after, .hc h2::after, .hc h3::after, .hc h4::after, .hc h5::after, .hc h6::after, .hc .HyperMD-header-1::after, .hc .HyperMD-header-2::after, .hc .HyperMD-header-3::after, .hc .HyperMD-header-4::after {
+.hc h6,
+.hc .cm-header-6 {
+  color: var(--text-muted);
+}
+
+.hc h1::after, .hc h2::after, .hc h3::after, .hc h4::after, .hc h5::after, .hc h6::after, .hc.is-live-preview .HyperMD-header-1::after, .hc.is-live-preview .HyperMD-header-2::after, .hc.is-live-preview .HyperMD-header-3::after, .hc.is-live-preview .HyperMD-header-4::after {
   margin: auto;
 }
 

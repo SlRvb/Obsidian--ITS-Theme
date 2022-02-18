@@ -5,11 +5,6 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
     color: var(--headers);
 }
 
-.hc h6,
-.hc .cm-header-6 {
-    color: var(--text-muted);
-}
-
 
 .cm-header-1,
 .cm-header-2,
@@ -114,6 +109,11 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
 .hc h6
 { text-align: center; }
 
+.hc h6,
+.hc .cm-header-6 {
+    color: var(--text-muted);
+}
+
 //Center Lines
 .hc {
     & h1,
@@ -122,10 +122,10 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & h4,
     & h5,
     & h6,
-    & .HyperMD-header-1,
-    & .HyperMD-header-2,
-    & .HyperMD-header-3,
-    & .HyperMD-header-4
+    &.is-live-preview .HyperMD-header-1,
+    &.is-live-preview .HyperMD-header-2,
+    &.is-live-preview .HyperMD-header-3,
+    &.is-live-preview .HyperMD-header-4
     { &::after { margin: auto; } }
 }
 

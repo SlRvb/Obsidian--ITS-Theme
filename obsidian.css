@@ -93,6 +93,14 @@ settings:
         max: 2
         step: .1
     -
+        title: Vault Title Weight
+        id: f-w-v
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
+    -
         title: Specific View Changes
         description: Change text in both preview/edit mode or change it for either mode separately
         id: Font-Specific
@@ -677,7 +685,7 @@ settings:
         step: 1
     -
         title: Sidebar Text Size
-        description: 
+        description: Resize side panel text
         id: f-s-sb
         type: variable-number-slider
         default: 16
@@ -695,6 +703,16 @@ settings:
         min: 12
         max: 20
         step: 1
+    -
+        title: Note Width
+        description: Resize note width when readable line length toggled on.
+        id: note-width
+        type: variable-number-slider
+        default: 700
+        format: px
+        min: 500
+        max: 1000
+        step: 50
     -
         title: Note Elements
         id: Other-Note
@@ -1233,6 +1251,24 @@ settings:
         default-dark: '#883737'
         default-light: '#c14343'
     -
+        title: Scrollbar FG Color
+        description: Scrollbar thumb/foreground color
+        id: scrollbar-thumb-bg
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-dark: '#863737'
+        default-light: 'rgba(134, 173, 218, 0.157)'
+    -
+        title: Scrollbar BG Color
+        description: Scrollbar background color
+        id: scrollbar-bg
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-dark: '#252c36'
+        default-light: '#e1e9f6'
+    -
         title: Sliding Panes Dropshadow
         id: slide-shadow
         type: variable-themed-color
@@ -1299,6 +1335,20 @@ settings:
 		format: hex
 		default-dark: '#252c36'
 		default-light: '#e1e9f6'
+    -
+        title: Table Header BG Color
+        id: th
+        type: variable-themed-color
+		format: hex
+		default-dark: '#652121'
+		default-light: '#c14343'
+    -
+        title: Table Header Text Color
+        id: th-text
+        type: variable-themed-color
+		format: hex
+		default-dark: '#e5ebee'
+		default-light: '#e5ebee'
     -
         title: Other
         id: Other-Colors
@@ -1648,6 +1698,7 @@ settings:
   --f-text: 16px;
   --f-small: .88em;
   --f-tag: 13px;
+  --note-width: 700px;
   --f-s-ui: 16px;
   --f-s-sb: 16px;
   --f-s-nt: 16px;
@@ -1657,6 +1708,7 @@ settings:
   --f-w-h: 600;
   --h-line: 100%;
   --head-h: 15px;
+  --f-w-v: 600;
   /*Other*/
   --hr-sym: "";
   --hr-f: var(--its);
@@ -2476,8 +2528,8 @@ body:not(.its-i) svg.clock-glyph {
   /*Menu Button Hover*/
   --interactive-success: #599049;
   --interactive-failure: #772d2d;
-  --scrollbar-bg: rgba(160, 214, 255, 0.07);
-  --scrollbar-thumb-bg: rgba(162, 191, 255, 0.13);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --highlight-mix-blend-mode: lighten;
   /*--DEFAULT VARIABLES--*/
   /*Compatibility Color Recoloring*/
@@ -2627,8 +2679,8 @@ body:not(.its-i) svg.clock-glyph {
   /*Menu Button Hover*/
   --interactive-success: #66ad66;
   --interactive-failure: #be4e4e;
-  --scrollbar-bg: rgba(134, 173, 218, 0.157);
-  --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --highlight-mix-blend-mode: darken;
   /*Search Highlight Mode*/
   /*--DEFAULT VARIABLES--*/
@@ -2953,8 +3005,8 @@ body:not(.its-i) svg.clock-glyph {
   /*Remove Rounding*/
 }
 
-body:not(.scrl-d) ::-webkit-scrollbar-thumb:hover,
-body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
+body ::-webkit-scrollbar-thumb:hover,
+body ::-webkit-scrollbar-thumb:active {
   background-color: var(--lite-accent);
 }
 
@@ -2962,6 +3014,16 @@ body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
   border: 0;
   width: var(--scroll-size);
   height: var(--scroll-size);
+}
+
+.scrl-d.theme-dark {
+  --scrollbar-bg: rgba(160, 214, 255, 0.07);
+  --scrollbar-thumb-bg: rgba(162, 191, 255, 0.13);
+}
+
+.scrl-d.theme-light {
+  --scrollbar-bg: rgba(134, 173, 218, 0.157);
+  --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);
 }
 
 /*----WORKSPACE----*/
@@ -3195,6 +3257,15 @@ button.mod-cta,
 }
 
 /*--Notes Paddings--*/
+.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer,
+.markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row),
+.markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content,
+.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+  max-width: var(--note-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding: 10px 20px;
 }
@@ -3238,16 +3309,20 @@ button.mod-cta,
 /*Vault Name*/
 .nav-folder.mod-root > .nav-file-title,
 .nav-folder.mod-root > .nav-folder-title {
+  display: block;
   color: var(--headers);
   font-family: var(--vault-f);
   font-size: calc(var(--f-s-h) - 10px);
-  /*border-bottom: 3px solid var(--accent);*/
   padding-left: 0.2em !important;
+  /*border-bottom: 3px solid var(--accent);*/
   /*position: fixed;
   top: 1.5em;
   background-color: var(--side-bar);
   padding-top: .7em;*/
-  display: block;
+}
+
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  font-weight: var(--f-w-v);
 }
 
 /*Remove Empty Div to Fix Folder Adjusting When Open
@@ -5857,42 +5932,42 @@ h4::after, .HyperMD-header-4::after {
 }
 
 /*--Illusion Headers--*/
-body .illusion h1, body .illusion h2, body .illusion h3, body .illusion h4, body .illusion h5, body .illusion h6, body .illusion .cm-s-obsidian .HyperMD-header {
+body .illusion.illusion h1, body .illusion.illusion h2, body .illusion.illusion h3, body .illusion.illusion h4, body .illusion.illusion h5, body .illusion.illusion h6, body .illusion.illusion .cm-s-obsidian .HyperMD-header, body .illusion.illusion .HyperMD-header {
   padding: 7px;
   color: var(--text-dl);
   box-shadow: 5px 5px var(--outline);
 }
-body .illusion .HyperMD-header.CodeMirror-line {
+body .illusion.illusion h1:after, body .illusion.illusion h1:before, body .illusion.illusion h2:after, body .illusion.illusion h2:before, body .illusion.illusion h3:after, body .illusion.illusion h3:before, body .illusion.illusion h4:after, body .illusion.illusion h4:before, body .illusion.illusion h5:after, body .illusion.illusion h5:before, body .illusion.illusion h6:after, body .illusion.illusion h6:before, body .illusion.illusion .cm-s-obsidian .HyperMD-header:after, body .illusion.illusion .cm-s-obsidian .HyperMD-header:before, body .illusion.illusion .HyperMD-header:after, body .illusion.illusion .HyperMD-header:before {
+  height: 0;
+}
+body .illusion.illusion .HyperMD-header.CodeMirror-line {
   box-shadow: 0px 2px var(--outline);
   padding: 2px;
   padding-bottom: 5px;
 }
-body .illusion h1:after, body .illusion h2:after, body .illusion h3:after, body .illusion h4:after, body .illusion h5:after, body .illusion h6:after, body .illusion .cm-s-obsidian .HyperMD-header:after {
-  height: 0;
-}
-body .illusion h1, body .illusion .HyperMD-header-1.CodeMirror-line {
+body .illusion.illusion h1, body .illusion.illusion .HyperMD-header-1 {
   background-color: var(--sphd-ed-1);
 }
-body .illusion h2, body .illusion .HyperMD-header-2.CodeMirror-line {
+body .illusion.illusion h2, body .illusion.illusion .HyperMD-header-2 {
   background-color: var(--sphd-ed-2);
 }
-body .illusion h3, body .illusion .HyperMD-header-3.CodeMirror-line {
+body .illusion.illusion h3, body .illusion.illusion .HyperMD-header-3 {
   background-color: var(--sphd-ed-3);
 }
-body .illusion h4, body .illusion .HyperMD-header-4.CodeMirror-line {
+body .illusion.illusion h4, body .illusion.illusion .HyperMD-header-4 {
   background-color: var(--sphd-ed-4);
 }
-body .illusion h5, body .illusion .HyperMD-header-5.CodeMirror-line {
+body .illusion.illusion h5, body .illusion.illusion .HyperMD-header-5 {
   background-color: var(--sphd-ed-5);
 }
-body .illusion h6, body .illusion .HyperMD-header-6.CodeMirror-line {
+body .illusion.illusion h6, body .illusion.illusion .HyperMD-header-6 {
   background-color: var(--sphd-ed-6);
 }
-body .illusion .markdown-preview-view .heading-collapse-indicator svg, body .illusion .cm-s-obsidian .cm-header, body .illusion .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+body .illusion.illusion .markdown-preview-view .heading-collapse-indicator svg, body .illusion.illusion .cm-s-obsidian .cm-header, body .illusion.illusion .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
   display: block;
   color: var(--text-dl);
 }
-body .illusion .markdown-preview-view .heading-collapse-indicator {
+body .illusion.illusion .markdown-preview-view .heading-collapse-indicator {
   padding-left: 40px;
 }
 
@@ -7719,6 +7794,7 @@ pre:hover > button.copy-code-button {
 body .admonition {
   border-radius: var(--radius);
   box-shadow: 5px 5px var(--outline);
+  background: var(--note);
 }
 
 body .is-live-preview .admonition {
@@ -8094,22 +8170,112 @@ body .dataview.inline-field-value a.tag:first-child {
 }
 
 /*Kanban*/
-.kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
-.kanban.dvl .list-view-ul li {
+.kanban.dvl .block-language-dataviewjs .dataview-result-list-li, .kanban.dvl .list-view-ul li {
   background-color: var(--aside-bg);
 }
-
-.kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
-.kanban.dvl .list-view-ul li {
+.kanban.dvl .block-language-dataviewjs .dataview-result-list-li, .kanban.dvl .list-view-ul li {
   flex: 1 1 200px;
   box-shadow: 4px 4px 0 var(--outline);
   border: 1px solid var(--outline);
   margin-bottom: 10px;
 }
-
-.kanban table td > .dataview-ul {
+.kanban.dvl table td > .dataview-ul {
   display: block;
   padding-inline-start: 1em;
+}
+
+/*Notion Style*/
+.notion.notion .dvl .block-language-dataviewjs .dataview-result-list-li, .notion.notion .dvl .list-view-ul li, .notion.notion .dvl .dataview.table-view-table > tbody > tr, .notion.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li, .notion.notion .dvl-c .list-view-ul li, .notion.notion .dvl-c .dataview.table-view-table > tbody > tr, .notion.notion.dvl .block-language-dataviewjs .dataview-result-list-li, .notion.notion.dvl .list-view-ul li, .notion.notion.dvl .dataview.table-view-table > tbody > tr, .notion.notion.dvl-c .block-language-dataviewjs .dataview-result-list-li, .notion.notion.dvl-c .list-view-ul li, .notion.notion.dvl-c .dataview.table-view-table > tbody > tr, .notion.notion .kanban.dvl .block-language-dataviewjs .dataview-result-list-li, .notion.notion .kanban.dvl .list-view-ul li, .notion.notion .kanban.dvl .dataview.table-view-table > tbody > tr {
+  flex: 1 1 200px;
+  background: var(--embed-bg);
+  border: 0;
+  box-shadow: var(--outline) 0px 0px 0px 1px, var(--outline) 0px 2px 4px;
+}
+.notion.notion .dvl .block-language-dataviewjs .dataview-result-list-li:hover, .notion.notion .dvl .list-view-ul li:hover, .notion.notion .dvl .dataview.table-view-table > tbody > tr:hover, .notion.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li:hover, .notion.notion .dvl-c .list-view-ul li:hover, .notion.notion .dvl-c .dataview.table-view-table > tbody > tr:hover, .notion.notion.dvl .block-language-dataviewjs .dataview-result-list-li:hover, .notion.notion.dvl .list-view-ul li:hover, .notion.notion.dvl .dataview.table-view-table > tbody > tr:hover, .notion.notion.dvl-c .block-language-dataviewjs .dataview-result-list-li:hover, .notion.notion.dvl-c .list-view-ul li:hover, .notion.notion.dvl-c .dataview.table-view-table > tbody > tr:hover, .notion.notion .kanban.dvl .block-language-dataviewjs .dataview-result-list-li:hover, .notion.notion .kanban.dvl .list-view-ul li:hover, .notion.notion .kanban.dvl .dataview.table-view-table > tbody > tr:hover {
+  cursor: pointer;
+}
+
+.theme-light.notion.notion .dvl .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion .dvl .list-view-ul li, .theme-light.notion.notion .dvl .dataview.table-view-table > tbody > tr, .theme-light.notion.notion.dvl .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion.dvl .list-view-ul li, .theme-light.notion.notion.dvl .dataview.table-view-table > tbody > tr, .theme-light.notion.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion .dvl-c .list-view-ul li, .theme-light.notion.notion .dvl-c .dataview.table-view-table > tbody > tr, .theme-light.notion.notion.dvl-c .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion.dvl-c .list-view-ul li, .theme-light.notion.notion.dvl-c .dataview.table-view-table > tbody > tr, .theme-light.notion.notion .kanban.dvl .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion .kanban.dvl .list-view-ul li, .theme-light.notion.notion .kanban.dvl .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion .dvl .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion .dvl .list-view-ul li,
+.theme-light .notion.notion .dvl .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion.dvl .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion.dvl .list-view-ul li,
+.theme-light .notion.notion.dvl .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion .dvl-c .list-view-ul li,
+.theme-light .notion.notion .dvl-c .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion.dvl-c .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion.dvl-c .list-view-ul li,
+.theme-light .notion.notion.dvl-c .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion .kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion .kanban.dvl .list-view-ul li,
+.theme-light .notion.notion .kanban.dvl .dataview.table-view-table > tbody > tr {
+  background: var(--note);
+}
+
+.dvl-c .table-view-table > thead::before {
+  content: "\e805";
+  font-family: var(--its);
+  float: right;
+  padding: 5px 10px 5px 10px;
+}
+.dvl-c .table-view-table > thead > tr {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--outline);
+  box-shadow: 4px 4px 0 var(--c2);
+  margin: 0;
+  flex-wrap: wrap;
+}
+.dvl-c table .table-view-table > thead > tr {
+  position: absolute;
+  right: 0;
+}
+.dvl-c .table-view-table > thead:not(:hover) > * {
+  display: none;
+}
+.dvl-c .dataview th {
+  font-family: var(--default-font);
+  background: var(--note);
+  font-size: var(--f-s-text);
+  border: 0;
+  color: var(--text);
+  opacity: 1;
+}
+.dvl-c .dataview th:hover {
+  background: var(--td);
+}
+.dvl-c .list-view-ul li, .dvl-c .dataview.table-view-table > tbody > tr {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--aside-bg);
+  box-shadow: var(--outline) 0px 0px 0px 1px, 2px 2px 0 var(--outline);
+  margin: 5px 0;
+  padding: 10px;
+}
+.dvl-c .list-view-ul, .dvl-c .dataview.table-view-table > tbody.table-view-tbody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+}
+.dvl-c .block-language-dataviewjs .dataview-result-list-li, .dvl-c .list-view-ul li, .dvl-c .dataview.table-view-table > tbody > tr {
+  flex: 1 0 200px;
+  margin: 10px;
+}
+.dvl-c .dataview.table-view-table td {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+.dvl-c .list-view-ul li::before {
+  display: none;
+}
+.dvl-c .dataview.table-view-table li {
+  box-shadow: none;
+  border: 0;
+  padding: 0;
 }
 
 /*Dice Roller*/
@@ -8682,6 +8848,7 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
 }
 .notion.notion .kanban-plugin__item.kanban-plugin__item,
 .notion-kbn.notion-kbn .kanban-plugin__item.kanban-plugin__item {
+  border-radius: 3px;
   box-shadow: var(--outline) 0px 0px 0px 1px, var(--outline) 0px 2px 4px;
 }
 .notion.notion .kanban-plugin__new-item-button.kanban-plugin__new-item-button,
@@ -9914,7 +10081,7 @@ body.fix-dbull .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body.fix-
 }
 
 .bl-c li {
-  border-color: var(--accent) !important;
+  border-color: var(--accent2);
 }
 
 /*Live Preview Indent Style*/
@@ -10162,6 +10329,8 @@ body.fix-dbull .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body.fix-
   /*Publish item select*/
   --interactive-accent-hover: var(--dark-accent);
   /*Menu Button Hover*/
+  --scrollbar-bg: var(--code-bg);
+  --scrollbar-thumb-bg: var(--dark-accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #1b2c25;
   --dark-accent: #2e4d3c;
@@ -10234,6 +10403,8 @@ body.fix-dbull .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body.fix-
   --text-muted: var(--soft-text);
   --text-accent: var(--accent2-lite);
   --text-accent-hover: var(--accent2);
+  --scrollbar-bg: var(--outer-bar);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #1b2c25;
   --dark-accent: #e3fcef;
@@ -10463,6 +10634,8 @@ body.fix-dbull .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body.fix-
   --interactive-hover: var(--accent2);
   --interactive-accent: var(--dark-accent);
   --interactive-accent-hover: var(--accent2);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --deep-dark-accent: #3f1010;
   --dark-accent: #642020;
   --lite-accent: #e06c6c;
@@ -10504,6 +10677,8 @@ body.fix-dbull .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body.fix-
   --text-highlight-bg: rgba(209, 119, 119, 0.4);
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
   --text-selection: rgba(255, 0, 0, 0.198);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --note: #fffcf0;
   --side-bar: #fff6e4;
   --outer-bar: #fbe2c5;
@@ -10716,6 +10891,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --font: "Recursive Sans Linear Static Black", "Oleo Script", "Calisto MT";
   /*Works, but if it doesn't, needs !important*/
   --font-monospace: "Fira Code";
+  background: var(--note);
 }
 
 .theme-dark.slrvb-b,
@@ -10746,6 +10922,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-accent-hover: var(--accent);
   --interactive-accent: var(--bttn);
   --interactive-accent-hover: var(--accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   /*Compatibility Color Recoloring*/
   --deep-dark-accent: #1f283b;
@@ -10828,6 +11006,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #101b2f;
   --dark-accent: #edf4ff;
@@ -10888,6 +11068,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --font: "Norwester", "Staatliches", "Racing Sans One", "Heavitas", "Playfair Display", serif;
   --font-monospace: "Fira Code";
   --hr-sym: "🏴";
+  background: var(--note);
 }
 
 .theme-dark.slrvb-g,
@@ -10909,6 +11090,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--hr);
   --interactive-accent-hover: var(--dark-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--tag);
   --outer-bar: #0E0F15;
   --dark-sidebar: #090C0E;
   --side-bar: var(--note);
@@ -10949,7 +11132,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 .theme-light.slrvb-g,
-.theme-light .slrvb-g {
+.theme-light .slrvb-g.slrvb-g {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -10967,6 +11150,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --outer-bar:#eef3fd;
   --side-bar: var(--note);
   --dark-sidebar: #F1F7FF;
@@ -10986,6 +11171,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --deep-dark-accent: #171C22;
   --inactive: #C0C8D6;
   --table: #ccd6eb;
+  --fg: var(--headers);
+  --th: var(--fg);
   --tag: #7485a3;
   --hr: #d6deea;
   --embed-bg: var(--dark-sidebar);
@@ -11015,10 +11202,11 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --hr-f: var(--mdi);
   --bullet: "";
   --bul-f: var(--mdi);
+  background: var(--note);
 }
 
 .theme-dark.s-d,
-.theme-dark .s-d {
+.theme-dark .s-d.s-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -11061,8 +11249,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   /*Menu Button Hover*/
   --interactive-success: #197300;
   /*??*/
-  --scrollbar-bg: rgba(255, 255, 255, 0.05);
-  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --highlight-mix-blend-mode: lighten;
   /*--DEFAULT VARIABLES--*/
   /*Compatibility Color Recoloring*/
@@ -11089,6 +11277,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --code-text: #e6a210;
   --embed-bg: #12151a;
   --tag: #273346;
+  --th: var(--dark-accent);
   --table: #2f3440;
   --hr: #414b5c;
   --i-at: var(--lite-accent);
@@ -11120,7 +11309,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 .theme-light.s-d,
-.theme-light .s-d {
+.theme-light .s-d.s-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -11147,6 +11336,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--td);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #6c8bb4;
   --dark-accent: #d8ecfd;
@@ -11293,6 +11484,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 .t-d {
   --hr-sym: "";
   --hr-f: var(--mdi);
+  background: var(--note);
 }
 
 .theme-dark.t-d,
@@ -11310,11 +11502,12 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --side-bar: var(--note);
   --outer-bar: #0b0f13;
   --note: #1a1e24;
   --text: #bccad8;
-  /**/
   --dark-accent: #57250F;
   --accent: #DF7B41;
   --lite-accent: #C48A69;
@@ -11364,6 +11557,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --side-bar: var(--note);
   --outer-bar: #eef3fd;
   --note: #f8fbff;
@@ -11407,6 +11602,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 .drwn {
   --hr-sym: "";
   --hr-f: var(--mdi);
+  background: var(--note);
 }
 
 .theme-dark.drwn,
@@ -11424,6 +11620,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--accent);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--td);
+  --scrollbar-thumb-bg: var(--accent);
   --side-bar: var(--note);
   --outer-bar: #0b0f13;
   --note: #1a1e24;
@@ -11485,6 +11683,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--code-text);
   --side-bar: var(--note);
   --outer-bar: #eef3fd;
   --note: #f8fbff;
@@ -11540,7 +11740,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 .theme-dark.nord,
-.theme-dark .nord {
+.theme-dark .nord.nord {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -11553,6 +11753,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-highlight-bg-active: #88C0D090;
   --text-selection: #88C0D020;
   /*Cursor dragged highlights*/
+  --hvr2: var(--text-selection);
   --interactive-normal: var(--accent);
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--accent);
@@ -11564,6 +11765,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-accent-hover: var(--accent);
   --interactive-accent: var(--lite-accent);
   --interactive-accent-hover: var(--dark-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: var(--outer-bar);
   --outer-bar: #242933;
@@ -11580,6 +11783,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text: #ECEFF4;
   --accent: #5E81AC;
   --dark-accent: #4C566A;
+  --tag: var(--dark-accent);
   --headers: #88C0D0;
   --folder: #A3BE8C;
   --i-at: #81A1C1;
@@ -11631,6 +11835,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-accent-hover: var(--accent);
   --interactive-accent: var(--lite-accent);
   --interactive-accent-hover: var(--dark-accent);
+  --scrollbar-bg: var(--outer-bar);
+  --scrollbar-thumb-bg: var(--accent2-lite);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #4C566A;
   --outer-bar: #E5E9F0;
@@ -11678,15 +11884,16 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 /*Notion Colors*/
-.notion {
+.notion.notion {
   --font: var(--default-font);
-  --f-w-h: 900 !important;
+  --f-w-h: 900;
+  --f-w-v: 900;
   --hr-sym: "";
   background: var(--note);
 }
 
 .theme-dark.notion,
-.theme-dark .notion {
+.theme-dark .notion.notion {
   --background-primary: var(--note);
   --background-primary-alt: var(--side-bar);
   --background-secondary: var(--side-bar);
@@ -11699,7 +11906,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-form-field-highlighted: rgb(255, 255, 255, 0.1);
   --text-highlight-bg: rgb(255, 255, 255, 0.1);
   --text-highlight-bg-active: rgb(255, 255, 255, 0.1);
-  --text-selection: rgb(255, 255, 255, 0.1);
+  --text-selection: rgba(45, 170, 219, 0.3);
   --text-faint: var(--inactive);
   --interactive-accent: var(--bttn);
   --text-on-accent: var(--text-dl);
@@ -11716,7 +11923,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --code-text: var(--text);
   --code-bg: #3F4447;
   --note: #2F3437;
-  --outline: #0b0f1330;
+  --outline: #0f0f0f40;
   --bttn: transparent;
   --bg: #3C4144;
   --side-bar: #373C3F;
@@ -11731,22 +11938,42 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   /*#3E4245*/
   --bttn: #43B3E0;
   /*#889FC3*/
-  --tag: var(--bttn);
+  --tag: #708dbb;
   --folder: var(--bttn);
   --text-dl: white;
   --i-at: var(--bttn);
   --f-hover: var(--text);
-  --accent: var(--bttn);
+  --accent: var(--tag);
   /*#474C50*/
   --accent2: var(--soft-text);
   --dark-accent: #4B5053;
   /*#26292B*/
   --dark-sidebar: var(--side-bar);
   --aside-bg: var(--note);
+  --graph-bg: var(--note);
+  --graph-lines: #5D626555;
+  --graph-node: var(--headers);
+  --graph-fill: var(--folder);
+  --graph-404: var(--inactive);
+  --graph-img: var(--soft-text);
+  --graph-tag: var(--accent);
+  --graph-focused: var(--accent);
+  --sphd-pre-1: var(--lite-accent);
+  --sphd-pre-2: var(--accent2);
+  --sphd-pre-3: var(--inactive);
+  --sphd-pre-4: var(--hr);
+  --sphd-pre-5: var(--note);
+  --sphd-pre-6: var(--td);
+  --sphd-ed-1: var(--lite-accent);
+  --sphd-ed-2: var(--accent2);
+  --sphd-ed-3: var(--inactive);
+  --sphd-ed-4: var(--hr);
+  --sphd-ed-5: var(--note);
+  --sphd-ed-6: var(--td);
 }
 
 .theme-light.notion,
-.theme-light .notion {
+.theme-light .notion.notion {
   --background-primary: var(--note);
   --background-primary-alt: var(--side-bar);
   --background-secondary: var(--side-bar);
@@ -11756,13 +11983,14 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
   --text-highlight-bg: rgba(55, 53, 47, 0.078);
   --text-highlight-bg-active: rgba(55, 53, 47, 0.078);
-  --text-selection: rgba(55, 53, 47, 0.078);
+  --text-selection: rgba(45, 170, 219, 0.3);
   --scrollbar-bg: #EDECE9;
   --scrollbar-thumb-bg: #D3D1CB;
   --interactive-accent: var(--bttn);
   --text-accent: var(--text);
   --text-on-accent: white;
   --text-faint: var(--inactive);
+  --text-muted: var(--soft-text);
   --note: #FFFFFF;
   --side-bar: #F7F6F3;
   --accent: #D3D1CB;
@@ -11780,8 +12008,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --lite-accent: var(--bttn);
   --soft-text: #82817C;
   --hr: #EDEDEC;
-  --outline: var(--td);
   --file: #69685f;
+  --outline: #0f0f0f15;
   --td: #37352F10;
   --th: var(--side-bar);
   --th-text: var(--text);
@@ -11797,42 +12025,52 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --accent: #43B3E0;
   --accent2: var(--soft-text);
   --footnote: #A09E9A;
-  --code-bg: rgb(247, 246, 243);
+  --code-bg: #f7f6f3;
   --code-text: var(--text);
-}
-
-.notion .modal.mod-settings .vertical-tab-content-container,
-.notion .vertical-tab-content,
-.notion .community-plugin-info {
-  background: var(--note);
-}
-
-.notion.markdown-source-view.mod-cm6 .cm-underline,
-.notion.markdown-preview-view .internal-link,
-.notion .internal-link,
-.notion .external-link,
-.notion .cm-underline {
-  color: var(--text);
-  border-bottom: 1px solid var(--table);
-  font-weight: 600;
-}
-
-.notion a {
-  font-weight: 600;
-}
-
-.notion .external-link {
-  color: var(--soft-text);
-}
-
-.notion .external-link:hover,
-.notion .internal-link:hover,
-.notion .cm-underline:hover {
-  background: var(--text-highlight-bg);
+  --graph-bg: var(--note);
+  --graph-lines: #CFCECD55;
+  --graph-node: var(--soft-text);
+  --graph-fill: var(--folder);
+  --graph-404: var(--file);
+  --graph-img: #000;
+  --graph-tag: var(--accent);
+  --graph-focused: var(--accent);
+  --sphd-pre-1: var(--lite-accent);
+  --sphd-pre-2: var(--accent2);
+  --sphd-pre-3: var(--inactive);
+  --sphd-pre-4: var(--hr);
+  --sphd-pre-5: var(--note);
+  --sphd-pre-6: var(--td);
+  --sphd-ed-1: var(--lite-accent);
+  --sphd-ed-2: var(--accent2);
+  --sphd-ed-3: var(--inactive);
+  --sphd-ed-4: var(--hr);
+  --sphd-ed-5: var(--note);
+  --sphd-ed-6: var(--td);
 }
 
 .notion .titlebar * {
   color: var(--text) !important;
+}
+.notion .modal.mod-settings .vertical-tab-content-container, .notion .vertical-tab-content, .notion .community-plugin-info {
+  background: var(--note);
+}
+.notion .internal-link, .notion .external-link, .notion .cm-underline {
+  color: var(--text);
+  border-bottom: 1px solid var(--table);
+  font-weight: 600;
+}
+.notion .internal-link.is-unresolved, .notion .external-link, .notion .is-unresolved .cm-underline {
+  color: var(--inactive);
+}
+.notion a {
+  font-weight: 600;
+}
+.notion .external-link {
+  color: var(--soft-text);
+}
+.notion .external-link:hover, .notion .internal-link:hover, .notion .cm-underline:hover {
+  background: var(--text-highlight-bg);
 }
 
 .mini {
@@ -11848,10 +12086,13 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-secondary-alt: var(--note);
   --background-modifier-cover: var(--note);
   --text-accent: var(--accent2-lite);
+  --text-muted: var(--soft-text);
   --background-modifier-form-field-highlighted: rgba(113, 132, 162, 0.295);
   --text-selection: rgba(61, 82, 107, 0.472);
   --text-highlight-bg: rgba(87, 113, 156, 0.4);
   --text-highlight-bg-active: rgba(112, 132, 160, 0.4);
+  --scrollbar-bg: var(--td);
+  --scrollbar-thumb-bg: var(--table);
   --note: #1a1e24;
   --dark-accent: var(--note);
   --accent: #414958;
@@ -11897,6 +12138,9 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-form-field-highlighted: #99a4bb20;
   --text-highlight-bg: #99a4bb20;
   --text-highlight-bg-active: #99a4bb20;
+  --text-muted: var(--soft-text);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--outline);
   --note: #f8fbff;
   --dark-accent: var(--note);
   --accent: #b5c2d8;

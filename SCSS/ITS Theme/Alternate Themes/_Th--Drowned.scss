@@ -3,6 +3,8 @@
 .drwn {
     --hr-sym: "\f1cd";
     --hr-f: var(--mdi);
+
+    background: var(--note);
 }
 
 .theme-dark.drwn,
@@ -23,6 +25,9 @@
     --interactive-hover: var(--embed-bg);
     --interactive-accent: var(--accent);
     --interactive-accent-hover: var(--lite-accent);
+
+    --scrollbar-bg: var(--td);
+    --scrollbar-thumb-bg: var(--accent);
 
     --side-bar: var(--note);
     --outer-bar: #0b0f13;
@@ -94,6 +99,10 @@
     --interactive-hover: var(--embed-bg);
     --interactive-accent: var(--headers);
     --interactive-accent-hover: var(--lite-accent);
+
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--code-text);
+
 
     --side-bar: var(--note);
     --outer-bar: #eef3fd;

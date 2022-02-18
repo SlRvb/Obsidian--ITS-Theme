@@ -11,9 +11,11 @@
     --hr-f: var(--mdi);
     --bullet: "\e80c";
     --bul-f: var(--mdi);
+
+    background: var(--note);
 }
 .theme-dark.s-d,
-.theme-dark .s-d {
+.theme-dark .s-d.s-d {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -45,8 +47,8 @@
     --interactive-accent-hover: #2f5486; /*Menu Button Hover*/
     --interactive-success: #197300; /*??*/
     
-    --scrollbar-bg: rgba(255, 255, 255, 0.05);
-    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
     --highlight-mix-blend-mode: lighten;
 
     /*--DEFAULT VARIABLES--*/
@@ -78,6 +80,7 @@
     --embed-bg: #12151a;
     
     --tag: #273346;
+    --th: var(--dark-accent);
     --table: #2f3440;
     --hr: #414b5c;
     --i-at: var(--lite-accent);
@@ -111,7 +114,7 @@
     --sphd-ed-6: var(--deep-dark-accent);
 }
 .theme-light.s-d,
-.theme-light .s-d {    
+.theme-light .s-d.s-d {    
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -138,6 +141,9 @@
     --interactive-hover: var(--embed-bg);
     --interactive-accent: var(--headers);
     --interactive-accent-hover: var(--lite-accent);
+
+    --scrollbar-bg: var(--td);
+    --scrollbar-thumb-bg: var(--accent);
 
     /*--DEFAULT VARIABLES--*/
     --deep-dark-accent: #6c8bb4;

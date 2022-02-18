@@ -92,6 +92,14 @@ settings:
         max: 2
         step: .1
     -
+        title: Vault Title Weight
+        id: f-w-v
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
+    -
         title: Specific View Changes
         description: Change text in both preview/edit mode or change it for either mode separately
         id: Font-Specific
@@ -676,7 +684,7 @@ settings:
         step: 1
     -
         title: Sidebar Text Size
-        description: 
+        description: Resize side panel text
         id: f-s-sb
         type: variable-number-slider
         default: 16
@@ -694,6 +702,16 @@ settings:
         min: 12
         max: 20
         step: 1
+    -
+        title: Note Width
+        description: Resize note width when readable line length toggled on.
+        id: note-width
+        type: variable-number-slider
+        default: 700
+        format: px
+        min: 500
+        max: 1000
+        step: 50
     -
         title: Note Elements
         id: Other-Note
@@ -1232,6 +1250,24 @@ settings:
         default-dark: '#883737'
         default-light: '#c14343'
     -
+        title: Scrollbar FG Color
+        description: Scrollbar thumb/foreground color
+        id: scrollbar-thumb-bg
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-dark: '#863737'
+        default-light: 'rgba(134, 173, 218, 0.157)'
+    -
+        title: Scrollbar BG Color
+        description: Scrollbar background color
+        id: scrollbar-bg
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-dark: '#252c36'
+        default-light: '#e1e9f6'
+    -
         title: Sliding Panes Dropshadow
         id: slide-shadow
         type: variable-themed-color
@@ -1298,6 +1334,20 @@ settings:
 		format: hex
 		default-dark: '#252c36'
 		default-light: '#e1e9f6'
+    -
+        title: Table Header BG Color
+        id: th
+        type: variable-themed-color
+		format: hex
+		default-dark: '#652121'
+		default-light: '#c14343'
+    -
+        title: Table Header Text Color
+        id: th-text
+        type: variable-themed-color
+		format: hex
+		default-dark: '#e5ebee'
+		default-light: '#e5ebee'
     -
         title: Other
         id: Other-Colors

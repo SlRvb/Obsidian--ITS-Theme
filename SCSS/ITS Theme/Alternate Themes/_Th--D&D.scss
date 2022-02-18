@@ -38,6 +38,9 @@
     --interactive-accent-rgb: 69, 180, 128; /*Publish item select*/
     --interactive-accent-hover: var(--dark-accent); /*Menu Button Hover*/
 
+    --scrollbar-bg: var(--code-bg);
+    --scrollbar-thumb-bg: var(--dark-accent);
+
     /*--DEFAULT VARIABLES--*/
     --deep-dark-accent: #1b2c25;
     --dark-accent: #2e4d3c;
@@ -114,6 +117,9 @@
     --text-muted: var(--soft-text);
     --text-accent: var(--accent2-lite);
     --text-accent-hover: var(--accent2);
+
+    --scrollbar-bg: var(--outer-bar);
+    --scrollbar-thumb-bg: var(--accent);
 
     /*--DEFAULT VARIABLES--*/    
     --deep-dark-accent: #1b2c25;

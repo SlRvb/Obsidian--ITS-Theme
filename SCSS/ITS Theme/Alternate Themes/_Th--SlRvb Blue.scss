@@ -1,7 +1,9 @@
 /*----Theme: SlRvb Blue----*/
 .slrvb-b {
     --font: 'Recursive Sans Linear Static Black', 'Oleo Script', 'Calisto MT'; /*Works, but if it doesn't, needs !important*/
-    --font-monospace: "Fira Code";    
+    --font-monospace: "Fira Code";
+
+    background: var(--note);
 }
 .theme-dark.slrvb-b,
 .theme-dark .slrvb-b {
@@ -31,6 +33,9 @@
     --text-accent-hover: var(--accent);
     --interactive-accent: var(--bttn);
     --interactive-accent-hover: var(--accent);
+
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
 
     /*--DEFAULT VARIABLES--*/
 
@@ -117,6 +122,10 @@
     --interactive-hover: var(--embed-bg);
     --interactive-accent: var(--headers); 
     --interactive-accent-hover: var(--lite-accent);
+
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
+
 
     /*--DEFAULT VARIABLES--*/    
     --deep-dark-accent: #101b2f;

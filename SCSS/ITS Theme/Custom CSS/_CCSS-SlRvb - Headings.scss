@@ -136,7 +136,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
         align-items: center;
         text-align: center;
 
-        //
+        //Other Elements In Heading
         & > :not(.collapse-indicator):nth-child(2) { padding: 0 10px; }
         & > :not(.collapse-indicator):nth-child(2):not(:last-child) { padding: 0 10px; }
     }
@@ -221,17 +221,23 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
 
 
 /*--Illusion Headers--*/
-body .illusion {
+body .illusion.illusion {
     & h1,
     & h2,
     & h3,
     & h4,
     & h5,
     & h6,
-    & .cm-s-obsidian .HyperMD-header {
+    & .cm-s-obsidian .HyperMD-header,
+    & .HyperMD-header {
         padding: 7px;
         color: var(--text-dl);
         box-shadow: 5px 5px var(--outline);
+
+        //Remove Lines
+        &:after,
+        &:before
+        { height: 0; }
     }
 
     & .HyperMD-header.CodeMirror-line { 
@@ -239,29 +245,19 @@ body .illusion {
         padding: 2px;
         padding-bottom: 5px;
     }
-    
-    & h1:after,
-    & h2:after,
-    & h3:after,
-    & h4:after,
-    & h5:after,
-    & h6:after,
-    & .cm-s-obsidian .HyperMD-header:after {
-        height: 0;
-    }
 
     & h1,
-    & .HyperMD-header-1.CodeMirror-line { background-color: var(--sphd-ed-1); }
+    & .HyperMD-header-1 { background-color: var(--sphd-ed-1); }
     & h2,
-    & .HyperMD-header-2.CodeMirror-line { background-color: var(--sphd-ed-2); }
+    & .HyperMD-header-2 { background-color: var(--sphd-ed-2); }
     & h3,
-    & .HyperMD-header-3.CodeMirror-line { background-color: var(--sphd-ed-3); }
+    & .HyperMD-header-3 { background-color: var(--sphd-ed-3); }
     & h4,
-    & .HyperMD-header-4.CodeMirror-line { background-color: var(--sphd-ed-4); }
+    & .HyperMD-header-4 { background-color: var(--sphd-ed-4); }
     & h5,
-    & .HyperMD-header-5.CodeMirror-line { background-color: var(--sphd-ed-5); }
+    & .HyperMD-header-5 { background-color: var(--sphd-ed-5); }
     & h6,
-    & .HyperMD-header-6.CodeMirror-line { background-color: var(--sphd-ed-6); }
+    & .HyperMD-header-6 { background-color: var(--sphd-ed-6); }
 
     //Color White
     & .markdown-preview-view .heading-collapse-indicator svg,

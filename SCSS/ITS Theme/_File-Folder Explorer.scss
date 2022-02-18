@@ -21,16 +21,20 @@
 /*Vault Name*/
 .nav-folder.mod-root > .nav-file-title,
 .nav-folder.mod-root > .nav-folder-title {
+    display: block;
     color: var(--headers);
     font-family: var(--vault-f);
     font-size: calc(var(--f-s-h) - 10px);
-    /*border-bottom: 3px solid var(--accent);*/
     padding-left: .2em !important;
+    
+    /*border-bottom: 3px solid var(--accent);*/
     /*position: fixed;
     top: 1.5em;
     background-color: var(--side-bar);
     padding-top: .7em;*/
-    display: block;
+}
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+    font-weight: var(--f-w-v);
 }
 
 /*Remove Empty Div to Fix Folder Adjusting When Open

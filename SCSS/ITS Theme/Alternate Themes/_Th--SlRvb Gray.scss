@@ -6,6 +6,8 @@
     --font: 'Norwester', 'Staatliches', 'Racing Sans One', 'Heavitas', 'Playfair Display', serif;
     --font-monospace: 'Fira Code';
     --hr-sym: "🏴";
+
+    background: var(--note);
 }
 .theme-dark.slrvb-g,
 .theme-dark .slrvb-g {
@@ -31,6 +33,9 @@
     --interactive-hover: var(--embed-bg);
     --interactive-accent: var(--hr);
     --interactive-accent-hover: var(--dark-accent);
+
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--tag);
 
     --outer-bar: #0E0F15;       
     --dark-sidebar: #090C0E;    
@@ -77,7 +82,7 @@
     --sphd-ed-6: var(--aside-bg);
 }    
 .theme-light.slrvb-g,
-.theme-light .slrvb-g {
+.theme-light .slrvb-g.slrvb-g {
     --background-primary: var(--note);
     --background-primary-alt: var(--dark-accent);
     --background-secondary: var(--side-bar);
@@ -101,6 +106,9 @@
     --interactive-accent: var(--headers);
     --interactive-accent-hover: var(--lite-accent);
 
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
+
     --outer-bar:#eef3fd;
     --side-bar: var(--note);
     --dark-sidebar: #F1F7FF;    
@@ -122,7 +130,9 @@
     --deep-dark-accent: #171C22;    
     --inactive: #C0C8D6;            
     --table: #ccd6eb;
-
+    
+    --fg: var(--headers);
+    --th: var(--fg);
     --tag: #7485a3;
 
     --hr: #d6deea;

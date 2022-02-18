@@ -3,6 +3,8 @@
 .t-d {
     --hr-sym: "\e564";
     --hr-f: var(--mdi);
+
+    background: var(--note);
 }
 
 .theme-dark.t-d,
@@ -24,12 +26,14 @@
     --interactive-accent: var(--headers);
     --interactive-accent-hover: var(--lite-accent);
 
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
+
     --side-bar: var(--note);
     --outer-bar: #0b0f13;
     --note: #1a1e24;
     --text: #bccad8;
 
-    /**/
     --dark-accent: #57250F;
     --accent: #DF7B41;
     --lite-accent: #C48A69;
@@ -84,6 +88,9 @@
     --interactive-hover: var(--embed-bg);
     --interactive-accent: var(--headers);
     --interactive-accent-hover: var(--lite-accent);
+
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
 
     --side-bar: var(--note);
     --outer-bar: #eef3fd;

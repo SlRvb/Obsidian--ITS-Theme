@@ -225,7 +225,7 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
     
     & .kanban-plugin__item-title-wrapper:not(:only-child) { padding: 8px 10px 3px 10px; }
     & .kanban-plugin__item.kanban-plugin__item {
-        // border-radius: 3px;
+        border-radius: 3px;
         box-shadow: 
             var(--outline) 0px 0px 0px 1px,
             var(--outline) 0px 2px 4px;

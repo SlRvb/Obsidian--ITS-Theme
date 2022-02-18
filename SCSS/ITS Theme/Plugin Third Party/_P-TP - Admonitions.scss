@@ -3,6 +3,7 @@
 body .admonition { 
     border-radius: var(--radius);
     box-shadow: 5px 5px var(--outline); 
+    background: var(--note);
 }
 body .is-live-preview .admonition {
     margin: 0;

@@ -51,6 +51,9 @@
     --interactive-accent: var(--dark-accent);
     --interactive-accent-hover: var(--accent2);
 
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
+
     --deep-dark-accent: #3f1010;
     --dark-accent: #642020;
     --lite-accent: #e06c6c;
@@ -100,6 +103,9 @@
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --text-selection: rgba(255, 0, 0, 0.198);
     
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
+
     --note: #fffcf0;
     --side-bar: #fff6e4;
     --outer-bar: #fbe2c5;

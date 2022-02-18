@@ -1,21 +1,23 @@
 
 /*--Scrollbars--*/
 /*Scrollbar*/
-::-webkit-scrollbar-thumb:active,
-::-webkit-scrollbar,
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-track {
-    border-radius: var(--radius);
-    -webkit-border-radius: var(--radius); /*Remove Rounding*/
-}
-body ::-webkit-scrollbar-thumb:hover,
-body ::-webkit-scrollbar-thumb:active {
-    background-color: var(--lite-accent);
-}
-::-webkit-scrollbar {
-    border: 0;
-    width: var(--scroll-size);
-    height: var(--scroll-size);
+body:not(.native-scrollbars) {
+    ::-webkit-scrollbar-thumb:active,
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-track {
+        border-radius: var(--radius);
+        -webkit-border-radius: var(--radius); /*Remove Rounding*/
+    }
+    ::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:active {
+        background-color: var(--lite-accent);
+    }
+    ::-webkit-scrollbar {
+        border: 0;
+        width: var(--scroll-size);
+        height: var(--scroll-size);
+    }
 }
 
 .scrl-d.theme-dark {

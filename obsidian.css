@@ -3005,21 +3005,19 @@ body:not(.its-i) svg.clock-glyph {
 
 /*--Scrollbars--*/
 /*Scrollbar*/
-::-webkit-scrollbar-thumb:active,
-::-webkit-scrollbar,
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-track {
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active,
+body:not(.native-scrollbars) ::-webkit-scrollbar,
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb,
+body:not(.native-scrollbars) ::-webkit-scrollbar-track {
   border-radius: var(--radius);
   -webkit-border-radius: var(--radius);
   /*Remove Rounding*/
 }
-
-body ::-webkit-scrollbar-thumb:hover,
-body ::-webkit-scrollbar-thumb:active {
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover,
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   background-color: var(--lite-accent);
 }
-
-::-webkit-scrollbar {
+body:not(.native-scrollbars) ::-webkit-scrollbar {
   border: 0;
   width: var(--scroll-size);
   height: var(--scroll-size);

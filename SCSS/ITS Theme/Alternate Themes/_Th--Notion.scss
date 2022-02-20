@@ -234,6 +234,10 @@
     & .dvl-c,
     &.dvl-c 
     {
+        // & .table-view-table > thead::before {
+        //     content: "\E805";
+        //     font-family: var(--its);
+        // }
         & .block-language-dataviewjs .dataview-result-list-li,
         & .list-view-ul li,
         & .dataview.table-view-table > tbody > tr {

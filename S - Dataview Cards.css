@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .dvl-c .table-view-table > thead::before {
   content: "⚙";
   font-family: var(--its, var(--default-font));
@@ -63,5 +62,3 @@
   border: 0;
   padding: 0;
 }
-
-/*# sourceMappingURL=S%20-%20Dataview%20Cards.css.map */

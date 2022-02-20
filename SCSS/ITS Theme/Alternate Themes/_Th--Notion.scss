@@ -19,7 +19,10 @@
 
     --text-normal: var(--text);
     --text-muted: var(--soft-text);
-    --text-accent: var(--accent2-lite);
+    --text-accent: var(--text);
+    --text-accent-hover: var(--accent2-lite);
+
+    --background-modifier-border: var(--hr);
 
     --background-modifier-form-field: rgb(255, 255, 255, 0.1);
     --background-modifier-form-field-highlighted: rgb(255, 255, 255, 0.1);
@@ -106,6 +109,13 @@
     --background-secondary: var(--side-bar);
     --background-secondary-alt: var(--side-bar);
     --background-modifier-cover: var(--side-bar);
+    
+    --text-normal: var(--text);
+    --text-muted: var(--soft-text);
+    --text-accent: var(--text);
+    --text-accent-hover: var(--accent2-lite);
+
+    --background-modifier-border: var(--hr);
 
     --background-modifier-form-field: rgba(242, 241, 238, 0.6);
     --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
@@ -198,17 +208,14 @@
     }
 
     //Notion Links
-    //&.markdown-source-view.mod-cm6 .cm-underline, 
-    //&.markdown-preview-view .internal-link,
     & .internal-link,
     & .external-link,
     & .cm-underline {
         color: var(--text);
         border-bottom: 1px solid var(--table);
         font-weight: 600;
+        text-decoration: unset;
     }
-    //&.markdown-source-view.mod-cm6 .cm-underline, 
-    //&.markdown-preview-view .internal-link.is-unresolved,
     & .internal-link.is-unresolved,
     & .external-link,
     & .is-unresolved .cm-underline {
@@ -221,6 +228,35 @@
     & .internal-link:hover,
     & .cm-underline:hover {
         background: var(--text-highlight-bg);
+    }
+    
+    /*Notion Style Dataview: .dvl-c class*/
+    & .dvl-c,
+    &.dvl-c 
+    {
+        & .block-language-dataviewjs .dataview-result-list-li,
+        & .list-view-ul li,
+        & .dataview.table-view-table > tbody > tr {
+            flex: 1 1 200px;
+            
+            border-radius: 3px;
+            background: var(--embed-bg);
+            border: 0;
+            box-shadow: var(--outline) 0px 0px 0px 1px;
+            
+            &:hover { cursor: pointer; }
+        }
+    }
+}
+.theme-light.notion.notion,
+.theme-light .notion.notion {
+    & .dvl-c,
+    &.dvl-c {
+        & .block-language-dataviewjs .dataview-result-list-li,
+        & .list-view-ul li,
+        & .dataview.table-view-table > tbody > tr {
+            background: var(--note);
+        }
     }
 }
 

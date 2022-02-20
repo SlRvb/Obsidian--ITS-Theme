@@ -49,6 +49,10 @@ settings:
         id: nord
         type: class-toggle
     -   
+        title: Notion
+        id: notion
+        type: class-toggle
+    -   
         title: Minimalist
         id: mini
         type: class-toggle
@@ -604,6 +608,8 @@ settings:
   /*Publish item select*/
   --interactive-accent-hover: var(--dark-accent);
   /*Menu Button Hover*/
+  --scrollbar-bg: var(--code-bg);
+  --scrollbar-thumb-bg: var(--dark-accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #1b2c25;
   --dark-accent: #2e4d3c;
@@ -676,6 +682,8 @@ settings:
   --text-muted: var(--soft-text);
   --text-accent: var(--accent2-lite);
   --text-accent-hover: var(--accent2);
+  --scrollbar-bg: var(--outer-bar);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #1b2c25;
   --dark-accent: #e3fcef;
@@ -905,6 +913,8 @@ settings:
   --interactive-hover: var(--accent2);
   --interactive-accent: var(--dark-accent);
   --interactive-accent-hover: var(--accent2);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --deep-dark-accent: #3f1010;
   --dark-accent: #642020;
   --lite-accent: #e06c6c;
@@ -946,6 +956,8 @@ settings:
   --text-highlight-bg: rgba(209, 119, 119, 0.4);
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
   --text-selection: rgba(255, 0, 0, 0.198);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --note: #fffcf0;
   --side-bar: #fff6e4;
   --outer-bar: #fbe2c5;
@@ -1330,6 +1342,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --font: "Recursive Sans Linear Static Black", "Oleo Script", "Calisto MT";
   /*Works, but if it doesn't, needs !important*/
   --font-monospace: "Fira Code";
+  background: var(--note);
 }
 
 .theme-dark.slrvb-b,
@@ -1360,6 +1373,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-accent-hover: var(--accent);
   --interactive-accent: var(--bttn);
   --interactive-accent-hover: var(--accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   /*Compatibility Color Recoloring*/
   --deep-dark-accent: #1f283b;
@@ -1442,6 +1457,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #101b2f;
   --dark-accent: #edf4ff;
@@ -1502,6 +1519,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --font: "Norwester", "Staatliches", "Racing Sans One", "Heavitas", "Playfair Display", serif;
   --font-monospace: "Fira Code";
   --hr-sym: "🏴";
+  background: var(--note);
 }
 
 .theme-dark.slrvb-g,
@@ -1523,6 +1541,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--hr);
   --interactive-accent-hover: var(--dark-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--tag);
   --outer-bar: #0E0F15;
   --dark-sidebar: #090C0E;
   --side-bar: var(--note);
@@ -1563,7 +1583,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 .theme-light.slrvb-g,
-.theme-light .slrvb-g {
+.theme-light .slrvb-g.slrvb-g {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -1581,6 +1601,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --outer-bar:#eef3fd;
   --side-bar: var(--note);
   --dark-sidebar: #F1F7FF;
@@ -1600,6 +1622,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --deep-dark-accent: #171C22;
   --inactive: #C0C8D6;
   --table: #ccd6eb;
+  --fg: var(--headers);
+  --th: var(--fg);
   --tag: #7485a3;
   --hr: #d6deea;
   --embed-bg: var(--dark-sidebar);
@@ -1629,10 +1653,11 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --hr-f: var(--mdi);
   --bullet: "";
   --bul-f: var(--mdi);
+  background: var(--note);
 }
 
 .theme-dark.s-d,
-.theme-dark .s-d {
+.theme-dark .s-d.s-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -1675,8 +1700,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   /*Menu Button Hover*/
   --interactive-success: #197300;
   /*??*/
-  --scrollbar-bg: rgba(255, 255, 255, 0.05);
-  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --highlight-mix-blend-mode: lighten;
   /*--DEFAULT VARIABLES--*/
   /*Compatibility Color Recoloring*/
@@ -1703,6 +1728,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --code-text: #e6a210;
   --embed-bg: #12151a;
   --tag: #273346;
+  --th: var(--dark-accent);
   --table: #2f3440;
   --hr: #414b5c;
   --i-at: var(--lite-accent);
@@ -1734,7 +1760,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 .theme-light.s-d,
-.theme-light .s-d {
+.theme-light .s-d.s-d {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -1761,6 +1787,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--td);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #6c8bb4;
   --dark-accent: #d8ecfd;
@@ -1907,6 +1935,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 .t-d {
   --hr-sym: "";
   --hr-f: var(--mdi);
+  background: var(--note);
 }
 
 .theme-dark.t-d,
@@ -1924,11 +1953,12 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --side-bar: var(--note);
   --outer-bar: #0b0f13;
   --note: #1a1e24;
   --text: #bccad8;
-  /**/
   --dark-accent: #57250F;
   --accent: #DF7B41;
   --lite-accent: #C48A69;
@@ -1978,6 +2008,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   --side-bar: var(--note);
   --outer-bar: #eef3fd;
   --note: #f8fbff;
@@ -2021,6 +2053,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 .drwn {
   --hr-sym: "";
   --hr-f: var(--mdi);
+  background: var(--note);
 }
 
 .theme-dark.drwn,
@@ -2038,6 +2071,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--accent);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--td);
+  --scrollbar-thumb-bg: var(--accent);
   --side-bar: var(--note);
   --outer-bar: #0b0f13;
   --note: #1a1e24;
@@ -2099,6 +2134,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--headers);
   --interactive-accent-hover: var(--lite-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--code-text);
   --side-bar: var(--note);
   --outer-bar: #eef3fd;
   --note: #f8fbff;
@@ -2147,6 +2184,294 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-6: var(--deep-dark-accent);
 }
 
+/*Notion Colors*/
+.notion.notion {
+  --font: var(--default-font);
+  --f-w-h: 900;
+  --f-w-v: 900;
+  --hr-sym: "";
+  background: var(--note);
+}
+
+.theme-dark.notion,
+.theme-dark .notion.notion {
+  --background-primary: var(--note);
+  --background-primary-alt: var(--side-bar);
+  --background-secondary: var(--side-bar);
+  --background-secondary-alt: var(--side-bar);
+  --background-modifier-cover: var(--side-bar);
+  --text-normal: var(--text);
+  --text-muted: var(--soft-text);
+  --text-accent: var(--text);
+  --text-accent-hover: var(--accent2-lite);
+  --background-modifier-border: var(--hr);
+  --background-modifier-form-field: rgb(255, 255, 255, 0.1);
+  --background-modifier-form-field-highlighted: rgb(255, 255, 255, 0.1);
+  --text-highlight-bg: rgb(255, 255, 255, 0.1);
+  --text-highlight-bg-active: rgb(255, 255, 255, 0.1);
+  --text-selection: rgba(45, 170, 219, 0.3);
+  --text-faint: var(--inactive);
+  --interactive-accent: var(--bttn);
+  --text-on-accent: var(--text-dl);
+  --scrollbar-bg: #3b4044;
+  --scrollbar-thumb-bg: #474C50;
+  --text: #EBEBEB;
+  --headers: var(--text);
+  --accent2-lite: #2EA1CF;
+  --lite-accent: var(--bttn);
+  --soft-text: #A8ABAC;
+  --inactive: #5D6265;
+  --footnote: #7A7D7F;
+  --file: var(--text);
+  --code-text: var(--text);
+  --code-bg: #3F4447;
+  --note: #2F3437;
+  --outline: #0f0f0f40;
+  --bttn: transparent;
+  --bg: #3C4144;
+  --side-bar: #373C3F;
+  --outer-bar: var(--embed-bg);
+  --embed-bg: #3F4447;
+  --code-bg: var(--bg);
+  --th: #373c3f;
+  --td: #0f0f0f33;
+  --hr: #3C3F43;
+  --table: #4C5153;
+  --lines: var(--table);
+  /*#3E4245*/
+  --bttn: #43B3E0;
+  /*#889FC3*/
+  --tag: #708dbb;
+  --folder: var(--bttn);
+  --text-dl: white;
+  --i-at: var(--bttn);
+  --f-hover: var(--text);
+  --accent: var(--tag);
+  /*#474C50*/
+  --accent2: var(--soft-text);
+  --dark-accent: #4B5053;
+  /*#26292B*/
+  --dark-sidebar: var(--side-bar);
+  --aside-bg: var(--note);
+  --deep-dark-accent: var(--outer-bar);
+  --graph-bg: var(--note);
+  --graph-lines: #5D626555;
+  --graph-node: var(--headers);
+  --graph-fill: var(--folder);
+  --graph-404: var(--inactive);
+  --graph-img: var(--soft-text);
+  --graph-tag: var(--accent);
+  --graph-focused: var(--accent);
+  --sphd-pre-1: var(--lite-accent);
+  --sphd-pre-2: var(--accent2);
+  --sphd-pre-3: var(--inactive);
+  --sphd-pre-4: var(--hr);
+  --sphd-pre-5: var(--note);
+  --sphd-pre-6: var(--td);
+  --sphd-ed-1: var(--lite-accent);
+  --sphd-ed-2: var(--accent2);
+  --sphd-ed-3: var(--inactive);
+  --sphd-ed-4: var(--hr);
+  --sphd-ed-5: var(--note);
+  --sphd-ed-6: var(--td);
+}
+
+.theme-light.notion,
+.theme-light .notion.notion {
+  --background-primary: var(--note);
+  --background-primary-alt: var(--side-bar);
+  --background-secondary: var(--side-bar);
+  --background-secondary-alt: var(--side-bar);
+  --background-modifier-cover: var(--side-bar);
+  --text-normal: var(--text);
+  --text-muted: var(--soft-text);
+  --text-accent: var(--text);
+  --text-accent-hover: var(--accent2-lite);
+  --background-modifier-border: var(--hr);
+  --background-modifier-form-field: rgba(242, 241, 238, 0.6);
+  --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
+  --text-highlight-bg: rgba(55, 53, 47, 0.078);
+  --text-highlight-bg-active: rgba(55, 53, 47, 0.078);
+  --text-selection: rgba(45, 170, 219, 0.3);
+  --scrollbar-bg: #EDECE9;
+  --scrollbar-thumb-bg: #D3D1CB;
+  --interactive-accent: var(--bttn);
+  --text-accent: var(--text);
+  --text-on-accent: white;
+  --text-faint: var(--inactive);
+  --text-muted: var(--soft-text);
+  --note: #FFFFFF;
+  --side-bar: #F7F6F3;
+  --accent: #D3D1CB;
+  --dark-accent: #E8E7E4;
+  --outer-bar: #F1F1EF;
+  --inactive: #CFCECD;
+  --bg: #EDECE9;
+  --embed-bg: #F1F1EF;
+  --dark-sidebar: var(--side-bar);
+  --aside-bg: var(--note);
+  --deep-dark-accent: var(--outer-bar);
+  --headers: var(--text);
+  --text: #37352f;
+  /*#8D8C89*/
+  --accent2-lite: #2EA1CF;
+  --lite-accent: var(--bttn);
+  --soft-text: #82817C;
+  --hr: #EDEDEC;
+  --file: #69685f;
+  --outline: #0f0f0f15;
+  --td: #37352F10;
+  --th: var(--side-bar);
+  --th-text: var(--text);
+  --hr: rgba(55, 53, 47, 0.1);
+  --lines: var(--hr);
+  --table:#e9e9e7;
+  --bttn: #43B3E0;
+  --tag: var(--bttn);
+  --folder: var(--bttn);
+  --text-dl: white;
+  --i-at: var(--bttn);
+  --f-hover: var(--text);
+  --accent: #43B3E0;
+  --accent2: var(--soft-text);
+  --footnote: #A09E9A;
+  --code-bg: #f7f6f3;
+  --code-text: var(--text);
+  --graph-bg: var(--note);
+  --graph-lines: #CFCECD55;
+  --graph-node: var(--soft-text);
+  --graph-fill: var(--folder);
+  --graph-404: var(--file);
+  --graph-img: #000;
+  --graph-tag: var(--accent);
+  --graph-focused: var(--accent);
+  --sphd-pre-1: var(--lite-accent);
+  --sphd-pre-2: var(--accent2);
+  --sphd-pre-3: var(--inactive);
+  --sphd-pre-4: var(--hr);
+  --sphd-pre-5: var(--note);
+  --sphd-pre-6: var(--td);
+  --sphd-ed-1: var(--lite-accent);
+  --sphd-ed-2: var(--accent2);
+  --sphd-ed-3: var(--inactive);
+  --sphd-ed-4: var(--hr);
+  --sphd-ed-5: var(--note);
+  --sphd-ed-6: var(--td);
+}
+
+.notion {
+  /*Notion Style Dataview: .dvl-c class*/
+}
+.notion .titlebar * {
+  color: var(--text) !important;
+}
+.notion .modal.mod-settings .vertical-tab-content-container, .notion .vertical-tab-content, .notion .community-plugin-info {
+  background: var(--note);
+}
+.notion .internal-link, .notion .external-link, .notion .cm-underline {
+  color: var(--text);
+  border-bottom: 1px solid var(--table);
+  font-weight: 600;
+  text-decoration: unset;
+}
+.notion .internal-link.is-unresolved, .notion .external-link, .notion .is-unresolved .cm-underline {
+  color: var(--inactive);
+}
+.notion a {
+  font-weight: 600;
+}
+.notion .external-link {
+  color: var(--soft-text);
+}
+.notion .external-link:hover, .notion .internal-link:hover, .notion .cm-underline:hover {
+  background: var(--text-highlight-bg);
+}
+.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li, .notion .dvl-c .list-view-ul li, .notion .dvl-c .dataview.table-view-table > tbody > tr, .notion.dvl-c .block-language-dataviewjs .dataview-result-list-li, .notion.dvl-c .list-view-ul li, .notion.dvl-c .dataview.table-view-table > tbody > tr {
+  flex: 1 1 200px;
+  border-radius: 3px;
+  background: var(--embed-bg);
+  border: 0;
+  box-shadow: var(--outline) 0px 0px 0px 1px;
+}
+.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li:hover, .notion .dvl-c .list-view-ul li:hover, .notion .dvl-c .dataview.table-view-table > tbody > tr:hover, .notion.dvl-c .block-language-dataviewjs .dataview-result-list-li:hover, .notion.dvl-c .list-view-ul li:hover, .notion.dvl-c .dataview.table-view-table > tbody > tr:hover {
+  cursor: pointer;
+}
+
+.theme-light.notion.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion .dvl-c .list-view-ul li, .theme-light.notion.notion .dvl-c .dataview.table-view-table > tbody > tr, .theme-light.notion.notion.dvl-c .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion.dvl-c .list-view-ul li, .theme-light.notion.notion.dvl-c .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion .dvl-c .list-view-ul li,
+.theme-light .notion.notion .dvl-c .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion.dvl-c .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion.dvl-c .list-view-ul li,
+.theme-light .notion.notion.dvl-c .dataview.table-view-table > tbody > tr {
+  background: var(--note);
+}
+
+.dvl-c .table-view-table > thead::before {
+  content: "⚙";
+  font-family: var(--its, var(--default-font));
+  float: right;
+  padding: 5px 10px 5px 10px;
+}
+.dvl-c .table-view-table > thead > tr {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--outline, var(--background-modifier-box-shadow));
+  margin: 0;
+  flex-wrap: wrap;
+  border-radius: var(--radius, 3px);
+}
+.dvl-c table .table-view-table > thead > tr {
+  position: absolute;
+  right: 0;
+}
+.dvl-c .table-view-table > thead:not(:hover) > * {
+  display: none;
+}
+.dvl-c .dataview th {
+  font-family: var(--default-font);
+  background: var(--note, var(--background-primary));
+  font-size: var(--f-s-text, var(--editor-font-size));
+  border: 0;
+  color: var(--text, var(--text-normal));
+  opacity: 1;
+}
+.dvl-c .dataview th:hover {
+  background: var(--td, var(--background-modifier-form-field));
+}
+.dvl-c .list-view-ul li, .dvl-c .dataview.table-view-table > tbody > tr {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--aside-bg, var(--background-primary-alt));
+  box-shadow: var(--outline, var(--background-modifier-box-shadow)) 0px 0px 0px 1px;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: var(--border-radius, 3px);
+}
+.dvl-c .list-view-ul, .dvl-c .dataview.table-view-table > tbody.table-view-tbody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+}
+.dvl-c .block-language-dataviewjs .dataview-result-list-li, .dvl-c .list-view-ul li, .dvl-c .dataview.table-view-table > tbody > tr {
+  flex: 1 0 150px;
+  margin: 10px;
+}
+.dvl-c .dataview.table-view-table td {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+.dvl-c .list-view-ul li::before {
+  display: none;
+}
+.dvl-c .dataview.table-view-table li {
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+}
+
 .mini {
   --hr-sym: "";
   background: var(--note);
@@ -2160,10 +2485,13 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-secondary-alt: var(--note);
   --background-modifier-cover: var(--note);
   --text-accent: var(--accent2-lite);
+  --text-muted: var(--soft-text);
   --background-modifier-form-field-highlighted: rgba(113, 132, 162, 0.295);
   --text-selection: rgba(61, 82, 107, 0.472);
   --text-highlight-bg: rgba(87, 113, 156, 0.4);
   --text-highlight-bg-active: rgba(112, 132, 160, 0.4);
+  --scrollbar-bg: var(--td);
+  --scrollbar-thumb-bg: var(--table);
   --note: #1a1e24;
   --dark-accent: var(--note);
   --accent: #414958;
@@ -2209,6 +2537,9 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-form-field-highlighted: #99a4bb20;
   --text-highlight-bg: #99a4bb20;
   --text-highlight-bg-active: #99a4bb20;
+  --text-muted: var(--soft-text);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--outline);
   --note: #f8fbff;
   --dark-accent: var(--note);
   --accent: #b5c2d8;
@@ -2258,6 +2589,10 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 /*----Theme: ITS Dark----*/
+.its-d {
+  background: var(--note);
+}
+
 .theme-dark.its-d,
 .theme-dark .its-d {
   --background-primary: var(--note);
@@ -2356,7 +2691,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 .theme-dark.nord,
-.theme-dark .nord {
+.theme-dark .nord.nord {
   --background-primary: var(--note);
   --background-primary-alt: var(--dark-accent);
   --background-secondary: var(--side-bar);
@@ -2369,6 +2704,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-highlight-bg-active: #88C0D090;
   --text-selection: #88C0D020;
   /*Cursor dragged highlights*/
+  --hvr2: var(--text-selection);
   --interactive-normal: var(--accent);
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--accent);
@@ -2380,6 +2716,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-accent-hover: var(--accent);
   --interactive-accent: var(--lite-accent);
   --interactive-accent-hover: var(--dark-accent);
+  --scrollbar-bg: var(--bg);
+  --scrollbar-thumb-bg: var(--accent);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: var(--outer-bar);
   --outer-bar: #242933;
@@ -2396,6 +2734,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text: #ECEFF4;
   --accent: #5E81AC;
   --dark-accent: #4C566A;
+  --tag: var(--dark-accent);
   --headers: #88C0D0;
   --folder: #A3BE8C;
   --i-at: #81A1C1;
@@ -2447,6 +2786,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-accent-hover: var(--accent);
   --interactive-accent: var(--lite-accent);
   --interactive-accent-hover: var(--dark-accent);
+  --scrollbar-bg: var(--outer-bar);
+  --scrollbar-thumb-bg: var(--accent2-lite);
   /*--DEFAULT VARIABLES--*/
   --deep-dark-accent: #4C566A;
   --outer-bar: #E5E9F0;

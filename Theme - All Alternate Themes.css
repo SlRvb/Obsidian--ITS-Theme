@@ -2443,10 +2443,11 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   display: flex;
   flex-direction: column;
   background-color: var(--aside-bg, var(--background-primary-alt));
-  box-shadow: var(--outline, var(--background-modifier-box-shadow)) 0px 0px 0px 1px;
+  box-shadow: var(--outline, var(--background-modifier-box-shadow)) 0px 0px 0px 1px, var(--outline, var(--background-modifier-box-shadow)) 0px 2px 4px;
   margin: 5px 0;
   padding: 10px;
-  border-radius: var(--border-radius, 3px);
+  border-radius: var(--radius, 3px);
+  border: 0;
 }
 .dvl-c .list-view-ul, .dvl-c .dataview.table-view-table > tbody.table-view-tbody {
   display: flex;
@@ -2458,7 +2459,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   flex: 1 0 150px;
   margin: 10px;
 }
-.dvl-c .dataview.table-view-table td {
+.dvl-c .dataview.dataview.table-view-table td {
   padding: 0;
   background-color: transparent;
   border: 0;

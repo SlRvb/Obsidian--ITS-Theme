@@ -667,6 +667,24 @@ settings:
         level: 3
         collapsed: true
     -
+        title: Resize Settings Menu Width
+        id: setting-w
+        type: variable-number-slider
+        default: 55
+        format: vw
+        min: 40
+        max: 100
+        step: 5
+    -
+        title: Resize Settings Menu Height
+        id: setting-h
+        type: variable-number-slider
+        default: 90
+        format: vh
+        min: 40
+        max: 100
+        step: 5
+    -
         title: Resize Scrollbars
         id: scroll-size
         type: variable-number-slider

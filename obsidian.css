@@ -668,6 +668,24 @@ settings:
         level: 3
         collapsed: true
     -
+        title: Resize Settings Menu Width
+        id: setting-w
+        type: variable-number-slider
+        default: 55
+        format: vw
+        min: 40
+        max: 100
+        step: 5
+    -
+        title: Resize Settings Menu Height
+        id: setting-h
+        type: variable-number-slider
+        default: 90
+        format: vh
+        min: 40
+        max: 100
+        step: 5
+    -
         title: Resize Scrollbars
         id: scroll-size
         type: variable-number-slider
@@ -1769,6 +1787,8 @@ settings:
   --tbl-th-w: 10px;
   --tbl-td-h: var(--tbl-th-h);
   --tbl-td-w: var(--tbl-th-w);
+  --setting-h: 90vh;
+  --setting-w: 55vw;
   --f-s-ui: 16px;
   --f-s-sb: 16px;
   --f-s-nt: 16px;
@@ -2887,14 +2907,14 @@ body:not(.its-i) svg.clock-glyph {
 
 /*Resize Settings*/
 .modal.mod-settings {
-  width: 55vw;
-  height: 90vh;
+  width: var(--setting-w);
+  height: var(--setting-h);
   overflow: visible;
 }
 
 .modal.mod-settings .vertical-tab-content-container,
 .modal.mod-settings .vertical-tab-header {
-  height: 90vh;
+  height: var(--setting-h);
   padding: 0;
 }
 

@@ -843,6 +843,11 @@ settings:
         id: t-w
         type: class-toggle
     -
+        title: Table Header Adjustments
+        id: table-headers
+        type: heading
+        level: 4
+    -
         title: Table Header Height Padding
         id: tbl-th-h
         type: variable-number-slider
@@ -861,6 +866,24 @@ settings:
         max: 20
         step: 1
     -
+        title: Disable Dataview Header Larger Font Size
+        id: dv-th-size
+        type: class-toggle
+    -
+        title: Table Header Font Size
+        id: tbl-th-s
+        type: variable-number-slider
+        format: px
+        default: 16
+        min: 12
+        max: 30
+        step: 1
+    -
+        title: Table Cell Adjustments
+        id: table-cells
+        type: heading
+        level: 4
+    -
         title: Table Cell Height Padding
         id: tbl-td-h
         type: variable-number-slider
@@ -877,6 +900,15 @@ settings:
         default: 10
         min: 0
         max: 20
+        step: 1
+    -
+        title: Table Cell Font Size
+        id: tbl-td-s
+        type: variable-number-slider
+        format: px
+        default: 16
+        min: 12
+        max: 30
         step: 1
     -
         title: Horizontal Line
@@ -1787,6 +1819,8 @@ settings:
   --tbl-th-w: 10px;
   --tbl-td-h: var(--tbl-th-h);
   --tbl-td-w: var(--tbl-th-w);
+  --tbl-th-s: var(--f-text);
+  --tbl-td-s: var(--f-text);
   --setting-h: 90vh;
   --setting-w: 55vw;
   --f-s-ui: 16px;
@@ -4366,12 +4400,14 @@ table {
 }
 
 .markdown-preview-view.markdown-preview-view table th,
-.is-live-preview table th {
+.is-live-preview.is-live-preview table th {
   padding: var(--tbl-th-h) var(--tbl-th-w);
+  font-size: var(--tbl-th-s);
 }
 .markdown-preview-view.markdown-preview-view table tr td,
-.is-live-preview table tr td {
+.is-live-preview.is-live-preview table tr td {
   padding: var(--tbl-td-h) var(--tbl-td-w);
+  font-size: var(--tbl-td-s);
 }
 
 /*Plugin: Advanced Table*/
@@ -8193,6 +8229,10 @@ body .table-view-table > thead > tr > th {
   border-bottom: 2px solid var(--accent);
   background-color: var(--embed-bg);
   white-space: pre;
+}
+
+body:not(.dv-th-size) .table-view-table > thead > tr > th {
+  font-size: larger;
 }
 
 .table-view-table > tbody > tr > td {

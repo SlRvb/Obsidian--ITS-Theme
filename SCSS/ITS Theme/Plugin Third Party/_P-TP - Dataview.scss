@@ -8,6 +8,10 @@ body .table-view-table > thead > tr > th {
     background-color: var(--embed-bg);
     white-space: pre;
 }
+body:not(.dv-th-size) .table-view-table > thead > tr > th {
+    font-size: larger;
+}
+
 .table-view-table > tbody > tr > td {
     word-wrap: normal;
     word-break: normal;

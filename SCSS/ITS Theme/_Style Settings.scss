@@ -842,6 +842,11 @@ settings:
         id: t-w
         type: class-toggle
     -
+        title: Table Header Adjustments
+        id: table-headers
+        type: heading
+        level: 4
+    -
         title: Table Header Height Padding
         id: tbl-th-h
         type: variable-number-slider
@@ -860,6 +865,24 @@ settings:
         max: 20
         step: 1
     -
+        title: Disable Dataview Header Larger Font Size
+        id: dv-th-size
+        type: class-toggle
+    -
+        title: Table Header Font Size
+        id: tbl-th-s
+        type: variable-number-slider
+        format: px
+        default: 16
+        min: 12
+        max: 30
+        step: 1
+    -
+        title: Table Cell Adjustments
+        id: table-cells
+        type: heading
+        level: 4
+    -
         title: Table Cell Height Padding
         id: tbl-td-h
         type: variable-number-slider
@@ -876,6 +899,15 @@ settings:
         default: 10
         min: 0
         max: 20
+        step: 1
+    -
+        title: Table Cell Font Size
+        id: tbl-td-s
+        type: variable-number-slider
+        format: px
+        default: 16
+        min: 12
+        max: 30
         step: 1
     -
         title: Horizontal Line

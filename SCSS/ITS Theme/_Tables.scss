@@ -30,13 +30,15 @@ table { border-collapse: collapse; }
 }
 
 .markdown-preview-view.markdown-preview-view,
-.is-live-preview {
+.is-live-preview.is-live-preview {
     //Table Padding
     & table th { 
         padding: var(--tbl-th-h) var(--tbl-th-w);
+        font-size: var(--tbl-th-s);
     }
     & table tr td { 
         padding: var(--tbl-td-h) var(--tbl-td-w);
+        font-size: var(--tbl-td-s);
     }
 }
 

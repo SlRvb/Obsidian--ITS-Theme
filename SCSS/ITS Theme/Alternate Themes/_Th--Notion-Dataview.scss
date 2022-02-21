@@ -37,7 +37,8 @@
         box-shadow: var(--outline, var(--background-modifier-box-shadow)) 0px 0px 0px 1px;
         margin: 5px 0;
         padding: 10px;
-        border-radius: var(--border-radius, 3px);
+        border-radius: var(--radius, 3px);
+        border: 0;
     }
     & .list-view-ul,
     & .dataview.table-view-table > tbody.table-view-tbody {
@@ -52,7 +53,7 @@
         flex: 1 0 150px;
         margin: 10px;
     }
-    & .dataview.table-view-table td { 
+    & .dataview.dataview.table-view-table td { 
         padding: 0; 
         background-color: transparent;
         border: 0;

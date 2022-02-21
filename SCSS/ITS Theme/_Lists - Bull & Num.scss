@@ -87,14 +87,6 @@ ul li > p {
 .markdown-source-view.mod-cm6 .list-bullet {
     padding-right: 9px;
 }
-/*Fix Bullet Alignment*/
-.fix-dbull .markdown-source-view.mod-cm6 .list-bullet {
-    padding-right: unset;
-    left: -5px;
-}
-.fix-dbull .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
-    content: unset;
-}
 
 /*Adjust Padding*/
 .cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol {

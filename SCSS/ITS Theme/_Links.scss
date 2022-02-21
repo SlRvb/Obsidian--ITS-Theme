@@ -75,8 +75,8 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
     & .cm-underline {
         color: var(--text);
         font-weight: 600;
-        text-decoration: unset;
-        box-shadow: 0 1px 0 var(--lines);
+        border-bottom: 1px solid var(--inactive);
+        
     }
     & .internal-link.is-unresolved,
     & .external-link,

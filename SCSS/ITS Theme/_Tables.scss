@@ -29,9 +29,11 @@ table { border-collapse: collapse; }
     border-bottom: 1px solid var(--note);
 }
 
-.is-live-preview table th,
-.is-live-preview table tr td {
-    padding: 6px 10px;
+/*Table Padding*/
+.markdown-preview-view,
+.is-live-preview {
+    & table th    { padding: var(--tbl-th-h) var(--tbl-th-w); }
+    & table tr td { padding: var(--tbl-td-h) var(--tbl-td-w); }
 }
 
 // .markdown-preview-sizer { min-height: auto !important; }
@@ -41,3 +43,23 @@ table { border-collapse: collapse; }
     font-family: var(--font-monospace);
 }
 
+
+
+
+/*-Alternate Styling-*/
+/*Bolded Right Side Table*/
+.table.table td:nth-child(1) {
+    background-color: var(--outer-bar);
+    font-weight: 900;
+}
+// .table th, .table td { border: 0px; }
+
+/*Table Centered*/
+.t-c table {
+    margin-left: auto;
+    margin-right: auto
+}
+/*Table Widened*/
+.t-w table {
+    width: 100%;
+}

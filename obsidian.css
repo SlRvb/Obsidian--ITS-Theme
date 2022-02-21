@@ -814,6 +814,48 @@ settings:
                 label: Notion Style
                 value: link-ntn
     -
+        title: Tables
+        id: tables
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Table Header Height Padding
+        id: tbl-th-h
+        type: variable-number-slider
+        format: px
+        default: 4
+        min: 0
+        max: 10
+        step: 1
+    -
+        title: Table Header Width Padding
+        id: tbl-th-w
+        type: variable-number-slider
+        format: px
+        default: 10
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Table Cell Height Padding
+        id: tbl-td-h
+        type: variable-number-slider
+        format: px
+        default: 4
+        min: 0
+        max: 10
+        step: 1
+    -
+        title: Table Cell Width Padding
+        id: tbl-td-w
+        type: variable-number-slider
+        format: px
+        default: 10
+        min: 0
+        max: 20
+        step: 1
+    -
         title: Horizontal Line
         id: hztl-ln
         type: heading
@@ -917,15 +959,73 @@ settings:
         id: alt-ind
         type: class-toggle
     -
-        title: Fix Double Bullet Issue
-        description: Bandaid solution that doesn't look good but fixes the double bullet LP issue.
-        id: fix-dbull
-        type: class-toggle
+		title: Colorful Lists
+		id: Bullet-Line-Color
+		type: heading
+		level: 4
+        collapsed: true
+	-
+		title: Colorful Bullet Line Color
+		description: Toggle on to use colorful bullet lines
+		id: bul-li-col
+		type: class-toggle
+    -
+		title: Colorful Bullet Color
+		description: Toggle on to use colorful bullets
+		id: bul-col
+		type: class-toggle
+    -
+		title: Neon Lines
+		description: Toggle on for lines to have a neon glow effect
+		id: bul-li-neon
+		type: class-toggle
+	-
+		title: Bullet Line 1 Color
+		id: b-l-1
+		type: variable-themed-color
+		format: hex
+		default-dark: '#7c2929'
+		default-light: '#e45858'
+	-
+		title: Bullet Line 2 Color
+		id: b-l-2
+		type: variable-themed-color
+		format: hex
+		default-dark: '#a56146'
+		default-light: '#fd9268'
+	-
+		title: Bullet Line 3 Color
+		id: b-l-3
+		type: variable-themed-color
+		format: hex
+		default-dark: '#386b3f'
+		default-light: '#4fd160'
+	-
+		title: Bullet Line 4 Color
+		id: b-l-4
+		type: variable-themed-color
+		format: hex
+		default-dark: '#3e7779'
+		default-light: '#43bfc3'
+	-
+		title: Bullet Line 5 Color
+		id: b-l-5
+		type: variable-themed-color
+		format: hex
+		default-dark: '#435aa5'
+		default-light: '#5c7eee'
+	-
+		title: Bullet Line 6 Color
+		id: b-l-6
+		type: variable-themed-color
+		format: hex
+		default-dark: '#687286'
+		default-light: '#adbad3'
     -
         title: Checkboxes
         id: Checkboxes
         type: heading
-        level: 4
+        level: 3
         collapsed: true
     - 
         title: Disable Alternate Checkboxes
@@ -1030,69 +1130,6 @@ settings:
         title: "[I] info"
         id: chst-info
         type: class-toggle
-	-
-		title: Colorful Lists
-		id: Bullet-Line-Color
-		type: heading
-		level: 4
-        collapsed: true
-	-
-		title: Colorful Bullet Line Color
-		description: Toggle on to use colorful bullet lines
-		id: bul-li-col
-		type: class-toggle
-    -
-		title: Colorful Bullet Color
-		description: Toggle on to use colorful bullets
-		id: bul-col
-		type: class-toggle
-    -
-		title: Neon Lines
-		description: Toggle on for lines to have a neon glow effect
-		id: bul-li-neon
-		type: class-toggle
-	-
-		title: Bullet Line 1 Color
-		id: b-l-1
-		type: variable-themed-color
-		format: hex
-		default-dark: '#7c2929'
-		default-light: '#e45858'
-	-
-		title: Bullet Line 2 Color
-		id: b-l-2
-		type: variable-themed-color
-		format: hex
-		default-dark: '#a56146'
-		default-light: '#fd9268'
-	-
-		title: Bullet Line 3 Color
-		id: b-l-3
-		type: variable-themed-color
-		format: hex
-		default-dark: '#386b3f'
-		default-light: '#4fd160'
-	-
-		title: Bullet Line 4 Color
-		id: b-l-4
-		type: variable-themed-color
-		format: hex
-		default-dark: '#3e7779'
-		default-light: '#43bfc3'
-	-
-		title: Bullet Line 5 Color
-		id: b-l-5
-		type: variable-themed-color
-		format: hex
-		default-dark: '#435aa5'
-		default-light: '#5c7eee'
-	-
-		title: Bullet Line 6 Color
-		id: b-l-6
-		type: variable-themed-color
-		format: hex
-		default-dark: '#687286'
-		default-light: '#adbad3'
     - 
         title: Tags
         id: Tags
@@ -1723,6 +1760,10 @@ settings:
   --f-small: .88em;
   --f-tag: 13px;
   --note-width: 700px;
+  --tbl-th-h: 4px;
+  --tbl-td-w: 10px;
+  --tbl-td-h: 4px;
+  --tbl-td-w: 10px;
   --f-s-ui: 16px;
   --f-s-sb: 16px;
   --f-s-nt: 16px;
@@ -3754,8 +3795,7 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
 .link-ntn .internal-link, .link-ntn .external-link, .link-ntn .cm-underline {
   color: var(--text);
   font-weight: 600;
-  text-decoration: unset;
-  box-shadow: 0 1px 0 var(--lines);
+  border-bottom: 1px solid var(--inactive);
 }
 .link-ntn .internal-link.is-unresolved, .link-ntn .external-link, .link-ntn .is-unresolved .cm-underline {
   color: var(--inactive);
@@ -3879,16 +3919,6 @@ ul li > p {
 
 .markdown-source-view.mod-cm6 .list-bullet {
   padding-right: 9px;
-}
-
-/*Fix Bullet Alignment*/
-.fix-dbull .markdown-source-view.mod-cm6 .list-bullet {
-  padding-right: unset;
-  left: -5px;
-}
-
-.fix-dbull .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
-  content: unset;
 }
 
 /*Adjust Padding*/
@@ -4310,14 +4340,37 @@ table {
   border-bottom: 1px solid var(--note);
 }
 
-.is-live-preview table th,
+/*Table Padding*/
+.markdown-preview-view table th,
+.is-live-preview table th {
+  padding: var(--tbl-th-h) var(--tbl-th-w);
+}
+.markdown-preview-view table tr td,
 .is-live-preview table tr td {
-  padding: 6px 10px;
+  padding: var(--tbl-td-h) var(--tbl-td-w);
 }
 
 /*Plugin: Advanced Table*/
 .cm-s-obsidian .HyperMD-table-row {
   font-family: var(--font-monospace);
+}
+
+/*-Alternate Styling-*/
+/*Bolded Right Side Table*/
+.table.table td:nth-child(1) {
+  background-color: var(--outer-bar);
+  font-weight: 900;
+}
+
+/*Table Centered*/
+.t-c table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Table Widened*/
+.t-w table {
+  width: 100%;
 }
 
 /*--Tags--*/
@@ -10135,10 +10188,6 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   */
   /*Line Offset*/
   left: 7px;
-}
-
-body.fix-dbull .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body.fix-dbull .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
-  left: 2px;
 }
 
 /*Single Bullet/1 Bullet Color*/

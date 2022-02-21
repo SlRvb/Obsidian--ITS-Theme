@@ -731,11 +731,6 @@ settings:
         description: Justify preview and editor text
         id: justified
         type: class-toggle
-    - 
-        title: Centered Tables
-        description: Move all tables to the center of the page.
-        id: t-c
-        type: class-toggle
     -
         title: Center Images
         description: Center images by default
@@ -818,6 +813,16 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        title: Center Tables
+        description: Move all tables to the center of the page.
+        id: t-c
+        type: class-toggle
+    -
+        title: Wide Tables
+        description: Set width of table to extend to the edges of the page.
+        id: t-w
+        type: class-toggle
     -
         title: Table Header Height Padding
         id: tbl-th-h
@@ -825,7 +830,7 @@ settings:
         format: px
         default: 4
         min: 0
-        max: 10
+        max: 20
         step: 1
     -
         title: Table Header Width Padding
@@ -843,7 +848,7 @@ settings:
         format: px
         default: 4
         min: 0
-        max: 10
+        max: 20
         step: 1
     -
         title: Table Cell Width Padding

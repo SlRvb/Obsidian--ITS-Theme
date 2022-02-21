@@ -732,11 +732,6 @@ settings:
         description: Justify preview and editor text
         id: justified
         type: class-toggle
-    - 
-        title: Centered Tables
-        description: Move all tables to the center of the page.
-        id: t-c
-        type: class-toggle
     -
         title: Center Images
         description: Center images by default
@@ -819,6 +814,16 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        title: Center Tables
+        description: Move all tables to the center of the page.
+        id: t-c
+        type: class-toggle
+    -
+        title: Wide Tables
+        description: Set width of table to extend to the edges of the page.
+        id: t-w
+        type: class-toggle
     -
         title: Table Header Height Padding
         id: tbl-th-h
@@ -826,7 +831,7 @@ settings:
         format: px
         default: 4
         min: 0
-        max: 10
+        max: 20
         step: 1
     -
         title: Table Header Width Padding
@@ -844,7 +849,7 @@ settings:
         format: px
         default: 4
         min: 0
-        max: 10
+        max: 20
         step: 1
     -
         title: Table Cell Width Padding
@@ -1761,9 +1766,9 @@ settings:
   --f-tag: 13px;
   --note-width: 700px;
   --tbl-th-h: 4px;
-  --tbl-td-w: 10px;
-  --tbl-td-h: 4px;
-  --tbl-td-w: 10px;
+  --tbl-th-w: 10px;
+  --tbl-td-h: var(--tbl-th-h);
+  --tbl-td-w: var(--tbl-th-w);
   --f-s-ui: 16px;
   --f-s-sb: 16px;
   --f-s-nt: 16px;
@@ -4340,12 +4345,11 @@ table {
   border-bottom: 1px solid var(--note);
 }
 
-/*Table Padding*/
-.markdown-preview-view table th,
+.markdown-preview-view.markdown-preview-view table th,
 .is-live-preview table th {
   padding: var(--tbl-th-h) var(--tbl-th-w);
 }
-.markdown-preview-view table tr td,
+.markdown-preview-view.markdown-preview-view table tr td,
 .is-live-preview table tr td {
   padding: var(--tbl-td-h) var(--tbl-td-w);
 }
@@ -4878,28 +4882,6 @@ progress::-webkit-progress-value {
 /*Spaced Lists*/
 .s-li li {
   margin-top: 10px;
-}
-
-/*-Table-*/
-/*Bolded Right Side Table*/
-.table td:nth-child(1) {
-  background-color: var(--outer-bar);
-  font-weight: 900;
-}
-
-.table th, .table td {
-  border: 0px;
-}
-
-/*Table Centered*/
-.t-c table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*Table Widened*/
-.t-w table {
-  width: 100%;
 }
 
 /*Unclear Asides*/

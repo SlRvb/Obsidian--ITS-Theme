@@ -747,74 +747,6 @@ settings:
         id: dis-tri-quote
         type: class-toggle
     -
-        title: Horizontal Line
-        id: hztl-ln
-        type: heading
-        level: 3 
-        collapsed: true
-    - 
-        title: Horizontal Line Symbol
-        description: Add quotations around symbol for it to work. For Example "⚡". Use the codepoint for symbols from supported font icons. For Example "\e800".
-        id: hr-sym
-        type: variable-text
-        default: '⚡'
-    -
-        title: Horizontal Line Symbol Fonts
-        description: Font Icons. Default font aligns emojis.
-        id: hr-f
-        type: variable-select
-        default: its
-        options:
-            - its
-            - Material Icons Sharp
-            - remixicon
-            - fa5
-            - default-font
-    -
-        title: No Horizontal Line Symbol
-        description: Hide the horizontal Line Symbol entirely
-        id: hr-tog
-        type: class-toggle
-    -
-        title: Frontmatter
-        id: Frontmatter
-        type: heading
-        level: 3 
-        collapsed: true
-    -
-        title: Minimized Frontmater
-        id: h-fm
-        type: class-toggle
-    -
-        title: Hide Frontmatter 
-        id: no-m
-        type: class-toggle
-    -
-        title: Notion Style
-        id: ntn
-        type: class-toggle
-    -
-        title: Embeds
-        id: Embeds
-        type: heading
-        level: 3 
-        collapsed: true
-    - 
-        title: Naked Embeds
-        description: Embeds that look like they're part of the note.
-        id: naked-em
-        type: class-toggle
-    -
-        title: Original Embeds
-        description: Previous style of embeds
-        id: org-em
-        type: class-toggle
-    -
-        title: Embed Heading Undo
-        description: Revert embed headings to the default sizes and colors
-        id: em-hd
-        type: class-toggle
-    -
         title: Headers
         id: Headers
         type: heading
@@ -846,6 +778,90 @@ settings:
         title: Header Color Override
         description: Header color always applied over other markdown in the header
         id: hd-ovr
+        type: class-toggle
+    -
+        title: Frontmatter
+        id: Frontmatter
+        type: heading
+        level: 3 
+        collapsed: true
+    -
+        title: Minimized Frontmater
+        id: h-fm
+        type: class-toggle
+    -
+        title: Hide Frontmatter 
+        id: no-m
+        type: class-toggle
+    -
+        title: Notion Style
+        id: ntn
+        type: class-toggle
+    -
+        title: Links
+        id: links
+        type: heading
+        level: 3 
+        collapsed: true
+    -
+        title: Link Style
+        id: link-style
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: Notion Style
+                value: link-ntn
+    -
+        title: Horizontal Line
+        id: hztl-ln
+        type: heading
+        level: 3 
+        collapsed: true
+    - 
+        title: Horizontal Line Symbol
+        description: Add quotations around symbol for it to work. For Example "⚡". Use the codepoint for symbols from supported font icons. For Example "\e800".
+        id: hr-sym
+        type: variable-text
+        default: '⚡'
+    -
+        title: Horizontal Line Symbol Fonts
+        description: Font Icons. Default font aligns emojis.
+        id: hr-f
+        type: variable-select
+        default: its
+        options:
+            - its
+            - Material Icons Sharp
+            - remixicon
+            - fa5
+            - default-font
+    -
+        title: No Horizontal Line Symbol
+        description: Hide the horizontal Line Symbol entirely
+        id: hr-tog
+        type: class-toggle
+    -
+        title: Embeds
+        id: Embeds
+        type: heading
+        level: 3 
+        collapsed: true
+    - 
+        title: Naked Embeds
+        description: Embeds that look like they're part of the note.
+        id: naked-em
+        type: class-toggle
+    -
+        title: Original Embeds
+        description: Previous style of embeds
+        id: org-em
+        type: class-toggle
+    -
+        title: Embed Heading Undo
+        description: Revert embed headings to the default sizes and colors
+        id: em-hd
         type: class-toggle
     -
         title: Lists
@@ -3555,7 +3571,7 @@ li,
 table,
 .markdown-preview-section code,
 .cm-s-obsidian .CodeMirror-lines,
-.cm-s-obsidian .cm-line {
+.cm-s-obsidian .cm-line:not(.HyperMD-codeblock) {
   font-size: var(--f-s-text);
   font-weight: var(--f-w-t);
 }
@@ -3732,6 +3748,29 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
 /*Link Hover Color*/
 .cm-s-obsidian span.cm-url:hover {
   color: var(--inactive);
+}
+
+/*Notion Style Links*/
+.link-ntn .internal-link, .link-ntn .external-link, .link-ntn .cm-underline {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: unset;
+  box-shadow: 0 1px 0 var(--lines);
+}
+.link-ntn .internal-link.is-unresolved, .link-ntn .external-link, .link-ntn .is-unresolved .cm-underline {
+  color: var(--inactive);
+}
+.link-ntn a {
+  font-weight: 600;
+}
+.link-ntn .external-link {
+  color: var(--soft-text);
+}
+.link-ntn .external-link:hover, .link-ntn .internal-link:hover, .link-ntn .cm-underline:hover {
+  background: var(--text-highlight-bg);
+}
+.link-ntn .cm-s-obsidian span.cm-url {
+  color: var(--footnote);
 }
 
 /*--List--*/
@@ -8243,7 +8282,7 @@ body .dataview.inline-field-value a.tag:first-child {
   display: flex;
   flex-direction: row;
   border: 1px solid var(--outline);
-  box-shadow: 4px 4px 0 var(--c2);
+  box-shadow: 4px 4px 0 var(--outline);
   margin: 0;
   flex-wrap: wrap;
 }
@@ -11929,7 +11968,9 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-cover: var(--side-bar);
   --text-normal: var(--text);
   --text-muted: var(--soft-text);
-  --text-accent: var(--accent2-lite);
+  --text-accent: var(--text);
+  --text-accent-hover: var(--accent2-lite);
+  --background-modifier-border: var(--hr);
   --background-modifier-form-field: rgb(255, 255, 255, 0.1);
   --background-modifier-form-field-highlighted: rgb(255, 255, 255, 0.1);
   --text-highlight-bg: rgb(255, 255, 255, 0.1);
@@ -12008,6 +12049,11 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-secondary: var(--side-bar);
   --background-secondary-alt: var(--side-bar);
   --background-modifier-cover: var(--side-bar);
+  --text-normal: var(--text);
+  --text-muted: var(--soft-text);
+  --text-accent: var(--text);
+  --text-accent-hover: var(--accent2-lite);
+  --background-modifier-border: var(--hr);
   --background-modifier-form-field: rgba(242, 241, 238, 0.6);
   --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
   --text-highlight-bg: rgba(55, 53, 47, 0.078);
@@ -12079,6 +12125,9 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-6: var(--td);
 }
 
+.notion {
+  /*Notion Style Dataview: .dvl-c class*/
+}
 .notion .titlebar * {
   color: var(--text) !important;
 }
@@ -12089,6 +12138,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   color: var(--text);
   border-bottom: 1px solid var(--table);
   font-weight: 600;
+  text-decoration: unset;
 }
 .notion .internal-link.is-unresolved, .notion .external-link, .notion .is-unresolved .cm-underline {
   color: var(--inactive);
@@ -12101,6 +12151,26 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 .notion .external-link:hover, .notion .internal-link:hover, .notion .cm-underline:hover {
   background: var(--text-highlight-bg);
+}
+.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li, .notion .dvl-c .list-view-ul li, .notion .dvl-c .dataview.table-view-table > tbody > tr, .notion.dvl-c .block-language-dataviewjs .dataview-result-list-li, .notion.dvl-c .list-view-ul li, .notion.dvl-c .dataview.table-view-table > tbody > tr {
+  flex: 1 1 200px;
+  border-radius: 3px;
+  background: var(--embed-bg);
+  border: 0;
+  box-shadow: var(--outline) 0px 0px 0px 1px;
+}
+.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li:hover, .notion .dvl-c .list-view-ul li:hover, .notion .dvl-c .dataview.table-view-table > tbody > tr:hover, .notion.dvl-c .block-language-dataviewjs .dataview-result-list-li:hover, .notion.dvl-c .list-view-ul li:hover, .notion.dvl-c .dataview.table-view-table > tbody > tr:hover {
+  cursor: pointer;
+}
+
+.theme-light.notion.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion .dvl-c .list-view-ul li, .theme-light.notion.notion .dvl-c .dataview.table-view-table > tbody > tr, .theme-light.notion.notion.dvl-c .block-language-dataviewjs .dataview-result-list-li, .theme-light.notion.notion.dvl-c .list-view-ul li, .theme-light.notion.notion.dvl-c .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion .dvl-c .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion .dvl-c .list-view-ul li,
+.theme-light .notion.notion .dvl-c .dataview.table-view-table > tbody > tr,
+.theme-light .notion.notion.dvl-c .block-language-dataviewjs .dataview-result-list-li,
+.theme-light .notion.notion.dvl-c .list-view-ul li,
+.theme-light .notion.notion.dvl-c .dataview.table-view-table > tbody > tr {
+  background: var(--note);
 }
 
 .mini {
@@ -12220,6 +12290,10 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 }
 
 /*----Theme: ITS Dark----*/
+.its-d {
+  background: var(--note);
+}
+
 .theme-dark.its-d,
 .theme-dark .its-d {
   --background-primary: var(--note);

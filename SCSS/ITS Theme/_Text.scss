@@ -45,7 +45,7 @@ li,
 table, 
 .markdown-preview-section code,
 .cm-s-obsidian .CodeMirror-lines,
-.cm-s-obsidian .cm-line {
+.cm-s-obsidian .cm-line:not(.HyperMD-codeblock) {
     font-size: var(--f-s-text);
     font-weight: var(--f-w-t);
 }

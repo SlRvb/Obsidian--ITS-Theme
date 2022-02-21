@@ -746,74 +746,6 @@ settings:
         id: dis-tri-quote
         type: class-toggle
     -
-        title: Horizontal Line
-        id: hztl-ln
-        type: heading
-        level: 3 
-        collapsed: true
-    - 
-        title: Horizontal Line Symbol
-        description: Add quotations around symbol for it to work. For Example "⚡". Use the codepoint for symbols from supported font icons. For Example "\e800".
-        id: hr-sym
-        type: variable-text
-        default: '⚡'
-    -
-        title: Horizontal Line Symbol Fonts
-        description: Font Icons. Default font aligns emojis.
-        id: hr-f
-        type: variable-select
-        default: its
-        options:
-            - its
-            - Material Icons Sharp
-            - remixicon
-            - fa5
-            - default-font
-    -
-        title: No Horizontal Line Symbol
-        description: Hide the horizontal Line Symbol entirely
-        id: hr-tog
-        type: class-toggle
-    -
-        title: Frontmatter
-        id: Frontmatter
-        type: heading
-        level: 3 
-        collapsed: true
-    -
-        title: Minimized Frontmater
-        id: h-fm
-        type: class-toggle
-    -
-        title: Hide Frontmatter 
-        id: no-m
-        type: class-toggle
-    -
-        title: Notion Style
-        id: ntn
-        type: class-toggle
-    -
-        title: Embeds
-        id: Embeds
-        type: heading
-        level: 3 
-        collapsed: true
-    - 
-        title: Naked Embeds
-        description: Embeds that look like they're part of the note.
-        id: naked-em
-        type: class-toggle
-    -
-        title: Original Embeds
-        description: Previous style of embeds
-        id: org-em
-        type: class-toggle
-    -
-        title: Embed Heading Undo
-        description: Revert embed headings to the default sizes and colors
-        id: em-hd
-        type: class-toggle
-    -
         title: Headers
         id: Headers
         type: heading
@@ -845,6 +777,90 @@ settings:
         title: Header Color Override
         description: Header color always applied over other markdown in the header
         id: hd-ovr
+        type: class-toggle
+    -
+        title: Frontmatter
+        id: Frontmatter
+        type: heading
+        level: 3 
+        collapsed: true
+    -
+        title: Minimized Frontmater
+        id: h-fm
+        type: class-toggle
+    -
+        title: Hide Frontmatter 
+        id: no-m
+        type: class-toggle
+    -
+        title: Notion Style
+        id: ntn
+        type: class-toggle
+    -
+        title: Links
+        id: links
+        type: heading
+        level: 3 
+        collapsed: true
+    -
+        title: Link Style
+        id: link-style
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: Notion Style
+                value: link-ntn
+    -
+        title: Horizontal Line
+        id: hztl-ln
+        type: heading
+        level: 3 
+        collapsed: true
+    - 
+        title: Horizontal Line Symbol
+        description: Add quotations around symbol for it to work. For Example "⚡". Use the codepoint for symbols from supported font icons. For Example "\e800".
+        id: hr-sym
+        type: variable-text
+        default: '⚡'
+    -
+        title: Horizontal Line Symbol Fonts
+        description: Font Icons. Default font aligns emojis.
+        id: hr-f
+        type: variable-select
+        default: its
+        options:
+            - its
+            - Material Icons Sharp
+            - remixicon
+            - fa5
+            - default-font
+    -
+        title: No Horizontal Line Symbol
+        description: Hide the horizontal Line Symbol entirely
+        id: hr-tog
+        type: class-toggle
+    -
+        title: Embeds
+        id: Embeds
+        type: heading
+        level: 3 
+        collapsed: true
+    - 
+        title: Naked Embeds
+        description: Embeds that look like they're part of the note.
+        id: naked-em
+        type: class-toggle
+    -
+        title: Original Embeds
+        description: Previous style of embeds
+        id: org-em
+        type: class-toggle
+    -
+        title: Embed Heading Undo
+        description: Revert embed headings to the default sizes and colors
+        id: em-hd
         type: class-toggle
     -
         title: Lists

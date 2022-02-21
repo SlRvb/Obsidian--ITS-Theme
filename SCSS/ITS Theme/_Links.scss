@@ -66,3 +66,32 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
 .cm-s-obsidian span.cm-url:hover {
     color: var(--inactive);
 }
+
+
+/*Notion Style Links*/
+.link-ntn {
+    & .internal-link,
+    & .external-link,
+    & .cm-underline {
+        color: var(--text);
+        font-weight: 600;
+        text-decoration: unset;
+        box-shadow: 0 1px 0 var(--lines);
+    }
+    & .internal-link.is-unresolved,
+    & .external-link,
+    & .is-unresolved .cm-underline {
+        color: var(--inactive);
+    }
+    & a { font-weight: 600; }
+    & .external-link { color: var(--soft-text); }
+    
+    & .external-link:hover,
+    & .internal-link:hover,
+    & .cm-underline:hover {
+        background: var(--text-highlight-bg);
+    }
+    & .cm-s-obsidian span.cm-url {
+        color: var(--footnote);
+    }
+}

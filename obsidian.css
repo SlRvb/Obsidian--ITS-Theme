@@ -4644,6 +4644,12 @@ iframe {
   border-image: initial;
 }
 
+/*Undo Obsidian 13.26 Embed Error*/
+.markdown-embed div.markdown-preview-section {
+  padding-bottom: unset !important;
+  min-height: fit-content !important;
+}
+
 /*--Popover--*/
 /*Larger Popover*/
 .popover.hover-popover {

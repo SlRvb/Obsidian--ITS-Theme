@@ -1,18 +1,18 @@
 
 /*--Dataview Table--*/
-body .table-view-table > thead > tr > th {
+.table-view-table.table-view-table > thead > tr > th {
     font-weight: 900;
     font-family: var(--font);
     color: var(--headers);
-    border-bottom: 2px solid var(--accent);
     background-color: var(--embed-bg);
+    border-bottom: 2px solid var(--accent);
     white-space: pre;
 }
 body:not(.dv-th-size) .table-view-table > thead > tr > th {
     font-size: larger;
 }
 
-.table-view-table > tbody > tr > td {
+.table-view-table.table-view-table > tbody > tr > td {
     word-wrap: normal;
     word-break: normal;
 }
@@ -23,6 +23,7 @@ body:not(.dv-th-size) .table-view-table > thead > tr > th {
     word-wrap: normal;
     white-space: pre-wrap;
 }
+
 
 /*Inline Bracket Syntax*/
 body .dataview.inline-field-standalone-value {
@@ -145,7 +146,7 @@ body .dataview.inline-field-value a.tag:first-child { display: none; }
         }
     }
 }
-.dvl-c {
+.dvl-c.dvl-c {
     & .table-view-table > thead::before {
         content: "\E805";
         font-family: var(--its);

@@ -72,19 +72,24 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
 .link-ntn {
     & .internal-link,
     & .external-link,
-    & .cm-underline {
-        color: var(--text);
+    & .cm-link,
+    & .cm-hmd-internal-link 
+    {
+        --text-accent: var(--text);
+        --accent2-lite: var(--text);
+
         font-weight: 600;
         border-bottom: 1px solid var(--inactive);
         
     }
-    & .internal-link.is-unresolved,
-    & .external-link,
-    & .is-unresolved .cm-underline {
-        color: var(--inactive);
-    }
     & a { font-weight: 600; }
-    & .external-link { color: var(--soft-text); }
+    
+    & .external-link,
+    & .cm-underline,
+    & .cm-link { 
+        --text-accent: var(--soft-text); 
+        --accent2-lite: var(--soft-text);
+    }
     
     & .external-link:hover,
     & .internal-link:hover,

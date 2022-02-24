@@ -771,6 +771,11 @@ settings:
         id: hash-top
         type: class-toggle
     -
+        title: Undo Mini Header Hash Styling
+        description: Header hash matches header font size and matches color.
+        id: hash-reg
+        type: class-toggle
+    -
         title: Hide Header Underline
         id: h-line
         type: class-toggle
@@ -832,6 +837,14 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    -
+        title: No Alternating Background Colors
+        id: tbl-nalt
+        type: class-toggle
+    - 
+        title: Add Table Borders
+        id: tbl-b
+        type: class-toggle
     - 
         title: Center Tables
         description: Move all tables to the center of the page.
@@ -868,6 +881,11 @@ settings:
     -
         title: Disable Dataview Header Larger Font Size
         id: dv-th-size
+        type: class-toggle
+    -
+        title: Dataview Regular Table Header Styling
+        description: Match dataview table headers with default ITS table styling
+        id: dv-tbl-th
         type: class-toggle
     -
         title: Table Header Font Size
@@ -3674,6 +3692,7 @@ table,
 .cm-s-obsidian .cm-line:not(.HyperMD-codeblock) {
   font-size: var(--f-s-text);
   font-weight: var(--f-w-t);
+  font-optical-sizing: auto;
 }
 
 strong {
@@ -3851,19 +3870,18 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
 }
 
 /*Notion Style Links*/
-.link-ntn .internal-link, .link-ntn .external-link, .link-ntn .cm-underline {
-  color: var(--text);
+.link-ntn .internal-link, .link-ntn .external-link, .link-ntn .cm-link, .link-ntn .cm-hmd-internal-link {
+  --text-accent: var(--text);
+  --accent2-lite: var(--text);
   font-weight: 600;
   border-bottom: 1px solid var(--inactive);
-}
-.link-ntn .internal-link.is-unresolved, .link-ntn .external-link, .link-ntn .is-unresolved .cm-underline {
-  color: var(--inactive);
 }
 .link-ntn a {
   font-weight: 600;
 }
-.link-ntn .external-link {
-  color: var(--soft-text);
+.link-ntn .external-link, .link-ntn .cm-underline, .link-ntn .cm-link {
+  --text-accent: var(--soft-text);
+  --accent2-lite: var(--soft-text);
 }
 .link-ntn .external-link:hover, .link-ntn .internal-link:hover, .link-ntn .cm-underline:hover {
   background: var(--text-highlight-bg);
@@ -4368,35 +4386,64 @@ table {
   border-collapse: collapse;
 }
 
-.markdown-preview-view td,
-.reveal table td {
-  border: none;
-}
-
+body.dv-tbl-th .table-view-table > thead > tr > th,
 .markdown-preview-view th,
 .reveal table th {
   background-color: var(--th);
   color: var(--th-text);
-  /*#edf7ff*/
-  border: 0px;
 }
 
+.reveal table th, .reveal table td, .reveal .table-view-table > thead > tr > th, .reveal .table-view-table.table-view-table > tbody > tr > td,
+.is-live-preview table th,
+.is-live-preview table td,
+.is-live-preview .table-view-table > thead > tr > th,
+.is-live-preview .table-view-table.table-view-table > tbody > tr > td,
+.markdown-preview-view table th,
+.markdown-preview-view table td,
+.markdown-preview-view .table-view-table > thead > tr > th,
+.markdown-preview-view .table-view-table.table-view-table > tbody > tr > td {
+  border: 1px solid var(--note);
+}
+.reveal table th:nth-child(even),
 .is-live-preview table th:nth-child(even),
-.markdown-preview-view th:nth-child(even),
-.reveal table th:nth-child(even) {
+.markdown-preview-view table th:nth-child(even) {
   opacity: 80%;
   border-left: 1px solid var(--note);
   border-right: 1px solid var(--note);
 }
-
+.reveal table td:nth-child(odd), .reveal table tr:nth-child(even),
 .is-live-preview table td:nth-child(odd),
-.markdown-preview-view td:nth-child(odd),
-.reveal table td:nth-child(odd),
 .is-live-preview table tr:nth-child(even),
-.markdown-preview-view tr:nth-child(even),
-.reveal table tr:nth-child(even) {
+.markdown-preview-view table td:nth-child(odd),
+.markdown-preview-view table tr:nth-child(even) {
   background-color: var(--td);
-  border-bottom: 1px solid var(--note);
+}
+
+.tbl-nalt .reveal table td:nth-child(odd), .tbl-nalt .reveal table tr:nth-child(even), .tbl-nalt .is-live-preview table td:nth-child(odd), .tbl-nalt .is-live-preview table tr:nth-child(even), .tbl-nalt .markdown-preview-view table td:nth-child(odd), .tbl-nalt .markdown-preview-view table tr:nth-child(even) {
+  background-color: unset;
+}
+.tbl-nalt table td:nth-child(odd), .tbl-nalt table tr:nth-child(even) {
+  background-color: unset;
+}
+
+body .tbl-b .reveal table th, body .tbl-b .reveal table td, body .tbl-b .reveal .table-view-table.table-view-table > tbody > tr > td, body .tbl-b .is-live-preview table th, body .tbl-b .is-live-preview table td, body .tbl-b .is-live-preview .table-view-table.table-view-table > tbody > tr > td, body .tbl-b .markdown-preview-view table th, body .tbl-b .markdown-preview-view table td, body .tbl-b .markdown-preview-view .table-view-table.table-view-table > tbody > tr > td,
+.tbl-b .reveal table th,
+.tbl-b .reveal table td,
+.tbl-b .reveal .table-view-table.table-view-table > tbody > tr > td,
+.tbl-b .is-live-preview table th,
+.tbl-b .is-live-preview table td,
+.tbl-b .is-live-preview .table-view-table.table-view-table > tbody > tr > td,
+.tbl-b .markdown-preview-view table th,
+.tbl-b .markdown-preview-view table td,
+.tbl-b .markdown-preview-view .table-view-table.table-view-table > tbody > tr > td {
+  border-color: var(--table);
+}
+body .tbl-b table th, body .tbl-b table td, body .tbl-b .table-view-table > thead > tr > th, body .tbl-b .table-view-table.table-view-table > tbody > tr > td,
+.tbl-b table th,
+.tbl-b table td,
+.tbl-b .table-view-table > thead > tr > th,
+.tbl-b .table-view-table.table-view-table > tbody > tr > td {
+  border-color: var(--table);
 }
 
 .markdown-preview-view.markdown-preview-view table th,
@@ -5955,8 +6002,8 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 
 /*Editor Heading Re-size*/
 /*Inspired by Red Graphite*/
-.cm-s-obsidian .cm-formatting-header,
-.cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+body:not(.hash-reg) .cm-s-obsidian .cm-formatting-header,
+body:not(.hash-reg) .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
   font-size: 13px;
   color: var(--lines);
 }
@@ -8222,12 +8269,12 @@ body .checklist-plugin-main.checklist-plugin-main .classic .checked {
 }
 
 /*--Dataview Table--*/
-body .table-view-table > thead > tr > th {
+.table-view-table.table-view-table > thead > tr > th {
   font-weight: 900;
   font-family: var(--font);
   color: var(--headers);
-  border-bottom: 2px solid var(--accent);
   background-color: var(--embed-bg);
+  border-bottom: 2px solid var(--accent);
   white-space: pre;
 }
 
@@ -8235,7 +8282,7 @@ body:not(.dv-th-size) .table-view-table > thead > tr > th {
   font-size: larger;
 }
 
-.table-view-table > tbody > tr > td {
+.table-view-table.table-view-table > tbody > tr > td {
   word-wrap: normal;
   word-break: normal;
 }
@@ -8367,13 +8414,13 @@ body .dataview.inline-field-value a.tag:first-child {
   background: var(--note);
 }
 
-.dvl-c .table-view-table > thead::before {
+.dvl-c.dvl-c .table-view-table > thead::before {
   content: "\e805";
   font-family: var(--its);
   float: right;
   padding: 5px 10px 5px 10px;
 }
-.dvl-c .table-view-table > thead > tr {
+.dvl-c.dvl-c .table-view-table > thead > tr {
   display: flex;
   flex-direction: row;
   border: 1px solid var(--outline);
@@ -8381,14 +8428,14 @@ body .dataview.inline-field-value a.tag:first-child {
   margin: 0;
   flex-wrap: wrap;
 }
-.dvl-c table .table-view-table > thead > tr {
+.dvl-c.dvl-c table .table-view-table > thead > tr {
   position: absolute;
   right: 0;
 }
-.dvl-c .table-view-table > thead:not(:hover) > * {
+.dvl-c.dvl-c .table-view-table > thead:not(:hover) > * {
   display: none;
 }
-.dvl-c .dataview th {
+.dvl-c.dvl-c .dataview th {
   font-family: var(--default-font);
   background: var(--note);
   font-size: var(--f-s-text);
@@ -8396,10 +8443,10 @@ body .dataview.inline-field-value a.tag:first-child {
   color: var(--text);
   opacity: 1;
 }
-.dvl-c .dataview th:hover {
+.dvl-c.dvl-c .dataview th:hover {
   background: var(--td);
 }
-.dvl-c .list-view-ul li, .dvl-c .dataview.table-view-table > tbody > tr {
+.dvl-c.dvl-c .list-view-ul li, .dvl-c.dvl-c .dataview.table-view-table > tbody > tr {
   display: flex;
   flex-direction: column;
   background-color: var(--aside-bg);
@@ -8408,25 +8455,25 @@ body .dataview.inline-field-value a.tag:first-child {
   padding: 10px;
   border: 0;
 }
-.dvl-c .list-view-ul, .dvl-c .dataview.table-view-table > tbody.table-view-tbody {
+.dvl-c.dvl-c .list-view-ul, .dvl-c.dvl-c .dataview.table-view-table > tbody.table-view-tbody {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding-inline-start: 0;
 }
-.dvl-c .block-language-dataviewjs .dataview-result-list-li, .dvl-c .list-view-ul li, .dvl-c .dataview.table-view-table > tbody > tr {
+.dvl-c.dvl-c .block-language-dataviewjs .dataview-result-list-li, .dvl-c.dvl-c .list-view-ul li, .dvl-c.dvl-c .dataview.table-view-table > tbody > tr {
   flex: 1 0 200px;
   margin: 10px;
 }
-.dvl-c .dataview.table-view-table td {
+.dvl-c.dvl-c .dataview.table-view-table td {
   padding: 0;
   background-color: transparent;
   border: 0;
 }
-.dvl-c .list-view-ul li::before {
+.dvl-c.dvl-c .list-view-ul li::before {
   display: none;
 }
-.dvl-c .dataview.table-view-table li {
+.dvl-c.dvl-c .dataview.table-view-table li {
   box-shadow: none;
   border: 0;
   padding: 0;

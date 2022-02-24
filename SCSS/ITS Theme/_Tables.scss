@@ -1,32 +1,60 @@
 
 /*--Table--*/
 table { border-collapse: collapse; }
-.markdown-preview-view td,
-.reveal table td {
-    border: none;
-}
 
+body.dv-tbl-th .table-view-table > thead > tr > th,
 .markdown-preview-view th,
 .reveal table th {
     background-color: var(--th);
-    color: var(--th-text); /*#edf7ff*/
-    border: 0px;
+    color: var(--th-text);
 }
-.is-live-preview table th:nth-child(even),
-.markdown-preview-view th:nth-child(even),
-.reveal table th:nth-child(even) {
-    opacity: 80%;
-    border-left: 1px solid var(--note);
-    border-right: 1px solid var(--note);
+.reveal,
+.is-live-preview,
+.markdown-preview-view {
+    //Border
+    & table th,
+    & table td,
+    & .table-view-table > thead > tr > th, 
+    & .table-view-table.table-view-table > tbody > tr > td 
+    { border: 1px solid var(--note); }
+
+    //Alternating Styling
+    & table th:nth-child(even) {
+        opacity: 80%;
+        border-left: 1px solid var(--note);
+        border-right: 1px solid var(--note);
+    }
+    & table td:nth-child(odd),
+    & table tr:nth-child(even)
+    { background-color: var(--td); }
 }
-.is-live-preview table td:nth-child(odd),
-.markdown-preview-view td:nth-child(odd),
-.reveal table td:nth-child(odd),
-.is-live-preview table tr:nth-child(even),
-.markdown-preview-view tr:nth-child(even),
-.reveal table tr:nth-child(even)  {
-    background-color: var(--td);
-    border-bottom: 1px solid var(--note);
+.tbl-nalt {
+    & .reveal,
+    & .is-live-preview,
+    & .markdown-preview-view {
+        & table td:nth-child(odd),
+        & table tr:nth-child(even)
+        { background-color: unset; }
+    }
+    & table td:nth-child(odd),
+    & table tr:nth-child(even)
+    { background-color: unset; }
+}
+body .tbl-b,
+.tbl-b {
+    & .reveal,
+    & .is-live-preview,
+    & .markdown-preview-view {
+        & table th,
+        & table td,
+        & .table-view-table.table-view-table > tbody > tr > td
+        { border-color: var(--table); }
+    }
+    & table th,
+    & table td,
+    & .table-view-table > thead > tr > th, 
+    & .table-view-table.table-view-table > tbody > tr > td 
+    { border-color: var(--table); }
 }
 
 .markdown-preview-view.markdown-preview-view,

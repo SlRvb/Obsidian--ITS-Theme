@@ -838,9 +838,18 @@ settings:
         level: 3
         collapsed: true
     -
-        title: No Alternating Background Colors
-        id: tbl-nalt
-        type: class-toggle
+        title: Alternating Background Colors
+        id: tbl-alt-c
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            -
+                label: No Alternating Backgrounds
+                value: tbl-nalt
+            -
+                label: Dark and Bold First Column
+                value: table
     - 
         title: Add Table Borders
         id: tbl-b
@@ -879,15 +888,6 @@ settings:
         max: 20
         step: 1
     -
-        title: Disable Dataview Header Larger Font Size
-        id: dv-th-size
-        type: class-toggle
-    -
-        title: Dataview Regular Table Header Styling
-        description: Match dataview table headers with default ITS table styling
-        id: dv-tbl-th
-        type: class-toggle
-    -
         title: Table Header Font Size
         id: tbl-th-s
         type: variable-number-slider
@@ -896,6 +896,23 @@ settings:
         min: 12
         max: 30
         step: 1
+    -
+        title: Table Header Font Weight
+        id: tbl-th-fw
+        type: variable-number-slider
+        default: 800
+        min: 100
+        max: 900
+        step: 100
+    -
+        title: Disable Dataview Header Larger Font Size
+        id: dv-th-size
+        type: class-toggle
+    -
+        title: Dataview Regular Table Header Styling
+        description: Match dataview table headers with default ITS table styling
+        id: dv-tbl-th
+        type: class-toggle
     -
         title: Table Cell Adjustments
         id: table-cells
@@ -928,6 +945,14 @@ settings:
         min: 12
         max: 30
         step: 1
+    -
+        title: Table Header Font Weight
+        id: tbl-td-fw
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 900
+        step: 100
     -
         title: Horizontal Line
         id: hztl-ln
@@ -1815,6 +1840,15 @@ settings:
   --its: "its";
   --fa5: "Font Awesome 5 Free Solid";
   --rpg: "rpg-awesome";
+  --f-s-h: 34px;
+  --f-s-pre: 16px;
+  --f-s-text: 1em;
+  --h1: var(--f-s-h);
+  --h2: calc(var(--f-s-h) - 4px);
+  --h3: calc(var(--f-s-h) - 8px);
+  --h4: calc(var(--f-s-h) - 12px);
+  --h5: calc(var(--f-s-h) - 14px);
+  --h6: calc(var(--f-s-h) - 16px);
 }
 
 .workspace {
@@ -1835,18 +1869,17 @@ settings:
   --note-width: 700px;
   --tbl-th-h: 4px;
   --tbl-th-w: 10px;
+  --tbl-th-s: var(--f-text);
+  --tbl-th-fw: 800;
   --tbl-td-h: var(--tbl-th-h);
   --tbl-td-w: var(--tbl-th-w);
-  --tbl-th-s: var(--f-text);
   --tbl-td-s: var(--f-text);
+  --tbl-td-fw: var(--f-w-t);
   --setting-h: 90vh;
   --setting-w: 55vw;
   --f-s-ui: 16px;
   --f-s-sb: 16px;
   --f-s-nt: 16px;
-  --f-s-pre: 16px;
-  --f-s-text: 1em;
-  --f-s-h: 34px;
   --f-w-h: 600;
   --h-line: 100%;
   --head-h: 15px;
@@ -3689,7 +3722,7 @@ li,
 table,
 .markdown-preview-section code,
 .cm-s-obsidian .CodeMirror-lines,
-.cm-s-obsidian .cm-line:not(.HyperMD-codeblock) {
+.cm-s-obsidian .cm-line:not(.HyperMD-codeblock):not(.HyperMD-header) {
   font-size: var(--f-s-text);
   font-weight: var(--f-w-t);
   font-optical-sizing: auto;
@@ -4419,6 +4452,19 @@ body.dv-tbl-th .table-view-table > thead > tr > th,
   background-color: var(--td);
 }
 
+.markdown-preview-view.markdown-preview-view table th,
+.is-live-preview.is-live-preview table th {
+  padding: var(--tbl-th-h) var(--tbl-th-w);
+  font-size: var(--tbl-th-s);
+  font-weight: var(--tbl-th-fw);
+}
+.markdown-preview-view.markdown-preview-view table tr td,
+.is-live-preview.is-live-preview table tr td {
+  padding: var(--tbl-td-h) var(--tbl-td-w);
+  font-size: var(--tbl-td-s);
+  font-weight: var(--tbl-td-fw);
+}
+
 .tbl-nalt .reveal table td:nth-child(odd), .tbl-nalt .reveal table tr:nth-child(even), .tbl-nalt .is-live-preview table td:nth-child(odd), .tbl-nalt .is-live-preview table tr:nth-child(even), .tbl-nalt .markdown-preview-view table td:nth-child(odd), .tbl-nalt .markdown-preview-view table tr:nth-child(even) {
   background-color: unset;
 }
@@ -4426,35 +4472,11 @@ body.dv-tbl-th .table-view-table > thead > tr > th,
   background-color: unset;
 }
 
-body .tbl-b .reveal table th, body .tbl-b .reveal table td, body .tbl-b .reveal .table-view-table.table-view-table > tbody > tr > td, body .tbl-b .is-live-preview table th, body .tbl-b .is-live-preview table td, body .tbl-b .is-live-preview .table-view-table.table-view-table > tbody > tr > td, body .tbl-b .markdown-preview-view table th, body .tbl-b .markdown-preview-view table td, body .tbl-b .markdown-preview-view .table-view-table.table-view-table > tbody > tr > td,
-.tbl-b .reveal table th,
-.tbl-b .reveal table td,
-.tbl-b .reveal .table-view-table.table-view-table > tbody > tr > td,
-.tbl-b .is-live-preview table th,
-.tbl-b .is-live-preview table td,
-.tbl-b .is-live-preview .table-view-table.table-view-table > tbody > tr > td,
-.tbl-b .markdown-preview-view table th,
-.tbl-b .markdown-preview-view table td,
-.tbl-b .markdown-preview-view .table-view-table.table-view-table > tbody > tr > td {
+.tbl-b .reveal table th, .tbl-b .reveal table td, .tbl-b .reveal .table-view-table.table-view-table > tbody > tr > td, .tbl-b .is-live-preview table th, .tbl-b .is-live-preview table td, .tbl-b .is-live-preview .table-view-table.table-view-table > tbody > tr > td, .tbl-b .markdown-preview-view table th, .tbl-b .markdown-preview-view table td, .tbl-b .markdown-preview-view .table-view-table.table-view-table > tbody > tr > td {
   border-color: var(--table);
 }
-body .tbl-b table th, body .tbl-b table td, body .tbl-b .table-view-table > thead > tr > th, body .tbl-b .table-view-table.table-view-table > tbody > tr > td,
-.tbl-b table th,
-.tbl-b table td,
-.tbl-b .table-view-table > thead > tr > th,
-.tbl-b .table-view-table.table-view-table > tbody > tr > td {
+.tbl-b table th, .tbl-b table td, .tbl-b .table-view-table > thead > tr > th, .tbl-b .table-view-table.table-view-table > tbody > tr > td {
   border-color: var(--table);
-}
-
-.markdown-preview-view.markdown-preview-view table th,
-.is-live-preview.is-live-preview table th {
-  padding: var(--tbl-th-h) var(--tbl-th-w);
-  font-size: var(--tbl-th-s);
-}
-.markdown-preview-view.markdown-preview-view table tr td,
-.is-live-preview.is-live-preview table tr td {
-  padding: var(--tbl-td-h) var(--tbl-td-w);
-  font-size: var(--tbl-td-s);
 }
 
 /*Plugin: Advanced Table*/
@@ -4961,8 +4983,7 @@ progress::-webkit-progress-value {
 }
 
 /*Justify text*/
-.justified .markdown-preview-section,
-.justified .cm-s-obsidian {
+.justified .markdown-preview-section, .justified .cm-s-obsidian, .justified.markdown-preview-view, .justified.cm-s-obsidian {
   text-align: justify;
 }
 
@@ -5644,8 +5665,28 @@ img[alt*=sprf] {
   text-align: center;
 }
 
-.writing h1::after, .writing h1::before, .writing h2::after, .writing h2::before, .writing h3::after, .writing h3::before, .writing h4::after, .writing h4::before, .writing h5::after, .writing h5::before, .writing h6::after, .writing h6::before, .writing .HyperMD-header-1::after, .writing .HyperMD-header-1::before, .writing .HyperMD-header-2::after, .writing .HyperMD-header-2::before, .writing .HyperMD-header-3::after, .writing .HyperMD-header-3::before, .writing .HyperMD-header-4::after, .writing .HyperMD-header-4::before {
-  height: 0 !important;
+body.writing h1::after, body.writing h1::before, body.writing h2::after, body.writing h2::before, body.writing h3::after, body.writing h3::before, body.writing h4::after, body.writing h4::before, body.writing h5::after, body.writing h5::before, body.writing h6::after, body.writing h6::before, body.writing .HyperMD-header-1::after, body.writing .HyperMD-header-1::before, body.writing .HyperMD-header-2::after, body.writing .HyperMD-header-2::before, body.writing .HyperMD-header-3::after, body.writing .HyperMD-header-3::before, body.writing .HyperMD-header-4::after, body.writing .HyperMD-header-4::before,
+div:not(.w-hcl).writing h1::after,
+div:not(.w-hcl).writing h1::before,
+div:not(.w-hcl).writing h2::after,
+div:not(.w-hcl).writing h2::before,
+div:not(.w-hcl).writing h3::after,
+div:not(.w-hcl).writing h3::before,
+div:not(.w-hcl).writing h4::after,
+div:not(.w-hcl).writing h4::before,
+div:not(.w-hcl).writing h5::after,
+div:not(.w-hcl).writing h5::before,
+div:not(.w-hcl).writing h6::after,
+div:not(.w-hcl).writing h6::before,
+div:not(.w-hcl).writing .HyperMD-header-1::after,
+div:not(.w-hcl).writing .HyperMD-header-1::before,
+div:not(.w-hcl).writing .HyperMD-header-2::after,
+div:not(.w-hcl).writing .HyperMD-header-2::before,
+div:not(.w-hcl).writing .HyperMD-header-3::after,
+div:not(.w-hcl).writing .HyperMD-header-3::before,
+div:not(.w-hcl).writing .HyperMD-header-4::after,
+div:not(.w-hcl).writing .HyperMD-header-4::before {
+  height: 0;
 }
 
 .writing .markdown-preview-section,
@@ -5916,7 +5957,7 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 .cm-header-4,
 .cm-header-5,
 .cm-header-6 {
-  margin-bottom: calc(var(--head-h) - 1.5em) !important;
+  margin-bottom: calc(var(--head-h) - 1.5em);
 }
 
 .markdown-preview-view h1,
@@ -5926,91 +5967,90 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
   margin: var(--head-h) 0;
-  line-height: calc(var(--lh) - 0.3em) !important;
+  line-height: calc(var(--lh) - 0.3em);
 }
 
-/*Font Sizes*/
-.markdown-preview-view h1,
+.markdown-preview-view h1, .markdown-preview-view .cm-header-1,
+.cm-s-obsidian h1,
 .cm-s-obsidian .cm-header-1 {
   font-size: var(--f-s-h);
 }
-
-.markdown-preview-view h2 {
+.markdown-preview-view h2,
+.cm-s-obsidian h2 {
   font-size: calc(var(--f-s-h) - 4px);
 }
-
+.markdown-preview-view .cm-header-2,
 .cm-s-obsidian .cm-header-2 {
   font-size: calc(var(--f-s-h) - 6px);
 }
-
-.markdown-preview-view h3 {
+.markdown-preview-view h3,
+.cm-s-obsidian h3 {
   font-size: calc(var(--f-s-h) - 8px);
 }
-
+.markdown-preview-view .cm-header-3,
 .cm-s-obsidian .cm-header-3 {
   font-size: calc(var(--f-s-h) - 10px);
 }
-
-.markdown-preview-view h4 {
+.markdown-preview-view h4,
+.cm-s-obsidian h4 {
   font-size: calc(var(--f-s-h) - 10px);
 }
-
+.markdown-preview-view .cm-header-4,
 .cm-s-obsidian .cm-header-4 {
   font-size: calc(var(--f-s-h) - 12px);
 }
-
-.markdown-preview-view h5,
+.markdown-preview-view h5, .markdown-preview-view .cm-header-5,
+.cm-s-obsidian h5,
 .cm-s-obsidian .cm-header-5 {
   font-size: calc(var(--f-s-h) - 14px);
 }
-
-.markdown-preview-view h6,
+.markdown-preview-view h6, .markdown-preview-view .cm-header-6,
+.cm-s-obsidian h6,
 .cm-s-obsidian .cm-header-6 {
   font-size: calc(var(--f-s-h) - 16px);
 }
-
-/*Heading: Inline Code Size Fix*/
+.markdown-preview-view span.cm-inline-code.cm-header-1:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), .markdown-preview-view span.cm-inline-code.cm-header-1, .markdown-preview-view h1 code,
 .cm-s-obsidian span.cm-inline-code.cm-header-1:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .cm-s-obsidian span.cm-inline-code.cm-header-1,
-.markdown-preview-view h1 code {
-  font-size: calc(var(--f-s-h) - 6px);
+.cm-s-obsidian h1 code {
+  font-size: var(--h1);
 }
-
+.markdown-preview-view span.cm-inline-code.cm-header-2:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), .markdown-preview-view span.cm-inline-code.cm-header-2, .markdown-preview-view h2 code,
 .cm-s-obsidian span.cm-inline-code.cm-header-2:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .cm-s-obsidian span.cm-inline-code.cm-header-2,
-.markdown-preview-view h2 code {
-  font-size: calc(var(--f-s-h) - 10px);
+.cm-s-obsidian h2 code {
+  font-size: var(--h2);
 }
-
+.markdown-preview-view span.cm-inline-code.cm-header-3:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), .markdown-preview-view span.cm-inline-code.cm-header-3, .markdown-preview-view h3 code,
 .cm-s-obsidian span.cm-inline-code.cm-header-3:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .cm-s-obsidian span.cm-inline-code.cm-header-3,
-.markdown-preview-view h3 code {
-  font-size: calc(var(--f-s-h) - 13px);
+.cm-s-obsidian h3 code {
+  font-size: var(--h3);
 }
-
+.markdown-preview-view span.cm-inline-code.cm-header-4:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), .markdown-preview-view span.cm-inline-code.cm-header-4, .markdown-preview-view h4 code,
 .cm-s-obsidian span.cm-inline-code.cm-header-4:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .cm-s-obsidian span.cm-inline-code.cm-header-4,
-.markdown-preview-view h4 code {
-  font-size: calc(var(--f-s-h) - 17px);
+.cm-s-obsidian h4 code {
+  font-size: var(--h4);
 }
-
+.markdown-preview-view span.cm-inline-code.cm-header-5:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), .markdown-preview-view span.cm-inline-code.cm-header-5, .markdown-preview-view h5 code,
 .cm-s-obsidian span.cm-inline-code.cm-header-5:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .cm-s-obsidian span.cm-inline-code.cm-header-5,
-.markdown-preview-view h5 code {
-  font-size: calc(var(--f-s-h) - 19px);
+.cm-s-obsidian h5 code {
+  font-size: var(--h5);
 }
-
+.markdown-preview-view span.cm-inline-code.cm-header-6:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), .markdown-preview-view span.cm-inline-code.cm-header-6, .markdown-preview-view h6 code,
 .cm-s-obsidian span.cm-inline-code.cm-header-6:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .cm-s-obsidian span.cm-inline-code.cm-header-6,
-.markdown-preview-view h6 code {
-  font-size: calc(var(--f-s-h) - 21px);
+.cm-s-obsidian h6 code {
+  font-size: var(--h6);
 }
 
 /*Editor Heading Re-size*/
 /*Inspired by Red Graphite*/
 body:not(.hash-reg) .cm-s-obsidian .cm-formatting-header,
 body:not(.hash-reg) .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
-  font-size: 13px;
+  font-size: 13px !important;
   color: var(--lines);
 }
 
@@ -6066,7 +6106,17 @@ h4::after, .HyperMD-header-4::after {
   color: var(--text-muted);
 }
 
-.hc h1::after, .hc h2::after, .hc h3::after, .hc h4::after, .hc h5::after, .hc h6::after, .hc.is-live-preview .HyperMD-header-1::after, .hc.is-live-preview .HyperMD-header-2::after, .hc.is-live-preview .HyperMD-header-3::after, .hc.is-live-preview .HyperMD-header-4::after {
+.w-hcl h1::after, .w-hcl h2::after, .w-hcl h3::after, .w-hcl h4::after, .w-hcl h5::after, .w-hcl h6::after, .w-hcl.is-live-preview .HyperMD-header-1::after, .w-hcl.is-live-preview .HyperMD-header-2::after, .w-hcl.is-live-preview .HyperMD-header-3::after, .w-hcl.is-live-preview .HyperMD-header-4::after,
+.hc h1::after,
+.hc h2::after,
+.hc h3::after,
+.hc h4::after,
+.hc h5::after,
+.hc h6::after,
+.hc.is-live-preview .HyperMD-header-1::after,
+.hc.is-live-preview .HyperMD-header-2::after,
+.hc.is-live-preview .HyperMD-header-3::after,
+.hc.is-live-preview .HyperMD-header-4::after {
   margin: auto;
 }
 
@@ -6089,9 +6139,6 @@ h4::after, .HyperMD-header-4::after {
 .hcl h1 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h2 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h3 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h4 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h5 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h6 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) {
   margin: 0 10px;
 }
-.hcl .heading-collapse-indicator {
-  position: absolute;
-}
 .hcl h1:before, .hcl h1:after, .hcl h2:before, .hcl h2:after, .hcl h3:before, .hcl h3:after, .hcl h4:before, .hcl h4:after, .hcl h5:before, .hcl h5:after, .hcl h6:before, .hcl h6:after {
   content: "";
   flex: 1;
@@ -6101,6 +6148,9 @@ h4::after, .HyperMD-header-4::after {
 }
 .hcl h1:after, .hcl h2:after, .hcl h3:after, .hcl h4:after, .hcl h5:after, .hcl h6:after {
   margin-left: 0.3em;
+}
+.hcl .heading-collapse-indicator {
+  position: absolute;
 }
 .hcl h1::before, .hcl h1::after, .hcl .HyperMD-header-1::after {
   height: 6px;
@@ -6134,49 +6184,41 @@ h4::after, .HyperMD-header-4::after {
 }
 
 /*--Illusion Headers--*/
-body .illusion.illusion h1, body .illusion.illusion h2, body .illusion.illusion h3, body .illusion.illusion h4, body .illusion.illusion h5, body .illusion.illusion h6, body .illusion.illusion .cm-s-obsidian .HyperMD-header, body .illusion.illusion .HyperMD-header {
+.illusion.illusion h1, .illusion.illusion h2, .illusion.illusion h3, .illusion.illusion h4, .illusion.illusion h5, .illusion.illusion h6, .illusion.illusion .cm-s-obsidian .HyperMD-header, .illusion.illusion .HyperMD-header {
   padding: 7px;
   color: var(--text-dl);
   box-shadow: 5px 5px var(--outline);
 }
-body .illusion.illusion h1:after, body .illusion.illusion h1:before, body .illusion.illusion h2:after, body .illusion.illusion h2:before, body .illusion.illusion h3:after, body .illusion.illusion h3:before, body .illusion.illusion h4:after, body .illusion.illusion h4:before, body .illusion.illusion h5:after, body .illusion.illusion h5:before, body .illusion.illusion h6:after, body .illusion.illusion h6:before, body .illusion.illusion .cm-s-obsidian .HyperMD-header:after, body .illusion.illusion .cm-s-obsidian .HyperMD-header:before, body .illusion.illusion .HyperMD-header:after, body .illusion.illusion .HyperMD-header:before {
+.illusion.illusion h1:after, .illusion.illusion h1:before, .illusion.illusion h2:after, .illusion.illusion h2:before, .illusion.illusion h3:after, .illusion.illusion h3:before, .illusion.illusion h4:after, .illusion.illusion h4:before, .illusion.illusion h5:after, .illusion.illusion h5:before, .illusion.illusion h6:after, .illusion.illusion h6:before, .illusion.illusion .cm-s-obsidian .HyperMD-header:after, .illusion.illusion .cm-s-obsidian .HyperMD-header:before, .illusion.illusion .HyperMD-header:after, .illusion.illusion .HyperMD-header:before {
   height: 0;
 }
-body .illusion.illusion .HyperMD-header.CodeMirror-line {
+.illusion.illusion .HyperMD-header.CodeMirror-line {
   box-shadow: 0px 2px var(--outline);
   padding: 2px;
   padding-bottom: 5px;
 }
-body .illusion.illusion h1, body .illusion.illusion .HyperMD-header-1 {
+.illusion.illusion h1, .illusion.illusion .HyperMD-header-1 {
   background-color: var(--sphd-ed-1);
 }
-body .illusion.illusion h2, body .illusion.illusion .HyperMD-header-2 {
+.illusion.illusion h2, .illusion.illusion .HyperMD-header-2 {
   background-color: var(--sphd-ed-2);
 }
-body .illusion.illusion h3, body .illusion.illusion .HyperMD-header-3 {
+.illusion.illusion h3, .illusion.illusion .HyperMD-header-3 {
   background-color: var(--sphd-ed-3);
 }
-body .illusion.illusion h4, body .illusion.illusion .HyperMD-header-4 {
+.illusion.illusion h4, .illusion.illusion .HyperMD-header-4 {
   background-color: var(--sphd-ed-4);
 }
-body .illusion.illusion h5, body .illusion.illusion .HyperMD-header-5 {
+.illusion.illusion h5, .illusion.illusion .HyperMD-header-5 {
   background-color: var(--sphd-ed-5);
 }
-body .illusion.illusion h6, body .illusion.illusion .HyperMD-header-6 {
+.illusion.illusion h6, .illusion.illusion .HyperMD-header-6 {
   background-color: var(--sphd-ed-6);
 }
-body .illusion.illusion .markdown-preview-view .heading-collapse-indicator svg, body .illusion.illusion .cm-s-obsidian .cm-header, body .illusion.illusion .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
-  display: block;
+.illusion.illusion .heading-collapse-indicator svg, .illusion.illusion .cm-header, .illusion.illusion pre.HyperMD-header > span > span:first-child {
   color: var(--text-dl);
 }
-body .illusion.illusion .markdown-preview-view .heading-collapse-indicator {
-  padding-left: 40px;
-}
-
-.markdown-preview-view.illusion .heading-collapse-indicator svg {
-  color: var(--text-dl);
-}
-.markdown-preview-view.illusion .heading-collapse-indicator {
+.illusion.illusion.markdown-preview-view .heading-collapse-indicator {
   padding-left: 40px;
 }
 
@@ -6187,7 +6229,7 @@ body .illusion.illusion .markdown-preview-view .heading-collapse-indicator {
 .is-live-preview .HyperMD-header::before {
   font-family: var(--font-monospace);
   color: var(--footnote);
-  font-size: calc(var(--f-s-text) - 4px);
+  font-size: 12px;
   padding-top: 2px;
   margin-left: -30px;
 }
@@ -10507,9 +10549,9 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   --hr-sym: "";
   --hr-f: var(--mdi);
   --embed-h: #c93c3c;
-  --h1: var(--headers);
-  --h2: sandybrown;
-  --h3: var(--embed-h);
+  --h1-c: var(--headers);
+  --h2-c: sandybrown;
+  --h3-c: var(--embed-h);
   background: var(--note);
 }
 
@@ -10581,13 +10623,13 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   --graph-tag: saddlebrown;
   --sphd-pre-1: var(--accent);
   --sphd-pre-2: var(--accent2);
-  --sphd-pre-3: var(--h3);
+  --sphd-pre-3: var(--h3-c);
   --sphd-pre-4: var(--hr);
   --sphd-pre-5: var(--dark-sidebar);
   --sphd-pre-6: var(--outer-bar);
   --sphd-ed-1: var(--accent);
   --sphd-ed-2: var(--accent2);
-  --sphd-ed-3: var(--h3);
+  --sphd-ed-3: var(--h3-c);
   --sphd-ed-4: var(--hr);
   --sphd-ed-5: var(--dark-sidebar);
   --sphd-ed-6: var(--outer-bar);
@@ -10657,13 +10699,13 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   --graph-tag: #000000;
   --sphd-pre-1: var(--accent);
   --sphd-pre-2: var(--accent2);
-  --sphd-pre-3: var(--h3);
+  --sphd-pre-3: var(--h3-c);
   --sphd-pre-4: var(--headers);
   --sphd-pre-5: var(--code-text);
   --sphd-pre-6: var(--file);
   --sphd-ed-1: var(--accent);
   --sphd-ed-2: var(--accent2);
-  --sphd-ed-3: var(--h3);
+  --sphd-ed-3: var(--h3-c);
   --sphd-ed-4: var(--headers);
   --sphd-ed-5: var(--code-text);
   --sphd-ed-6: var(--file);
@@ -10680,7 +10722,7 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   display: block;
   width: 100%;
   height: 4px;
-  background: linear-gradient(to right, var(--h1), transparent);
+  background: linear-gradient(to right, var(--h1-c), transparent);
   left: 0;
 }
 .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) h2:after, .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) .HyperMD-header-2:after,
@@ -10692,7 +10734,7 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   display: block;
   width: 85%;
   height: 4px;
-  background: linear-gradient(to right, var(--h2), transparent);
+  background: linear-gradient(to right, var(--h2-c), transparent);
   left: 0;
 }
 .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) h3:after, .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) .HyperMD-header-3:after,
@@ -10704,7 +10746,7 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   display: block;
   width: 70%;
   height: 4px;
-  background: linear-gradient(to right, var(--h3), transparent);
+  background: linear-gradient(to right, var(--h3-c), transparent);
   left: 0;
 }
 
@@ -10746,42 +10788,42 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
 .wotc.hcl h1::after,
 .wotc-beyond .hcl h1::after,
 .wotc-beyond.hcl h1::after {
-  background: linear-gradient(to right, var(--h1), transparent);
+  background: linear-gradient(to right, var(--h1-c), transparent);
 }
 .dnd .hcl h1::before, .dnd.hcl h1::before,
 .wotc .hcl h1::before,
 .wotc.hcl h1::before,
 .wotc-beyond .hcl h1::before,
 .wotc-beyond.hcl h1::before {
-  background: linear-gradient(to left, var(--h1), transparent);
+  background: linear-gradient(to left, var(--h1-c), transparent);
 }
 .dnd .hcl h2::after, .dnd.hcl h2::after,
 .wotc .hcl h2::after,
 .wotc.hcl h2::after,
 .wotc-beyond .hcl h2::after,
 .wotc-beyond.hcl h2::after {
-  background: linear-gradient(to right, var(--h2), transparent);
+  background: linear-gradient(to right, var(--h2-c), transparent);
 }
 .dnd .hcl h2::before, .dnd.hcl h2::before,
 .wotc .hcl h2::before,
 .wotc.hcl h2::before,
 .wotc-beyond .hcl h2::before,
 .wotc-beyond.hcl h2::before {
-  background: linear-gradient(to left, var(--h2), transparent);
+  background: linear-gradient(to left, var(--h2-c), transparent);
 }
 .dnd .hcl h3::after, .dnd.hcl h3::after,
 .wotc .hcl h3::after,
 .wotc.hcl h3::after,
 .wotc-beyond .hcl h3::after,
 .wotc-beyond.hcl h3::after {
-  background: linear-gradient(to right, var(--h3), transparent);
+  background: linear-gradient(to right, var(--h3-c), transparent);
 }
 .dnd .hcl h3::before, .dnd.hcl h3::before,
 .wotc .hcl h3::before,
 .wotc.hcl h3::before,
 .wotc-beyond .hcl h3::before,
 .wotc-beyond.hcl h3::before {
-  background: linear-gradient(to left, var(--h3), transparent);
+  background: linear-gradient(to left, var(--h3-c), transparent);
 }
 
 /*Embed Headings*/
@@ -10820,9 +10862,9 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   --hr-f: var(--its);
   background: var(--note);
   --embed-h: #c93c3c;
-  --h1: var(--embed-h);
-  --h2: sandybrown;
-  --h3: #642020;
+  --h1-c: var(--embed-h);
+  --h2-c: sandybrown;
+  --h3-c: #642020;
 }
 
 .theme-dark.wotc-beyond,

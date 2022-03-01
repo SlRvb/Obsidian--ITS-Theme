@@ -14,6 +14,19 @@
     --its: 'its';
     --fa5: 'Font Awesome 5 Free Solid';
     --rpg: 'rpg-awesome';
+
+
+    //Header Sizes
+    --f-s-h: 34px;
+    --f-s-pre: 16px;
+    --f-s-text: 1em;
+
+    --h1: var(--f-s-h);
+    --h2: calc(var(--f-s-h) - 4px);
+    --h3: calc(var(--f-s-h) - 8px);
+    --h4: calc(var(--f-s-h) - 12px);
+    --h5: calc(var(--f-s-h) - 14px);
+    --h6: calc(var(--f-s-h) - 16px);
 }
 
 .workspace {
@@ -36,10 +49,13 @@
 
     --tbl-th-h: 4px;
     --tbl-th-w: 10px;
+    --tbl-th-s: var(--f-text);
+    --tbl-th-fw: 800;
+
     --tbl-td-h: var(--tbl-th-h);
     --tbl-td-w: var(--tbl-th-w);
-    --tbl-th-s: var(--f-text);
     --tbl-td-s: var(--f-text);
+    --tbl-td-fw: var(--f-w-t);
     
     --setting-h: 90vh;
     --setting-w: 55vw;
@@ -48,9 +64,7 @@
     --f-s-sb: 16px;
     --f-s-nt: 16px;
 
-    --f-s-pre: 16px;
-    --f-s-text: 1em;
-    --f-s-h: 34px;
+    
     --f-w-h: 600;
     --h-line: 100%;
     --head-h: 15px;

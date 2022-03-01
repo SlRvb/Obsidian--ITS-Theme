@@ -837,9 +837,18 @@ settings:
         level: 3
         collapsed: true
     -
-        title: No Alternating Background Colors
-        id: tbl-nalt
-        type: class-toggle
+        title: Alternating Background Colors
+        id: tbl-alt-c
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            -
+                label: No Alternating Backgrounds
+                value: tbl-nalt
+            -
+                label: Dark and Bold First Column
+                value: table
     - 
         title: Add Table Borders
         id: tbl-b
@@ -878,15 +887,6 @@ settings:
         max: 20
         step: 1
     -
-        title: Disable Dataview Header Larger Font Size
-        id: dv-th-size
-        type: class-toggle
-    -
-        title: Dataview Regular Table Header Styling
-        description: Match dataview table headers with default ITS table styling
-        id: dv-tbl-th
-        type: class-toggle
-    -
         title: Table Header Font Size
         id: tbl-th-s
         type: variable-number-slider
@@ -895,6 +895,23 @@ settings:
         min: 12
         max: 30
         step: 1
+    -
+        title: Table Header Font Weight
+        id: tbl-th-fw
+        type: variable-number-slider
+        default: 800
+        min: 100
+        max: 900
+        step: 100
+    -
+        title: Disable Dataview Header Larger Font Size
+        id: dv-th-size
+        type: class-toggle
+    -
+        title: Dataview Regular Table Header Styling
+        description: Match dataview table headers with default ITS table styling
+        id: dv-tbl-th
+        type: class-toggle
     -
         title: Table Cell Adjustments
         id: table-cells
@@ -927,6 +944,14 @@ settings:
         min: 12
         max: 30
         step: 1
+    -
+        title: Table Header Font Weight
+        id: tbl-td-fw
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 900
+        step: 100
     -
         title: Horizontal Line
         id: hztl-ln

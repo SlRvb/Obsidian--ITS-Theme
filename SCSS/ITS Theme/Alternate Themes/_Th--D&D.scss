@@ -9,9 +9,9 @@
     --hr-f: var(--mdi);
 
     --embed-h: #c93c3c;
-    --h1: var(--headers);
-    --h2: sandybrown;
-    --h3: var(--embed-h);
+    --h1-c: var(--headers);
+    --h2-c: sandybrown;
+    --h3-c: var(--embed-h);
 
     background: var(--note);
 }
@@ -83,13 +83,13 @@
 
     --sphd-pre-1: var(--accent);
     --sphd-pre-2: var(--accent2);
-    --sphd-pre-3: var(--h3);
+    --sphd-pre-3: var(--h3-c);
     --sphd-pre-4: var(--hr);
     --sphd-pre-5: var(--dark-sidebar);
     --sphd-pre-6: var(--outer-bar);
     --sphd-ed-1: var(--accent);
     --sphd-ed-2: var(--accent2);
-    --sphd-ed-3: var(--h3);
+    --sphd-ed-3: var(--h3-c);
     --sphd-ed-4: var(--hr);
     --sphd-ed-5: var(--dark-sidebar);
     --sphd-ed-6: var(--outer-bar);
@@ -166,13 +166,13 @@
 
     --sphd-pre-1: var(--accent);
     --sphd-pre-2: var(--accent2);
-    --sphd-pre-3: var(--h3);
+    --sphd-pre-3: var(--h3-c);
     --sphd-pre-4: var(--headers);
     --sphd-pre-5: var(--code-text);
     --sphd-pre-6: var(--file);
     --sphd-ed-1: var(--accent);
     --sphd-ed-2: var(--accent2);
-    --sphd-ed-3: var(--h3);
+    --sphd-ed-3: var(--h3-c);
     --sphd-ed-4: var(--headers);
     --sphd-ed-5: var(--code-text);
     --sphd-ed-6: var(--file);
@@ -190,7 +190,7 @@
         display: block;
         width: 100%;
         height: 4px;
-        background: linear-gradient(to right, var(--h1), transparent);
+        background: linear-gradient(to right, var(--h1-c), transparent);
         left: 0;
     }
     &:not(.sphd-und-2) h2:after,
@@ -199,7 +199,7 @@
         display: block;
         width: 85%;
         height: 4px;
-        background: linear-gradient(to right, var(--h2), transparent);
+        background: linear-gradient(to right, var(--h2-c), transparent);
         left: 0;
     }
     &:not(.sphd-und-3) h3:after,
@@ -208,7 +208,7 @@
         display: block;
         width: 70%;
         height: 4px;
-        background: linear-gradient(to right, var(--h3), transparent);
+        background: linear-gradient(to right, var(--h3-c), transparent);
         left: 0;
     }
 }
@@ -234,14 +234,14 @@
                 border: none;
             }
         }
-        & h1::after { background: linear-gradient(to right, var(--h1), transparent); }
-        & h1::before { background: linear-gradient(to left, var(--h1), transparent); }
+        & h1::after { background: linear-gradient(to right, var(--h1-c), transparent); }
+        & h1::before { background: linear-gradient(to left, var(--h1-c), transparent); }
         
-        & h2::after { background: linear-gradient(to right, var(--h2), transparent); }
-        & h2::before { background: linear-gradient(to left, var(--h2), transparent); }
+        & h2::after { background: linear-gradient(to right, var(--h2-c), transparent); }
+        & h2::before { background: linear-gradient(to left, var(--h2-c), transparent); }
         
-        & h3::after { background: linear-gradient(to right, var(--h3), transparent); }
-        & h3::before { background: linear-gradient(to left, var(--h3), transparent); }
+        & h3::after { background: linear-gradient(to right, var(--h3-c), transparent); }
+        & h3::before { background: linear-gradient(to left, var(--h3-c), transparent); }
     }
 }
 

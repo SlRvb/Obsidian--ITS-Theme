@@ -5,9 +5,12 @@
 }
 
 /*Justify text*/
-.justified .markdown-preview-section,
-.justified .cm-s-obsidian {
-    text-align: justify;
+.justified {
+    & .markdown-preview-section,
+    & .cm-s-obsidian,
+    &.markdown-preview-view,
+    &.cm-s-obsidian 
+    { text-align: justify; }
 }
 
 /*Readable Text Width.*/ /*Thanks @foreveryone*/

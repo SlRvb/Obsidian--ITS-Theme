@@ -28,6 +28,21 @@ body.dv-tbl-th .table-view-table > thead > tr > th,
     & table tr:nth-child(even)
     { background-color: var(--td); }
 }
+
+.markdown-preview-view.markdown-preview-view,
+.is-live-preview.is-live-preview {
+    //Table Padding
+    & table th { 
+        padding: var(--tbl-th-h) var(--tbl-th-w);
+        font-size: var(--tbl-th-s);
+        font-weight: var(--tbl-th-fw);
+    }
+    & table tr td { 
+        padding: var(--tbl-td-h) var(--tbl-td-w);
+        font-size: var(--tbl-td-s);
+        font-weight: var(--tbl-td-fw);
+    }
+}
 .tbl-nalt {
     & .reveal,
     & .is-live-preview,
@@ -40,7 +55,6 @@ body.dv-tbl-th .table-view-table > thead > tr > th,
     & table tr:nth-child(even)
     { background-color: unset; }
 }
-body .tbl-b,
 .tbl-b {
     & .reveal,
     & .is-live-preview,
@@ -55,19 +69,6 @@ body .tbl-b,
     & .table-view-table > thead > tr > th, 
     & .table-view-table.table-view-table > tbody > tr > td 
     { border-color: var(--table); }
-}
-
-.markdown-preview-view.markdown-preview-view,
-.is-live-preview.is-live-preview {
-    //Table Padding
-    & table th { 
-        padding: var(--tbl-th-h) var(--tbl-th-w);
-        font-size: var(--tbl-th-s);
-    }
-    & table tr td { 
-        padding: var(--tbl-td-h) var(--tbl-td-w);
-        font-size: var(--tbl-td-s);
-    }
 }
 
 // .markdown-preview-sizer { min-height: auto !important; }

@@ -1,0 +1,18 @@
+{
+	"extends": ["stylelint-config-recommended"],
+    "plugins": [
+		"stylelint-order",
+		"stylelint-no-unsupported-browser-features"
+	],
+	"rules": {
+		"font-family-no-missing-generic-family-keyword": null,
+		"no-descending-specificity": null,
+        "plugin/no-unsupported-browser-features": [true, {
+            "browsers": ["Chrome > 88"],
+            "ignore": ["css-masks"],
+            "ignorePartialSupport": true
+          }],
+        "font-family-name-quotes": "always-unless-keyword",
+		"at-rule-semicolon-newline-after": "always"
+	}
+}

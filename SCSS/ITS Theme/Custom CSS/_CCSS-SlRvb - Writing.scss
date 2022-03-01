@@ -8,7 +8,8 @@
 .writing h6 {
     text-align: center;
 }
-.writing {
+body.writing,
+div:not(.w-hcl).writing {
     & h1,
     & h2,
     & h3,
@@ -22,7 +23,7 @@
     {
         &::after,
         &::before {
-            height: 0 !important;
+            height: 0;
         }
     }
 

@@ -6073,6 +6073,7 @@ h4::after, .HyperMD-header-4::after {
   display: block;
   background: var(--table);
   height: 4px;
+  margin-top: -10px;
 }
 
 h1::after, .HyperMD-header-1::after {

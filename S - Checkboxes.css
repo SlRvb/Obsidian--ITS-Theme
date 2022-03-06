@@ -648,7 +648,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   color: rgb(var(--chbx-r));
 }
 .check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=c], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=c], .check-color.check-color ul li[data-task=c].task-list-item.is-checked {
-  color: rgb(var(--chbx-b));
+  color: rgb(var(--chbx-c));
 }
 
 /*--Checkbox Background--*/

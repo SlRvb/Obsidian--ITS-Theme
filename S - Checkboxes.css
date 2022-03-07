@@ -367,6 +367,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
   font-weight: 10;
   border: 0;
   vertical-align: 0px;
+  text-align: center;
 }
 
 .markdown-source-view.mod-cm6 .task-list-item-checkbox {

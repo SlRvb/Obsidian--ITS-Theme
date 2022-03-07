@@ -424,7 +424,10 @@ body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-t
   padding-left: 0px;
   font-family: var(--its);
   font-weight: 10;
-  vertical-align: 0px;
+}
+
+.markdown-source-view.mod-cm6 .task-list-item-checkbox {
+  vertical-align: middle;
 }
 
 /*Fixes*/

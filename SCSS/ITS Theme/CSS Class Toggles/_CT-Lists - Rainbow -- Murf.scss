@@ -2,7 +2,10 @@
 :root,
 .theme-dark,
 .theme-light {
-    --rb-indent-width: 1.13em; /*Bullet Spacing*/
+    --rb-indent-width: 1.45em; /*Bullet Spacing*/
+    --rb-indent-font-family: monospace;
+    --rb-indent-font-size: 12.5px;
+    --rb-offset: 6px;
 
     --rb-color-count: 8;
     --rb-indent-1: var(--sphd-pre-1); /*#6854c1*/
@@ -33,7 +36,7 @@ body:not(.murf-rbl) {
         
         & .cm-hmd-list-indent {
         position: relative;
-
+        
             &::before {
                 content: '';
                 display: block;
@@ -41,7 +44,7 @@ body:not(.murf-rbl) {
                 width: 100%;
                 top: -1.6em;
                 padding-bottom: 999em;
-            
+
                 /*Line Colors*/
                 background-image: linear-gradient(
                     to right,
@@ -66,10 +69,15 @@ body:not(.murf-rbl) {
                 /*Line Width?
                 background-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
                 */
-                
-                /*Line Offset*/
-                left: 7px;
             }
         }
+    }
+}
+body:not(.murf-rbl) {
+    & .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+        left: var(--rb-offset);
+    }
+    & .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+        left: calc(var(--rb-offset) + 6px);
     }
 }

@@ -16,12 +16,10 @@
 .internal-embed[alt*="nlk"] .markdown-embed-link {
     display: none;
 }
-
 .internal-embed[alt*="lk-l"] .markdown-embed-link {
     left: 10px;
     right: unset;
 }
-
 .internal-embed[alt*="lk-clear"] .markdown-embed-link {
     background-color: transparent;
 }
@@ -32,10 +30,14 @@
 .file-embed-title {
     display: none;
 }
-
 .internal-embed[alt*="ttl"] .markdown-embed-title, .file-embed-title{
     display: block;
 }
+.internal-embed[alt*="no-i"] i,
+.internal-embed[alt*="no-i"] .i-at {
+    display: none;
+}
+
 .view-content > :not(.is-live-preview) {
     & .internal-embed[alt*="right"] {
         float: right;
@@ -70,7 +72,7 @@
 
 
 /*Clean Embeds*/
-.internal-embed[alt*="clean"] .markdown-embed,
+.internal-embed[alt*="clean"] > .markdown-embed,
 .internal-embed[alt*="clean"].is-loaded:not(.image-embed),
 .internal-embed[alt*="clean"] .admonition {
     padding: 0;

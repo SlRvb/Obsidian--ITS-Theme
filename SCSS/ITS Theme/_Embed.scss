@@ -38,6 +38,9 @@ body:not(.em-hd) .markdown-embed h6 {
     color: var(--accent);
 }
 
+/*Fix LP HR Embed Margins/Padding*/
+.markdown-source-view.mod-cm6 .markdown-embed hr { margin: 26px 0; }
+
 .markdown-preview-view .markdown-embed,
 .markdown-preview-view .file-embed,
 .internal-embed.is-loaded:not(.image-embed) {

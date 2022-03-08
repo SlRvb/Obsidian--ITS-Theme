@@ -1041,11 +1041,20 @@ settings:
         title: Murf's Rainbow Line Spacing
 		id: rb-indent-width
 		type: variable-number-slider
-        default: 1.13
+        default: 1.45
         format: em
         min: 1
-        max: 2
+        max: 2.5
         step: .01
+    -
+        title: Murf's Rainbow Line Offset
+		id: rb-offset
+		type: variable-number-slider
+        default: 6
+        format: px
+        min: 0
+        max: 12
+        step: 1
     -
         title: Disable Murf's Rainbow Lines
         id: murf-rbl

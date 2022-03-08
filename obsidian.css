@@ -1042,11 +1042,20 @@ settings:
         title: Murf's Rainbow Line Spacing
 		id: rb-indent-width
 		type: variable-number-slider
-        default: 1.13
+        default: 1.45
         format: em
         min: 1
-        max: 2
+        max: 2.5
         step: .01
+    -
+        title: Murf's Rainbow Line Offset
+		id: rb-offset
+		type: variable-number-slider
+        default: 6
+        format: px
+        min: 0
+        max: 12
+        step: 1
     -
         title: Disable Murf's Rainbow Lines
         id: murf-rbl
@@ -4609,6 +4618,11 @@ body:not(.em-hd) .markdown-embed h6 {
   color: var(--accent);
 }
 
+/*Fix LP HR Embed Margins/Padding*/
+.markdown-source-view.mod-cm6 .markdown-embed hr {
+  margin: 26px 0;
+}
+
 .markdown-preview-view .markdown-embed,
 .markdown-preview-view .file-embed,
 .internal-embed.is-loaded:not(.image-embed) {
@@ -5525,6 +5539,11 @@ img[alt*=sprf] {
   display: block;
 }
 
+.internal-embed[alt*=no-i] i,
+.internal-embed[alt*=no-i] .i-at {
+  display: none;
+}
+
 .view-content > :not(.is-live-preview) .internal-embed[alt*=right] {
   float: right;
   margin-left: 0.5em;
@@ -5560,7 +5579,7 @@ img[alt*=sprf] {
 }
 
 /*Clean Embeds*/
-.internal-embed[alt*=clean] .markdown-embed,
+.internal-embed[alt*=clean] > .markdown-embed,
 .internal-embed[alt*=clean].is-loaded:not(.image-embed),
 .internal-embed[alt*=clean] .admonition {
   padding: 0;
@@ -5951,15 +5970,6 @@ h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
   color: var(--headers);
 }
 
-.cm-header-1,
-.cm-header-2,
-.cm-header-3,
-.cm-header-4,
-.cm-header-5,
-.cm-header-6 {
-  margin-bottom: calc(var(--head-h) - 1.5em);
-}
-
 .markdown-preview-view h1,
 .markdown-preview-view h2,
 .markdown-preview-view h3,
@@ -6073,6 +6083,12 @@ h4::after, .HyperMD-header-4::after {
   display: block;
   background: var(--table);
   height: 4px;
+}
+
+:not(.is-mobile) .HyperMD-header-1::after,
+:not(.is-mobile) .HyperMD-header-2::after,
+:not(.is-mobile) .HyperMD-header-3::after,
+:not(.is-mobile) .HyperMD-header-4::after {
   margin-top: -10px;
 }
 
@@ -6118,7 +6134,8 @@ h4::after, .HyperMD-header-4::after {
 .hc.is-live-preview .HyperMD-header-2::after,
 .hc.is-live-preview .HyperMD-header-3::after,
 .hc.is-live-preview .HyperMD-header-4::after {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hc.is-live-preview .HyperMD-header, .hc .is-live-preview .HyperMD-header,
@@ -6621,7 +6638,145 @@ ul.kanban ul {
 
 /*Restyle Checkboxes*/
 /*Different/Alternate Checkbox*/
-body:not(.alt-chkbx-off) .task-list-item.is-checked:not([data-task=x]) input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked:not([data-task=x]) input[type=checkbox i]:checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:not([data-task=x]) input[type=checkbox i]:checked::before, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]):not([data-task=x]) .task-list-item-checkbox {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=">"],
+[data-task="-"],
+[data-task=">"],
+[data-task=D],
+[data-task="?"],
+[data-task="/"],
+[data-task="+"],
+[data-task=R],
+[data-task="!"],
+[data-task=i],
+[data-task=B],
+[data-task=P],
+[data-task=C],
+[data-task=Q],
+[data-task=N],
+[data-task=b],
+[data-task=I],
+[data-task=p],
+[data-task=L],
+[data-task=E],
+[data-task=A],
+[data-task=r],
+[data-task=c]) .task-list-item-checkbox, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=">"],
+[data-task="-"],
+[data-task=">"],
+[data-task=D],
+[data-task="?"],
+[data-task="/"],
+[data-task="+"],
+[data-task=R],
+[data-task="!"],
+[data-task=i],
+[data-task=B],
+[data-task=P],
+[data-task=C],
+[data-task=Q],
+[data-task=N],
+[data-task=b],
+[data-task=I],
+[data-task=p],
+[data-task=L],
+[data-task=E],
+[data-task=A],
+[data-task=r],
+[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=">"],
+[data-task="-"],
+[data-task=">"],
+[data-task=D],
+[data-task="?"],
+[data-task="/"],
+[data-task="+"],
+[data-task=R],
+[data-task="!"],
+[data-task=i],
+[data-task=B],
+[data-task=P],
+[data-task=C],
+[data-task=Q],
+[data-task=N],
+[data-task=b],
+[data-task=I],
+[data-task=p],
+[data-task=L],
+[data-task=E],
+[data-task=A],
+[data-task=r],
+[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=">"],
+[data-task="-"],
+[data-task=">"],
+[data-task=D],
+[data-task="?"],
+[data-task="/"],
+[data-task="+"],
+[data-task=R],
+[data-task="!"],
+[data-task=i],
+[data-task=B],
+[data-task=P],
+[data-task=C],
+[data-task=Q],
+[data-task=N],
+[data-task=b],
+[data-task=I],
+[data-task=p],
+[data-task=L],
+[data-task=E],
+[data-task=A],
+[data-task=r],
+[data-task=c]) .task-list-item-checkbox, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=">"],
+[data-task="-"],
+[data-task=">"],
+[data-task=D],
+[data-task="?"],
+[data-task="/"],
+[data-task="+"],
+[data-task=R],
+[data-task="!"],
+[data-task=i],
+[data-task=B],
+[data-task=P],
+[data-task=C],
+[data-task=Q],
+[data-task=N],
+[data-task=b],
+[data-task=I],
+[data-task=p],
+[data-task=L],
+[data-task=E],
+[data-task=A],
+[data-task=r],
+[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=">"],
+[data-task="-"],
+[data-task=">"],
+[data-task=D],
+[data-task="?"],
+[data-task="/"],
+[data-task="+"],
+[data-task=R],
+[data-task="!"],
+[data-task=i],
+[data-task=B],
+[data-task=P],
+[data-task=C],
+[data-task=Q],
+[data-task=N],
+[data-task=b],
+[data-task=I],
+[data-task=p],
+[data-task=L],
+[data-task=E],
+[data-task=A],
+[data-task=r],
+[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked::before {
   background-image: url();
   position: relative;
   -webkit-appearance: none;
@@ -6629,6 +6784,7 @@ body:not(.alt-chkbx-off) .task-list-item.is-checked:not([data-task=x]) input[typ
   filter: none;
   cursor: pointer;
   background-color: transparent !important;
+  transform: unset;
   font: var(--its);
   font-family: var(--its);
   font-size: inherit;
@@ -6636,6 +6792,7 @@ body:not(.alt-chkbx-off) .task-list-item.is-checked:not([data-task=x]) input[typ
   font-weight: 10;
   border: 0;
   vertical-align: 0px;
+  text-align: center;
 }
 
 .markdown-source-view.mod-cm6 .task-list-item-checkbox {
@@ -6660,9 +6817,8 @@ ol > li.task-list-item.is-checked {
 }
 
 /* Checkbox Text Normal */
-body.check-text.check-text .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task],
-body.check-text.check-text ul li:not([data-task=x]).task-list-item.is-checked {
-  color: var(--text-normal);
+.check-text.check-text.check-text.check-text .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task], .check-text.check-text.check-text.check-text ul li:not([data-task=x]).task-list-item.is-checked {
+  color: unset;
   font-weight: unset;
 }
 
@@ -6891,10 +7047,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   color: rgb(var(--chbx-R));
 }
 .check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=L], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=L], .check-color.check-color ul li[data-task=L].task-list-item.is-checked {
-  color: rgb(var(--chbx-P));
+  color: rgb(var(--chbx-N));
 }
 .check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=E], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=E], .check-color.check-color ul li[data-task=E].task-list-item.is-checked {
-  color: rgb(var(--chbx-b));
+  color: rgb(var(--chbx-I));
 }
 .check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=A], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=A], .check-color.check-color ul li[data-task=A].task-list-item.is-checked {
   color: rgb(var(--chbx-P));
@@ -6903,7 +7059,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   color: rgb(var(--chbx-r));
 }
 .check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=c], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=c], .check-color.check-color ul li[data-task=c].task-list-item.is-checked {
-  color: rgb(var(--chbx-b));
+  color: rgb(var(--chbx-c));
 }
 
 /*--Checkbox Background--*/
@@ -9213,6 +9369,28 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
   color: var(--text) !important;
 }
 
+[data-type=VIEW_TYPE_LONGFORM_EXPLORER] ul li::before {
+  display: none;
+}
+
+.longform-compile-step.longform-compile-step.longform-compile-step.longform-compile-step {
+  background: var(--note);
+  box-shadow: 2px 2px 0 var(--outline);
+}
+
+.add-step-container.add-step-container.add-step-container.add-step-container button:hover {
+  color: var(--text-dl);
+}
+
+.longform-compile-step .longform-step-kind-pill.longform-step-kind-pill.longform-step-kind-pill.longform-step-kind-pill {
+  --text-accent: var(--tag);
+}
+
+.longform-compile-step.longform-compile-step.longform-compile-step.longform-compile-step,
+.longform-compile-step .longform-step-kind-pill.longform-step-kind-pill.longform-step-kind-pill.longform-step-kind-pill {
+  border-radius: var(--radius);
+}
+
 .theme-dark, .theme-light {
   /*Plugin: Media Extended*/
   --plyr-audio-controls-background: var(--outer-bar);
@@ -10209,6 +10387,11 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 }
 
 /*Colored Bullets*/
+.bul-col .cm-s-obsidian span.cm-formatting-list {
+  color: transparent;
+}
+
+.bul-col .HyperMD-list-line-1 .list-bullet:after,
 .bul-col .HyperMD-list-line-1 .cm-formatting-list:before,
 .bul-col ul li::before,
 .bul-col ol li::marker {
@@ -10219,6 +10402,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   background: var(--b-l-1);
 }
 
+.bul-col .HyperMD-list-line-2 .list-bullet:after,
 .bul-col .HyperMD-list-line-2 .cm-formatting-list:before,
 .bul-col ul ul li::before,
 .bul-col ol ol li::marker {
@@ -10229,6 +10413,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   background: var(--b-l-2);
 }
 
+.bul-col .HyperMD-list-line-3 .list-bullet:after,
 .bul-col .HyperMD-list-line-3 .cm-formatting-list:before,
 .bul-col ul ul ul li::before,
 .bul-col ol ol ol li::marker {
@@ -10239,6 +10424,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   background: var(--b-l-3);
 }
 
+.bul-col .HyperMD-list-line-4 .list-bullet:after,
 .bul-col .HyperMD-list-line-4 .cm-formatting-list:before,
 .bul-col ul ul ul ul li::before,
 .bul-col ol ol ol ol li::marker {
@@ -10249,6 +10435,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   background: var(--b-l-4);
 }
 
+.bul-col .HyperMD-list-line-5 .list-bullet:after,
 .bul-col .HyperMD-list-line-5 .cm-formatting-list:before,
 .bul-col .HyperMD-list-line-5 .cm-formatting-list,
 .bul-col ul ul ul ul ul li::before,
@@ -10260,6 +10447,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   background: var(--b-l-5);
 }
 
+.bul-col .HyperMD-list-line-6 .list-bullet:after,
 .bul-col .HyperMD-list-line-6 .cm-formatting-list:before,
 .bul-col ul ul ul ul ul ul li::before,
 .bul-col ol ol ol ol ol ol li::marker {
@@ -10274,8 +10462,11 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 :root,
 .theme-dark,
 .theme-light {
-  --rb-indent-width: 1.13em;
+  --rb-indent-width: 1.45em;
   /*Bullet Spacing*/
+  --rb-indent-font-family: monospace;
+  --rb-indent-font-size: 12.5px;
+  --rb-offset: 6px;
   --rb-color-count: 8;
   --rb-indent-1: var(--sphd-pre-1);
   /*#6854c1*/
@@ -10325,8 +10516,13 @@ body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body
   /*Line Width?
   background-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
   */
-  /*Line Offset*/
-  left: 7px;
+}
+
+body:not(.murf-rbl) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+  left: var(--rb-offset);
+}
+body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+  left: calc(var(--rb-offset) + 6px);
 }
 
 /*Single Bullet/1 Bullet Color*/

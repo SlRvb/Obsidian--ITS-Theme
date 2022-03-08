@@ -56,30 +56,39 @@
 { border-color: var(--b-l-6) !important; }
 
 /*Colored Bullets*/
+.bul-col .cm-s-obsidian span.cm-formatting-list {
+    color: transparent;
+}
+
+.bul-col .HyperMD-list-line-1 .list-bullet:after,
 .bul-col .HyperMD-list-line-1 .cm-formatting-list:before,
 .bul-col ul li::before,
 .bul-col ol li::marker
 { color: var(--b-l-1); }
 .bul-col ul .task-list-item-checkbox:checked { background: var(--b-l-1); }
 
+.bul-col .HyperMD-list-line-2 .list-bullet:after,
 .bul-col .HyperMD-list-line-2 .cm-formatting-list:before,
 .bul-col ul ul li::before,
 .bul-col ol ol li::marker 
 { color: var(--b-l-2); }
 .bul-col ul ul .task-list-item-checkbox:checked { background: var(--b-l-2); }
 
+.bul-col .HyperMD-list-line-3 .list-bullet:after,
 .bul-col .HyperMD-list-line-3 .cm-formatting-list:before,
 .bul-col ul ul ul li::before,
 .bul-col ol ol ol li::marker 
 { color: var(--b-l-3); }
 .bul-col ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-3); }
 
+.bul-col .HyperMD-list-line-4 .list-bullet:after,
 .bul-col .HyperMD-list-line-4 .cm-formatting-list:before,
 .bul-col ul ul ul ul li::before,
 .bul-col ol ol ol ol li::marker 
 { color: var(--b-l-4); }
 .bul-col ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-4); }
 
+.bul-col .HyperMD-list-line-5 .list-bullet:after,
 .bul-col .HyperMD-list-line-5 .cm-formatting-list:before,
 .bul-col .HyperMD-list-line-5 .cm-formatting-list,
 .bul-col ul ul ul ul ul li::before,
@@ -87,6 +96,7 @@
 { color: var(--b-l-5); }
 .bul-col ul ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-5); }
 
+.bul-col .HyperMD-list-line-6 .list-bullet:after,
 .bul-col .HyperMD-list-line-6 .cm-formatting-list:before,
 .bul-col ul ul ul ul ul ul li::before,
 .bul-col ol ol ol ol ol ol li::marker 

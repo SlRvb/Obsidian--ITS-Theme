@@ -44,6 +44,7 @@ body:not(.alt-chkbx-off) {
                 cursor: pointer;
                 background-color: transparent !important;
                 transform: unset; //Primary
+                box-shadow: unset; //Gruvbox
                 
                 font: var(--its);
                 font-family: var(--its);

@@ -15,6 +15,9 @@ ol li::marker {
 ul:nth-child(odd), ul:nth-child(even) {
     list-style-type: "";
 }
+// .cm-s-obsidian span.cm-formatting-list.cm-formatting-list-ul {
+//     color: transparent;
+// }
 
 ul li::before {
     content: var(--bullet);
@@ -31,7 +34,7 @@ ul li:nth-child(even)::before {
     color: var(--accent2);
 }
 li.task-list-item::before,
-.markdown-preview-view ol li::before {
+.markdown-preview-view ol > li::before {
     visibility: collapse;
 }
 ol ul > li::before {

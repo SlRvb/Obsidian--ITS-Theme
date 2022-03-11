@@ -1,8 +1,7 @@
 
 /*Colored Bullet Lines*/
-.bul-li-col .cm-hmd-list-indent .cm-tab::before,
 .bul-li-col ul > li,
-.bul-li-col ul,
+.bul-li-col ul ul,
 .bul-li-col ul ul::before,
 .bul-li-col ol > li, 
 .bul-li-col ol, 
@@ -11,7 +10,7 @@
 { border-color: var(--b-l-1) !important; }
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(2):before,
 .bul-li-col ul ul > li, 
-.bul-li-col ul ul, 
+.bul-li-col ul ul ul, 
 .bul-li-col ul ul ul::before,
 .bul-li-col ol ol > li, 
 .bul-li-col ol ol,
@@ -20,7 +19,7 @@
 { border-color: var(--b-l-2) !important; }
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(3):before,
 .bul-li-col ul ul ul > li, 
-.bul-li-col ul ul ul,
+.bul-li-col ul ul ul ul,
 .bul-li-col ul ul ul ul::before,
 .bul-li-col ol ol ol > li, 
 .bul-li-col ol ol ol,
@@ -29,7 +28,7 @@
 { border-color: var(--b-l-3) !important; }
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(4):before,
 .bul-li-col ul ul ul ul > li, 
-.bul-li-col ul ul ul ul,
+.bul-li-col ul ul ul ul ul,
 .bul-li-col ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol > li, 
 .bul-li-col ol ol ol ol,
@@ -38,16 +37,16 @@
 { border-color: var(--b-l-4) !important; }
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(5):before,
 .bul-li-col ul ul ul ul ul > li, 
-.bul-li-col ul ul ul ul ul,
+.bul-li-col ul ul ul ul ul ul,
 .bul-li-col ul ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol ol > li, 
-.bul-li-col ol ol ol ol ol,
+.bul-li-col ol ol ol ol ol ol,
 .bul-li-col ol ol ol ol ol::before,
 .bul-col ul ul ul ul ul .task-list-item-checkbox
 { border-color: var(--b-l-5) !important; }
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(6):before,
 .bul-li-col ul ul ul ul ul ul > li, 
-.bul-li-col ul ul ul ul ul ul,
+.bul-li-col ul ul ul ul ul ul ul,
 .bul-li-col ul ul ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol ol ol > li,
 .bul-li-col ol ol ol ol ol ol,
@@ -55,11 +54,22 @@
 .bul-col ul ul ul ul ul ul .task-list-item-checkbox
 { border-color: var(--b-l-6) !important; }
 
-/*Colored Bullets*/
-.bul-col .cm-s-obsidian span.cm-formatting-list {
-    color: transparent;
+/*Rainbow Indenation Guides*/
+.bul-li-col.ig-lists .HyperMD-list-line  {
+    & span.cm-hmd-list-indent .ig-tab:before { background-color: var(--b-l-1); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(2):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:before { background-color: var(--b-l-2); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(3):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(2)::before { background-color: var(--b-l-3); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(4):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(3)::before { background-color: var(--b-l-4); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(5):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(4)::before { background-color: var(--b-l-5); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(6):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(5)::before { background-color: var(--b-l-6); }
 }
 
+/*Colored Bullets*/
 .bul-col .HyperMD-list-line-1 .list-bullet:after,
 .bul-col .HyperMD-list-line-1 .cm-formatting-list:before,
 .bul-col ul li::before,

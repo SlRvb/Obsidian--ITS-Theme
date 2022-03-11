@@ -3968,7 +3968,7 @@ ul li:nth-child(even)::before {
 }
 
 li.task-list-item::before,
-.markdown-preview-view ol li::before {
+.markdown-preview-view ol > li::before {
   visibility: collapse;
 }
 
@@ -4297,7 +4297,6 @@ body:not(.dis-tri-quote) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-
   border: 0;
 }
 
-em mark,
 em mark em {
   text-decoration: unset;
   color: transparent;
@@ -6785,6 +6784,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
   cursor: pointer;
   background-color: transparent !important;
   transform: unset;
+  box-shadow: unset;
   font: var(--its);
   font-family: var(--its);
   font-size: inherit;
@@ -6827,41 +6827,41 @@ ol > li.task-list-item.is-checked {
   text-decoration: line-through 2px;
 }
 
-.chst-reg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
+.chst-reg.chst-reg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
 .chst-reg ul li[data-task=x].task-list-item.is-checked,
-.chst-chk .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X],
+.chst-chk.chst-chk .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X],
 .chst-chk ul li[data-task=X].task-list-item.is-checked,
-.chst-drop .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
+.chst-drop.chst-drop .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
 .chst-drop ul li[data-task="-"].task-list-item.is-checked,
-.chst-frwd .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
+.chst-frwd.chst-frwd .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
 .chst-frwd ul li[data-task=">"].task-list-item.is-checked,
-.chst-defr .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D],
+.chst-defr.chst-defr .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D],
 .chst-defr ul li[data-task=D].task-list-item.is-checked,
-.chst-q .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
+.chst-q.chst-q .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
 .chst-q ul li[data-task="?"].task-list-item.is-checked,
-.chst-half .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
+.chst-half.chst-half .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
 .chst-half ul li[data-task="/"].task-list-item.is-checked,
-.chst-add .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
+.chst-add.chst-add .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
 .chst-add ul li[data-task="+"].task-list-item.is-checked,
-.chst-rsrch .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R],
+.chst-rsrch.chst-rsrch .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R],
 .chst-rsrch ul li[data-task=R].task-list-item.is-checked,
-.chst-imp .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
+.chst-imp.chst-imp .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
 .chst-imp ul li[data-task="!"].task-list-item.is-checked,
-.chst-idea .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i],
+.chst-idea.chst-idea .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i],
 .chst-idea ul li[data-task=i].task-list-item.is-checked,
-.chst-brn .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B],
+.chst-brn.chst-brn .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B],
 .chst-brn ul li[data-task=B].task-list-item.is-checked,
-.chst-pro .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P],
+.chst-pro.chst-pro .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P],
 .chst-pro ul li[data-task=P].task-list-item.is-checked,
-.chst-con .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C],
+.chst-con.chst-con .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C],
 .chst-con ul li[data-task=C].task-list-item.is-checked,
-.chst-quot .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q],
+.chst-quot.chst-quot .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q],
 .chst-quot ul li[data-task=Q].task-list-item.is-checked,
-.chst-note .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N],
+.chst-note.chst-note .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N],
 .chst-note ul li[data-task=N].task-list-item.is-checked,
-.chst-book .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b],
+.chst-book.chst-book .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b],
 .chst-book ul li[data-task=b].task-list-item.is-checked,
-.chst-info .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
+.chst-info.chst-info .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
 .chst-info ul li[data-task=I].task-list-item.is-checked {
   text-decoration: line-through 2px;
 }
@@ -8511,7 +8511,7 @@ body .dataview.inline-field-standalone-value {
 
 body .dataview.inline-field-key,
 body .dataview.inline-field-value {
-  border-radius: 0;
+  border-radius: var(--radius);
   font-family: inherit;
   font-weight: bold;
   padding: 0 10px;
@@ -8523,7 +8523,7 @@ body .dataview.inline-field-key {
 }
 
 body .dataview.inline-field-value {
-  background-color: var(--deep-dark-accent);
+  background-color: var(--td);
 }
 
 body .dataview.inline-field-value a.tag:first-child {
@@ -10320,9 +10320,8 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 }
 
 /*Colored Bullet Lines*/
-.bul-li-col .cm-hmd-list-indent .cm-tab::before,
 .bul-li-col ul > li,
-.bul-li-col ul,
+.bul-li-col ul ul,
 .bul-li-col ul ul::before,
 .bul-li-col ol > li,
 .bul-li-col ol,
@@ -10333,7 +10332,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(2):before,
 .bul-li-col ul ul > li,
-.bul-li-col ul ul,
+.bul-li-col ul ul ul,
 .bul-li-col ul ul ul::before,
 .bul-li-col ol ol > li,
 .bul-li-col ol ol,
@@ -10344,7 +10343,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(3):before,
 .bul-li-col ul ul ul > li,
-.bul-li-col ul ul ul,
+.bul-li-col ul ul ul ul,
 .bul-li-col ul ul ul ul::before,
 .bul-li-col ol ol ol > li,
 .bul-li-col ol ol ol,
@@ -10355,7 +10354,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(4):before,
 .bul-li-col ul ul ul ul > li,
-.bul-li-col ul ul ul ul,
+.bul-li-col ul ul ul ul ul,
 .bul-li-col ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol > li,
 .bul-li-col ol ol ol ol,
@@ -10366,10 +10365,10 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(5):before,
 .bul-li-col ul ul ul ul ul > li,
-.bul-li-col ul ul ul ul ul,
+.bul-li-col ul ul ul ul ul ul,
 .bul-li-col ul ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol ol > li,
-.bul-li-col ol ol ol ol ol,
+.bul-li-col ol ol ol ol ol ol,
 .bul-li-col ol ol ol ol ol::before,
 .bul-col ul ul ul ul ul .task-list-item-checkbox {
   border-color: var(--b-l-5) !important;
@@ -10377,7 +10376,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 
 .bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(6):before,
 .bul-li-col ul ul ul ul ul ul > li,
-.bul-li-col ul ul ul ul ul ul,
+.bul-li-col ul ul ul ul ul ul ul,
 .bul-li-col ul ul ul ul ul ul ul::before,
 .bul-li-col ol ol ol ol ol ol > li,
 .bul-li-col ol ol ol ol ol ol,
@@ -10386,11 +10385,27 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   border-color: var(--b-l-6) !important;
 }
 
-/*Colored Bullets*/
-.bul-col .cm-s-obsidian span.cm-formatting-list {
-  color: transparent;
+/*Rainbow Indenation Guides*/
+.bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent .ig-tab:before {
+  background-color: var(--b-l-1);
+}
+.bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent .ig-tab:nth-child(2):before, .bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent:nth-child(2) .ig-tab:before {
+  background-color: var(--b-l-2);
+}
+.bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent .ig-tab:nth-child(3):before, .bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(2)::before {
+  background-color: var(--b-l-3);
+}
+.bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent .ig-tab:nth-child(4):before, .bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(3)::before {
+  background-color: var(--b-l-4);
+}
+.bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent .ig-tab:nth-child(5):before, .bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(4)::before {
+  background-color: var(--b-l-5);
+}
+.bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent .ig-tab:nth-child(6):before, .bul-li-col.ig-lists .HyperMD-list-line span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(5)::before {
+  background-color: var(--b-l-6);
 }
 
+/*Colored Bullets*/
 .bul-col .HyperMD-list-line-1 .list-bullet:after,
 .bul-col .HyperMD-list-line-1 .cm-formatting-list:before,
 .bul-col ul li::before,
@@ -10456,73 +10471,6 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 
 .bul-col ul ul ul ul ul ul .task-list-item-checkbox:checked {
   background: var(--b-l-6);
-}
-
-/* RAINBOW INDENT COLORS */
-:root,
-.theme-dark,
-.theme-light {
-  --rb-indent-width: 1.45em;
-  /*Bullet Spacing*/
-  --rb-indent-font-family: monospace;
-  --rb-indent-font-size: 12.5px;
-  --rb-offset: 6px;
-  --rb-color-count: 8;
-  --rb-indent-1: var(--sphd-pre-1);
-  /*#6854c1*/
-  --rb-indent-2: var(--sphd-pre-2);
-  /*#c724b1*/
-  --rb-indent-3: var(--sphd-pre-3);
-  /*#ff6900*/
-  --rb-indent-4: var(--sphd-pre-4);
-  /*#f6be00*/
-  --rb-indent-5: var(--sphd-pre-5);
-  /*#e4002b*/
-  --rb-indent-6: var(--sphd-ed-1);
-  /*#97d700*/
-  --rb-indent-7: var(--sphd-ed-2);
-  /*#00ab84*/
-  --rb-indent-8: var(--sphd-ed-3);
-  /*#00a3e0*/
-}
-
-.theme-dark.bul-li-col,
-.theme-light.bul-li-col {
-  --rb-indent-1: var(--b-l-1);
-  --rb-indent-2: var(--b-l-2);
-  --rb-indent-3: var(--b-l-3);
-  --rb-indent-4: var(--b-l-4);
-  --rb-indent-5: var(--b-l-5);
-  --rb-indent-6: var(--b-l-6);
-  --rb-indent-7: var(--b-l-5);
-  --rb-indent-8: var(--b-l-4);
-}
-
-body:not(.murf-rbl) .HyperMD-list-line.cm-line, body:not(.murf-rbl) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
-  overflow: hidden;
-}
-body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent, body:not(.murf-rbl) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
-  position: relative;
-}
-body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body:not(.murf-rbl) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: -1.6em;
-  padding-bottom: 999em;
-  /*Line Colors*/
-  background-image: linear-gradient(to right, var(--rb-indent-1) 0 var(--b-line), transparent var(--b-line) calc(1 * var(--rb-indent-width)), var(--rb-indent-2) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--b-line)), transparent calc(1 * var(--rb-indent-width) + var(--b-line)) calc(2 * var(--rb-indent-width)), var(--rb-indent-3) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--b-line)), transparent calc(2 * var(--rb-indent-width) + var(--b-line)) calc(3 * var(--rb-indent-width)), var(--rb-indent-4) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--b-line)), transparent calc(3 * var(--rb-indent-width) + var(--b-line)) calc(4 * var(--rb-indent-width)), var(--rb-indent-5) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--b-line)), transparent calc(4 * var(--rb-indent-width) + var(--b-line)) calc(5 * var(--rb-indent-width)), var(--rb-indent-6) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--b-line)), transparent calc(5 * var(--rb-indent-width) + var(--b-line)) calc(6 * var(--rb-indent-width)), var(--rb-indent-7) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--b-line)), transparent calc(6 * var(--rb-indent-width) + var(--b-line)) calc(7 * var(--rb-indent-width)), var(--rb-indent-8) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--b-line)), transparent calc(7 * var(--rb-indent-width) + var(--b-line)) calc(8 * var(--rb-indent-width)));
-  /*Line Width?
-  background-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
-  */
-}
-
-body:not(.murf-rbl) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
-  left: var(--rb-offset);
-}
-body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent {
-  left: calc(var(--rb-offset) + 6px);
 }
 
 /*Single Bullet/1 Bullet Color*/

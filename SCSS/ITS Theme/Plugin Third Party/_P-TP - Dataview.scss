@@ -34,9 +34,10 @@ body .dataview.inline-field-standalone-value {
     font-family: inherit;
     background-color: transparent;
 }
+
 body .dataview.inline-field-key,
 body .dataview.inline-field-value {
-    border-radius: 0;
+    border-radius: var(--radius);
     font-family: inherit;
     font-weight: bold;
     padding: 0 10px;
@@ -45,7 +46,7 @@ body .dataview.inline-field-key {
     background-color: var(--bttn);
     color: var(--text-dl);
 }
-body .dataview.inline-field-value { background-color: var(--deep-dark-accent); }
+body .dataview.inline-field-value { background-color: var(--td); }
 body .dataview.inline-field-value a.tag:first-child { display: none; }
 
 

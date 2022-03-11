@@ -100,21 +100,34 @@
     opacity: 0;
     height: 6px;
 }
+
 /*Minimize Frontmatter*/
-.h-fm .markdown-preview-view pre.frontmatter:not(:hover),
+.h-fm .frontmatter:not(:hover),
 .h-fm .frontmatter-container:not(:hover) {
     visibility: hidden;
     float: right;
     z-index: 5;
+    margin: 0;
     margin-bottom: -40px;
 }
 .h-fm .markdown-preview-view.show-frontmatter pre.frontmatter + .frontmatter-container,
-.h-fm .markdown-preview-view pre.frontmatter:not(:hover) > .language-yaml,
 .h-fm .frontmatter-container:not(:hover) > div {
     overflow: hidden;
-    display: none;
 }
-.h-fm .markdown-preview-view pre.frontmatter:not(:hover)::before,
+
+.h-fm .show-frontmatter .frontmatter-container::before,
+.h-fm .show-frontmatter .frontmatter:not(:hover) > *,
+.h-fm .frontmatter-container:not(:hover) > * { display: none; }
+
+//Invalid Yaml/Frontmatter
+.h-fm .show-frontmatter .frontmatter:not(:hover) code { display: none; }
+.h-fm .mod-failed + .frontmatter-container:not(:hover)::before,
+.h-fm .show-frontmatter .frontmatter.mod-failed:not(:hover)::before {
+    background: var(--interactive-failure);
+    content: "\EC08";
+    color: var(--text-error);
+}
+.h-fm .show-frontmatter .frontmatter:not(:hover)::before,
 .h-fm .frontmatter-container:not(:hover)::before {
     content: "\e800";
     font-family: var(--its);
@@ -125,10 +138,12 @@
     box-shadow: 2px 2px 0 var(--outline);
     border: 1px solid var(--outline);
 }
-.h-fm .frontmatter-container {
-    padding: 10px 20px;
+.h-fm pre.frontmatter,
+.h-fm .frontmatter-container:not(:hover) {
+    padding: 10px;
+    font-size: var(--f-s-text);
     border-radius: var(--radius);
-    border: 2px solid var(--outline);
+    border: none;
     box-shadow: 4px 4px 0 var(--outline);
 }
 

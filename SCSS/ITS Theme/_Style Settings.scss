@@ -1028,6 +1028,11 @@ settings:
         description: Lines appear under bullet, not beside it. Won't connect to bullet if it's longer than 1 line.
         id: b-li-o
         type: class-toggle
+    -
+        title: Snug Live Preview Arrow
+        description: Move Live Preview list arrow closer to bullet
+        id: snug-bul-arrow
+        type: class-toggle
 	-
 		title: Line Size
 		id: b-line
@@ -1037,28 +1042,6 @@ settings:
         min: 0
         max: 3
         step: 1
-    -
-        title: Murf's Rainbow Line Spacing
-		id: rb-indent-width
-		type: variable-number-slider
-        default: 1.45
-        format: em
-        min: 1
-        max: 2.5
-        step: .01
-    -
-        title: Murf's Rainbow Line Offset
-		id: rb-offset
-		type: variable-number-slider
-        default: 6
-        format: px
-        min: 0
-        max: 12
-        step: 1
-    -
-        title: Disable Murf's Rainbow Lines
-        id: murf-rbl
-        type: class-toggle
     -
         title: Live Preview Alternate Indent Style
         description: Alternate style to differentiate lists sublevels in edit mode on cm6.

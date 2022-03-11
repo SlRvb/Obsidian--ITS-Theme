@@ -135,6 +135,10 @@ li:nth-child(even) {
     color: var(--soft-text);
     position: relative;
 }
+.snug-bul-arrow:not(.is-mobile) .is-live-preview .HyperMD-list-line.HyperMD-list-line.HyperMD-list-line:not(.HyperMD-task-line) .collapse-indicator {
+    padding-right: 0;
+    margin-right: -2px;
+}
 .markdown-preview-view ol .list-collapse-indicator {
     padding-left: .5em;
     position: relative;

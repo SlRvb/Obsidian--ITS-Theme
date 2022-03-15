@@ -20,13 +20,11 @@
 
 
 /*Show Ligatures*/
-.lig .markdown-preview-section {
-    font-variant-ligatures: unset !important;
-}
-.lig .cm-s-obsidian .HyperMD-list-line, 
-.lig .cm-s-obsidian .CodeMirror-line
-.lig .cm-s-obsidian .cm-line  {
-    font-variant-ligatures: normal;
+.lig {
+    & .cm-s-obsidian .CodeMirror-line,
+    & .cm-s-obsidian .cm-line,
+    & .markdown-preview-section 
+    { font-variant-ligatures: normal; }
 }
 
 

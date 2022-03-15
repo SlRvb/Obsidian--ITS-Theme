@@ -3761,8 +3761,8 @@ input[type=range]::-webkit-slider-thumb {
 .cm-s-obsidian .CodeMirror-line,
 .cm-s-obsidian .cm-line,
 .markdown-preview-section {
-  text-rendering: optimizeLegibility;
   font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
   font-family: var(--default-font);
   line-height: var(--lh);
   color: var(--text-normal);
@@ -9847,12 +9847,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 }
 
 /*Show Ligatures*/
-.lig .markdown-preview-section {
-  font-variant-ligatures: unset !important;
-}
-
-.lig .cm-s-obsidian .HyperMD-list-line,
-.lig .cm-s-obsidian .CodeMirror-line .lig .cm-s-obsidian .cm-line {
+.lig .cm-s-obsidian .CodeMirror-line, .lig .cm-s-obsidian .cm-line, .lig .markdown-preview-section {
   font-variant-ligatures: normal;
 }
 

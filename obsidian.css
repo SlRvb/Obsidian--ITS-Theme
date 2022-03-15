@@ -3805,6 +3805,7 @@ strong {
 }
 
 /*-Code-*/
+.markdown-rendered code,
 code,
 .markdown-preview-view code,
 .markdown-preview-view pre {

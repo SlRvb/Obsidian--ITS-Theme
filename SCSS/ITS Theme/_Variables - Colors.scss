@@ -110,16 +110,22 @@
 
     --sphd-pre-1: #7c2929;
     --sphd-pre-2: #652121;
-    --sphd-pre-3: #571d1d;
+    --sphd-pre-3: #471d1d;
     --sphd-pre-4: #381919;
     --sphd-pre-5: #424c61;
-    --sphd-pre-6: #687286;
-    --sphd-ed-1: #7c2929;
-    --sphd-ed-2: #652121;
-    --sphd-ed-3: #571d1d;
-    --sphd-ed-4: #381919;
-    --sphd-ed-5: #424c61;
-    --sphd-ed-6: #2e333d;
+    --sphd-pre-6: #2e333d;
+    --sphd-ed-1: var(--sphd-pre-1); //#7c2929
+    --sphd-ed-2: var(--sphd-pre-2); //#652121
+    --sphd-ed-3: var(--sphd-pre-3); //#571d1d
+    --sphd-ed-4: var(--sphd-pre-4); //#381919
+    --sphd-ed-5: var(--sphd-pre-5); //#424c61
+    --sphd-ed-6: var(--sphd-pre-6); //#2e333d
+    --h1-b-c: var(--sphd-pre-1);
+    --h2-b-c: var(--sphd-pre-2);
+    --h3-b-c: var(--sphd-pre-3);
+    --h4-b-c: var(--sphd-pre-4);
+    --h5-b-c: var(--sphd-pre-5);
+    --h6-b-c: var(--sphd-pre-6);
 
     --em-pre-c: var(--text);
     --em-ed-c: var(--text);
@@ -249,12 +255,18 @@
     --sphd-pre-4: #662828;
     --sphd-pre-5: #697795;
     --sphd-pre-6: #8a92a3;
-    --sphd-ed-1: #bb5555;
-    --sphd-ed-2: #a53f3f;
-    --sphd-ed-3: #862c2c;
-    --sphd-ed-4: #662828;
-    --sphd-ed-5: #697795;
-    --sphd-ed-6: #8a92a3;
+    --sphd-ed-1: var(--sphd-pre-1);
+    --sphd-ed-2: var(--sphd-pre-2);
+    --sphd-ed-3: var(--sphd-pre-3);
+    --sphd-ed-4: var(--sphd-pre-4);
+    --sphd-ed-5: var(--sphd-pre-5);
+    --sphd-ed-6: var(--sphd-pre-6);
+    --h1-b-c: var(--sphd-pre-1);
+    --h2-b-c: var(--sphd-pre-2);
+    --h3-b-c: var(--sphd-pre-3);
+    --h4-b-c: var(--sphd-pre-4);
+    --h5-b-c: var(--sphd-pre-5);
+    --h6-b-c: var(--sphd-pre-6);
 
     --em-pre-c: var(--text);
     --em-ed-c: var(--text);

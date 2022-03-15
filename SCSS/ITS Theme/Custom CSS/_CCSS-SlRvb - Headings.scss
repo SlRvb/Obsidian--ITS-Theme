@@ -304,8 +304,38 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     }
 
     //& h1 .heading-collapse-indicator { margin-top: -10px; }
-
 }
+.header-borders {
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6,
+    & .HyperMD-header-1,
+    & .HyperMD-header-2,
+    & .HyperMD-header-3,
+    & .HyperMD-header-4,
+    & .HyperMD-header-5,
+    & .HyperMD-header-6 {
+        border-width: var(--h-brdr);
+        border-style: solid;
+    }
+
+    & h1,
+    & .HyperMD-header-1 { border-color: var(--h1-b-c) }
+    & h2,
+    & .HyperMD-header-2 { border-color: var(--h2-b-c) }
+    & h3,
+    & .HyperMD-header-3 { border-color: var(--h3-b-c) }
+    & h4,
+    & .HyperMD-header-4 { border-color: var(--h4-b-c) }
+    & h5,
+    & .HyperMD-header-5 { border-color: var(--h5-b-c) }
+    & h6,
+    & .HyperMD-header-6 { border-color: var(--h6-b-c) }
+}
+
 
 /* Heading Indicators */
 .is-live-preview .HyperMD-header {

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* @settings
 name: ITS Alternate Themes
 id: ITS-AT
@@ -574,9 +573,9 @@ settings:
   --hr-sym: "";
   --hr-f: var(--mdi);
   --embed-h: #c93c3c;
-  --h1: var(--headers);
-  --h2: sandybrown;
-  --h3: var(--embed-h);
+  --h1-c: var(--headers);
+  --h2-c: sandybrown;
+  --h3-c: var(--embed-h);
   background: var(--note);
 }
 
@@ -648,13 +647,13 @@ settings:
   --graph-tag: saddlebrown;
   --sphd-pre-1: var(--accent);
   --sphd-pre-2: var(--accent2);
-  --sphd-pre-3: var(--h3);
+  --sphd-pre-3: var(--h3-c);
   --sphd-pre-4: var(--hr);
   --sphd-pre-5: var(--dark-sidebar);
   --sphd-pre-6: var(--outer-bar);
   --sphd-ed-1: var(--accent);
   --sphd-ed-2: var(--accent2);
-  --sphd-ed-3: var(--h3);
+  --sphd-ed-3: var(--h3-c);
   --sphd-ed-4: var(--hr);
   --sphd-ed-5: var(--dark-sidebar);
   --sphd-ed-6: var(--outer-bar);
@@ -724,13 +723,13 @@ settings:
   --graph-tag: #000000;
   --sphd-pre-1: var(--accent);
   --sphd-pre-2: var(--accent2);
-  --sphd-pre-3: var(--h3);
+  --sphd-pre-3: var(--h3-c);
   --sphd-pre-4: var(--headers);
   --sphd-pre-5: var(--code-text);
   --sphd-pre-6: var(--file);
   --sphd-ed-1: var(--accent);
   --sphd-ed-2: var(--accent2);
-  --sphd-ed-3: var(--h3);
+  --sphd-ed-3: var(--h3-c);
   --sphd-ed-4: var(--headers);
   --sphd-ed-5: var(--code-text);
   --sphd-ed-6: var(--file);
@@ -747,7 +746,7 @@ settings:
   display: block;
   width: 100%;
   height: 4px;
-  background: linear-gradient(to right, var(--h1), transparent);
+  background: linear-gradient(to right, var(--h1-c), transparent);
   left: 0;
 }
 .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) h2:after, .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) .HyperMD-header-2:after,
@@ -759,7 +758,7 @@ settings:
   display: block;
   width: 85%;
   height: 4px;
-  background: linear-gradient(to right, var(--h2), transparent);
+  background: linear-gradient(to right, var(--h2-c), transparent);
   left: 0;
 }
 .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) h3:after, .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) .HyperMD-header-3:after,
@@ -771,7 +770,7 @@ settings:
   display: block;
   width: 70%;
   height: 4px;
-  background: linear-gradient(to right, var(--h3), transparent);
+  background: linear-gradient(to right, var(--h3-c), transparent);
   left: 0;
 }
 
@@ -813,42 +812,42 @@ settings:
 .wotc.hcl h1::after,
 .wotc-beyond .hcl h1::after,
 .wotc-beyond.hcl h1::after {
-  background: linear-gradient(to right, var(--h1), transparent);
+  background: linear-gradient(to right, var(--h1-c), transparent);
 }
 .dnd .hcl h1::before, .dnd.hcl h1::before,
 .wotc .hcl h1::before,
 .wotc.hcl h1::before,
 .wotc-beyond .hcl h1::before,
 .wotc-beyond.hcl h1::before {
-  background: linear-gradient(to left, var(--h1), transparent);
+  background: linear-gradient(to left, var(--h1-c), transparent);
 }
 .dnd .hcl h2::after, .dnd.hcl h2::after,
 .wotc .hcl h2::after,
 .wotc.hcl h2::after,
 .wotc-beyond .hcl h2::after,
 .wotc-beyond.hcl h2::after {
-  background: linear-gradient(to right, var(--h2), transparent);
+  background: linear-gradient(to right, var(--h2-c), transparent);
 }
 .dnd .hcl h2::before, .dnd.hcl h2::before,
 .wotc .hcl h2::before,
 .wotc.hcl h2::before,
 .wotc-beyond .hcl h2::before,
 .wotc-beyond.hcl h2::before {
-  background: linear-gradient(to left, var(--h2), transparent);
+  background: linear-gradient(to left, var(--h2-c), transparent);
 }
 .dnd .hcl h3::after, .dnd.hcl h3::after,
 .wotc .hcl h3::after,
 .wotc.hcl h3::after,
 .wotc-beyond .hcl h3::after,
 .wotc-beyond.hcl h3::after {
-  background: linear-gradient(to right, var(--h3), transparent);
+  background: linear-gradient(to right, var(--h3-c), transparent);
 }
 .dnd .hcl h3::before, .dnd.hcl h3::before,
 .wotc .hcl h3::before,
 .wotc.hcl h3::before,
 .wotc-beyond .hcl h3::before,
 .wotc-beyond.hcl h3::before {
-  background: linear-gradient(to left, var(--h3), transparent);
+  background: linear-gradient(to left, var(--h3-c), transparent);
 }
 
 /*Embed Headings*/
@@ -887,9 +886,9 @@ settings:
   --hr-f: var(--its);
   background: var(--note);
   --embed-h: #c93c3c;
-  --h1: var(--embed-h);
-  --h2: sandybrown;
-  --h3: #642020;
+  --h1-c: var(--embed-h);
+  --h2-c: sandybrown;
+  --h3-c: #642020;
 }
 
 .theme-dark.wotc-beyond,
@@ -2834,7 +2833,3 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --sphd-ed-5: #A48EAD;
   --sphd-ed-6: var(--soft-text);
 }
-
-/* Alternate Color Schemes*/
-
-/*# sourceMappingURL=ITS%20Alt%20Themes.css.map */

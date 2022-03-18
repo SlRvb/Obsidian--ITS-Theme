@@ -84,17 +84,17 @@
     /*--Specific--*/
     /*Fonts*/
     --sphd-pre-ff-1: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-pre-ff-2: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-pre-ff-3: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-pre-ff-4: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-pre-ff-5: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-pre-ff-6: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-ed-ff-1: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-ed-ff-2: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-ed-ff-3: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-ed-ff-4: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-ed-ff-5: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
-    --sphd-ed-ff-6: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-2: var(--sphd-pre-ff-1);
+    --sphd-pre-ff-3: var(--sphd-pre-ff-1);
+    --sphd-pre-ff-4: var(--sphd-pre-ff-1);
+    --sphd-pre-ff-5: var(--sphd-pre-ff-1);
+    --sphd-pre-ff-6: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-1: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-2: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-3: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-4: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-5: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-6: var(--sphd-pre-ff-1);
 
     /*Size*/
     --sphd-pre-fs-1: 34px;
@@ -103,12 +103,12 @@
     --sphd-pre-fs-4: 24px;
     --sphd-pre-fs-5: 20px;
     --sphd-pre-fs-6: 18px;
-    --sphd-ed-fs-1: 34px;
-    --sphd-ed-fs-2: 28px;
-    --sphd-ed-fs-3: 24px;
-    --sphd-ed-fs-4: 22px;
-    --sphd-ed-fs-5: 20px;
-    --sphd-ed-fs-6: 18px;
+    --sphd-ed-fs-1: var(--sphd-pre-fs-1);
+    --sphd-ed-fs-2: var(--sphd-pre-fs-2);
+    --sphd-ed-fs-3: var(--sphd-pre-fs-3);
+    --sphd-ed-fs-4: var(--sphd-pre-fs-4);
+    --sphd-ed-fs-5: var(--sphd-pre-fs-5);
+    --sphd-ed-fs-6: var(--sphd-pre-fs-6);
 
     /**/
     --em-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;

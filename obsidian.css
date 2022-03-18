@@ -1956,17 +1956,17 @@ settings:
   /*--Specific--*/
   /*Fonts*/
   --sphd-pre-ff-1: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-pre-ff-2: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-pre-ff-3: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-pre-ff-4: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-pre-ff-5: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-pre-ff-6: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-ed-ff-1: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-ed-ff-2: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-ed-ff-3: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-ed-ff-4: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-ed-ff-5: "Calisto MT", "Palatino Black", "Suez One", serif;
-  --sphd-ed-ff-6: "Calisto MT", "Palatino Black", "Suez One", serif;
+  --sphd-pre-ff-2: var(--sphd-pre-ff-1);
+  --sphd-pre-ff-3: var(--sphd-pre-ff-1);
+  --sphd-pre-ff-4: var(--sphd-pre-ff-1);
+  --sphd-pre-ff-5: var(--sphd-pre-ff-1);
+  --sphd-pre-ff-6: var(--sphd-pre-ff-1);
+  --sphd-ed-ff-1: var(--sphd-pre-ff-1);
+  --sphd-ed-ff-2: var(--sphd-pre-ff-1);
+  --sphd-ed-ff-3: var(--sphd-pre-ff-1);
+  --sphd-ed-ff-4: var(--sphd-pre-ff-1);
+  --sphd-ed-ff-5: var(--sphd-pre-ff-1);
+  --sphd-ed-ff-6: var(--sphd-pre-ff-1);
   /*Size*/
   --sphd-pre-fs-1: 34px;
   --sphd-pre-fs-2: 30px;
@@ -1974,12 +1974,12 @@ settings:
   --sphd-pre-fs-4: 24px;
   --sphd-pre-fs-5: 20px;
   --sphd-pre-fs-6: 18px;
-  --sphd-ed-fs-1: 34px;
-  --sphd-ed-fs-2: 28px;
-  --sphd-ed-fs-3: 24px;
-  --sphd-ed-fs-4: 22px;
-  --sphd-ed-fs-5: 20px;
-  --sphd-ed-fs-6: 18px;
+  --sphd-ed-fs-1: var(--sphd-pre-fs-1);
+  --sphd-ed-fs-2: var(--sphd-pre-fs-2);
+  --sphd-ed-fs-3: var(--sphd-pre-fs-3);
+  --sphd-ed-fs-4: var(--sphd-pre-fs-4);
+  --sphd-ed-fs-5: var(--sphd-pre-fs-5);
+  --sphd-ed-fs-6: var(--sphd-pre-fs-6);
   /**/
   --em-pre-f: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --em-ed-f: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -4592,6 +4592,7 @@ a.tag {
   margin: 0px 0px;
   cursor: pointer;
   line-height: var(--lh);
+  border-radius: var(--radius);
 }
 
 /*Hover Underline*/
@@ -6032,7 +6033,7 @@ div:not(.w-hcl).writing .HyperMD-header-4::before {
 }
 
 /*--Headings--*/
-h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
+h1, h2, h3, h4, h5, h6, .cm-s-obsidian .HyperMD-header {
   font-weight: var(--f-w-h);
   font-family: var(--font);
   color: var(--headers);
@@ -8917,6 +8918,42 @@ body .fantasy-calendar-create-calendar details[open] {
   border-radius: var(--radius);
 }
 
+.excalidraw.excalidraw.excalidraw {
+  --default-bg-color: var(--note);
+  --input-bg-color: var(--note);
+  --input-border-color: var(--bg);
+  --island-bg-color: var(--note);
+  --button-gray-1: var(--bg);
+  --button-gray-2: var(--bttn);
+  --popup-bg-color: var(--code-bg);
+  --overlay-bg-color: var(--embed-bg);
+  --keybinding-color: var(--soft-text);
+  --input-label-color: var(--text);
+  --icon-fill-color: var(--text);
+  --text-primary-color: var(--text);
+  --color-primary: var(--accent);
+  --color-primary-darker: var(--bttn);
+  --color-primary-darkest: var(--deep-dark-accent);
+  --color-primary-light: var(--accent2);
+  --link-color: var(--accent2-lite);
+  --select-highlight-color: var(--accent);
+  --shadow-island:
+      0 0 0 1px var(--outline),
+      2px 2px 0 var(--outline);
+}
+
+.theme-light .excalidraw {
+  --text: black;
+}
+
+.excalidraw * {
+  border-radius: var(--radius) !important;
+}
+
+.excalidraw.excalidraw .HintViewer {
+  color: var(--text-faint);
+}
+
 /*--Gallery Plugin--*/
 .workspace-leaf-content[data-type=ob-gallery-info] .markdown-preview-view {
   padding: 0.5em;
@@ -9908,32 +9945,32 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   font-family: var(--sphd-pre-ff-6);
   font-size: var(--sphd-pre-fs-6);
 }
-.head-spec .cm-header-1 {
+.head-spec .HyperMD-header-1 {
   color: var(--sphd-ed-1);
   font-family: var(--sphd-ed-ff-1);
   font-size: var(--sphd-ed-fs-1);
 }
-.head-spec .cm-header-2 {
+.head-spec .HyperMD-header-2 {
   color: var(--sphd-ed-2);
   font-family: var(--sphd-ed-ff-2);
   font-size: var(--sphd-ed-fs-2);
 }
-.head-spec .cm-header-3 {
+.head-spec .HyperMD-header-3 {
   color: var(--sphd-ed-3);
   font-family: var(--sphd-ed-ff-3);
   font-size: var(--sphd-ed-fs-3);
 }
-.head-spec .cm-header-4 {
+.head-spec .HyperMD-header-4 {
   color: var(--sphd-ed-4);
   font-family: var(--sphd-ed-ff-4);
   font-size: var(--sphd-ed-fs-4);
 }
-.head-spec .cm-header-5 {
+.head-spec .HyperMD-header-5 {
   color: var(--sphd-ed-5);
   font-family: var(--sphd-ed-ff-5);
   font-size: var(--sphd-ed-fs-5);
 }
-.head-spec .cm-header-6 {
+.head-spec .HyperMD-header-6 {
   color: var(--sphd-ed-6);
   font-family: var(--sphd-ed-ff-6);
   font-size: var(--sphd-ed-fs-6);
@@ -9969,32 +10006,32 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   font-family: var(--sphd-pre-ff-6);
   font-size: var(--sphd-pre-fs-6);
 }
-.head-spec-note .cm-header-1 {
+.head-spec-note .HyperMD-header-1 {
   color: var(--sphd-ed-1);
   font-family: var(--sphd-ed-ff-1);
   font-size: var(--sphd-ed-fs-1);
 }
-.head-spec-note .cm-header-2 {
+.head-spec-note .HyperMD-header-2 {
   color: var(--sphd-ed-2);
   font-family: var(--sphd-ed-ff-2);
   font-size: var(--sphd-ed-fs-2);
 }
-.head-spec-note .cm-header-3 {
+.head-spec-note .HyperMD-header-3 {
   color: var(--sphd-ed-3);
   font-family: var(--sphd-ed-ff-3);
   font-size: var(--sphd-ed-fs-3);
 }
-.head-spec-note .cm-header-4 {
+.head-spec-note .HyperMD-header-4 {
   color: var(--sphd-ed-4);
   font-family: var(--sphd-ed-ff-4);
   font-size: var(--sphd-ed-fs-4);
 }
-.head-spec-note .cm-header-5 {
+.head-spec-note .HyperMD-header-5 {
   color: var(--sphd-ed-5);
   font-family: var(--sphd-ed-ff-5);
   font-size: var(--sphd-ed-fs-5);
 }
-.head-spec-note .cm-header-6 {
+.head-spec-note .HyperMD-header-6 {
   color: var(--sphd-ed-6);
   font-family: var(--sphd-ed-ff-6);
   font-size: var(--sphd-ed-fs-6);

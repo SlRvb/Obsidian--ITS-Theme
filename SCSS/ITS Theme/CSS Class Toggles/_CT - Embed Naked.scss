@@ -26,3 +26,10 @@
 .naked-em .internal-embed:not(.image-embed) {
 	display: inline-flex;
 }
+
+
+/*Fix For Embed Adjustments*/
+.naked-em .internal-embed[alt*="center"] {
+    display: block;
+    margin: auto;
+}

@@ -10228,6 +10228,12 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   display: inline-flex;
 }
 
+/*Fix For Embed Adjustments*/
+.naked-em .internal-embed[alt*=center] {
+  display: block;
+  margin: auto;
+}
+
 /*-Original Embeds-*/
 /*Embed Window*/
 .org-em .markdown-preview-view .markdown-embed,

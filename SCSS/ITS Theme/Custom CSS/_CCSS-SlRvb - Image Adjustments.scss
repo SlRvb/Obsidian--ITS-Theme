@@ -265,6 +265,8 @@ img[alt*="htall"],
 .image-embed[src*="#htall"] img {
     height: var(--tall);
 }
+img[alt*=hfull],
+.internal-embed[src*="#hfull"] img { height: 100%; }
 
 /*Width*/
 img[alt*="wmicro"],
@@ -272,48 +274,43 @@ img[alt*="wmicro"],
 .image-embed[alt*="#wmicro"]::after {
     width: var(--micro); 
 }
-
 img[alt*="wtiny"],
 .image-embed[src*="#wtiny"] img,
 .image-embed[src*="#wtiny"]::after { 
     width: var(--tiny); 
 }
-
 img[alt*="wsmall"],
 .image-embed[src*="#wsmall"] img,
 .image-embed[src*="#wsmall"]::after {
     width: var(--small);
 }
-
 img[alt*="ws-med"],
 .image-embed[src*="#ws-med"] img,
 .image-embed[src*="#ws-med"]::after {
     width: var(--small-med); 
 }
-
 img[alt*="wm-sm"],
 .image-embed[src*="#wm-sm"] img,
 .image-embed[src*="#wm-sm"]::after {
     width: var(--med-small); 
 }
-
 img[alt*="wmed"],
 .image-embed[src*="#wmed"] img,
 .image-embed[src*="#wmed"]::after {
     width: var(--medium); 
 }
-
 img[alt*="wm-tl"],
 .image-embed[src*="#wm-tl"] img,
 .image-embed[src*="#wm-tl"]::after {
     width: var(--med-tall); 
 }
-
 img[alt*="wtall"],
 .image-embed[src*="#wtall"] img,
 .image-embed[src*="#wtall"]::after {
     width: var(--tall); 
 }
+img[alt*=wfull],
+.internal-embed[src*="#wfull"] img { width: 100%; }
 
 
 /*--Image Position--*/

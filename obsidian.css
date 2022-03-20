@@ -1087,6 +1087,11 @@ settings:
         type: variable-text
         default: '⬥'
     - 
+        title: Remove Border List Lines
+        description: Hide Preview border lines on lists.
+        id: h-b-li
+        type: class-toggle
+    - 
         title: 1 Color Bullets & Lines
         description: Bullet and Line colors no longer alternates. Bullet color is set to Accent 2.
         id: bl-c
@@ -1111,9 +1116,29 @@ settings:
         max: 3
         step: 1
     -
+		title: List Styles
+		id: List-Styles
+		type: heading
+		level: 4
+    -
         title: Live Preview Alternate Indent Style
         description: Alternate style to differentiate lists sublevels in edit mode on cm6.
         id: alt-ind
+        type: class-toggle
+    -
+        title: Colorful Bullet Line Color
+        description: Toggle on to use colorful bullet lines
+        id: bul-li-col
+        type: class-toggle
+    -
+        title: Colorful Bullet Color
+        description: Toggle on to use colorful bullets
+        id: bul-col
+        type: class-toggle
+    -
+        title: Neon Lines
+        description: Toggle on for lines to have a neon glow effect
+        id: bul-li-neon
         type: class-toggle
     -
 		title: Colorful Lists
@@ -1121,21 +1146,6 @@ settings:
 		type: heading
 		level: 4
         collapsed: true
-	-
-		title: Colorful Bullet Line Color
-		description: Toggle on to use colorful bullet lines
-		id: bul-li-col
-		type: class-toggle
-    -
-		title: Colorful Bullet Color
-		description: Toggle on to use colorful bullets
-		id: bul-col
-		type: class-toggle
-    -
-		title: Neon Lines
-		description: Toggle on for lines to have a neon glow effect
-		id: bul-li-neon
-		type: class-toggle
 	-
 		title: Bullet Line 1 Color
 		id: b-l-1
@@ -3997,6 +4007,10 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
 }
 
 /*--List--*/
+.cm-s-obsidian .HyperMD-list-line {
+  padding-top: 0;
+}
+
 /*Colored List Markers*/
 li::marker,
 .cm-s-obsidian:not(.mod-cm6) .cm-formatting-list-ul.cm-formatting-list,
@@ -4099,22 +4113,20 @@ ol.contains-task-list li > .task-list-item-checkbox {
   margin-right: 5px;
 }
 
-/*Editor Bullet Lines*/
-.cm-hmd-list-indent .cm-tab {
-  position: relative;
+/*Lines*/
+/*Preview Bullet Lines*/
+.markdown-source-view.mod-cm6 .cm-indent::before, .markdown-source-view.mod-cm6.markdown-rendered li > :is(ul, ol)::before,
+.show-indentation-guide .cm-indent::before,
+.show-indentation-guide.markdown-rendered li > :is(ul, ol)::before {
+  border-color: var(--table);
+  border-width: var(--b-line);
 }
 
 .markdown-source-view.mod-cm6 .cm-indent::before {
-  border-color: var(--table);
-  border-width: var(--b-line);
-  width: 7px;
+  margin-left: 6px;
+  width: 0;
 }
 
-.cm-s-obsidian .HyperMD-list-line {
-  padding-top: 0;
-}
-
-/*Preview Bullet Lines*/
 /*Bullet Line New*/
 li {
   padding-left: 5px;
@@ -4124,6 +4136,10 @@ li {
 
 li:nth-child(even) {
   border-left: var(--b-line) solid var(--accent2);
+}
+
+.h-b-li li {
+  border: none;
 }
 
 /*List Arrows*/
@@ -10680,66 +10696,76 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 }
 
 /*Neon Bullet List Line*/
-/*Neon Edit*/
-.bul-li-neon .cm-hmd-list-indent .cm-tab::before {
+body:not(.h-b-li).bul-li-neon .cm-hmd-list-indent .cm-tab::before {
   box-shadow: -2px 0 20px var(--b-l-1), 6px 0 12px var(--b-l-1);
 }
-
-.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(2):before {
+body:not(.h-b-li).bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(2):before {
   box-shadow: -2px 0 20px var(--b-l-2), 6px 0 12px var(--b-l-2);
 }
-
-.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(3):before {
+body:not(.h-b-li).bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(3):before {
   box-shadow: -2px 0 20px var(--b-l-3), 6px 0 12px var(--b-l-3);
 }
-
-.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(4):before {
+body:not(.h-b-li).bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(4):before {
   box-shadow: -2px 0 20px var(--b-l-4), 6px 0 12px var(--b-l-4);
 }
-
-.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(5):before {
+body:not(.h-b-li).bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(5):before {
   box-shadow: -2px 0 20px var(--b-l-5), 6px 0 12px var(--b-l-5);
 }
-
-.bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(6):before {
+body:not(.h-b-li).bul-li-neon .cm-hmd-list-indent .cm-tab:nth-child(6):before {
   box-shadow: -2px 0 20px var(--b-l-6), 6px 0 12px var(--b-l-6);
 }
-
-/*Neon Preview*/
-.bul-li-neon ul li,
-.bul-li-neon ol li {
+body:not(.h-b-li).bul-li-neon ul li, body:not(.h-b-li).bul-li-neon ol li {
   box-shadow: 0 0 12px var(--b-l-1);
-  clip-path: inset(0px 1px 0.2px -60px);
+  clip-path: inset(0px 1px 0.3px -60px);
 }
-
-.bul-li-neon ul ul li,
-.bul-li-neon ol ol li {
+body:not(.h-b-li).bul-li-neon ul ul li, body:not(.h-b-li).bul-li-neon ol ol li {
   box-shadow: 0 0 12px var(--b-l-2);
   clip-path: inset(0px 1px 0.2px -60px);
 }
-
-.bul-li-neon ul ul ul li,
-.bul-li-neon ol ol ol li {
+body:not(.h-b-li).bul-li-neon ul ul ul li, body:not(.h-b-li).bul-li-neon ol ol ol li {
   box-shadow: 0 0 12px var(--b-l-3);
   clip-path: inset(0px 1px 0.2px -60px);
 }
-
-.bul-li-neon ul ul ul ul li,
-.bul-li-neon ol ol ol ol li {
+body:not(.h-b-li).bul-li-neon ul ul ul ul li, body:not(.h-b-li).bul-li-neon ol ol ol ol li {
   box-shadow: 0 0 12px var(--b-l-4);
   clip-path: inset(0px 1px 0.2px -60px);
 }
-
-.bul-li-neon ul ul ul ul ul li,
-.bul-li-neon ol ol ol ol ol li {
+body:not(.h-b-li).bul-li-neon ul ul ul ul ul li, body:not(.h-b-li).bul-li-neon ol ol ol ol ol li {
   box-shadow: 0 0 12px var(--b-l-5);
   clip-path: inset(0px 1px 0.2px -60px);
 }
-
-.bul-li-neon ul ul ul ul ul ul li,
-.bul-li-neon ol ol ol ol ol ol li {
+body:not(.h-b-li).bul-li-neon ul ul ul ul ul ul li, body:not(.h-b-li).bul-li-neon ol ol ol ol ol ol li {
   box-shadow: 0 0 10px var(--b-l-6);
   clip-path: inset(0px 1px 0.2px -60px);
+}
+
+.bul-li-neon.bul-li-neon {
+  --neon: 0 0 5px;
+  --neon-wide: -2px 0 10px;
+}
+.bul-li-neon.bul-li-neon .cm-indent::before, .bul-li-neon.bul-li-neon :is(ul ul, ol ol)::before {
+  border-color: var(--b-l-1);
+  box-shadow: var(--neon) var(--b-l-1), var(--neon-wide) var(--b-l-1);
+}
+.bul-li-neon.bul-li-neon .cm-indent:nth-child(2)::before, .bul-li-neon.bul-li-neon :is(ul ul ul, ol ol ol)::before {
+  border-color: var(--b-l-2);
+  box-shadow: var(--neon) var(--b-l-2), var(--neon-wide) var(--b-l-2);
+}
+.bul-li-neon.bul-li-neon .cm-indent:nth-child(3)::before, .bul-li-neon.bul-li-neon :is(ul ul ul ul, ol ol ol ol)::before {
+  border-color: var(--b-l-3);
+  box-shadow: var(--neon) var(--b-l-3), var(--neon-wide) var(--b-l-3);
+}
+.bul-li-neon.bul-li-neon .cm-indent:nth-child(4)::before, .bul-li-neon.bul-li-neon :is(ul ul ul ul ul, ol ol ol ol ol)::before {
+  border-color: var(--b-l-4);
+  box-shadow: var(--neon) var(--b-l-4), var(--neon-wide) var(--b-l-4);
+}
+.bul-li-neon.bul-li-neon .cm-indent:nth-child(5)::before, .bul-li-neon.bul-li-neon :is(ul ul ul ul ul ul, ol ol ol ol ol ol)::before {
+  border-color: var(--b-l-5);
+  box-shadow: var(--neon) var(--b-l-5), var(--neon-wide) var(--b-l-5);
+}
+.bul-li-neon.bul-li-neon .cm-indent:nth-child(6)::before, .bul-li-neon.bul-li-neon :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol)::before {
+  border-color: var(--b-l-6);
+  box-shadow: var(--neon) var(--b-l-6), var(--neon-wide) var(--b-l-6);
 }
 
 /*Bullet Line Original (Adjusted)*/

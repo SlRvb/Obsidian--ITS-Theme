@@ -1086,6 +1086,11 @@ settings:
         type: variable-text
         default: '⬥'
     - 
+        title: Remove Border List Lines
+        description: Hide Preview border lines on lists.
+        id: h-b-li
+        type: class-toggle
+    - 
         title: 1 Color Bullets & Lines
         description: Bullet and Line colors no longer alternates. Bullet color is set to Accent 2.
         id: bl-c
@@ -1110,9 +1115,29 @@ settings:
         max: 3
         step: 1
     -
+		title: List Styles
+		id: List-Styles
+		type: heading
+		level: 4
+    -
         title: Live Preview Alternate Indent Style
         description: Alternate style to differentiate lists sublevels in edit mode on cm6.
         id: alt-ind
+        type: class-toggle
+    -
+        title: Colorful Bullet Line Color
+        description: Toggle on to use colorful bullet lines
+        id: bul-li-col
+        type: class-toggle
+    -
+        title: Colorful Bullet Color
+        description: Toggle on to use colorful bullets
+        id: bul-col
+        type: class-toggle
+    -
+        title: Neon Lines
+        description: Toggle on for lines to have a neon glow effect
+        id: bul-li-neon
         type: class-toggle
     -
 		title: Colorful Lists
@@ -1120,21 +1145,6 @@ settings:
 		type: heading
 		level: 4
         collapsed: true
-	-
-		title: Colorful Bullet Line Color
-		description: Toggle on to use colorful bullet lines
-		id: bul-li-col
-		type: class-toggle
-    -
-		title: Colorful Bullet Color
-		description: Toggle on to use colorful bullets
-		id: bul-col
-		type: class-toggle
-    -
-		title: Neon Lines
-		description: Toggle on for lines to have a neon glow effect
-		id: bul-li-neon
-		type: class-toggle
 	-
 		title: Bullet Line 1 Color
 		id: b-l-1

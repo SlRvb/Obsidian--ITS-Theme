@@ -1,6 +1,6 @@
 # Embed Adjustments
 
-> **Embed Adjustments use the same [parameters](Image-Positions#sizing) as the images for resizing it and [moving it](Image-Positions#leftrightcenter).**
+> **Embed Adjustments use the same [parameters](Guide/Image-Positions#sizing) as the images for resizing it and [moving it](Guide/Image-Positions#leftrightcenter).**
 
 # Syntax
 

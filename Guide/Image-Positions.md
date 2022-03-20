@@ -4,7 +4,7 @@
 **⚠ Note:** 
 - Obsidian internal images `![[` will change immediately, but for external images `![]()`, the page needs to be reopened to see the changes. 
 - Might not be 100% compatible with [Lithou's Image Flags snippet.](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)
-- Image grid doesn't quite work with external images `[]()`as nicely as internally linked ones.
+- Image grid doesn't quite work with external images `[]()` as nicely as internally linked ones.
 
 # Syntax
 ```md
@@ -52,7 +52,7 @@ Attribute | Description |
 ---|---|
 `left`| `left` will move the image to the left.
 `right`| `right` will move the image to the right.
-`ctr`| `ctr` will move the image to the center.
+`center`| `center` will move the image to the center.
 
 ![](../Images/Image_Adjustments-Simple-Positions.png)
 
@@ -92,8 +92,9 @@ Attribute | Description |
 
 Attribute | Description |
 ---|---|
-`locl`| `locl` will move the image to the left.
-`locr`| `locr` will move the image to the right.
+`locl`| Move the image to the left.
+`locr`| Move the image to the right.
+`ctr` | Move image to the center.
 
 
 ### Inner Image Position
@@ -102,29 +103,29 @@ Attribute | Description |
 
 Attribute | Description |
 ---|---|
-`pl`| Move inside of the image to the left.
-`pr`| Move inside of the image to the right.
-`pt`| Move inside of the image to the top.
-`pb`| Move inside of the image to the bottom.
-`pc`| Move inside of the image to the center.
+`p+l`| Move inside of the image to the left.
+`p+r`| Move inside of the image to the right.
+`p+t`| Move inside of the image to the top.
+`p+b`| Move inside of the image to the bottom.
+`p+c`| Move inside of the image to the center.
 
 
-> These will inch the images around if the ^ above syntax isn't enough.
+> These will inch the images around if the above syntax isn't enough.
 
 Attribute | Description |
 ---|---|
-`p+cr`| `p+cr` will move the inside of the image to the center right.
-`p+cl`| `p+cl` will move the inside of the image to the center left.
+`p+cr`| Move the inside of the image to the center right.
+`p+cl`| Move the inside of the image to the center left.
 ||
-`p+ct`| `p+ct` will move the inside of the image to the center top of the image.
-`p+cct`| `p+cct` will move the inside of the image to the center top, slightly higher than `p+ct`|
-`p+tc`| `p+tc` will move the inside of the image to the center top, slightly lower than `pt`|
-`p+tcc`| `p+tcc` will move the inside of the image to the center top, slightly lower than `p+tc`|
+`p+ct`| Move the inside of the image to the center top of the image.
+`p+cct`| Move the inside of the image to the center top, slightly higher than `p+ct`|
+`p+tc`| Move the inside of the image to the center top, slightly lower than `pt`|
+`p+tcc`| Move the inside of the image to the center top, slightly lower than `p+tc`|
 ||
-`p+cb`| `p+cb` will move the inside of the image to the center bottom of the image.
-`p+ccb`| `p+ccb` will move the inside of the image to the center bottom, slightly lower than `p+cb`|
-`p+bc`| `p+bc` will move the inside of the image to the center bottom, slightly higher than `pb`|
-`p+bcc`| `p+bcc` will move the inside of the image to the center bottom, slightly higher than `p+bc`|
+`p+cb`| Move the inside of the image to the center bottom of the image.
+`p+ccb`| Move the inside of the image to the center bottom, slightly lower than `p+cb`|
+`p+bc`| Move the inside of the image to the center bottom, slightly higher than `pb`|
+`p+bcc`| Move the inside of the image to the center bottom, slightly higher than `p+bc`|
 
 ### Sizing
 ![](../Images/Image_Adjustments-Custom-Sizing.png)
@@ -138,6 +139,7 @@ Attributes | Resize Image to:  |
 `hmed`| 500px in height.
 `hm-tl`| 600px in height.
 `htall`| 700px in height.
+`hfull` | Expand to the full height of the image or line
 ||
 `wtiny`| 100px in width.
 `wsmall`| 200px in width.
@@ -146,3 +148,4 @@ Attributes | Resize Image to:  |
 `wmed`| 500px in width.
 `wm-tl`| 600px in width.
 `wtall`| 700px in width.
+`wfull` | Expand to the full height of the image or line

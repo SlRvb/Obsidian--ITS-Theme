@@ -25,6 +25,12 @@
 - [N] Note
 - [b] Bookmark
 - [I] Information
+- [p] Paraphrase
+- [L] Location
+- [E] Example
+- [A] Answer
+- [r] Reward
+- [c] Choice
 ```
 
 # Styling

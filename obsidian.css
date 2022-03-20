@@ -4087,7 +4087,7 @@ ul li > p {
 
 /*Adjust Padding*/
 .cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol {
-  margin-left: -0.2em;
+  margin-left: 1px;
 }
 
 .cm-s-obsidian.is-live-preview span.cm-formatting-list-ol {

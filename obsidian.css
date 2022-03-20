@@ -7637,6 +7637,10 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   padding: 0;
   justify-content: center;
 }
+.callout[data-callout*=infobox].is-collapsed .callout-fold {
+  border: 1px solid var(--hr, var(--background-modifier-border));
+  padding: 5px 10px;
+}
 .callout[data-callout*=infobox]:not(:hover):not(.is-collapsed) .callout-title, .callout[data-callout*=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
   display: none;
 }
@@ -7658,13 +7662,14 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   text-align: center;
   margin: 0;
   padding: 2px;
-  color: var(--text-dl, var(--text-on-accent));
+  color: var(--text-normal);
   background: var(--outer-bar, var(--background-secondary));
 }
 
 /*Image Grid*/
 .callout:is([data-callout=grid], [data-callout=masonry]) {
   background: transparent;
+  border: 0;
 }
 .callout:is([data-callout=grid], [data-callout=masonry]) .callout-content {
   display: block;
@@ -7695,6 +7700,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   display: flex;
   margin-block-start: 0;
   margin-block-end: 0;
+  justify-content: center;
 }
 .callout[data-callout=grid] .callout-content img {
   display: table-cell;
@@ -7743,6 +7749,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 .callout[data-callout*=kanban] .callout-title {
   justify-content: center;
   background: var(--outer-bar, var(--background-modifier-cover));
+  color: var(--text-dl, var(--text-on-accent));
   padding: 5px;
 }
 .callout[data-callout*=kanban] .callout-title-inner {
@@ -7769,7 +7776,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   padding: 5px;
   margin: 5px 3px;
   padding-top: 4px;
-  background: var(--note, var(--background-modifier-box-shadow));
+  background: var(--note, var(--background-primary-alt));
   border-radius: var(--kbn-radius);
   box-shadow: var(--item-outline), var(--box-shadow);
 }

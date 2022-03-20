@@ -11,10 +11,11 @@
 
 - [CSS Classes](Guide/CSS-Classes.md)
 - [Asides](Guide/Asides.md)
-- [Alternate Checkboxes](Alternate-Checkboxes.md)
+- [Alternate Checkboxes](Guide/Alternate-Checkboxes.md)
 - [Image Positions/Adjustments](Guide/Image-Positions.md)
 - [Embed Adjustments](Guide/Embed-Adjustments.md)
 - [Alternate Themes](Guide/Alternate-Themes.md)
+- [Callouts](Guide/Callouts.md)
 - [\<i>\</i>](Guide/HTML-I-Attributes.md)
 - [Alternate Admonitions](Guide/Alternate-Admonitions.md)
 - [Folder Styles](Guide/Snippet-Folder-Styles.md)

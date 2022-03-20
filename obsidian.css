@@ -7594,6 +7594,31 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   float: unset;
 }
 
+.callout.callout[data-callout*=wtiny] {
+  width: 20%;
+}
+.callout.callout[data-callout*=wsmall] {
+  width: 30%;
+}
+.callout.callout[data-callout*=ws-med] {
+  width: 40%;
+}
+.callout.callout[data-callout*=wm-sm] {
+  width: 50%;
+}
+.callout.callout[data-callout*=wmed] {
+  width: 60%;
+}
+.callout.callout[data-callout*=wm-tl] {
+  width: 80%;
+}
+.callout.callout[data-callout*=wtall] {
+  width: 95%;
+}
+.callout.callout[data-callout*=wfull] {
+  width: 100%;
+}
+
 /*Callout Sizing*/
 .callout.callout:is([data-callout*=banner], [data-callout*=sban]) {
   width: 100%;

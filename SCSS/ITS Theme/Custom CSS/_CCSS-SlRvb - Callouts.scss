@@ -15,6 +15,16 @@
     margin: auto;
     float: unset;
 }
+.callout.callout {
+    &[data-callout*="wtiny"]    { width: 20%; }
+    &[data-callout*="wsmall"]   { width: 30%; }
+    &[data-callout*="ws-med"]   { width: 40%; }
+    &[data-callout*="wm-sm"]    { width: 50%; }
+    &[data-callout*="wmed"]     { width: 60%; }
+    &[data-callout*="wm-tl"]    { width: 80%; }
+    &[data-callout*="wtall"]    { width: 95%; }
+    &[data-callout*="wfull"]    { width: 100%; }
+}
 
 /*Callout Sizing*/
 .callout.callout:is([data-callout*="banner"], [data-callout*="sban"]) {

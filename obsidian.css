@@ -1087,7 +1087,7 @@ settings:
         type: variable-text
         default: '⬥'
     - 
-        title: Remove Border List Lines
+        title: Remove List Border Lines
         description: Hide Preview border lines on lists.
         id: h-b-li
         type: class-toggle

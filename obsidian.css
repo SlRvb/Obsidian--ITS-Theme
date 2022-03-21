@@ -4500,7 +4500,7 @@ table {
 }
 
 body.dv-tbl-th .table-view-table > thead > tr > th,
-.markdown-preview-view th,
+th,
 .reveal table th {
   background-color: var(--th);
   color: var(--th-text);

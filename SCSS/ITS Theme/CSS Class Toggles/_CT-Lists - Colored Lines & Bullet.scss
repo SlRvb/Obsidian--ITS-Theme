@@ -43,21 +43,6 @@
     & ol ol ol ol ol ol ol::before,
     { border-color: var(--b-l-6); }
 } 
-.bul-col {
-    & :is(ul, ol) .task-list-item-checkbox
-    { border-color: var(--b-l-1); }
-    & :is(ul ul, ol ol) .task-list-item-checkbox
-    { border-color: var(--b-l-2); }
-    & :is(ul ul ul, ol ol ol) .task-list-item-checkbox
-    { border-color: var(--b-l-3); }
-    & :is(ul ul ul ul, ol ol ol ol) .task-list-item-checkbox
-    { border-color: var(--b-l-4); }
-    & :is(ul ul ul ul ul, ol ol ol ol ol) .task-list-item-checkbox
-    { border-color: var(--b-l-5); }
-    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol) .task-list-item-checkbox
-    { border-color: var(--b-l-6); }
-
-} 
 
 
 /*Rainbow Indenation Guides*/
@@ -76,45 +61,49 @@
 }
 
 /*Colored Bullets*/
-.bul-col .HyperMD-list-line-1 .list-bullet:after,
-.bul-col .HyperMD-list-line-1 .cm-formatting-list:before,
-.bul-col ul li::before,
-.bul-col ol li::marker
-{ color: var(--b-l-1); }
-.bul-col ul .task-list-item-checkbox:checked { background: var(--b-l-1); }
+.bul-col.bul-col {
+    //Checklists
+    & :is(ul, ol, .HyperMD-list-line-1) .task-list-item-checkbox
+    {   border-color: var(--b-l-1); 
+        &:checked { background: var(--b-l-1); }
+    }
+    & :is(ul ul, ol ol, .HyperMD-list-line-2) .task-list-item-checkbox
+    {   border-color: var(--b-l-2); 
+        &:checked { background: var(--b-l-2); }
+    }
+    
+    & :is(ul ul ul, ol ol ol, .HyperMD-list-line-3) .task-list-item-checkbox
+    {   border-color: var(--b-l-3); 
+        &:checked { background: var(--b-l-3); }
+    }
+    & :is(ul ul ul ul, ol ol ol ol, .HyperMD-list-line-4) .task-list-item-checkbox
+    {   border-color: var(--b-l-4); 
+        &:checked { background: var(--b-l-4); }
+    }
+    & :is(ul ul ul ul ul, ol ol ol ol ol, .HyperMD-list-line-5) .task-list-item-checkbox
+    {   border-color: var(--b-l-5); 
+        &:checked { background: var(--b-l-5); }
+    }
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol, .HyperMD-list-line-6) .task-list-item-checkbox
+    {   border-color: var(--b-l-6); 
+        &:checked { background: var(--b-l-6); }
+    }
+    
 
-.bul-col .HyperMD-list-line-2 .list-bullet:after,
-.bul-col .HyperMD-list-line-2 .cm-formatting-list:before,
-.bul-col ul ul li::before,
-.bul-col ol ol li::marker 
-{ color: var(--b-l-2); }
-.bul-col ul ul .task-list-item-checkbox:checked { background: var(--b-l-2); }
-
-.bul-col .HyperMD-list-line-3 .list-bullet:after,
-.bul-col .HyperMD-list-line-3 .cm-formatting-list:before,
-.bul-col ul ul ul li::before,
-.bul-col ol ol ol li::marker 
-{ color: var(--b-l-3); }
-.bul-col ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-3); }
-
-.bul-col .HyperMD-list-line-4 .list-bullet:after,
-.bul-col .HyperMD-list-line-4 .cm-formatting-list:before,
-.bul-col ul ul ul ul li::before,
-.bul-col ol ol ol ol li::marker 
-{ color: var(--b-l-4); }
-.bul-col ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-4); }
-
-.bul-col .HyperMD-list-line-5 .list-bullet:after,
-.bul-col .HyperMD-list-line-5 .cm-formatting-list:before,
-.bul-col .HyperMD-list-line-5 .cm-formatting-list,
-.bul-col ul ul ul ul ul li::before,
-.bul-col ol ol ol ol ol li::marker 
-{ color: var(--b-l-5); }
-.bul-col ul ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-5); }
-
-.bul-col .HyperMD-list-line-6 .list-bullet:after,
-.bul-col .HyperMD-list-line-6 .cm-formatting-list:before,
-.bul-col ul ul ul ul ul ul li::before,
-.bul-col ol ol ol ol ol ol li::marker 
-{ color: var(--b-l-6); }
-.bul-col ul ul ul ul ul ul .task-list-item-checkbox:checked { background: var(--b-l-6); }
+    //Lists
+    & .HyperMD-list-line-1 .list-bullet:after,
+    & .HyperMD-list-line-1 .cm-formatting-list:before,
+    & ul li::before,
+    & ol li::marker
+    { color: var(--b-l-1); }
+    & .HyperMD-list-line-2 .list-bullet:after,
+    & .HyperMD-list-line-2 .cm-formatting-list:before,
+    & ul ul li::before,
+    & ol ol li::marker 
+    { color: var(--b-l-2); }
+    & .HyperMD-list-line-3 .list-bullet:after,
+    & .HyperMD-list-line-3 .cm-formatting-list:before,
+    & ul ul ul li::before,
+    & ol ol ol li::marker 
+    { color: var(--b-l-3); }
+} 

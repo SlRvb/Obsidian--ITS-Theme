@@ -90,15 +90,19 @@
 
 
 /*Hide Bullet List Line*/
-.h-b-li li { border: none !important; }
-
-//Alternate Checkbox Aligment Adjustments
-.h-b-li.h-b-li .task-list-item-checkbox 
-{ margin-right: 5px; }
-.h-b-li ul > li.task-list-item .task-list-item-checkbox 
-{ margin-left: -21px; }
-
-.h-b-li li.task-list-item {
-    padding-left: 2px;
-    margin-left: 3px;
-}
+.h-b-li {
+    & li { border: none !important; }
+    
+    //Alternate Checkbox Aligment Adjustments
+    & li.task-list-item-checkbox,
+    & li.task-list-item input[type=checkbox]
+    { margin-right: 5px; }
+    
+    & ul > li.task-list-item .task-list-item-checkbox 
+    { margin-left: -21px; }
+    & li.task-list-item {
+        padding-left: 2px;
+        margin-left: 3px;
+        margin-right: 0px;
+    }
+} 

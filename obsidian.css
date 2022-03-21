@@ -4059,10 +4059,6 @@ ul, ol {
   padding-inline-start: 25px;
 }
 
-ul > li.task-list-item .task-list-item-checkbox {
-  margin-left: -27px;
-}
-
 .markdown-preview-view ol > li.task-list-item {
   padding-left: 10px;
 }
@@ -4074,6 +4070,11 @@ ul li.task-list-item > p {
 
 ul li > p {
   margin-block-end: unset;
+}
+
+.markdown-preview-view .task-list-item-checkbox.task-list-item-checkbox,
+.task-list-item input[type=checkbox], li.task-list-item {
+  margin-right: 0.3em;
 }
 
 /*Editor Bullet Points*/
@@ -4095,17 +4096,25 @@ ul li > p {
   margin-right: 0;
 }
 
-.markdown-source-view.mod-cm6 .list-bullet {
-  padding-right: 9px;
+.markdown-source-view.mod-cm6:not(.is-live-preview) .list-bullet {
+  padding-right: 0.55em;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .list-bullet {
+  padding-right: 0.45em;
+}
+
+.markdown-rendered.show-indentation-guide ol li.task-list-item > ol::before {
+  left: -20px;
 }
 
 /*Adjust Padding*/
 .cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol {
-  margin-left: 1px;
+  margin-left: 0;
 }
 
 .cm-s-obsidian.is-live-preview span.cm-formatting-list-ol {
-  padding-left: 5px;
+  padding-right: 0.3em;
 }
 
 ol.contains-task-list li > .task-list-item-checkbox {
@@ -4123,7 +4132,7 @@ ol.contains-task-list li > .task-list-item-checkbox {
 }
 
 .markdown-source-view.mod-cm6 .cm-indent::before {
-  margin-left: 6px;
+  margin-left: 0.35em;
   width: 0;
 }
 
@@ -10728,69 +10737,42 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 }
 
 /*Colored Bullet Lines*/
-.bul-li-col ul > li,
-.bul-li-col ul ul,
-.bul-li-col ul ul::before,
-.bul-li-col ol > li,
-.bul-li-col ol,
-.bul-li-col ol ol::before,
-.bul-col ul .task-list-item-checkbox {
-  border-color: var(--b-l-1) !important;
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(1):before, .bul-li-col :is(ul, ol) > li, .bul-li-col :is(ul ul, ol ol), .bul-li-col ul ul::before, .bul-li-col ol ol::before {
+  border-color: var(--b-l-1);
+}
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(2):before, .bul-li-col :is(ul ul, ol ol) > li, .bul-li-col :is(ul ul ul, ol ol ol), .bul-li-col ul ul ul::before, .bul-li-col ol ol ol::before {
+  border-color: var(--b-l-2);
+}
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(3):before, .bul-li-col :is(ul ul ul, ol ol ol) > li, .bul-li-col :is(ul ul ul ul, ol ol ol ol), .bul-li-col ul ul ul ul::before, .bul-li-col ol ol ol ol::before {
+  border-color: var(--b-l-3);
+}
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(4):before, .bul-li-col :is(ul ul ul ul, ol ol ol ol) > li, .bul-li-col :is(ul ul ul ul ul, ol ol ol ol ol), .bul-li-col ul ul ul ul ul::before, .bul-li-col ol ol ol ol ol::before {
+  border-color: var(--b-l-4);
+}
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(5):before, .bul-li-col :is(ul ul ul ul ul, ol ol ol ol ol) > li, .bul-li-col :is(ul ul ul ul ul ul, ol ol ol ol ol ol), .bul-li-col ul ul ul ul ul ul::before, .bul-li-col ol ol ol ol ol ol::before {
+  border-color: var(--b-l-5);
+}
+.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(6):before, .bul-li-col :is(ul ul ul ul ul ul, ol ol ol ol ol ol) > li, .bul-li-col :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol), .bul-li-col ul ul ul ul ul ul ul::before, .bul-li-col ol ol ol ol ol ol ol::before {
+  border-color: var(--b-l-6);
 }
 
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(2):before,
-.bul-li-col ul ul > li,
-.bul-li-col ul ul ul,
-.bul-li-col ul ul ul::before,
-.bul-li-col ol ol > li,
-.bul-li-col ol ol,
-.bul-li-col ol ol::before,
-.bul-col ul ul .task-list-item-checkbox {
-  border-color: var(--b-l-2) !important;
+.bul-col :is(ul, ol) .task-list-item-checkbox {
+  border-color: var(--b-l-1);
 }
-
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(3):before,
-.bul-li-col ul ul ul > li,
-.bul-li-col ul ul ul ul,
-.bul-li-col ul ul ul ul::before,
-.bul-li-col ol ol ol > li,
-.bul-li-col ol ol ol,
-.bul-li-col ol ol ol::before,
-.bul-col ul ul ul .task-list-item-checkbox {
-  border-color: var(--b-l-3) !important;
+.bul-col :is(ul ul, ol ol) .task-list-item-checkbox {
+  border-color: var(--b-l-2);
 }
-
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(4):before,
-.bul-li-col ul ul ul ul > li,
-.bul-li-col ul ul ul ul ul,
-.bul-li-col ul ul ul ul ul::before,
-.bul-li-col ol ol ol ol > li,
-.bul-li-col ol ol ol ol,
-.bul-li-col ol ol ol ol::before,
-.bul-col ul ul ul ul .task-list-item-checkbox {
-  border-color: var(--b-l-4) !important;
+.bul-col :is(ul ul ul, ol ol ol) .task-list-item-checkbox {
+  border-color: var(--b-l-3);
 }
-
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(5):before,
-.bul-li-col ul ul ul ul ul > li,
-.bul-li-col ul ul ul ul ul ul,
-.bul-li-col ul ul ul ul ul ul::before,
-.bul-li-col ol ol ol ol ol > li,
-.bul-li-col ol ol ol ol ol ol,
-.bul-li-col ol ol ol ol ol::before,
-.bul-col ul ul ul ul ul .task-list-item-checkbox {
-  border-color: var(--b-l-5) !important;
+.bul-col :is(ul ul ul ul, ol ol ol ol) .task-list-item-checkbox {
+  border-color: var(--b-l-4);
 }
-
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(6):before,
-.bul-li-col ul ul ul ul ul ul > li,
-.bul-li-col ul ul ul ul ul ul ul,
-.bul-li-col ul ul ul ul ul ul ul::before,
-.bul-li-col ol ol ol ol ol ol > li,
-.bul-li-col ol ol ol ol ol ol,
-.bul-li-col ol ol ol ol ol ol::before,
-.bul-col ul ul ul ul ul ul .task-list-item-checkbox {
-  border-color: var(--b-l-6) !important;
+.bul-col :is(ul ul ul ul ul, ol ol ol ol ol) .task-list-item-checkbox {
+  border-color: var(--b-l-5);
+}
+.bul-col :is(ul ul ul ul ul ul, ol ol ol ol ol ol) .task-list-item-checkbox {
+  border-color: var(--b-l-6);
 }
 
 /*Rainbow Indenation Guides*/
@@ -11030,10 +11012,7 @@ body:not(.h-b-li).bul-li-neon ul ul ul ul ul ul li, body:not(.h-b-li).bul-li-neo
 }
 
 /*Bullet Line Original (Adjusted)*/
-.b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li,
-.b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li,
-.b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li:nth-child(even),
-.b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li:nth-child(even) {
+.b-li-o .markdown-preview-view:not(.k-o) :is(ul, ol):not(table .dataview) li:nth-child(even) {
   border-left: none;
 }
 

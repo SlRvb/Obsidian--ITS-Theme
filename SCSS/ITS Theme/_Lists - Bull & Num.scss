@@ -38,12 +38,8 @@ ol ul > li::before { visibility: visible; }
 ul, ol { 
     padding-inline-start: 25px;
 }
-ul > li.task-list-item .task-list-item-checkbox {
-    margin-left: -27px;
-}
-.markdown-preview-view ol > li.task-list-item {
-    padding-left: 10px;
-}
+// ul > li.task-list-item .task-list-item-checkbox { margin-left: -27px; }
+.markdown-preview-view ol > li.task-list-item { padding-left: 10px; }
 // .markdown-preview-view ul > li.task-list-item { list-style: none; }
 
 
@@ -51,7 +47,10 @@ ul > li.task-list-item .task-list-item-checkbox {
 ul li.task-list-item > p { margin-block-end: unset; }
 ul li > p { margin-block-end: unset; }
 
-
+.markdown-preview-view .task-list-item-checkbox.task-list-item-checkbox,
+.task-list-item input[type=checkbox], li.task-list-item {
+    margin-right: .3em;
+}
 
 
 /*Editor Bullet Points*/
@@ -70,17 +69,17 @@ ul li > p { margin-block-end: unset; }
 // Live Preview List Alignment
 .markdown-source-view.mod-cm6 .list-bullet::after
 { padding-left: 0; margin-right: 0; }
-.markdown-source-view.mod-cm6 .list-bullet {
-    padding-right: 9px;
+.markdown-source-view.mod-cm6:not(.is-live-preview) .list-bullet { padding-right: .55em; }
+.markdown-source-view.mod-cm6.is-live-preview .list-bullet { padding-right: .45em; }
+
+//Numbered Checklist
+.markdown-rendered.show-indentation-guide ol li.task-list-item > ol::before {
+    left: -20px;
 }
 
 /*Adjust Padding*/
-.cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol {
-    margin-left: 1px;
-}
-.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol {
-    padding-left: 5px;
-}
+.cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol { margin-left: 0; }
+.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol { padding-right: .3em; }
 // Fix for Numbered Lists sub ol with numbered checkbox
 ol.contains-task-list li > .task-list-item-checkbox {
     margin-left: -5px;
@@ -99,9 +98,10 @@ ol.contains-task-list li > .task-list-item-checkbox {
     }
 }
 .markdown-source-view.mod-cm6 .cm-indent::before {
-   margin-left: 6px;
+   margin-left: .35em;
    width: 0;
 }
+
 
 /*Bullet Line New*/
 li {

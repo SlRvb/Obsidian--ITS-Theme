@@ -1,58 +1,64 @@
 
 /*Colored Bullet Lines*/
-.bul-li-col ul > li,
-.bul-li-col ul ul,
-.bul-li-col ul ul::before,
-.bul-li-col ol > li, 
-.bul-li-col ol, 
-.bul-li-col ol ol::before,
-.bul-col ul .task-list-item-checkbox
-{ border-color: var(--b-l-1) !important; }
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(2):before,
-.bul-li-col ul ul > li, 
-.bul-li-col ul ul ul, 
-.bul-li-col ul ul ul::before,
-.bul-li-col ol ol > li, 
-.bul-li-col ol ol,
-.bul-li-col ol ol::before,
-.bul-col ul ul .task-list-item-checkbox
-{ border-color: var(--b-l-2) !important; }
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(3):before,
-.bul-li-col ul ul ul > li, 
-.bul-li-col ul ul ul ul,
-.bul-li-col ul ul ul ul::before,
-.bul-li-col ol ol ol > li, 
-.bul-li-col ol ol ol,
-.bul-li-col ol ol ol::before,
-.bul-col ul ul ul .task-list-item-checkbox
-{ border-color: var(--b-l-3) !important; }
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(4):before,
-.bul-li-col ul ul ul ul > li, 
-.bul-li-col ul ul ul ul ul,
-.bul-li-col ul ul ul ul ul::before,
-.bul-li-col ol ol ol ol > li, 
-.bul-li-col ol ol ol ol,
-.bul-li-col ol ol ol ol::before,
-.bul-col ul ul ul ul .task-list-item-checkbox
-{ border-color: var(--b-l-4) !important; }
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(5):before,
-.bul-li-col ul ul ul ul ul > li, 
-.bul-li-col ul ul ul ul ul ul,
-.bul-li-col ul ul ul ul ul ul::before,
-.bul-li-col ol ol ol ol ol > li, 
-.bul-li-col ol ol ol ol ol ol,
-.bul-li-col ol ol ol ol ol::before,
-.bul-col ul ul ul ul ul .task-list-item-checkbox
-{ border-color: var(--b-l-5) !important; }
-.bul-li-col .cm-hmd-list-indent .cm-tab:nth-child(6):before,
-.bul-li-col ul ul ul ul ul ul > li, 
-.bul-li-col ul ul ul ul ul ul ul,
-.bul-li-col ul ul ul ul ul ul ul::before,
-.bul-li-col ol ol ol ol ol ol > li,
-.bul-li-col ol ol ol ol ol ol,
-.bul-li-col ol ol ol ol ol ol::before,
-.bul-col ul ul ul ul ul ul .task-list-item-checkbox
-{ border-color: var(--b-l-6) !important; }
+.bul-li-col {
+    & .cm-hmd-list-indent .cm-tab:nth-child(1):before,
+    & :is(ul, ol) > li,
+    & :is(ul ul, ol ol),
+    & ul ul::before,
+    & ol ol::before
+    { border-color: var(--b-l-1); }
+
+    & .cm-hmd-list-indent .cm-tab:nth-child(2):before,
+    & :is(ul ul, ol ol) > li, 
+    & :is(ul ul ul, ol ol ol),
+    & ul ul ul::before,
+    & ol ol ol::before
+    { border-color: var(--b-l-2); }
+
+    & .cm-hmd-list-indent .cm-tab:nth-child(3):before,
+    & :is(ul ul ul, ol ol ol) > li, 
+    & :is(ul ul ul ul, ol ol ol ol),
+    & ul ul ul ul::before,
+    & ol ol ol ol::before
+    { border-color: var(--b-l-3); }
+    
+    & .cm-hmd-list-indent .cm-tab:nth-child(4):before,
+    & :is(ul ul ul ul, ol ol ol ol) > li, 
+    & :is(ul ul ul ul ul, ol ol ol ol ol),
+    & ul ul ul ul ul::before,
+    & ol ol ol ol ol::before
+    { border-color: var(--b-l-4); }
+    
+    & .cm-hmd-list-indent .cm-tab:nth-child(5):before,
+    & :is(ul ul ul ul ul, ol ol ol ol ol) > li, 
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol),
+    & ul ul ul ul ul ul::before,
+    & ol ol ol ol ol ol::before,
+    { border-color: var(--b-l-5); }
+    
+    & .cm-hmd-list-indent .cm-tab:nth-child(6):before,
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol) > li, 
+    & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol),
+    & ul ul ul ul ul ul ul::before,
+    & ol ol ol ol ol ol ol::before,
+    { border-color: var(--b-l-6); }
+} 
+.bul-col {
+    & :is(ul, ol) .task-list-item-checkbox
+    { border-color: var(--b-l-1); }
+    & :is(ul ul, ol ol) .task-list-item-checkbox
+    { border-color: var(--b-l-2); }
+    & :is(ul ul ul, ol ol ol) .task-list-item-checkbox
+    { border-color: var(--b-l-3); }
+    & :is(ul ul ul ul, ol ol ol ol) .task-list-item-checkbox
+    { border-color: var(--b-l-4); }
+    & :is(ul ul ul ul ul, ol ol ol ol ol) .task-list-item-checkbox
+    { border-color: var(--b-l-5); }
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol) .task-list-item-checkbox
+    { border-color: var(--b-l-6); }
+
+} 
+
 
 /*Rainbow Indenation Guides*/
 .bul-li-col.ig-lists .HyperMD-list-line  {

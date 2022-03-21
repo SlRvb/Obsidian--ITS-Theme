@@ -1,9 +1,8 @@
 /*Bullet Line Original (Adjusted)*/
-.b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li,
-.b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li,
-.b-li-o .markdown-preview-view:not(.k-o) ul:not(table .dataview) li:nth-child(even),
-.b-li-o .markdown-preview-view:not(.k-o) ol:not(table .dataview) li:nth-child(even) {
-    border-left: none;
+.b-li-o {
+    & .markdown-preview-view:not(.k-o) :is(ul, ol):not(table .dataview) li {
+        &:nth-child(even) { border-left: none; }
+    }
 }
 
 .b-li-o .markdown-preview-view:not(.kanban):not(.k-o) ol ul,

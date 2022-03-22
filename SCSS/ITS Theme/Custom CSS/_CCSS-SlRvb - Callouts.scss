@@ -1,11 +1,11 @@
 
 /*Callout Positioning*/
-.callout.callout:is([data-callout*="p+l"], [data-callout*="left"])  { 
+:not(.is-live-preview) .callout.callout:is([data-callout*="p+l"], [data-callout*="left"])  { 
     float: left; 
     margin: unset;
     margin-right: 8px;
 }
-.callout.callout:is([data-callout*="p+r"], [data-callout*="right"]) { 
+:not(.is-live-preview) .callout.callout:is([data-callout*="p+r"], [data-callout*="right"]) { 
     float: right;
     margin: unset;
     margin-left: 8px;
@@ -39,7 +39,7 @@
 
 /*Caption Adjustments*/
 //No Header
-.callout:is([data-callout*="nt"], [data-callout*="no-title"]) .callout-title { display: none; }
+.callout:is([data-callout*="no-t"], [data-callout*="no-title"]) .callout-title { display: none; }
 //No Table Header
 .callout:is([data-callout*="n-th"], [data-callout*="no-table-header"]) {
     & th { display: none; }
@@ -53,6 +53,10 @@
 /*--Callout Types--*/
 
 /*Infobox*/
+:is(.is-mobile, .is-live-preview) .callout[data-callout*="infobox"] { 
+    float: unset !important; 
+    max-width: 100%; 
+}
 .callout[data-callout*="infobox"] {
     --tbl-w: 26vh;
     --callout-color: var(--interactive-accent-rgb);
@@ -106,6 +110,16 @@
         color: var(--text-normal);
         background: var(--outer-bar, var(--background-secondary)); 
     }
+    //Image 
+    & p,
+    & .internal-embed,
+    & img
+    { 
+        margin: auto;
+        padding: auto;
+        text-align: center; 
+    }
+
 }
 
 /*Image Grid*/

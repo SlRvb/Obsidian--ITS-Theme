@@ -1,253 +1,262 @@
 /*Callout Positioning*/
-.callout.callout:is([data-callout*="p+l"], [data-callout*=left]) {
-    float: left;
-    margin: unset;
-    margin-right: 8px;
-  }
-  
-  .callout.callout:is([data-callout*="p+r"], [data-callout*=right]) {
-    float: right;
-    margin: unset;
-    margin-left: 8px;
-  }
-  
-  .callout.callout:is([data-callout*=ctr], [data-callout*=center]) {
-    display: block;
-    margin: auto;
-    float: unset;
-  }
-  
-  .callout.callout[data-callout*=wtiny] {
-    width: 20%;
-  }
-  .callout.callout[data-callout*=wsmall] {
-    width: 30%;
-  }
-  .callout.callout[data-callout*=ws-med] {
-    width: 40%;
-  }
-  .callout.callout[data-callout*=wm-sm] {
-    width: 50%;
-  }
-  .callout.callout[data-callout*=wmed] {
-    width: 60%;
-  }
-  .callout.callout[data-callout*=wm-tl] {
-    width: 80%;
-  }
-  .callout.callout[data-callout*=wtall] {
-    width: 95%;
-  }
-  .callout.callout[data-callout*=wfull] {
-    width: 100%;
-  }
-  
-  /*Callout Sizing*/
-  .callout.callout:is([data-callout*=banner], [data-callout*=sban]) {
-    width: 100%;
-    max-width: unset;
-  }
-  .callout.callout:is([data-callout*=banner], [data-callout*=sban]) :is(.internal-embed, img) {
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  /*Caption Adjustments*/
-  .callout:is([data-callout*=nt], [data-callout*=no-title]) .callout-title {
-    display: none;
-  }
-  
-  .callout:is([data-callout*=n-th], [data-callout*=no-table-header]) th {
-    display: none;
-  }
-  .callout:is([data-callout*=n-th], [data-callout*=no-table-header]) table {
-    margin-bottom: 5px;
-  }
-  
-  .callout[data-callout*=t-w] table td {
-    width: calc(var(--tbl-w) / 2);
-  }
-  
-  /*--Callout Types--*/
-  /*Infobox*/
-  .callout[data-callout*=infobox] {
-    --tbl-w: 26vh;
-    --callout-color: var(--interactive-accent-rgb);
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-    margin: 0;
-    margin-left: 8px;
-    max-width: var(--tbl-w);
-    float: right;
-  }
-  .callout[data-callout*=infobox] .callout-title {
-    padding: 0;
-    justify-content: center;
-  }
-  .callout[data-callout*=infobox].is-collapsed .callout-fold {
-    border: 1px solid var(--hr, var(--background-modifier-border));
-    padding: 5px 10px;
-  }
-  .callout[data-callout*=infobox]:not(:hover):not(.is-collapsed) .callout-title, .callout[data-callout*=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
-    display: none;
-  }
-  .callout[data-callout*=infobox] .callout-content {
-    padding: 1px;
-    border: 1px solid var(--table, var(--background-modifier-border));
-    margin: 0;
-  }
-  .callout[data-callout*=infobox] table {
-    width: 100%;
-  }
-  .callout[data-callout*=infobox] :is(p, table) {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin: 0;
-  }
-  .callout[data-callout*=infobox] :is(h1, h2, h3, h4, h5, h6) {
-    font-size: 20px;
-    text-align: center;
-    margin: 0;
-    padding: 2px;
-    color: var(--text-normal);
-    background: var(--outer-bar, var(--background-secondary));
-  }
-  
-  /*Image Grid*/
-  .callout:is([data-callout=grid], [data-callout=masonry]) {
-    background: transparent;
-    border: 0;
-  }
-  .callout:is([data-callout=grid], [data-callout=masonry]) .callout-content {
-    display: block;
-    width: 100%;
-    border: 0;
-    box-shadow: unset;
-    padding: 0;
-  }
-  .callout:is([data-callout=grid], [data-callout=masonry]) .callout-title {
-    display: none;
-  }
-  
-  .callout[data-callout=masonry] .callout-content p {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, auto));
-    grid-gap: 2px;
-    margin: 0;
-    margin-top: 5px;
-  }
-  .callout[data-callout=masonry] .callout-content img {
-    display: flex;
-    flex: 1;
-    align-self: stretch;
-    object-fit: cover;
-  }
-  
-  .callout[data-callout=grid] .callout-content p {
-    display: flex;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    justify-content: center;
-  }
-  .callout[data-callout=grid] .callout-content img {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 1px;
-    max-height: 35vh;
-  }
-  .callout[data-callout=grid] .callout-content img[alt=wfull] {
-    max-height: unset;
-  }
-  
-  /*Captions*/
-  .callout[data-callout*=caption] {
-    background: transparent;
-    text-align: center;
-    box-shadow: none;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    margin-top: -10px;
-    max-width: 30vh;
-  }
-  .callout[data-callout*=caption] .callout-title {
-    display: none;
-  }
-  .callout[data-callout*=caption] p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    color: var(--text-faint);
-  }
-  
-  /*Kanban*/
-  .callout[data-callout*=kanban] {
-    --callout-color: var(--text-normal);
-    --callout-icon: layout-dashboard;
-    --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
-    --box-shadow: 0 0 5px var(--outline, var(--background-modifier-box-shadow));
-    --kbn-radius: var(--radius, 3px);
-    --lane-width: 250px;
-    background: transparent;
-    box-shadow: none;
-    border: 0;
-    width: auto;
-    padding: 0;
-  }
-  .callout[data-callout*=kanban] .callout-title {
-    justify-content: center;
-    background: var(--outer-bar, var(--background-modifier-cover));
-    color: var(--text-dl, var(--text-on-accent));
-    padding: 5px;
-  }
-  .callout[data-callout*=kanban] .callout-title-inner {
-    flex: unset;
-  }
-  .callout[data-callout*=kanban] .callout-content {
-    padding: 0;
-  }
-  .callout[data-callout*=kanban] ul li::marker, .callout[data-callout*=kanban] ul li::before, .callout[data-callout*=kanban] ul::before, .callout[data-callout*=kanban] :is(ul, ul ul) .list-collapse-indicator {
-    list-style-type: none;
-    color: transparent;
-    display: none !important;
-  }
-  .callout[data-callout*=kanban] ul {
-    display: flex;
-    padding-inline-start: 0;
-    margin-block-start: 5px;
-    text-align: center;
-    overflow: auto;
-  }
-  .callout[data-callout*=kanban] ul li {
-    min-width: var(--lane-width);
-    border: 0;
-    padding: 5px;
-    margin: 5px 3px;
-    padding-top: 4px;
-    background: var(--note, var(--background-primary-alt));
-    border-radius: var(--kbn-radius);
-    box-shadow: var(--item-outline), var(--box-shadow);
-  }
-  .callout[data-callout*=kanban] ul ul {
-    flex-direction: column;
-    text-align: left;
-    overflow: unset;
-  }
-  .callout[data-callout*=kanban] ul ul li {
-    min-width: calc(var(--lane-width) / 2);
-    padding: 5px;
-    box-shadow: var(--item-outline);
-    background: var(--code-bg, var(--background-primary));
-  }
-  .callout[data-callout*=kanban] ul ul li :is(img, .internal-embed) {
-    margin-bottom: -6px;
-  }
-  .callout[data-callout*=kanban] ul.contains-task-list {
-    padding-inline-start: 20px;
-  }
-  .callout[data-callout*=kanban] .task-list-item-checkbox {
-    cursor: default;
-  }
-  
-  /*# sourceMappingURL=S%20-%20Callouts.css.map */
-  
+:not(.is-live-preview) .callout.callout:is([data-callout*="p+l"], [data-callout*=left]) {
+  float: left;
+  margin: unset;
+  margin-right: 8px;
+}
+
+:not(.is-live-preview) .callout.callout:is([data-callout*="p+r"], [data-callout*=right]) {
+  float: right;
+  margin: unset;
+  margin-left: 8px;
+}
+
+.callout.callout:is([data-callout*=ctr], [data-callout*=center]) {
+  display: block;
+  margin: auto;
+  float: unset;
+}
+
+.callout.callout[data-callout*=wtiny] {
+  width: 20%;
+}
+.callout.callout[data-callout*=wsmall] {
+  width: 30%;
+}
+.callout.callout[data-callout*=ws-med] {
+  width: 40%;
+}
+.callout.callout[data-callout*=wm-sm] {
+  width: 50%;
+}
+.callout.callout[data-callout*=wmed] {
+  width: 60%;
+}
+.callout.callout[data-callout*=wm-tl] {
+  width: 80%;
+}
+.callout.callout[data-callout*=wtall] {
+  width: 95%;
+}
+.callout.callout[data-callout*=wfull] {
+  width: 100%;
+}
+
+/*Callout Sizing*/
+.callout.callout:is([data-callout*=banner], [data-callout*=sban]) {
+  width: 100%;
+  max-width: unset;
+}
+.callout.callout:is([data-callout*=banner], [data-callout*=sban]) :is(.internal-embed, img) {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Caption Adjustments*/
+.callout:is([data-callout*=no-t], [data-callout*=no-title]) .callout-title {
+  display: none;
+}
+
+.callout:is([data-callout*=n-th], [data-callout*=no-table-header]) th {
+  display: none;
+}
+.callout:is([data-callout*=n-th], [data-callout*=no-table-header]) table {
+  margin-bottom: 5px;
+}
+
+.callout[data-callout*=t-w] table td {
+  width: calc(var(--tbl-w) / 2);
+}
+
+/*--Callout Types--*/
+/*Infobox*/
+:is(.is-mobile, .is-live-preview) .callout[data-callout*=infobox] {
+  float: unset !important;
+  max-width: 100%;
+}
+
+.callout[data-callout*=infobox] {
+  --tbl-w: 26vh;
+  --callout-color: var(--interactive-accent-rgb);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  margin-left: 8px;
+  max-width: var(--tbl-w);
+  float: right;
+}
+.callout[data-callout*=infobox] .callout-title {
+  padding: 0;
+  justify-content: center;
+}
+.callout[data-callout*=infobox].is-collapsed .callout-fold {
+  border: 1px solid var(--hr, var(--background-modifier-border));
+  padding: 5px 10px;
+}
+.callout[data-callout*=infobox]:not(:hover):not(.is-collapsed) .callout-title, .callout[data-callout*=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
+  display: none;
+}
+.callout[data-callout*=infobox] .callout-content {
+  padding: 1px;
+  border: 1px solid var(--table, var(--background-modifier-border));
+  margin: 0;
+}
+.callout[data-callout*=infobox] table {
+  width: 100%;
+}
+.callout[data-callout*=infobox] :is(p, table) {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0;
+}
+.callout[data-callout*=infobox] :is(h1, h2, h3, h4, h5, h6) {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 2px;
+  color: var(--text-normal);
+  background: var(--outer-bar, var(--background-secondary));
+}
+.callout[data-callout*=infobox] p, .callout[data-callout*=infobox] .internal-embed, .callout[data-callout*=infobox] img {
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+/*Image Grid*/
+.callout:is([data-callout=grid], [data-callout=masonry]) {
+  background: transparent;
+  border: 0;
+}
+.callout:is([data-callout=grid], [data-callout=masonry]) .callout-content {
+  display: block;
+  width: 100%;
+  border: 0;
+  box-shadow: unset;
+  padding: 0;
+}
+.callout:is([data-callout=grid], [data-callout=masonry]) .callout-title {
+  display: none;
+}
+
+.callout[data-callout=masonry] .callout-content p {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  grid-gap: 2px;
+  margin: 0;
+  margin-top: 5px;
+}
+.callout[data-callout=masonry] .callout-content img {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  object-fit: cover;
+}
+
+.callout[data-callout=grid] .callout-content p {
+  display: flex;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  justify-content: center;
+}
+.callout[data-callout=grid] .callout-content img {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 1px;
+  max-height: 35vh;
+}
+.callout[data-callout=grid] .callout-content img[alt=wfull] {
+  max-height: unset;
+}
+
+/*Captions*/
+.callout[data-callout*=caption] {
+  background: transparent;
+  text-align: center;
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  margin-top: -10px;
+  max-width: 30vh;
+}
+.callout[data-callout*=caption] .callout-title {
+  display: none;
+}
+.callout[data-callout*=caption] p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: var(--text-faint);
+}
+
+/*Kanban*/
+.callout[data-callout*=kanban] {
+  --callout-color: var(--text-normal);
+  --callout-icon: layout-dashboard;
+  --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
+  --box-shadow: 0 0 5px var(--outline, var(--background-modifier-box-shadow));
+  --kbn-radius: var(--radius, 3px);
+  --lane-width: 250px;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  width: auto;
+  padding: 0;
+}
+.callout[data-callout*=kanban] .callout-title {
+  justify-content: center;
+  background: var(--outer-bar, var(--background-modifier-cover));
+  color: var(--text-dl, var(--text-on-accent));
+  padding: 5px;
+}
+.callout[data-callout*=kanban] .callout-title-inner {
+  flex: unset;
+}
+.callout[data-callout*=kanban] .callout-content {
+  padding: 0;
+}
+.callout[data-callout*=kanban] ul li::marker, .callout[data-callout*=kanban] ul li::before, .callout[data-callout*=kanban] ul::before, .callout[data-callout*=kanban] :is(ul, ul ul) .list-collapse-indicator {
+  list-style-type: none;
+  color: transparent;
+  display: none !important;
+}
+.callout[data-callout*=kanban] ul {
+  display: flex;
+  padding-inline-start: 0;
+  margin-block-start: 5px;
+  text-align: center;
+  overflow: auto;
+}
+.callout[data-callout*=kanban] ul li {
+  min-width: var(--lane-width);
+  border: 0;
+  padding: 5px;
+  margin: 5px 3px;
+  padding-top: 4px;
+  background: var(--note, var(--background-primary-alt));
+  border-radius: var(--kbn-radius);
+  box-shadow: var(--item-outline), var(--box-shadow);
+}
+.callout[data-callout*=kanban] ul ul {
+  flex-direction: column;
+  text-align: left;
+  overflow: unset;
+}
+.callout[data-callout*=kanban] ul ul li {
+  min-width: calc(var(--lane-width) / 2);
+  padding: 5px;
+  box-shadow: var(--item-outline);
+  background: var(--code-bg, var(--background-primary));
+}
+.callout[data-callout*=kanban] ul ul li :is(img, .internal-embed) {
+  margin-bottom: -6px;
+}
+.callout[data-callout*=kanban] ul.contains-task-list {
+  padding-inline-start: 20px;
+}
+.callout[data-callout*=kanban] .task-list-item-checkbox {
+  cursor: default;
+}
+
+/*# sourceMappingURL=S%20-%20Callouts.css.map */

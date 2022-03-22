@@ -7596,13 +7596,13 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 }
 
 /*Callout Positioning*/
-.callout.callout:is([data-callout*="p+l"], [data-callout*=left]) {
+:not(.is-live-preview) .callout.callout:is([data-callout*="p+l"], [data-callout*=left]) {
   float: left;
   margin: unset;
   margin-right: 8px;
 }
 
-.callout.callout:is([data-callout*="p+r"], [data-callout*=right]) {
+:not(.is-live-preview) .callout.callout:is([data-callout*="p+r"], [data-callout*=right]) {
   float: right;
   margin: unset;
   margin-left: 8px;
@@ -7650,7 +7650,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 }
 
 /*Caption Adjustments*/
-.callout:is([data-callout*=nt], [data-callout*=no-title]) .callout-title {
+.callout:is([data-callout*=no-t], [data-callout*=no-title]) .callout-title {
   display: none;
 }
 
@@ -7667,6 +7667,11 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 
 /*--Callout Types--*/
 /*Infobox*/
+:is(.is-mobile, .is-live-preview) .callout[data-callout*=infobox] {
+  float: unset !important;
+  max-width: 100%;
+}
+
 .callout[data-callout*=infobox] {
   --tbl-w: 26vh;
   --callout-color: var(--interactive-accent-rgb);
@@ -7709,6 +7714,11 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   padding: 2px;
   color: var(--text-normal);
   background: var(--outer-bar, var(--background-secondary));
+}
+.callout[data-callout*=infobox] p, .callout[data-callout*=infobox] .internal-embed, .callout[data-callout*=infobox] img {
+  margin: auto;
+  padding: auto;
+  text-align: center;
 }
 
 /*Image Grid*/

@@ -21,8 +21,8 @@ Type | Description |
 
 | Abbr. | Full Title | Description|
 |---|---|---|
-| `nt` | `no-title` | Hides callout title
+| `no-t` | `no-title` | Hides callout title
 | `n-th` |`no-table-header` | Hides table header in callouts
 
 
-> **Callouts uses the same [parameters](Guide/Image-Positions#sizing) as the images for resizing (width-wise) and [moving it](Guide/Image-Positions#leftrightcenter).**
+> **Callouts uses the same [parameters](Image-Positions#sizing) as the images for resizing (width-wise) and [moving it](Image-Positions#leftrightcenter).**

@@ -878,9 +878,15 @@ settings:
         id: no-m
         type: class-toggle
     -
-        title: Notion Style
-        id: ntn
-        type: class-toggle
+        title: Frontmatter Text
+        description: Adjust size for frontmatter in Source Mode.
+        id: frnt-text
+        type: variable-number-slider
+        format: em
+        default: 1
+        min: .5
+        max: 2
+        step: .1
     -
         title: Links
         id: links

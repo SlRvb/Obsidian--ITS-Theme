@@ -879,9 +879,15 @@ settings:
         id: no-m
         type: class-toggle
     -
-        title: Notion Style
-        id: ntn
-        type: class-toggle
+        title: Frontmatter Text
+        description: Adjust size for frontmatter in Source Mode.
+        id: frnt-text
+        type: variable-number-slider
+        format: em
+        default: 1
+        min: .5
+        max: 2
+        step: .1
     -
         title: Links
         id: links
@@ -1949,6 +1955,7 @@ settings:
   --f-s-ui: 16px;
   --f-s-sb: 16px;
   --f-s-nt: 16px;
+  --frnt-text: var(--f-s-text);
   --h-brdr: 2px;
   --f-w-h: 600;
   --h-line: 100%;
@@ -4648,6 +4655,10 @@ a.tag:hover {
 .frontmatter-container .tag:hover {
   background-color: var(--tag);
   border: none;
+}
+
+.cm-hmd-frontmatter {
+  font-size: var(--frnt-text);
 }
 
 /*--Embeds--*/

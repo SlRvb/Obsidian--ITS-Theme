@@ -11,6 +11,12 @@
 body:not(.dv-th-size) .table-view-table > thead > tr > th {
     font-size: larger;
 }
+body.dv-tbl-th .table-view-table > thead > tr > th {
+    background-color: var(--th);
+    color: var(--th-text);
+    border-bottom: none;
+    font-family: var(--default-font);
+}
 
 .table-view-table.table-view-table > tbody > tr > td {
     word-wrap: normal;
@@ -23,6 +29,9 @@ body:not(.dv-th-size) .table-view-table > thead > tr > th {
     word-wrap: normal;
     white-space: pre-wrap;
 }
+
+// Inner Table List
+.table-view-table .dataview-result-list-li
 
 
 /*Inline Bracket Syntax*/

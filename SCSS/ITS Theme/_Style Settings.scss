@@ -937,6 +937,15 @@ settings:
         id: t-w
         type: class-toggle
     -
+        title: Disable Dataview Header Larger Font Size
+        id: dv-th-size
+        type: class-toggle
+    -
+        title: Dataview Regular Table Header Styling
+        description: Match dataview table headers with default ITS table styling
+        id: dv-tbl-th
+        type: class-toggle
+    -
         title: Table Header Adjustments
         id: table-headers
         type: heading
@@ -976,15 +985,6 @@ settings:
         min: 100
         max: 900
         step: 100
-    -
-        title: Disable Dataview Header Larger Font Size
-        id: dv-th-size
-        type: class-toggle
-    -
-        title: Dataview Regular Table Header Styling
-        description: Match dataview table headers with default ITS table styling
-        id: dv-tbl-th
-        type: class-toggle
     -
         title: Table Cell Adjustments
         id: table-cells

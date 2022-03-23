@@ -1,0 +1,12 @@
+.callout {
+    border-radius: var(--radius);
+    
+    & a,
+    & .internal-link,
+    & .external-link
+    { text-decoration: none; }
+}
+.callout-fold svg {
+    margin-top: 4px;
+    margin-bottom: -4px;
+}

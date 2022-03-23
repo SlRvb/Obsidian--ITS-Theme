@@ -54,3 +54,41 @@
     padding-right: .3em !important;
     border-radius: var(--radius) !important;
 }
+
+// Pane View
+.workspace-leaf-content[data-type="style-settings"] .view-content {
+    padding: 20px;
+
+}
+.view-content .style-settings-container.style-settings-container .setting-item:not(.setting-item-heading) {
+    flex-direction: row;
+}
+
+
+//Style Settings ITS Styling
+.style-settings-heading .style-settings-collapse-indicator::after {
+    font-family: var(--its);
+    padding-left: 10px;
+    font-weight: 100;
+}
+.style-settings-heading[data-id="ITS"] .style-settings-collapse-indicator::after {
+    content: '\E817';
+}
+.style-settings-heading[data-id="Text-CSS"] .style-settings-collapse-indicator::after {
+    content: '\E80D';
+}
+.style-settings-heading[data-id="WS-CSS"] .style-settings-collapse-indicator::after {
+    content: '\E805';
+}
+.style-settings-heading[data-id="Other-Note"] .style-settings-collapse-indicator::after {
+    content: '\E804';
+}
+.style-settings-heading[data-id="Other Colors"] .style-settings-collapse-indicator::after {
+    content: '\EC10';
+}
+.style-settings-heading[data-id="Plugins"] .style-settings-collapse-indicator::after {
+    content: '\EC06';
+}
+.style-settings-heading[data-id="Alt-Color-Scheme"] .style-settings-collapse-indicator::after {
+    content: '\E860';
+}

@@ -108,8 +108,8 @@ img:is([alt*="ctr"], [alt*="center"]),
 /*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
-.popover.hover-popover,
-.view-content > :not(.is-live-preview) {
+body .popover.hover-popover,
+body span:not(.is-live-preview) {
     & img,
     & .image-embed {
         &[alt*="left"],

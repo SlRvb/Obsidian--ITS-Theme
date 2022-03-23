@@ -146,13 +146,25 @@ img[alt*=ctr],
 /*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
-.view-content > :not(.is-live-preview) .image-embed[alt*=left], .view-content > :not(.is-live-preview) .image-embed[src*="#left"], .view-content > :not(.is-live-preview) .image-embed[alt*=locl], .view-content > :not(.is-live-preview) .image-embed[src*="#locl"] img {
+body .popover.hover-popover img[alt*=left], body .popover.hover-popover img[alt*=locl], body .popover.hover-popover img[src*="#locl"] img, body .popover.hover-popover .image-embed[alt*=left], body .popover.hover-popover .image-embed[alt*=locl], body .popover.hover-popover .image-embed[src*="#locl"] img,
+body span:not(.is-live-preview) img[alt*=left],
+body span:not(.is-live-preview) img[alt*=locl],
+body span:not(.is-live-preview) img[src*="#locl"] img,
+body span:not(.is-live-preview) .image-embed[alt*=left],
+body span:not(.is-live-preview) .image-embed[alt*=locl],
+body span:not(.is-live-preview) .image-embed[src*="#locl"] img {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.view-content > :not(.is-live-preview) .image-embed[alt*=right], .view-content > :not(.is-live-preview) .image-embed[src*="#right"], .view-content > :not(.is-live-preview) .image-embed[alt*=locr], .view-content > :not(.is-live-preview) .image-embed[src*="#locr"] img {
+body .popover.hover-popover img[alt*=right], body .popover.hover-popover img[alt*=locr], body .popover.hover-popover img[src*="#locr"] img, body .popover.hover-popover .image-embed[alt*=right], body .popover.hover-popover .image-embed[alt*=locr], body .popover.hover-popover .image-embed[src*="#locr"] img,
+body span:not(.is-live-preview) img[alt*=right],
+body span:not(.is-live-preview) img[alt*=locr],
+body span:not(.is-live-preview) img[src*="#locr"] img,
+body span:not(.is-live-preview) .image-embed[alt*=right],
+body span:not(.is-live-preview) .image-embed[alt*=locr],
+body span:not(.is-live-preview) .image-embed[src*="#locr"] img {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;

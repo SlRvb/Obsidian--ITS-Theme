@@ -95,9 +95,8 @@ img[alt*="circle"] {
 }
 
 /*Center Image*/
-img[alt*="ctr"],
-.image-embed[src*="#ctr"],
-.image-embed[src*="#center"]
+img:is([alt*="ctr"], [alt*="center"]),
+.image-embed:is([src*="#ctr"], [src*="#center"]),
 .image-embed[alt*="center"],
 .imgctr img {
     display:block;
@@ -222,12 +221,9 @@ img[alt*="profile+tall"],
 /*-Image Sizing-*/
 
 /*Fit image within bounds WITHOUT stretching*/
-img[alt*="cover"], 
-.image-embed[src*="#cover"], 
-span.image-embed[src*="#cover"] img,
-img[alt*="cvr"],
-.image-embed[src*="#cvr"], 
-span.image-embed[src*="#cvr"] img {
+img:is([alt*="cover"], [alt*="cvr"]), 
+.image-embed:is([src*="#cover"], [src*="#cvr"]), 
+span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
     object-fit: cover;
 }
 

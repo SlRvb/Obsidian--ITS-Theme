@@ -130,6 +130,12 @@ img:is([alt*="ctr"], [alt*="center"]),
             margin-left: 2%;
             margin-bottom: 0px;
         }
+        &[alt*="block"] {
+            float: unset !important;
+            display: block;
+        }
+        &:is([alt*="block+right"], [alt*="block+locr"]) { margin-left: auto; }
+        &:is([alt*="block+left"],  [alt*="block+locl"])  { margin-right: auto; }
     }
 }
 

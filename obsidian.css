@@ -5314,6 +5314,22 @@ img:is([alt*=ctr], [alt*=center]),
   margin-left: 2%;
   margin-bottom: 0px;
 }
+.popover.hover-popover img[alt*=block], .popover.hover-popover .image-embed[alt*=block],
+.view-content > :not(.is-live-preview) img[alt*=block],
+.view-content > :not(.is-live-preview) .image-embed[alt*=block] {
+  float: unset !important;
+  display: block;
+}
+.popover.hover-popover img:is([alt*="block+right"], [alt*="block+locr"]), .popover.hover-popover .image-embed:is([alt*="block+right"], [alt*="block+locr"]),
+.view-content > :not(.is-live-preview) img:is([alt*="block+right"], [alt*="block+locr"]),
+.view-content > :not(.is-live-preview) .image-embed:is([alt*="block+right"], [alt*="block+locr"]) {
+  margin-left: auto;
+}
+.popover.hover-popover img:is([alt*="block+left"], [alt*="block+locl"]), .popover.hover-popover .image-embed:is([alt*="block+left"], [alt*="block+locl"]),
+.view-content > :not(.is-live-preview) img:is([alt*="block+left"], [alt*="block+locl"]),
+.view-content > :not(.is-live-preview) .image-embed:is([alt*="block+left"], [alt*="block+locl"]) {
+  margin-right: auto;
+}
 
 /*Image Shapes*/
 /*Banners*/
@@ -5670,7 +5686,7 @@ img[alt*=sprf] {
   margin-right: 0.5em;
 }
 
-.internal-embed:not(.image-embed)[alt*=center] {
+.internal-embed[alt*=center] {
   margin: auto;
 }
 

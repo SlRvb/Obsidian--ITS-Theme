@@ -8,6 +8,8 @@ Type | Description |
 `[!kanban]` | Displays a (functionally limited) kanban board
 `[!grid]` | Best type of image grid for internally linked images
 `[!masonry]` | Best type of image grid for externally linked images
+`[!recite]` | A D&D styled popout 
+`[!metadata]` | Styled callout that colors \*\*bold\*\* words, table headers, and inline dataview keys blue
 
 
 #### Adjustments

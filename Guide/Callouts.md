@@ -24,5 +24,12 @@ Type | Description |
 | `no-t` | `no-title` | Hides callout title
 | `n-th` |`no-table-header` | Hides table header in callouts
 
+---
+> **Yaml css classes** to style different on per page basis
+
+| cssclass | Description |
+|---|---|
+| `alt-co` | Alternate Callout Styling, use callout color as background color
+| `co-ttl-ctr` | Center callout titles
 
 > **Callouts uses the same [parameters](Image-Positions#sizing) as the images for resizing (width-wise) and [moving it](Image-Positions#leftrightcenter).**

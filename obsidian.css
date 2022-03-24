@@ -7887,8 +7887,7 @@ body {
 }
 .callout.callout[data-callout*=kanban] .callout-title {
   justify-content: center;
-  background: var(--background-modifier-cover);
-  color: var(--text-dl, var(--text-on-accent));
+  background: var(--background-primary-alt);
   padding: 5px;
   border-radius: var(--radius, var(--co-radius));
 }

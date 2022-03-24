@@ -338,7 +338,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
 
 
 /* Heading Indicators */
-.is-live-preview .HyperMD-header {
+body:not(.hd-indi) .is-live-preview .HyperMD-header {
     &::before,
     & .cm-fold-indicator
     { float: left; }

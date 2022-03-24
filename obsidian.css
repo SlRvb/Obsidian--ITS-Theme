@@ -447,6 +447,10 @@ settings:
         id: hash-top
         type: class-toggle
     -
+        title: Hide Header Indicator
+        id: hd-indi
+        type: class-toggle
+    -
         title: Undo Mini Header Hash Styling
         description: Header hash matches header font size and matches color.
         id: hash-reg
@@ -6412,32 +6416,32 @@ h4::after, .HyperMD-header-4::after {
 }
 
 /* Heading Indicators */
-.is-live-preview .HyperMD-header::before, .is-live-preview .HyperMD-header .cm-fold-indicator {
+body:not(.hd-indi) .is-live-preview .HyperMD-header::before, body:not(.hd-indi) .is-live-preview .HyperMD-header .cm-fold-indicator {
   float: left;
 }
-.is-live-preview .HyperMD-header::before {
+body:not(.hd-indi) .is-live-preview .HyperMD-header::before {
   font-family: var(--font-monospace);
   color: var(--footnote);
   font-size: 12px;
   padding-top: 2px;
   margin-left: -30px;
 }
-.is-live-preview .HyperMD-header.HyperMD-header-1::before {
+body:not(.hd-indi) .is-live-preview .HyperMD-header.HyperMD-header-1::before {
   content: "H1";
 }
-.is-live-preview .HyperMD-header.HyperMD-header-2::before {
+body:not(.hd-indi) .is-live-preview .HyperMD-header.HyperMD-header-2::before {
   content: "H2";
 }
-.is-live-preview .HyperMD-header.HyperMD-header-3::before {
+body:not(.hd-indi) .is-live-preview .HyperMD-header.HyperMD-header-3::before {
   content: "H3";
 }
-.is-live-preview .HyperMD-header.HyperMD-header-4::before {
+body:not(.hd-indi) .is-live-preview .HyperMD-header.HyperMD-header-4::before {
   content: "H4";
 }
-.is-live-preview .HyperMD-header.HyperMD-header-5::before {
+body:not(.hd-indi) .is-live-preview .HyperMD-header.HyperMD-header-5::before {
   content: "H5";
 }
-.is-live-preview .HyperMD-header.HyperMD-header-6::before {
+body:not(.hd-indi) .is-live-preview .HyperMD-header.HyperMD-header-6::before {
   content: "H6";
 }
 

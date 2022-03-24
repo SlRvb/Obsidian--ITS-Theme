@@ -1342,6 +1342,21 @@ settings:
         min: 8
         max: 20
         step: 1
+    -
+        title: Callouts
+        id: its-callouts
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Alternate Callout Styling
+        description: Simplistic callout styling applying the callout color as the background color
+        id: alt-co
+        type: class-toggle
+    - 
+        title: Center Callout Titles
+        id: co-ttl-ctr
+        type: class-toggle
     - 
         title: Colors
         id: Other Colors

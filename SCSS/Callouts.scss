@@ -1,1 +1,38 @@
+/*@settings
+name: Alternate Callouts
+id: alternate-callouts
+settings:
+    -
+        title: Alternate Callout Styling
+        description: Simplistic callout styling applying the callout color as the background color
+        id: alt-co
+        type: class-toggle
+    - 
+        title: Center Callout Titles
+        id: co-ttl-ctr
+        type: class-toggle
+    -
+        title: Callout Border Radius
+        description: Adjust how round or not round the callout corners are.
+        id: co-radius
+        type: variable-number-slider
+        default: 7
+        format: px
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Kanban Callout Border Radius
+        description: Adjust how round or not round the Kanban callout's list items corners are.
+        id: kbn-radius
+        type: variable-number-slider
+        default: 3
+        format: px
+        min: 0
+        max: 20
+        step: 1
+*/
+
+
+
 @use 'ITS Theme/Custom CSS/CCSS-SlRvb - Callouts' as CO;

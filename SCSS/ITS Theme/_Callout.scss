@@ -1,5 +1,6 @@
 .callout {
     border-radius: var(--radius);
+    background: var(--background-secondary);
     
     & a,
     & .internal-link,
@@ -7,6 +8,5 @@
     { text-decoration: none; }
 }
 .callout-fold svg {
-    margin-top: 4px;
-    margin-bottom: -4px;
+    margin-bottom: -3px;
 }

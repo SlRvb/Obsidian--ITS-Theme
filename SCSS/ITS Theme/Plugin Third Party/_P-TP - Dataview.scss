@@ -31,11 +31,13 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 }
 
 // Inner Table List
-.table-view-table .dataview-result-list-li
+.table-view-table .dataview-result-list-li {
+    margin-left: 10px;
+}
 
 
 /*Inline Bracket Syntax*/
-body .dataview.inline-field-standalone-value {
+.dataview.dataview.inline-field-standalone-value {
     padding-left: 0;
     padding-right: 0;
     display: inline;
@@ -44,19 +46,19 @@ body .dataview.inline-field-standalone-value {
     background-color: transparent;
 }
 
-body .dataview.inline-field-key,
-body .dataview.inline-field-value {
+.dataview.dataview.inline-field-key,
+.dataview.dataview.inline-field-value {
     border-radius: var(--radius);
     font-family: inherit;
     font-weight: bold;
     padding: 0 10px;
 }
-body .dataview.inline-field-key { 
+.dataview.dataview.inline-field-key { 
     background-color: var(--bttn);
     color: var(--text-dl);
 }
-body .dataview.inline-field-value { background-color: var(--td); }
-body .dataview.inline-field-value a.tag:first-child { display: none; }
+.dataview.dataview.inline-field-value { background-color: var(--td); }
+.dataview.dataview.inline-field-value a.tag:first-child { display: none; }
 
 
 

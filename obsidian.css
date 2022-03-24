@@ -1208,6 +1208,10 @@ settings:
         title: Disable Alternate Checkboxes
         id: alt-chkbx-off
         type: class-toggle
+    -
+        title: Pre v0.14 Checkbox Alignment Fix
+        id: pre-v14
+        type: class-toggle
     - 
         title: Colorful Task Text
         description: Add color to the text of the task.
@@ -4273,6 +4277,16 @@ input[type=checkbox i] {
 input[type=checkbox]:checked {
   margin: 0, 0, 0, 0;
   background-color: var(--accent);
+}
+
+.pre-v14 ul > li.task-list-item .task-list-item-checkbox {
+  margin-left: 0px;
+}
+.pre-v14 ul > li.task-list-item p .task-list-item-checkbox {
+  margin-left: -26px;
+}
+.pre-v14 ul.contains-task-list li.task-list-item .task-list-item-checkbox {
+  margin-right: 7px;
 }
 
 /*--Blockquote--*/

@@ -72,3 +72,11 @@ input[type="checkbox"]:checked {
     background-color: var(--accent);
 }
 
+
+.pre-v14 {
+    & ul > li.task-list-item .task-list-item-checkbox { margin-left: 0px; }
+    & ul > li.task-list-item p .task-list-item-checkbox { margin-left: -26px; }
+    & ul.contains-task-list li.task-list-item .task-list-item-checkbox {
+        margin-right: 7px;
+    }
+} 

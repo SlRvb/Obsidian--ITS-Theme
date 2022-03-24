@@ -163,6 +163,7 @@ body {
   background: transparent;
   border: 0;
   margin: 0;
+  box-shadow: none;
 }
 .callout.callout:is([data-callout=grid], [data-callout=masonry]) .callout-content {
   display: block;

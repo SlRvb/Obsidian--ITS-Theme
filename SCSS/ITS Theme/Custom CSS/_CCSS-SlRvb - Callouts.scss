@@ -162,6 +162,7 @@ body {
     background: transparent;
     border: 0;
     margin: 0; 
+    box-shadow: none;
 
     & .callout-content {
         display: block;
@@ -239,7 +240,6 @@ body {
 
     --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
     --box-shadow: 0 0 5px var(--outline, var(--background-modifier-box-shadow));
-    
 
     --lane-width: 250px;
     

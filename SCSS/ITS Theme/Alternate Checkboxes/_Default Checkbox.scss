@@ -32,7 +32,7 @@ body:not(.alt-chkbx-off) {
         [data-task="r"],
         [data-task="c"]
             ) {
-            & .task-list-item-checkbox,
+            & > .task-list-item-checkbox,
             & input:is([type=checkbox], [type=checkbox i]):checked,
             & input:is([type=checkbox], [type=checkbox i]):checked::before {
 

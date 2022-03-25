@@ -108,6 +108,8 @@ li {
     padding-left: 5px;
     border-left: var(--b-line) solid var(--accent);
     line-height: var(--lh);
+    color: var(--text-normal);
+    font-weight: initial;
 }
 li:nth-child(even) {
     border-left: var(--b-line) solid var(--accent2);

@@ -4170,6 +4170,8 @@ li {
   padding-left: 5px;
   border-left: var(--b-line) solid var(--accent);
   line-height: var(--lh);
+  color: var(--text-normal);
+  font-weight: initial;
 }
 
 li:nth-child(even) {
@@ -6850,7 +6852,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) .task-list-item-checkbox, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=c]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -6919,7 +6921,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) .task-list-item-checkbox, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=c]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],

@@ -4292,12 +4292,11 @@ input[type=checkbox]:checked {
 }
 
 /*--Blockquote--*/
-.reveal blockquote,
-.markdown-preview-view blockquote {
-  display: flow-root;
-  border: 0px solid var(--bg);
+:is(.markdown-preview-view, .reveal) blockquote {
+  display: flex;
+  border: 0px;
   background-color: var(--embed-bg);
-  border-left-width: 8px;
+  border-left: 8px solid var(--bg);
   border-radius: var(--radius);
   position: relative;
   margin: 1em;
@@ -4310,19 +4309,22 @@ input[type=checkbox]:checked {
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   background-color: var(--embed-bg);
   border-color: var(--bg);
-  padding-top: 5px;
-  padding-right: 7px;
+  border-left: 8px solid var(--bg);
+  padding: 7px 20px;
+  padding-right: 15px;
   box-shadow: 2px 2px 0 var(--td);
 }
-
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover {
   border-color: var(--hr);
 }
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote {
+  padding-top: 0;
+  padding-bottom: 7px;
+}
 
 /*Quotation Mark*/
-.reveal blockquote:before,
-.markdown-preview-view blockquote:before,
-.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {
+:is(.markdown-preview-view, .reveal) blockquote:before,
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
   content: "”";
   font-family: var(--font);
   color: var(--headers);
@@ -4336,7 +4338,7 @@ input[type=checkbox]:checked {
   right: 1.2em;
 }
 
-.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
   float: right;
   padding-top: 5px;
   padding-left: 1.3em;
@@ -4444,7 +4446,7 @@ table .markdown-embed-content > .markdown-preview-view blockquote {
 /*--Blockquote Adjustments--*/
 /*Turn b into a blockquote without the quotations*/
 .markdown-preview-view b {
-  display: flow-root;
+  display: flex;
   border: 0px solid var(--lines);
   background-color: var(--outer-bar);
   border-left-width: 8px;
@@ -9090,7 +9092,8 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 }
 
 .table-view-table .dataview-result-list-li {
-  margin-left: 10px;
+  margin-left: 15px;
+  padding: 0;
 }
 
 /*Inline Bracket Syntax*/
@@ -9132,6 +9135,10 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 .dv .dataview-ul {
   list-style-type: none;
   margin-inline-start: -32px;
+}
+
+.dv .table-view-table .dataview-result-list-li {
+  margin-left: 0;
 }
 
 /*Dim First Column Link*/
@@ -10076,6 +10083,15 @@ body.ig-code .HyperMD-codeblock .ig-tab::before {
 /*Emoji Toolbar*/
 img.emoji.emoji {
   object-fit: cover;
+}
+
+/* Hover Editor */
+body:is(.theme-dark, .theme-light) {
+  --he-title-bar-inactive-pinned-bg: var(--note);
+  --he-title-bar-inactive-bg: var(--note);
+  --he-popover-border-radius: var(--radius);
+  --he-text-on-accent-inactive: var(--text);
+  --he-text-on-accent-active: var(--text-dl);
 }
 
 body.mtb.AT-multirow .mobile-toolbar-options-container {

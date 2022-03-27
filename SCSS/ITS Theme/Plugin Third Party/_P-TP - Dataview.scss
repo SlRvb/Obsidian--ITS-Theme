@@ -32,7 +32,8 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 
 // Inner Table List
 .table-view-table .dataview-result-list-li {
-    margin-left: 10px;
+    margin-left: 15px;
+    padding: 0;
 }
 
 
@@ -72,6 +73,10 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
     list-style-type: none;
     margin-inline-start: -32px;
 }
+.dv .table-view-table .dataview-result-list-li {
+    margin-left: 0;
+}
+
 /*Dim First Column Link*/
 .dv .dataview td:nth-child(1) {
     color: var(--headers);

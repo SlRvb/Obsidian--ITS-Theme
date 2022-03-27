@@ -1,10 +1,9 @@
 /*--Blockquote--*/
-.reveal blockquote,
-.markdown-preview-view blockquote {
-    display: flow-root;
-    border: 0px solid var(--bg);
+:is(.markdown-preview-view, .reveal) blockquote {
+    display: flex;
+    border: 0px;
     background-color: var(--embed-bg);
-    border-left-width: 8px;
+    border-left: 8px solid var(--bg);
     border-radius: var(--radius);
     position: relative;
     margin: 1em;
@@ -13,23 +12,28 @@
 }
 
 /*Live Preview Quotes*/
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-	background-color: var(--embed-bg);
-    border-color: var(--bg);
-    padding-top: 5px;
-    //padding-bottom: 5px;
-    padding-right: 7px;
-    box-shadow: 2px 2px 0 var(--td);
-}
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover {
-    border-color: var(--hr);
-}
+.markdown-source-view.mod-cm6.is-live-preview {
+    & .HyperMD-quote {
+        background-color: var(--embed-bg);
+        border-color: var(--bg);
+        border-left: 8px solid var(--bg);
+        // padding-top: 5px;
+        padding: 7px 20px;
+        padding-right: 15px;
+        box-shadow: 2px 2px 0 var(--td);
+        
+        &:hover { border-color: var(--hr);}
+    }
 
+    & .HyperMD-quote + .HyperMD-quote {
+        padding-top: 0;
+        padding-bottom: 7px;
+    }
+}
 
 /*Quotation Mark*/
-.reveal blockquote:before,
-.markdown-preview-view blockquote:before,
-.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {
+:is(.markdown-preview-view, .reveal) blockquote:before,
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
     content: '\201D';
     font-family: var(--font);
     color: var(--headers);
@@ -43,7 +47,7 @@
     top: 1.4em;
     right: 1.2em;
 }
-.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::after {    
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {    
     float: right;
     padding-top: 5px;
     padding-left: 1.3em;
@@ -149,7 +153,7 @@ table .markdown-embed-content > .markdown-preview-view blockquote {
 /*--Blockquote Adjustments--*/
 /*Turn b into a blockquote without the quotations*/
 .markdown-preview-view b {
-    display: flow-root;
+    display: flex;
     border: 0px solid var(--lines);
     background-color: var(--outer-bar);
     border-left-width: 8px;

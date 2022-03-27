@@ -5337,42 +5337,42 @@ img:is([alt*=ctr], [alt*=center]),
 /*Image Locations*/
 /*Left & Right*/
 body .popover.hover-popover img[alt*=left], body .popover.hover-popover img[alt*=locl], body .popover.hover-popover img[src*="#locl"] img, body .popover.hover-popover .image-embed[alt*=left], body .popover.hover-popover .image-embed[alt*=locl], body .popover.hover-popover .image-embed[src*="#locl"] img,
-body span:not(.is-live-preview) img[alt*=left],
-body span:not(.is-live-preview) img[alt*=locl],
-body span:not(.is-live-preview) img[src*="#locl"] img,
-body span:not(.is-live-preview) .image-embed[alt*=left],
-body span:not(.is-live-preview) .image-embed[alt*=locl],
-body span:not(.is-live-preview) .image-embed[src*="#locl"] img {
+body :is(div, span):not(.is-live-preview) img[alt*=left],
+body :is(div, span):not(.is-live-preview) img[alt*=locl],
+body :is(div, span):not(.is-live-preview) img[src*="#locl"] img,
+body :is(div, span):not(.is-live-preview) .image-embed[alt*=left],
+body :is(div, span):not(.is-live-preview) .image-embed[alt*=locl],
+body :is(div, span):not(.is-live-preview) .image-embed[src*="#locl"] img {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 body .popover.hover-popover img[alt*=right], body .popover.hover-popover img[alt*=locr], body .popover.hover-popover img[src*="#locr"] img, body .popover.hover-popover .image-embed[alt*=right], body .popover.hover-popover .image-embed[alt*=locr], body .popover.hover-popover .image-embed[src*="#locr"] img,
-body span:not(.is-live-preview) img[alt*=right],
-body span:not(.is-live-preview) img[alt*=locr],
-body span:not(.is-live-preview) img[src*="#locr"] img,
-body span:not(.is-live-preview) .image-embed[alt*=right],
-body span:not(.is-live-preview) .image-embed[alt*=locr],
-body span:not(.is-live-preview) .image-embed[src*="#locr"] img {
+body :is(div, span):not(.is-live-preview) img[alt*=right],
+body :is(div, span):not(.is-live-preview) img[alt*=locr],
+body :is(div, span):not(.is-live-preview) img[src*="#locr"] img,
+body :is(div, span):not(.is-live-preview) .image-embed[alt*=right],
+body :is(div, span):not(.is-live-preview) .image-embed[alt*=locr],
+body :is(div, span):not(.is-live-preview) .image-embed[src*="#locr"] img {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
 }
 body .popover.hover-popover img[alt*=block], body .popover.hover-popover .image-embed[alt*=block],
-body span:not(.is-live-preview) img[alt*=block],
-body span:not(.is-live-preview) .image-embed[alt*=block] {
+body :is(div, span):not(.is-live-preview) img[alt*=block],
+body :is(div, span):not(.is-live-preview) .image-embed[alt*=block] {
   float: unset !important;
   display: block;
 }
 body .popover.hover-popover img:is([alt*="block+right"], [alt*="block+locr"]), body .popover.hover-popover .image-embed:is([alt*="block+right"], [alt*="block+locr"]),
-body span:not(.is-live-preview) img:is([alt*="block+right"], [alt*="block+locr"]),
-body span:not(.is-live-preview) .image-embed:is([alt*="block+right"], [alt*="block+locr"]) {
+body :is(div, span):not(.is-live-preview) img:is([alt*="block+right"], [alt*="block+locr"]),
+body :is(div, span):not(.is-live-preview) .image-embed:is([alt*="block+right"], [alt*="block+locr"]) {
   margin-left: auto;
 }
 body .popover.hover-popover img:is([alt*="block+left"], [alt*="block+locl"]), body .popover.hover-popover .image-embed:is([alt*="block+left"], [alt*="block+locl"]),
-body span:not(.is-live-preview) img:is([alt*="block+left"], [alt*="block+locl"]),
-body span:not(.is-live-preview) .image-embed:is([alt*="block+left"], [alt*="block+locl"]) {
+body :is(div, span):not(.is-live-preview) img:is([alt*="block+left"], [alt*="block+locl"]),
+body :is(div, span):not(.is-live-preview) .image-embed:is([alt*="block+left"], [alt*="block+locl"]) {
   margin-right: auto;
 }
 

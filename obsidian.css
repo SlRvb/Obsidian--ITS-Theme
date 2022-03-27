@@ -4579,19 +4579,19 @@ th,
   background-color: var(--td);
 }
 
-.markdown-preview-view.markdown-preview-view.markdown-preview-view.markdown-preview-view table th,
+.markdown-preview-view.markdown-preview-view table th,
 .is-live-preview.is-live-preview table th {
   padding: var(--tbl-th-h) var(--tbl-th-w);
   font-size: var(--tbl-th-s);
   font-weight: var(--tbl-th-fw);
 }
-.markdown-preview-view.markdown-preview-view.markdown-preview-view.markdown-preview-view table tr td,
+.markdown-preview-view.markdown-preview-view table tr td,
 .is-live-preview.is-live-preview table tr td {
   padding: var(--tbl-td-h) var(--tbl-td-w);
   font-size: var(--tbl-td-s);
   font-weight: var(--tbl-td-fw);
 }
-.markdown-preview-view.markdown-preview-view.markdown-preview-view.markdown-preview-view table tr td li,
+.markdown-preview-view.markdown-preview-view table tr td li,
 .is-live-preview.is-live-preview table tr td li {
   font-size: var(--tbl-td-s);
 }

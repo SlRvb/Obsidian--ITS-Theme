@@ -28,7 +28,7 @@ th,
     { background-color: var(--td); }
 }
 
-.markdown-preview-view.markdown-preview-view,
+.markdown-preview-view.markdown-preview-view.markdown-preview-view.markdown-preview-view,
 .is-live-preview.is-live-preview {
     //Table Padding
     & table th { 
@@ -40,6 +40,9 @@ th,
         padding: var(--tbl-td-h) var(--tbl-td-w);
         font-size: var(--tbl-td-s);
         font-weight: var(--tbl-td-fw);
+    }
+    & table tr td li {
+        font-size: var(--tbl-td-s);
     }
 }
 .tbl-nalt {

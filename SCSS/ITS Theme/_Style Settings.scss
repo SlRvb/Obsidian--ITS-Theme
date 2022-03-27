@@ -950,6 +950,10 @@ settings:
         id: dv-tbl-th
         type: class-toggle
     -
+        title: Hide List Lines for Dataview
+        id: dv-line
+        type: class-toggle
+    -
         title: Table Header Adjustments
         id: table-headers
         type: heading
@@ -1022,7 +1026,7 @@ settings:
         max: 30
         step: 1
     -
-        title: Table Header Font Weight
+        title: Table Cell Font Weight
         id: tbl-td-fw
         type: variable-number-slider
         default: 500

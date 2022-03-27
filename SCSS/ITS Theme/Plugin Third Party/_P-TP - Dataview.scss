@@ -32,8 +32,7 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 
 // Inner Table List
 .table-view-table .dataview-result-list-li {
-    margin-left: 15px;
-    padding: 0;
+    margin-left: 5px;
 }
 
 
@@ -103,6 +102,12 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 }
 .dvl .dataview.list-view-ul li::before {
     margin-left: -27px;
+}
+
+.dv-line .dataview-result-list-li {
+    padding: 0;
+    border: 0;
+    margin-left: 12px;
 }
 
 /*Kanban*/

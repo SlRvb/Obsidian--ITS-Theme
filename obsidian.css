@@ -951,6 +951,10 @@ settings:
         id: dv-tbl-th
         type: class-toggle
     -
+        title: Hide List Lines for Dataview
+        id: dv-line
+        type: class-toggle
+    -
         title: Table Header Adjustments
         id: table-headers
         type: heading
@@ -1023,7 +1027,7 @@ settings:
         max: 30
         step: 1
     -
-        title: Table Header Font Weight
+        title: Table Cell Font Weight
         id: tbl-td-fw
         type: variable-number-slider
         default: 500
@@ -9092,8 +9096,7 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 }
 
 .table-view-table .dataview-result-list-li {
-  margin-left: 15px;
-  padding: 0;
+  margin-left: 5px;
 }
 
 /*Inline Bracket Syntax*/
@@ -9173,6 +9176,12 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 
 .dvl .dataview.list-view-ul li::before {
   margin-left: -27px;
+}
+
+.dv-line .dataview-result-list-li {
+  padding: 0;
+  border: 0;
+  margin-left: 12px;
 }
 
 /*Kanban*/

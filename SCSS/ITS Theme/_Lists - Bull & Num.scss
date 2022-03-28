@@ -121,6 +121,10 @@ li:nth-child(even) {
     color: var(--soft-text);
     position: relative;
 }
+//Fix Bullet Disappearing with ul { columns css }
+.is-mobile .markdown-preview-view ul .list-collapse-indicator {
+    position: unset;
+}
 .snug-bul-arrow:not(.is-mobile) .is-live-preview .HyperMD-list-line.HyperMD-list-line.HyperMD-list-line:not(.HyperMD-task-line) .collapse-indicator {
     padding-right: 0;
     margin-right: -2px;

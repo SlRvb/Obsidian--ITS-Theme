@@ -24,7 +24,7 @@ body .obsidian-initiative-tracker span ::-webkit-meter-bar {
     visibility: visible !important;
     text-transform: capitalize; 
     font-style: normal;
-    color: var(--h1);
+    color: var(--h1-c);
 }
 body .encounter-xp {
     & > .easy.easy > .difficulty-label { color: var(--interactive-success); }
@@ -33,7 +33,7 @@ body .encounter-xp {
 }
 .encounter-xp em em {
     padding-left: 5px;
-    color: var(--h2, var(--interactive-accent));
+    color: var(--h2-c, var(--interactive-accent));
 }
 
 
@@ -110,14 +110,14 @@ body .encounter-instance {
     //XP
     & .encounter-xp,
     & .xp-parent { 
-        color: var(--h2, var(--interactive-accent));
+        color: var(--h2-c, var(--interactive-accent));
         font-weight: bold; 
         margin: 0;
     }
     & .xp-parent:after {
         content: "\f102"; /*"\e4fb" f753*/
         font-family: var(--fa5);
-        color: var(--h2, var(--interactive-accent));
+        color: var(--h2-c, var(--interactive-accent));
         font-weight: 10 !important;
         padding-left: 5px;
     }

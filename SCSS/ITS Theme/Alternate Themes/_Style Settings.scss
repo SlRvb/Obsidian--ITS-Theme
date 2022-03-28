@@ -429,27 +429,22 @@ settings:
 
 
 /*Plugin: 5e Statblock*/
-.dnd .obsidian-statblock-plugin .creature-heading > .name,
-.wotc .obsidian-statblock-plugin .creature-heading > .name { color: var(--embed-h) !important; }
-.dnd .obsidian-statblock-plugin .property-name,
-.wotc .obsidian-statblock-plugin .property-name { color: var(--headers); }
-.dnd .obsidian-statblock-plugin .section-header,
-.wotc .obsidian-statblock-plugin .section-header { color: var(--embed-h) !important; }
+:is(.dnd, .wotc) .obsidian-statblock-plugin .creature-heading > .name { color: var(--embed-h) !important; }
+:is(.dnd, .wotc) .obsidian-statblock-plugin .property-name { color: var(--headers); }
+:is(.dnd, .wotc) .obsidian-statblock-plugin .section-header { color: var(--embed-h) !important; }
 
 
-.theme-dark.dnd,
-.theme-dark.wotc {
+.theme-dark:is(.dnd, .wotc) {
     --embed-h: #c93c3c;
-    --h1: var(--headers);
-    --h2: sandybrown;
-    --h3: var(--embed-h);
+    --h1-c: var(--headers);
+    --h2-c: sandybrown;
+    --h3-c: var(--embed-h);
 }
-.theme-light.dnd,
-.theme-light.wotc{
+.theme-light:is(.dnd, .wotc) {
     --embed-h: #d05858;
-    --h1: var(--headers);
-    --h2: sandybrown;
-    --h3: var(--embed-h);
+    --h1-c: var(--headers);
+    --h2-c: sandybrown;
+    --h3-c: var(--embed-h);
 }
 
 

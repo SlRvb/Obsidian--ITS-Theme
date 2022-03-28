@@ -12,9 +12,10 @@ li::marker,
 ol li::marker { color: var(--headers); }
 
 /*Bullet Shape*/
-ul:nth-child(odd), ul:nth-child(even) {
-    list-style-type: "";
-}
+//Fix Bullet Disappearing with ul { columns css }
+// ul:nth-child(odd), ul:nth-child(even) {
+//     list-style-type: none;
+// }
 
 ul li::before {
     content: var(--bullet);
@@ -119,11 +120,6 @@ li:nth-child(even) {
 .markdown-preview-view ul .list-collapse-indicator {
     padding-left: 1em;
     color: var(--soft-text);
-    position: relative;
-}
-//Fix Bullet Disappearing with ul { columns css }
-.is-mobile .markdown-preview-view ul .list-collapse-indicator {
-    position: unset;
 }
 .snug-bul-arrow:not(.is-mobile) .is-live-preview .HyperMD-list-line.HyperMD-list-line.HyperMD-list-line:not(.HyperMD-task-line) .collapse-indicator {
     padding-right: 0;

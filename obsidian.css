@@ -4058,10 +4058,6 @@ ol li::marker {
 }
 
 /*Bullet Shape*/
-ul:nth-child(odd), ul:nth-child(even) {
-  list-style-type: "";
-}
-
 ul li::before {
   content: var(--bullet);
   font-family: var(--bul-f);
@@ -4186,11 +4182,6 @@ li:nth-child(even) {
 .markdown-preview-view ul .list-collapse-indicator {
   padding-left: 1em;
   color: var(--soft-text);
-  position: relative;
-}
-
-.is-mobile .markdown-preview-view ul .list-collapse-indicator {
-  position: unset;
 }
 
 .snug-bul-arrow:not(.is-mobile) .is-live-preview .HyperMD-list-line.HyperMD-list-line.HyperMD-list-line:not(.HyperMD-task-line) .collapse-indicator {

@@ -101,12 +101,9 @@ h4, .HyperMD-header-4 {
         height: 4px;
     }
 }
-:not(.is-mobile) .HyperMD-header-1,
-:not(.is-mobile) .HyperMD-header-2,
-:not(.is-mobile) .HyperMD-header-3,
-:not(.is-mobile) .HyperMD-header-4 {
-    &::after { margin-top: -10px; }
-}
+// :not(.is-mobile) :is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4) {
+//     &::after { margin-top: -10px; }
+// }
 
 h1, .HyperMD-header-1 { &::after { width: 100%; } }
 h2, .HyperMD-header-2 { &::after { width: 85%;  } }
@@ -338,7 +335,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
 
 
 /* Heading Indicators */
-body:not(.hd-indi) .is-live-preview .HyperMD-header {
+body:not(.hd-indi) .is-live-preview .cm-header {
     &::before,
     & .cm-fold-indicator
     { float: left; }
@@ -353,12 +350,12 @@ body:not(.hd-indi) .is-live-preview .HyperMD-header {
         margin-left: -30px;
     }
 
-    &.HyperMD-header-1::before { content: "H1"; }
-    &.HyperMD-header-2::before { content: "H2"; }
-    &.HyperMD-header-3::before { content: "H3"; }
-    &.HyperMD-header-4::before { content: "H4"; }
-    &.HyperMD-header-5::before { content: "H5"; }
-    &.HyperMD-header-6::before { content: "H6"; }
+    &.cm-header-1::before { content: "H1"; }
+    &.cm-header-2::before { content: "H2"; }
+    &.cm-header-3::before { content: "H3"; }
+    &.cm-header-4::before { content: "H4"; }
+    &.cm-header-5::before { content: "H5"; }
+    &.cm-header-6::before { content: "H6"; }
 } 
 
 /*Apply Header Color Over Link*/

@@ -1105,14 +1105,13 @@ settings:
         id: h-b-li
         type: class-toggle
     - 
-        title: 1 Color Bullets & Lines
-        description: Bullet and Line colors no longer alternates. Bullet color is set to Accent 2.
-        id: bl-c
-        type: class-toggle
-    - 
         title: Original Bullet Lines
         description: Lines appear under bullet, not beside it. Won't connect to bullet if it's longer than 1 line.
         id: b-li-o
+        type: class-toggle
+    - 
+        title: Accent Colored Indentation Lines
+        id: ind-accent
         type: class-toggle
     -
         title: Snug Live Preview Arrow
@@ -1137,6 +1136,15 @@ settings:
         title: Live Preview Alternate Indent Style
         description: Alternate style to differentiate lists sublevels in edit mode on cm6.
         id: alt-ind
+        type: class-toggle
+    - 
+        title: 1 Color Bullets & Lines
+        description: Bullet and Line colors no longer alternates. Bullet color is set to Accent 2.
+        id: bl-c
+        type: class-toggle
+    - 
+        title: Accent Colored Lines
+        id: bl-ca
         type: class-toggle
     -
         title: Colorful Bullet Line Color

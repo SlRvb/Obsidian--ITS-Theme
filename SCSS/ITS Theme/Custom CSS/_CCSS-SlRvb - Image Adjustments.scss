@@ -109,7 +109,7 @@ img:is([alt*="ctr"], [alt*="center"]),
 /*Image Locations*/
 /*Left & Right*/
 body .popover.hover-popover,
-body :is(div, span):not(.is-live-preview) {
+body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) {
     & img,
     & .image-embed {
         &[alt*="left"],

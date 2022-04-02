@@ -1,33 +1,74 @@
 
 /*Callout Positioning*/
-:not(.is-live-preview) .callout.callout:is([data-callout*="p+l"], [data-callout*="left"])  { 
+:not(.is-live-preview) .callout.callout.callout:is(
+    [data-callout-metadata*="p+l"], 
+    [data-callout-metadata*="left"]
+    ) { 
     float: left; 
     margin: unset;
     margin-right: 8px;
 }
-:not(.is-live-preview) .callout.callout:is([data-callout*="p+r"], [data-callout*="right"]) { 
+:not(.is-live-preview) .callout.callout:is(
+    [data-callout-metadata*="p+r"], 
+    [data-callout-metadata*="right"]
+    ) { 
     float: right;
     margin: unset;
     margin-left: 8px;
 }
-.callout.callout:is([data-callout*="ctr"], [data-callout*="center"]) {
+.callout.callout:is(
+    [data-callout-metadata*="ctr"], 
+    [data-callout-metadata*="center"]
+    ) {
     display: block;
     margin: auto;
     float: unset;
 }
 .callout.callout {
-    &[data-callout*="wtiny"]    { width: 20%; }
-    &[data-callout*="wsmall"]   { width: 30%; }
-    &[data-callout*="ws-med"]   { width: 40%; }
-    &[data-callout*="wm-sm"]    { width: 50%; }
-    &[data-callout*="wmed"]     { width: 60%; }
-    &[data-callout*="wm-tl"]    { width: 80%; }
-    &[data-callout*="wtall"]    { width: 95%; }
-    &[data-callout*="wfull"]    { width: 100%; }
+    &[data-callout-metadata*="wtiny"]    { width: 20%; }
+    &[data-callout-metadata*="wsmall"]   { width: 30%; }
+    &[data-callout-metadata*="ws-med"]   { width: 40%; }
+    &[data-callout-metadata*="wm-sm"]    { width: 50%; }
+    &[data-callout-metadata*="wmed"]     { width: 60%; }
+    &[data-callout-metadata*="wm-tl"]    { width: 80%; }
+    &[data-callout-metadata*="wtall"]    { width: 95%; }
+    &[data-callout-metadata*="wfull"]    { width: 100%; }
+
+    &[data-callout-metadata*="wtiny-c"]    { width: 19%; }
+    &[data-callout-metadata*="wsmall-c"]   { width: 32.4%; }
+    &[data-callout-metadata*="ws-med-c"]   { width: 39%; }
+    &[data-callout-metadata*="wm-sm-c"]    { width: 49%; }
+    &[data-callout-metadata*="wmed-c"]     { width: 59%; }
+    &[data-callout-metadata*="wm-tl-c"]    { width: 79%; }
+}
+body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-metadata*="no-margin"]) {
+    margin: 0;
+}
+.callout.callout.callout:is([data-callout-metadata*="nbrd"], [data-callout-metadata*="no-border"]) {
+    border: 0;
+}
+
+.callout.callout:is(
+    [data-callout-metadata*="txt-l"],
+    [data-callout-metadata*="text-Left"]
+) .callout-content {
+    text-align: left;
+}
+.callout.callout:is(
+    [data-callout-metadata*="txt-r"],
+    [data-callout-metadata*="text-Right"]
+) .callout-content {
+    text-align: right;
+}
+.callout.callout:is(
+    [data-callout-metadata*="txt-c"],
+    [data-callout-metadata*="text-Center"]
+) .callout-content {
+    text-align: center;
 }
 
 /*Callout Sizing*/
-.callout.callout:is([data-callout*="banner"], [data-callout*="sban"]) {
+.callout.callout.callout:is([data-callout-metadata*="banner"], [data-callout-metadata*="sban"]) {
     width: 100%;
     max-width: unset;
     
@@ -36,17 +77,28 @@
         object-fit: cover;
     }
 }
+.callout.callout[data-callout-metadata*="clean"] {
+    & .callout-content {
+        padding: 0;
+    }
+}
 
 /*Caption Adjustments*/
 //No Header
-.callout:is([data-callout*="no-t"], [data-callout*="no-title"]) .callout-title { display: none; }
+.callout:is(
+    [data-callout-metadata*="no-t"], 
+    [data-callout-metadata*="no-title"]
+    ) .callout-title { display: none; }
 //No Table Header
-.callout:is([data-callout*="n-th"], [data-callout*="no-table-header"]) {
+.callout:is(
+    [data-callout-metadata*="n-th"], 
+    [data-callout-metadata*="no-table-header"]
+    ) {
     & th { display: none; }
     & table { margin-bottom: 5px; }
 }
 //Wide Table
-.callout[data-callout*="t-w"] table td { width: calc(var(--tbl-w) /2); }
+.callout[data-callout-metadata*="t-w"] table td { width: calc(var(--tbl-w) /2); }
 
 
 
@@ -222,7 +274,6 @@ body {
     max-width: 30vh;
     
     & .callout-title { display: none; }
-
     & p {
         margin-block-start: 0;
         margin-block-end: 0;

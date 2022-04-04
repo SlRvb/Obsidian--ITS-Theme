@@ -1,0 +1,144 @@
+.side-dock-ribbon {
+    text-align: center;
+    align-items: center;
+    // flex-direction: column-reverse;
+}
+
+
+/* Floating Sidebars */
+.sd-mini-float:not(.is-mobile),
+.sd-float:not(.is-mobile) {
+
+    .side-dock-settings {
+        margin-bottom: 0;
+    }
+    & .side-dock-ribbon.mod-right {
+        right: 0px;
+    }
+    & .side-dock-ribbon.mod-right   { right: 10px; }
+    & .side-dock-ribbon.mod-left    { left: 10px; }
+
+
+    & .side-dock-ribbon.mod-right,
+    & .side-dock-ribbon.mod-left {
+        position: absolute;
+        margin-top: 38px;
+        border: 1px solid var(--lines);
+        box-shadow: 4px 4px 0 var(--outline);
+        width: 40px;
+    }
+
+    &.sd-flt-top {
+        & .side-dock-ribbon.mod-right,
+        & .side-dock-ribbon.mod-left {
+            margin-top: 38px;
+        }
+    }
+    // &.sd-flt-ctr {
+    //     & .side-dock-ribbon.mod-right,
+    //     & .side-dock-ribbon.mod-left {
+    //         top: 50%;
+    //     }
+    // }
+    &.sd-flt-btm {
+        & .side-dock-ribbon.mod-right,
+        & .side-dock-ribbon.mod-left {
+            margin-top: 0;
+            bottom: 38px;
+        }
+    }
+
+    & .side-dock-ribbon .workspace-ribbon-collapse-btn {
+        margin: 0;
+        padding: 10px 7px;
+    }
+    & .side-dock-ribbon.mod-left .side-dock-actions {
+        margin-bottom: 10vh;
+    }
+    & .side-dock-ribbon.mod-left:not(:hover), 
+    & .side-dock-ribbon.mod-right:not(:hover) {
+        opacity: var(--sd-opacity);
+    }
+} 
+// Sidebar Ribbon Float
+// .sd-float:not(.is-mobile) {}
+
+// Mini Sidebar Ribbon Float
+.sd-mini-float:not(.is-mobile) {
+    & .side-dock-ribbon:not(:hover) {
+        flex: 0 0 20px;
+        width: 20px;
+        padding: 10px;
+        animation-duration: 5s;
+        background-color: var(--accent);
+        border: none;
+    }
+    & .side-dock-ribbon.mod-right:not(:hover)   { right: 20px; }
+    & .side-dock-ribbon.mod-left:not(:hover)    { left: 20px; }
+    &.sd-flt-top {
+        & .side-dock-ribbon.mod-right,
+        & .side-dock-ribbon.mod-left {
+            margin-top: 45px;
+        }
+    }
+
+    & .side-dock-ribbon:not(:hover) .workspace-ribbon-collapse-btn {
+        padding: 0;
+        height: auto;
+        
+        & svg { display: none; }
+    }
+    // & .side-dock-ribbon.mod-left:not(:hover), 
+    // & .side-dock-ribbon.mod-right:not(:hover) {
+    //     box-shadow: none;
+    // }
+
+    & .side-dock-ribbon.mod-left:not(:hover) .side-dock-actions,
+    & .side-dock-ribbon.mod-left:not(:hover) .side-dock-settings {
+        display: none;
+    }
+}
+
+
+// Hide Sidebar Actions
+.sd-h-act {
+    & .side-dock-ribbon.mod-left .side-dock-actions {
+        display: none;
+    }
+}
+.sd-h-act-hvr {
+    & .side-dock-ribbon.mod-left:not(:hover) .side-dock-actions {
+        display: none;
+    }
+}
+
+
+/*---- Sidepane Pages ----*/
+.workspace-tabs .markdown-preview-view .frontmatter-container {
+    display: none;
+}
+.workspace-tabs .markdown-preview-view {
+    padding: 0 0 0 5px;
+}
+
+/*Workspace Tab*/
+.starp .workspace-tab-header[aria-label="Star Pane"] svg 
+{ color: transparent; }
+
+.starp .workspace-tab-header-inner-icon {
+    content: ' ';
+    height: 16px;
+    margin-top: 1.3px;
+}
+.starp .workspace-tab-header[aria-label="Star Pane"] .workspace-tab-header-inner-icon {
+    background-color: var(--soft-text);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' width='16' height='16' preserveAspectRatio='xMidYMid meet' viewBox='0 0 576 512'%3E%3Cpath d='M259.3 17.8L194 150.2L47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103l-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5l105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2L316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z' fill='currentColor'/%3E%3C/svg%3E");
+}
+/* Fix */
+.workspace-tabs .markdown-preview-view .heading-collapse-indicator {
+    margin-left: -10px;
+}
+/*Fix Initiative Tracker*/
+.workspace-leaf-content .view-content {
+    padding: 10px 0;
+}

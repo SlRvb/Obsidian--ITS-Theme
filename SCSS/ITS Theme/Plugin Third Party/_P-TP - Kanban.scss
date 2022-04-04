@@ -119,7 +119,9 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 .is-mobile .kanban-plugin .markdown-preview-view {
     padding: unset;
 }
-
+.kanban-plugin__item-tags .kanban-plugin__item-tag.tag {
+    background: var(--tag);
+}
 
 
 

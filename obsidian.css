@@ -258,8 +258,20 @@ settings:
         id: nt-g
         type: class-toggle
     -
+        title: Disable Settings Animation
+        id: n-s-ani
+        type: class-toggle
+    -
         title: Display Folder Arrow On Hover
         id: fhvr
+        type: class-toggle
+    -
+        title: Hide Outline Pane H
+        id: op-h
+        type: class-toggle
+    -
+        title: Bottom Navbar Buttons
+        id: btm-nav
         type: class-toggle
     -
         title: Raise Right Sidebar & Doc Search
@@ -267,17 +279,59 @@ settings:
         id: rsb-up
         type: class-toggle
     -
-        title: Hide Outline Pane H
-        id: op-h
-        type: class-toggle
+        title: Sidebar Ribbon Styling
+        id: sidebar-styling
+        type: heading
+        level: 3
+        collapsed: true
     -
-        title: Disable Settings Animation
-        id: n-s-ani
-        type: class-toggle
+        title: Floating Sidebar Ribbon
+        id: float-sidebar
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Plain
+                value: sd-float
+            -
+                label: Minimized
+                value: sd-mini-float
+    - 
+        title: Floating Sidebar Positions
+        id: float-sidebar-position
+        type: class-select
+        allowEmpty: false
+        default: Top
+        options: 
+            - 
+                label: Top
+                value: sd-flt-top
+            -
+                label: Bottom
+                value: sd-flt-btm
+    - 
+        title: Hide Left Sidebar Actions
+        id: sidebar-action-display
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Hide Unless Hovered
+                value: sd-h-act-hvr
+            -
+                label: Hide Completely
+                value: sd-h-act
     -
-        title: Bottom Navbar Buttons
-        id: btm-nav
-        type: class-toggle
+        title: Sidebar Opacity
+        id: sd-opacity
+        type: variable-number-slider
+        default: 40
+        format: "%"
+        min: 30
+        max: 100
+        step: 5
     -
         title: Minimalist Workspace
         description: Hide UI unless hovered over the edges of the app.
@@ -2009,6 +2063,7 @@ settings:
   --bul-f: var(--its);
   --b-line: 2px;
   --otl-sym: "H";
+  --sd-opacity: 40%;
   /*--Specific--*/
   /*Fonts*/
   --sphd-pre-ff-1: "Calisto MT", "Palatino Black", "Suez One", serif;
@@ -7534,6 +7589,99 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   height: calc(var(--f-s-nt) + 30px);
 }
 
+.side-dock-ribbon {
+  text-align: center;
+  align-items: center;
+}
+
+/* Floating Sidebars */
+.sd-mini-float:not(.is-mobile) .side-dock-settings,
+.sd-float:not(.is-mobile) .side-dock-settings {
+  margin-bottom: 0;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-right,
+.sd-float:not(.is-mobile) .side-dock-ribbon.mod-right {
+  right: 0px;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-right,
+.sd-float:not(.is-mobile) .side-dock-ribbon.mod-right {
+  right: 10px;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-left,
+.sd-float:not(.is-mobile) .side-dock-ribbon.mod-left {
+  left: 10px;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-right, .sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-left,
+.sd-float:not(.is-mobile) .side-dock-ribbon.mod-right,
+.sd-float:not(.is-mobile) .side-dock-ribbon.mod-left {
+  position: absolute;
+  margin-top: 38px;
+  border: 1px solid var(--lines);
+  box-shadow: 4px 4px 0 var(--outline);
+  width: 40px;
+}
+.sd-mini-float:not(.is-mobile).sd-flt-top .side-dock-ribbon.mod-right, .sd-mini-float:not(.is-mobile).sd-flt-top .side-dock-ribbon.mod-left,
+.sd-float:not(.is-mobile).sd-flt-top .side-dock-ribbon.mod-right,
+.sd-float:not(.is-mobile).sd-flt-top .side-dock-ribbon.mod-left {
+  margin-top: 38px;
+}
+.sd-mini-float:not(.is-mobile).sd-flt-btm .side-dock-ribbon.mod-right, .sd-mini-float:not(.is-mobile).sd-flt-btm .side-dock-ribbon.mod-left,
+.sd-float:not(.is-mobile).sd-flt-btm .side-dock-ribbon.mod-right,
+.sd-float:not(.is-mobile).sd-flt-btm .side-dock-ribbon.mod-left {
+  margin-top: 0;
+  bottom: 38px;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon .workspace-ribbon-collapse-btn,
+.sd-float:not(.is-mobile) .side-dock-ribbon .workspace-ribbon-collapse-btn {
+  margin: 0;
+  padding: 10px 7px;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-left .side-dock-actions,
+.sd-float:not(.is-mobile) .side-dock-ribbon.mod-left .side-dock-actions {
+  margin-bottom: 10vh;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-left:not(:hover), .sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-right:not(:hover),
+.sd-float:not(.is-mobile) .side-dock-ribbon.mod-left:not(:hover),
+.sd-float:not(.is-mobile) .side-dock-ribbon.mod-right:not(:hover) {
+  opacity: var(--sd-opacity);
+}
+
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon:not(:hover) {
+  flex: 0 0 20px;
+  width: 20px;
+  padding: 10px;
+  animation-duration: 5s;
+  background-color: var(--accent);
+  border: none;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-right:not(:hover) {
+  right: 20px;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-left:not(:hover) {
+  left: 20px;
+}
+.sd-mini-float:not(.is-mobile).sd-flt-top .side-dock-ribbon.mod-right, .sd-mini-float:not(.is-mobile).sd-flt-top .side-dock-ribbon.mod-left {
+  margin-top: 45px;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon:not(:hover) .workspace-ribbon-collapse-btn {
+  padding: 0;
+  height: auto;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon:not(:hover) .workspace-ribbon-collapse-btn svg {
+  display: none;
+}
+.sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-left:not(:hover) .side-dock-actions, .sd-mini-float:not(.is-mobile) .side-dock-ribbon.mod-left:not(:hover) .side-dock-settings {
+  display: none;
+}
+
+.sd-h-act .side-dock-ribbon.mod-left .side-dock-actions {
+  display: none;
+}
+
+.sd-h-act-hvr .side-dock-ribbon.mod-left:not(:hover) .side-dock-actions {
+  display: none;
+}
+
 /*---- Sidepane Pages ----*/
 .workspace-tabs .markdown-preview-view .frontmatter-container {
   display: none;
@@ -9820,6 +9968,10 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 }*/
 .is-mobile .kanban-plugin .markdown-preview-view {
   padding: unset;
+}
+
+.kanban-plugin__item-tags .kanban-plugin__item-tag.tag {
+  background: var(--tag);
 }
 
 /*Minimalist Kanban Plugin Adjustments*/

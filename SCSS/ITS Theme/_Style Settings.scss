@@ -257,8 +257,20 @@ settings:
         id: nt-g
         type: class-toggle
     -
+        title: Disable Settings Animation
+        id: n-s-ani
+        type: class-toggle
+    -
         title: Display Folder Arrow On Hover
         id: fhvr
+        type: class-toggle
+    -
+        title: Hide Outline Pane H
+        id: op-h
+        type: class-toggle
+    -
+        title: Bottom Navbar Buttons
+        id: btm-nav
         type: class-toggle
     -
         title: Raise Right Sidebar & Doc Search
@@ -266,17 +278,59 @@ settings:
         id: rsb-up
         type: class-toggle
     -
-        title: Hide Outline Pane H
-        id: op-h
-        type: class-toggle
+        title: Sidebar Ribbon Styling
+        id: sidebar-styling
+        type: heading
+        level: 3
+        collapsed: true
     -
-        title: Disable Settings Animation
-        id: n-s-ani
-        type: class-toggle
+        title: Floating Sidebar Ribbon
+        id: float-sidebar
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Plain
+                value: sd-float
+            -
+                label: Minimized
+                value: sd-mini-float
+    - 
+        title: Floating Sidebar Positions
+        id: float-sidebar-position
+        type: class-select
+        allowEmpty: false
+        default: Top
+        options: 
+            - 
+                label: Top
+                value: sd-flt-top
+            -
+                label: Bottom
+                value: sd-flt-btm
+    - 
+        title: Hide Left Sidebar Actions
+        id: sidebar-action-display
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Hide Unless Hovered
+                value: sd-h-act-hvr
+            -
+                label: Hide Completely
+                value: sd-h-act
     -
-        title: Bottom Navbar Buttons
-        id: btm-nav
-        type: class-toggle
+        title: Sidebar Opacity
+        id: sd-opacity
+        type: variable-number-slider
+        default: 40
+        format: "%"
+        min: 30
+        max: 100
+        step: 5
     -
         title: Minimalist Workspace
         description: Hide UI unless hovered over the edges of the app.

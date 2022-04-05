@@ -165,11 +165,13 @@ ol.kanban .task-list-item .list-collapse-indicator {
 .kanban .internal-embed blockquote {
     padding-top: 2px;
     padding-left: 10px;
-    font-size: 12px;
     line-height: 15px;
-    border-left-width: 3px;
     margin: 0;
     overflow: hidden;
+}
+.kanban-o .internal-embed blockquote {
+    border-left-width: 3px;
+    font-size: 12px;
 }
 
 /*Remove Quote*/

@@ -1383,6 +1383,11 @@ settings:
         level: 3
         collapsed: true
     -
+        title: Colored Text Tags
+        description: Tags appear as just colored text, no background color.
+        id: tag-text
+        type: class-toggle
+    -
         title: Bubble Tags
         id: tag-bubble
         type: class-toggle
@@ -1416,6 +1421,16 @@ settings:
         min: 8
         max: 20
         step: 1
+    -
+        title: Tag Text Alignment
+        id: tag-txt-align
+        type: variable-select
+        allowEmpty: false
+        default: Center
+        options: 
+            - Center
+            - Left
+            - Right
     -
         title: Callouts
         id: its-callouts

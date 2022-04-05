@@ -7,7 +7,7 @@ a.tag {
     color: var(--text-dl);
     font-size: calc(var(--f-s-text) - .2em);
     padding: 1px 8px;
-    text-align: center;
+    text-align: var(--tag-txt-align);
     text-decoration: none;
     display: inline-block;
     margin: 0px 0px;

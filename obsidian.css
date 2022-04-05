@@ -1384,6 +1384,11 @@ settings:
         level: 3
         collapsed: true
     -
+        title: Colored Text Tags
+        description: Tags appear as just colored text, no background color.
+        id: tag-text
+        type: class-toggle
+    -
         title: Bubble Tags
         id: tag-bubble
         type: class-toggle
@@ -1417,6 +1422,16 @@ settings:
         min: 8
         max: 20
         step: 1
+    -
+        title: Tag Text Alignment
+        id: tag-txt-align
+        type: variable-select
+        allowEmpty: false
+        default: Center
+        options: 
+            - Center
+            - Left
+            - Right
     -
         title: Callouts
         id: its-callouts
@@ -2063,6 +2078,7 @@ settings:
   --bul-f: var(--its);
   --b-line: 2px;
   --otl-sym: "H";
+  --tag-txt-align: center;
   --sd-opacity: 40%;
   /*--Specific--*/
   /*Fonts*/
@@ -4496,11 +4512,6 @@ em mark em {
   font-style: unset;
 }
 
-/*Fix Blockquote Mark*/
-.markdown-preview-view li blockquote:before {
-  top: 0.3em;
-}
-
 /*Flush Table Embed of Blockquotes*/
 table .markdown-embed-content > .markdown-preview-view blockquote {
   margin: 0;
@@ -4700,7 +4711,7 @@ a.tag {
   color: var(--text-dl);
   font-size: calc(var(--f-s-text) - 0.2em);
   padding: 1px 8px;
-  text-align: center;
+  text-align: var(--tag-txt-align);
   text-decoration: none;
   display: inline-block;
   margin: 0px 0px;
@@ -6742,11 +6753,14 @@ ol.kanban .task-list-item .list-collapse-indicator {
 .kanban .internal-embed blockquote {
   padding-top: 2px;
   padding-left: 10px;
-  font-size: 12px;
   line-height: 15px;
-  border-left-width: 3px;
   margin: 0;
   overflow: hidden;
+}
+
+.kanban-o .internal-embed blockquote {
+  border-left-width: 3px;
+  font-size: 12px;
 }
 
 /*Remove Quote*/
@@ -11154,6 +11168,13 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   border: var(--tag-o) solid var(--tag);
   color: var(--tag);
   line-height: 1.3em;
+}
+
+.tag-text.tag-text a.tag {
+  background-color: transparent;
+  color: var(--lite-accent);
+  padding: unset;
+  font-size: inherit;
 }
 
 /*Note Title Wrap*/

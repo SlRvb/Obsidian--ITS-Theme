@@ -108,15 +108,14 @@ body {
   margin: 0 !important;
 }
 
-.callout.callout[data-callout*=infobox] {
-  --tbl-w: 26vh;
+.callout[data-callout*=infobox] {
   --callout-color: var(--interactive-accent-rgb);
-  background: transparent;
+  background: var(--note, var(--background-primary));
   border: 0;
   box-shadow: none;
   margin: 0;
   margin-left: 8px;
-  max-width: var(--tbl-w);
+  width: 26vh;
   float: right;
 }
 .callout.callout[data-callout*=infobox] .callout-title {

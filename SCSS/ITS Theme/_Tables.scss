@@ -2,6 +2,19 @@
 /*--Table--*/
 table { border-collapse: collapse; }
 
+thead > tr > th {
+    white-space: pre;
+}
+tbody > tr > td {
+    word-wrap: normal;
+    word-break: normal;
+}
+.cm-s-obsidian .HyperMD-table-row.HyperMD-table-row.HyperMD-table-row {
+    min-width: min-content;
+    white-space: pre-wrap;
+    font-size: var(--f-s-code);
+}
+
 th,
 .reveal table th {
     background-color: var(--th);

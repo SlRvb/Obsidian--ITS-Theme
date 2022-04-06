@@ -1,13 +1,20 @@
-:root {
+:root,
+body {
     /*FONTS*/
     --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
     --editor-font: var(--ed-font), var(--default-font);
     --mermaid-font: var(--default-font); /*mermaidjs text*/
     --reveal-font: var(--default-font); /*revealjs slide text*/
     --font-monospace: 'Fira Code', 'Fira Code Medium', /*'JetBrains Mono Medium', 'Recursive Mono Casual Static Medium', 'Menlo Bold',*/ 'Source Code Pro', monospace; /*Code block text*/
+    
+    --font-text-theme: var(--default-font);
+    --font-interface-theme: var(--default-font);
+    --font-monospace-theme: var(--font-monospace);
+    
     --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif; /*Works, but if it doesn't, needs !important*/
     --pre-font: var(--default-font) !important;
     --ed-font: var(--default-font) !important;
+
     
 
     --rmx: 'remixicon';
@@ -21,6 +28,7 @@
     --f-s-h: 34px;
     --f-s-pre: 16px;
     --f-s-text: 1em;
+    --f-s-code: calc(var(--f-s-text) - 0.05em);
 
     --h1: var(--f-s-h);
     --h2: calc(var(--f-s-h) - 4px);
@@ -67,7 +75,7 @@
     --f-s-ui: 16px;
     --f-s-sb: 16px;
     --f-s-nt: 16px;
-    --frnt-text: var(--f-s-text);
+    --frnt-text: var(--f-s-code);
 
     --h-brdr: 2px;
     

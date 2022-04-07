@@ -4244,6 +4244,7 @@ ol.contains-task-list li > .task-list-item-checkbox {
 .show-indentation-guide .cm-indent::before,
 .show-indentation-guide.markdown-rendered li > :is(ul, ol)::before {
   border-width: var(--b-line);
+  z-index: -1;
 }
 
 .markdown-source-view.mod-cm6 .cm-indent::before {
@@ -13149,7 +13150,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-form-field: rgb(255, 255, 255, 0.1);
   --background-modifier-form-field-highlighted: rgb(255, 255, 255, 0.1);
   --text-highlight-bg: rgb(255, 255, 255, 0.1);
-  --text-highlight-bg-active: rgb(255, 255, 255, 0.1);
+  --text-highlight-bg-active: rgba(45, 170, 219, 0.3);
   --text-selection: rgba(45, 170, 219, 0.3);
   --text-faint: var(--inactive);
   --interactive-accent: var(--bttn);
@@ -13230,9 +13231,9 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-accent-hover: var(--accent2-lite);
   --background-modifier-border: var(--hr);
   --background-modifier-form-field: rgba(242, 241, 238, 0.6);
-  --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
+  --background-modifier-form-field-highlighted: rgba(45, 170, 219, 0.2);
   --text-highlight-bg: rgba(55, 53, 47, 0.078);
-  --text-highlight-bg-active: rgba(55, 53, 47, 0.078);
+  --text-highlight-bg-active: rgba(45, 170, 219, 0.2);
   --text-selection: rgba(45, 170, 219, 0.3);
   --scrollbar-bg: #EDECE9;
   --scrollbar-thumb-bg: #D3D1CB;
@@ -13363,7 +13364,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-accent: var(--accent2-lite);
   --text-muted: var(--soft-text);
   --background-modifier-form-field-highlighted: rgba(113, 132, 162, 0.295);
-  --text-selection: rgba(61, 82, 107, 0.472);
+  --text-selection: #4f5b6a78;
   --text-highlight-bg: rgba(87, 113, 156, 0.4);
   --text-highlight-bg-active: rgba(112, 132, 160, 0.4);
   --scrollbar-bg: var(--td);
@@ -13410,9 +13411,10 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --background-modifier-cover: var(--note);
   --interactive-accent: var(--inactive);
   --background-modifier-error: var(--interactive-failure);
-  --background-modifier-form-field-highlighted: #99a4bb20;
-  --text-highlight-bg: #99a4bb20;
-  --text-highlight-bg-active: #99a4bb20;
+  --background-modifier-form-field-highlighted: #99a4bb30;
+  --text-highlight-bg: #99a4bb50;
+  --text-highlight-bg-active: #99a4bb50;
+  --text-selection: #99a4bb50;
   --text-muted: var(--soft-text);
   --scrollbar-bg: var(--bg);
   --scrollbar-thumb-bg: var(--outline);

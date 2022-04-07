@@ -27,7 +27,7 @@
     --background-modifier-form-field: rgb(255, 255, 255, 0.1);
     --background-modifier-form-field-highlighted: rgb(255, 255, 255, 0.1);
     --text-highlight-bg: rgb(255, 255, 255, 0.1);
-    --text-highlight-bg-active: rgb(255, 255, 255, 0.1);
+    --text-highlight-bg-active: rgba(45, 170, 219, 0.3);
     --text-selection: rgba(45, 170, 219, 0.3);
 
     --text-faint: var(--inactive);
@@ -118,9 +118,9 @@
     --background-modifier-border: var(--hr);
 
     --background-modifier-form-field: rgba(242, 241, 238, 0.6);
-    --background-modifier-form-field-highlighted: rgba(55, 53, 47, 0.09);
+    --background-modifier-form-field-highlighted: rgba(45, 170, 219, 0.2);
     --text-highlight-bg: rgba(55, 53, 47, 0.078);
-    --text-highlight-bg-active: rgba(55, 53, 47, 0.078);
+    --text-highlight-bg-active: rgba(45, 170, 219, 0.2);
     --text-selection: rgba(45, 170, 219, 0.3);
 
     --scrollbar-bg: #EDECE9;

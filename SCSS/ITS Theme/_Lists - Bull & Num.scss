@@ -96,6 +96,7 @@ ol.contains-task-list li > .task-list-item-checkbox {
     &.markdown-rendered li > :is(ul, ol)::before {
         // border-color: var(--table);
         border-width: var(--b-line);
+        z-index: -1;
     }
 }
 .markdown-source-view.mod-cm6 .cm-indent::before {

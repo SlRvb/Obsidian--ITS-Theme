@@ -3543,17 +3543,20 @@ button.mod-cta,
   transition: none;
 }
 
+/* Resize Handle */
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+  top: 0;
+}
+
 /*Sidebar Resize Handle*/
 .workspace-leaf-resize-handle,
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+.workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
   background-color: var(--dark-sidebar);
-  height: 100%;
+  height: calc(100% - 0.5px);
 }
 
 .workspace-leaf-resize-handle:hover,
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
+.workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle:hover {
   background-color: var(--accent);
 }
 
@@ -4140,7 +4143,7 @@ li::marker,
 }
 
 /*Lighten Numbered List Marker Color*/
-ol li::marker {
+ol > li::marker {
   color: var(--headers);
 }
 
@@ -4244,6 +4247,9 @@ ol.contains-task-list li > .task-list-item-checkbox {
 .show-indentation-guide .cm-indent::before,
 .show-indentation-guide.markdown-rendered li > :is(ul, ol)::before {
   border-width: var(--b-line);
+}
+
+.markdown-source-view.mod-cm6.markdown-rendered li > :is(ul, ol)::before {
   z-index: -1;
 }
 
@@ -6537,22 +6543,22 @@ body:not(.hd-indi) .is-live-preview .cm-header::before {
   padding-top: 2px;
   margin-left: -30px;
 }
-body:not(.hd-indi) .is-live-preview .cm-header.cm-header-1::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-1::before {
   content: "H1";
 }
-body:not(.hd-indi) .is-live-preview .cm-header.cm-header-2::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-2::before {
   content: "H2";
 }
-body:not(.hd-indi) .is-live-preview .cm-header.cm-header-3::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-3::before {
   content: "H3";
 }
-body:not(.hd-indi) .is-live-preview .cm-header.cm-header-4::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-4::before {
   content: "H4";
 }
-body:not(.hd-indi) .is-live-preview .cm-header.cm-header-5::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-5::before {
   content: "H5";
 }
-body:not(.hd-indi) .is-live-preview .cm-header.cm-header-6::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-6::before {
   content: "H6";
 }
 
@@ -10681,7 +10687,8 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 /*Hide HR Icon*/
 .hr-tog .markdown-preview-view hr::after,
 .markdown-preview-view.hr-tog hr::after,
-.hr-tog div:not(.CodeMirror-activeline) > .HyperMD-hr-bg::after {
+.hr-tog div:not(.CodeMirror-activeline) > .HyperMD-hr-bg::after,
+.hr-tog .hr.cm-line::after {
   display: none;
 }
 

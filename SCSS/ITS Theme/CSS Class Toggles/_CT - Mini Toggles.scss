@@ -6,7 +6,8 @@
 /*Hide HR Icon*/
 .hr-tog .markdown-preview-view hr::after, 
 .markdown-preview-view.hr-tog hr::after, 
-.hr-tog div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after {
+.hr-tog div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after,
+.hr-tog .hr.cm-line::after {
     display: none;
 }
 

@@ -127,16 +127,19 @@ button.mod-cta,
     transition: none;
 }
 
+/* Resize Handle */
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+    top: 0;
+}
 /*Sidebar Resize Handle*/
 .workspace-leaf-resize-handle,
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+.workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
     background-color: var(--dark-sidebar);
-    height: 100%;
+    height: calc(100% - 0.5px);
+
 }
 .workspace-leaf-resize-handle:hover,
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
+.workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle:hover {
     background-color: var(--accent);
 }
 

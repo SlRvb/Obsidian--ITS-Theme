@@ -350,12 +350,14 @@ body:not(.hd-indi) .is-live-preview .cm-header {
         margin-left: -30px;
     }
 
-    &.cm-header-1::before { content: "H1"; }
-    &.cm-header-2::before { content: "H2"; }
-    &.cm-header-3::before { content: "H3"; }
-    &.cm-header-4::before { content: "H4"; }
-    &.cm-header-5::before { content: "H5"; }
-    &.cm-header-6::before { content: "H6"; }
+    &:not(.cm-formatting-header) {
+        &.cm-header-1::before { content: "H1"; }
+        &.cm-header-2::before { content: "H2"; }
+        &.cm-header-3::before { content: "H3"; }
+        &.cm-header-4::before { content: "H4"; }
+        &.cm-header-5::before { content: "H5"; }
+        &.cm-header-6::before { content: "H6"; }
+    }
 } 
 
 /*Apply Header Color Over Link*/

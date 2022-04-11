@@ -9,7 +9,7 @@ li::marker,
     color: transparent;
 }
 /*Lighten Numbered List Marker Color*/
-ol li::marker { color: var(--headers); }
+ol > li::marker { color: var(--headers); }
 
 /*Bullet Shape*/
 //Fix Bullet Disappearing with ul { columns css }
@@ -94,10 +94,11 @@ ol.contains-task-list li > .task-list-item-checkbox {
 .show-indentation-guide {
     & .cm-indent::before,
     &.markdown-rendered li > :is(ul, ol)::before {
-        // border-color: var(--table);
         border-width: var(--b-line);
-        z-index: -1;
     }
+}
+.markdown-source-view.mod-cm6.markdown-rendered li > :is(ul, ol)::before {
+    z-index: -1;
 }
 .markdown-source-view.mod-cm6 .cm-indent::before {
    margin-left: .35em;

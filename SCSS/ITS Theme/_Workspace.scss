@@ -136,7 +136,6 @@ button.mod-cta,
 .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
     background-color: var(--dark-sidebar);
     height: calc(100% - 0.5px);
-
 }
 .workspace-leaf-resize-handle:hover,
 .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle:hover {

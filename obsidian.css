@@ -8017,7 +8017,7 @@ body {
 }
 
 /*Infobox*/
-:is(.is-mobile, .is-live-preview) .callout[data-callout*=infobox] {
+:is(.is-mobile .is-live-preview, .is-live-preview) .callout[data-callout*=infobox] {
   float: unset !important;
   max-width: 100%;
   margin: 0 !important;

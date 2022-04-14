@@ -9077,11 +9077,6 @@ body .markdown-preview-view:not(.is-live-preview).bc-ban .markdown-preview-secti
   margin-top: 200px !important;
 }
 
-/*Remove Banner Margins If Breadcrumbs Trail is near*/
-.BC-trail + div > .obsidian-banner-wrapper {
-  margin: 0;
-}
-
 /*Trail*/
 body .BC-trail {
   padding: 0;

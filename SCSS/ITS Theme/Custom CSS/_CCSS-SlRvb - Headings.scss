@@ -350,7 +350,8 @@ body:not(.hd-indi) .is-live-preview .cm-header {
         margin-left: -30px;
     }
 
-    &:not(.cm-formatting-header) {
+    &:not(.cm-formatting-header):not(.cm-inline-code)
+    {
         &.cm-header-1::before { content: "H1"; }
         &.cm-header-2::before { content: "H2"; }
         &.cm-header-3::before { content: "H3"; }

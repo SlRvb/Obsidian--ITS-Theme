@@ -489,6 +489,11 @@ settings:
         id: dis-tri-quote
         type: class-toggle
     -
+        title: Crop Image Height In Popover
+        description: ⚠ Warning, might have some unintended consequences
+        id: crop-img
+        type: class-toggle
+    -
         title: Headers
         id: Headers
         type: heading

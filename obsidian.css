@@ -490,6 +490,11 @@ settings:
         id: dis-tri-quote
         type: class-toggle
     -
+        title: Crop Image Height In Popover
+        description: ⚠ Warning, might have some unintended consequences
+        id: crop-img
+        type: class-toggle
+    -
         title: Headers
         id: Headers
         type: heading
@@ -4944,7 +4949,7 @@ iframe {
 }
 
 /*Crop Image in Popover*/
-.popover.hover-popover:not(.hover-editor) img:not([alt=""]):not(.cm-widgetBuffer):not(.emoji):not(.link-favicon) {
+.crop-img .popover.hover-popover:not(.hover-editor) img:not([alt=""]):not(.cm-widgetBuffer):not(.emoji):not(.link-favicon) {
   object-fit: cover;
   height: 200px;
   width: 100%;
@@ -6543,22 +6548,22 @@ body:not(.hd-indi) .is-live-preview .cm-header::before {
   padding-top: 2px;
   margin-left: -30px;
 }
-body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-1::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header):not(.cm-inline-code).cm-header-1::before {
   content: "H1";
 }
-body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-2::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header):not(.cm-inline-code).cm-header-2::before {
   content: "H2";
 }
-body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-3::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header):not(.cm-inline-code).cm-header-3::before {
   content: "H3";
 }
-body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-4::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header):not(.cm-inline-code).cm-header-4::before {
   content: "H4";
 }
-body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-5::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header):not(.cm-inline-code).cm-header-5::before {
   content: "H5";
 }
-body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header).cm-header-6::before {
+body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header):not(.cm-inline-code).cm-header-6::before {
   content: "H6";
 }
 

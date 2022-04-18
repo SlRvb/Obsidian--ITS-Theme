@@ -278,7 +278,7 @@ settings:
         id: rsb-up
         type: class-toggle
     -
-        title: Sidebar Ribbon Styling
+        title: Sidebar Ribbon
         id: sidebar-styling
         type: heading
         level: 3
@@ -331,6 +331,41 @@ settings:
         min: 30
         max: 100
         step: 5
+    -
+        title: File Explorer
+        id: file-explorer-styling
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Add Vault Title Icon
+        id: vlt-icon
+        type: class-toggle
+    -
+        title: Vault Image
+        id: vlt-icon-img
+        type: variable-text
+        default: "url()"
+    -
+        title: Folder Icon
+        id: folder-icon
+        type: variable-text
+        default: '"\e801"'
+    -
+        title: Folder Font Family
+        id: folder-f
+        type: variable-text
+        default: 'its'
+    -
+        title: File Icon
+        id: file-icon
+        type: variable-text
+        default: '"\e800"'
+    -
+        title: File Font Family
+        id: file-f
+        type: variable-text
+        default: 'its'
     -
         title: Minimalist Workspace
         description: Hide UI unless hovered over the edges of the app.
@@ -488,6 +523,7 @@ settings:
         title: Disable Triple Blockquote Syntax
         id: dis-tri-quote
         type: class-toggle
+        default: true
     -
         title: Crop Image Height In Popover
         description: ⚠ Warning, might have some unintended consequences
@@ -966,6 +1002,17 @@ settings:
             - 
                 label: Notion Style
                 value: link-ntn
+            - 
+                label: All Caps
+                value: link-caps
+            - 
+                label: Underline
+                value: link-underline
+    -
+        title: Link Fonts
+        id: link-f
+        type: variable-text
+        default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
     -
         title: Tables
         id: tables

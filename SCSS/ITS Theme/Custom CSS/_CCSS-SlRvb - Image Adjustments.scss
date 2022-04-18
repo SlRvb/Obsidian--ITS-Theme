@@ -96,8 +96,7 @@ img[alt*="circle"] {
 
 /*Center Image*/
 img:is([alt*="ctr"], [alt*="center"]),
-.image-embed:is([src*="#ctr"], [src*="#center"]),
-.image-embed[alt*="center"],
+// .image-embed:is([src*="#ctr"], [src*="#center"]),
 .imgctr img {
     display:block;
     margin-left: auto;

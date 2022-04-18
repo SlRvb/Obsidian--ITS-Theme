@@ -23,7 +23,9 @@
 /*Fit image in popover*/
 .popover.hover-popover img {
     max-width: 100%;
+    width: 100%;
     height: auto;
+    object-fit: cover;
 }
 .popover.hover-popover img[alt] {
     max-width: unset;

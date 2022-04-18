@@ -279,7 +279,7 @@ settings:
         id: rsb-up
         type: class-toggle
     -
-        title: Sidebar Ribbon Styling
+        title: Sidebar Ribbon
         id: sidebar-styling
         type: heading
         level: 3
@@ -332,6 +332,41 @@ settings:
         min: 30
         max: 100
         step: 5
+    -
+        title: File Explorer
+        id: file-explorer-styling
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Add Vault Title Icon
+        id: vlt-icon
+        type: class-toggle
+    -
+        title: Vault Image
+        id: vlt-icon-img
+        type: variable-text
+        default: "url()"
+    -
+        title: Folder Icon
+        id: folder-icon
+        type: variable-text
+        default: '"\e801"'
+    -
+        title: Folder Font Family
+        id: folder-f
+        type: variable-text
+        default: 'its'
+    -
+        title: File Icon
+        id: file-icon
+        type: variable-text
+        default: '"\e800"'
+    -
+        title: File Font Family
+        id: file-f
+        type: variable-text
+        default: 'its'
     -
         title: Minimalist Workspace
         description: Hide UI unless hovered over the edges of the app.
@@ -489,6 +524,7 @@ settings:
         title: Disable Triple Blockquote Syntax
         id: dis-tri-quote
         type: class-toggle
+        default: true
     -
         title: Crop Image Height In Popover
         description: ⚠ Warning, might have some unintended consequences
@@ -967,6 +1003,17 @@ settings:
             - 
                 label: Notion Style
                 value: link-ntn
+            - 
+                label: All Caps
+                value: link-caps
+            - 
+                label: Underline
+                value: link-underline
+    -
+        title: Link Fonts
+        id: link-f
+        type: variable-text
+        default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
     -
         title: Tables
         id: tables
@@ -2080,6 +2127,7 @@ body {
   --head-h: 15px;
   --f-w-v: 600;
   --f-w-t: 500;
+  --f-w-l: 500;
   /*Other*/
   --hr-sym: "";
   --hr-f: var(--its);
@@ -2088,8 +2136,16 @@ body {
   --bul-f: var(--its);
   --b-line: 2px;
   --otl-sym: "H";
+  --folder-icon: "";
+  --file-icon: "";
+  --folder-f: var(--its);
+  --file-f: var(--its);
+  --link-f: var(--default-font);
   --tag-txt-align: center;
   --sd-opacity: 40%;
+  /* Images */
+  --vlt-sym: ;
+  --vlt-icon-img: url("");
   /*--Specific--*/
   /*Fonts*/
   --sphd-pre-ff-1: "Calisto MT", "Palatino Black", "Suez One", serif;
@@ -3708,13 +3764,38 @@ button.mod-cta,
   font-weight: var(--f-w-v);
 }
 
+/* Vault Icon */
+.vlt-icon .nav-folder.mod-root > .nav-folder-title::before {
+  content: "";
+  background-image: var(--vlt-icon-img);
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: crisp-edges;
+  width: 32px;
+  height: 28px;
+}
+
+.vlt-icon .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  width: unset;
+}
+
+.vlt-icon .nav-folder.mod-root > .nav-folder-title {
+  margin-left: -16px;
+  margin-bottom: 5px;
+}
+
+.nav-folder.mod-root > .nav-folder-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*Remove Empty Div to Fix Folder Adjusting When Open
 .nav-folder-children > div:not(.nav-folder):not(.nav-file) { display: none; }
 */
 /*Nav Folder/File Icons*/
 .nav-folder-children .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
-  font-family: "its";
   margin-right: 6px;
   vertical-align: top;
   font-size: 13px;
@@ -3722,21 +3803,18 @@ button.mod-cta,
 }
 
 .nav-folder-children .nav-folder-title-content::before {
-  content: "\e801";
+  content: var(--folder-icon);
+  font-family: var(--folder-f);
   color: var(--folder);
 }
 
 .nav-file-title .nav-file-title-content::before {
-  content: "\e800";
+  content: var(--file-icon);
+  font-family: var(--file-f);
   text-align: center;
   color: var(--file);
 }
 
-/*
-.nav-file-tag + .nav-file-title-content::before {
-    content: '\ed1e';
-    font-family: var(--rmx);
-}*/
 /*Move File Extension to Right*/
 .nav-folder-title-content,
 .nav-file-title-content {
@@ -4114,6 +4192,14 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
   color: var(--inactive);
 }
 
+.internal-link,
+.external-link,
+.cm-link,
+.cm-hmd-internal-link,
+a:not(.tag) {
+  font-family: var(--link-f);
+}
+
 /*Notion Style Links*/
 .link-ntn .internal-link, .link-ntn .external-link, .link-ntn .cm-link, .link-ntn .cm-hmd-internal-link {
   --text-accent: var(--text);
@@ -4133,6 +4219,20 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
 }
 .link-ntn .cm-s-obsidian span.cm-url {
   color: var(--footnote);
+}
+
+/* Uppercase/All Caps Link */
+.link-caps :is(.cm-underline,
+a:not(.tag),
+.internal-link) {
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.link-underline :is(.cm-underline.cm-underline.cm-underline,
+a:not(.tag),
+.internal-link) {
+  text-decoration: 2px underline var(--accent2-lite);
 }
 
 /*--List--*/
@@ -4940,7 +5040,9 @@ iframe {
 /*Fit image in popover*/
 .popover.hover-popover img {
   max-width: 100%;
+  width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .popover.hover-popover img[alt] {
@@ -5428,8 +5530,6 @@ img[alt*=circle] {
 
 /*Center Image*/
 img:is([alt*=ctr], [alt*=center]),
-.image-embed:is([src*="#ctr"], [src*="#center"]),
-.image-embed[alt*=center],
 .imgctr img {
   display: block;
   margin-left: auto;
@@ -8332,6 +8432,26 @@ Enlarge Image:*/
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+/*Command Palette*/
+.prompt .suggestion-prefix::after {
+  display: none;
+}
+
+.prompt .suggestion-prefix {
+  color: var(--headers);
+  font-weight: 600;
+  padding: 3px 7px 0 0;
+}
+
+.prompt .suggestion-item.is-selected {
+  font-weight: 600;
+  background-color: var(--text-highlight-bg);
+}
+
+.suggestion-item:nth-child(even):not(.is-selected) {
+  background-color: var(--aside-bg);
 }
 
 /*Outline Pane*/

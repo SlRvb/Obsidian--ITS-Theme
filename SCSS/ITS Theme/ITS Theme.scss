@@ -63,6 +63,7 @@
 
 //---Plugins
 //-Core
+@use 'Plugin Core/P-Core - Command Palette' as plc-CP;
 @use 'Plugin Core/P-Core - Outline' as plc-O;
 @use 'Plugin Core/P-Core - Tags' as plc-T;
 @use 'Plugin Core/P-Core - Search' as plc-Se;

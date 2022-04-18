@@ -37,13 +37,34 @@
     font-weight: var(--f-w-v);
 }
 
+/* Vault Icon */
+.vlt-icon .nav-folder.mod-root > .nav-folder-title::before {
+    content: '';
+    background-image: var(--vlt-icon-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    width: 32px;
+    height: 28px;
+}
+.vlt-icon .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content { width: unset; }
+.vlt-icon .nav-folder.mod-root > .nav-folder-title {
+    margin-left: -16px;
+    margin-bottom: 5px;
+}
+.nav-folder.mod-root > .nav-folder-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /*Remove Empty Div to Fix Folder Adjusting When Open
 .nav-folder-children > div:not(.nav-folder):not(.nav-file) { display: none; }
 */
 /*Nav Folder/File Icons*/
 .nav-folder-children .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
-    font-family: 'its';
     margin-right: 6px;
     vertical-align: top;
     font-size: 13px;
@@ -51,18 +72,21 @@
 }
 
 .nav-folder-children .nav-folder-title-content::before {
-    content: '\e801';
+    content: var(--folder-icon);
+    font-family: var(--folder-f);
     color: var(--folder);
 }
 .nav-file-title .nav-file-title-content::before {
-    content: '\e800';
+    content: var(--file-icon);
+    font-family: var(--file-f);
     text-align: center;
     color: var(--file);
-}/*
-.nav-file-tag + .nav-file-title-content::before {
-    content: '\ed1e';
-    font-family: var(--rmx);
-}*/
+}
+
+// .nav-file-tag + .nav-file-title-content::before {
+//     content: '\ed1e';
+//     font-family: var(--rmx);
+// }
 
 
 /*Move File Extension to Right*/

@@ -84,6 +84,7 @@ body {
     --head-h: 15px;
     --f-w-v: 600;
     --f-w-t: 500;
+    --f-w-l: 500;
     
     /*Other*/
     --hr-sym: "\e817";
@@ -93,8 +94,18 @@ body {
     --bul-f: var(--its);
     --b-line: 2px;
     --otl-sym: "H";
+    --folder-icon: "\e801";
+    --file-icon: '\e800';
+    --folder-f: var(--its);
+    --file-f: var(--its);
+    --link-f: var(--default-font);
+
     --tag-txt-align: center;
     --sd-opacity:  40%;
+
+    /* Images */ 
+    --vlt-sym: ;
+    --vlt-icon-img: url("");
 
     /*--Specific--*/
     /*Fonts*/

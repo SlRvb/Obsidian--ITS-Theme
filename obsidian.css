@@ -10468,6 +10468,14 @@ body:is(.theme-dark, .theme-light) {
   --he-text-on-accent-active: var(--text-dl);
 }
 
+/* Heatmap Calendar Fix */
+.heatmap-calendar-graph ul li {
+  border: 0;
+}
+.heatmap-calendar-graph ul li::before {
+  display: none;
+}
+
 body.mtb.AT-multirow .mobile-toolbar-options-container {
   flex-flow: row wrap;
   overflow-y: auto;

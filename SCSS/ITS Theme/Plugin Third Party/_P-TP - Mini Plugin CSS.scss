@@ -47,3 +47,11 @@ body:is(.theme-dark, .theme-light) {
   --he-text-on-accent-inactive: var(--text);
   --he-text-on-accent-active: var(--text-dl);
 }
+
+/* Heatmap Calendar Fix */
+.heatmap-calendar-graph {
+  & ul li {
+    border: 0;
+    &::before { display: none; }
+  }
+}

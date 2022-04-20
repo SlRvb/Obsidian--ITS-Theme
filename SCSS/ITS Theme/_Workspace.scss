@@ -38,7 +38,13 @@
     border: none;
     background-color: var(--outer-bar);
 }
-.workspace-ribbon { transition: none; }
+.workspace-ribbon { 
+    transition: none; 
+    padding: 0px 18px;
+}
+.thin-ribbon .workspace-ribbon {
+    padding: 0;
+}
 
 
 /*Buttons*/

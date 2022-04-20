@@ -8408,6 +8408,75 @@ body {
   margin-block-end: 0;
 }
 
+.callout[data-callout*=cards] {
+  --callout-color: none;
+  --callout-icon: layout-dashboard;
+  --columns: 3;
+  box-shadow: none;
+  border: 0;
+  width: auto;
+  padding: 0;
+  background: transparent;
+}
+.callout[data-callout*=cards] .callout-content {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-gap: 5px;
+  border-radius: 0;
+  padding-inline-start: 0px;
+  padding: 0;
+}
+.callout[data-callout*=cards] p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
+}
+.callout[data-callout*=cards] strong {
+  display: block;
+  text-align: center;
+  margin: auto;
+  background-color: var(--outer-bar, var(--background-secondary));
+}
+
+.callout[data-callout*=cards] br {
+  display: none;
+}
+
+.callout[data-callout*=cards][data-callout-metadata*=dataview] .callout-content {
+  display: unset;
+  grid-template-columns: unset;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dataview] .dataview.table-view-table {
+  display: grid;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dataview] .dataview.table-view-table :is(td, tr) {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dataview] .dataview.table-view-table strong {
+  background: transparent;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dataview] .table-view-thead th {
+  border: 0;
+  background-color: transparent;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dataview] .table-view-thead tr {
+  display: none;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dataview] .dataview.table-view-table tbody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dataview] .dataview.table-view-table tbody tr {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  box-shadow: 0 0 0 1px var(--outline), 2px 2px 0 var(--outline);
+}
+
 /* Kepano: https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164
 Enlarge Image:*/
 .img-zoom .markdown-preview-view img {

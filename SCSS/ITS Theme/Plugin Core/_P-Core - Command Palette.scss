@@ -7,11 +7,12 @@
     padding: 3px 7px 0 0;
 }
 .prompt .suggestion-item.is-selected {
-    // color: var(--text-dl);
     font-weight: 600;
     background-color: var(--text-highlight-bg);
     // background-color: var(--code-bg);
+    // color: var(--text-dl);
 }
-.suggestion-item:nth-child(even):not(.is-selected) {
-    background-color: var(--aside-bg);
-}
+
+// .suggestion-item:nth-child(even):not(.is-selected) {
+//     background-color: var(--aside-bg);
+// }

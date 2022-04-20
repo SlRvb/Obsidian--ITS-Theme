@@ -16,23 +16,6 @@ body .block-ref-count:hover {
 /*Plugin: Link Favicons*/
 object.link-favicon { height: inherit !important; margin-right: 5px; }
 
-/*Plugin: Indent Group*/
-body.ig-lists .HyperMD-list-line .ig-tab::before,
-body.ig-code .HyperMD-codeblock .ig-tab::before {
-  width: var(--b-line);
-  margin-left: 7px;
-}
-
-/*
-.ig-tab.ig-indent-group-level::before { background: var(--lite-accent) !important; }
-.ig-tab:not(.ig-indent-group-level)::before                 { background-color: var(--b-l-1) !important; }
-.ig-tab:not(.ig-indent-group-level):nth-child(2n):before    { background-color: var(--b-l-2) !important; }
-.ig-tab:not(.ig-indent-group-level):nth-child(3n):before    { background-color: var(--b-l-3) !important; }
-.ig-tab:not(.ig-indent-group-level):nth-child(4n):before    { background-color: var(--b-l-4) !important; }
-.ig-tab:not(.ig-indent-group-level):nth-child(5n):before    { background-color: var(--b-l-5) !important; }
-.ig-tab:not(.ig-indent-group-level):nth-child(6n):before    { background-color: var(--b-l-6) !important; }
-*/
-
 /*Emoji Toolbar*/
 img.emoji.emoji { object-fit: cover; }
 
@@ -40,12 +23,20 @@ img.emoji.emoji { object-fit: cover; }
 
 /* Hover Editor */
 body:is(.theme-dark, .theme-light) {
-  --he-title-bar-inactive-pinned-bg: var(--note);
+  --he-title-bar-active-pinned-bg: var(--note);
+  --he-title-bar-active-action: var(--lite-accent);
+  --he-title-bar-active-bg: var(--embed-bg);
+
+  --he-title-bar-inactive-fg: var(--inactive);
   --he-title-bar-inactive-bg: var(--note);
+  --he-title-bar-inactive-pinned-bg: var(--note);
+  --he-title-bar-inactive-action: var(--soft-text);
+  
   --he-popover-border-radius: var(--radius);
 
   --he-text-on-accent-inactive: var(--text);
-  --he-text-on-accent-active: var(--text-dl);
+  // --he-text-on-accent-active: var(--text-dl);
+  --he-text-on-accent-active: var(--headers);
 }
 
 /* Heatmap Calendar Fix */
@@ -54,4 +45,26 @@ body:is(.theme-dark, .theme-light) {
     border: 0;
     &::before { display: none; }
   }
+}
+
+/* Settings Search */ 
+.settings-search-input {
+  padding: 8px 6px;
+  border: 0;
+}
+
+/* Auto Class*/
+.auto-class-settings__match-list li {
+  padding-left: 0px;
+  
+  &::before { display: none; }
+}
+ul.auto-class-settings__match-group-list {
+  // padding-inline-start: 30px;
+  margin-left: 15px;
+  border-left: 2px solid var(--accent);
+}
+.auto-class-settings__match-group-header:hover,
+li.auto-class-settings__match-list-item:hover {
+  background-color: var(--td);
 }

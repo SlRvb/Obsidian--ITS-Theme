@@ -88,3 +88,19 @@
 .cm-s-obsidian .cm-cursor {
     border-left: 1px solid var(--text);
 }
+
+
+/* Empty Pane */
+.empty-state-container {
+    background: var(--note);
+    margin: 0;
+    padding: 50px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.empty-state-title {
+    text-transform: capitalize;
+}
+.empty-state-action:hover {
+    font-weight: 600;
+}

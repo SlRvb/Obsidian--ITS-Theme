@@ -66,6 +66,8 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
 .cm-s-obsidian span.cm-url:hover {
     color: var(--inactive);
 }
+.markdown-rendered .internal-link,
+.markdown-rendered .external-link,
 .internal-link,
 .external-link,
 .cm-link,
@@ -74,6 +76,7 @@ a:not(.tag)
 {
     font-family: var(--link-f);
     // font-weight: var(--f-w-l);
+    text-decoration: none;
 }
 
 /*Notion Style Links*/

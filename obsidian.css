@@ -3809,7 +3809,6 @@ button.mod-cta,
 }
 
 .vlt-icon .nav-folder.mod-root > .nav-folder-title {
-  margin-left: -16px;
   margin-bottom: 5px;
 }
 
@@ -4216,12 +4215,15 @@ body .markdown-source-view.mod-cm6 .is-unresolved .cm-hmd-internal-link,
   color: var(--inactive);
 }
 
+.markdown-rendered .internal-link,
+.markdown-rendered .external-link,
 .internal-link,
 .external-link,
 .cm-link,
 .cm-hmd-internal-link,
 a:not(.tag) {
   font-family: var(--link-f);
+  text-decoration: none;
 }
 
 /*Notion Style Links*/

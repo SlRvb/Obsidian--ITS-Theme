@@ -55,29 +55,25 @@ strong { font-weight: 900; }
 
 
 /*-Code-*/
+.theme-dark :not(pre) > code[class*="language-"],
+.theme-dark pre[class*="language-"],
 .markdown-rendered code,
 code,
 .markdown-preview-view code,
 .markdown-preview-view pre {
-    color: var(--code-text);
-    z-index: 0 !important;
     background-color: var(--code-bg);
-    line-height: 1.4em;
+    color: var(--code-text);
     border-radius: var(--radius);
+    
+    line-height: 1.4em;
     font-size: var(--f-s-code);
     font-family: var(--font-monospace);
+    
     overflow: auto;
-}
-
-.markdown-preview-view pre[class*="language-"],
-.markdown-preview-view code[class*="language-"] {
-    background: var(--code-bg);
-    line-height: 1.4em;
-    display: block;
-    white-space: pre-wrap !important;
-    color: var(--text);
-    border-radius: var(--radius);
     z-index: 0 !important;
+}
+.unwrap-codeblock .markdown-preview-view code {
+    white-space: pre;
 }
 
 /*Apply Dropshadow*/

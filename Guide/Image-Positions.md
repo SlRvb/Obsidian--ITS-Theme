@@ -1,6 +1,8 @@
 # Image Positions
 > Move/position and re-size the images in notes
 
+ [Download Image Adjusment Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Images%20Adjustments.css)
+
 **⚠ Note:** 
 - Obsidian internal images `![[` will change immediately, but for external images `![]()`, the page needs to be reopened to see the changes. 
 - Might not be 100% compatible with [Lithou's Image Flags snippet.](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)

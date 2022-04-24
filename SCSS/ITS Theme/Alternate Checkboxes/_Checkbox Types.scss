@@ -436,7 +436,6 @@ body:not(.alt-chkbx-off) {
         border-left: 2px solid rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
     }
-    & .markdown-source-view.mod-cm6.is-rtl .HyperMD-task-line[data-task="X"],
     & .rtl li[data-task="X"].task-list-item.is-checked {
         border-left: unset;
         border-right: 2px solid rgb(var(--chbx-R));

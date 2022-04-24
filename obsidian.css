@@ -7549,7 +7549,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   background: rgba(var(--chbx-R), 20%);
   /*#bbcbff17*/
 }
-.check-bg .markdown-source-view.mod-cm6.is-rtl .HyperMD-task-line[data-task=X], .check-bg .rtl li[data-task=X].task-list-item.is-checked {
+.check-bg .rtl li[data-task=X].task-list-item.is-checked {
   border-left: unset;
   border-right: 2px solid rgb(var(--chbx-R));
 }

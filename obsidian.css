@@ -5373,9 +5373,6 @@ progress::-webkit-progress-value {
 .is-rtl input[type=checkbox i] {
   margin-right: -6px;
 }
-.is-rtl .HyperMD-task-line {
-  padding-right: 10px;
-}
 
 .rtl li {
   border-left: unset;

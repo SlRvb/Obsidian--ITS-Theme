@@ -4,7 +4,6 @@
     &.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
         margin-right: -7px;
     }
-
     // Numbered List numer position
     &.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol { 
         padding-right: unset; 
@@ -16,9 +15,7 @@
         margin-right: -6px;
     }
 
-    & .HyperMD-task-line {
-        padding-right: 10px;
-    }
+    // & .HyperMD-task-line { padding-right: 10px; }
 }
 
 

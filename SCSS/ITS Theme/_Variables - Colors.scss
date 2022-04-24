@@ -126,6 +126,13 @@
     --h4-b-c: var(--sphd-pre-4);
     --h5-b-c: var(--sphd-pre-5);
     --h6-b-c: var(--sphd-pre-6);
+    
+    --h1-c: var(--accent); 
+    --h2-c: var(--headers);
+    --h3-c: var(--i-at); 
+    --h4-c: var(--accent2-lite); 
+    --h5-c: var(--lines); 
+    --h6-c: var(--table); 
 
     --em-pre-c: var(--text);
     --em-ed-c: var(--text);
@@ -226,7 +233,7 @@
     --tag: #c65656;
     --table: #ccd6eb;
     --hr: #d6deea;
-    --i-at: var(--headers)/*#804848*/;
+    --i-at: var(--folder)/*#804848*/;
     --bttn: var(--headers);
     --progress: var(--accent);
     --progress-bg: var(--bg);
@@ -267,6 +274,13 @@
     --h4-b-c: var(--sphd-pre-4);
     --h5-b-c: var(--sphd-pre-5);
     --h6-b-c: var(--sphd-pre-6);
+
+    --h1-c: var(--accent);
+    --h2-c: var(--headers);
+    --h3-c: var(--i-at); 
+    --h4-c: var(--accent2-lite); 
+    --h5-c: var(--lines); 
+    --h6-c: var(--table); 
 
     --em-pre-c: var(--text);
     --em-ed-c: var(--text);

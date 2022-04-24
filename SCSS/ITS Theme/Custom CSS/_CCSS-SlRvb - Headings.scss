@@ -196,7 +196,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & .HyperMD-header-1::after
     { 
         height: 6px;
-        background: var(--accent); 
+        background: var(--h1-c); 
         width: auto;
     }
     
@@ -205,7 +205,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & .HyperMD-header-2::after
     { 
         height: 5px;
-        background: var(--headers);
+        background: var(--h2-c);
         width: auto;
     }
 
@@ -214,7 +214,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & .HyperMD-header-3::after
     { 
         height: 4px;
-        background: var(--i-at); 
+        background: var(--h3-c); 
         width: auto;
     }
 
@@ -223,7 +223,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & .HyperMD-header-4::after
     { 
         height: 3px;
-        background: var(--accent2-lite); 
+        background: var(--h4-c); 
         width: 100%;
     }
 
@@ -232,7 +232,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & .HyperMD-header-5::after
     { 
         height: 3px;
-        background: var(--lines); 
+        background: var(--h5-c); 
         width: auto;
     }
 
@@ -241,7 +241,7 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
     & .HyperMD-header-6::after
     { 
         height: 3px;
-        background: var(--table); 
+        background: var(--h6-c); 
         width: auto;
     }
 }

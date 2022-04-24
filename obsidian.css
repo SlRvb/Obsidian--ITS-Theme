@@ -643,7 +643,7 @@ settings:
         level: 5
 		collapsed: true
 	-
-		title: Heading 1 Border Color Preview
+		title: Heading 1 Border Color
 		id: h1-b-c
 		type: variable-themed-color
 		format: hex
@@ -1747,6 +1747,53 @@ settings:
 		format: hex
 		default-dark: '#e5ebee'
 		default-light: '#e5ebee'
+    -
+        title: Header Lines
+        id: Header-Lines
+        type: heading
+        level: 4
+    -
+		title: Heading 1 Line Color
+		id: h1-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#912e2e'
+		default-light: '#bb5555'
+	-
+		title: Heading 2 Line Color
+		id: h2-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+	-
+		title: Heading 3 Line Color
+		id: h3-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#bf5e5e'
+		default-light: '#ce6d6d'
+	-
+		title: Heading 4 Line Color
+		id: h4-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#61afef'
+		default-light: '#5599d0'
+	-
+		title: Heading 5 Line Color
+		id: h5-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#2f3b4d'
+		default-light: '#b5c2d8'
+	-
+		title: Heading 6 Line Color
+		id: h6-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#2a2e35'
+		default-light: '#ccd6eb'
     -
         title: Other
         id: Other-Colors
@@ -3053,6 +3100,12 @@ body:not(.its-i) svg.clock-glyph {
   --h4-b-c: var(--sphd-pre-4);
   --h5-b-c: var(--sphd-pre-5);
   --h6-b-c: var(--sphd-pre-6);
+  --h1-c: var(--accent);
+  --h2-c: var(--headers);
+  --h3-c: var(--i-at);
+  --h4-c: var(--accent2-lite);
+  --h5-c: var(--lines);
+  --h6-c: var(--table);
   --em-pre-c: var(--text);
   --em-ed-c: var(--text);
   --b-pre-c: var(--text);
@@ -3167,7 +3220,7 @@ body:not(.its-i) svg.clock-glyph {
   --tag: #c65656;
   --table: #ccd6eb;
   --hr: #d6deea;
-  --i-at: var(--headers)/*#804848*/;
+  --i-at: var(--folder)/*#804848*/;
   --bttn: var(--headers);
   --progress: var(--accent);
   --progress-bg: var(--bg);
@@ -3204,6 +3257,12 @@ body:not(.its-i) svg.clock-glyph {
   --h4-b-c: var(--sphd-pre-4);
   --h5-b-c: var(--sphd-pre-5);
   --h6-b-c: var(--sphd-pre-6);
+  --h1-c: var(--accent);
+  --h2-c: var(--headers);
+  --h3-c: var(--i-at);
+  --h4-c: var(--accent2-lite);
+  --h5-c: var(--lines);
+  --h6-c: var(--table);
   --em-pre-c: var(--text);
   --em-ed-c: var(--text);
   --b-pre-c: var(--text);
@@ -6623,32 +6682,32 @@ h4::after, .HyperMD-header-4::after {
 }
 .hcl h1::before, .hcl h1::after, .hcl .HyperMD-header-1::after {
   height: 6px;
-  background: var(--accent);
+  background: var(--h1-c);
   width: auto;
 }
 .hcl h2::before, .hcl h2::after, .hcl .HyperMD-header-2::after {
   height: 5px;
-  background: var(--headers);
+  background: var(--h2-c);
   width: auto;
 }
 .hcl h3::before, .hcl h3::after, .hcl .HyperMD-header-3::after {
   height: 4px;
-  background: var(--i-at);
+  background: var(--h3-c);
   width: auto;
 }
 .hcl h4::before, .hcl h4::after, .hcl .HyperMD-header-4::after {
   height: 3px;
-  background: var(--accent2-lite);
+  background: var(--h4-c);
   width: 100%;
 }
 .hcl h5::before, .hcl h5::after, .hcl .HyperMD-header-5::after {
   height: 3px;
-  background: var(--lines);
+  background: var(--h5-c);
   width: auto;
 }
 .hcl h6::before, .hcl h6::after, .hcl .HyperMD-header-6::after {
   height: 3px;
-  background: var(--table);
+  background: var(--h6-c);
   width: auto;
 }
 

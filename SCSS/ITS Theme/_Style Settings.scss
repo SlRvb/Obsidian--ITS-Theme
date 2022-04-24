@@ -642,7 +642,7 @@ settings:
         level: 5
 		collapsed: true
 	-
-		title: Heading 1 Border Color Preview
+		title: Heading 1 Border Color
 		id: h1-b-c
 		type: variable-themed-color
 		format: hex
@@ -1746,6 +1746,53 @@ settings:
 		format: hex
 		default-dark: '#e5ebee'
 		default-light: '#e5ebee'
+    -
+        title: Header Lines
+        id: Header-Lines
+        type: heading
+        level: 4
+    -
+		title: Heading 1 Line Color
+		id: h1-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#912e2e'
+		default-light: '#bb5555'
+	-
+		title: Heading 2 Line Color
+		id: h2-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+	-
+		title: Heading 3 Line Color
+		id: h3-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#bf5e5e'
+		default-light: '#ce6d6d'
+	-
+		title: Heading 4 Line Color
+		id: h4-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#61afef'
+		default-light: '#5599d0'
+	-
+		title: Heading 5 Line Color
+		id: h5-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#2f3b4d'
+		default-light: '#b5c2d8'
+	-
+		title: Heading 6 Line Color
+		id: h6-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#2a2e35'
+		default-light: '#ccd6eb'
     -
         title: Other
         id: Other-Colors

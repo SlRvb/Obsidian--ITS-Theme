@@ -4305,6 +4305,12 @@ ol ul > li::before {
   visibility: visible;
 }
 
+.rtl ul li::before {
+  float: right;
+  margin-left: unset;
+  margin-right: -22px;
+}
+
 /*Smaller Indentation*/
 ul, ol {
   padding-inline-start: 25px;
@@ -4341,17 +4347,15 @@ ul li > p {
   margin-right: -11px;
 }
 
-.markdown-source-view.mod-cm6 .list-bullet::after {
+.markdown-source-view.mod-cm6:not(.is-rtl) .list-bullet::after {
   padding-left: 0;
   margin-right: 0;
 }
-
-.markdown-source-view.mod-cm6:not(.is-live-preview) .list-bullet {
-  padding-right: 0.55em;
-}
-
 .markdown-source-view.mod-cm6.is-live-preview .list-bullet {
   padding-right: 0.45em;
+}
+.markdown-source-view.mod-cm6:not(.is-live-preview) .list-bullet {
+  padding-right: 0.55em;
 }
 
 .markdown-rendered.show-indentation-guide ol li.task-list-item > ol::before {
@@ -5360,6 +5364,52 @@ progress::-webkit-progress-value {
   margin-bottom: -3px;
 }
 
+.is-rtl.markdown-source-view.mod-cm6 .list-bullet::after, .is-rtl.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
+  margin-right: -7px;
+}
+.is-rtl.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol {
+  padding-right: unset;
+}
+.is-rtl input[type=checkbox i] {
+  margin-right: -6px;
+}
+.is-rtl .HyperMD-task-line {
+  padding-right: 10px;
+}
+
+.rtl li {
+  border-left: unset;
+  padding-left: unset;
+  border-right: var(--b-line) solid var(--accent);
+  padding-right: 5px;
+}
+.rtl li:nth-child(even) {
+  border-left: unset;
+  border-right: var(--b-line) solid var(--accent2);
+}
+.rtl.markdown-rendered.show-indentation-guide li > ul::before, .rtl.markdown-rendered.show-indentation-guide li > ol::before {
+  left: unset;
+  right: -1em;
+}
+.rtl li.task-list-item {
+  margin-right: unset;
+}
+.rtl ul > li.task-list-item .task-list-item-checkbox {
+  margin-left: 10px;
+  margin-right: -26px;
+}
+.rtl ol.contains-task-list li > .task-list-item-checkbox {
+  margin-left: 5px;
+  margin-right: -2px;
+}
+
+/* List Arrow Indicators */
+.rtl.markdown-preview-view .collapse-indicator {
+  float: right;
+  margin-left: unset;
+  margin-right: -45px;
+}
+
 /*CSS class, Hide Frontmatter*/
 .no-m .frontmatter-container,
 .reveal pre.frontmatter {
@@ -6331,7 +6381,7 @@ div:not(.w-hcl).writing .HyperMD-header-4::before {
 }
 
 /*Italicized Text <i></i>*/
-.markdown-preview-section i,
+:is(.markdown-preview-section, .markdown-source-view) i,
 .i-at,
 .cm-html-embed i,
 .reveal i {
@@ -6341,7 +6391,11 @@ div:not(.w-hcl).writing .HyperMD-header-4::before {
   color: var(--i-at);
   text-align: center;
   background-color: var(--outer-bar);
-  padding: 0 1em;
+  padding: 2px 1em;
+}
+
+.markdown-source-view i {
+  padding: 5px 1em;
 }
 
 #right,
@@ -7495,97 +7549,189 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   background: rgba(var(--chbx-R), 20%);
   /*#bbcbff17*/
 }
+.check-bg .markdown-source-view.mod-cm6.is-rtl .HyperMD-task-line[data-task=X], .check-bg .rtl li[data-task=X].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-R));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"], .check-bg li[data-task=">"].task-list-item.is-checked {
   border-left: 2px double rgb(var(--chbx-h));
   background: rgba(var(--chbx-h), 20%);
+}
+.check-bg .rtl li[data-task=">"].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px double rgb(var(--chbx-h));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D], .check-bg li[data-task=D].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-h));
   background: rgba(var(--chbx-h), 20%);
 }
+.check-bg .rtl li[data-task=D].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-h));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"], .check-bg li[data-task="-"].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-d));
   background: rgba(var(--chbx-d), 20%);
+}
+.check-bg .rtl li[data-task="-"].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-d));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"], .check-bg li[data-task="?"].task-list-item.is-checked {
   border-left: 2px dashed rgb(var(--chbx-q));
   background: rgba(var(--chbx-q), 20%);
   /*#fac35d17*/
 }
+.check-bg .rtl li[data-task="?"].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px dashed rgb(var(--chbx-q));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"], .check-bg li[data-task="!"].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-i));
   background: rgba(var(--chbx-i), 20%);
+}
+.check-bg .rtl li[data-task="!"].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-i));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"], .check-bg li[data-task="+"].task-list-item.is-checked {
   border-left: 2px dashed rgb(var(--chbx-a));
   background: rgba(var(--chbx-a), 20%);
 }
+.check-bg .rtl li[data-task="+"].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px dashed rgb(var(--chbx-a));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"], .check-bg li[data-task="/"].task-list-item.is-checked {
   border-left: 2px dashed rgb(var(--chbx-R));
   background: linear-gradient(to left, var(--accent, var(--interactive-accent)) 0%, transparent 1%);
+}
+.check-bg .rtl li[data-task="/"].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px dashed rgb(var(--chbx-R));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R], .check-bg li[data-task=R].task-list-item.is-checked {
   border-left: 2px dashed rgb(var(--chbx-R));
   background: rgba(var(--chbx-R), 20%);
   /*#bbcbff17*/
 }
+.check-bg .rtl li[data-task=R].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px dashed rgb(var(--chbx-R));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i], .check-bg li[data-task=i].task-list-item.is-checked {
   border-left: 2px dashed rgb(var(--chbx-id));
   background: rgba(var(--chbx-id), 20%);
+}
+.check-bg .rtl li[data-task=i].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px dashed rgb(var(--chbx-id));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B], .check-bg li[data-task=B].task-list-item.is-checked {
   border-left: 2px double rgb(var(--chbx-B));
   background: rgba(var(--chbx-B), 20%);
   /*#945dfa25*/
 }
+.check-bg .rtl li[data-task=B].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px double rgb(var(--chbx-B));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P], .check-bg li[data-task=P].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-P));
   background: rgba(var(--chbx-P), 20%);
+}
+.check-bg .rtl li[data-task=P].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-P));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C], .check-bg li[data-task=C].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-C));
   background: rgba(var(--chbx-C), 20%);
 }
+.check-bg .rtl li[data-task=C].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-C));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I], .check-bg li[data-task=I].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-I));
   background: rgba(var(--chbx-I), 20%);
+}
+.check-bg .rtl li[data-task=I].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-I));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q], .check-bg li[data-task=Q].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-R));
   border-right: 2px solid rgb(var(--chbx-R));
   background: rgba(var(--chbx-R), 20%);
 }
+.check-bg .rtl li[data-task=Q].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-R));
+  border-right: 2px solid rgb(var(--chbx-R));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N], .check-bg li[data-task=N].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-N));
   background: rgba(var(--chbx-N), 20%);
+}
+.check-bg .rtl li[data-task=N].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-N));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b], .check-bg li[data-task=b].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-b));
   background: rgba(var(--chbx-b), 20%);
 }
+.check-bg .rtl li[data-task=b].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-b));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=p], .check-bg li[data-task=p].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-R));
   background: rgba(var(--chbx-R), 20%);
+}
+.check-bg .rtl li[data-task=p].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-R));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=L], .check-bg li[data-task=L].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-N));
   background: rgba(var(--chbx-N), 20%);
 }
+.check-bg .rtl li[data-task=L].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-N));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=E], .check-bg li[data-task=E].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-I));
   background: rgba(var(--chbx-I), 20%);
+}
+.check-bg .rtl li[data-task=E].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-I));
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=A], .check-bg li[data-task=A].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-P));
   background: rgba(var(--chbx-P), 20%);
 }
+.check-bg .rtl li[data-task=A].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-P));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=r], .check-bg li[data-task=r].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-r));
   background: rgba(var(--chbx-r), 20%);
 }
+.check-bg .rtl li[data-task=r].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-r));
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=c], .check-bg li[data-task=c].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-c));
   background: rgba(var(--chbx-c), 20%);
+}
+.check-bg .rtl li[data-task=c].task-list-item.is-checked {
+  border-left: unset;
+  border-right: 2px solid rgb(var(--chbx-c));
 }
 
 /*Hide Border For LP (Aligns Items Strangely) */
@@ -10644,6 +10790,171 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
 
 .plugin-tabs:not(.plugin-sliding-panes) .view-actions {
   margin-top: -0.05em;
+}
+
+/*RSS Feed Plugin*/
+code {
+  font-family: var(--font-monospace);
+}
+
+.rss-modal {
+  width: 60vh;
+  margin: auto;
+  padding: 10px 20px;
+  text-align: justify;
+}
+
+.rss-content {
+  padding: 0 20px;
+}
+
+.rss-title,
+h3.rss-subtitle {
+  display: block;
+  text-align: center;
+}
+
+.rss-title {
+  line-height: 30px;
+}
+
+.rss-subtitle::after {
+  display: none;
+}
+
+.is-mobile .rss-title {
+  font-size: var(--h4);
+}
+.is-mobile h3.rss-subtitle {
+  font-size: var(--h6);
+  margin-block-start: 0;
+}
+.is-mobile .rss-content {
+  padding: 0 10px;
+}
+
+.topButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.topButtons button {
+  padding: 6px 10px;
+}
+
+.topButtons button svg {
+  margin-bottom: -4px;
+}
+
+.rss-content.scrollable-content li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.workspace-leaf-content[data-type=RSS_FEED] .setting-item:not(.setting-item-heading) {
+  padding: 0;
+  margin: auto;
+}
+.workspace-leaf-content[data-type=RSS_FEED] .setting-item:not(.setting-item-heading) .setting-item-info > div {
+  display: none;
+}
+
+/*Feed*/
+.rss-feed-title {
+  font-weight: 600px;
+}
+
+.rss-feed-title svg {
+  vertical-align: -2px;
+}
+
+/*Feed Folders*/
+.rss-feed-item.rss-read a {
+  color: var(--inactive);
+  font-weight: bold;
+}
+
+.rss-feed-item.rss-read a:hover {
+  color: var(--footnote);
+}
+
+.rss-folder > span {
+  background-color: var(--embed-bg);
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+.rss-feeds-folders .tree-item-children {
+  margin-left: 0;
+}
+
+.rss-filtered-folders .tree-item-children .tree-item-self::before,
+.rss-folder span > span:first-child::after {
+  content: "\e801";
+  font-family: var(--its);
+  padding-right: 5px;
+}
+
+.rss-feeds-folders span > span svg,
+.rss-filtered-folders span > span svg {
+  display: none;
+}
+
+.rss-filtered-folders .tree-item-children,
+.rss-feeds-folders .tree-item-self,
+.rss-filtered-folders .tree-item-self {
+  padding: 3px 5px;
+  margin: 0;
+  width: 100%;
+}
+
+/*Folder Title*/
+.rss-feeds-folders p svg {
+  display: none;
+}
+
+.rss-filtered-folders > div,
+.rss-feeds-folders > .tree-item .tree-item-self span {
+  font-family: var(--font);
+  font-size: 1.4em;
+  margin: 5px 0px;
+}
+
+:is(.rss-feeds-folders, .rss-filtered-folders) > .tree-item > .tree-item-self {
+  justify-content: center;
+  letter-spacing: 3px;
+}
+
+.rss-folders p span + span {
+  font-size: 1em;
+}
+
+.rss-feeds-folders ul {
+  margin-left: -28px;
+}
+
+.rss-feed ul {
+  padding-left: 50px;
+}
+
+.rss-feed-item {
+  margin-left: 20px;
+}
+
+.rss-feed-item::before {
+  content: var(--bullet);
+  font-family: var(--its);
+  margin-left: -20px;
+}
+
+.rss-feed-items .tree-item-self {
+  border-left: 2px solid var(--lines);
+  margin-left: 12px;
+}
+
+.rss-feed-items .tree-item:nth-child(odd) .tree-item-self {
+  background: var(--td);
 }
 
 /*--Sliding Panes--*/

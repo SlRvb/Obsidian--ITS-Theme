@@ -1,6 +1,6 @@
 
 /*Italicized Text <i></i>*/
-.markdown-preview-section i,
+:is(.markdown-preview-section, .markdown-source-view) i,
 .i-at,
 .cm-html-embed i,
 .reveal i { /*I used for image description, em is just regular italics*/
@@ -9,8 +9,9 @@
     color: var(--i-at);
     text-align: center;
     background-color: var(--outer-bar);
-    padding: 0 1em;
+    padding: 2px 1em;
 }
+.markdown-source-view i { padding: 5px 1em; }
 
 #right,
 .markdown-preview-section .right {

@@ -436,84 +436,154 @@ body:not(.alt-chkbx-off) {
         border-left: 2px solid rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
     }
+    & .markdown-source-view.mod-cm6.is-rtl .HyperMD-task-line[data-task="X"],
+    & .rtl li[data-task="X"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-R));
+    }
     //[>]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
     & li[data-task=">"].task-list-item.is-checked {
         border-left: 2px double rgb(var(--chbx-h));
         background: rgba(var(--chbx-h), 20%); 
     }
+    & .rtl li[data-task=">"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px double rgb(var(--chbx-h));
+    }
+    
     //[D]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="D"],
     & li[data-task="D"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-h));
         background: rgba(var(--chbx-h), 20%); 
     }
+    & .rtl li[data-task="D"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-h));
+    }
+    
     //[-]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
     & li[data-task="-"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-d));
         background: rgba(var(--chbx-d), 20%); 
     }
+    & .rtl li[data-task="-"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-d));
+    }
+    
     //[?]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
     & li[data-task="?"].task-list-item.is-checked {
         border-left: 2px dashed rgb(var(--chbx-q));
         background: rgba(var(--chbx-q), 20%); /*#fac35d17*/
     }
+    & .rtl li[data-task="?"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px dashed rgb(var(--chbx-q));
+    }
+    
     //[!]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
     & li[data-task="!"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-i));
         background: rgba(var(--chbx-i), 20%); 
     }
+    & .rtl li[data-task="!"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-i));
+    }
+    
     //[+]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
     & li[data-task="+"].task-list-item.is-checked {
         border-left: 2px dashed rgb(var(--chbx-a));
         background: rgba(var(--chbx-a), 20%); 
     }
+    & .rtl li[data-task="+"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px dashed rgb(var(--chbx-a));
+    }
+    
     //[/]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
     & li[data-task="/"].task-list-item.is-checked {
         border-left: 2px dashed rgb(var(--chbx-R));
         background: linear-gradient(to left, var(--accent, var(--interactive-accent)) 0%,transparent 1%);
     }
+    & .rtl li[data-task="/"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px dashed rgb(var(--chbx-R));
+    }
+    
     //[R]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="R"],
     & li[data-task="R"].task-list-item.is-checked {
         border-left: 2px dashed rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
     }
+    & .rtl li[data-task="R"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px dashed rgb(var(--chbx-R));
+    }
+    
     //[i]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="i"],
     & li[data-task="i"].task-list-item.is-checked {
         border-left: 2px dashed rgb(var(--chbx-id));
         background: rgba(var(--chbx-id), 20%); 
     }
+    & .rtl li[data-task="i"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px dashed rgb(var(--chbx-id));
+    }
+    
     //[B]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="B"],
     & li[data-task="B"].task-list-item.is-checked {
         border-left: 2px double rgb(var(--chbx-B));
         background: rgba(var(--chbx-B), 20%); /*#945dfa25*/
     }
+    & .rtl li[data-task="B"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px double rgb(var(--chbx-B));
+    }
+    
     //[P]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="P"],
     & li[data-task="P"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-P));
         background: rgba(var(--chbx-P), 20%); 
     }
+    & .rtl li[data-task="P"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-P));
+    }
+    
     //[C]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="C"],
     & li[data-task="C"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-C));
         background: rgba(var(--chbx-C), 20%); 
     }
+    & .rtl li[data-task="C"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-C));
+    }
+    
     //[I]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="I"],
     & li[data-task="I"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-I));
         background: rgba(var(--chbx-I), 20%); 
     }
+    & .rtl li[data-task="I"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-I));
+    }
+    
     //[Q]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="Q"],
     & li[data-task="Q"].task-list-item.is-checked {
@@ -521,18 +591,33 @@ body:not(.alt-chkbx-off) {
         border-right: 2px solid rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%);
     }
+    & .rtl li[data-task="Q"].task-list-item.is-checked {
+        border-left:  2px solid rgb(var(--chbx-R));
+        border-right: 2px solid rgb(var(--chbx-R));
+    }
+    
     //[N]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="N"],
     & li[data-task="N"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-N));
         background: rgba(var(--chbx-N), 20%); 
     }
+    & .rtl li[data-task="N"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-N));
+    }
+    
     //[b]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="b"],
     & li[data-task="b"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-b));
         background: rgba(var(--chbx-b), 20%); 
     }
+    & .rtl li[data-task="b"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-b));
+    }
+    
 
     //[p]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="p"],
@@ -540,36 +625,66 @@ body:not(.alt-chkbx-off) {
         border-left: 2px solid rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%); 
     }
+    & .rtl li[data-task="p"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-R));
+    }
+    
     //[L]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="L"],
     & li[data-task="L"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-N));
         background: rgba(var(--chbx-N), 20%); 
     }
+    & .rtl li[data-task="L"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-N));
+    }
+    
     //[E]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="E"],
     & li[data-task="E"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-I));
         background: rgba(var(--chbx-I), 20%); 
     }
+    & .rtl li[data-task="E"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-I));
+    }
+    
     //[A]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="A"],
     & li[data-task="A"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-P));
         background: rgba(var(--chbx-P), 20%); 
     }
+    & .rtl li[data-task="A"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-P));
+    }
+    
     //[r]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="r"],
     & li[data-task="r"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-r));
         background: rgba(var(--chbx-r), 20%); 
     }
+    & .rtl li[data-task="r"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-r));
+    }
+    
     //[c]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="c"],
     & li[data-task="c"].task-list-item.is-checked {
         border-left: 2px solid rgb(var(--chbx-c));
         background: rgba(var(--chbx-c), 20%); 
     }
+    & .rtl li[data-task="c"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-c));
+    }
+    
 }
 
 

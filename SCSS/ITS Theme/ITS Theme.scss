@@ -32,6 +32,7 @@
 @use 'Footnotes';
 @use 'Progress Bar' as prog-bar;
 @use 'Callout';
+@use 'Right To Left' as rtl;
 
 
 //---Custom CSS
@@ -96,6 +97,7 @@
 @use 'Plugin Third Party/P-TP - Mobile Toolbar' as ptp-mbltb;
 @use 'Plugin Third Party/P-TP - Obsidian Icon Folder' as ptp-oif;
 @use 'Plugin Third Party/P-TP - Obsidian Tabs' as ptp-ot;
+@use 'Plugin Third Party/P-TP - RSS' as ptp-rss;
 @use 'Plugin Third Party/P-TP - Sliding Panes' as ptp-sp;
 @use 'Plugin Third Party/P-TP - Statblocks' as ptp-stat;
 @use 'Plugin Third Party/P-TP - Style Settings' as ptp-StSe;

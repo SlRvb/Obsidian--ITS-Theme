@@ -17,6 +17,7 @@ ol > li::marker { color: var(--headers); }
 //     list-style-type: none;
 // }
 
+
 ul li::before {
     content: var(--bullet);
     font-family: var(--bul-f);
@@ -29,19 +30,32 @@ ul li::before {
     font-size: var(--f-text);
 }
 ul li:nth-child(even)::before { color: var(--accent2); }
+
+
+
 li.task-list-item::before,
 .markdown-preview-view ol > li::before {
     visibility: collapse;
 }
 ol ul > li::before { visibility: visible; }
 
+// Right to Left
+.rtl ul li::before {
+    float: right;
+    margin-left: unset;
+    margin-right: -22px;
+}
+
+
 /*Smaller Indentation*/
 ul, ol { 
     padding-inline-start: 25px;
 }
+// Checkbox Alignment Fix
 ul > li.task-list-item .task-list-item-checkbox { margin-left: -26px; }
 .markdown-preview-view ol > li.task-list-item { padding-left: 10px; }
-// .markdown-preview-view ul > li.task-list-item { list-style: none; }
+
+
 
 
 /*Fix breaking when Space in between Lists*/
@@ -67,11 +81,22 @@ ul li > p { margin-block-end: unset; }
     margin-right: -11px;
 }
 
-// Live Preview List Alignment
-.markdown-source-view.mod-cm6 .list-bullet::after
-{ padding-left: 0; margin-right: 0; }
-.markdown-source-view.mod-cm6:not(.is-live-preview) .list-bullet { padding-right: .55em; }
-.markdown-source-view.mod-cm6.is-live-preview .list-bullet { padding-right: .45em; }
+
+.markdown-source-view.mod-cm6 {
+    // Live Preview List Alignment
+    &:not(.is-rtl) .list-bullet::after { 
+        padding-left: 0; 
+        margin-right: 0; 
+    }
+    &.is-live-preview .list-bullet { 
+        padding-right: .45em; 
+    }
+    
+    // Source Mode List Fix
+    &:not(.is-live-preview) .list-bullet { 
+        padding-right: .55em; 
+    }
+}
 
 //Numbered Checklist
 .markdown-rendered.show-indentation-guide ol li.task-list-item > ol::before {
@@ -79,8 +104,12 @@ ul li > p { margin-block-end: unset; }
 }
 
 /*Adjust Padding*/
-.cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol { margin-left: 0; }
-.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol { padding-right: .3em; }
+.cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol { 
+    margin-left: 0; 
+}
+.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol { 
+    padding-right: .3em; 
+}
 // Fix for Numbered Lists sub ol with numbered checkbox
 ol.contains-task-list li > .task-list-item-checkbox {
     margin-left: -5px;

@@ -4342,7 +4342,7 @@ ol > li::marker {
 }
 
 /*Bullet Shape*/
-ul li::before {
+ul > li::before {
   content: var(--bullet);
   font-family: var(--bul-f);
   margin-left: -22px;
@@ -4355,7 +4355,7 @@ ul li::before {
   font-size: var(--f-text);
 }
 
-ul li:nth-child(even)::before {
+ul > li:nth-child(even)::before {
   color: var(--accent2);
 }
 

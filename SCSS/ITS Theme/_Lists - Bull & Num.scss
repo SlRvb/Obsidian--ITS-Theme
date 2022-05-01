@@ -18,7 +18,7 @@ ol > li::marker { color: var(--headers); }
 // }
 
 
-ul li::before {
+ul > li::before {
     content: var(--bullet);
     font-family: var(--bul-f);
     margin-left: -22px;
@@ -29,7 +29,7 @@ ul li::before {
     margin-bottom: auto;
     font-size: var(--f-text);
 }
-ul li:nth-child(even)::before { color: var(--accent2); }
+ul > li:nth-child(even)::before { color: var(--accent2); }
 
 
 

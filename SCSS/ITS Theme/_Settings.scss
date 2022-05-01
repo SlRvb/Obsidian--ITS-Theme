@@ -205,6 +205,9 @@
 }
 
 .suggestion-item.is-selected {
-    background-color: var(--dark-accent);
+    background-color: var(--text-selection);
+}
+.suggestion-highlight {
+    color: var(--lite-accent);
 }
 

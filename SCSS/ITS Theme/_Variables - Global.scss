@@ -98,7 +98,7 @@ body {
     --file-icon: '\e800';
     --folder-f: var(--its);
     --file-f: var(--its);
-    --link-f: var(--default-font);
+    --link-f: inherit;
 
     --tag-txt-align: center;
     --sd-opacity:  40%;

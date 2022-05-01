@@ -77,3 +77,6 @@
     //font-family: var(--font-monospace);
     box-shadow: 0 1px var(--outline);
 }
+.tree-item-flair-outer:after {
+    display: none;
+}

@@ -2195,7 +2195,7 @@ body {
   --file-icon: "";
   --folder-f: var(--its);
   --file-f: var(--its);
-  --link-f: var(--default-font);
+  --link-f: inherit;
   --tag-txt-align: center;
   --sd-opacity: 40%;
   /* Images */
@@ -3498,7 +3498,11 @@ body:not(.its-i) svg.clock-glyph {
 }
 
 .suggestion-item.is-selected {
-  background-color: var(--dark-accent);
+  background-color: var(--text-selection);
+}
+
+.suggestion-highlight {
+  color: var(--lite-accent);
 }
 
 /*--Scrollbars--*/
@@ -5103,6 +5107,12 @@ iframe {
 .markdown-embed div.markdown-preview-section {
   padding-bottom: unset !important;
   min-height: fit-content !important;
+}
+
+/* Fix Live Preview Rendered Codeblock Line Height */
+.cm-preview-code-block.cm-embed-block.markdown-rendered > * {
+  line-height: var(--lh);
+  white-space: normal;
 }
 
 /*--Popover--*/
@@ -7429,95 +7439,95 @@ body:not(.alt-chkbx-off) {
   /* [r]: Answer */
   /* [c]: Choice */
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] p > input[type=checkbox]:checked::before {
   color: var(--accent2-lite, var(--text-accent));
   content: "\ec01";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=">"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=">"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=">"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] p > input[type=checkbox]:checked::before {
   color: var(--text-normal);
   content: "\ec03";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=D]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=D]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=D]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=D]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=D]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-h));
   content: "\ec04";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="-"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="-"] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task="-"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="-"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="-"] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-d));
   content: "\ec02";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="?"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="?"] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task="?"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="?"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="?"] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-q));
   content: "\ec05";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="!"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="!"] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task="!"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="!"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="!"] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-i));
   content: "\ec08";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="+"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="+"] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task="+"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="+"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="+"] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-a));
   content: "\ec06";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="/"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="/"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="/"] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="/"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task="/"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="/"] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="/"] p > input[type=checkbox]:checked::before {
   color: var(--accent, var(--interactive-accent));
   content: "\ec17";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=R]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=R]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=R] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=R] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=R]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=R]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=R]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=R] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=R] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-R));
   content: "\ec07";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=i]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=i]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=i] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=i] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=i]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=i]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=i]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=i] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=i] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-id));
   content: "\ec09";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=B]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=B]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=B] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=B] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=B]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=B]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=B]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=B] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=B] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-B));
   content: "\ec10";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=P]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=P]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=P] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=P] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=P]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=P]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=P]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=P] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=P] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-P));
   content: "\ec11";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=C]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=C]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=C] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=C] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=C]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=C]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=C]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=C] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=C] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-C));
   content: "\ec12";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=I]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=I]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=I] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=I] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=I]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=I]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=I]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=I] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=I] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-I));
   content: "\ec16";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=Q]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=Q]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=Q] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=Q] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=Q]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=Q]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=Q]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=Q] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=Q] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-R));
   content: "\ec13";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=N]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=N]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=N] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=N] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=N]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=N]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=N]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=N] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=N] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-N));
   content: "\ec14";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=b]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=b]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=b] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=b] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=b]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=b]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=b]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=b] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=b] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-b));
   content: "\ec15";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=p]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=p]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=p] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=p] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=p]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=p]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=p]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=p] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=p] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-R));
   content: "\ec19";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=E]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=E]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=E] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=E] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=E]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=E]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=E]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=E] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=E] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-I));
   content: "\ec18";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=L]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=L]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=L] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=L] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=L]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=L]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=L]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=L] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=L] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-N));
   content: "\ec21";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=A]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=A]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=A] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=A] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=A]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=A]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=A]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=A] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=A] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-P));
   content: "\ec20";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=r]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=r]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=r] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=r] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=r]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=r]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=r]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=r] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=r] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-r));
   content: "\ec22";
 }
-body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=c]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=c]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=c] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=c] p > input[type=checkbox]:checked::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=c]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=c]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=c]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=c] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=c] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-c));
   content: "\ec23";
 }
@@ -8837,6 +8847,7 @@ body:not(.op-h) .outline .tree-item.is-collapsed .tree-item-self:before {
 /*Count Squared*/
 .tree-item-flair {
   border-radius: var(--radius);
+  box-shadow: 0 1px var(--outline);
 }
 
 /*Tag Pane Lines*/
@@ -9184,6 +9195,10 @@ body .search-result-file-match-destination-file-container .search-result-file-ma
 .theme-light .tree-item.search-result:not(.is-collapsed) .search-result-file-title .tree-item-flair {
   background-color: var(--note);
   box-shadow: 0 1px var(--outline);
+}
+
+.tree-item-flair-outer:after {
+  display: none;
 }
 
 /*----Slides----*/

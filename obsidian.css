@@ -5103,16 +5103,12 @@ iframe {
   border-image: initial;
 }
 
-/*Undo Obsidian 13.26 Embed Error*/
-.markdown-embed div.markdown-preview-section {
-  padding-bottom: unset !important;
-  min-height: fit-content !important;
-}
-
 /* Fix Live Preview Rendered Codeblock Line Height */
 .cm-preview-code-block.cm-embed-block.markdown-rendered > * {
   line-height: var(--lh);
   white-space: normal;
+  word-break: keep-all;
+  word-wrap: normal;
 }
 
 /*--Popover--*/
@@ -11713,6 +11709,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .h-wksp .side-dock-ribbon.mod-right:not(:hover) {
   opacity: 0;
   flex: 0 0 12px;
+  padding: 0;
 }
 
 .h-rib .workspace-drawer.mod-left .workspace-drawer-inner:not(:hover),

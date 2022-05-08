@@ -41,11 +41,30 @@
 .workspace-drawer-ribbon {
     background-color: var(--outer-bar);
 }
+.is-mobile .workspace-drawer-ribbon .side-dock-ribbon-action { 
+    padding: 5px 0;
+}
 
+.is-mobile .workspace-drawer-backdrop {
+    background-color: var(--outer-bar);
+    opacity: 0.95 !important;
+}
 .workspace-drawer.mod-left,
 .workspace-drawer.mod-right {
     border: none;
+    box-shadow:
+        0 0 5px var(--outline),
+        0 0 5px var(--outline),
+        0 0 5px var(--outline);
 }
+.workspace-drawer-tab-option-item {
+    margin: 15px 10px;
+}
+
+.workspace-drawer-active-tab-container.is-fullscreen .workspace-drawer-active-tab-title {
+    text-align: center;
+}
+
 
 .is-mobile .status-bar {
     display: none;
@@ -152,7 +171,6 @@
 .theme-light .mobile-toolbar {
     background-color: var(--dark-accent);
 }
-
 
 /*--Device Sizes--*/
 @media (max-width: 1500px) {

@@ -1,6 +1,7 @@
 
 
 /*--Tags--*/
+.markdown-rendered .tag:not(.token),
 a.tag {
     background-color: var(--tag);
     border: none;
@@ -17,6 +18,7 @@ a.tag {
 }
 
 /*Hover Underline*/
+.markdown-rendered .tag:not(.token):hover,
 a.tag:hover {
     color: var(--text-dl);
     text-decoration: underline;

@@ -133,6 +133,27 @@ button.mod-cta,
     transition: none;
 }
 
+
+/* Sidebar Mobile Style for Desktop */
+.mbl-sidebar .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split,
+.mbl-sidebar .app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+    position:absolute;
+    z-index: 1;
+}
+.mbl-sidebar .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split {
+    left: 38px;
+}
+.mbl-sidebar .app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+    right: 38px;
+}
+.mbl-sidebar:is(.sd-float, .sd-mini-float) .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split {
+    left: 0px;
+}
+.mbl-sidebar:is(.sd-float, .sd-mini-float) .app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+    right: 0px;
+}
+
+
 /* Resize Handle */
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
     top: 0;

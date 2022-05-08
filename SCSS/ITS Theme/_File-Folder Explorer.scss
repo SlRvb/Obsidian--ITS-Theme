@@ -38,6 +38,7 @@
 }
 
 /* Vault Icon */
+.vlt-icon .workspace-drawer-header-name::before,
 .vlt-icon .nav-folder.mod-root > .nav-folder-title::before {
     content: '';
     background-image: var(--vlt-icon-img);
@@ -52,11 +53,20 @@
     // margin-left: -16px;
     margin-bottom: 5px;
 }
+// Mobile
+.vlt-icon .workspace-drawer-header-name::before {
+    margin-right: 10px;
+}
+.vlt-icon .workspace-drawer-header {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .nav-folder.mod-root > .nav-folder-title {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 
 /*Remove Empty Div to Fix Folder Adjusting When Open

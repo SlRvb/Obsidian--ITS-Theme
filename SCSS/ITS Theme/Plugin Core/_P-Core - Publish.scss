@@ -2,9 +2,6 @@
 
 
 /*--Publish Settings--*/
-.modal-bg {
-    background-color: var(--background-modifier-form-field-highlighted);
-}
 .publish-upload-item.mod-completed > *,
 .list-item-part .mod-extended .publish-upload-item-title {
     color: var(--text);
@@ -124,4 +121,76 @@
     background-color: var(--graph-bg);
     padding: 4px;
 }
+
+.site-body .tree-item-children .tree-item-children {
+    margin-left: 10px;
+    border-left: 2px solid var(--lines);
+}
+// .site-body .nav-view .tree-item-children .tree-item-self[data-path] > .tree-item-inner::before {
+//     content: "\e801";
+//     font-family: var(--its);
+// }
+// .site-body .nav-view .tree-item-children .tree-item-children .tree-item-inner::before {
+//     content: "\e800";
+//     font-family: var(--its);
+// }
+
+
+/* -- Site Fixes -- */
+
+// Text Sizing
+body .published-container {
+    --f-s-text: 16px;
+}
+
+// Checklists
+.publish-renderer .task-list-item.is-checked {
+    &:is(
+    [data-task="X"],
+    [data-task=">"],
+    [data-task="-"],
+    [data-task=">"],
+    [data-task="D"],
+    [data-task="?"],
+    [data-task="/"],
+    [data-task="+"],
+    [data-task="R"],
+    [data-task="!"],
+    [data-task="i"],
+    [data-task="B"],
+    [data-task="P"],
+    [data-task="C"],
+    [data-task="Q"],
+    [data-task="N"],
+    [data-task="b"],
+    [data-task="I"],
+    [data-task="p"],
+    [data-task="L"],
+    [data-task="E"],
+    [data-task="A"],
+    [data-task="r"],
+    [data-task="c"]
+        ) {
+        & > .task-list-item-checkbox,
+        & input:is([type=checkbox], [type=checkbox i]):checked,
+        & input:is([type=checkbox], [type=checkbox i]):checked::before {
+            margin-left: -17px;
+            margin-right: 0px;
+        }
+    }
+}
+
+
+// Link Icon
+svg.link {
+    background-color: currentColor;
+}
   
+svg.link > path {
+    display: none;
+    stroke-width: 0;
+}
+  
+svg.link {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 100' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Crect id='Compound' x='0' y='0' width='100' height='100' style='fill:none;'/%3E%3CclipPath id='_clip1'%3E%3Crect x='0' y='0' width='100' height='100'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23_clip1)'%3E%3Cpath id='Link' d='M37.507,47.202L30.406,40.101L0,70.506L29.698,100.205L60.104,69.799L53.002,62.697L28.961,86.739L13.466,71.244L37.507,47.202ZM71.449,35.858L64.347,28.756L30.375,62.728L37.477,69.83L71.449,35.858ZM62.697,52.798L69.799,59.899L100.205,29.494L70.506,-0.205L40.101,30.201L47.202,37.303L71.244,13.261L86.739,28.756L62.697,52.798Z' style='fill:rgb(237,238,242);'/%3E%3C/g%3E%3C/svg%3E");
+}

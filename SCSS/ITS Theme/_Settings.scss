@@ -12,6 +12,11 @@
     color: var(--headers);
 }
 
+.modal-bg {
+    background-color: var(--background-modifier-box-shadow);
+}
+
+
 /*Settings Menu: Font Sizes*/
 .modal.mod-settings .modal-content {
     font-size: var(--f-text);
@@ -188,6 +193,9 @@
     color: var(--text-dl);
     border-radius: var(--radius);
     padding-top: 7px;
+}
+.community-theme-filters-container .setting-item-control .search-input-container {
+    width: 100%;
 }
 
 

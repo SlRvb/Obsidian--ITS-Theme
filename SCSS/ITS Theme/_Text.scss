@@ -55,8 +55,8 @@ strong { font-weight: 900; }
 
 
 /*-Code-*/
-.theme-dark :not(pre) > code[class*="language-"],
-.theme-dark pre[class*="language-"],
+:is(.theme-dark, .theme-light) :not(pre) > code[class*="language-"],
+:is(.theme-dark, .theme-light) pre[class*="language-"],
 .markdown-rendered code,
 code,
 .markdown-preview-view code,

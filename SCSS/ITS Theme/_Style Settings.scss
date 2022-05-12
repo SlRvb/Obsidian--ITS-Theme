@@ -278,14 +278,28 @@ settings:
         id: rsb-up
         type: class-toggle
     -
+        title: Sidebar
+        id: sidebar-styling
+        type: heading
+        level: 3
+        collapsed: true
+    -
         title: Mobile Style Sidebars
         id: mbl-sidebar
         type: class-toggle
     -
+        title: Wide Sidebar Tabs
+        id: wide-sb-tabs
+        type: class-toggle
+    -
+        title: Sidebar Tabs Underline Style
+        id: sb-tabs-underline
+        type: class-toggle
+    -
         title: Sidebar Ribbon
-        id: sidebar-styling
+        id: sidebar-ribbon-styling
         type: heading
-        level: 3
+        level: 4
         collapsed: true
     -
         title: Thin Sidebar Ribbons

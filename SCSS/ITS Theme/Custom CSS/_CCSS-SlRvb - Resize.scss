@@ -54,15 +54,16 @@
 .resize .setting-item-description,
 .resize .vertical-tab-header-group-title,
 .resize .setting-hotkey,
-.resize .graph-controls .setting-item-name {
-    font-size: calc(var(--f-s-ui) - 2px);
-}
+.resize .graph-controls .setting-item-name,
+.resize .notice
+{ font-size: calc(var(--f-s-ui) - 2px); }
 .resize .modal,
 .resize .prompt,
 .resize .dropdown,
 .resize .prompt-instructions {
     font-size: var(--f-s-ui);
 }
+.resize .style-settings-container .setting-item-name,
 .resize .setting-item-name {
     font-size: calc(var(--f-s-ui) - 0px);
 }

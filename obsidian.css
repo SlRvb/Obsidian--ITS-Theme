@@ -8018,7 +8018,8 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 .resize .setting-item-description,
 .resize .vertical-tab-header-group-title,
 .resize .setting-hotkey,
-.resize .graph-controls .setting-item-name {
+.resize .graph-controls .setting-item-name,
+.resize .notice {
   font-size: calc(var(--f-s-ui) - 2px);
 }
 
@@ -8029,6 +8030,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   font-size: var(--f-s-ui);
 }
 
+.resize .style-settings-container .setting-item-name,
 .resize .setting-item-name {
   font-size: calc(var(--f-s-ui) - 0px);
 }
@@ -11503,29 +11505,25 @@ body .obsidian-statblock-plugin > .bar {
 
 /*Text Adjustments*/
 /*Headings*/
-.style-settings-heading {
-  padding-bottom: 1px !important;
-  border-bottom: 2px solid var(--accent) !important;
+.style-settings-heading.style-settings-heading,
+.style-settings-heading.style-settings-heading[data-level="2"] {
+  padding-bottom: 1px;
+  border-bottom: 2px solid var(--accent);
 }
 
-.style-settings-heading[data-level="2"] {
-  padding-bottom: 1px !important;
-  border-bottom: 2px solid var(--accent) !important;
-}
-
-.style-settings-heading[data-level="3"] {
-  border-bottom: 2px solid var(--lines) !important;
+.style-settings-heading.style-settings-heading[data-level="3"] {
+  border-bottom: 2px solid var(--lines);
 }
 
 .style-settings-heading .setting-item-name {
   color: var(--headers);
   font-weight: 900;
-  font-size: 1.1em !important;
+  font-size: 1.1em;
 }
 
 .style-settings-container .setting-item-name {
   font-weight: 900;
-  font-size: var(--f-text) !important;
+  font-size: var(--f-text);
 }
 
 .style-settings-container .setting-item-description {

@@ -297,6 +297,10 @@ settings:
         id: sb-tabs-underline
         type: class-toggle
     -
+        title: Sidebar Tabular Style
+        id: tabs-sidebar
+        type: class-toggle
+    -
         title: Sidebar Ribbon
         id: sidebar-ribbon-styling
         type: heading
@@ -3910,39 +3914,29 @@ button.mod-cta,
   color: var(--bttn);
 }
 
-.workspace-tab-container-inner {
+.tabs-sidebar .workspace-tab-container-inner {
   align-items: center;
 }
-
-.workspace-tab-container-before .workspace-tab-header-inner,
-.workspace-tab-container-after .workspace-tab-header-inner,
-.workspace-tab-header-inner {
+.tabs-sidebar .workspace-tab-container-before .workspace-tab-header-inner, .tabs-sidebar .workspace-tab-container-after .workspace-tab-header-inner, .tabs-sidebar .workspace-tab-header-inner {
   padding: 0em 1.5em;
 }
-
-.workspace-tab-header.is-active {
+.tabs-sidebar .workspace-tab-header.is-active {
   background: var(--table);
 }
-
-.workspace-tab-header:not(.is-active) {
+.tabs-sidebar .workspace-tab-header:not(.is-active) {
   background: var(--aside-bg);
 }
-
-.workspace-tab-header:not(.is-active),
-.workspace-tab-header.is-active {
+.tabs-sidebar .workspace-tab-header:not(.is-active), .tabs-sidebar .workspace-tab-header.is-active {
   border: 2px solid var(--table);
   height: 25px;
 }
-
-.workspace-tab-header-inner-icon {
+.tabs-sidebar .workspace-tab-header-inner-icon {
   margin-top: 5px;
 }
-
-.workspace-tab-header-inner-icon svg {
+.tabs-sidebar .workspace-tab-header-inner-icon svg {
   transform: scale(0.8);
 }
-
-.workspace-tab-header + .workspace-tab-header {
+.tabs-sidebar .workspace-tab-header + .workspace-tab-header {
   border-left: 0;
 }
 

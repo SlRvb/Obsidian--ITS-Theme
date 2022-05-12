@@ -55,8 +55,10 @@
 .resize .vertical-tab-header-group-title,
 .resize .setting-hotkey,
 .resize .graph-controls .setting-item-name,
+.resize .titlebar-text,
 .resize .notice
 { font-size: calc(var(--f-s-ui) - 2px); }
+
 .resize .modal,
 .resize .prompt,
 .resize .dropdown,
@@ -76,6 +78,7 @@
 
 
 /*Resize: Note*/
+
 .resize .view-header {
     height: calc(var(--f-s-nt) + 20px);
 }

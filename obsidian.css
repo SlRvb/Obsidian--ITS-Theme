@@ -8015,6 +8015,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 .resize .vertical-tab-header-group-title,
 .resize .setting-hotkey,
 .resize .graph-controls .setting-item-name,
+.resize .titlebar-text,
 .resize .notice {
   font-size: calc(var(--f-s-ui) - 2px);
 }

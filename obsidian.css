@@ -8022,7 +8022,8 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 .resize .modal,
 .resize .prompt,
 .resize .dropdown,
-.resize .prompt-instructions {
+.resize .prompt-instructions,
+.resize .prompt-instruction-command {
   font-size: var(--f-s-ui);
 }
 

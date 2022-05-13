@@ -51,19 +51,19 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
 .callout.callout:is(
     [data-callout-metadata*="txt-l"],
     [data-callout-metadata*="text-Left"]
-) .callout-content {
+) > .callout-content {
     text-align: left;
 }
 .callout.callout:is(
     [data-callout-metadata*="txt-r"],
     [data-callout-metadata*="text-Right"]
-) .callout-content {
+) > .callout-content {
     text-align: right;
 }
 .callout.callout:is(
     [data-callout-metadata*="txt-c"],
     [data-callout-metadata*="text-Center"]
-) .callout-content {
+) > .callout-content {
     text-align: center;
 }
 
@@ -91,17 +91,25 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
 .callout:is(
     [data-callout-metadata*="no-t"], 
     [data-callout-metadata*="no-title"]
-    ) .callout-title { display: none; }
+    ) > .callout-title { display: none; }
 //No Table Header
 .callout:is(
     [data-callout-metadata*="n-th"], 
     [data-callout-metadata*="no-table-header"]
-    ) {
+    ) > {
     & th { display: none; }
     & table { margin-bottom: 5px; }
 }
 //Wide Table
 .callout[data-callout-metadata*="t-w"] table td { width: calc(var(--tbl-w) /2); }
+
+
+
+
+
+
+
+
 
 
 

@@ -126,15 +126,45 @@
     margin-left: 10px;
     border-left: 2px solid var(--lines);
 }
-// .site-body .nav-view .tree-item-children .tree-item-self[data-path] > .tree-item-inner::before {
-//     content: "\e801";
-//     font-family: var(--its);
-// }
-// .site-body .nav-view .tree-item-children .tree-item-children .tree-item-inner::before {
-//     content: "\e800";
-//     font-family: var(--its);
-// }
-
+// File Explorer Icons
+/* File Explorer */
+.nav-view-outer .tree-item-children {
+    margin: 0;
+}
+.nav-view-outer .tree-item {
+    margin-left: 10px;
+}
+.nav-view-outer .tree-item-self.mod-active {
+    background-color: var(--dark-accent);
+}
+.nav-view-outer .tree-item-self.mod-active[data-path$=".md"] .tree-item-inner::before {
+    color: var(--text);
+}
+.nav-view-outer .tree-item-self[data-path$=".md"] .tree-item-inner::before,
+.nav-view-outer .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
+    margin-left: -15px;
+    padding-right: 5px;
+    font-weight: 100;
+}
+.nav-view-outer .tree-item.is-collapsed .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
+    color: var(--accent);
+}
+.nav-view-outer .tree-item-self:not([data-path$=".md"]) {
+    font-weight: 900;
+}
+.nav-view-outer .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
+    content: var(--folder-icon);
+    font-family: var(--folder-f);
+    color: var(--folder);
+}
+.nav-view-outer .tree-item-self[data-path$=".md"] .tree-item-inner::before {
+    content: var(--file-icon);
+    font-family: var(--file-f);
+    color: var(--f-icon);
+}
+.nav-view-outer .tree-item-icon.collapse-icon {
+    visibility: hidden;
+}
 
 /* -- Site Fixes -- */
 
@@ -169,7 +199,8 @@ body .published-container {
     [data-task="E"],
     [data-task="A"],
     [data-task="r"],
-    [data-task="c"]
+    [data-task="c"],
+    [data-task="o"]
         ) {
         & > .task-list-item-checkbox,
         & input:is([type=checkbox], [type=checkbox i]):checked,

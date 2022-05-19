@@ -58,9 +58,9 @@ ul > li.task-list-item .task-list-item-checkbox { margin-left: -26px; }
 
 
 
-/*Fix breaking when Space in between Lists*/
-ul li.task-list-item > p { margin-block-end: unset; }
-ul li > p { margin-block-end: unset; }
+/* Spaced Lists: Fix breaking when Space in between Lists*/
+:is(ul, ol) li.task-list-item > p { margin-block-end: unset; }
+:is(ul, ol) li > p { margin-block-end: unset; }
 
 // .markdown-preview-view .task-list-item-checkbox.task-list-item-checkbox,
 // .task-list-item input[type=checkbox], li.task-list-item {

@@ -279,6 +279,11 @@ settings:
         id: rsb-up
         type: class-toggle
     -
+        title: Wide Status Bar
+        description: Undo the floating status bar
+        id: o-stat-bar
+        type: class-toggle
+    -
         title: Sidebar
         id: sidebar-styling
         type: heading
@@ -3690,6 +3695,10 @@ button.mod-cta,
   border-top: 1px solid var(--th);
 }
 
+.o-stat-bar .app-container .status-bar {
+  position: unset;
+}
+
 /*--NOTE TITLEBAR--*/
 .view-header,
 .workspace-leaf .view-header,
@@ -4519,12 +4528,12 @@ ul > li.task-list-item .task-list-item-checkbox {
   padding-left: 10px;
 }
 
-/*Fix breaking when Space in between Lists*/
-ul li.task-list-item > p {
+/* Spaced Lists: Fix breaking when Space in between Lists*/
+:is(ul, ol) li.task-list-item > p {
   margin-block-end: unset;
 }
 
-ul li > p {
+:is(ul, ol) li > p {
   margin-block-end: unset;
 }
 
@@ -7351,7 +7360,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=c],
+[data-task=o]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7374,7 +7384,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=c],
+[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7397,7 +7408,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=c],
+[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7420,7 +7432,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=c],
+[data-task=o]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7443,7 +7456,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=c],
+[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7466,7 +7480,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked::before {
+[data-task=c],
+[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked::before {
   background-image: url();
   position: relative;
   -webkit-appearance: none;
@@ -7582,6 +7597,7 @@ body:not(.alt-chkbx-off) {
   /* [A]: Answer */
   /* [r]: Answer */
   /* [c]: Choice */
+  /* [o]: Option */
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] p > input[type=checkbox]:checked::before {
   color: var(--accent2-lite, var(--text-accent));
@@ -7674,6 +7690,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=c]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=c]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=c]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=c] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=c] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-c));
   content: "\ec23";
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=o]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=o]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=o]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=o] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=o] p > input[type=checkbox]:checked::before {
+  color: rgb(var(--chbx-b));
+  content: "\e860";
 }
 
 /*--Checkbox Text Colors--*/
@@ -8442,6 +8462,15 @@ body .callout.callout.callout:is([data-callout-metadata*=nmg], [data-callout-met
   text-align: center;
 }
 
+.callout[data-callout-metadata*=ttl-c] .callout-title {
+  justify-content: center;
+}
+
+.callout[data-callout-metadata*=ttl-c] .callout-title-inner {
+  display: block;
+  flex: unset;
+}
+
 /*Callout Sizing*/
 .callout.callout.callout:is([data-callout-metadata*=banner], [data-callout-metadata*=sban]) {
   width: 100%;
@@ -8479,6 +8508,16 @@ body .callout.callout.callout:is([data-callout-metadata*=nmg], [data-callout-met
   width: calc(var(--tbl-w) / 2);
 }
 
+.callout:is([data-callout-metadata*=nmg],
+[data-callout-metadata*=no-margin]) > .callout {
+  margin: 0;
+}
+
+.callout[data-callout-metadata*=embed] .callout-content, .callout[data-callout-metadata*=embed] p {
+  margin: 0;
+  padding: 0;
+}
+
 /*--Callout Types--*/
 body {
   --kbn-radius: 3px;
@@ -8486,7 +8525,8 @@ body {
 }
 
 /* Minimalist Style */
-.alt-co .callout.callout {
+.alt-co .callout.callout,
+.callout[data-callout-metadata*=alt-co] {
   background: rgba(var(--callout-color), 0.1);
   border: 0;
   margin-left: 40px;
@@ -8494,13 +8534,16 @@ body {
   border-radius: var(--radius, var(--co-radius));
   box-shadow: 1px 1px 0 rgba(var(--callout-color), 0.2);
 }
-.alt-co .callout.callout p:first-child {
+.alt-co .callout.callout p:first-child,
+.callout[data-callout-metadata*=alt-co] p:first-child {
   margin-block-start: 5px;
 }
-.alt-co .callout.callout:not(.is-collapsed) .callout-title {
+.alt-co .callout.callout:not(.is-collapsed) .callout-title,
+.callout[data-callout-metadata*=alt-co]:not(.is-collapsed) .callout-title {
   padding-bottom: 0;
 }
-.alt-co .callout-title {
+.alt-co .callout.callout .callout-title,
+.callout[data-callout-metadata*=alt-co] .callout-title {
   background: transparent;
 }
 
@@ -8787,6 +8830,18 @@ body {
 .callout.callout[data-callout*=Metadata i] .callout-content, .callout.callout[data-callout*=Metadata i] ul {
   margin: 0;
 }
+.callout.callout[data-callout*=Metadata i][data-callout-metadata*=i-at] {
+  background: var(--outer-bar);
+  border: 0;
+  text-align: center;
+  padding: 0;
+}
+.callout.callout[data-callout*=Metadata i][data-callout-metadata*=i-at] .callout-title {
+  display: none;
+}
+.callout.callout[data-callout*=Metadata i][data-callout-metadata*=i-at] .callout-content {
+  padding: 0px;
+}
 
 .callout-list .callout {
   border: 0;
@@ -8809,6 +8864,9 @@ body {
   width: auto;
   padding: 0;
   background: transparent;
+}
+.callout[data-callout*=cards] .callout-title {
+  display: none;
 }
 .callout[data-callout*=cards] .callout-content {
   display: grid;
@@ -8834,6 +8892,7 @@ body {
   display: none;
 }
 
+/* Dataview Cards */
 .callout[data-callout*=cards][data-callout-metadata*=dataview] .callout-content {
   display: unset;
   grid-template-columns: unset;
@@ -8869,11 +8928,33 @@ body {
   box-shadow: 0 0 0 1px var(--outline, var(--background-modifier-box-shadow)), 2px 2px 0 var(--outline, var(--background-modifier-box-shadow));
 }
 
-.callout[data-callout*=cards][data-callout-metadata*="2"] .dataview.table-view-table tbody, .callout[data-callout*=cards][data-callout-metadata*="2"] .callout-content {
+.callout[data-callout*=cards][data-callout-metadata*=dvl] .callout-content {
+  display: block;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dvl] br {
+  display: unset;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dvl] .block-language-dataviewjs .dataview-result-list-li, .callout[data-callout*=cards][data-callout-metadata*=dvl] .list-view-ul li {
+  padding: 10px;
+  background-color: var(--outer-bar);
+  box-shadow: 2px 2px 0 var(--outline);
+  margin-bottom: 5px;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dvl] .dataview.list-view-ul li::before {
+  margin-left: -27px;
+}
+.callout[data-callout*=cards][data-callout-metadata*=dvl] ul {
+  padding-inline-start: unset;
+}
+
+.callout[data-callout*=cards][data-callout-metadata*="2"] :is(.dataview.table-view-table tbody, .callout-content) {
   grid-template-columns: repeat(2, 1fr);
 }
-.callout[data-callout*=cards][data-callout-metadata*="4"] .dataview.table-view-table tbody, .callout[data-callout*=cards][data-callout-metadata*="4"] .callout-content {
+.callout[data-callout*=cards][data-callout-metadata*="4"] :is(.dataview.table-view-table tbody, .callout-content) {
   grid-template-columns: repeat(4, 1fr);
+}
+.callout[data-callout*=cards][data-callout-metadata*="5"] :is(.dataview.table-view-table tbody, .callout-content) {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /* Unwrapped Table */
@@ -8982,11 +9063,43 @@ body {
   flex-direction: row-reverse;
 }
 
-.markdown-source-view,
-.markdown-reading-view,
-.markdown-preview-view,
-.workspace-leaf-content[data-type=markdown] .view-content {
-  overflow-x: auto;
+/* Columns */
+.callout[data-callout*=column] {
+  --callout-color: var(--text-normal);
+  --callout-icon: layout-dashboard;
+  --columns: 2;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  width: auto;
+  padding: 0;
+}
+.callout[data-callout*=column] > .callout-content {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 10px;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+}
+.callout[data-callout*=column][data-callout-metadata*="3"] .callout-content {
+  --columns: 3;
+}
+.callout[data-callout*=column][data-callout-metadata*="4"] .callout-content {
+  --columns: 4;
+}
+.callout[data-callout*=column][data-callout-metadata*=flex] > .callout-content {
+  gap: unset;
+  grid-template-columns: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.callout[data-callout*=column][data-callout-metadata*=flex] > .callout-content .callout {
+  flex: 1 1 250px;
+  margin: 5px;
+  background: transparent;
 }
 
 /* Kepano: https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164
@@ -9092,6 +9205,11 @@ body:not(.op-h) .outline .tree-item.is-collapsed .tree-item-self:before {
 }
 
 /*Count Squared*/
+.tree-item-self.tag-pane-tag {
+  display: flex;
+  align-items: center;
+}
+
 .tree-item-flair {
   border-radius: var(--radius);
   box-shadow: 0 1px var(--outline);
@@ -9646,6 +9764,54 @@ body .search-result-file-match-destination-file-container .search-result-file-ma
   border-left: 2px solid var(--lines);
 }
 
+/* File Explorer */
+.nav-view-outer .tree-item-children {
+  margin: 0;
+}
+
+.nav-view-outer .tree-item {
+  margin-left: 10px;
+}
+
+.nav-view-outer .tree-item-self.mod-active {
+  background-color: var(--dark-accent);
+}
+
+.nav-view-outer .tree-item-self.mod-active[data-path$=".md"] .tree-item-inner::before {
+  color: var(--text);
+}
+
+.nav-view-outer .tree-item-self[data-path$=".md"] .tree-item-inner::before,
+.nav-view-outer .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
+  margin-left: -15px;
+  padding-right: 5px;
+  font-weight: 100;
+}
+
+.nav-view-outer .tree-item.is-collapsed .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
+  color: var(--accent);
+}
+
+.nav-view-outer .tree-item-self:not([data-path$=".md"]) {
+  font-weight: 900;
+}
+
+.nav-view-outer .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
+  content: var(--folder-icon);
+  font-family: var(--folder-f);
+  color: var(--folder);
+}
+
+.nav-view-outer .tree-item-self[data-path$=".md"] .tree-item-inner::before {
+  content: var(--file-icon);
+  font-family: var(--file-f);
+  color: var(--f-icon);
+}
+
+.nav-view-outer .tree-item-icon.collapse-icon {
+  visibility: hidden;
+}
+
 /* -- Site Fixes -- */
 body .published-container {
   --f-s-text: 16px;
@@ -9674,7 +9840,8 @@ body .published-container {
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) > .task-list-item-checkbox, .publish-renderer .task-list-item.is-checked:is([data-task=X],
+[data-task=c],
+[data-task=o]) > .task-list-item-checkbox, .publish-renderer .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -9697,7 +9864,8 @@ body .published-container {
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked, .publish-renderer .task-list-item.is-checked:is([data-task=X],
+[data-task=c],
+[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked, .publish-renderer .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -9720,7 +9888,8 @@ body .published-container {
 [data-task=E],
 [data-task=A],
 [data-task=r],
-[data-task=c]) input:is([type=checkbox], [type=checkbox i]):checked::before {
+[data-task=c],
+[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked::before {
   margin-left: -17px;
   margin-right: 0px;
 }
@@ -10174,6 +10343,23 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 .dv .dataview-ul {
   list-style-type: none;
   margin-inline-start: -32px;
+}
+
+.dv .dataview.list-view-ul .dataview-ul {
+  margin-inline-start: -20px;
+}
+.dv .dataview.list-view-ul .dataview-ul::before {
+  display: none;
+}
+
+.dv table.dataview .dataview-ul {
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.dv table.dataview .dataview-ul li {
+  padding-left: 0;
 }
 
 .dv .table-view-table .dataview-result-list-li {

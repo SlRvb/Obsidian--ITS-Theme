@@ -281,6 +281,18 @@ body:not(.alt-chkbx-off) {
         content: "\EC23";
         }
     }
+    /* [o]: Option */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="o"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="o"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="o"],
+    & .task-list-item.is-checked[data-task="o"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="o"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-b));
+        content: "\E860";        
+        }
+    }
 }
 
 

@@ -12,6 +12,10 @@
 }
 
 /*Count Squared*/
+.tree-item-self.tag-pane-tag {
+    display: flex;
+    align-items: center;
+}
 .tree-item-flair {
     border-radius: var(--radius);
     box-shadow: 0 1px var(--outline);

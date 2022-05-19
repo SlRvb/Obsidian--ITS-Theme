@@ -72,6 +72,21 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
     list-style-type: none;
     margin-inline-start: -32px;
 }
+// Array List Fix
+.dv .dataview.list-view-ul .dataview-ul {
+    margin-inline-start: -20px;
+    &::before { display: none; }
+}
+.dv table.dataview .dataview-ul {
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    
+    & li {
+        padding-left: 0;
+    }
+}
 .dv .table-view-table .dataview-result-list-li {
     margin-left: 0;
 }

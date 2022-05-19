@@ -30,7 +30,8 @@ body:not(.alt-chkbx-off) {
         [data-task="E"],
         [data-task="A"],
         [data-task="r"],
-        [data-task="c"]
+        [data-task="c"],
+        [data-task="o"]
             ) {
             & > .task-list-item-checkbox,
             & input:is([type=checkbox], [type=checkbox i]):checked,

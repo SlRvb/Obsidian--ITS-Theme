@@ -121,3 +121,7 @@ button.mod-cta,
     border-left: 1px solid var(--th);
     border-top: 1px solid var(--th);
 }
+
+.o-stat-bar .app-container .status-bar {
+    position: unset;
+}

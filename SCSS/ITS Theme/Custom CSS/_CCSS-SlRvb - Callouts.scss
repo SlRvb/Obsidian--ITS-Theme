@@ -48,6 +48,7 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
     border: 0;
 }
 
+// Align Callout Content Text
 .callout.callout:is(
     [data-callout-metadata*="txt-l"],
     [data-callout-metadata*="text-Left"]
@@ -66,6 +67,15 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
 ) > .callout-content {
     text-align: center;
 }
+// Align Callout Title Text
+.callout[data-callout-metadata*="ttl-c"] .callout-title {
+    justify-content: center;
+}
+.callout[data-callout-metadata*="ttl-c"] .callout-title-inner {
+    display: block;
+    flex: unset;
+}
+
 
 /*Callout Sizing*/
 .callout.callout.callout:is([data-callout-metadata*="banner"], [data-callout-metadata*="sban"]) {
@@ -91,18 +101,34 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
 .callout:is(
     [data-callout-metadata*="no-t"], 
     [data-callout-metadata*="no-title"]
-    ) > .callout-title { display: none; }
+) > .callout-title { display: none; }
+
+
 //No Table Header
 .callout:is(
     [data-callout-metadata*="n-th"], 
     [data-callout-metadata*="no-table-header"]
-    ) > {
+) > {
     & th { display: none; }
     & table { margin-bottom: 5px; }
 }
 //Wide Table
 .callout[data-callout-metadata*="t-w"] table td { width: calc(var(--tbl-w) /2); }
 
+//No Margin
+.callout:is(
+    [data-callout-metadata*="nmg"], 
+    [data-callout-metadata*="no-margin"]
+) > .callout { margin: 0; }
+
+//Expand for Embed
+.callout[data-callout-metadata*="embed"] {
+    .callout-content,
+    & p {
+        margin: 0;
+        padding: 0;
+    }
+} 
 
 
 
@@ -119,25 +145,23 @@ body {
     --co-radius: 7px;
 }
 /* Minimalist Style */ 
-.alt-co {
-    & .callout.callout {
-        background: rgba(var(--callout-color), 0.1); 
-        border: 0;
-        margin-left: 40px;
-        margin-right: 40px;
-        border-radius: var(--radius, var(--co-radius));
-        box-shadow: 
-            1px 1px 0 rgba(var(--callout-color), 0.2);
+.alt-co .callout.callout,
+.callout[data-callout-metadata*="alt-co"] {
+    background: rgba(var(--callout-color), 0.1); 
+    border: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: var(--radius, var(--co-radius));
+    box-shadow: 
+        1px 1px 0 rgba(var(--callout-color), 0.2);
 
-        & p:first-child {
-            margin-block-start: 5px;
-        }
-        &:not(.is-collapsed) .callout-title { padding-bottom: 0; }
+    & p:first-child {
+        margin-block-start: 5px;
     }
-    & .callout-title { 
-        background: transparent;
-    }
+    &:not(.is-collapsed) .callout-title { padding-bottom: 0; }
+    & .callout-title { background: transparent; }
 }
+    
 .co-ttl-ctr {
     & .callout-title {
         justify-content: center;
@@ -147,6 +171,10 @@ body {
         flex: unset;
     }
 }
+
+
+
+
 
 /*Infobox*/
 :is(.is-mobile .is-live-preview, .is-live-preview) .callout[data-callout*="infobox"] { 
@@ -468,7 +496,21 @@ body {
     & .callout-content,
     & ul
     { margin: 0; }
+
+
+    // ITS <i> Attribute Styling
+    &[data-callout-metadata*="i-at"] {
+        background: var(--outer-bar);
+        border: 0;
+        text-align: center;
+        padding: 0;
+        
+        & .callout-title { display: none; }
+        & .callout-content { padding: 0px; }
+    }
 }
+
+
 
 .callout-list {
     & .callout {
@@ -494,6 +536,7 @@ body {
     padding: 0;
     background: transparent;
     
+    & .callout-title { display: none; }
     & .callout-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -520,7 +563,9 @@ body {
     display: none;
 }
 
-// Dataview Cards
+/* Dataview Cards */
+
+//Table
 .callout[data-callout*="cards"][data-callout-metadata*="dataview"] {
     // Undo General Cards Grid Styling
     & .callout-content {
@@ -571,20 +616,32 @@ body {
         }
     }
 }
+//List
+.callout[data-callout*="cards"][data-callout-metadata*="dvl"] {
+    & .callout-content { display: block; }
+    & br { display: unset; }
+
+    & .block-language-dataviewjs .dataview-result-list-li,
+    & .list-view-ul li {
+        padding: 10px;
+        background-color: var(--outer-bar);
+        box-shadow: 2px 2px 0 var(--outline);
+        margin-bottom: 5px;
+    }
+    & .dataview.list-view-ul li::before { margin-left: -27px; }
+    & ul { padding-inline-start: unset; }
+} 
 
 // Columns
 .callout[data-callout*="cards"]{
-    &[data-callout-metadata*="2"] {
-        & .dataview.table-view-table tbody,
-        & .callout-content {
-            grid-template-columns: repeat(2, 1fr);
-        }
+    &[data-callout-metadata*="2"] :is(.dataview.table-view-table tbody, .callout-content) {
+        grid-template-columns: repeat(2, 1fr);
     }
-    &[data-callout-metadata*="4"] {
-        & .dataview.table-view-table tbody,
-        & .callout-content {
-            grid-template-columns: repeat(4, 1fr);
-        }
+    &[data-callout-metadata*="4"] :is(.dataview.table-view-table tbody, .callout-content) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &[data-callout-metadata*="5"] :is(.dataview.table-view-table tbody, .callout-content) {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
@@ -703,9 +760,58 @@ body {
         }
     }
 }
-.markdown-source-view,
-.markdown-reading-view,
-.markdown-preview-view,
-.workspace-leaf-content[data-type='markdown'] .view-content {
-    overflow-x: auto;
+// .markdown-source-view,
+// .markdown-reading-view,
+// .markdown-preview-view,
+// .workspace-leaf-content[data-type='markdown'] .view-content {
+//     overflow-x: auto;
+// }
+
+
+/* Columns */
+.callout[data-callout*="column"] {
+    --callout-color: var(--text-normal);
+    --callout-icon: layout-dashboard;
+    --columns: 2;
+
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    width: auto;
+    padding: 0;
+    
+    & > .callout-content {
+        display: grid;
+        grid-template-columns: repeat(var(--columns), 1fr);
+        gap: 10px;
+
+        background: transparent;
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+    }
+    &[data-callout-metadata*="3"] .callout-content {
+        --columns: 3;
+    }
+    &[data-callout-metadata*="4"] .callout-content {
+        --columns: 4;
+    }
+
+
+    // Flex
+    &[data-callout-metadata*="flex"] > .callout-content {
+        gap: unset;
+        grid-template-columns: none;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        // Sub Callout Sizing
+        & .callout {
+            flex: 1 1 250px;
+            margin: 5px;
+            background: transparent;
+        }
+    }
 }

@@ -310,7 +310,6 @@ settings:
         id: sidebar-ribbon-styling
         type: heading
         level: 4
-        collapsed: true
     -
         title: Thin Sidebar Ribbons
         id: thin-ribbon
@@ -514,6 +513,26 @@ settings:
         format: px
         min: 12
         max: 20
+        step: 1
+    -
+        title: Sidebar Ribbon Icon Size
+        description: Resize sidebar Ribbon icons
+        id: f-s-rib-i
+        type: variable-number-slider
+        default: 18
+        format: px
+        min: 12
+        max: 22
+        step: 1
+    -
+        title: Sidebar Tab Icon Size
+        description: Resize sidebar tab icons
+        id: f-s-tab-i
+        type: variable-number-slider
+        default: 18
+        format: px
+        min: 12
+        max: 22
         step: 1
     -
         title: Note Title Size

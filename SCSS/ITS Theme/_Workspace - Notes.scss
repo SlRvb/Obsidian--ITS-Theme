@@ -68,6 +68,15 @@
     }
 }
 
+/* Note Title */
+.view-header {
+    align-content: center;
+    align-items: center;
+}
+.is-mobile .view-actions {
+    flex-wrap: wrap;
+}
+
 .markdown-source-view.mod-cm6 .cm-scroller {
     padding: 10px 20px;
 }

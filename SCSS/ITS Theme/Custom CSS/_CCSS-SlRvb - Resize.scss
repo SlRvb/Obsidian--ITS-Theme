@@ -110,6 +110,25 @@
     line-height: calc(var(--f-s-sb) + 4px);
 }
 
+.resize {
+    & .workspace-ribbon-collapse-btn,
+    & .side-dock-ribbon-action {
+        & svg {
+            height: var(--f-s-rib-i);
+            width: var(--f-s-rib-i);
+        }
+    }
+    
+    & .workspace-tab-header-inner-icon svg,
+    & .workspace-tab-header-inner-icon::before {
+        height: var(--f-s-tab-i);
+        width: var(--f-s-tab-i);
+        font-size: var(--f-s-tab-i);
+    }
+    
+}
+
+
 /*Right Panes*/
 .resize .view-content,
 .resize .view-content > .tree-item-self,

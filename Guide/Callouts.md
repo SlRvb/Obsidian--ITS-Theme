@@ -6,18 +6,18 @@
 
 Type | Description |
 ---|---|
-`[!infobox]` | Wikipedia-like infoboxes
+`[!infobox]` | Wikipedia-like infoboxes  [How to Format](Callouts.md#infoboxes)
 `[!captions]` | Displays text around image in the style of a caption
-`[!kanban]` | Displays a (functionally limited) kanban board: [How to Format](Callouts#Kanban.md)
+`[!kanban]` | Displays a (functionally limited) kanban board: [How to Format](Callouts.md#kanban)
 `[!grid]` | Best type of image grid for internally linked images
 `[!masonry]` | Best type of image grid for externally linked images
 `[!recite]` | A D&D styled popout 
 `[!metadata]` | Styled callout that colors \*\*bold\*\* words, table headers, and inline dataview keys blue
-`[!cards]` | Style images and dataview tables like notion's gallery view: [How to Format](Callouts#Cards.md)
+`[!cards]` | Style images and dataview tables like notion's gallery view: [How to Format](Callouts.md#cards)
 `[!table]` | Prevent table from wrapping
 `[!aside]` | Add asides to the side of notes
-`[!timeline]` | Style callout as a vertical Timeline [How to Format](Callouts#Timeline.md)
-`[!column]` | Style inner callouts as columns: [How to Format](Callouts#Column.md)
+`[!timeline]` | Style callout as a vertical Timeline [How to Format](Callouts.md#timeline)
+`[!column]` | Style inner callouts as columns: [How to Format](Callouts.md#column)
 
 #### Adjustments
 **Format Syntax:**
@@ -31,7 +31,7 @@ Type | Description |
 
 ---
 
-> **Callouts uses the same [parameters](Image-Positions#sizing) as the images for resizing (width-wise) and [moving it](Image-Positions#leftrightcenter).**
+> **Callouts uses the same [parameters](Image-Positions.md#sizing) as the images for resizing (width-wise) and [moving it](Image-Positions.md#leftrightcenter).**
 
 | Abbr. | Full Title | Description|
 |---|---|---|

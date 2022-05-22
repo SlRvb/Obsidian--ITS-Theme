@@ -231,84 +231,85 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
 }
 
 /*Height*/
-img[alt*="hmicro"],
+// [alt][alt] for overriding Popover img css
+img[alt][alt][alt*="hmicro"],
 .image-embed[src*="#hmicro"] img {
     height: var(--micro);
 }
-img[alt*="htiny"],
+img[alt][alt][alt*="htiny"],
 .image-embed[src*="#htiny"] img {
     height: var(--tiny);
 }
-img[alt*="hsmall"],
+img[alt][alt][alt*="hsmall"],
 .image-embed[src*="#hsmall"] img {
     height: var(--small);
 }
-img[alt*="hs-med"],
+img[alt][alt][alt*="hs-med"],
 .image-embed[src*="#hs-med"] img {
     height: var(--small-med);
 }
-img[alt*="hm-sm"],
+img[alt][alt][alt*="hm-sm"],
 .image-embed[src*="#hs-sm"] img {
     height: var(--med-small);
 }
-img[alt*="hmed"],
+img[alt][alt][alt*="hmed"],
 .image-embed[src*="#hmed"] img {
     height: var(--medium);
 }
-img[alt*="hm-tl"],
+img[alt][alt][alt*="hm-tl"],
 .image-embed[src*="#hm-tl"],
 .image-embed[src*="#hm-tl"] img {
     height: var(--med-tall);
 }
-img[alt*="htall"],
+img[alt][alt][alt*="htall"],
 .image-embed[src*="#htall"] img {
     height: var(--tall);
 }
-img[alt*=hfull],
+img[alt][alt][alt*=hfull],
 .internal-embed[src*="#hfull"] img { height: 100%; }
 
 /*Width*/
-img[alt*="wmicro"],
+img[alt][alt][alt*="wmicro"],
 .image-embed[src*="#wmicro"] img,
 .image-embed[alt*="#wmicro"]::after {
     width: var(--micro); 
 }
-img[alt*="wtiny"],
+img[alt][alt][alt*="wtiny"],
 .image-embed[src*="#wtiny"] img,
 .image-embed[src*="#wtiny"]::after { 
     width: var(--tiny); 
 }
-img[alt*="wsmall"],
+img[alt][alt][alt*="wsmall"],
 .image-embed[src*="#wsmall"] img,
 .image-embed[src*="#wsmall"]::after {
     width: var(--small);
 }
-img[alt*="ws-med"],
+img[alt][alt][alt*="ws-med"],
 .image-embed[src*="#ws-med"] img,
 .image-embed[src*="#ws-med"]::after {
     width: var(--small-med); 
 }
-img[alt*="wm-sm"],
+img[alt][alt][alt*="wm-sm"],
 .image-embed[src*="#wm-sm"] img,
 .image-embed[src*="#wm-sm"]::after {
     width: var(--med-small); 
 }
-img[alt*="wmed"],
+img[alt][alt][alt*="wmed"],
 .image-embed[src*="#wmed"] img,
 .image-embed[src*="#wmed"]::after {
     width: var(--medium); 
 }
-img[alt*="wm-tl"],
+img[alt][alt][alt*="wm-tl"],
 .image-embed[src*="#wm-tl"] img,
 .image-embed[src*="#wm-tl"]::after {
     width: var(--med-tall); 
 }
-img[alt*="wtall"],
+img[alt][alt][alt*="wtall"],
 .image-embed[src*="#wtall"] img,
 .image-embed[src*="#wtall"]::after {
     width: var(--tall); 
 }
-img[alt*=wfull],
+img[alt][alt][alt*=wfull],
 .internal-embed[src*="#wfull"] img { width: 100%; }
 
 

@@ -103,6 +103,12 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
     [data-callout-metadata*="no-title"]
 ) > .callout-title { display: none; }
 
+// No Icon
+.callout:is(
+    [data-callout-metadata*="no-i"], 
+    [data-callout-metadata*="no-icon"]
+) > .callout-title .callout-icon { display: none; }
+
 
 //No Table Header
 .callout:is(
@@ -161,6 +167,22 @@ body {
     &:not(.is-collapsed) .callout-title { padding-bottom: 0; }
     & .callout-title { background: transparent; }
 }
+
+.callout[data-callout-metadata*="alt-line"] {
+    border: 0;
+
+    & .callout-title {
+        background: transparent; 
+        border-bottom: 2px solid var(--table, var(--background-modifier-border));
+        // border-bottom: 2px solid rgb(var(--callout-color), 0.5);
+        padding: 5px 0;
+    }
+    & .callout-fold { color: rgb(var(--callout-color)); }
+    & .callout-content {
+        border-bottom: 1px solid rgba(var(--callout-color), 0.5);
+    }
+}
+
     
 .co-ttl-ctr {
     & .callout-title {
@@ -647,6 +669,7 @@ body {
 
 
 /* Unwrapped Table */
+.callout.callout[data-callout-metadata*="table"],
 .callout.callout[data-callout*="table"] {
     border: 0;
 
@@ -656,7 +679,7 @@ body {
         background-color: transparent;
         box-shadow: none;
     }
-    & .callout-title { display: none; }
+    &:not([data-callout-metadata*="show-title"], [data-callout-metadata*="s-t"]) .callout-title { display: none; }
     & table { 
         white-space: nowrap; 
         margin: 0; 
@@ -813,5 +836,66 @@ body {
             margin: 5px;
             background: transparent;
         }
+    }
+}
+
+
+/* Timeline */
+.callout.callout[data-callout*="timeline"] {
+    --callout-icon: clock-12;
+    // --callout-color: 209, 220, 226;
+
+    background-color: rgb(var(--callout-color), 0.2);
+
+    width: 50.34%;
+    margin: 0;
+    border: 0;
+    clear: both;
+    
+    
+    & .callout-title {
+        background: rgb(var(--callout-color), 0.15);
+        align-content: center;
+        align-items: center;
+        
+        & em {
+            font-style: normal;
+            display: block;
+            font-size: 14px;
+            line-height: 12px;
+            color: rgb(var(--callout-color));
+        }
+    }
+    
+    & .callout-icon {
+        background-color: var(--note, var(--background-primary));
+        transform: scale(1.2);
+        border-radius: 20px;
+    }
+    
+    //Side Alignment
+    &[data-callout-metadata*="t-l"] {
+        border-right: 4px solid rgb(var(--callout-color));
+        float: left;
+        box-shadow: -4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
+    }
+    &[data-callout-metadata*="t-r"] {
+        border-left: 4px solid rgb(var(--callout-color));
+        float: right;
+        box-shadow: 4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
+    }
+    
+    //Title/Icon Alignment
+    &[data-callout-metadata*="t-l"] > .callout-title {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+    &[data-callout-metadata*="t-l"] > .callout-title .callout-icon {
+        float: right;
+        margin-right: -20px;
+    }
+    &[data-callout-metadata*="t-r"] > .callout-title .callout-icon {
+        float: left;
+        margin-left: -20px;
     }
 }

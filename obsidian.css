@@ -250,14 +250,6 @@ settings:
         type: class-toggle
         default: false
     -
-        title: Wrap Note Title
-        id: title-wrap
-        type: class-toggle
-    -
-        title: Flat Note Title Color
-        id: nt-g
-        type: class-toggle
-    -
         title: Disable Settings Animation
         id: n-s-ani
         type: class-toggle
@@ -294,8 +286,17 @@ settings:
         id: mbl-sidebar
         type: class-toggle
     -
+        title: Tab Styling
+        id: sidebar-tab-styling
+        type: heading
+        level: 4
+    -
         title: Wide Sidebar Tabs
         id: wide-sb-tabs
+        type: class-toggle
+    -
+        title: Sidebar Tabs Original Style
+        id: sb-tabs-original
         type: class-toggle
     -
         title: Sidebar Tabs Underline Style
@@ -564,6 +565,32 @@ settings:
         title: Crop Image Height In Popover
         description: ⚠ Warning, might have some unintended consequences
         id: crop-img
+        type: class-toggle
+    -
+        title: Note Title 
+        id: note-title
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Wrap Note Title
+        id: title-wrap
+        type: class-toggle
+    -
+        title: Flat Note Title Color
+        id: nt-g
+        type: class-toggle
+    -   
+        title: No Note Title Background Color
+        id: nt-clear
+        type: class-toggle
+    -   
+        title: Underline Style Note Title
+        id: nt-underline
+        type: class-toggle
+    -   
+        title: Overline Style Note Title
+        id: nt-overline
         type: class-toggle
     -
         title: Headers
@@ -3798,6 +3825,24 @@ button.mod-cta,
   font-weight: 600;
 }
 
+.nt-clear .mod-active .view-header {
+  background: var(--note);
+}
+
+.nt-underline .workspace-leaf-content .view-header {
+  border-bottom: 4px solid transparent;
+}
+.nt-underline .workspace-leaf.mod-active .view-header {
+  border-bottom-color: var(--h1-c);
+}
+
+.nt-overline .workspace-leaf-content .view-header {
+  border-top: 4px solid transparent;
+}
+.nt-overline .workspace-leaf.mod-active .view-header {
+  border-top-color: var(--h1-c);
+}
+
 /*--Sidebar--*/
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf,
@@ -3862,9 +3907,9 @@ button.mod-cta,
 }
 
 /* Sidebar: Overflow Tabs */
-.workspace-split.mod-left-split .workspace-tab-header-container,
-.workspace-split.mod-right-split .workspace-tab-header-container {
+.workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header-container {
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .workspace-tab-header-container:not(:hover)::-webkit-scrollbar {
@@ -3947,6 +3992,34 @@ button.mod-cta,
 }
 .tabs-sidebar .workspace-tab-header + .workspace-tab-header {
   border-left: 0;
+}
+
+.sb-tabs-original .workspace-split.mod-horizontal.mod-right-split .workspace-tab-header-container {
+  margin-left: 0;
+}
+.sb-tabs-original .workspace-tab-container-before, .sb-tabs-original .workspace-tab-container-after {
+  display: none;
+}
+.sb-tabs-original .workspace-tab-header-container {
+  background-color: var(--outer-bar);
+}
+.sb-tabs-original .workspace-tab-header-inner {
+  padding: 0 1em;
+}
+.sb-tabs-original .workspace-tab-header.is-active {
+  background-color: var(--side-bar);
+}
+.sb-tabs-original .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--text);
+}
+.sb-tabs-original .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
+  color: var(--inactive);
+}
+.sb-tabs-original .workspace-tabs .workspace-leaf-content {
+  padding-top: 10px;
+}
+.sb-tabs-original .workspace-tab-header::before, .sb-tabs-original .workspace-tab-header-inner-icon {
+  margin-bottom: -10px;
 }
 
 /*-File Navbar-*/
@@ -5279,7 +5352,6 @@ iframe {
 .popover.hover-popover img:not([alt=""]):not(.cm-widgetBuffer):not(.emoji):not(.link-favicon) {
   max-width: 100%;
   width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
@@ -5969,102 +6041,102 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
 }
 
 /*Height*/
-img[alt*=hmicro],
+img[alt][alt][alt*=hmicro],
 .image-embed[src*="#hmicro"] img {
   height: var(--micro);
 }
 
-img[alt*=htiny],
+img[alt][alt][alt*=htiny],
 .image-embed[src*="#htiny"] img {
   height: var(--tiny);
 }
 
-img[alt*=hsmall],
+img[alt][alt][alt*=hsmall],
 .image-embed[src*="#hsmall"] img {
   height: var(--small);
 }
 
-img[alt*=hs-med],
+img[alt][alt][alt*=hs-med],
 .image-embed[src*="#hs-med"] img {
   height: var(--small-med);
 }
 
-img[alt*=hm-sm],
+img[alt][alt][alt*=hm-sm],
 .image-embed[src*="#hs-sm"] img {
   height: var(--med-small);
 }
 
-img[alt*=hmed],
+img[alt][alt][alt*=hmed],
 .image-embed[src*="#hmed"] img {
   height: var(--medium);
 }
 
-img[alt*=hm-tl],
+img[alt][alt][alt*=hm-tl],
 .image-embed[src*="#hm-tl"],
 .image-embed[src*="#hm-tl"] img {
   height: var(--med-tall);
 }
 
-img[alt*=htall],
+img[alt][alt][alt*=htall],
 .image-embed[src*="#htall"] img {
   height: var(--tall);
 }
 
-img[alt*=hfull],
+img[alt][alt][alt*=hfull],
 .internal-embed[src*="#hfull"] img {
   height: 100%;
 }
 
 /*Width*/
-img[alt*=wmicro],
+img[alt][alt][alt*=wmicro],
 .image-embed[src*="#wmicro"] img,
 .image-embed[alt*="#wmicro"]::after {
   width: var(--micro);
 }
 
-img[alt*=wtiny],
+img[alt][alt][alt*=wtiny],
 .image-embed[src*="#wtiny"] img,
 .image-embed[src*="#wtiny"]::after {
   width: var(--tiny);
 }
 
-img[alt*=wsmall],
+img[alt][alt][alt*=wsmall],
 .image-embed[src*="#wsmall"] img,
 .image-embed[src*="#wsmall"]::after {
   width: var(--small);
 }
 
-img[alt*=ws-med],
+img[alt][alt][alt*=ws-med],
 .image-embed[src*="#ws-med"] img,
 .image-embed[src*="#ws-med"]::after {
   width: var(--small-med);
 }
 
-img[alt*=wm-sm],
+img[alt][alt][alt*=wm-sm],
 .image-embed[src*="#wm-sm"] img,
 .image-embed[src*="#wm-sm"]::after {
   width: var(--med-small);
 }
 
-img[alt*=wmed],
+img[alt][alt][alt*=wmed],
 .image-embed[src*="#wmed"] img,
 .image-embed[src*="#wmed"]::after {
   width: var(--medium);
 }
 
-img[alt*=wm-tl],
+img[alt][alt][alt*=wm-tl],
 .image-embed[src*="#wm-tl"] img,
 .image-embed[src*="#wm-tl"]::after {
   width: var(--med-tall);
 }
 
-img[alt*=wtall],
+img[alt][alt][alt*=wtall],
 .image-embed[src*="#wtall"] img,
 .image-embed[src*="#wtall"]::after {
   width: var(--tall);
 }
 
-img[alt*=wfull],
+img[alt][alt][alt*=wfull],
 .internal-embed[src*="#wfull"] img {
   width: 100%;
 }
@@ -8495,6 +8567,11 @@ body .callout.callout.callout:is([data-callout-metadata*=nmg], [data-callout-met
   display: none;
 }
 
+.callout:is([data-callout-metadata*=no-i],
+[data-callout-metadata*=no-icon]) > .callout-title .callout-icon {
+  display: none;
+}
+
 .callout:is([data-callout-metadata*=n-th],
 [data-callout-metadata*=no-table-header]) > th {
   display: none;
@@ -8545,6 +8622,21 @@ body {
 .alt-co .callout.callout .callout-title,
 .callout[data-callout-metadata*=alt-co] .callout-title {
   background: transparent;
+}
+
+.callout[data-callout-metadata*=alt-line] {
+  border: 0;
+}
+.callout[data-callout-metadata*=alt-line] .callout-title {
+  background: transparent;
+  border-bottom: 2px solid var(--table, var(--background-modifier-border));
+  padding: 5px 0;
+}
+.callout[data-callout-metadata*=alt-line] .callout-fold {
+  color: rgb(var(--callout-color));
+}
+.callout[data-callout-metadata*=alt-line] .callout-content {
+  border-bottom: 1px solid rgba(var(--callout-color), 0.5);
 }
 
 .co-ttl-ctr .callout-title {
@@ -8958,18 +9050,22 @@ body {
 }
 
 /* Unwrapped Table */
+.callout.callout[data-callout-metadata*=table],
 .callout.callout[data-callout*=table] {
   border: 0;
 }
+.callout.callout[data-callout-metadata*=table] .callout-content,
 .callout.callout[data-callout*=table] .callout-content {
   padding: 0;
   border: 0;
   background-color: transparent;
   box-shadow: none;
 }
-.callout.callout[data-callout*=table] .callout-title {
+.callout.callout[data-callout-metadata*=table]:not([data-callout-metadata*=show-title], [data-callout-metadata*=s-t]) .callout-title,
+.callout.callout[data-callout*=table]:not([data-callout-metadata*=show-title], [data-callout-metadata*=s-t]) .callout-title {
   display: none;
 }
+.callout.callout[data-callout-metadata*=table] table,
 .callout.callout[data-callout*=table] table {
   white-space: nowrap;
   margin: 0;
@@ -9100,6 +9196,55 @@ body {
   flex: 1 1 250px;
   margin: 5px;
   background: transparent;
+}
+
+/* Timeline */
+.callout.callout[data-callout*=timeline] {
+  --callout-icon: clock-12;
+  background-color: rgb(var(--callout-color), 0.2);
+  width: 50.34%;
+  margin: 0;
+  border: 0;
+  clear: both;
+}
+.callout.callout[data-callout*=timeline] .callout-title {
+  background: rgb(var(--callout-color), 0.15);
+  align-content: center;
+  align-items: center;
+}
+.callout.callout[data-callout*=timeline] .callout-title em {
+  font-style: normal;
+  display: block;
+  font-size: 14px;
+  line-height: 12px;
+  color: rgb(var(--callout-color));
+}
+.callout.callout[data-callout*=timeline] .callout-icon {
+  background-color: var(--note, var(--background-primary));
+  transform: scale(1.2);
+  border-radius: 20px;
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] {
+  border-right: 4px solid rgb(var(--callout-color));
+  float: left;
+  box-shadow: -4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-r] {
+  border-left: 4px solid rgb(var(--callout-color));
+  float: right;
+  box-shadow: 4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] > .callout-title {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] > .callout-title .callout-icon {
+  float: right;
+  margin-right: -20px;
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-r] > .callout-title .callout-icon {
+  float: left;
+  margin-left: -20px;
 }
 
 /* Kepano: https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164
@@ -10340,7 +10485,7 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
   visibility: hidden;
 }
 
-.dv .dataview-ul {
+.dv .dataview-ul:not(.dataview-result-object-ul) {
   list-style-type: none;
   margin-inline-start: -32px;
 }

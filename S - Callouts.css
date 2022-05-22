@@ -119,6 +119,11 @@ body .callout.callout.callout:is([data-callout-metadata*=nmg], [data-callout-met
   display: none;
 }
 
+.callout:is([data-callout-metadata*=no-i],
+[data-callout-metadata*=no-icon]) > .callout-title .callout-icon {
+  display: none;
+}
+
 .callout:is([data-callout-metadata*=n-th],
 [data-callout-metadata*=no-table-header]) > th {
   display: none;
@@ -169,6 +174,21 @@ body {
 .alt-co .callout.callout .callout-title,
 .callout[data-callout-metadata*=alt-co] .callout-title {
   background: transparent;
+}
+
+.callout[data-callout-metadata*=alt-line] {
+  border: 0;
+}
+.callout[data-callout-metadata*=alt-line] .callout-title {
+  background: transparent;
+  border-bottom: 2px solid var(--table, var(--background-modifier-border));
+  padding: 5px 0;
+}
+.callout[data-callout-metadata*=alt-line] .callout-fold {
+  color: rgb(var(--callout-color));
+}
+.callout[data-callout-metadata*=alt-line] .callout-content {
+  border-bottom: 1px solid rgba(var(--callout-color), 0.5);
 }
 
 .co-ttl-ctr .callout-title {
@@ -582,18 +602,22 @@ body {
 }
 
 /* Unwrapped Table */
+.callout.callout[data-callout-metadata*=table],
 .callout.callout[data-callout*=table] {
   border: 0;
 }
+.callout.callout[data-callout-metadata*=table] .callout-content,
 .callout.callout[data-callout*=table] .callout-content {
   padding: 0;
   border: 0;
   background-color: transparent;
   box-shadow: none;
 }
-.callout.callout[data-callout*=table] .callout-title {
+.callout.callout[data-callout-metadata*=table]:not([data-callout-metadata*=show-title], [data-callout-metadata*=s-t]) .callout-title,
+.callout.callout[data-callout*=table]:not([data-callout-metadata*=show-title], [data-callout-metadata*=s-t]) .callout-title {
   display: none;
 }
+.callout.callout[data-callout-metadata*=table] table,
 .callout.callout[data-callout*=table] table {
   white-space: nowrap;
   margin: 0;
@@ -724,6 +748,55 @@ body {
   flex: 1 1 250px;
   margin: 5px;
   background: transparent;
+}
+
+/* Timeline */
+.callout.callout[data-callout*=timeline] {
+  --callout-icon: clock-12;
+  background-color: rgb(var(--callout-color), 0.2);
+  width: 50.34%;
+  margin: 0;
+  border: 0;
+  clear: both;
+}
+.callout.callout[data-callout*=timeline] .callout-title {
+  background: rgb(var(--callout-color), 0.15);
+  align-content: center;
+  align-items: center;
+}
+.callout.callout[data-callout*=timeline] .callout-title em {
+  font-style: normal;
+  display: block;
+  font-size: 14px;
+  line-height: 12px;
+  color: rgb(var(--callout-color));
+}
+.callout.callout[data-callout*=timeline] .callout-icon {
+  background-color: var(--note, var(--background-primary));
+  transform: scale(1.2);
+  border-radius: 20px;
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] {
+  border-right: 4px solid rgb(var(--callout-color));
+  float: left;
+  box-shadow: -4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-r] {
+  border-left: 4px solid rgb(var(--callout-color));
+  float: right;
+  box-shadow: 4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] > .callout-title {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] > .callout-title .callout-icon {
+  float: right;
+  margin-right: -20px;
+}
+.callout.callout[data-callout*=timeline][data-callout-metadata*=t-r] > .callout-title .callout-icon {
+  float: left;
+  margin-left: -20px;
 }
 
 /*@settings

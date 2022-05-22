@@ -104,3 +104,27 @@
 .empty-state-action:hover {
     font-weight: 600;
 }
+
+
+// Clear Note Titles
+.nt-clear .mod-active .view-header {
+    background: var(--note);
+}
+
+// Note Title Border Lines
+.nt-underline {
+    & .workspace-leaf-content .view-header {
+        border-bottom: 4px solid transparent;
+    }
+    & .workspace-leaf.mod-active .view-header {
+        border-bottom-color: var(--h1-c);
+    }
+}
+.nt-overline {    
+    & .workspace-leaf-content .view-header {
+        border-top: 4px solid transparent;
+    }
+    & .workspace-leaf.mod-active .view-header {
+        border-top-color: var(--h1-c);
+    }
+}

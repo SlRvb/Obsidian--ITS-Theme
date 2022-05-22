@@ -68,7 +68,7 @@ body.dv-tbl-th .table-view-table > thead > tr > th {
 .dv .dataview-ul li::before {
     visibility: hidden;
 }
-.dv .dataview-ul {
+.dv .dataview-ul:not(.dataview-result-object-ul) {
     list-style-type: none;
     margin-inline-start: -32px;
 }

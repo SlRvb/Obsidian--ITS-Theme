@@ -249,14 +249,6 @@ settings:
         type: class-toggle
         default: false
     -
-        title: Wrap Note Title
-        id: title-wrap
-        type: class-toggle
-    -
-        title: Flat Note Title Color
-        id: nt-g
-        type: class-toggle
-    -
         title: Disable Settings Animation
         id: n-s-ani
         type: class-toggle
@@ -293,8 +285,17 @@ settings:
         id: mbl-sidebar
         type: class-toggle
     -
+        title: Tab Styling
+        id: sidebar-tab-styling
+        type: heading
+        level: 4
+    -
         title: Wide Sidebar Tabs
         id: wide-sb-tabs
+        type: class-toggle
+    -
+        title: Sidebar Tabs Original Style
+        id: sb-tabs-original
         type: class-toggle
     -
         title: Sidebar Tabs Underline Style
@@ -563,6 +564,32 @@ settings:
         title: Crop Image Height In Popover
         description: ⚠ Warning, might have some unintended consequences
         id: crop-img
+        type: class-toggle
+    -
+        title: Note Title 
+        id: note-title
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Wrap Note Title
+        id: title-wrap
+        type: class-toggle
+    -
+        title: Flat Note Title Color
+        id: nt-g
+        type: class-toggle
+    -   
+        title: No Note Title Background Color
+        id: nt-clear
+        type: class-toggle
+    -   
+        title: Underline Style Note Title
+        id: nt-underline
+        type: class-toggle
+    -   
+        title: Overline Style Note Title
+        id: nt-overline
         type: class-toggle
     -
         title: Headers

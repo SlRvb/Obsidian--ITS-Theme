@@ -491,6 +491,22 @@ settings:
         max: 15
         step: 1
     -
+        title: Note Width
+        description: Resize note width when readable line length toggled on.
+        id: note-width
+        type: variable-number-slider
+        default: 700
+        format: px
+        min: 500
+        max: 1000
+        step: 50
+    -
+        title: Workspace UI Resize
+        description: Resize UI Elements
+        id: WS-UI-Resize
+        type: heading
+        level: 4
+    -
         title: Toggle Resize
         description: Toggle to resize UI Elements. (Not necessary for Resize Scrollbars)
         id: resize
@@ -516,6 +532,16 @@ settings:
         max: 20
         step: 1
     -
+        title: Sidebar Ribbon Width
+        description: Resize sidebar ribbon width
+        id: s-rib-pad
+        type: variable-number-slider
+        default: 18
+        format: px
+        min: 10
+        max: 25
+        step: 1
+    -
         title: Sidebar Ribbon Icon Size
         description: Resize sidebar Ribbon icons
         id: f-s-rib-i
@@ -530,10 +556,10 @@ settings:
         description: Resize sidebar tab icons
         id: f-s-tab-i
         type: variable-number-slider
-        default: 18
+        default: 17
         format: px
         min: 12
-        max: 22
+        max: 20
         step: 1
     -
         title: Note Title Size
@@ -545,16 +571,6 @@ settings:
         min: 12
         max: 20
         step: 1
-    -
-        title: Note Width
-        description: Resize note width when readable line length toggled on.
-        id: note-width
-        type: variable-number-slider
-        default: 700
-        format: px
-        min: 500
-        max: 1000
-        step: 50
     -
         title: Note Elements
         id: Other-Note
@@ -2250,7 +2266,8 @@ body {
   --f-s-nt: 16px;
   --frnt-text: var(--f-s-code);
   --f-s-rib-i: 18px;
-  --f-s-tab-i: 18px;
+  --f-s-tab-i: 17px;
+  --s-rib-pad: 18px;
   --h-brdr: 2px;
   --f-w-h: 600;
   --h-line: 100%;
@@ -3488,6 +3505,11 @@ body:not(.its-i) svg.clock-glyph {
 .horizontal-tab-nav-item.is-active,
 .vertical-tab-nav-item.is-active {
   background-color: var(--dark-accent);
+}
+
+.community-plugin-search .setting-item-control,
+.search-input-container {
+  width: 100%;
 }
 
 /*Account Header 2*/
@@ -5483,10 +5505,6 @@ iframe {
   text-align: center;
 }
 
-.is-mobile .status-bar {
-  display: none;
-}
-
 /*Unset Mobile Changes*/
 .is-mobile .modal.mod-settings {
   width: calc(100% - 20px);
@@ -5497,7 +5515,8 @@ iframe {
 .is-mobile .modal,
 .is-mobile .workspace,
 .is-mobile .prompt,
-.is-mobile .suggestion-item {
+.is-mobile .suggestion-item,
+.is-mobile .suggestion-container {
   border-radius: var(--radius) !important;
 }
 
@@ -8135,6 +8154,14 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 .resize .titlebar-text,
 .resize .notice {
   font-size: calc(var(--f-s-ui) - 2px);
+  line-height: calc(var(--f-s-ui) + 4px);
+}
+
+.resize .horizontal-tab-nav-item, .resize .vertical-tab-nav-item:not(.settings-search-input) {
+  padding-left: calc(var(--f-s-ui) + 8px);
+  padding-top: calc(var(--f-s-ui) / 2.6);
+  padding-bottom: calc(var(--f-s-ui) / 2.6);
+  padding-right: calc(var(--f-s-ui) / 2.6);
 }
 
 .resize .modal,
@@ -8153,7 +8180,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 .resize .horizontal-tab-nav-item,
 .resize .modal.mod-settings .vertical-tab-nav-item {
   font-size: var(--f-s-ui);
-  line-height: calc(var(--f-s-ui) + 10px);
+  line-height: calc(var(--f-s-ui) * 1.625);
 }
 
 /*Resize: Note*/
@@ -8193,9 +8220,28 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   line-height: calc(var(--f-s-sb) + 4px);
 }
 
-.resize .workspace-ribbon-collapse-btn svg, .resize .side-dock-ribbon-action svg {
+.resize .side-dock-ribbon-action {
+  padding: 0;
+  padding-top: calc(var(--f-s-rib-i) - 8px);
+  padding-bottom: calc(var(--f-s-rib-i) - 8px);
+}
+.resize .side-dock-ribbon-action svg {
   height: var(--f-s-rib-i);
   width: var(--f-s-rib-i);
+}
+.resize .workspace-ribbon-collapse-btn {
+  padding-top: calc(var(--f-s-rib-i) + 2px);
+  padding-bottom: calc(var(--f-s-rib-i) + 2px);
+}
+.resize .workspace-ribbon-collapse-btn svg {
+  height: calc(var(--f-s-rib-i) - 2px);
+  width: calc(var(--f-s-rib-i) - 2px);
+}
+.resize .workspace-ribbon {
+  padding: 0 var(--s-rib-pad);
+}
+.resize .side-dock-ribbon {
+  flex: 0 0 var(--s-rib-pad);
 }
 .resize .workspace-tab-header-inner-icon svg, .resize .workspace-tab-header-inner-icon::before {
   height: var(--f-s-tab-i);
@@ -8556,6 +8602,12 @@ body .callout.callout.callout:is([data-callout-metadata*=nmg], [data-callout-met
   margin: 0;
 }
 
+.callout[data-callout-metadata*=collapse] * {
+  margin: 0 !important;
+  padding: 0 !important;
+  grid-gap: 0 !important;
+}
+
 .callout.callout.callout:is([data-callout-metadata*=nbrd], [data-callout-metadata*=no-border]) {
   border: 0;
 }
@@ -8719,6 +8771,22 @@ body {
 }
 .callout[data-callout*=infobox]:not(:hover):not(.is-collapsed) .callout-title, .callout[data-callout*=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
   display: none;
+}
+.callout[data-callout*=infobox][data-callout-metadata*=title]:not(:hover):not(.is-collapsed) .callout-title {
+  display: flex;
+}
+.callout[data-callout*=infobox][data-callout-metadata*=title].is-collapsed .callout-title {
+  border: 1px solid var(--hr, var(--background-modifier-border));
+  display: flex;
+}
+.callout[data-callout*=infobox][data-callout-metadata*=title] .callout-fold, .callout[data-callout*=infobox][data-callout-metadata*=title] .callout-title .callout-title-inner {
+  display: unset;
+  align-items: center;
+  align-content: center;
+  padding: 5px 10px;
+}
+.callout[data-callout*=infobox][data-callout-metadata*=title].is-collapsed .callout-fold {
+  border: 0;
 }
 .callout[data-callout*=infobox] .callout-content {
   padding: 1px;
@@ -11807,7 +11875,6 @@ body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
   border-right: 2px solid var(--headers);
   border-bottom: none;
-  padding-right: 2px;
 }
 
 /*Hide Black Border When Header is Rotated*/
@@ -11821,13 +11888,13 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 /*Rotate Gradient for Sliding Panes*/
-body.plugin-sliding-panes-rotate-header .workspace-leaf.mod-active .view-header {
+body.plugin-sliding-panes-rotate-header:not(.nt-clear) .workspace-leaf.mod-active .view-header {
   border: 0 !important;
   background: linear-gradient(to top, var(--outer-bar), var(--dark-accent));
 }
 
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
-  border: 0 !important;
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > :is(.workspace-leaf, .workspace-leaf.mod-active) > .workspace-leaf-content > .view-header.view-header {
+  border: 0;
   line-height: var(--lh);
 }
 
@@ -11839,11 +11906,6 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
   line-height: 32px;
-}
-
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon,
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
-  margin-left: 2px;
 }
 
 /*--Plugin: 5e Statblock--*/

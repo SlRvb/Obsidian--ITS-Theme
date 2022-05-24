@@ -490,6 +490,22 @@ settings:
         max: 15
         step: 1
     -
+        title: Note Width
+        description: Resize note width when readable line length toggled on.
+        id: note-width
+        type: variable-number-slider
+        default: 700
+        format: px
+        min: 500
+        max: 1000
+        step: 50
+    -
+        title: Workspace UI Resize
+        description: Resize UI Elements
+        id: WS-UI-Resize
+        type: heading
+        level: 4
+    -
         title: Toggle Resize
         description: Toggle to resize UI Elements. (Not necessary for Resize Scrollbars)
         id: resize
@@ -515,6 +531,16 @@ settings:
         max: 20
         step: 1
     -
+        title: Sidebar Ribbon Width
+        description: Resize sidebar ribbon width
+        id: s-rib-pad
+        type: variable-number-slider
+        default: 18
+        format: px
+        min: 10
+        max: 25
+        step: 1
+    -
         title: Sidebar Ribbon Icon Size
         description: Resize sidebar Ribbon icons
         id: f-s-rib-i
@@ -529,10 +555,10 @@ settings:
         description: Resize sidebar tab icons
         id: f-s-tab-i
         type: variable-number-slider
-        default: 18
+        default: 17
         format: px
         min: 12
-        max: 22
+        max: 20
         step: 1
     -
         title: Note Title Size
@@ -544,16 +570,6 @@ settings:
         min: 12
         max: 20
         step: 1
-    -
-        title: Note Width
-        description: Resize note width when readable line length toggled on.
-        id: note-width
-        type: variable-number-slider
-        default: 700
-        format: px
-        min: 500
-        max: 1000
-        step: 50
     -
         title: Note Elements
         id: Other-Note

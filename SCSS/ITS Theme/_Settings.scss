@@ -128,12 +128,17 @@
     font-size: var(--f-text);
     line-height: 26px;
 }
+
 /*Selected Item*/
 .horizontal-tab-nav-item.is-active,
 .vertical-tab-nav-item.is-active {
     background-color: var(--dark-accent);
 }
 
+.community-plugin-search .setting-item-control,
+.search-input-container {
+    width: 100%;
+}
 
 /*Account Header 2*/
 .vertical-tab-content h2 {

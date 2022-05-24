@@ -44,6 +44,11 @@
 body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-metadata*="no-margin"]) {
     margin: 0;
 }
+.callout[data-callout-metadata*="collapse"] * {
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-gap: 0 !important;
+}
 .callout.callout.callout:is([data-callout-metadata*="nbrd"], [data-callout-metadata*="no-border"]) {
     border: 0;
 }
@@ -233,7 +238,28 @@ body {
     &:not(:hover):not(.is-collapsed) .callout-title, 
     & .callout-title :is(.callout-icon, .callout-title-inner)
     { display: none; }
+
+    //Show title
+    &[data-callout-metadata*="title"] {
+        &:not(:hover):not(.is-collapsed) .callout-title {
+            display: flex;
+        }
+        &.is-collapsed .callout-title {
+            border: 1px solid var(--hr, var(--background-modifier-border));
+            display: flex;
+        }
+        & .callout-fold,
+        & .callout-title .callout-title-inner {
+            display: unset;
+            align-items: center;
+            align-content: center;
+            padding: 5px 10px;
+        }
+
+        &.is-collapsed .callout-fold { border: 0; }
+    }
     
+
     //Flush content and add border
     & .callout-content {
         padding: 1px;

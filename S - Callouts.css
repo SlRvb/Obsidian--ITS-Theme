@@ -67,6 +67,12 @@ body .callout.callout.callout:is([data-callout-metadata*=nmg], [data-callout-met
   margin: 0;
 }
 
+.callout[data-callout-metadata*=collapse] * {
+  margin: 0 !important;
+  padding: 0 !important;
+  grid-gap: 0 !important;
+}
+
 .callout.callout.callout:is([data-callout-metadata*=nbrd], [data-callout-metadata*=no-border]) {
   border: 0;
 }
@@ -230,6 +236,22 @@ body {
 }
 .callout[data-callout*=infobox]:not(:hover):not(.is-collapsed) .callout-title, .callout[data-callout*=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
   display: none;
+}
+.callout[data-callout*=infobox][data-callout-metadata*=title]:not(:hover):not(.is-collapsed) .callout-title {
+  display: flex;
+}
+.callout[data-callout*=infobox][data-callout-metadata*=title].is-collapsed .callout-title {
+  border: 1px solid var(--hr, var(--background-modifier-border));
+  display: flex;
+}
+.callout[data-callout*=infobox][data-callout-metadata*=title] .callout-fold, .callout[data-callout*=infobox][data-callout-metadata*=title] .callout-title .callout-title-inner {
+  display: unset;
+  align-items: center;
+  align-content: center;
+  padding: 5px 10px;
+}
+.callout[data-callout*=infobox][data-callout-metadata*=title].is-collapsed .callout-fold {
+  border: 0;
 }
 .callout[data-callout*=infobox] .callout-content {
   padding: 1px;

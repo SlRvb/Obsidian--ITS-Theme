@@ -81,13 +81,16 @@ a:not(.tag)
 
 /*Notion Style Links*/
 .link-ntn {
+    &:not(.unset-link-c) {
+        --text-accent: var(--text);
+        --accent2-lite: var(--text);
+    }
+
     & .internal-link,
     & .external-link,
     & .cm-link,
     & .cm-hmd-internal-link 
     {
-        --text-accent: var(--text);
-        --accent2-lite: var(--text);
 
         font-weight: 600;
         border-bottom: 1px solid var(--inactive);

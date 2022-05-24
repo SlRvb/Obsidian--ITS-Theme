@@ -868,7 +868,7 @@ settings:
 		type: variable-number-slider
         default: 34
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -877,7 +877,7 @@ settings:
 		type: variable-number-slider
         default: 34
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -886,7 +886,7 @@ settings:
 		type: variable-number-slider
         default: 30
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -895,7 +895,7 @@ settings:
 		type: variable-number-slider
         default: 28
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -904,7 +904,7 @@ settings:
 		type: variable-number-slider
         default: 26
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -913,7 +913,7 @@ settings:
 		type: variable-number-slider
         default: 24
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -922,7 +922,7 @@ settings:
 		type: variable-number-slider
         default: 24
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -931,7 +931,7 @@ settings:
 		type: variable-number-slider
         default: 22
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -940,7 +940,7 @@ settings:
 		type: variable-number-slider
         default: 20
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -949,7 +949,7 @@ settings:
 		type: variable-number-slider
         default: 20
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2	
 	-
@@ -958,7 +958,7 @@ settings:
 		type: variable-number-slider
         default: 18
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2	
 	-
@@ -967,7 +967,7 @@ settings:
 		type: variable-number-slider
         default: 18
         format: px
-        min: 18
+        min: 12
         max: 40
         step: 2
 	-
@@ -1111,6 +1111,10 @@ settings:
         id: link-f
         type: variable-text
         default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
+    -
+        title: Undo Link Style Coloring
+        id: unset-link-c
+        type: class-toggle
     -
         title: Tables
         id: tables
@@ -4557,9 +4561,11 @@ a:not(.tag) {
 }
 
 /*Notion Style Links*/
-.link-ntn .internal-link, .link-ntn .external-link, .link-ntn .cm-link, .link-ntn .cm-hmd-internal-link {
+.link-ntn:not(.unset-link-c) {
   --text-accent: var(--text);
   --accent2-lite: var(--text);
+}
+.link-ntn .internal-link, .link-ntn .external-link, .link-ntn .cm-link, .link-ntn .cm-hmd-internal-link {
   font-weight: 600;
   border-bottom: 1px solid var(--inactive);
 }

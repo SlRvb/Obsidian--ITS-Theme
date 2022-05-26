@@ -498,7 +498,7 @@ settings:
         default: 700
         format: px
         min: 500
-        max: 1000
+        max: 1500
         step: 50
     -
         title: Workspace UI Resize

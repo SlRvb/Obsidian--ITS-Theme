@@ -1925,6 +1925,14 @@ settings:
         default-dark: '#61afef'
         default-light: '#5599d0'
     -
+        title: Text Accent
+        description: Link color.
+        id: text-accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#61afef'
+        default-light: '#5599d0'
+    -
         title: Dark Accent
         description: File selected and Note Gradient, frontmatter tag, scrollbar color.
         id: dark-accent
@@ -3511,8 +3519,7 @@ body:not(.its-i) svg.clock-glyph {
   background-color: var(--dark-accent);
 }
 
-.community-plugin-search .setting-item-control,
-.search-input-container {
+.community-plugin-search .setting-item-control {
   width: 100%;
 }
 
@@ -14784,8 +14791,12 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 .notion .modal.mod-settings .vertical-tab-content-container, .notion .vertical-tab-content, .notion .community-plugin-info {
   background: var(--note);
 }
+.notion:not(.unset-link-c) {
+  --text-accent: var(--text);
+  --accent2-lite: var(--text);
+}
 .notion .internal-link, .notion .external-link, .notion .cm-underline {
-  color: var(--text);
+  color: var(--accent2-lite);
   border-bottom: 1px solid var(--table);
   font-weight: 600;
   text-decoration: unset;

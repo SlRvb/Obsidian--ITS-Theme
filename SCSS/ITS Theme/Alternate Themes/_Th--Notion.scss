@@ -206,12 +206,16 @@
     & .community-plugin-info {
         background: var(--note);
     }
+    &:not(.unset-link-c) {
+        --text-accent: var(--text);
+        --accent2-lite: var(--text);
+    }
 
     //Notion Links
     & .internal-link,
     & .external-link,
     & .cm-underline {
-        color: var(--text);
+        color: var(--accent2-lite);
         border-bottom: 1px solid var(--table);
         font-weight: 600;
         text-decoration: unset;

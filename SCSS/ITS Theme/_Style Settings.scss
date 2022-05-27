@@ -1924,6 +1924,14 @@ settings:
         default-dark: '#61afef'
         default-light: '#5599d0'
     -
+        title: Text Accent
+        description: Link color.
+        id: text-accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#61afef'
+        default-light: '#5599d0'
+    -
         title: Dark Accent
         description: File selected and Note Gradient, frontmatter tag, scrollbar color.
         id: dark-accent

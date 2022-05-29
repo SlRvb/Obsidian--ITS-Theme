@@ -871,6 +871,7 @@ body {
 .callout.callout[data-callout*="timeline"] {
     --callout-icon: clock-12;
     // --callout-color: 209, 220, 226;
+    
     --micro: 50px;
     --tiny: 100px;
     --small: 200px;
@@ -879,11 +880,12 @@ body {
     --medium: 500px;
     --med-tall: 600px;
     --tall: 700px;
+
+    --c-timeline: 49.6%;
     
 
     background-color: transparent;
 
-    width: 50.34%;
     margin: 0;
     border: 0;
     clear: both;
@@ -916,14 +918,15 @@ body {
     //Side Alignment
     &[data-callout-metadata*="t-l"] {
         border-right: 4px solid rgb(var(--callout-color));
-        float: left;
+        margin-right: var(--c-timeline);
 
         & > .callout-title,
         & > .callout-content { box-shadow: -4px 4px 0 var(--outline, var(--background-modifier-box-shadow)); }
     }
     &[data-callout-metadata*="t-r"] {
         border-left: 4px solid rgb(var(--callout-color));
-        float: right;
+        margin-left: var(--c-timeline);
+        
         & > .callout-title,
         & > .callout-content { box-shadow: 4px 4px 0 var(--outline, var(--background-modifier-box-shadow)); }
     }

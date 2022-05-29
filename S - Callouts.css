@@ -787,8 +787,8 @@ body {
   --medium: 500px;
   --med-tall: 600px;
   --tall: 700px;
+  --c-timeline: 49.6%;
   background-color: transparent;
-  width: 50.34%;
   margin: 0;
   border: 0;
   clear: both;
@@ -815,14 +815,14 @@ body {
 }
 .callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] {
   border-right: 4px solid rgb(var(--callout-color));
-  float: left;
+  margin-right: var(--c-timeline);
 }
 .callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] > .callout-title, .callout.callout[data-callout*=timeline][data-callout-metadata*=t-l] > .callout-content {
   box-shadow: -4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
 }
 .callout.callout[data-callout*=timeline][data-callout-metadata*=t-r] {
   border-left: 4px solid rgb(var(--callout-color));
-  float: right;
+  margin-left: var(--c-timeline);
 }
 .callout.callout[data-callout*=timeline][data-callout-metadata*=t-r] > .callout-title, .callout.callout[data-callout*=timeline][data-callout-metadata*=t-r] > .callout-content {
   box-shadow: 4px 4px 0 var(--outline, var(--background-modifier-box-shadow));

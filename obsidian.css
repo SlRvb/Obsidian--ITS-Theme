@@ -4089,7 +4089,7 @@ button.mod-cta,
 /*-File Navbar-*/
 /*Adjusting Padding of Navbar Icons*/
 .nav-header {
-  padding: 3% 0px 5px;
+  padding: 7px;
 }
 
 /*Adjusting Button Padding*/
@@ -8439,7 +8439,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
 
 /*Fix Initiative Tracker*/
 .workspace-leaf-content .view-content {
-  padding: 10px 0;
+  padding: 7px;
 }
 
 /*----Comments/Asides----*/
@@ -11173,6 +11173,10 @@ body .encounter-instance ul li:not(:hover) .xp-parent.xp-parent.xp-parent {
 
 .h-pcs .encounter-players {
   display: none;
+}
+
+.tracker-table-header th {
+  background: transparent;
 }
 
 /*--Kanban Plugin--*/

@@ -3423,7 +3423,7 @@ body:not(.its-i) svg.clock-glyph {
 
 .notice {
   color: var(--text-dl);
-  background-color: var(--accent);
+  background-color: var(--bttn);
   border-radius: var(--radius);
   box-shadow: 3px 3px var(--outline);
   border: 0;
@@ -4862,7 +4862,7 @@ input[type=checkbox]:checked {
 }
 
 /*--Blockquote--*/
-:is(.markdown-preview-view, .reveal) blockquote {
+:is(.markdown-preview-view, .reveal, .markdown-rendered) blockquote {
   display: flow-root;
   border: 0px;
   background-color: var(--embed-bg);

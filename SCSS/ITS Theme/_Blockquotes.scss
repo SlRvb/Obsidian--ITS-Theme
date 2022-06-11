@@ -1,5 +1,5 @@
 /*--Blockquote--*/
-:is(.markdown-preview-view, .reveal) blockquote {
+:is(.markdown-preview-view, .reveal, .markdown-rendered) blockquote {
     display: flow-root;
     border: 0px;
     background-color: var(--embed-bg);

@@ -3421,7 +3421,7 @@ body:not(.its-i) svg.clock-glyph {
   overflow: auto;
 }
 
-.notice {
+.notice.notice {
   color: var(--text-dl);
   background-color: var(--bttn);
   border-radius: var(--radius);

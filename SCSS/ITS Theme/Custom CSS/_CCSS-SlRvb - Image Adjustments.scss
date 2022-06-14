@@ -360,7 +360,7 @@ img[alt*="p+bcc"],
 
 /*--Image Shapes--*/
 /*Banners*/
-img[alt*="sban"],
+:is(img, .internal-embed)[alt*="sban"],
 .internal-embed[src*="#sban"] img {
     object-fit: cover;
     width: 100%;

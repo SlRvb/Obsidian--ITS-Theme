@@ -121,18 +121,24 @@
 }
 
 // Note Title Border Lines
-.nt-underline {
+.nt-underline.nt-underline.nt-underline {
+    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
     & .workspace-leaf-content .view-header {
         border-bottom: 4px solid transparent;
     }
+
+    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
     & .workspace-leaf.mod-active .view-header {
         border-bottom-color: var(--h1-c);
     }
 }
-.nt-overline {    
+.nt-overline.nt-overline.nt-overline {
+    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
     & .workspace-leaf-content .view-header {
         border-top: 4px solid transparent;
     }
+
+    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
     & .workspace-leaf.mod-active .view-header {
         border-top-color: var(--h1-c);
     }

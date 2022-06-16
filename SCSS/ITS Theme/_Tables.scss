@@ -16,7 +16,7 @@ tbody > tr > td {
 }
 
 th,
-.reveal table th {
+:is(.markdown-rendered, .reveal) table th {
     background-color: var(--th);
     color: var(--th-text);
 }

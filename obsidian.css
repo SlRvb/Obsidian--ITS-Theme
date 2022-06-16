@@ -3655,6 +3655,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 /*Obsidian Title Bar Cover*/
 .titlebar {
   background-color: var(--background-modifier-cover);
+  border: 0;
 }
 
 .titlebar-text,
@@ -3672,6 +3673,11 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 .menu {
   border-radius: var(--radius) !important;
   box-shadow: 5px 5px var(--outline);
+  border: 2px solid var(--outline);
+}
+
+.menu-separator {
+  border-color: var(--code-bg);
 }
 
 .menu-item.selected:not(.is-disabled):not(.is-label),
@@ -3739,13 +3745,20 @@ button.mod-cta,
 /* Resize Handle */
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
   top: 0;
+  border: 0;
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  border-color: var(--dark-sidebar);
+  border-style: unset;
 }
 
 /*Sidebar Resize Handle*/
 .workspace-leaf-resize-handle,
 .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
   background-color: var(--dark-sidebar);
-  height: calc(100% - 0.5px);
+  height: 100%;
+  border: 0;
 }
 
 .workspace-leaf-resize-handle:hover,
@@ -3913,6 +3926,10 @@ button.mod-cta,
 .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
   border-radius: var(--radius);
+}
+
+.workspace-tabs .workspace-leaf {
+  border: 0;
 }
 
 /*Recolor Top*/
@@ -4205,6 +4222,7 @@ body:not(.type-undo) .nav-file-title {
 .nav-file {
   margin: 0 -2px;
   margin-right: 0px;
+  border: 0;
   border-left: 2px solid var(--table);
 }
 
@@ -4249,6 +4267,10 @@ body:not(.type-undo) .nav-file-title {
   color: var(--file);
 }
 
+.nav-folder-children .nav-file-title-content::before {
+  color: var(--f-icon);
+}
+
 .nav-file-title.is-active,
 .nav-folder-title.is-active,
 body:not(.is-grabbing) .nav-file-title:hover,
@@ -4258,8 +4280,18 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   background: var(--outer-bar);
 }
 
-.nav-folder-children .nav-file-title-content::before {
-  color: var(--f-icon);
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+.workspace-leaf.mod-active .nav-file.has-focus {
+  border: inherit;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0 1px var(--interactive-accent);
+  background-color: var(--text-highlight-bg);
+  color: var(--text);
+}
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title .nav-folder-title-content::before, .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title .nav-file-title-content::before,
+.workspace-leaf.mod-active .nav-file.has-focus .nav-folder-title-content::before,
+.workspace-leaf.mod-active .nav-file.has-focus .nav-file-title-content::before {
+  color: var(--text);
 }
 
 /*File selected*/
@@ -4294,11 +4326,11 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /*Arrows*/
 .collapse-icon svg {
   transition: transform 100ms ease-in-out;
-  color: var(--lines);
 }
 
 .collapse-icon {
   margin-top: 0;
+  color: var(--lines);
 }
 
 .markdown-preview-view .collapse-icon {
@@ -5124,7 +5156,7 @@ tbody > tr > td {
 }
 
 th,
-.reveal table th {
+:is(.markdown-rendered, .reveal) table th {
   background-color: var(--th);
   color: var(--th-text);
 }
@@ -6654,7 +6686,7 @@ div:not(.w-hcl).writing .HyperMD-header-4::before {
 }
 
 /*Arrows*/
-.writing .collapse-icon svg {
+.writing .collapse-icon {
   color: var(--scrollbar-thumb-bg);
 }
 
@@ -7360,7 +7392,7 @@ ol.kanban .task-list-item .list-collapse-indicator {
   content: "";
 }
 
-.k-o ul ul .collapse-icon svg {
+.k-o ul ul .collapse-icon {
   color: transparent;
   margin-left: -10px;
 }
@@ -8229,7 +8261,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   font-size: calc(var(--f-s-sb) - 3px);
 }
 
-.resize .nav-file-title-content {
+.resize.resize.resize .nav-file-title-content {
   line-height: calc(var(--f-s-sb) + 4px);
 }
 
@@ -9510,6 +9542,15 @@ body:not(.op-h) .outline .tree-item.is-collapsed .tree-item-self:before {
 }
 
 /*--Tag Pane--*/
+.workspace-leaf.mod-active .tree-item.has-focus > .tag-pane-tag {
+  border-radius: var(--radius);
+  background-color: var(--text-highlight-bg);
+}
+.workspace-leaf.mod-active .tree-item.has-focus > .tag-pane-tag .tag-pane-tag-text:before, .workspace-leaf.mod-active .tree-item.has-focus > .tag-pane-tag .collapse-icon {
+  color: var(--text);
+  font-weight: bold;
+}
+
 /*Text*/
 .tree-item-self {
   color: var(--soft-text);
@@ -9653,7 +9694,7 @@ body .suggestion {
     font-family: var(--its);
     padding-right: 5px;
 }*/
-.search-result .collapse-icon svg {
+.search-result .collapse-icon {
   color: var(--soft-text);
 }
 
@@ -11319,8 +11360,8 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 
 /*Minimalist Kanban Plugin Adjustments*/
 /*----Lane----*/
-.kbn .kanban-plugin__lane-title p {
-  font-size: 12px !important;
+.kbn.kbn .kanban-plugin__lane-title p {
+  font-size: 12px;
 }
 
 .kbn .kanban-plugin__lane {
@@ -11339,13 +11380,13 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 
 /*----Title----*/
 .kbn .kanban-plugin__item-title .markdown-preview-view p {
-  font-size: 14px !important;
+  font-size: 14px;
 }
 
 /*Title: Sizing*/
 .kbn .kanban-plugin__lane-header-wrapper {
-  border: none !important;
-  padding: 5px 10px !important;
+  border: none;
+  padding: 5px 10px;
   padding-bottom: 0 !important;
 }
 
@@ -11354,7 +11395,7 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 }
 
 /*Title: Link Styling*/
-body.kbn .kanban-plugin__item-content-wrapper.kanban-plugin__item-content-wrapper,
+.kbn .kanban-plugin__item-content-wrapper.kanban-plugin__item-content-wrapper,
 .kbn .kanban-plugin__item-metadata-wrapper:not(:empty) {
   background: transparent;
 }
@@ -11390,7 +11431,7 @@ body.kbn .kanban-plugin__item-content-wrapper.kanban-plugin__item-content-wrappe
   -webkit-font-smoothing: subpixel-antialiased;
   border-left: 0;
   margin-bottom: 4px;
-  box-shadow: 2px 2px 0 var(--outline);
+  box-shadow: var(--outline) 0 0 0 2px, 2px 2px 0 var(--outline);
 }
 
 /*Card: Key*/
@@ -11413,6 +11454,14 @@ body .kanban-plugin__item-tags .kanban-plugin__item-tag {
 .kbn .kanban-plugin__item .markdown-preview-view a.internal-link {
   font-weight: 600;
   color: var(--text);
+}
+
+.kbn .kanban-plugin__item-button-wrapper,
+.kbn .kanban-plugin__item-button-wrapper button {
+  background: none;
+  box-shadow: none;
+  padding: 0 5px;
+  color: var(--footnote);
 }
 
 /*Notion Inspired Kanban*/
@@ -12494,7 +12543,8 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
 .h-wksp .workspace-tabs .workspace-leaf-resize-handle {
-  background-color: var(--side-bar);
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .h-rh .workspace-leaf-resize-handle,
@@ -12509,6 +12559,7 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
 .h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
   background-color: var(--accent);
+  border-color: var(--accent);
 }
 
 /*Hide Scrollbar*/

@@ -7,7 +7,8 @@
 .h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
 .h-wksp .workspace-tabs .workspace-leaf-resize-handle {
-    background-color: var(--side-bar);
+    background-color: transparent;
+    border-color: transparent;
 }
 .h-rh .workspace-leaf-resize-handle,
 .h-wksp .workspace-leaf-resize-handle { background: var(--note); }
@@ -19,6 +20,7 @@
 .h-wksp .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
 .h-wksp .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
     background-color: var(--accent);
+    border-color: var(--accent);
 }
 
 /*Hide Scrollbar*/

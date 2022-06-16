@@ -2,7 +2,10 @@
 /*----WORKSPACE----*/
 
 /*Obsidian Title Bar Cover*/
-.titlebar { background-color: var(--background-modifier-cover); }
+.titlebar { 
+    background-color: var(--background-modifier-cover); 
+    border: 0;
+}
 .titlebar-text,
 .titlebar-button { 
     color: var(--text-dl);
@@ -16,6 +19,10 @@
 .menu {
     border-radius: var(--radius) !important;
     box-shadow: 5px 5px var(--outline);
+    border: 2px solid var(--outline);
+}
+.menu-separator {
+    border-color: var(--code-bg);
 }
 .menu-item.selected:not(.is-disabled):not(.is-label),
 .menu-item:hover:not(.is-disabled):not(.is-label):hover {
@@ -82,16 +89,25 @@ button.mod-cta,
 /* Resize Handle */
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
     top: 0;
+    border: 0;
 }
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+    border-color: var(--dark-sidebar);
+    border-style: unset;
+}
+
 /*Sidebar Resize Handle*/
 .workspace-leaf-resize-handle,
 .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
     background-color: var(--dark-sidebar);
-    height: calc(100% - 0.5px);
+    // height: calc(100% - 0.5px);
+    height: 100%;
+    border: 0;
 }
 .workspace-leaf-resize-handle:hover,
 .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle:hover {
     background-color: var(--accent);
+    
 }
 
 /*Word Wrap Pane*/

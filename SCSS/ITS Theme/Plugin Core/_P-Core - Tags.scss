@@ -1,5 +1,13 @@
 
 /*--Tag Pane--*/
+.workspace-leaf.mod-active .tree-item.has-focus > .tag-pane-tag {
+    border-radius: var(--radius);
+    background-color: var(--text-highlight-bg);
+
+    & .tag-pane-tag-text:before,
+    & .collapse-icon { color: var(--text); font-weight: bold; }
+}
+
 /*Text*/
 .tree-item-self {
     color: var(--soft-text);

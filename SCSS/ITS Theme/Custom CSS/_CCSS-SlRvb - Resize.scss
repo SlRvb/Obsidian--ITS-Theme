@@ -121,7 +121,7 @@
 .resize .nav-folder-children .nav-file-title-content::before {
     font-size: calc(var(--f-s-sb) - 3px);
 }
-.resize .nav-file-title-content {
+.resize.resize.resize .nav-file-title-content {
     line-height: calc(var(--f-s-sb) + 4px);
 }
 

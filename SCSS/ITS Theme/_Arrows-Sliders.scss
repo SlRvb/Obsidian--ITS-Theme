@@ -2,9 +2,11 @@
 /*Arrows*/
 .collapse-icon svg {
     transition: transform 100ms ease-in-out;
+}
+.collapse-icon { 
+    margin-top: 0; 
     color: var(--lines);
 }
-.collapse-icon { margin-top: 0; }
 .markdown-preview-view .collapse-icon { margin-top: -2px; }
 .markdown-preview-view .heading-collapse-indicator { margin-top: calc(var(--f-s-h) * -.3px); }
 .publish-section-header-toggle-collapsed-button { margin-top: 2px;}

@@ -4,9 +4,11 @@
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf,
 .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
-.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
-    border-radius: var(--radius);
-}
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content
+{ border-radius: var(--radius);}
+
+.workspace-tabs .workspace-leaf { border: 0; }
+
 /*Recolor Top*/
 .workspace-tabs,
 .workspace-tab-container-before.is-before-active,

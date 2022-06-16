@@ -121,6 +121,7 @@ body:not(.type-undo) .nav-file-title {
 .nav-file {
     margin: 0 -2px;
     margin-right: 0px;
+    border: 0;
     border-left: 2px solid var(--table);
 }
 /*Align Folder Line*/
@@ -161,16 +162,32 @@ body:not(.type-undo) .nav-file-title {
     padding-left: 5px;
     color: var(--file);
 }
+.nav-folder-children .nav-file-title-content::before{
+    color: var(--f-icon);
+}
 .nav-file-title.is-active, 
 .nav-folder-title.is-active, 
 body:not(.is-grabbing) .nav-file-title:hover, 
-body:not(.is-grabbing) .nav-folder-title:hover {
+body:not(.is-grabbing) .nav-folder-title:hover
+{
     color: var(--f-hover);
     font-weight: 600;
     background: var(--outer-bar);
 }
-.nav-folder-children .nav-file-title-content::before{
-    color: var(--f-icon);
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, 
+.workspace-leaf.mod-active .nav-file.has-focus {
+    border: inherit;
+    border-radius: var(--radius);
+    box-shadow: inset 0 0 0 1px var(--interactive-accent);
+    background-color: var(--text-highlight-bg);
+    
+    color: var(--text);
+
+    & .nav-folder-title-content::before,
+    & .nav-file-title-content::before {
+        color: var(--text);
+    }
+
 }
 
 

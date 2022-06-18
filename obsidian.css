@@ -3910,14 +3910,14 @@ button.mod-cta,
   border-bottom: 4px solid transparent;
 }
 .nt-underline.nt-underline.nt-underline .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header, .nt-underline.nt-underline.nt-underline .workspace-leaf.mod-active .view-header {
-  border-bottom-color: var(--h1-c);
+  border-bottom-color: var(--h1-color);
 }
 
 .nt-overline.nt-overline.nt-overline .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header, .nt-overline.nt-overline.nt-overline .workspace-leaf-content .view-header {
   border-top: 4px solid transparent;
 }
 .nt-overline.nt-overline.nt-overline .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header, .nt-overline.nt-overline.nt-overline .workspace-leaf.mod-active .view-header {
-  border-top-color: var(--h1-c);
+  border-top-color: var(--h1-color);
 }
 
 /*--Sidebar--*/
@@ -11120,7 +11120,7 @@ body .obsidian-initiative-tracker span ::-webkit-meter-bar {
   visibility: visible !important;
   text-transform: capitalize;
   font-style: normal;
-  color: var(--h1-c);
+  color: var(--h1-color);
 }
 
 body .encounter-xp > .easy.easy > .difficulty-label {
@@ -11135,7 +11135,7 @@ body .encounter-xp > .deadly.deadly > .difficulty-label {
 
 .encounter-xp em em {
   padding-left: 5px;
-  color: var(--h2-c, var(--interactive-accent));
+  color: var(--h2-color, var(--interactive-accent));
 }
 
 /*Encounters*/
@@ -11195,7 +11195,7 @@ body .encounter-instance .dice-roller-button {
   margin-right: -5px;
 }
 body .encounter-instance .encounter-xp, body .encounter-instance .xp-parent {
-  color: var(--h2-c, var(--interactive-accent));
+  color: var(--h2-color, var(--interactive-accent));
   font-weight: bold;
   margin: 0;
 }
@@ -11203,7 +11203,7 @@ body .encounter-instance .xp-parent:after {
   content: "\f102";
   /*"\e4fb" f753*/
   font-family: var(--fa5);
-  color: var(--h2-c, var(--interactive-accent));
+  color: var(--h2-color, var(--interactive-accent));
   font-weight: 10 !important;
   padding-left: 5px;
 }

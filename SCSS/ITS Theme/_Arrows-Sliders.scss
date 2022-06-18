@@ -3,7 +3,7 @@
 .collapse-icon svg {
     transition: transform 100ms ease-in-out;
 }
-.collapse-icon { 
+.collapse-icon.collapse-icon { 
     margin-top: 0; 
     color: var(--lines);
 }

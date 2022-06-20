@@ -269,6 +269,10 @@ body {
     }
     //Style Tables
     & table { width: 100%; }
+    & table td {
+        white-space: pre-wrap;
+        word-break: normal;
+    }
     & :is(p, table) {
         margin-block-start: 0;
         margin-block-end: 0;

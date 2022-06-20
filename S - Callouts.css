@@ -262,6 +262,10 @@ body {
 .callout[data-callout*=infobox] table {
   width: 100%;
 }
+.callout[data-callout*=infobox] table td {
+  white-space: pre-wrap;
+  word-break: normal;
+}
 .callout[data-callout*=infobox] :is(p, table) {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -280,39 +284,27 @@ body {
   padding: auto;
   text-align: center;
 }
+.callout[data-callout*=infobox][data-callout-metadata][data-callout-metadata][data-callout-metadata*=left] {
+  margin-right: 25px;
+}
 
 /*Image Grid*/
-.callout.callout:is([data-callout=grid], [data-callout=masonry]) {
+.callout.callout[data-callout=grid] {
   background: transparent;
   border: 0;
   margin: 0;
   box-shadow: none;
 }
-.callout.callout:is([data-callout=grid], [data-callout=masonry]) .callout-content {
+.callout.callout[data-callout=grid] .callout-content {
   display: block;
   width: 100%;
   border: 0;
   box-shadow: unset;
   padding: 0;
 }
-.callout.callout:is([data-callout=grid], [data-callout=masonry]) .callout-title {
+.callout.callout[data-callout=grid] .callout-title {
   display: none;
 }
-
-.callout.callout[data-callout=masonry] .callout-content p {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, auto));
-  grid-gap: 2px;
-  margin: 0;
-  margin-top: 5px;
-}
-.callout.callout[data-callout=masonry] .callout-content img {
-  display: flex;
-  flex: 1;
-  align-self: stretch;
-  object-fit: cover;
-}
-
 .callout.callout[data-callout=grid] .callout-content p {
   display: flex;
   margin-block-start: 0;
@@ -326,6 +318,20 @@ body {
   max-height: 35vh;
 }
 .callout.callout[data-callout=grid] .callout-content img[alt=wfull] {
+  max-height: unset;
+}
+.callout.callout[data-callout=grid][data-callout-metadata*=masonry] .callout-content p {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  grid-gap: 2px;
+  margin: 0;
+  margin-top: 5px;
+}
+.callout.callout[data-callout=grid][data-callout-metadata*=masonry] .callout-content img {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  object-fit: cover;
   max-height: unset;
 }
 

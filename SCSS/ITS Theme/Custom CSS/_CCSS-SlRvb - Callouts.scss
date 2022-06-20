@@ -119,9 +119,12 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
 .callout:is(
     [data-callout-metadata*="n-th"], 
     [data-callout-metadata*="no-table-header"]
-) > {
-    & th { display: none; }
-    & table { margin-bottom: 5px; }
+) .callout-content > {
+    & table { 
+        margin-bottom: 5px; 
+        
+        & th { display: none; }
+    }
 }
 //Wide Table
 .callout[data-callout-metadata*="t-w"] table td { width: calc(var(--tbl-w) /2); }

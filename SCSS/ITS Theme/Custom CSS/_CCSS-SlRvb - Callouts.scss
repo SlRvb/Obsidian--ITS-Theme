@@ -73,12 +73,16 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
     text-align: center;
 }
 // Align Callout Title Text
-.callout[data-callout-metadata*="ttl-c"] .callout-title {
-    justify-content: center;
-}
-.callout[data-callout-metadata*="ttl-c"] .callout-title-inner {
-    display: block;
-    flex: unset;
+.callout.callout:is(
+    [data-callout-metadata*="ttl-c"], 
+    [data-callout-metadata*="title-Center"]
+) {
+    & .callout-title { justify-content: center; }
+    
+    & .callout-title-inner {
+        display: block;
+        flex: unset;
+    }
 }
 
 
@@ -102,12 +106,21 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
 }
 
 /*Caption Adjustments*/
-//No Header
+// No Title
 .callout:is(
     [data-callout-metadata*="no-t"], 
     [data-callout-metadata*="no-title"]
 ) > .callout-title { display: none; }
 
+// Show Title
+.callout.callout.callout.callout:is(
+    [data-callout-metadata*="s-t"], 
+    [data-callout-metadata*="show-title"]
+) {
+    & > .callout-title { display: flex; }
+    
+    & p { margin-top: 0; }
+} 
 // No Icon
 .callout:is(
     [data-callout-metadata*="no-i"], 
@@ -122,7 +135,7 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
 ) .callout-content > {
     & table { 
         margin-bottom: 5px; 
-        
+
         & th { display: none; }
     }
 }
@@ -191,7 +204,11 @@ body {
         border-bottom: 1px solid rgba(var(--callout-color), 0.5);
     }
 }
-
+//Inspired by Davey
+.callout.callout[data-callout-metadata*="dim"].is-collapsed:not(:hover) {
+    opacity: 30%;
+    transition: opacity 300ms;
+}
     
 .co-ttl-ctr {
     & .callout-title {
@@ -274,6 +291,7 @@ body {
     & table { width: 100%; }
     & table td {
         white-space: pre-wrap;
+        word-wrap: normal;
         word-break: normal;
     }
     & :is(p, table) {
@@ -752,7 +770,7 @@ body {
         & .callout-content p:first-child { margin-top: 0; }
     }
 
-    &:not([data-callout-metadata*="title"]) {
+    &:not([data-callout-metadata*="show-title"], [data-callout-metadata*="s-t"]) {
         & .callout-title-inner { display: none; }
         & .callout-title { justify-content: space-between; }
     }

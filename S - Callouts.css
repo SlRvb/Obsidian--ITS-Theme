@@ -92,11 +92,12 @@ body .callout.callout.callout:is([data-callout-metadata*=nmg], [data-callout-met
   text-align: center;
 }
 
-.callout[data-callout-metadata*=ttl-c] .callout-title {
+.callout.callout:is([data-callout-metadata*=ttl-c],
+[data-callout-metadata*=title-Center]) .callout-title {
   justify-content: center;
 }
-
-.callout[data-callout-metadata*=ttl-c] .callout-title-inner {
+.callout.callout:is([data-callout-metadata*=ttl-c],
+[data-callout-metadata*=title-Center]) .callout-title-inner {
   display: block;
   flex: unset;
 }
@@ -123,6 +124,15 @@ body .callout.callout.callout:is([data-callout-metadata*=nmg], [data-callout-met
 .callout:is([data-callout-metadata*=no-t],
 [data-callout-metadata*=no-title]) > .callout-title {
   display: none;
+}
+
+.callout.callout.callout.callout:is([data-callout-metadata*=s-t],
+[data-callout-metadata*=show-title]) > .callout-title {
+  display: flex;
+}
+.callout.callout.callout.callout:is([data-callout-metadata*=s-t],
+[data-callout-metadata*=show-title]) p {
+  margin-top: 0;
 }
 
 .callout:is([data-callout-metadata*=no-i],
@@ -201,6 +211,11 @@ body {
   border-bottom: 1px solid rgba(var(--callout-color), 0.5);
 }
 
+.callout.callout[data-callout-metadata*=dim].is-collapsed:not(:hover) {
+  opacity: 30%;
+  transition: opacity 300ms;
+}
+
 .co-ttl-ctr .callout-title {
   justify-content: center;
 }
@@ -264,6 +279,7 @@ body {
 }
 .callout[data-callout*=infobox] table td {
   white-space: pre-wrap;
+  word-wrap: normal;
   word-break: normal;
 }
 .callout[data-callout*=infobox] :is(p, table) {
@@ -675,10 +691,10 @@ body {
 .callout[data-callout*=aside]:not([data-callout-metadata*=no-t]) .callout-content p:first-child {
   margin-top: 0;
 }
-.callout[data-callout*=aside]:not([data-callout-metadata*=title]) .callout-title-inner {
+.callout[data-callout*=aside]:not([data-callout-metadata*=show-title], [data-callout-metadata*=s-t]) .callout-title-inner {
   display: none;
 }
-.callout[data-callout*=aside]:not([data-callout-metadata*=title]) .callout-title {
+.callout[data-callout*=aside]:not([data-callout-metadata*=show-title], [data-callout-metadata*=s-t]) .callout-title {
   justify-content: space-between;
 }
 .callout[data-callout*=aside].is-collapsed {

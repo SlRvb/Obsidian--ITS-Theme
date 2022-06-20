@@ -4,27 +4,26 @@
 
 ---
 
-Type | Description |
----|---|
-`[!infobox]` | Wikipedia-like infoboxes  [How to Format](Callouts.md#infoboxes)
-`[!captions]` | Displays text around image in the style of a caption
-`[!kanban]` | Displays a (functionally limited) kanban board: [How to Format](Callouts.md#kanban)
-`[!grid]` | Best type of image grid for internally linked images
-`[!masonry]` | Best type of image grid for externally linked images
-`[!recite]` | A D&D styled popout 
-`[!metadata]` | Styled callout that colors \*\*bold\*\* words, table headers, and inline dataview keys blue
-`[!cards]` | Style images and dataview tables like notion's gallery view: [How to Format](Callouts.md#cards)
-`[!table]` | Prevent table from wrapping
-`[!aside]` | Add asides to the side of notes
-`[!timeline]` | Style callout as a vertical Timeline [How to Format](Callouts.md#timeline)
-`[!column]` | Style inner callouts as columns: [How to Format](Callouts.md#column)
+| Type | Description |
+| --- | --- |
+| `[!infobox]` | Wikipedia-like infoboxes: [How to Format](Callouts.md#infoboxes) |
+| `[!captions]` | Displays text around image in the style of a caption |
+| `[!kanban]` | Displays a (functionally limited) kanban board: [How to Format](Callouts.md#kanban) |
+| `[!grid]` | Display images in a grid/masonry style: [How to Format](Callouts.md#image-grid) |
+| `[!recite]` | A D&D styled popout |
+| `[!metadata]` | Styled callout that colors \*\*bold\*\* words, table headers, and inline dataview keys blue |
+| `[!cards]` | Style images and dataview tables like notion's gallery view: [How to Format](Callouts.md#cards) |
+| `[!table]` | Prevent table from wrapping |
+| `[!aside]` | Add asides to the side of notes |
+| `[!timeline]` | Style callout as a vertical Timeline [How to Format](Callouts.md#timeline) |
+| `[!column]` | Style inner callouts as columns: [How to Format](Callouts.md#column) |
 
-#### Adjustments
+# Adjustments
 **Format Syntax:**
 ```
 > [!callout-type|adjustment adjustment2]
 
-> [!kanban|nt]
+> [!kanban|n-t]
 > [!kanban|no-title txt-c]
 > [!caption|left]
 ```
@@ -33,17 +32,21 @@ Type | Description |
 
 > **Callouts uses the same [parameters](Image-Positions.md#sizing) as the images for resizing (width-wise) and [moving it](Image-Positions.md#leftrightcenter).**
 
-| Abbr. | Full Title | Description|
-|---|---|---|
-| `no-t` | `no-title` | Hides callout title
-| `n-th` | `no-table-header` | Hides table header in callouts
-| `no-i` | `no-icon` | Hide callout icon
-| `txt-c` | | Center callout text
-| `embed` | | Remove callout padding to expand embed
-| `nmg` | `no-margin` | Remove callout margins
-| `clean` | | Remove callout Styling
-| `alt-co` | | Alternate Callout styling for individual callouts
-| `alt-line` | | Minimalistic callout style with only title underlined |
+| Abbr. | Full Title | Description |
+| --- | --- | --- |
+| `no-t` | `no-title` | Hides callout title |
+| `s-t` | `show-title` |  |
+| `n-th` | `no-table-header` | Hides table header in callouts |
+| `no-i` | `no-icon` | Hide callout icon |
+| `txt-c` | `text-Center` | Center callout text |
+| `ttl-c` | `title-Center` | Center callout title text |
+| `embed` |  | Remove callout padding to expand embed |
+| `nmg` | `no-margin` | Remove callout margins |
+| `clean` |  | Remove callout Styling |
+| `alt-co` |  | Alternate Callout styling for individual callouts |
+| `alt-line` |  | Minimalistic callout style with only title underlined |
+| `dim` |  | Dim callouts unless hovered |
+| `collapse` |  | Remove all padding and margins for ultra compact look |
 
 ---
 
@@ -57,34 +60,69 @@ Type | Description |
 # Formatting
 
 ## Infoboxes
-```md
-> [!infobox]+
+```markdown
+> [!infobox]
 > # Name
 > ![[Image.png|cover hsmall]]
 > ###### Stats
-> Type |  Stat |
-> ---|---|
-> Test | Testing |
-> Test | Testing |
-> Test | Testing |
-> Test | Testing |
+> | Type |  Stat |
+> |---|---|
+> | Test | Testing |
+> | Test | Testing |
+> | Test | Testing |
+> | Test | Testing |
 ```
 
-```md
-> [!infobox|left]+
+```markdown
+> [!infobox]+ Collapsible Infobox
 > # Name
 > ![[Image.png|cover hsmall]]
 > ###### Stats
-> Type |  Stat |
-> ---|---|
-> Test | Testing |
-> Test | Testing |
-> Test | Testing |
-> Test | Testing |
+> | Type |  Stat |
+> |---|---|
+> | Test | Testing |
+> | Test | Testing |
+> | Test | Testing |
+> | Test | Testing |
 ```
+
+```markdown
+> [!infobox|left]
+> # Name
+> ![[Image.png|cover hsmall]]
+> ###### Stats
+> | Type |  Stat |
+> |---|---|
+> | Test | Testing |
+> | Test | Testing |
+> | Test | Testing |
+> | Test | Testing |
+```
+
+## Image Grid
+| | |
+| --- | --- |
+| `[!grid]` | Best type for **internally linked** images |
+| <code>[!grid\|masonry]</code> | Best type for **externally linked** images |
+
+```markdown
+> [!grid]
+> ![[Internal Image.png]]
+> ![[Internal Image 2.png]]
+>
+> ![[Internal Image 3 on New Row.png]]
+
+
+> [!grid|masonry]
+> ![External Image 1](https://www.dmuth.org/wp-content/uploads/2021/03/obsidian-logo.png)
+> ![External Image 2](https://www.dmuth.org/wp-content/uploads/2021/03/obsidian-logo.png)
+> 
+> ![External Image 3 on New Row](https://www.dmuth.org/wp-content/uploads/2021/03/obsidian-logo.png)
+```
+
 
 ## Kanban
-```md
+```markdown
 > [!kanban]+
 > - [[Link|Lane 1 Title]]
 > 	- ![[Image.png]]
@@ -107,7 +145,7 @@ Type | Description |
 | `dvl` | Style dataview list
 
 **External and Internal Images:**
-```md
+```markdown
 > [!cards]
 > **[[Link]]**
 > ![Image link|sban htiny ctr](https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200)
@@ -117,7 +155,7 @@ Type | Description |
 ```
 
 **Add More Columns:**
-```md
+```markdown
 > [!cards|4]
 > **[[Link]]**
 > ![Image link|sban htiny ctr](https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200)
@@ -133,7 +171,7 @@ Type | Description |
 ```
 
 **Style Dataview Table:**
-```md
+```markdown
 > [!cards|dataview]
 > ```dataview
 > TABLE WITHOUT ID
@@ -143,8 +181,8 @@ Type | Description |
 > SORT file.name
 > LIMIT 10
 > ```
-```
 
+```markdown
 ## Column
 | Adjustment | Description |
 | --- | --- |
@@ -167,7 +205,7 @@ Type | Description |
 | `t-r` | Timeline callout right side |
 
 
-```yaml
+```markdown
 > [!timeline|t-l] **Title** _Subtitle_
 > Left aligned timeline piece
 
@@ -184,7 +222,7 @@ Type | Description |
 | `left` | Move aside left |
 | `right` | Move aside right |
 
-```md
+```markdown
 > [!aside|clean right]
 > Removes styling from aside
 

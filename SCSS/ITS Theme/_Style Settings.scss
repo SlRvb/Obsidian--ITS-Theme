@@ -1148,17 +1148,9 @@ settings:
         id: t-w
         type: class-toggle
     -
-        title: Disable Dataview Header Larger Font Size
-        id: dv-th-size
-        type: class-toggle
-    -
-        title: Dataview Regular Table Header Styling
-        description: Match dataview table headers with default ITS table styling
-        id: dv-tbl-th
-        type: class-toggle
-    -
-        title: Hide List Lines for Dataview
-        id: dv-line
+        title: Unwrap Tables 
+        description: Unwrap tables in Source Mode
+        id: table-unwrap
         type: class-toggle
     -
         title: Table Header Adjustments
@@ -1240,6 +1232,25 @@ settings:
         min: 100
         max: 900
         step: 100
+    -
+        title: Dataview Table Adjustments
+        id: dataview-tables
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        title: Disable Dataview Header Larger Font Size
+        id: dv-th-size
+        type: class-toggle
+    -
+        title: Dataview Regular Table Header Styling
+        description: Match dataview table headers with default ITS table styling
+        id: dv-tbl-th
+        type: class-toggle
+    -
+        title: Hide List Lines for Dataview
+        id: dv-line
+        type: class-toggle
     -
         title: Horizontal Line
         id: hztl-ln

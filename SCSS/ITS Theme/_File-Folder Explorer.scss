@@ -174,21 +174,22 @@ body:not(.is-grabbing) .nav-folder-title:hover
     font-weight: 600;
     background: var(--outer-bar);
 }
-.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, 
-.workspace-leaf.mod-active .nav-file.has-focus {
-    border: inherit;
-    border-radius: var(--radius);
-    box-shadow: inset 0 0 0 1px var(--interactive-accent);
-    background-color: var(--text-highlight-bg);
-    
-    color: var(--text);
-
-    & .nav-folder-title-content::before,
-    & .nav-file-title-content::before {
+.workspace-leaf.mod-active {
+    & .nav-folder.has-focus > .nav-folder-title, 
+    & .nav-file.has-focus {
+        border: inherit;
+        border-radius: var(--radius);
+        box-shadow: inset 0 0 0 1px var(--interactive-accent);
+        background-color: var(--text-highlight-bg);
+        
         color: var(--text);
+    
+        & .nav-folder-title-content::before,
+        & .nav-file-title-content::before {
+            color: var(--text);
+        }
     }
-
-}
+} 
 
 
 /*File selected*/

@@ -7,7 +7,13 @@
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content
 { border-radius: var(--radius);}
 
-.workspace-tabs .workspace-leaf { border: 0; }
+.workspace-tabs .workspace-leaf.mod-active { 
+    border: 0;
+    box-shadow: 0 0 0 1px var(--accent);
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+ }
 
 /*Recolor Top*/
 .workspace-tabs,
@@ -168,7 +174,7 @@
     { display: none; }
 
     & .workspace-tab-header-container {
-        background-color: var(--outer-bar);
+        background-color: var(--side-bar-bg);
     }
     
     & .workspace-tab-header-inner {

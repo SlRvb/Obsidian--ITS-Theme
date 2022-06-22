@@ -96,7 +96,7 @@ body .callout.callout.callout:is([data-callout-metadata*="nmg"], [data-callout-m
         object-fit: cover;
     }
 }
-.callout.callout.callout[data-callout-metadata*="clean"] {
+.callout.callout.callout[data-callout-metadata~="clean"] {
     border: 0;
     box-shadow: none;
 
@@ -587,6 +587,14 @@ body {
         
         & .callout-title { display: none; }
         & .callout-content { padding: 0px; }
+    }
+
+    //Lineless Tables
+    &:is([data-callout-metadata~="tbl-cln"], [data-callout-metadata~="table-clean"]) {
+        & table :is(td, tr, th) {
+            background-color: transparent;
+            border-color: transparent;
+        }
     }
 }
 

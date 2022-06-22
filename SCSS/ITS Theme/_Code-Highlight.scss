@@ -1,0 +1,62 @@
+.theme-dark {
+
+}
+.theme-light {
+    //Variables
+    --ch-class: #DD4A68;
+    --ch-delimiter: slategray;
+    --ch-num: #905;
+    --ch-keyword: #07a;
+    --ch-string: #9a6e3a;
+}
+
+//Selectors
+.theme-light {
+
+    & .token.function,
+    & .token.class-name,
+    & .cm-type, 
+    & .cm-def { color: var(--ch-class); }
+
+    & .token.comment,
+    & .token.prolog,
+    & .token.doctype,
+    & .token.cdata,
+    & .cm-comment,
+    & .cm-meta,
+    & .cm-qualifier {
+        color: var(--ch-delimiter);
+    }
+
+    .token.property,
+    .token.tag,
+    .token.boolean, 
+    .token.number, 
+    .token.constant, 
+    .token.symbol,
+    .token.deleted,
+    .cm-number, 
+    .cm-tag {
+        color: var(--ch-num);
+    }
+
+    & .token.atrule,
+    & .token.attr-value,
+    & .token.keyword,
+    & .cm-keyword,
+    & .cm-builtin {
+        color: var(--ch-keyword);
+    }
+    
+    & .token.operator,
+    & .token.entity,
+    & .token.url,
+    & .language-css .token.string,
+    & .style .token.string,
+    & .cm-operator,
+    & .cm-string,
+    & .cm-string-2,
+    & .cm-link {
+        color: var(--ch-string);
+    }
+} 

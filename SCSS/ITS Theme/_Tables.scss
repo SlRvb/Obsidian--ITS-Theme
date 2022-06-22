@@ -11,8 +11,10 @@ tbody > tr > td {
 }
 .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row.HyperMD-table-row {
     min-width: min-content;
-    white-space: pre-wrap;
     font-size: var(--f-s-code);
+}
+body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row {
+    white-space: pre-wrap;
 }
 
 th,

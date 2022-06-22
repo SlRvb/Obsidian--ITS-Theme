@@ -115,6 +115,14 @@
 }
 
 
+//Popout Windows Fixes
+.is-popout-window {
+    & .view-action { top: 0; }
+    & .view-header-icon { top: -1px;}
+} 
+
+
+
 // Clear Note Titles
 .nt-clear .mod-active .view-header {
     background: var(--note);

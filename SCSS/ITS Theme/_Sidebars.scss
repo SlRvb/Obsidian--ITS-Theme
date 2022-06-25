@@ -13,7 +13,10 @@
     margin-left: 1px;
     margin-right: 1px;
     margin-bottom: 1px;
- }
+}
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
+    margin-right: 2px;
+}
 
 /*Recolor Top*/
 .workspace-tabs,

@@ -23,7 +23,7 @@
 .naked-em .internal-embed .markdown-embed-content > ::-webkit-scrollbar {
     width: 0px;
 }
-.naked-em .internal-embed:not(.image-embed) {
+.naked-em .internal-embed:not(.image-embed):not(.media-embed) {
 	display: inline-flex;
 }
 

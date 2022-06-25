@@ -160,6 +160,19 @@
     padding: 14px 10px;
 }
 
+.is-mobile .view-action {
+    // flex-wrap: wrap;
+    margin: 0 7px;
+}
+.is-mobile .view-header-icon,
+.is-mobile .view-actions {
+    // padding: unset;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.is-mobile .view-header-title {
+    -webkit-mask-image: unset;
+}
 
 /*Mobile: Toolbar Recolor*/
 .mobile-toolbar {
@@ -170,6 +183,18 @@
 }
 .theme-light .mobile-toolbar {
     background-color: var(--dark-accent);
+}
+
+.drag-ghost-hidden:before,
+.drag-ghost,
+.is-mobile .modal,
+.is-mobile .prompt,
+.is-mobile .suggestion-container,
+.is-mobile .suggestion,
+.is-mobile .suggestion-item,
+.is-mobile .empty-state-action,
+.mobile-toolbar-option.mod-ghost:before  {
+    border-radius: var(--radius);
 }
 
 /*--Device Sizes--*/

@@ -38,6 +38,9 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > :is(.workspace-
     border: 0;
     line-height: var(--lh);
 }
+.plugin-sliding-panes-rotate-header .view-header-title-container {
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0, #000000 30px);
+}
 
 /*Fix Margins*/
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {

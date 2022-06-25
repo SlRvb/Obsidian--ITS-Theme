@@ -1,19 +1,22 @@
 
 /*Note Title Wrap*/
 .title-wrap .view-header-title {
-    margin-top: 5px;
-    margin-bottom: 5px;
     white-space: pre-wrap;
-    line-height: 22px;
+    line-height: calc(var(--f-s-sb) + 5px);
+    // vertical-align: middle;
 }
 .title-wrap .view-header,
 .is-mobile.title-wrap .view-header-title-container {
     height: auto;
     width: auto !important;
 }
-.is-mobile.title-wrap .view-header-title {
-    padding: 20px 0;
-}
+
 .plugin-tabs.title-wrap .view-header {
     height: auto !important;
+}
+
+.is-mobile .view-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
 }

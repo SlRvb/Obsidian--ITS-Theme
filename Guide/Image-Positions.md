@@ -45,6 +45,17 @@ Attribute | Description |
 ---|---|
 `loc\|sban\|200`| Place the `\|<numbers>` sizing at the *end* of the text and it will shrink the image to that size.
 
+### Invert Colors
+
+These are particularly useful for images with transparency that are illegible in dark mode.
+
+Attribute | Description |
+---|---|
+`invertb` | Invert the image's colors (dark mode).
+`invertw` | Invert the image's colors (light mode).
+`invertbc` | Invert colors and increase contrast (dark mode).
+`invertwc` | Invert colors and increase contrast (light mode).
+
 
 ## Simplified Version
 

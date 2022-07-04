@@ -32,6 +32,7 @@ Download these for a better experience
 No need to download these snippets to your vault if you're using the ITS Theme, they work out of the box the moment you install ITS
 
 - S - Checkboxes
+- S - Callouts
 - S - Image Adjustments
 - S - Aside
 - S - Embed Adjustments

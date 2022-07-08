@@ -171,7 +171,7 @@
 ```
 
 **Style Dataview Table:**
-```markdown
+````markdown
 > [!cards|dataview]
 > ```dataview
 > TABLE WITHOUT ID
@@ -181,16 +181,25 @@
 > SORT file.name
 > LIMIT 10
 > ```
+````
 
-```markdown
 ## Column
 | Adjustment | Description |
 | --- | --- |
 | `flex` | Wrap column on smaller width screens
 | `3`, `4` | Add more columns; Default is 2
 
-```yaml
-> [!columns|flex 3]
+```markdown
+> [!column]
+>> [!info] Column 1
+>> - Use another callout for columns
+>
+>> [!note] Column 2
+>> Need that singular blockquote `>` as separation between columns
+```
+
+```markdown
+> [!column|flex 3]
 >> [!info|no-t] 
 >> Column 1
 >
@@ -232,3 +241,4 @@
 > [!aside|tufte title]
 > Show callout title for asides
 ```
+

@@ -48,12 +48,11 @@
 }
 
 /*Folder Hover Arrow*/
+.folder-arrow .nav-folder-title .nav-folder-collapse-indicator,
 .fhvr .nav-folder-title:hover .nav-folder-collapse-indicator {
-    display: unset;
-    margin-left: 9px;
-    margin-top: 2px;
+    display: flex;
+    margin-left: calc(var(--f-s-sb) - 6px);
 }
-
 
 .tg-f a.tag {
     font-size: var(--f-tag);

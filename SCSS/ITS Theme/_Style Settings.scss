@@ -253,10 +253,6 @@ settings:
         id: n-s-ani
         type: class-toggle
     -
-        title: Display Folder Arrow On Hover
-        id: fhvr
-        type: class-toggle
-    -
         title: Hide Outline Pane H
         id: op-h
         type: class-toggle
@@ -266,7 +262,7 @@ settings:
         type: class-toggle
     -
         title: Raise Right Sidebar & Doc Search
-        description: Raise the right sidebar and the document search modal if the status bar is covering part of it.
+        description: Raise the right sidebar and the document search modal above the status bar.
         id: rsb-up
         type: class-toggle
     -
@@ -368,6 +364,14 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    -
+        title: Display Folder Arrow
+        id: folder-arrow
+        type: class-toggle
+    -
+        title: Display Folder Arrow On Hover
+        id: fhvr
+        type: class-toggle
     -
         title: Add Vault Title Icon
         id: vlt-icon

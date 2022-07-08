@@ -254,10 +254,6 @@ settings:
         id: n-s-ani
         type: class-toggle
     -
-        title: Display Folder Arrow On Hover
-        id: fhvr
-        type: class-toggle
-    -
         title: Hide Outline Pane H
         id: op-h
         type: class-toggle
@@ -267,7 +263,7 @@ settings:
         type: class-toggle
     -
         title: Raise Right Sidebar & Doc Search
-        description: Raise the right sidebar and the document search modal if the status bar is covering part of it.
+        description: Raise the right sidebar and the document search modal above the status bar.
         id: rsb-up
         type: class-toggle
     -
@@ -369,6 +365,14 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    -
+        title: Display Folder Arrow
+        id: folder-arrow
+        type: class-toggle
+    -
+        title: Display Folder Arrow On Hover
+        id: fhvr
+        type: class-toggle
     -
         title: Add Vault Title Icon
         id: vlt-icon
@@ -4247,6 +4251,7 @@ button.mod-cta,
 .nav-file-title-content {
   width: 100%;
   line-height: 20px;
+  align-items: center;
 }
 
 body:not(.type-undo) .nav-file-title {
@@ -9087,10 +9092,13 @@ body {
 }
 .callout.callout[data-callout~=kanban] ul {
   display: flex;
-  padding-inline-start: 0;
   margin-block-start: 5px;
+  padding-inline-start: 0;
   text-align: center;
   overflow: auto;
+}
+.callout.callout[data-callout~=kanban] ul.dataview-ul {
+  margin-inline-start: unset;
 }
 .callout.callout[data-callout~=kanban] ul li {
   min-width: var(--lane-width);
@@ -12394,10 +12402,10 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 }
 
 /*Folder Hover Arrow*/
+.folder-arrow .nav-folder-title .nav-folder-collapse-indicator,
 .fhvr .nav-folder-title:hover .nav-folder-collapse-indicator {
-  display: unset;
-  margin-left: 9px;
-  margin-top: 2px;
+  display: flex;
+  margin-left: calc(var(--f-s-sb) - 6px);
 }
 
 .tg-f a.tag {

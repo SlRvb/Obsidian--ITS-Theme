@@ -47,6 +47,8 @@
 | `alt-line` |  | Minimalistic callout style with only title underlined |
 | `dim` |  | Dim callouts unless hovered |
 | `collapse` |  | Remove all padding and margins for ultra compact look |
+| `t-w` | `table-wide` | Widen table to edges of callout
+| `tbl-cln` | `table-clean` | Remove most table styling: lines, background colors
 
 ---
 
@@ -212,14 +214,18 @@
 | --- | --- |
 | `t-l` | Timeline callout left side |
 | `t-r` | Timeline callout right side |
-
+| | |
+| `t-1` to `t-10` | Add some spacing above the timeline callout to simulate how close events are in time |
 
 ```markdown
 > [!timeline|t-l] **Title** _Subtitle_
 > Left aligned timeline piece
 
-> [!timeline|t-r] **Title** *Subtitle*
+> [!timeline|t-r t-4] **Title** *Subtitle*
 > Right aligned timeline piece
+
+> [!timeline|t-r t-10] **Title** *Subtitle*
+> Spaced timeline piece
 ```
 
 ## Asides

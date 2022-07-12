@@ -27,6 +27,8 @@ Attribute | Description |
 
 ### Image Grid
 
+> ⚠ **I recommend using my [Callout Image Grids](Callouts.md#image-grid) instead**
+
 Attribute | Description |
 ---|---|
 `grid` | Display image side-by-side in a grid

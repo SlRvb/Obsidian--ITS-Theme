@@ -2,6 +2,7 @@
 h1, h2, h3, h4, h5, h6,
 .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
 .cm-s-obsidian .HyperMD-header {
+    letter-spacing: normal;
     font-weight: var(--f-w-h);
     font-family: var(--font);
     color: var(--headers);
@@ -70,7 +71,9 @@ body:not(.hash-reg) .cm-s-obsidian pre.HyperMD-header > span > span:first-child 
 h1, .HyperMD-header-1,
 h2, .HyperMD-header-2,
 h3, .HyperMD-header-3,
-h4, .HyperMD-header-4 {
+h4, .HyperMD-header-4,
+h5, .HyperMD-header-5
+{
     &::after {
         content: "";
         display: block;
@@ -78,25 +81,17 @@ h4, .HyperMD-header-4 {
         height: 4px;
     }
 }
-// :not(.is-mobile) :is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4) {
-//     &::after { margin-top: -10px; }
-// }
-
-h1, .HyperMD-header-1 { &::after { width: 100%; } }
-h2, .HyperMD-header-2 { &::after { width: 85%;  } }
-h3, .HyperMD-header-3 { &::after { width: 65%;  } }
-h4, .HyperMD-header-4 { &::after { width: 40%;  } }
+:is(h1, .HyperMD-header-1)::after { width: 100%; }
+:is(h2, .HyperMD-header-2)::after { width: 85%;  }
+:is(h3, .HyperMD-header-3)::after { width: 65%;  }
+:is(h4, .HyperMD-header-4)::after { width: 44%;  }
+:is(h5, .HyperMD-header-5)::after { width: 25%;  }
 
 
 
 
 /*--Center Headings--*/
-.hc h1,
-.hc h2,
-.hc h3,
-.hc h4,
-.hc h5,
-.hc h6
+.hc :is(h1, h2, h3, h4, h5, h6)
 { text-align: center; }
 
 .hc h6,
@@ -125,26 +120,29 @@ h4, .HyperMD-header-4 { &::after { width: 40%;  } }
 
 //Center Text for LP
 .hc,
-.hcl  {
-    &.is-live-preview,
-    & .is-live-preview 
-    {
-        & .HyperMD-header
-        { text-align: center; }
-    }
+.hcl {
+    &:not(.ha-l-h1, .ha-r-h1) .is-live-preview .HyperMD-header-1,
+    &:not(.ha-l-h2, .ha-r-h2) .is-live-preview .HyperMD-header-2,
+    &:not(.ha-l-h3, .ha-r-h3) .is-live-preview .HyperMD-header-3,
+    &:not(.ha-l-h4, .ha-r-h4) .is-live-preview .HyperMD-header-4,
+    &:not(.ha-l-h5, .ha-r-h5) .is-live-preview .HyperMD-header-5,
+    &:not(.ha-l-h6, .ha-r-h6) .is-live-preview .HyperMD-header-6,
+    &.is-live-preview .HyperMD-header
+    { text-align: center; }
+    
+    // & div:not(.is-live-preview) .HyperMD-header {
+    //     text-align: unset;
+    // }
 }
-
-
-
 
 /*--Center Headings With Line--*/
 .hcl {
-    & h1,
-    & h2,
-    & h3,
-    & h4,
-    & h5,
-    & h6
+    &:not(.ha-l-h1, .ha-r-h1) h1,
+    &:not(.ha-l-h2, .ha-r-h2) h2,
+    &:not(.ha-l-h3, .ha-r-h3) h3,
+    &:not(.ha-l-h4, .ha-r-h4) h4,
+    &:not(.ha-l-h5, .ha-r-h5) h5,
+    &:not(.ha-l-h6, .ha-r-h6) h6
     {
         display: flex;
         width: 100%;
@@ -365,3 +363,29 @@ body.hd-ovr {
         & .cm-header-6 > * { color: var(--sphd-ed-6); }
     }
 }
+
+
+/* Header Alignment*/
+.ha-c-h1 :is(h1, .HyperMD-header-1),
+.ha-c-h2 :is(h2, .HyperMD-header-2),
+.ha-c-h3 :is(h3, .HyperMD-header-3),
+.ha-c-h4 :is(h4, .HyperMD-header-4),
+.ha-c-h5 :is(h5, .HyperMD-header-5),
+.ha-c-h6 :is(h6, .HyperMD-header-6) 
+{ text-align: center; }
+
+.ha-l-h1 :is(h1, .HyperMD-header-1),
+.ha-l-h2 :is(h2, .HyperMD-header-2),
+.ha-l-h3 :is(h3, .HyperMD-header-3),
+.ha-l-h4 :is(h4, .HyperMD-header-4),
+.ha-l-h5 :is(h5, .HyperMD-header-5),
+.ha-l-h6 :is(h6, .HyperMD-header-6) 
+{ text-align: left; }
+
+.ha-r-h1 :is(h1, .HyperMD-header-1),
+.ha-r-h2 :is(h2, .HyperMD-header-2),
+.ha-r-h3 :is(h3, .HyperMD-header-3),
+.ha-r-h4 :is(h4, .HyperMD-header-4),
+.ha-r-h5 :is(h5, .HyperMD-header-5),
+.ha-r-h6 :is(h6, .HyperMD-header-6) 
+{ text-align: left; }

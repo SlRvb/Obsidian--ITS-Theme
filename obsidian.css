@@ -638,6 +638,20 @@ settings:
         level: 3
         collapsed: true
     -
+        title: Center Headings
+        description: Center ALL headings
+        id: Header-Center
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            -
+                label: Center Heading Text
+                value: hc
+            -
+                label: Center Heading With Lines
+                value: hcl
+    -
         title: Header Tags Above Header
         description: Move the editor header hastags # to above the header instead.
         id: hash-top
@@ -699,19 +713,10 @@ settings:
 		type: class-toggle
 		default: false
     -
-        title: Header Styling
-        id: Header-Styles
+        title: Header Background Color
+        id: Header-BG
         type: heading
         level: 4
-    -
-        title: Center Headings
-        id: hc
-        type: class-toggle
-    -
-        title: Center Heading With Lines
-        description: Center headings and have lines appear at either side of it.
-        id: hcl
-        type: class-toggle
     -
         title: Illusion Theme Inspired Headings
         id: illusion
@@ -730,7 +735,7 @@ settings:
         max: 5
         step: 1
     -
-        title: Heading Colors
+        title: Header Border Colors
         id: Spec-Colors-Head
         type: heading
         level: 5
@@ -1064,6 +1069,108 @@ settings:
 		format: hex
 		default-dark: '#2e333d'
 		default-light: '#8a92a3'
+    -
+        title: Header Alignment
+        id: Header-Alignment
+        type: heading
+        level: 5
+		collapsed: true
+    -
+        title: Heading 1
+        id: header-1-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h1
+            - 
+                label: Center
+                value: ha-c-h1
+            - 
+                label: Right
+                value: ha-r-h1
+    -
+        title: Heading 2
+        id: header-2-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h2
+            - 
+                label: Center
+                value: ha-c-h2
+            - 
+                label: Right
+                value: ha-r-h2
+    -
+        title: Heading 3
+        id: header-3-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h3
+            - 
+                label: Center
+                value: ha-c-h3
+            - 
+                label: Right
+                value: ha-r-h3
+    -
+        title: Heading 4
+        id: header-4-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h4
+            - 
+                label: Center
+                value: ha-c-h4
+            - 
+                label: Right
+                value: ha-r-h4
+    -
+        title: Heading 5
+        id: header-5-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h5
+            - 
+                label: Center
+                value: ha-c-h5
+            - 
+                label: Right
+                value: ha-r-h5
+    -
+        title: Heading 6
+        id: header-6-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h6
+            - 
+                label: Center
+                value: ha-c-h6
+            - 
+                label: Right
+                value: ha-r-h6
     -
         title: Frontmatter
         id: Frontmatter
@@ -6921,6 +7028,7 @@ div:not(.w-hcl).writing .HyperMD-header-4::before {
 h1, h2, h3, h4, h5, h6,
 .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
 .cm-s-obsidian .HyperMD-header {
+  letter-spacing: normal;
   font-weight: var(--f-w-h);
   font-family: var(--font);
   color: var(--headers);
@@ -6998,36 +7106,36 @@ body:not(.hash-reg) .cm-s-obsidian pre.HyperMD-header > span > span:first-child 
 h1::after, .HyperMD-header-1::after,
 h2::after, .HyperMD-header-2::after,
 h3::after, .HyperMD-header-3::after,
-h4::after, .HyperMD-header-4::after {
+h4::after, .HyperMD-header-4::after,
+h5::after, .HyperMD-header-5::after {
   content: "";
   display: block;
   background: var(--table);
   height: 4px;
 }
 
-h1::after, .HyperMD-header-1::after {
+:is(h1, .HyperMD-header-1)::after {
   width: 100%;
 }
 
-h2::after, .HyperMD-header-2::after {
+:is(h2, .HyperMD-header-2)::after {
   width: 85%;
 }
 
-h3::after, .HyperMD-header-3::after {
+:is(h3, .HyperMD-header-3)::after {
   width: 65%;
 }
 
-h4::after, .HyperMD-header-4::after {
-  width: 40%;
+:is(h4, .HyperMD-header-4)::after {
+  width: 44%;
+}
+
+:is(h5, .HyperMD-header-5)::after {
+  width: 25%;
 }
 
 /*--Center Headings--*/
-.hc h1,
-.hc h2,
-.hc h3,
-.hc h4,
-.hc h5,
-.hc h6 {
+.hc :is(h1, h2, h3, h4, h5, h6) {
   text-align: center;
 }
 
@@ -7051,33 +7159,38 @@ h4::after, .HyperMD-header-4::after {
   margin-right: auto;
 }
 
-.hc.is-live-preview .HyperMD-header, .hc .is-live-preview .HyperMD-header,
-.hcl.is-live-preview .HyperMD-header,
-.hcl .is-live-preview .HyperMD-header {
+.hc:not(.ha-l-h1, .ha-r-h1) .is-live-preview .HyperMD-header-1, .hc:not(.ha-l-h2, .ha-r-h2) .is-live-preview .HyperMD-header-2, .hc:not(.ha-l-h3, .ha-r-h3) .is-live-preview .HyperMD-header-3, .hc:not(.ha-l-h4, .ha-r-h4) .is-live-preview .HyperMD-header-4, .hc:not(.ha-l-h5, .ha-r-h5) .is-live-preview .HyperMD-header-5, .hc:not(.ha-l-h6, .ha-r-h6) .is-live-preview .HyperMD-header-6, .hc.is-live-preview .HyperMD-header,
+.hcl:not(.ha-l-h1, .ha-r-h1) .is-live-preview .HyperMD-header-1,
+.hcl:not(.ha-l-h2, .ha-r-h2) .is-live-preview .HyperMD-header-2,
+.hcl:not(.ha-l-h3, .ha-r-h3) .is-live-preview .HyperMD-header-3,
+.hcl:not(.ha-l-h4, .ha-r-h4) .is-live-preview .HyperMD-header-4,
+.hcl:not(.ha-l-h5, .ha-r-h5) .is-live-preview .HyperMD-header-5,
+.hcl:not(.ha-l-h6, .ha-r-h6) .is-live-preview .HyperMD-header-6,
+.hcl.is-live-preview .HyperMD-header {
   text-align: center;
 }
 
 /*--Center Headings With Line--*/
-.hcl h1, .hcl h2, .hcl h3, .hcl h4, .hcl h5, .hcl h6 {
+.hcl:not(.ha-l-h1, .ha-r-h1) h1, .hcl:not(.ha-l-h2, .ha-r-h2) h2, .hcl:not(.ha-l-h3, .ha-r-h3) h3, .hcl:not(.ha-l-h4, .ha-r-h4) h4, .hcl:not(.ha-l-h5, .ha-r-h5) h5, .hcl:not(.ha-l-h6, .ha-r-h6) h6 {
   display: flex;
   width: 100%;
   align-items: center;
   text-align: center;
 }
-.hcl h1 > :not(.collapse-indicator), .hcl h2 > :not(.collapse-indicator), .hcl h3 > :not(.collapse-indicator), .hcl h4 > :not(.collapse-indicator), .hcl h5 > :not(.collapse-indicator), .hcl h6 > :not(.collapse-indicator) {
+.hcl:not(.ha-l-h1, .ha-r-h1) h1 > :not(.collapse-indicator), .hcl:not(.ha-l-h2, .ha-r-h2) h2 > :not(.collapse-indicator), .hcl:not(.ha-l-h3, .ha-r-h3) h3 > :not(.collapse-indicator), .hcl:not(.ha-l-h4, .ha-r-h4) h4 > :not(.collapse-indicator), .hcl:not(.ha-l-h5, .ha-r-h5) h5 > :not(.collapse-indicator), .hcl:not(.ha-l-h6, .ha-r-h6) h6 > :not(.collapse-indicator) {
   margin: 0 10px;
 }
-.hcl h1 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h2 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h3 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h4 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h5 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl h6 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) {
+.hcl:not(.ha-l-h1, .ha-r-h1) h1 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl:not(.ha-l-h2, .ha-r-h2) h2 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl:not(.ha-l-h3, .ha-r-h3) h3 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl:not(.ha-l-h4, .ha-r-h4) h4 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl:not(.ha-l-h5, .ha-r-h5) h5 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child), .hcl:not(.ha-l-h6, .ha-r-h6) h6 > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) {
   margin: 0 10px;
 }
-.hcl h1:before, .hcl h1:after, .hcl h2:before, .hcl h2:after, .hcl h3:before, .hcl h3:after, .hcl h4:before, .hcl h4:after, .hcl h5:before, .hcl h5:after, .hcl h6:before, .hcl h6:after {
+.hcl:not(.ha-l-h1, .ha-r-h1) h1:before, .hcl:not(.ha-l-h1, .ha-r-h1) h1:after, .hcl:not(.ha-l-h2, .ha-r-h2) h2:before, .hcl:not(.ha-l-h2, .ha-r-h2) h2:after, .hcl:not(.ha-l-h3, .ha-r-h3) h3:before, .hcl:not(.ha-l-h3, .ha-r-h3) h3:after, .hcl:not(.ha-l-h4, .ha-r-h4) h4:before, .hcl:not(.ha-l-h4, .ha-r-h4) h4:after, .hcl:not(.ha-l-h5, .ha-r-h5) h5:before, .hcl:not(.ha-l-h5, .ha-r-h5) h5:after, .hcl:not(.ha-l-h6, .ha-r-h6) h6:before, .hcl:not(.ha-l-h6, .ha-r-h6) h6:after {
   content: "";
   flex: 1;
 }
-.hcl h1:before, .hcl h2:before, .hcl h3:before, .hcl h4:before, .hcl h5:before, .hcl h6:before {
+.hcl:not(.ha-l-h1, .ha-r-h1) h1:before, .hcl:not(.ha-l-h2, .ha-r-h2) h2:before, .hcl:not(.ha-l-h3, .ha-r-h3) h3:before, .hcl:not(.ha-l-h4, .ha-r-h4) h4:before, .hcl:not(.ha-l-h5, .ha-r-h5) h5:before, .hcl:not(.ha-l-h6, .ha-r-h6) h6:before {
   margin-right: 0.3em;
 }
-.hcl h1:after, .hcl h2:after, .hcl h3:after, .hcl h4:after, .hcl h5:after, .hcl h6:after {
+.hcl:not(.ha-l-h1, .ha-r-h1) h1:after, .hcl:not(.ha-l-h2, .ha-r-h2) h2:after, .hcl:not(.ha-l-h3, .ha-r-h3) h3:after, .hcl:not(.ha-l-h4, .ha-r-h4) h4:after, .hcl:not(.ha-l-h5, .ha-r-h5) h5:after, .hcl:not(.ha-l-h6, .ha-r-h6) h6:after {
   margin-left: 0.3em;
 }
 .hcl .heading-collapse-indicator {
@@ -7248,6 +7361,34 @@ body.hd-ovr.head-spec .cm-header-5 > * {
 }
 body.hd-ovr.head-spec .cm-header-6 > * {
   color: var(--sphd-ed-6);
+}
+
+/* Header Alignment*/
+.ha-c-h1 :is(h1, .HyperMD-header-1),
+.ha-c-h2 :is(h2, .HyperMD-header-2),
+.ha-c-h3 :is(h3, .HyperMD-header-3),
+.ha-c-h4 :is(h4, .HyperMD-header-4),
+.ha-c-h5 :is(h5, .HyperMD-header-5),
+.ha-c-h6 :is(h6, .HyperMD-header-6) {
+  text-align: center;
+}
+
+.ha-l-h1 :is(h1, .HyperMD-header-1),
+.ha-l-h2 :is(h2, .HyperMD-header-2),
+.ha-l-h3 :is(h3, .HyperMD-header-3),
+.ha-l-h4 :is(h4, .HyperMD-header-4),
+.ha-l-h5 :is(h5, .HyperMD-header-5),
+.ha-l-h6 :is(h6, .HyperMD-header-6) {
+  text-align: left;
+}
+
+.ha-r-h1 :is(h1, .HyperMD-header-1),
+.ha-r-h2 :is(h2, .HyperMD-header-2),
+.ha-r-h3 :is(h3, .HyperMD-header-3),
+.ha-r-h4 :is(h4, .HyperMD-header-4),
+.ha-r-h5 :is(h5, .HyperMD-header-5),
+.ha-r-h6 :is(h6, .HyperMD-header-6) {
+  text-align: left;
 }
 
 /*--Kanban--*/

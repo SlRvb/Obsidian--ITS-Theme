@@ -637,6 +637,20 @@ settings:
         level: 3
         collapsed: true
     -
+        title: Center Headings
+        description: Center ALL headings
+        id: Header-Center
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            -
+                label: Center Heading Text
+                value: hc
+            -
+                label: Center Heading With Lines
+                value: hcl
+    -
         title: Header Tags Above Header
         description: Move the editor header hastags # to above the header instead.
         id: hash-top
@@ -698,19 +712,10 @@ settings:
 		type: class-toggle
 		default: false
     -
-        title: Header Styling
-        id: Header-Styles
+        title: Header Background Color
+        id: Header-BG
         type: heading
         level: 4
-    -
-        title: Center Headings
-        id: hc
-        type: class-toggle
-    -
-        title: Center Heading With Lines
-        description: Center headings and have lines appear at either side of it.
-        id: hcl
-        type: class-toggle
     -
         title: Illusion Theme Inspired Headings
         id: illusion
@@ -729,7 +734,7 @@ settings:
         max: 5
         step: 1
     -
-        title: Heading Colors
+        title: Header Border Colors
         id: Spec-Colors-Head
         type: heading
         level: 5
@@ -1063,6 +1068,108 @@ settings:
 		format: hex
 		default-dark: '#2e333d'
 		default-light: '#8a92a3'
+    -
+        title: Header Alignment
+        id: Header-Alignment
+        type: heading
+        level: 5
+		collapsed: true
+    -
+        title: Heading 1
+        id: header-1-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h1
+            - 
+                label: Center
+                value: ha-c-h1
+            - 
+                label: Right
+                value: ha-r-h1
+    -
+        title: Heading 2
+        id: header-2-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h2
+            - 
+                label: Center
+                value: ha-c-h2
+            - 
+                label: Right
+                value: ha-r-h2
+    -
+        title: Heading 3
+        id: header-3-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h3
+            - 
+                label: Center
+                value: ha-c-h3
+            - 
+                label: Right
+                value: ha-r-h3
+    -
+        title: Heading 4
+        id: header-4-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h4
+            - 
+                label: Center
+                value: ha-c-h4
+            - 
+                label: Right
+                value: ha-r-h4
+    -
+        title: Heading 5
+        id: header-5-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h5
+            - 
+                label: Center
+                value: ha-c-h5
+            - 
+                label: Right
+                value: ha-r-h5
+    -
+        title: Heading 6
+        id: header-6-alignment
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            - 
+                label: Left
+                value: ha-l-h6
+            - 
+                label: Center
+                value: ha-c-h6
+            - 
+                label: Right
+                value: ha-r-h6
     -
         title: Frontmatter
         id: Frontmatter

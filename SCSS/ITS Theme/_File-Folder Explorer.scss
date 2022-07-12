@@ -76,7 +76,7 @@
 .nav-folder-children .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
     margin-right: 6px;
-    vertical-align: top;
+    // vertical-align: top;
     font-size: 13px;
     font-weight: 10 !important;
 }
@@ -104,6 +104,7 @@
 .nav-file-title-content {
     width: 100%;
     line-height: 20px;
+    align-content: center;
     align-items: center;
 }
 body:not(.type-undo) .nav-file-title {
@@ -178,7 +179,7 @@ body:not(.is-grabbing) .nav-folder-title:hover
 .workspace-leaf.mod-active {
     & .nav-folder.has-focus > .nav-folder-title, 
     & .nav-file.has-focus {
-        border: inherit;
+        border-color: var(--interactive-accent);
         border-radius: var(--radius);
         box-shadow: inset 0 0 0 1px var(--interactive-accent);
         background-color: var(--text-highlight-bg);

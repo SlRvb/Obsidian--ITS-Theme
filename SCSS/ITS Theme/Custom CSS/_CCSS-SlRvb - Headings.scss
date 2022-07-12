@@ -43,31 +43,6 @@ h1, h2, h3, h4, h5, h6,
     & .cm-header-5  { font-size: calc(var(--f-s-h) - 14px); }
     & h6,
     & .cm-header-6  { font-size: calc(var(--f-s-h) - 16px); }
-
-    //Heading: Inline Code Size Fix
-    & span.cm-inline-code.cm-header-1:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
-    & span.cm-inline-code.cm-header-1,
-    & h1 code { font-size: var(--h1); }
-    
-    & span.cm-inline-code.cm-header-2:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
-    & span.cm-inline-code.cm-header-2,
-    & h2 code { font-size: var(--h2); }
-    
-    & span.cm-inline-code.cm-header-3:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
-    & span.cm-inline-code.cm-header-3,
-    & h3 code { font-size: var(--h3); }
-    
-    & span.cm-inline-code.cm-header-4:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
-    & span.cm-inline-code.cm-header-4,
-    & h4 code { font-size: var(--h4); }
-    
-    & span.cm-inline-code.cm-header-5:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
-    & span.cm-inline-code.cm-header-5,
-    & h5 code { font-size: var(--h5); }
-    
-    & span.cm-inline-code.cm-header-6:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), 
-    & span.cm-inline-code.cm-header-6,
-    & h6 code { font-size: var(--h6); }
 }
 
 

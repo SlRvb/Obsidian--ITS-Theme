@@ -33,14 +33,14 @@
     & :is(ul ul ul ul ul, ol ol ol ol ol) > li, 
     & :is(ul ul ul ul ul ul, ol ol ol ol ol ol),
     & ul ul ul ul ul ul::before,
-    & ol ol ol ol ol ol::before,
+    & ol ol ol ol ol ol::before
     { border-color: var(--b-l-5); }
     
     & .cm-hmd-list-indent .cm-tab:nth-child(6):before,
     & :is(ul ul ul ul ul ul, ol ol ol ol ol ol) > li, 
     & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol),
     & ul ul ul ul ul ul ul::before,
-    & ol ol ol ol ol ol ol::before,
+    & ol ol ol ol ol ol ol::before
     { border-color: var(--b-l-6); }
 } 
 
@@ -92,18 +92,44 @@
 
     //Lists
     & .HyperMD-list-line-1 .list-bullet:after,
-    & .HyperMD-list-line-1 .cm-formatting-list:before,
-    & ul li::before,
-    & ol li::marker
+    & .HyperMD-list-line-1 .cm-formatting-list::before,
+    & .HyperMD-list-line-1 .cm-formatting-list,
+    & ul > li::before,
+    & ol > li::marker
     { color: var(--b-l-1); }
+
     & .HyperMD-list-line-2 .list-bullet:after,
     & .HyperMD-list-line-2 .cm-formatting-list:before,
-    & ul ul li::before,
-    & ol ol li::marker 
+    & .HyperMD-list-line-2 .cm-formatting-list,
+    & ul ul > li::before,
+    & ol ol > li::marker 
     { color: var(--b-l-2); }
+
     & .HyperMD-list-line-3 .list-bullet:after,
     & .HyperMD-list-line-3 .cm-formatting-list:before,
-    & ul ul ul li::before,
-    & ol ol ol li::marker 
+    & .HyperMD-list-line-3 .cm-formatting-list,
+    & ul ul ul > li::before,
+    & ol ol ol > li::marker 
     { color: var(--b-l-3); }
+
+    & .HyperMD-list-line-4 .list-bullet:after,
+    & .HyperMD-list-line-4 .cm-formatting-list:before,
+    & .HyperMD-list-line-4 .cm-formatting-list,
+    & ul ul ul ul > li::before,
+    & ol ol ol ol > li::marker 
+    { color: var(--b-l-4); }
+
+    & .HyperMD-list-line-5 .list-bullet:after,
+    & .HyperMD-list-line-5 .cm-formatting-list:before,
+    & .HyperMD-list-line-5 .cm-formatting-list,
+    & ul ul ul ul ul > li::before,
+    & ol ol ol ol ol > li::marker 
+    { color: var(--b-l-5); }
+    
+    & .HyperMD-list-line-6 .list-bullet:after,
+    & .HyperMD-list-line-6 .cm-formatting-list:before,
+    & .HyperMD-list-line-6 .cm-formatting-list,
+    & ul ul ul ul ul ul > li::before,
+    & ol ol ol ol ol ol > li::marker 
+    { color: var(--b-l-6); }
 } 

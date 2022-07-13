@@ -717,6 +717,7 @@ settings:
         id: Header-BG
         type: heading
         level: 4
+        collapsed: true
     -
         title: Illusion Theme Inspired Headings
         id: illusion
@@ -2311,6 +2312,10 @@ settings:
     -   
         title: Notion
         id: notion
+        type: class-toggle
+    -   
+        title: Adventure
+        id: advt
         type: class-toggle
     -
         title: ITS Dark
@@ -13095,14 +13100,23 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .bul-col.bul-col :is(ul ul ul ul ul ul, ol ol ol ol ol ol, .HyperMD-list-line-6) .task-list-item-checkbox:checked {
   background: var(--b-l-6);
 }
-.bul-col.bul-col .HyperMD-list-line-1 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-1 .cm-formatting-list:before, .bul-col.bul-col ul li::before, .bul-col.bul-col ol li::marker {
+.bul-col.bul-col .HyperMD-list-line-1 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-1 .cm-formatting-list::before, .bul-col.bul-col .HyperMD-list-line-1 .cm-formatting-list, .bul-col.bul-col ul > li::before, .bul-col.bul-col ol > li::marker {
   color: var(--b-l-1);
 }
-.bul-col.bul-col .HyperMD-list-line-2 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-2 .cm-formatting-list:before, .bul-col.bul-col ul ul li::before, .bul-col.bul-col ol ol li::marker {
+.bul-col.bul-col .HyperMD-list-line-2 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-2 .cm-formatting-list:before, .bul-col.bul-col .HyperMD-list-line-2 .cm-formatting-list, .bul-col.bul-col ul ul > li::before, .bul-col.bul-col ol ol > li::marker {
   color: var(--b-l-2);
 }
-.bul-col.bul-col .HyperMD-list-line-3 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-3 .cm-formatting-list:before, .bul-col.bul-col ul ul ul li::before, .bul-col.bul-col ol ol ol li::marker {
+.bul-col.bul-col .HyperMD-list-line-3 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-3 .cm-formatting-list:before, .bul-col.bul-col .HyperMD-list-line-3 .cm-formatting-list, .bul-col.bul-col ul ul ul > li::before, .bul-col.bul-col ol ol ol > li::marker {
   color: var(--b-l-3);
+}
+.bul-col.bul-col .HyperMD-list-line-4 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-4 .cm-formatting-list:before, .bul-col.bul-col .HyperMD-list-line-4 .cm-formatting-list, .bul-col.bul-col ul ul ul ul > li::before, .bul-col.bul-col ol ol ol ol > li::marker {
+  color: var(--b-l-4);
+}
+.bul-col.bul-col .HyperMD-list-line-5 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-5 .cm-formatting-list:before, .bul-col.bul-col .HyperMD-list-line-5 .cm-formatting-list, .bul-col.bul-col ul ul ul ul ul > li::before, .bul-col.bul-col ol ol ol ol ol > li::marker {
+  color: var(--b-l-5);
+}
+.bul-col.bul-col .HyperMD-list-line-6 .list-bullet:after, .bul-col.bul-col .HyperMD-list-line-6 .cm-formatting-list:before, .bul-col.bul-col .HyperMD-list-line-6 .cm-formatting-list, .bul-col.bul-col ul ul ul ul ul ul > li::before, .bul-col.bul-col ol ol ol ol ol ol > li::marker {
+  color: var(--b-l-6);
 }
 
 /*Single Bullet/1 Bullet Color*/

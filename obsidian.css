@@ -7388,7 +7388,7 @@ body.hd-ovr.head-spec .cm-header-6 > * {
 .ha-r-h4 :is(h4, .HyperMD-header-4),
 .ha-r-h5 :is(h5, .HyperMD-header-5),
 .ha-r-h6 :is(h6, .HyperMD-header-6) {
-  text-align: left;
+  text-align: right;
 }
 
 /*--Kanban--*/

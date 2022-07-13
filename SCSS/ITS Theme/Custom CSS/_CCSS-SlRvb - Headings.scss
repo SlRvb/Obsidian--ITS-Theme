@@ -366,26 +366,26 @@ body.hd-ovr {
 
 
 /* Header Alignment*/
-.ha-c-h1 :is(h1, .HyperMD-header-1),
-.ha-c-h2 :is(h2, .HyperMD-header-2),
-.ha-c-h3 :is(h3, .HyperMD-header-3),
-.ha-c-h4 :is(h4, .HyperMD-header-4),
-.ha-c-h5 :is(h5, .HyperMD-header-5),
-.ha-c-h6 :is(h6, .HyperMD-header-6) 
+.ha-c-h1 :is(h1, .is-live-preview .HyperMD-header-1),
+.ha-c-h2 :is(h2, .is-live-preview .HyperMD-header-2),
+.ha-c-h3 :is(h3, .is-live-preview .HyperMD-header-3),
+.ha-c-h4 :is(h4, .is-live-preview .HyperMD-header-4),
+.ha-c-h5 :is(h5, .is-live-preview .HyperMD-header-5),
+.ha-c-h6 :is(h6, .is-live-preview .HyperMD-header-6) 
 { text-align: center; }
 
-.ha-l-h1 :is(h1, .HyperMD-header-1),
-.ha-l-h2 :is(h2, .HyperMD-header-2),
-.ha-l-h3 :is(h3, .HyperMD-header-3),
-.ha-l-h4 :is(h4, .HyperMD-header-4),
-.ha-l-h5 :is(h5, .HyperMD-header-5),
-.ha-l-h6 :is(h6, .HyperMD-header-6) 
+.ha-l-h1 :is(h1, .is-live-preview .HyperMD-header-1),
+.ha-l-h2 :is(h2, .is-live-preview .HyperMD-header-2),
+.ha-l-h3 :is(h3, .is-live-preview .HyperMD-header-3),
+.ha-l-h4 :is(h4, .is-live-preview .HyperMD-header-4),
+.ha-l-h5 :is(h5, .is-live-preview .HyperMD-header-5),
+.ha-l-h6 :is(h6, .is-live-preview .HyperMD-header-6) 
 { text-align: left; }
 
-.ha-r-h1 :is(h1, .HyperMD-header-1),
-.ha-r-h2 :is(h2, .HyperMD-header-2),
-.ha-r-h3 :is(h3, .HyperMD-header-3),
-.ha-r-h4 :is(h4, .HyperMD-header-4),
-.ha-r-h5 :is(h5, .HyperMD-header-5),
-.ha-r-h6 :is(h6, .HyperMD-header-6) 
+.ha-r-h1 :is(h1, .is-live-preview .HyperMD-header-1),
+.ha-r-h2 :is(h2, .is-live-preview .HyperMD-header-2),
+.ha-r-h3 :is(h3, .is-live-preview .HyperMD-header-3),
+.ha-r-h4 :is(h4, .is-live-preview .HyperMD-header-4),
+.ha-r-h5 :is(h5, .is-live-preview .HyperMD-header-5),
+.ha-r-h6 :is(h6, .is-live-preview .HyperMD-header-6) 
 { text-align: right; }

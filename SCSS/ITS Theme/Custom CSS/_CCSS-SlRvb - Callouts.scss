@@ -233,6 +233,7 @@ body {
     float: unset !important; 
     max-width: 100%; 
     margin: 0 !important;
+    width: auto;
 }
 .callout[data-callout~="infobox"] {
     --callout-color: var(--interactive-accent-rgb);

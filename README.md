@@ -9,14 +9,14 @@
 ---
 # Guide/Reference
 
-- [CSS Classes](Guide/CSS-Classes.md)
-- [Asides](Guide/Asides.md)
-- [Alternate Checkboxes](Guide/Alternate-Checkboxes.md)
 - [Image Positions/Adjustments](Guide/Image-Positions.md)
+- [Alternate Checkboxes](Guide/Alternate-Checkboxes.md)
+- [Callouts](Guide/Callouts.md)
+- [CSS Classes](Guide/CSS-Classes.md)
 - [Embed Adjustments](Guide/Embed-Adjustments.md)
 - [Alternate Themes](Guide/Alternate-Themes.md)
-- [Callouts](Guide/Callouts.md)
 - [\<i>\</i>](Guide/HTML-I-Attributes.md)
+- [Asides](Guide/Asides.md)
 - [Alternate Admonitions](Guide/Alternate-Admonitions.md)
 - [Folder Styles](Guide/Snippet-Folder-Styles.md)
 

@@ -80,6 +80,7 @@
     display: flex;
     align-items: center;
 }
+.view-header-icon { top: unset; }
 
 .view-header-title-container {
     -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0, #000000 30px);
@@ -129,6 +130,7 @@
 .is-popout-window {
     & .view-action { top: 0; }
     & .view-header-icon { top: -1px;}
+    & .view-header { padding: 5px 0; }
 } 
 
 

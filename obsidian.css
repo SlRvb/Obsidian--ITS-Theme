@@ -2313,10 +2313,6 @@ settings:
         title: Notion
         id: notion
         type: class-toggle
-    -   
-        title: Adventure
-        id: advt
-        type: class-toggle
     -
         title: ITS Dark
         id: its-d
@@ -3996,6 +3992,10 @@ button.mod-cta,
   align-items: center;
 }
 
+.view-header-icon {
+  top: unset;
+}
+
 .view-header-title-container {
   -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0, #000000 30px);
 }
@@ -4043,6 +4043,9 @@ button.mod-cta,
 }
 .is-popout-window .view-header-icon {
   top: -1px;
+}
+.is-popout-window .view-header {
+  padding: 5px 0;
 }
 
 .nt-clear .mod-active .view-header {
@@ -4108,6 +4111,11 @@ button.mod-cta,
   border-radius: var(--radius);
   padding-top: 0;
   height: 36px;
+}
+
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+  display: none;
 }
 
 /*Sidebar: Icons*/
@@ -9024,7 +9032,9 @@ body {
 }
 
 /*Infobox*/
-:is(.is-mobile .is-live-preview, .is-live-preview) .callout[data-callout~=infobox] {
+:is(.is-mobile,
+.is-mobile .is-live-preview,
+.is-live-preview) .callout[data-callout~=infobox]:not([data-callout-metadata~=mobile]) {
   float: unset !important;
   max-width: 100%;
   margin: 0 !important;

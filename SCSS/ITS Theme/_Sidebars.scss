@@ -38,6 +38,10 @@
     height: 36px;
 }
 
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+    display: none;
+}
 /*Sidebar: Icons*/
 .workspace-tab-header-inner {
     padding: 0em .8em;
@@ -47,6 +51,24 @@
 .workspace-tab-header.is-active .workspace-tab-header-inner-icon { 
     color: var(--text-dl);
 }
+
+
+
+// .workspace-tab-header {
+//     display: block;
+//     height: 100%;
+// }
+// .workspace-tab-header-inner {
+//     display: block;
+//     height: unset;
+//     margin: auto;
+// }
+// .workspace-tab-header-inner-icon {
+//     height: var(--f-s-tab-i);
+//     margin: auto;
+// }
+
+
 
 /*Sidebar Icons: Add Padding to All*/
 .workspace-tab-header.is-active:hover,
@@ -61,6 +83,7 @@
     background-color: var(--bttn);
     border-radius: var(--radius);
 }
+
 
 /*Sidebar Icons: Remove Animation*/
 .workspace-tab-header,

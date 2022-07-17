@@ -43,6 +43,10 @@
     display: none;
 }
 /*Sidebar: Icons*/
+.workspace-tab-header {
+    height: 100%;
+    display: flex;
+}
 .workspace-tab-header-inner {
     padding: 0em .8em;
     margin: auto;
@@ -52,17 +56,6 @@
     color: var(--text-dl);
 }
 
-
-
-// .workspace-tab-header {
-//     display: block;
-//     height: 100%;
-// }
-// .workspace-tab-header-inner {
-//     display: block;
-//     height: unset;
-//     margin: auto;
-// }
 // .workspace-tab-header-inner-icon {
 //     height: var(--f-s-tab-i);
 //     margin: auto;

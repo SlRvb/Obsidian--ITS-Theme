@@ -4119,6 +4119,11 @@ button.mod-cta,
 }
 
 /*Sidebar: Icons*/
+.workspace-tab-header {
+  height: 100%;
+  display: flex;
+}
+
 .workspace-tab-header-inner {
   padding: 0em 0.8em;
   margin: auto;

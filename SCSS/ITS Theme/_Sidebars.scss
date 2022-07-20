@@ -8,14 +8,12 @@
 { border-radius: var(--radius);}
 
 .workspace-tabs .workspace-leaf.mod-active { 
-    border: 0;
-    box-shadow: 0 0 0 1px var(--accent);
-    margin-left: 1px;
-    margin-right: 1px;
-    margin-bottom: 1px;
+    border: 1px solid var(--accent);
+    margin-right: 2px;
 }
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
-    margin-right: 2px;
+    margin-right: unset;
+    margin-left: 3px;
 }
 
 /*Recolor Top*/

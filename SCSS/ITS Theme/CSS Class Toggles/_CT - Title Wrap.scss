@@ -10,13 +10,17 @@
     height: auto;
     width: auto !important;
 }
-
-.plugin-tabs.title-wrap .view-header {
-    height: auto !important;
+.title-wrap .view-header {
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
-.is-mobile .view-header {
+.is-mobile.title-wrap .view-header {
     padding-top: 10px;
     padding-bottom: 10px;
     align-items: center;
+}
+
+.plugin-tabs.title-wrap .view-header {
+    height: auto !important;
 }

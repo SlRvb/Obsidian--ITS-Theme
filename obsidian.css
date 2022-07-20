@@ -258,10 +258,6 @@ settings:
         id: op-h
         type: class-toggle
     -
-        title: Bottom Navbar Buttons
-        id: btm-nav
-        type: class-toggle
-    -
         title: Raise Right Sidebar & Doc Search
         description: Raise the right sidebar and the document search modal above the status bar.
         id: rsb-up
@@ -272,11 +268,76 @@ settings:
         id: o-stat-bar
         type: class-toggle
     -
+        title: Background Image
+        id: background-image
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        title: Background Image
+        description: Toggle to apply background image to vault
+        id: bg-image
+        type: class-toggle
+    - 
+        title: Background Image
+        id: bg-image-url
+        type: variable-text
+        default: "url()"
+    -
+        title: Background Position Height
+        id: bg-img-h
+        type: variable-number-slider
+        format: "%"
+        default: 50
+        min: 0
+        max: 100
+        step: 1
+    -
+        title: Background Position Width
+        id: bg-img-w
+        type: variable-number-slider
+        format: "%"
+        default: 50
+        min: 0
+        max: 100
+        step: 1
+    -
+        title: Image Blur
+        id: bg-blur
+        type: variable-number-slider
+        format: px
+        default: 11
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Note Opacity
+        id: bg-opacity
+        type: variable-number-slider
+        format: "%"
+        default: 90
+        min: 20
+        max: 100
+        step: 1
+    -
+        title: Side Panel Opacity
+        id: bg-sd-opacity
+        type: variable-number-slider
+        format: "%"
+        default: 90
+        min: 20
+        max: 100
+        step: 1
+    -
         title: Sidebar
         id: sidebar-styling
         type: heading
         level: 3
         collapsed: true
+    -
+        title: Bottom Navbar Buttons
+        id: btm-nav
+        type: class-toggle
     -
         title: Mobile Style Sidebars
         id: mbl-sidebar
@@ -3270,6 +3331,7 @@ body:not(.its-i) svg.clock-glyph {
   --lines: var(--hr)/*#465164*/;
   --note: #1a1e24;
   /*#0d131c*/
+  --note-rgb: 26, 30, 36;
   --text: #bccad8;
   /*#dcddde*/
   --headers: #c14343;
@@ -3430,6 +3492,7 @@ body:not(.its-i) svg.clock-glyph {
   --lines: #b5c2d8;
   --headers: #c14343;
   --note: #f8fbff;
+  --note-rgb: 248, 251, 255;
   --text: #697580;
   --soft-text: #d04e4e;
   --code-text: #ea4262;
@@ -3713,11 +3776,17 @@ body:not(.its-i) svg.clock-glyph {
   color: var(--text-dl);
 }
 
-.community-theme-remove-button {
+.community-theme.community-theme .community-theme-remove-button {
   background-color: var(--background-modifier-error);
   color: var(--text-dl);
   border-radius: var(--radius);
-  padding-top: 7px;
+  padding: 4px 12px;
+  padding-top: 10px;
+}
+
+.community-theme.community-theme .community-theme-remove-button:hover {
+  background-color: var(--interactive-failure);
+  box-shadow: 0 0 0 2px var(--background-modifier-error) inset;
 }
 
 .community-theme-filters-container .setting-item-control .search-input-container {
@@ -4081,15 +4150,13 @@ button.mod-cta,
 }
 
 .workspace-tabs .workspace-leaf.mod-active {
-  border: 0;
-  box-shadow: 0 0 0 1px var(--accent);
-  margin-left: 1px;
-  margin-right: 1px;
-  margin-bottom: 1px;
+  border: 1px solid var(--accent);
+  margin-right: 2px;
 }
 
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
-  margin-right: 2px;
+  margin-right: unset;
+  margin-left: 3px;
 }
 
 /*Recolor Top*/
@@ -9714,6 +9781,59 @@ body {
   padding-top: 750px;
 }
 
+.bg-image {
+  --bg-image-url: url();
+  --bg-img-h: 50%;
+  --bg-img-w: 50%;
+  --bg-blur: 11px;
+  --bg-shadow: var(--outline);
+  --bg-opacity: 90%;
+  --bg-sd-opacity: var(--bg-opacity);
+}
+.bg-image.theme-light {
+  --bg-shadow: #0E0F1530;
+}
+
+body.bg-image:is(.theme-dark, .theme-light) .workspace {
+  background: var(--bg-image-url);
+  background-repeat: no-repeat;
+  background-position: var(--bg-img-w) var(--bg-img-h);
+  background-size: cover;
+}
+body.bg-image .workspace-tab-header-container, body.bg-image .workspace > .workspace-leaf, body.bg-image .workspace-split.mod-root .view-content, body.bg-image .workspace-tabs .workspace-leaf {
+  backdrop-filter: blur(var(--bg-blur));
+}
+body.bg-image .kanban-plugin.kanban-plugin, body.bg-image .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.bg-image .cm-editor .cm-contentContainer {
+  background: rgba(var(--note-rgb), var(--bg-opacity));
+}
+body.bg-image .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.bg-image .cm-editor .cm-contentContainer {
+  height: auto;
+}
+body.bg-image .workspace-tabs {
+  background: rgba(var(--note-rgb), var(--bg-sd-opacity));
+}
+body.bg-image .kanban-plugin.kanban-plugin, body.bg-image .workspace > :is(.workspace-leaf, .workspace-split), body.bg-image .workspace-split.mod-root .view-content, body.bg-image .workspace-tab-header-container, body.bg-image .workspace-tabs .workspace-leaf, body.bg-image :is(.markdown-preview-view, .markdown-source-view) {
+  background: transparent;
+}
+body.bg-image:not(.is-mobile) :is(.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-scroller) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+body.bg-image:not(.is-mobile) .markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.bg-image:not(.is-mobile) .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
+  --padding: 10px;
+  max-width: calc(var(--note-width) + var(--padding));
+  height: auto;
+  padding: 0 var(--padding);
+  box-shadow: 0 0 20px var(--bg-shadow);
+}
+body.bg-image .workspace-leaf-content {
+  justify-content: center;
+}
+body.bg-image .markdown-embed-content .markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.bg-image .popover.popover .markdown-preview-section {
+  box-shadow: unset;
+}
+
 /* Kepano: https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164
 Enlarge Image:*/
 .img-zoom .markdown-preview-view img {
@@ -13029,14 +13149,19 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   width: auto !important;
 }
 
-.plugin-tabs.title-wrap .view-header {
-  height: auto !important;
+.title-wrap .view-header {
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
-.is-mobile .view-header {
+.is-mobile.title-wrap .view-header {
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
+}
+
+.plugin-tabs.title-wrap .view-header {
+  height: auto !important;
 }
 
 /*Colored Bullet Lines*/
@@ -14170,6 +14295,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --f-icon: #586277;
   --folder: #F1F7FF;
   --note: #171B21;
+  --note-rgb: 23, 27, 33;
   --headers: #9DB1CA;
   --text: #778495;
   --soft-text: #AAB3CA;
@@ -14230,6 +14356,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --f-icon: #A6B4CC;
   --folder: #99accf;
   --note: #f8fbff;
+  --note-rgb: 248, 251, 255;
   --headers: #6e7a92;
   --text: #76859c;
   --soft-text: #90a0c3;
@@ -14997,6 +15124,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --code-text: var(--text);
   --code-bg: #3F4447;
   --note: #2F3437;
+  --note-rgb: 47, 52, 55;
   --outline: #0f0f0f40;
   --bttn: transparent;
   --bg: #3C4144;
@@ -15072,6 +15200,7 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   --text-faint: var(--inactive);
   --text-muted: var(--soft-text);
   --note: #FFFFFF;
+  --note-rgb: 247, 246, 243;
   --side-bar: #F7F6F3;
   --accent: #D3D1CB;
   --dark-accent: #E8E7E4;

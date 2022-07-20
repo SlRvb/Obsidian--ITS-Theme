@@ -257,10 +257,6 @@ settings:
         id: op-h
         type: class-toggle
     -
-        title: Bottom Navbar Buttons
-        id: btm-nav
-        type: class-toggle
-    -
         title: Raise Right Sidebar & Doc Search
         description: Raise the right sidebar and the document search modal above the status bar.
         id: rsb-up
@@ -271,11 +267,76 @@ settings:
         id: o-stat-bar
         type: class-toggle
     -
+        title: Background Image
+        id: background-image
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        title: Background Image
+        description: Toggle to apply background image to vault
+        id: bg-image
+        type: class-toggle
+    - 
+        title: Background Image
+        id: bg-image-url
+        type: variable-text
+        default: "url()"
+    -
+        title: Background Position Height
+        id: bg-img-h
+        type: variable-number-slider
+        format: "%"
+        default: 50
+        min: 0
+        max: 100
+        step: 1
+    -
+        title: Background Position Width
+        id: bg-img-w
+        type: variable-number-slider
+        format: "%"
+        default: 50
+        min: 0
+        max: 100
+        step: 1
+    -
+        title: Image Blur
+        id: bg-blur
+        type: variable-number-slider
+        format: px
+        default: 11
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Note Opacity
+        id: bg-opacity
+        type: variable-number-slider
+        format: "%"
+        default: 90
+        min: 20
+        max: 100
+        step: 1
+    -
+        title: Side Panel Opacity
+        id: bg-sd-opacity
+        type: variable-number-slider
+        format: "%"
+        default: 90
+        min: 20
+        max: 100
+        step: 1
+    -
         title: Sidebar
         id: sidebar-styling
         type: heading
         level: 3
         collapsed: true
+    -
+        title: Bottom Navbar Buttons
+        id: btm-nav
+        type: class-toggle
     -
         title: Mobile Style Sidebars
         id: mbl-sidebar

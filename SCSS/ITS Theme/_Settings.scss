@@ -192,12 +192,19 @@
 /* Fix Selected Colors*/
 .community-theme.is-selected { color: var(--text-dl) }
 .community-theme.is-selected .clickable-icon { color: var(--text-dl); }
-.community-theme-remove-button {
+
+.community-theme.community-theme .community-theme-remove-button {
     background-color: var(--background-modifier-error);
     color: var(--text-dl);
     border-radius: var(--radius);
-    padding-top: 7px;
+    padding: 4px 12px;
+    padding-top: 10px;
 }
+.community-theme.community-theme .community-theme-remove-button:hover {
+    background-color: var(--interactive-failure);
+    box-shadow: 0 0 0 2px var(--background-modifier-error) inset;
+}
+
 .community-theme-filters-container .setting-item-control .search-input-container {
     width: 100%;
 }

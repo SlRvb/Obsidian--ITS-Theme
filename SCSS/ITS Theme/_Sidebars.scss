@@ -9,10 +9,10 @@
 
 .workspace-tabs .workspace-leaf.mod-active { 
     border: 1px solid var(--accent);
-    margin-right: 2px;
+    margin-right: 1px;
 }
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
-    margin-right: unset;
+    margin-right: 1px;
     margin-left: 3px;
 }
 
@@ -157,18 +157,17 @@
     & .workspace-tab-header-inner {
         padding: 0em 1.5em;
     }
-    & .workspace-tab-header.is-active {
-        background: var(--table);
-    }
-    & .workspace-tab-header:not(.is-active) {
-        background: var(--aside-bg);
+    & .workspace-tab-header:not(.is-active):not(:hover) {
+        background: var(--outline);
     }
     & .workspace-tab-header:not(.is-active),
     & .workspace-tab-header.is-active {
-        border: 2px solid var(--table);
-    
         height: 25px;
+        
+        border: 0px solid var(--side-bar);
+        box-shadow: 0 0 0 2px var(--outline);
     }
+    
     & .workspace-tab-header-inner-icon {
         margin-top: 5px;
     }

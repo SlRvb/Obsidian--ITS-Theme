@@ -196,18 +196,18 @@
     --dark-accent: #ffeded;
     --lite-accent: #a35158;
     --accent: #912e2e;
-    --accent2: #aac1d3/*#4c78cc*/;
+    --accent2: #aac1d3;/*#4c78cc*/
     --accent2-lite: #5599d0;
 
     --bg: #e1e9f6;
-    --fg: var(--accent) /*#9f0202*/;
+    --fg: var(--accent); /*#9f0202*/
     
     --side-bar: var(--note);
     --side-bar-bg: var(--outer-bar);
     --outer-bar: #eef3fd;
     --dark-sidebar: #f1f5ff;
     
-    --inactive: #a6bbde /*#91a3c1*/;
+    --inactive: #a6bbde; /*#91a3c1*/
     --outline: var(--bg);
     
     --folder: #ce6d6d;
@@ -224,8 +224,8 @@
     --code-text: #ea4262;
     --footnote: #8996a0;
 
-    --code-bg: var(--embed-bg) /*#eef6ff*/;
-    --embed-bg: var(--dark-sidebar) /*#ebf1f8*/;
+    --code-bg: var(--embed-bg); /*#eef6ff*/
+    --embed-bg: var(--dark-sidebar); /*#ebf1f8*/
     --aside-bg: var(--dark-sidebar);
     
     --th: var(--headers);
@@ -243,7 +243,7 @@
     --tag: #c65656;
     --table: #ccd6eb;
     --hr: #d6deea;
-    --i-at: var(--folder)/*#804848*/;
+    --i-at: var(--folder);/*#804848*/
     --bttn: var(--headers);
     --progress: var(--accent);
     --progress-bg: var(--bg);
@@ -253,7 +253,7 @@
     --graph-node: var(--headers);
     --graph-fill: var(--folder);
     --graph-404: #727e93;
-    --graph-img: #4c78cc /*#5469de*/;
+    --graph-img: #4c78cc; /*#5469de*/
     --graph-tag: #000000; 
     --graph-focused: var(--text-highlight-bg-active);
     

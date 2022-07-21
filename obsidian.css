@@ -3475,15 +3475,18 @@ body:not(.its-i) svg.clock-glyph {
   --dark-accent: #ffeded;
   --lite-accent: #a35158;
   --accent: #912e2e;
-  --accent2: #aac1d3/*#4c78cc*/;
+  --accent2: #aac1d3;
+  /*#4c78cc*/
   --accent2-lite: #5599d0;
   --bg: #e1e9f6;
-  --fg: var(--accent) /*#9f0202*/;
+  --fg: var(--accent);
+  /*#9f0202*/
   --side-bar: var(--note);
   --side-bar-bg: var(--outer-bar);
   --outer-bar: #eef3fd;
   --dark-sidebar: #f1f5ff;
-  --inactive: #a6bbde /*#91a3c1*/;
+  --inactive: #a6bbde;
+  /*#91a3c1*/
   --outline: var(--bg);
   --folder: #ce6d6d;
   --file: #7e8ea3;
@@ -3497,8 +3500,10 @@ body:not(.its-i) svg.clock-glyph {
   --soft-text: #d04e4e;
   --code-text: #ea4262;
   --footnote: #8996a0;
-  --code-bg: var(--embed-bg) /*#eef6ff*/;
-  --embed-bg: var(--dark-sidebar) /*#ebf1f8*/;
+  --code-bg: var(--embed-bg);
+  /*#eef6ff*/
+  --embed-bg: var(--dark-sidebar);
+  /*#ebf1f8*/
   --aside-bg: var(--dark-sidebar);
   --th: var(--headers);
   --th-text: var(--text-dl);
@@ -3512,7 +3517,8 @@ body:not(.its-i) svg.clock-glyph {
   --tag: #c65656;
   --table: #ccd6eb;
   --hr: #d6deea;
-  --i-at: var(--folder)/*#804848*/;
+  --i-at: var(--folder);
+  /*#804848*/
   --bttn: var(--headers);
   --progress: var(--accent);
   --progress-bg: var(--bg);
@@ -3521,7 +3527,8 @@ body:not(.its-i) svg.clock-glyph {
   --graph-node: var(--headers);
   --graph-fill: var(--folder);
   --graph-404: #727e93;
-  --graph-img: #4c78cc /*#5469de*/;
+  --graph-img: #4c78cc;
+  /*#5469de*/
   --graph-tag: #000000;
   --graph-focused: var(--text-highlight-bg-active);
   /*CSS Specifics*/
@@ -4151,11 +4158,11 @@ button.mod-cta,
 
 .workspace-tabs .workspace-leaf.mod-active {
   border: 1px solid var(--accent);
-  margin-right: 2px;
+  margin-right: 1px;
 }
 
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
-  margin-right: unset;
+  margin-right: 1px;
   margin-left: 3px;
 }
 
@@ -4292,15 +4299,13 @@ button.mod-cta,
 .tabs-sidebar .workspace-tab-container-before .workspace-tab-header-inner, .tabs-sidebar .workspace-tab-container-after .workspace-tab-header-inner, .tabs-sidebar .workspace-tab-header-inner {
   padding: 0em 1.5em;
 }
-.tabs-sidebar .workspace-tab-header.is-active {
-  background: var(--table);
-}
-.tabs-sidebar .workspace-tab-header:not(.is-active) {
-  background: var(--aside-bg);
+.tabs-sidebar .workspace-tab-header:not(.is-active):not(:hover) {
+  background: var(--outline);
 }
 .tabs-sidebar .workspace-tab-header:not(.is-active), .tabs-sidebar .workspace-tab-header.is-active {
-  border: 2px solid var(--table);
   height: 25px;
+  border: 0px solid var(--side-bar);
+  box-shadow: 0 0 0 2px var(--outline);
 }
 .tabs-sidebar .workspace-tab-header-inner-icon {
   margin-top: 5px;
@@ -4347,7 +4352,7 @@ button.mod-cta,
 }
 
 /*Adjusting Button Padding*/
-.nav-action-button {
+.nav-action-button.nav-action-button {
   padding: 5px 8px 0 8px;
   margin: 0 3px 0px 3px;
   border-radius: var(--radius);
@@ -10231,9 +10236,23 @@ body .search-result-file-match-destination-file-container .search-result-file-ma
 .backlink-pane > .tree-item-self,
 .outgoing-link-pane > .tree-item-self {
   text-align: center;
-  background-color: var(--aside-bg);
-  box-shadow: 0 2px 0 var(--outline);
+  background-color: var(--code-bg);
   margin-bottom: 10px;
+  padding: 4px 6px;
+  box-shadow: 0 4px 0 var(--outline);
+}
+.backlink-pane > .tree-item-self .tree-item-icon,
+.outgoing-link-pane > .tree-item-self .tree-item-icon {
+  margin-inline-start: 0;
+  color: var(--soft-text);
+}
+.backlink-pane > .tree-item-self .tree-item-flair,
+.outgoing-link-pane > .tree-item-self .tree-item-flair {
+  background-color: var(--note);
+}
+.backlink-pane > .tree-item-self .tree-item-flair-outer,
+.outgoing-link-pane > .tree-item-self .tree-item-flair-outer {
+  margin-top: -2px;
 }
 
 .backlink-pane .search-result-container {

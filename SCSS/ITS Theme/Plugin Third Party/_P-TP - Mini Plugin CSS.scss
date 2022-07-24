@@ -38,6 +38,9 @@ body:is(.theme-dark, .theme-light) {
   // --he-text-on-accent-active: var(--text-dl);
   --he-text-on-accent-active: var(--headers);
 }
+.popover.hover-editor:not(.show-navbar) .view-header {
+  padding: 0;
+}
 
 /* Heatmap Calendar Fix */
 .heatmap-calendar-graph {

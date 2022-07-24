@@ -133,9 +133,9 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
 .kbn.kbn .kanban-plugin__lane-title p {
     font-size: 12px;
 }
-.kbn .kanban-plugin__lane {
+.kbn.kbn .kanban-plugin__lane {
     background: var(--note) !important;
-    box-shadow: none !important;
+    box-shadow: none;
     border-width: 0px !important;
 }
 .kbn .kanban-plugin__meta-table td {

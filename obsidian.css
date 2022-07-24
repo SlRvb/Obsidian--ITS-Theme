@@ -643,6 +643,11 @@ settings:
         level: 2        
         collapsed: true
     -
+        title: Document
+        description: Emulation of microsoft document look.
+        id: writing-document
+        type: class-toggle
+    -
         title: Justify Text
         description: Justify preview and editor text
         id: justified
@@ -7070,6 +7075,35 @@ div:not(.w-hcl).writing .HyperMD-header-4::before {
   color: var(--inactive);
 }
 
+.writing-document:not(.is-mobile) {
+  /* Fix embeds */
+  /* Embed */
+  /* .markdown-preview-section { min-height: 100% !important; } */
+}
+.writing-document:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-scroller {
+  padding: 0;
+}
+.writing-document:not(.is-mobile) .is-live-preview .HyperMD-header::before {
+  margin-left: -10px;
+  margin-right: 15px;
+}
+.writing-document:not(.is-mobile) div:not(.workspace-tabs):not(.markdown-embed-content) > :is(.markdown-preview-view, .cm-editor):not(.kanban-plugin__markdown-preview-view):not(.BC-Matrix):not(.community-plugin-readme) {
+  background: var(--td);
+  padding: 0;
+}
+.writing-document:not(.is-mobile) :not(.markdown-embed-content) .markdown-preview-section:not(.kanban-plugin__markdown-preview-view), .writing-document:not(.is-mobile) .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
+  --padding: 10px;
+  background: var(--note, var(--background-primary));
+  box-shadow: 0 0 20px var(--outline, var(--background-box-shadow));
+  max-width: calc(var(--note-width) + var(--padding));
+  height: auto;
+  padding: 0 var(--padding);
+}
+.writing-document:not(.is-mobile) .markdown-embed.markdown-embed.markdown-embed .markdown-preview-section {
+  padding: unset;
+  box-shadow: unset;
+}
+
 /*Italicized Text <i></i>*/
 :is(.markdown-preview-section, .markdown-source-view) i,
 .i-at,
@@ -11781,9 +11815,9 @@ body .kanban-plugin__item-metadata-wrapper:not(:empty) {
   font-size: 12px;
 }
 
-.kbn .kanban-plugin__lane {
+.kbn.kbn .kanban-plugin__lane {
   background: var(--note) !important;
-  box-shadow: none !important;
+  box-shadow: none;
   border-width: 0px !important;
 }
 
@@ -12104,6 +12138,10 @@ body:is(.theme-dark, .theme-light) {
   --he-popover-border-radius: var(--radius);
   --he-text-on-accent-inactive: var(--text);
   --he-text-on-accent-active: var(--headers);
+}
+
+.popover.hover-editor:not(.show-navbar) .view-header {
+  padding: 0;
 }
 
 /* Heatmap Calendar Fix */
@@ -13161,13 +13199,10 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   white-space: pre-wrap;
   line-height: calc(var(--f-s-sb) + 5px);
 }
-
-.title-wrap .view-header,
-.is-mobile.title-wrap .view-header-title-container {
+.title-wrap .view-header, .title-wrap.is-mobile .view-header-title-container {
   height: auto;
   width: auto !important;
 }
-
 .title-wrap .view-header {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -13946,10 +13981,10 @@ body:not(.h-b-li).bul-li-neon ul ul ul ul ul ul li, body:not(.h-b-li).bul-li-neo
   /*Burnt Paper Edges*/
   /*Transparent BGs*/
 }
-.paper, .paper .markdown-source-view, .paper .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme), .paper .workspace-leaf:not(.mod-active) .view-header, .paper .modal.mod-settings .vertical-tab-content-container, .paper .workspace-leaf-content[data-type=graph] > canvas, .paper .workspace-drawer-inner, .paper .modal, .paper .community-plugin-search, .paper .prompt,
+.paper, .paper .markdown-source-view, .paper .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme):not(.kanban-plugin__markdown-preview-view), .paper .workspace-leaf:not(.mod-active) .view-header, .paper .modal.mod-settings .vertical-tab-content-container, .paper .workspace-leaf-content[data-type=graph] > canvas, .paper .workspace-drawer-inner, .paper .modal, .paper .community-plugin-search, .paper .prompt, .paper .kanban-plugin__lane.kanban-plugin__lane,
 .wotc,
 .wotc .markdown-source-view,
-.wotc .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme),
+.wotc .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme):not(.kanban-plugin__markdown-preview-view),
 .wotc .workspace-leaf:not(.mod-active) .view-header,
 .wotc .modal.mod-settings .vertical-tab-content-container,
 .wotc .workspace-leaf-content[data-type=graph] > canvas,
@@ -13957,16 +13992,18 @@ body:not(.h-b-li).bul-li-neon ul ul ul ul ul ul li, body:not(.h-b-li).bul-li-neo
 .wotc .modal,
 .wotc .community-plugin-search,
 .wotc .prompt,
+.wotc .kanban-plugin__lane.kanban-plugin__lane,
 .wotc-beyond,
 .wotc-beyond .markdown-source-view,
-.wotc-beyond .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme),
+.wotc-beyond .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme):not(.kanban-plugin__markdown-preview-view),
 .wotc-beyond .workspace-leaf:not(.mod-active) .view-header,
 .wotc-beyond .modal.mod-settings .vertical-tab-content-container,
 .wotc-beyond .workspace-leaf-content[data-type=graph] > canvas,
 .wotc-beyond .workspace-drawer-inner,
 .wotc-beyond .modal,
 .wotc-beyond .community-plugin-search,
-.wotc-beyond .prompt {
+.wotc-beyond .prompt,
+.wotc-beyond .kanban-plugin__lane.kanban-plugin__lane {
   box-shadow: 0 0 60px var(--outline) inset;
 }
 .paper .workspace-tabs, .paper .modal.mod-settings .vertical-tab-header,
@@ -14093,6 +14130,10 @@ body .wotc-beyond.theme-dark .hr.cm-line:not(.cm-active),
 body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   background: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Crect id='Artboard1' x='0' y='0' width='100' height='7' style='fill:none;'/%3E%3Cpath d='M50,2.5L100,3.5L50,4L0,3.5L50,2.5Z' style='fill:rgb(146, 47, 47);'/%3E%3C/svg%3E") no-repeat center center;
   background-size: 100%;
+}
+
+.wotc-beyond.writing-document :not(.markdown-embed-content) .markdown-preview-section:not(.kanban-plugin__markdown-preview-view), .wotc-beyond.writing-document .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
+  box-shadow: 0 0 60px var(--outline) inset, 0 0 20px var(--outline, var(--background-box-shadow));
 }
 
 /*Paper Textures

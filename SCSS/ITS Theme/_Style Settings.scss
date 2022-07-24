@@ -642,6 +642,11 @@ settings:
         level: 2        
         collapsed: true
     -
+        title: Document
+        description: Emulation of microsoft document look.
+        id: writing-document
+        type: class-toggle
+    -
         title: Justify Text
         description: Justify preview and editor text
         id: justified

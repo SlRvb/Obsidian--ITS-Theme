@@ -164,22 +164,20 @@
     /*Burnt Paper Edges*/
     & ,
     & .markdown-source-view,
-    & .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme),
+    & .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme):not(.kanban-plugin__markdown-preview-view),
     & .workspace-leaf:not(.mod-active) .view-header,
     & .modal.mod-settings .vertical-tab-content-container,
     & .workspace-leaf-content[data-type="graph"] > canvas,
     & .workspace-drawer-inner,
     & .modal,
     & .community-plugin-search,
-    & .prompt {
-        box-shadow: 
-        0 0 60px var(--outline) inset;
-    }
+    & .prompt,
+    & .kanban-plugin__lane.kanban-plugin__lane
+    { box-shadow: 0 0 60px var(--outline) inset; }
+    
     & .workspace-tabs,
-    & .modal.mod-settings .vertical-tab-header {
-        box-shadow: 
-        0 0 25px var(--outline) inset;
-    }
+    & .modal.mod-settings .vertical-tab-header 
+    { box-shadow: 0 0 25px var(--outline) inset; }
 
     /*Transparent BGs*/
     & .CodeMirror-gutter.CodeMirror-linenumbers, 
@@ -282,6 +280,14 @@ body .wotc-beyond
     }
 }
 
+.wotc-beyond.writing-document {
+    & :not(.markdown-embed-content) .markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
+    & .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
+        box-shadow: 
+        0 0 60px var(--outline) inset,
+        0 0 20px var(--outline, var(--background-box-shadow));
+    }
+}
 
 
 

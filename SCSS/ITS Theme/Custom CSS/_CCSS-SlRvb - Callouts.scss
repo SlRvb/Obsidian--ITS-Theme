@@ -243,7 +243,8 @@ body {
     box-shadow: none;
     margin: 0; 
     margin-left: 8px;
-    width: 26vh;
+    width: auto;
+    max-width: 20vw;
     float: right;
 
     // & .image-embed.is-loaded { height: 0; }

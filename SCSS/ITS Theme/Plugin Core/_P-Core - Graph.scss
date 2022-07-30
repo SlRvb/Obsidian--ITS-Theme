@@ -11,6 +11,9 @@
     padding: .5em;
     padding-left: .2em;
     max-width: 40vw;
+
+    // resize: both;
+    // overflow: auto;
 }
 .graph-control-section:not(.is-collapsed) .graph-control-section-header {
     font-weight: bold;
@@ -24,6 +27,10 @@
 }
 .graph-controls .setting-item:hover {
     color: var(--accent);
+}
+
+.graph-controls .search-input-container {
+    width: 100%;
 }
 
 

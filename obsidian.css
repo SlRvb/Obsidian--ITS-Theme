@@ -9159,7 +9159,8 @@ body {
   box-shadow: none;
   margin: 0;
   margin-left: 8px;
-  width: 26vh;
+  width: auto;
+  max-width: 20vw;
   float: right;
 }
 .callout[data-callout~=infobox] .callout-title {
@@ -10199,6 +10200,10 @@ body .search-result-file-match:hover,
 
 .graph-controls .setting-item:hover {
   color: var(--accent);
+}
+
+.graph-controls .search-input-container {
+  width: 100%;
 }
 
 /*--Graph View--*/

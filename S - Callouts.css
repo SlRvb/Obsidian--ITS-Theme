@@ -225,10 +225,13 @@ body {
 }
 
 /*Infobox*/
-:is(.is-mobile .is-live-preview, .is-live-preview) .callout[data-callout~=infobox] {
+:is(.is-mobile,
+.is-mobile .is-live-preview,
+.is-live-preview) .callout[data-callout~=infobox]:not([data-callout-metadata~=mobile]) {
   float: unset !important;
   max-width: 100%;
   margin: 0 !important;
+  width: auto;
 }
 
 .callout[data-callout~=infobox] {
@@ -238,7 +241,8 @@ body {
   box-shadow: none;
   margin: 0;
   margin-left: 8px;
-  width: 26vh;
+  width: auto;
+  max-width: 20vw;
   float: right;
 }
 .callout[data-callout~=infobox] .callout-title {
@@ -403,10 +407,13 @@ body {
 }
 .callout.callout[data-callout~=kanban] ul {
   display: flex;
-  padding-inline-start: 0;
   margin-block-start: 5px;
+  padding-inline-start: 0;
   text-align: center;
   overflow: auto;
+}
+.callout.callout[data-callout~=kanban] ul.dataview-ul {
+  margin-inline-start: unset;
 }
 .callout.callout[data-callout~=kanban] ul li {
   min-width: var(--lane-width);

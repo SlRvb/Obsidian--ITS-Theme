@@ -771,7 +771,7 @@ body {
 }
 
 /* Columns */
-.callout[data-callout~=column] {
+.callout[data-callout*=column] {
   --callout-color: var(--text-normal);
   --callout-icon: layout-dashboard;
   --columns: 2;
@@ -781,7 +781,7 @@ body {
   width: auto;
   padding: 0;
 }
-.callout[data-callout~=column] > .callout-content {
+.callout[data-callout*=column] > .callout-content {
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   gap: 10px;
@@ -790,23 +790,33 @@ body {
   border: 0;
   padding: 0;
 }
-.callout[data-callout~=column][data-callout-metadata~="3"] .callout-content {
+.callout[data-callout*=column][data-callout-metadata~="3"] .callout-content {
   --columns: 3;
 }
-.callout[data-callout~=column][data-callout-metadata~="4"] .callout-content {
+.callout[data-callout*=column][data-callout-metadata~="4"] .callout-content {
   --columns: 4;
 }
-.callout[data-callout~=column][data-callout-metadata~=flex] > .callout-content {
+.callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content {
   gap: unset;
   grid-template-columns: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.callout[data-callout~=column][data-callout-metadata~=flex] > .callout-content .callout {
+.callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content .callout {
   flex: 1 1 250px;
   margin: 5px;
   background: transparent;
+}
+.callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content {
+  grid-template-columns: unset;
+  gap: unset;
+}
+.callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content .dataview.list-view-ul {
+  columns: var(--columns);
+}
+.callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content .dataview li {
+  break-inside: avoid;
 }
 
 /* Timeline */

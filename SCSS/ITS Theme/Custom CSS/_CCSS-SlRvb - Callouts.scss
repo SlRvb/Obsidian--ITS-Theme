@@ -865,7 +865,7 @@ body {
 
 
 /* Columns */
-.callout[data-callout~="column"] {
+.callout[data-callout*="column"] {
     --callout-color: var(--text-normal);
     --callout-icon: layout-dashboard;
     --columns: 2;
@@ -908,6 +908,23 @@ body {
             flex: 1 1 250px;
             margin: 5px;
             background: transparent;
+        }
+    }
+
+    //Dataview List Columns
+    &[data-callout-metadata~="dataview"] {
+        & > .callout-content { 
+            grid-template-columns: unset; 
+            gap: unset; 
+        }
+
+
+        & > .callout-content .dataview.list-view-ul {
+            columns: var(--columns);
+        }
+
+        & > .callout-content .dataview li {
+            break-inside: avoid;
         }
     }
 }

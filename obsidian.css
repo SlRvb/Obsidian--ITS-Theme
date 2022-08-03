@@ -9030,11 +9030,13 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
   object-fit: cover;
 }
 
-.callout.callout.callout[data-callout-metadata~=clean] {
+.callout.callout.callout[data-callout-metadata~=clean],
+.callout.callout.callout[data-callout-metadata~=clean] .callout-content {
   border: 0;
   box-shadow: none;
 }
-.callout.callout.callout[data-callout-metadata~=clean] .callout-content {
+.callout.callout.callout[data-callout-metadata~=clean] .callout-content,
+.callout.callout.callout[data-callout-metadata~=clean] .callout-content .callout-content {
   padding: 0;
 }
 
@@ -9113,19 +9115,24 @@ body {
 .callout[data-callout-metadata~=alt-co] .callout-title {
   background: transparent;
 }
-
-.callout[data-callout-metadata~=alt-line] {
+.alt-co .callout.callout .callout-content,
+.callout[data-callout-metadata~=alt-co] .callout-content {
   border: 0;
 }
-.callout[data-callout-metadata~=alt-line] .callout-title {
+
+.callout.callout[data-callout-metadata~=alt-line] {
+  border: 0;
+}
+.callout.callout[data-callout-metadata~=alt-line] .callout-title {
   background: transparent;
   border-bottom: 2px solid var(--table, var(--background-modifier-border));
   padding: 5px 0;
 }
-.callout[data-callout-metadata~=alt-line] .callout-fold {
+.callout.callout[data-callout-metadata~=alt-line] .callout-fold {
   color: rgb(var(--callout-color));
 }
-.callout[data-callout-metadata~=alt-line] .callout-content {
+.callout.callout[data-callout-metadata~=alt-line] .callout-content.callout-content {
+  border: 0;
   border-bottom: 1px solid rgba(var(--callout-color), 0.5);
 }
 
@@ -9174,20 +9181,26 @@ body {
 .callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) .callout-title, .callout[data-callout~=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
   display: none;
 }
-.callout[data-callout~=infobox][data-callout-metadata~=title]:not(:hover):not(.is-collapsed) .callout-title {
+.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]):not(:hover):not(.is-collapsed) > .callout-title {
   display: flex;
+  gap: 0;
 }
-.callout[data-callout~=infobox][data-callout-metadata~=title].is-collapsed .callout-title {
+.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]).is-collapsed .callout-title {
   border: 1px solid var(--hr, var(--background-modifier-border));
   display: flex;
 }
-.callout[data-callout~=infobox][data-callout-metadata~=title] .callout-fold, .callout[data-callout~=infobox][data-callout-metadata~=title] .callout-title .callout-title-inner {
+.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-fold, .callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-title .callout-title-inner {
   display: unset;
   align-items: center;
   align-content: center;
   padding: 5px 10px;
 }
-.callout[data-callout~=infobox][data-callout-metadata~=title].is-collapsed .callout-fold {
+.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-fold {
+  padding: unset;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]).is-collapsed .callout-fold {
   border: 0;
 }
 .callout[data-callout~=infobox] .callout-content {
@@ -9453,11 +9466,24 @@ body {
   text-align: center;
   padding: 0;
 }
-.callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at] .callout-title {
+.callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at].is-collapsible:not(.is-collapsed) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at]:not(.is-collapsible) .callout-title, .callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at] .callout-title-inner, .callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at]:not(.is-collapsed) .callout-icon {
   display: none;
+}
+.callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at] .callout-fold {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at] .callout-fold svg {
+  margin-bottom: unset;
 }
 .callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at] .callout-content {
   padding: 0px;
+  margin: auto;
 }
 .callout.callout[data-callout~=Metadata i]:is([data-callout-metadata~=tbl-cln], [data-callout-metadata~=table-clean]) table :is(td, tr, th) {
   background-color: transparent;
@@ -9699,6 +9725,9 @@ body {
   width: auto;
   padding: 0;
 }
+.callout[data-callout*=column] > .callout-content .callout-content {
+  border: 0;
+}
 .callout[data-callout*=column] > .callout-content {
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
@@ -9724,7 +9753,6 @@ body {
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content .callout {
   flex: 1 1 250px;
   margin: 5px;
-  background: transparent;
 }
 .callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content {
   grid-template-columns: unset;

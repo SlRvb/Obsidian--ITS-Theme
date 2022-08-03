@@ -96,7 +96,8 @@ body .callout.callout.callout:is([data-callout-metadata~="nmg"], [data-callout-m
         object-fit: cover;
     }
 }
-.callout.callout.callout[data-callout-metadata~="clean"] {
+.callout.callout.callout[data-callout-metadata~="clean"],
+.callout.callout.callout[data-callout-metadata~="clean"] .callout-content {
     border: 0;
     box-shadow: none;
 
@@ -188,9 +189,10 @@ body {
     }
     &:not(.is-collapsed) .callout-title { padding-bottom: 0; }
     & .callout-title { background: transparent; }
+    & .callout-content { border: 0; }
 }
 
-.callout[data-callout-metadata~="alt-line"] {
+.callout.callout[data-callout-metadata~="alt-line"] {
     border: 0;
 
     & .callout-title {
@@ -200,7 +202,8 @@ body {
         padding: 5px 0;
     }
     & .callout-fold { color: rgb(var(--callout-color)); }
-    & .callout-content {
+    & .callout-content.callout-content {
+        border: 0;
         border-bottom: 1px solid rgba(var(--callout-color), 0.5);
     }
 }
@@ -261,14 +264,15 @@ body {
     }
     
     //Display title collapse arrow on hover only
-    &:not(:hover):not(.is-collapsed) .callout-title, 
+    &:not(:hover):not(.is-collapsed) .callout-title,
     & .callout-title :is(.callout-icon, .callout-title-inner)
     { display: none; }
 
     //Show title
-    &[data-callout-metadata~="title"] {
-        &:not(:hover):not(.is-collapsed) .callout-title {
+    &:is([data-callout-metadata~="show-title"], [data-callout-metadata~="s-t"]) {
+        &:not(:hover):not(.is-collapsed) > .callout-title {
             display: flex;
+            gap: 0;
         }
         &.is-collapsed .callout-title {
             border: 1px solid var(--hr, var(--background-modifier-border));
@@ -280,6 +284,11 @@ body {
             align-items: center;
             align-content: center;
             padding: 5px 10px;
+        }
+        & .callout-fold {
+            padding: unset;
+            margin-top: auto;
+            margin-bottom: auto; 
         }
 
         &.is-collapsed .callout-fold { border: 0; }
@@ -592,8 +601,30 @@ body {
         text-align: center;
         padding: 0;
         
-        & .callout-title { display: none; }
-        & .callout-content { padding: 0px; }
+        &.is-collapsible:not(.is-collapsed) {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        
+        &:not(.is-collapsible) .callout-title,
+        & .callout-title-inner,
+        &:not(.is-collapsed) .callout-icon 
+        { display: none; }
+
+        & .callout-fold {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            
+            & svg { margin-bottom: unset; }
+        }
+        
+        & .callout-content { 
+            padding: 0px; 
+            margin: auto; 
+        }
+
     }
 
     //Lineless Tables
@@ -875,6 +906,8 @@ body {
     border: 0;
     width: auto;
     padding: 0;
+
+    & > .callout-content .callout-content { border: 0; }
     
     & > .callout-content {
         display: grid;
@@ -907,7 +940,7 @@ body {
         & .callout {
             flex: 1 1 250px;
             margin: 5px;
-            background: transparent;
+            //background: transparent;
         }
     }
 

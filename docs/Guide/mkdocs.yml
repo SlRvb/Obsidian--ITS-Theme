@@ -1,0 +1,4 @@
+site_name: ITS Theme Documentation
+nav:
+  - Home: index.md
+  - ITS Theme: CSS-Classes.md

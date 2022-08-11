@@ -208,6 +208,7 @@ body {
     }
 }
 //Inspired by Davey
+.callout.callout[data-callout-metadata~="dim-hvr"]:not(:hover),
 .callout.callout[data-callout-metadata~="dim"].is-collapsed:not(:hover) {
     opacity: 30%;
     transition: opacity 300ms;

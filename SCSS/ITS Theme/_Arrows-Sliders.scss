@@ -7,6 +7,8 @@
     margin-top: 0; 
     color: var(--lines);
 }
+.collapse-icon:before { display: none; }
+
 .markdown-preview-view .collapse-icon { margin-top: -2px; }
 .markdown-preview-view .heading-collapse-indicator { margin-top: calc(var(--f-s-h) * -.3px); }
 .publish-section-header-toggle-collapsed-button { margin-top: 2px;}

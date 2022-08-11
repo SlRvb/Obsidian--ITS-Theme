@@ -4578,6 +4578,10 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   color: var(--lines);
 }
 
+.collapse-icon:before {
+  display: none;
+}
+
 .markdown-preview-view .collapse-icon {
   margin-top: -2px;
 }
@@ -9136,6 +9140,7 @@ body {
   border-bottom: 1px solid rgba(var(--callout-color), 0.5);
 }
 
+.callout.callout[data-callout-metadata~=dim-hvr]:not(:hover),
 .callout.callout[data-callout-metadata~=dim].is-collapsed:not(:hover) {
   opacity: 30%;
   transition: opacity 300ms;
@@ -13213,17 +13218,17 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 }
 
 /*Tags*/
-.tag-notion a.tag,
+.tag-notion.tag-notion a.tag,
 .tag-notion .workspace-leaf-content[data-type=cross-reference-navigation] .btn {
   border-radius: 5px !important;
 }
 
-.tag-bubble a.tag,
+.tag-bubble.tag-bubble a.tag,
 .tag-bubble .workspace-leaf-content[data-type=cross-reference-navigation] .btn {
   border-radius: 25px !important;
 }
 
-.tag-outline a.tag {
+.tag-outline.tag-outline a.tag {
   background-color: transparent;
   border: var(--tag-o) solid var(--tag);
   color: var(--tag);

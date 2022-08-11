@@ -1,13 +1,13 @@
 /*Tags*/
-.tag-notion a.tag,
+.tag-notion.tag-notion a.tag,
 .tag-notion .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
     border-radius: 5px !important;
 }
-.tag-bubble a.tag,
+.tag-bubble.tag-bubble a.tag,
 .tag-bubble .workspace-leaf-content[data-type="cross-reference-navigation"] .btn {
     border-radius: 25px !important;
 }
-.tag-outline a.tag {
+.tag-outline.tag-outline a.tag {
     background-color: transparent;
     border: var(--tag-o) solid var(--tag);
     color: var(--tag);

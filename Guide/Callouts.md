@@ -46,9 +46,10 @@
 | `alt-co` |  | Alternate Callout styling for individual callouts |
 | `alt-line` |  | Minimalistic callout style with only title underlined |
 | `dim` |  | Dim collapsible (`+`/`-`) callouts unless hovered and opened |
+| `dim-hvr` |  | Dim callout unless hovered |
 | `collapse` |  | Remove all padding and margins for ultra compact look |
-| `t-w` | `table-wide` | Widen table to edges of callout
-| `tbl-cln` | `table-clean` | Remove most table styling: lines, background colors
+| `t-w` | `table-wide` | Widen table to edges of callout |
+| `tbl-cln` | `table-clean` | Remove most table styling: lines, background colors |
 
 ---
 

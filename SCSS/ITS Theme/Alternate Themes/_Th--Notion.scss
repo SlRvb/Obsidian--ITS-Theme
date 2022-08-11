@@ -7,7 +7,6 @@
     --hr-sym: "";
 
     background: var(--note);
-
 }
 .theme-dark.notion,
 .theme-dark .notion.notion {
@@ -38,6 +37,7 @@
     --scrollbar-bg: #3b4044;
     --scrollbar-thumb-bg: #474C50;
     
+    //
     --text: #EBEBEB;
     --headers: var(--text);
     --accent2-lite: #2EA1CF;
@@ -50,6 +50,7 @@
     --code-bg: #3F4447;
 
     --note: #2F3437;
+    --note-rgb: 47, 52, 55;
     --outline: #0f0f0f40;
     --bttn: transparent;
     --bg: #3C4144;
@@ -132,7 +133,9 @@
     --text-faint: var(--inactive);
     --text-muted: var(--soft-text);
 
+    //
     --note: #FFFFFF;
+    --note-rgb: 247, 246, 243;
     --side-bar: #F7F6F3;
     --accent: #D3D1CB;
     --dark-accent: #E8E7E4;

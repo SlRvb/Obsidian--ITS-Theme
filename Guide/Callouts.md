@@ -45,7 +45,7 @@
 | `clean` |  | Remove callout Styling |
 | `alt-co` |  | Alternate Callout styling for individual callouts |
 | `alt-line` |  | Minimalistic callout style with only title underlined |
-| `dim` |  | Dim callouts unless hovered |
+| `dim` |  | Dim collapsible (`+`/`-`) callouts unless hovered and opened |
 | `collapse` |  | Remove all padding and margins for ultra compact look |
 | `t-w` | `table-wide` | Widen table to edges of callout
 | `tbl-cln` | `table-clean` | Remove most table styling: lines, background colors
@@ -231,7 +231,7 @@
 ## Asides
 | Adjustment | Description |
 | --- | --- |
-| `title` | Brings back callout title for Asides |
+| `show-title` | Brings back callout title for Asides |
 | `clean` | Remove Aside styling |
 | `tufte` | Tufte Aside styling (WIP, somewhat buggy) |
 | `left` | Move aside left |

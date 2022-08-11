@@ -21,53 +21,53 @@
 
 ### Clear
 
-Attribute | Description |
----|---|
-`clear` | `clear` will allow that image to sit below another image<br>If it's on the same side instead of sitting in the middle of the page.
+| Attribute | Description |
+| --- | --- |
+| `clear` | `clear` will allow that image to sit below another image<br>If it's on the same side instead of sitting in the middle of the page. |
 
 ### Image Grid
 
 > ⚠ **I recommend using my [Callout Image Grids](Callouts.md#image-grid) instead**
 
-Attribute | Description |
----|---|
-`grid` | Display image side-by-side in a grid
+| Attribute | Description |
+| --- | --- |
+| `grid` | Display image side-by-side in a grid |
 
 ![](../Images/Image_Adjustments-Image-Grids.png)
 
 ### Cover (Mostly for Customizable Version)
 
-Attribute | Description |
----|---|
-`cover`| A resized image will maintain aspect ratio and avoid stretching.
+| Attribute | Description |
+| --- | --- |
+| `cover` | A resized image will maintain aspect ratio and avoid stretching. |
 
 ### Sizing (Mostly for Customizable Version)
 
-Attribute | Description |
----|---|
-`loc\|sban\|200`| Place the `\|<numbers>` sizing at the *end* of the text and it will shrink the image to that size.
+| Attribute | Description |
+| --- | --- |
+| `loc\|sban\|200` | Place the `\|<numbers>` sizing at the *end* of the text and it will shrink the image to that size. |
 
 ### Invert Colors
 
 These are particularly useful for images with transparency that are illegible in dark mode.
 
-Attribute | Description |
----|---|
-`invertb` | Invert the image's colors (dark mode).
-`invertw` | Invert the image's colors (light mode).
-`invertbc` | Invert colors and increase contrast (dark mode).
-`invertwc` | Invert colors and increase contrast (light mode).
+| Attribute | Description |
+| --- | --- |
+| `invertb` | Invert the image's colors (dark mode). |
+| `invertw` | Invert the image's colors (light mode). |
+| `invertbc` | Invert colors and increase contrast (dark mode). |
+| `invertwc` | Invert colors and increase contrast (light mode). |
 
 
 ## Simplified Version
 
 ### Left/Right/Center
 
-Attribute | Description |
----|---|
-`left`| `left` will move the image to the left.
-`right`| `right` will move the image to the right.
-`center`| `center` will move the image to the center.
+| Attribute | Description |
+| --- | --- |
+| `left` | `left` will move the image to the left. |
+| `right` | `right` will move the image to the right. |
+| `center` | `center` will move the image to the center. |
 
 ![](../Images/Image_Adjustments-Simple-Positions.png)
 
@@ -76,13 +76,16 @@ Attribute | Description |
 
 ![](../Images/Image_Adjustments-Simple-Sizing.png)
 
+> ⚠ **NOTE** 
+> `small`/`tall`/etc *only* apply for these types. If you want to resize an image use either [my variables](#sizing) or Obsidian's numbers `|100`
+
 #### Banner
 
-Attribute | Description |
----|---|
-`banner`| `banner` will crop the image height-wise to 150px while setting the width to cover the entire page.
-`banner+small`| `banner+small` will crop the image height-wise to 100px while setting the width to cover the entire page.
-`banner+tall`| `banner+tall` will crop the image height-wise to 500px while setting the width to cover the entire page.
+| ttribute | Description |
+| --- | --- |
+| `banner` | `banner` will crop the image height-wise to 150px while setting the width to cover the entire page. |
+| `banner+small` | `banner+small` will crop the image height-wise to 100px while setting the width to cover the entire page. |
+| `banner+tall` | `banner+tall` will crop the image height-wise to 500px while setting the width to cover the entire page. |
 
 
 #### Portrait

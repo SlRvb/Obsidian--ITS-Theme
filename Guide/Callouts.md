@@ -189,8 +189,9 @@
 ## Column
 | Adjustment | Description |
 | --- | --- |
-| `flex` | Wrap column on smaller width screens
-| `3`, `4` | Add more columns; Default is 2
+| `flex` | Wrap column on smaller width screens |
+| `3`, `4` | Add more columns; Default is 2 |
+| `dataview` | Styles dataview LISTs into columns <br>(column numbers work with this as well) |
 
 ```markdown
 > [!column]
@@ -209,6 +210,15 @@
 >> [!important]+ Current Topics
 >> Column 2
 ```
+
+````markdown
+> [!column|dataview 3] 3 Columns for Dataview List
+> ```dataview
+> LIST
+> FROM ""
+> LIMIT 20
+> ```
+````
 
 ## Timeline
 | Adjustment | Description |

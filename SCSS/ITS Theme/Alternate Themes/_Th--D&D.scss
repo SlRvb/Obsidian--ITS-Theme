@@ -184,7 +184,7 @@
 // :is(.dnd, .wotc, .wotc-beyond):not(.illusion):not(.h-line):not(.hcl)
 :is(.dnd, .wotc, .wotc-beyond):not(.illusion):not(.h-line):not(.hcl)
 {
-    &:not(.sphd-und-1) :is(h1, .HyperMD-header-1) {
+    &:not(.sphd-und-1) :is(.markdown-preview-view, .markdown-source-view):not(.h-line) :is(h1, .HyperMD-header-1) {
         &:after {
             content: "";
             display: block;
@@ -194,7 +194,7 @@
             left: 0;
         }
     }
-    &:not(.sphd-und-2) :is(h2, .HyperMD-header-2) {
+    &:not(.sphd-und-2) :is(.markdown-preview-view, .markdown-source-view):not(.h-line) :is(h2, .HyperMD-header-2) {
         &:after {
             content: "";
             display: block;
@@ -204,7 +204,7 @@
             left: 0;
         }
     }
-    &:not(.sphd-und-3) :is(h3, .HyperMD-header-3) {
+    &:not(.sphd-und-3) :is(.markdown-preview-view, .markdown-source-view):not(.h-line) :is(h3, .HyperMD-header-3) {
         &:after {
             content: "";
             display: block;

@@ -181,35 +181,38 @@
 
 /*Headings*/
 /*Heading Line*/
-.dnd:not(.illusion):not(.h-line):not(.hcl),
-.wotc:not(.illusion):not(.h-line):not(.hcl),
-.wotc-beyond:not(.illusion):not(.h-line):not(.hcl) {
-    &:not(.sphd-und-1) h1:after,
-    &:not(.sphd-und-1) .HyperMD-header-1:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(to right, var(--h1-c), transparent);
-        left: 0;
+// :is(.dnd, .wotc, .wotc-beyond):not(.illusion):not(.h-line):not(.hcl)
+:is(.dnd, .wotc, .wotc-beyond):not(.illusion):not(.h-line):not(.hcl)
+{
+    &:not(.sphd-und-1) :is(h1, .HyperMD-header-1) {
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--h1-c), transparent);
+            left: 0;
+        }
     }
-    &:not(.sphd-und-2) h2:after,
-    &:not(.sphd-und-2) .HyperMD-header-2:after {
-        content: "";
-        display: block;
-        width: 85%;
-        height: 4px;
-        background: linear-gradient(to right, var(--h2-c), transparent);
-        left: 0;
+    &:not(.sphd-und-2) :is(h2, .HyperMD-header-2) {
+        &:after {
+            content: "";
+            display: block;
+            width: 85%;
+            height: 4px;
+            background: linear-gradient(to right, var(--h2-c), transparent);
+            left: 0;
+        }
     }
-    &:not(.sphd-und-3) h3:after,
-    &:not(.sphd-und-3) .HyperMD-header-3:after {
-        content: "";
-        display: block;
-        width: 70%;
-        height: 4px;
-        background: linear-gradient(to right, var(--h3-c), transparent);
-        left: 0;
+    &:not(.sphd-und-3) :is(h3, .HyperMD-header-3) {
+        &:after {
+            content: "";
+            display: block;
+            width: 70%;
+            height: 4px;
+            background: linear-gradient(to right, var(--h3-c), transparent);
+            left: 0;
+        }
     }
 }
 

@@ -7870,7 +7870,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=A],
 [data-task=r],
 [data-task=c],
-[data-task=o]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=o],
+[data-task=d]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7894,7 +7895,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=A],
 [data-task=r],
 [data-task=c],
-[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=o],
+[data-task=d]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7918,7 +7920,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=A],
 [data-task=r],
 [data-task=c],
-[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=o],
+[data-task=d]) input:is([type=checkbox], [type=checkbox i]):checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7942,7 +7945,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=A],
 [data-task=r],
 [data-task=c],
-[data-task=o]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=o],
+[data-task=d]) > .task-list-item-checkbox, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7966,7 +7970,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=A],
 [data-task=r],
 [data-task=c],
-[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=o],
+[data-task=d]) input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -7990,7 +7995,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=A],
 [data-task=r],
 [data-task=c],
-[data-task=o]) input:is([type=checkbox], [type=checkbox i]):checked::before {
+[data-task=o],
+[data-task=d]) input:is([type=checkbox], [type=checkbox i]):checked::before {
   background-image: url();
   position: relative;
   -webkit-appearance: none;
@@ -8107,6 +8113,7 @@ body:not(.alt-chkbx-off) {
   /* [r]: Answer */
   /* [c]: Choice */
   /* [o]: Option */
+  /* [d]: Doing */
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] p > input[type=checkbox]:checked::before {
   color: var(--accent2-lite, var(--text-accent));
@@ -8203,6 +8210,12 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=o]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=o]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=o]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=o] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=o] p > input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-b));
   content: "\e860";
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=d]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=d]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked .task-list-item-checkbox[data-task=d]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=d] > input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=d] p > input[type=checkbox]:checked::before {
+  color: rgb(var(--chbx-I));
+  content: "\f110";
+  font-size: 14px;
+  font-family: var(--fa5);
 }
 
 /*--Checkbox Text Colors--*/
@@ -13758,11 +13771,7 @@ body:not(.h-b-li).bul-li-neon ul ul ul ul ul ul li, body:not(.h-b-li).bul-li-neo
 
 /*Headings*/
 /*Heading Line*/
-.dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-1) h1:after, .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-1) .HyperMD-header-1:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-1) h1:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-1) .HyperMD-header-1:after,
-.wotc-beyond:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-1) h1:after,
-.wotc-beyond:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-1) .HyperMD-header-1:after {
+:is(.dnd, .wotc, .wotc-beyond):not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-1) :is(.markdown-preview-view, .markdown-source-view):not(.h-line) :is(h1, .HyperMD-header-1):after {
   content: "";
   display: block;
   width: 100%;
@@ -13770,11 +13779,7 @@ body:not(.h-b-li).bul-li-neon ul ul ul ul ul ul li, body:not(.h-b-li).bul-li-neo
   background: linear-gradient(to right, var(--h1-c), transparent);
   left: 0;
 }
-.dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) h2:after, .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) .HyperMD-header-2:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) h2:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) .HyperMD-header-2:after,
-.wotc-beyond:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) h2:after,
-.wotc-beyond:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) .HyperMD-header-2:after {
+:is(.dnd, .wotc, .wotc-beyond):not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-2) :is(.markdown-preview-view, .markdown-source-view):not(.h-line) :is(h2, .HyperMD-header-2):after {
   content: "";
   display: block;
   width: 85%;
@@ -13782,11 +13787,7 @@ body:not(.h-b-li).bul-li-neon ul ul ul ul ul ul li, body:not(.h-b-li).bul-li-neo
   background: linear-gradient(to right, var(--h2-c), transparent);
   left: 0;
 }
-.dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) h3:after, .dnd:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) .HyperMD-header-3:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) h3:after,
-.wotc:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) .HyperMD-header-3:after,
-.wotc-beyond:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) h3:after,
-.wotc-beyond:not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) .HyperMD-header-3:after {
+:is(.dnd, .wotc, .wotc-beyond):not(.illusion):not(.h-line):not(.hcl):not(.sphd-und-3) :is(.markdown-preview-view, .markdown-source-view):not(.h-line) :is(h3, .HyperMD-header-3):after {
   content: "";
   display: block;
   width: 70%;

@@ -293,6 +293,20 @@ body:not(.alt-chkbx-off) {
         content: "\E860";        
         }
     }
+    /* [d]: Option */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="d"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="d"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="d"],
+    & .task-list-item.is-checked[data-task="d"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="d"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-I));
+        content: "\f110";
+        font-size: 14px;
+        font-family: var(--fa5);      
+        }
+    }
 }
 
 

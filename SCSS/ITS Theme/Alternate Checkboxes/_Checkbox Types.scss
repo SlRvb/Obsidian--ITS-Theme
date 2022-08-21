@@ -290,7 +290,7 @@ body:not(.alt-chkbx-off) {
     {
         &::before {
         color: rgb(var(--chbx-b));
-        content: "\E860";        
+        content: "\EC24";        
         }
     }
     /* [d]: Doing */
@@ -302,9 +302,7 @@ body:not(.alt-chkbx-off) {
     {
         &::before {
         color: rgb(var(--chbx-I));
-        content: "\f110";
-        font-size: 14px;
-        font-family: var(--fa5);      
+        content: "\EC25";   
         }
     }
 }
@@ -732,7 +730,6 @@ body:not(.alt-chkbx-off) {
         border-left: unset;
         border-right: 2px solid rgb(var(--chbx-c));
     }
-    
 }
 
 

@@ -12646,7 +12646,7 @@ body .obsidian-statblock-plugin > .bar {
 }
 
 .style-settings-heading[data-id=Alt-Color-Scheme] .style-settings-collapse-indicator::after {
-  content: "\e860";
+  content: "\ec24";
 }
 
 /*Super Charged Links*/

@@ -265,9 +265,13 @@ body {
     }
     
     //Display title collapse arrow on hover only
-    &:not(:hover):not(.is-collapsed) .callout-title,
     & .callout-title :is(.callout-icon, .callout-title-inner)
     { display: none; }
+
+    &:not(:hover):not(.is-collapsed) .callout-title {
+        background-color: transparent;
+    }
+    
 
     //Show title
     &:is([data-callout-metadata~="show-title"], [data-callout-metadata~="s-t"]) {

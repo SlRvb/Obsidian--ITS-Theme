@@ -9196,8 +9196,11 @@ body {
   border: 1px solid var(--hr, var(--background-modifier-border));
   padding: 5px 10px;
 }
-.callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) .callout-title, .callout[data-callout~=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
+.callout[data-callout~=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
   display: none;
+}
+.callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) .callout-title {
+  background-color: transparent;
 }
 .callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]):not(:hover):not(.is-collapsed) > .callout-title {
   display: flex;

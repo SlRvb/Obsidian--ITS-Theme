@@ -24,7 +24,7 @@
     margin: auto;
     float: unset;
 }
-.callout.callout:not(.is-collapsed) {
+.callout.callout {
     &[data-callout-metadata~="wtiny"]    { width: 20%; }
     &[data-callout-metadata~="wsmall"]   { width: 30%; }
     &[data-callout-metadata~="ws-med"]   { width: 40%; }

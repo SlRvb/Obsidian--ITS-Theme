@@ -78,7 +78,8 @@ ul > li.task-list-item .task-list-item-checkbox { margin-left: -26px; }
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
     content: var(--bullet);
     font-family: var(--bul-f);
-    margin-right: -11px;
+    margin-right: -10px;
+    margin-left: -6px;
 }
 
 

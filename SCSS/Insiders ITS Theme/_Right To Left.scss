@@ -1,0 +1,71 @@
+.is-rtl {
+    // Bullet Position
+    &.markdown-source-view.mod-cm6 .list-bullet::after,
+    &.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
+        margin-right: -7px;
+    }
+    // Numbered List numer position
+    &.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol { 
+        padding-right: unset; 
+    }
+
+
+    // Checklist
+    & input[type=checkbox i] {
+        margin-right: -6px;
+    }
+
+    // & .HyperMD-task-line { padding-right: 10px; }
+}
+
+
+
+
+.rtl {
+    // List lines
+    & li {
+        border-left: unset;
+        padding-left: unset;
+
+        border-right: var(--b-line) solid var(--accent);
+        padding-right: 5px;
+    }
+    & li:nth-child(even) {
+        border-left: unset;
+        border-right: var(--b-line) solid var(--accent2);
+    }
+    // Indentation Guides
+    &.markdown-rendered.show-indentation-guide li {
+        & > ul::before,
+        & > ol::before {
+            left: unset;
+            right: -1em;
+        }
+    } 
+
+
+    // ----------
+    // Checkboxes
+    & li.task-list-item {
+        margin-right: unset;
+    }
+
+    & ul > li.task-list-item .task-list-item-checkbox { 
+        margin-left: 10px;
+        margin-right: -26px; 
+    }
+
+    // Numbered List With Checkbox
+    & ol.contains-task-list li > .task-list-item-checkbox {
+        margin-left: 5px;
+        margin-right: -2px;
+    }
+}
+
+
+/* List Arrow Indicators */
+.rtl.markdown-preview-view .collapse-indicator {
+    float: right;
+    margin-left: unset;
+    margin-right: -45px;
+}

@@ -1,0 +1,133 @@
+
+/*Specific Heading Adjustments*/
+.head-spec {
+    //Preview Mode
+    & h1 { 
+        color: var(--sphd-pre-1);
+        font-family: var(--sphd-pre-ff-1);
+        font-size: var(--sphd-pre-fs-1);
+    }
+    & h2 { 
+        color: var(--sphd-pre-2);
+        font-family: var(--sphd-pre-ff-2);
+        font-size: var(--sphd-pre-fs-2);
+    }
+    & h3 { 
+        color: var(--sphd-pre-3);
+        font-family: var(--sphd-pre-ff-2);
+        font-size: var(--sphd-pre-fs-3);
+    }
+    & h4 { 
+        color: var(--sphd-pre-4);
+        font-family: var(--sphd-pre-ff-4);
+        font-size: var(--sphd-pre-fs-4);
+    }
+    & h5 { 
+        color: var(--sphd-pre-5);
+        font-family: var(--sphd-pre-ff-5);
+        font-size: var(--sphd-pre-fs-5);
+    }
+    & h6 { 
+        color: var(--sphd-pre-6);
+        font-family: var(--sphd-pre-ff-6);
+        font-size: var(--sphd-pre-fs-6);
+    }
+
+    //Edit/LP Mode
+    & .HyperMD-header-1 { 
+        color: var(--sphd-ed-1);
+        font-family: var(--sphd-ed-ff-1);
+        font-size: var(--sphd-ed-fs-1);
+    }
+    & .HyperMD-header-2 { 
+        color: var(--sphd-ed-2);
+        font-family: var(--sphd-ed-ff-2);
+        font-size: var(--sphd-ed-fs-2);
+    }
+    & .HyperMD-header-3 { 
+        color: var(--sphd-ed-3);
+        font-family: var(--sphd-ed-ff-3);
+        font-size: var(--sphd-ed-fs-3);
+    }
+    & .HyperMD-header-4 { 
+        color: var(--sphd-ed-4);
+        font-family: var(--sphd-ed-ff-4);
+        font-size: var(--sphd-ed-fs-4);
+    }
+    & .HyperMD-header-5 { 
+        color: var(--sphd-ed-5);
+        font-family: var(--sphd-ed-ff-5);
+        font-size: var(--sphd-ed-fs-5);
+    }
+    & .HyperMD-header-6 { 
+        color: var(--sphd-ed-6);
+        font-family: var(--sphd-ed-ff-6);
+        font-size: var(--sphd-ed-fs-6);
+    }
+}
+
+.head-spec-note {
+    //Preview Mode
+    & .markdown-preview-view h1 { 
+        color: var(--sphd-pre-1);
+        font-family: var(--sphd-pre-ff-1);
+        font-size: var(--sphd-pre-fs-1);
+    }
+    & .markdown-preview-view h2 { 
+        color: var(--sphd-pre-2);
+        font-family: var(--sphd-pre-ff-2);
+        font-size: var(--sphd-pre-fs-2);
+    }
+    & .markdown-preview-view h3 { 
+        color: var(--sphd-pre-3);
+        font-family: var(--sphd-pre-ff-2);
+        font-size: var(--sphd-pre-fs-3);
+    }
+    & .markdown-preview-view h4 { 
+        color: var(--sphd-pre-4);
+        font-family: var(--sphd-pre-ff-4);
+        font-size: var(--sphd-pre-fs-4);
+    }
+    & .markdown-preview-view h5 { 
+        color: var(--sphd-pre-5);
+        font-family: var(--sphd-pre-ff-5);
+        font-size: var(--sphd-pre-fs-5);
+    }
+    & .markdown-preview-view h6 { 
+        color: var(--sphd-pre-6);
+        font-family: var(--sphd-pre-ff-6);
+        font-size: var(--sphd-pre-fs-6);
+    }
+    
+    //Edit/LP Mode
+    & .HyperMD-header-1 { 
+        color: var(--sphd-ed-1);
+        font-family: var(--sphd-ed-ff-1);
+        font-size: var(--sphd-ed-fs-1);
+    }
+    & .HyperMD-header-2 { 
+        color: var(--sphd-ed-2);
+        font-family: var(--sphd-ed-ff-2);
+        font-size: var(--sphd-ed-fs-2);
+    }
+    & .HyperMD-header-3 { 
+        color: var(--sphd-ed-3);
+        font-family: var(--sphd-ed-ff-3);
+        font-size: var(--sphd-ed-fs-3);
+    }
+    & .HyperMD-header-4 { 
+        color: var(--sphd-ed-4);
+        font-family: var(--sphd-ed-ff-4);
+        font-size: var(--sphd-ed-fs-4);
+    }
+    & .HyperMD-header-5 { 
+        color: var(--sphd-ed-5);
+        font-family: var(--sphd-ed-ff-5);
+        font-size: var(--sphd-ed-fs-5);
+    }
+    & .HyperMD-header-6 { 
+        color: var(--sphd-ed-6);
+        font-family: var(--sphd-ed-ff-6);
+        font-size: var(--sphd-ed-fs-6);
+    }
+}

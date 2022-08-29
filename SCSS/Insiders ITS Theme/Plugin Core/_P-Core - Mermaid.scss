@@ -1,0 +1,57 @@
+
+/*--Mermaid--*/
+/*Mermaid Class*/
+g.classGroup rect {
+        fill: var(--embed-bg) !important;
+        stroke: var(--inactive)  !important;
+        stroke-width: 1spx;
+}
+.classLabel .label {
+    fill: var(--inactive) !important;
+}
+g.classGroup line {
+    stroke: var(--table) !important;
+}
+
+/*Gantt*/
+.active0{
+    fill: var(--accent2) !important;
+}
+.done0 {
+    fill: var(--accent2-lite) !important;
+    stroke: var(--inactive) !important;
+}
+.doneText, .taskTextOutside0{
+    fill: var(--text) !important;
+}
+.section {
+    fill: var(--outer-bar) !important;
+}
+/*Sequence Diagram*/
+.noteText > tspan {
+    fill: var(--footnote) !important;
+}
+
+/*Mermaid ERD*/
+.entityBox {
+    fill: var(--bg) !important;
+    stroke: var(--table) !important;
+}
+.attributeBoxEven {
+    fill: var(--note) !important;
+}
+.attributeBoxOdd {
+    fill: var(--dark-accent) !important;
+}
+
+.node-label{
+    stroke: white !important;
+}
+/*Journey Graph*/
+.section-type-0, .task-type-0 {
+    fill: var(--accent2) !important;
+}
+#m98906ab94e740deb .label {
+    fill: white !important;
+}
+

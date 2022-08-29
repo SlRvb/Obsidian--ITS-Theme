@@ -1,0 +1,19 @@
+
+/*-Original Embeds-*/
+/*Embed Window*/
+.org-em .markdown-preview-view .markdown-embed,
+.org-em .markdown-preview-view .file-embed,
+.org-em .internal-embed.is-loaded:not(.image-embed) {
+    border: none;
+    background-color: var(--embed-bg);
+    border-radius: var(--radius);
+    box-shadow: unset !important;
+}
+/*Recolor Embedded Blockquote BG*/
+.org-em .markdown-embed blockquote {
+    background: linear-gradient(to right, var(--note), transparent);
+}
+/*Embed HR, Horiztonal Bg Color*/
+.org-em .markdown-embed .markdown-preview-view hr::after {
+    background-color: var(--embed-bg);
+}

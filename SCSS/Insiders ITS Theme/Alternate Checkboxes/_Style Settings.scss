@@ -1,0 +1,135 @@
+/* @settings
+name: SlRvb's Checkboxes
+id: checkbox
+settings:
+    - 
+        title: Colorful Task Text
+        description: Add color to the text of the task.
+        id: check-color
+        type: class-toggle
+    - 
+        title: Colorful Task Background
+        description: Add color to the background of the task.
+        id: check-bg
+        type: class-toggle
+    - 
+        title: Normal Task Text
+        description: Reapply regular text color to the text of the task.
+        id: check-text
+        type: class-toggle
+    -
+        title: Checkbox Strikethrough
+        description: Restore default strike through
+        id: check-strike
+        type: class-toggle
+    -
+        title: Checkbox Fixes
+        id: Checkbox-Fixes
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Checkbox Padding Fix
+        description: Toggle off if checklists are misaligned for your current theme.
+        id: chck-pad
+        type: class-toggle
+        default: true
+    - 
+        title: Checkbox Height Adjustment (LP/P/R)
+        description: Preview/Reading Mode Icon adjustment slider.
+        id: chbx-pre-height
+        type: variable-number-slider
+        default: 0
+        format: px
+        min: -8
+        max: 8
+        step: 1
+    - 
+        title: Checkbox Height Adjustment (S)
+        description: Source Mode Icon adjustment slider.
+        id: chbx-ed-height
+        type: variable-number-slider
+        default: 4
+        format: px
+        min: -8
+        max: 8
+        step: 1
+    -
+        title: Checkbox Strike Specific
+        id: Checkbox-Strike-Specific
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: "[x] Regular"
+        id: chst-reg
+        type: class-toggle
+    -
+        title: "[X] Checked"
+        id: chst-chk
+        type: class-toggle
+    -
+        title: "[-] Dropped"
+        id: chst-drop
+        type: class-toggle
+    -
+        title: "[>] Forward"
+        id: chst-frwd
+        type: class-toggle
+    -
+        title: "[D] Defer"
+        id: chst-defr
+        type: class-toggle
+    -
+        title: "[?] Question"
+        id: chst-q
+        type: class-toggle
+    -
+        title: "[/] Half"
+        id: chst-half
+        type: class-toggle
+    -
+        title: "[+] Add"
+        id: chst-add
+        type: class-toggle
+    -
+        title: "[R] Research"
+        id: chst-rsrch
+        type: class-toggle
+    -
+        title: "[!] Important"
+        id: chst-imp
+        type: class-toggle
+    -
+        title: "[i] Idea"
+        id: chst-idea
+        type: class-toggle
+    -
+        title: "[B] Brainstorm"
+        id: chst-brn
+        type: class-toggle
+    -
+        title: "[P] Pro"
+        id: chst-pro
+        type: class-toggle
+    -
+        title: "[C] Con"
+        id: chst-con
+        type: class-toggle
+    -
+        title: "[Q] Quote"
+        id: chst-quot
+        type: class-toggle
+    -
+        title: "[N] Note"
+        id: chst-brn
+        type: class-toggle
+    -
+        title: "[b] Bookmark"
+        id: chst-book
+        type: class-toggle
+    -
+        title: "[I] info"
+        id: chst-info
+        type: class-toggle
+*/

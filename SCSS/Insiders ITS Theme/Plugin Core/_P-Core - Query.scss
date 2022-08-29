@@ -1,0 +1,82 @@
+/*--Query--*/
+/*Remove Borders and Outer Margins*/
+.internal-query {
+    margin: 10px 0;
+    //border-top: 0;
+    background: var(--note);
+    border: 3px solid var(--outline);
+}
+.internal-query .search-result-container { padding: 0 4px; }
+
+/*Query Header*/
+.internal-query .internal-query-header {
+    background-color: var(--code-bg);
+    box-shadow: 0 2px 0 var(--td);
+    padding: 5px;
+}
+
+/*Smaller Query Titles*/
+.internal-query .internal-query-header-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--soft-text);
+    line-height: 18px;
+}
+
+/*Reduce Query Result Margins and Remove Borders*/
+.internal-query .search-result-file-matches {
+    border: 0;
+    padding: 0;
+    margin-left: 0;
+}
+//Border Line Adjust Height
+.internal-query .search-result-file-match::after { 
+    bottom: 0;
+    background-color: var(--bg);
+}
+/*Style Query Match*/
+.internal-query .search-results-children .tree-item {
+    background: var(--note);
+    margin: 10px 0;
+    //border: 2px solid var(--outline);
+    //box-shadow: 2px 2px 0 var(--outline);
+}
+
+//Recolor Text
+.internal-query .tree-item-self,
+.internal-query .search-result-file-matches {
+    color: var(--text);
+}
+//Text Match Styling
+.internal-query .search-result-file-match {
+    padding: 10px;
+    margin: 0;
+    //margin-left: -4px;
+    width: 100%;
+    font-size: var(--f-s-text);
+}
+.search-result-file-match { border-radius: var(--radius); }
+
+//Hover & Search Title Style
+//.workspace-split.mod-root .internal-query .search-result-file-match:hover,
+.internal-query .search-result-file-title {
+    //background: var(--td);
+    box-shadow: 0 2px 0 var(--td);
+}
+/*Query No Matches Found*/
+.internal-query .search-empty-state {
+    color: var(--text-error);
+    font-family: var(--font-monospace);
+    text-align: center;
+    margin: 10px;
+}
+
+/*Query Number*/
+.theme-light .tree-item.search-result:not(.is-collapsed) .search-result-file-title .tree-item-flair {
+    background-color: var(--note);
+    //font-family: var(--font-monospace);
+    box-shadow: 0 1px var(--outline);
+}
+.tree-item-flair-outer:after {
+    display: none;
+}

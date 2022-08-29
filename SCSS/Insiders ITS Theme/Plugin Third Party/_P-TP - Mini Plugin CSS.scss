@@ -1,0 +1,73 @@
+/*Plugin: Quick Explorer*/
+#quick-explorer .explorable { opacity: unset !important; }
+
+/*Block Reference*/
+body .block-ref-count:hover {
+    color: var(--text-dl);
+    background: var(--interactive-accent);
+    border: 0;
+}
+
+/*AidenLX Folder Fix*/
+.nav-folder.nav-folder.alx-folder-with-note .nav-folder-title-content {
+    width: unset;
+}
+
+/*Plugin: Link Favicons*/
+object.link-favicon { height: inherit !important; margin-right: 5px; }
+
+/*Emoji Toolbar*/
+img.emoji.emoji { object-fit: cover; }
+
+
+
+/* Hover Editor */
+body:is(.theme-dark, .theme-light) {
+  --he-title-bar-active-pinned-bg: var(--note);
+  --he-title-bar-active-action: var(--lite-accent);
+  --he-title-bar-active-bg: var(--embed-bg);
+
+  --he-title-bar-inactive-fg: var(--inactive);
+  --he-title-bar-inactive-bg: var(--note);
+  --he-title-bar-inactive-pinned-bg: var(--note);
+  --he-title-bar-inactive-action: var(--soft-text);
+  
+  --he-popover-border-radius: var(--radius);
+
+  --he-text-on-accent-inactive: var(--text);
+  // --he-text-on-accent-active: var(--text-dl);
+  --he-text-on-accent-active: var(--headers);
+}
+.popover.hover-editor:not(.show-navbar) .view-header {
+  padding: 0;
+}
+
+/* Heatmap Calendar Fix */
+.heatmap-calendar-graph {
+  & ul li {
+    border: 0;
+    &::before { display: none; }
+  }
+}
+
+/* Settings Search */ 
+.settings-search-input {
+  padding: 8px 6px;
+  border: 0;
+}
+
+/* Auto Class*/
+.auto-class-settings__match-list li {
+  padding-left: 0px;
+  
+  &::before { display: none; }
+}
+ul.auto-class-settings__match-group-list {
+  // padding-inline-start: 30px;
+  margin-left: 15px;
+  border-left: 2px solid var(--accent);
+}
+.auto-class-settings__match-group-header:hover,
+li.auto-class-settings__match-list-item:hover {
+  background-color: var(--td);
+}

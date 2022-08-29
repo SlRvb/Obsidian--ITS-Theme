@@ -1,0 +1,254 @@
+
+/*--Dataview Table--*/
+.table-view-table.table-view-table > thead > tr > th {
+    font-weight: 900;
+    font-family: var(--font);
+    color: var(--headers);
+    background-color: var(--embed-bg);
+    border-bottom: 2px solid var(--accent);
+    white-space: pre;
+}
+body:not(.dv-th-size) .table-view-table > thead > tr > th {
+    font-size: larger;
+}
+body.dv-tbl-th .table-view-table > thead > tr > th {
+    background-color: var(--th);
+    color: var(--th-text);
+    border-bottom: none;
+    font-family: var(--default-font);
+}
+
+.table-view-table.table-view-table > tbody > tr > td {
+    word-wrap: normal;
+    word-break: normal;
+}
+
+.dataview.dataview-error {
+    font-family: var(--font-monospace);
+    color: var(--code-text);
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+
+// Inner Table List
+.table-view-table .dataview-result-list-li {
+    margin-left: 5px;
+}
+
+
+/*Inline Bracket Syntax*/
+.dataview.dataview.inline-field-standalone-value {
+    padding-left: 0;
+    padding-right: 0;
+    display: inline;
+    border-radius: 0;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+.dataview.dataview.inline-field-key,
+.dataview.dataview.inline-field-value {
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0 10px;
+}
+.dataview.dataview.inline-field-key { 
+    background-color: var(--bttn);
+    color: var(--text-dl);
+}
+.dataview.dataview.inline-field-value { background-color: var(--td); }
+.dataview.dataview.inline-field-value a.tag:first-child { display: none; }
+
+
+
+
+
+/*Dataview: Compact and Hide Bullets*/
+.dv .dataview-ul li::before {
+    visibility: hidden;
+}
+.dv .dataview-ul:not(.dataview-result-object-ul) {
+    list-style-type: none;
+    margin-inline-start: -32px;
+}
+// Array List Fix
+.dv .dataview.list-view-ul .dataview-ul {
+    margin-inline-start: -20px;
+    &::before { display: none; }
+}
+.dv table.dataview .dataview-ul {
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    
+    & li {
+        padding-left: 0;
+    }
+}
+.dv .table-view-table .dataview-result-list-li {
+    margin-left: 0;
+}
+
+/*Dim First Column Link*/
+.dv .dataview td:nth-child(1) {
+    color: var(--headers);
+}
+.dv-lk .dataview td:nth-child(1) .internal-link {
+    color: var(--lines);
+}
+.dv-lk .dataview td:nth-child(1) .internal-link:hover {
+    color: var(--accent2);
+}
+.dv .dataview td:nth-child(1) .external-link {
+    color: var(--inactive);
+}
+.dv .dataview td:nth-child(1) .external-link:hover {
+    color: var(--accent2);
+}
+/*Dataview List Adjustments*/
+.dvl .block-language-dataviewjs .dataview-result-list-li,
+.dvl .list-view-ul li {
+    padding: 10px;
+    background-color: var(--aside-bg);
+    box-shadow: 2px 2px 0 var(--outline);
+    margin-bottom: 5px;
+}
+.dvl .dataview.list-view-ul li::before {
+    margin-left: -27px;
+}
+
+.dv-line .dataview-result-list-li {
+    padding: 0;
+    border: 0;
+    margin-left: 12px;
+}
+
+/*Kanban*/
+.kanban.dvl {
+    & .block-language-dataviewjs .dataview-result-list-li,
+    & .list-view-ul li {
+        background-color: var(--aside-bg);
+    }
+    & .block-language-dataviewjs .dataview-result-list-li,
+    & .list-view-ul li {
+        flex: 1 1 200px;
+        box-shadow: 4px 4px 0 var(--outline);
+        border: 1px solid var(--outline);
+        margin-bottom: 10px;
+    }
+    & table td > .dataview-ul {
+       display: block;
+       padding-inline-start: 1em;
+    }
+
+}
+
+
+/*Notion Style*/
+.notion.notion {
+    & .dvl,
+    & .dvl-c,
+    &.dvl,
+    &.dvl-c,
+    & .kanban.dvl {
+        & .block-language-dataviewjs .dataview-result-list-li,
+        & .list-view-ul li,
+        & .dataview.table-view-table > tbody > tr {
+            flex: 1 1 200px;
+            
+            //border-radius: 3px;
+            background: var(--embed-bg);
+            border: 0;
+            box-shadow: 
+                var(--outline) 0px 0px 0px 1px,
+                var(--outline) 0px 2px 4px;
+            
+            &:hover { cursor: pointer; }
+        }
+    }
+}
+.theme-light.notion.notion,
+.theme-light .notion.notion {
+    & .dvl,
+    &.dvl,
+    & .dvl-c,
+    &.dvl-c,
+    & .kanban.dvl {
+        & .block-language-dataviewjs .dataview-result-list-li,
+        & .list-view-ul li,
+        & .dataview.table-view-table > tbody > tr {
+            background: var(--note);
+        }
+    }
+}
+.dvl-c.dvl-c {
+    & .table-view-table > thead::before {
+        content: "\E805";
+        font-family: var(--its);
+        float: right;
+        padding: 5px 10px 5px 10px;
+    }
+    & .table-view-table > thead > tr { 
+        display: flex;
+        flex-direction: row;
+        border: 1px solid var(--outline);
+        box-shadow: 4px 4px 0 var(--outline);
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    & table .table-view-table > thead > tr {
+        position:absolute;
+        right: 0;
+    }
+    & .table-view-table > thead:not(:hover) > * { display: none; }
+    
+    & .dataview th {
+        font-family: var(--default-font);
+        background: var(--note);
+        font-size: var(--f-s-text);
+        border: 0;
+        color: var(--text);
+        opacity: 1;
+    }
+    & .dataview th:hover { background: var(--td) }
+
+    & .list-view-ul li,
+    & .dataview.table-view-table > tbody > tr {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--aside-bg);
+        box-shadow: 
+            var(--outline) 0px 0px 0px 1px,
+            var(--outline) 0px 2px 4px;
+        margin: 5px 0;
+        padding: 10px;
+        border: 0;
+    }
+    & .list-view-ul,
+    & .dataview.table-view-table > tbody.table-view-tbody {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-inline-start: 0;
+    }
+    & .block-language-dataviewjs .dataview-result-list-li,
+    & .list-view-ul li,
+    & .dataview.table-view-table > tbody > tr {
+        flex: 1 0 200px;
+        margin: 10px;
+    }
+    & .dataview.table-view-table td { 
+        padding: 0; 
+        background-color: transparent;
+        border: 0;
+    }
+    & .list-view-ul li::before { display: none; }
+    & .dataview.table-view-table li {
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+    }
+}
+

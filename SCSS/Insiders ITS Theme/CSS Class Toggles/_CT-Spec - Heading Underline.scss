@@ -1,0 +1,12 @@
+/*Hide Header Line*/
+.sphd-und-1 :is(h1, .HyperMD-header-1),
+.sphd-und-2 :is(h2, .HyperMD-header-2),
+.sphd-und-3 :is(h3, .HyperMD-header-3),
+.sphd-und-4 :is(h4, .HyperMD-header-4),
+.sphd-und-5 :is(h5, .HyperMD-header-5),
+.sphd-und-6 :is(h6, .HyperMD-header-6),
+.h-line :is(h1, h2, h3, h4, h5, h6, .HyperMD-header) {
+    &::before,
+    &::after
+    { display: none; }
+}

@@ -1,0 +1,30 @@
+
+/*Note Title Wrap*/
+.title-wrap { 
+    & .view-header-title {
+        white-space: pre-wrap;
+        line-height: calc(var(--f-s-sb) + 5px);
+        // vertical-align: middle;
+    }
+    
+    & .view-header,
+    &.is-mobile .view-header-title-container {
+        height: auto;
+        width: auto !important;
+    }
+
+    & .view-header {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+} 
+
+.is-mobile.title-wrap .view-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.plugin-tabs.title-wrap .view-header {
+    height: auto !important;
+}

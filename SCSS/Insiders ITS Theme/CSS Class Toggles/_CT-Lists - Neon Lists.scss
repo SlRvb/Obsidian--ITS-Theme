@@ -1,0 +1,111 @@
+
+/*Neon Bullet List Line*/
+body:not(.h-b-li).bul-li-neon {
+    //Neon Edit
+    & .cm-hmd-list-indent .cm-tab::before { 
+        box-shadow:
+        -2px 0 20px var(--b-l-1),
+        6px 0 12px  var(--b-l-1); 
+    }
+    & .cm-hmd-list-indent .cm-tab:nth-child(2):before {
+        box-shadow:
+        -2px 0 20px var(--b-l-2),
+        6px 0 12px  var(--b-l-2);
+    }
+    & .cm-hmd-list-indent .cm-tab:nth-child(3):before {
+        box-shadow:
+        -2px 0 20px var(--b-l-3),
+        6px 0 12px  var(--b-l-3);
+    }
+    & .cm-hmd-list-indent .cm-tab:nth-child(4):before {
+        box-shadow:
+        -2px 0 20px var(--b-l-4),
+        6px 0 12px  var(--b-l-4);
+    }
+    & .cm-hmd-list-indent .cm-tab:nth-child(5):before {
+        box-shadow:
+        -2px 0 20px var(--b-l-5),
+        6px 0 12px  var(--b-l-5);
+    }
+    & .cm-hmd-list-indent .cm-tab:nth-child(6):before {
+        box-shadow:
+        -2px 0 20px var(--b-l-6),
+        6px 0 12px  var(--b-l-6);
+    }
+
+    //Neon Preview
+    & ul li, 
+    & ol li {
+        box-shadow: 0 0 12px var(--b-l-1);
+        clip-path: inset(0px 1px .3px -60px);
+    }
+    & ul ul li, 
+    & ol ol li {
+        box-shadow: 0 0 12px var(--b-l-2);
+        clip-path: inset(0px 1px .2px -60px);
+    }
+    & ul ul ul li, 
+    & ol ol ol li {
+        box-shadow: 0 0 12px var(--b-l-3);
+        clip-path: inset(0px 1px .2px -60px);
+    }
+    & ul ul ul ul li, 
+    & ol ol ol ol li {
+        box-shadow: 0 0 12px var(--b-l-4);
+        clip-path: inset(0px 1px .2px -60px);
+    }
+    & ul ul ul ul ul li, 
+    & ol ol ol ol ol li {
+        box-shadow: 0 0 12px var(--b-l-5);
+        clip-path: inset(0px 1px .2px -60px);
+    }
+    & ul ul ul ul ul ul li, 
+    & ol ol ol ol ol ol li {
+        box-shadow: 0 0 10px var(--b-l-6);
+        clip-path: inset(0px 1px .2px -60px);
+    }
+}
+
+.bul-li-neon.bul-li-neon {
+    --neon: 0 0 5px; // 6px 0 12px
+    --neon-wide: -2px 0 10px; // -2px 0 20px
+
+    
+    & .cm-indent::before,
+    & :is(ul ul, ol ol)::before { 
+        border-color: var(--b-l-1);
+        box-shadow: var(--neon) var(--b-l-1), 
+                    var(--neon-wide) var(--b-l-1);
+    }
+    & .cm-indent:nth-child(2)::before,
+    & :is(ul ul ul, ol ol ol)::before { 
+        border-color: var(--b-l-2);
+        box-shadow: var(--neon) var(--b-l-2), 
+                    var(--neon-wide) var(--b-l-2); 
+    }
+    & .cm-indent:nth-child(3)::before,
+    & :is(ul ul ul ul, ol ol ol ol)::before { 
+        border-color: var(--b-l-3);
+        box-shadow: var(--neon) var(--b-l-3), 
+                    var(--neon-wide) var(--b-l-3); 
+    }
+    & .cm-indent:nth-child(4)::before,
+    & :is(ul ul ul ul ul, ol ol ol ol ol)::before { 
+        border-color: var(--b-l-4);
+        box-shadow: var(--neon) var(--b-l-4), 
+                    var(--neon-wide) var(--b-l-4); 
+    }
+    & .cm-indent:nth-child(5)::before,
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol)::before { 
+        border-color: var(--b-l-5);
+        box-shadow: var(--neon) var(--b-l-5), 
+                    var(--neon-wide) var(--b-l-5); 
+    }
+    & .cm-indent:nth-child(6)::before,
+    & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol)::before { 
+        border-color: var(--b-l-6);
+        box-shadow: var(--neon) var(--b-l-6), 
+                    var(--neon-wide) var(--b-l-6); 
+    }
+}
+

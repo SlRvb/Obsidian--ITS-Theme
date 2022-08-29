@@ -1,0 +1,12 @@
+
+/*Admonition*/
+body .admonition { 
+    border-radius: var(--radius);
+    box-shadow: 5px 5px var(--outline); 
+    background: var(--note);
+}
+body .is-live-preview .admonition {
+    margin: 0;
+}
+body .admonition-title { padding: 10px 15px; }
+body .admonition-content { padding: 0 0 0 5px; }

@@ -1,0 +1,26 @@
+
+
+/*Plugin: Templater*/
+.cm-s-obsidian .cm-templater-command.cm-property {
+    color: var(--text-muted) !important;
+}
+.cm-s-obsidian .cm-templater-command.cm-undefined {
+    color: var(--text-faint) !important;
+}
+.cm-s-obsidian .cm-templater-command.cm-variable {
+    color: var(--text-accent) !important;
+}
+.cm-s-obsidian .cm-templater-command.cm-string {
+    color: var(--text-normal) !important;
+}
+.cm-s-obsidian .cm-templater-command.cm-def {
+    color: var(--interactive-accent) !important;
+}
+.cm-s-obsidian .templater-inline .cm-templater-command {
+    background-color: transparent !important;
+    border-bottom: 3px solid var(--outline);
+}
+.cm-s-obsidian .cm-templater-command.cm-templater-execution-tag {
+    color: #bdba26 !important;
+    font-weight: 10 !important;
+}

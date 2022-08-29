@@ -1,0 +1,24 @@
+.text-spec .markdown-preview-view em {
+    font-family: var(--em-pre-f);
+    color: var(--em-pre-c);
+}
+.text-spec .cm-em {
+    font-family: var(--em-ed-f);
+    color: var(--em-ed-c);
+}
+.text-spec .markdown-preview-view strong {
+    font-family: var(--b-pre-f);
+    color: var(--b-pre-c);
+}
+.text-spec .cm-strong {
+    font-family: var(--b-ed-f);
+    color: var(--b-ed-c);
+}
+.text-spec .markdown-preview-view del {
+    font-family: var(--del-pre-f);
+    color: var(--del-pre-c);
+}
+.text-spec .cm-strikethrough {
+    font-family: var(--del-ed-f);
+    color: var(--del-ed-c);
+}

@@ -1,0 +1,30 @@
+
+/*--Scrollbars--*/
+/*Scrollbar*/
+body:not(.native-scrollbars) {
+    ::-webkit-scrollbar-thumb:active,
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-track {
+        border-radius: var(--radius);
+        -webkit-border-radius: var(--radius); /*Remove Rounding*/
+    }
+    ::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:active {
+        background-color: var(--lite-accent);
+    }
+    ::-webkit-scrollbar {
+        border: 0;
+        width: var(--scroll-size);
+        height: var(--scroll-size);
+    }
+}
+
+.scrl-d.theme-dark {
+    --scrollbar-bg: rgba(160, 214, 255, 0.07);
+    --scrollbar-thumb-bg: rgba(162, 191, 255, 0.13);
+}
+.scrl-d.theme-light {
+    --scrollbar-bg: rgba(134, 173, 218, 0.157);
+    --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);
+}

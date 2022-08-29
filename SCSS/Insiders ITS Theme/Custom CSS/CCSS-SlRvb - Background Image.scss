@@ -1,0 +1,101 @@
+.bg-image {
+    --bg-image-url: url();
+    --bg-img-h: 50%;
+    --bg-img-w: 50%;
+    --bg-blur: 11px;
+
+    --bg-shadow: var(--outline);
+    
+    --bg-opacity: 90%;
+    --bg-sd-opacity: var(--bg-opacity);
+    
+    // --scrollbar-bg: rgba(var(--note-rgb)) !important;
+
+    &.theme-light {
+        --bg-shadow: #0E0F1530;
+    }
+}
+
+//url("https://cdna.artstation.com/p/assets/images/images/002/461/976/large/mikhail-sharov-38-1920-2.jpg?1462011631")
+
+
+body.bg-image {
+    //Background Image
+    &:is(.theme-dark, .theme-light) .workspace {
+      background: var(--bg-image-url);
+      background-repeat: no-repeat;
+      background-position: var(--bg-img-w) var(--bg-img-h);
+      background-size: cover;
+    }
+    
+    //Background Image Blur
+    & .workspace-tab-header-container,
+    & .workspace > .workspace-leaf,
+    & .workspace-split.mod-root .view-content,
+    & .workspace-tabs .workspace-leaf 
+    { backdrop-filter: blur(var(--bg-blur)); }
+
+    // Note
+    & .kanban-plugin.kanban-plugin,
+    & .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
+    & .cm-editor .cm-contentContainer { 
+        background: rgba(var(--note-rgb), var(--bg-opacity));
+    }
+    & .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
+    & .cm-editor .cm-contentContainer {
+        height: auto;
+    }
+  
+    // Sidebars
+    & .workspace-tabs {
+        background: rgba(var(--note-rgb), var(--bg-sd-opacity));
+    }    
+
+
+    
+    // --- ---
+    // Transparent
+    & .kanban-plugin.kanban-plugin,
+    & .workspace > :is(.workspace-leaf, .workspace-split),
+    & .workspace-split.mod-root .view-content,
+    & .workspace-tab-header-container,
+    & .workspace-tabs .workspace-leaf,
+
+    //Theme Background Color Overrides
+    & :is(.markdown-preview-view, .markdown-source-view)
+    { background: transparent; }
+
+
+
+    // --- ---
+    //Note Padding Fixes
+    &:not(.is-mobile) {
+        & :is(
+            .markdown-preview-view,
+            .markdown-source-view.mod-cm6 .cm-scroller 
+        ) { 
+            padding-top: 0; 
+            padding-bottom: 0;
+        }
+        
+        & .markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
+        & .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
+            --padding: 10px;
+        
+            max-width: calc(var(--note-width) + var(--padding));
+            height: auto;
+            padding: 0 var(--padding);
+            box-shadow: 0 0 20px var(--bg-shadow);
+        }
+
+    }
+    
+    //height 100%
+    & .workspace-leaf-content { justify-content: center; } 
+    
+    //Undo
+    & .markdown-embed-content .markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
+    & .popover.popover .markdown-preview-section {
+        box-shadow: unset;
+    }
+}

@@ -1,0 +1,108 @@
+/*CSS class, Hide Frontmatter*/
+.no-m .frontmatter-container,
+.reveal pre.frontmatter {
+    display: none;
+}
+
+/*Justify text*/
+.justified {
+    & .markdown-preview-section,
+    & .cm-s-obsidian,
+    &.markdown-preview-view,
+    &.cm-s-obsidian 
+    { text-align: justify; }
+}
+
+/*Readable Text Width.*/ /*Thanks @foreveryone*/
+.markdown-preview-view.readable .markdown-preview-sizer {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Center*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Poems*/
+.poem p {
+    text-align: center;
+    line-height: 1.3em;
+    margin-block-end: 4%;
+}
+
+/*Spaced Lists*/
+.s-li li {
+    margin-top: 10px;
+}
+
+
+/*Unclear Asides*/
+#un-c,
+.un-c {
+    clear: none;
+}
+
+#col {
+    display: block;
+    width: 100%;
+    padding-bottom:100%; 
+}
+
+#font {
+    display: block;
+    text-decoration: unset;
+    text-align: center;
+    font-size: 7rem;
+    line-height: 1em;
+}
+
+/* Video w/ Aspect Ratio: <div><iframe></iframe></div> */
+#vid {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+#vid iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/*--chbx-Recall--*/
+.recall { 
+    text-decoration: unset;
+    color: transparent;
+    text-shadow: 0 0 10px var(--text-normal);
+}
+.recall:hover {
+    color: var(--text-normal);
+    text-shadow: 0 0 0px var(--text-normal);
+}
+
+
+
+
+/*Hide Bullet List Line*/
+.h-b-li {
+    & li { border: none !important; }
+    
+    //Alternate Checkbox Aligment Adjustments
+    & li.task-list-item-checkbox,
+    & li.task-list-item input[type=checkbox]
+    { margin-right: 5px; }
+    
+    & ul > li.task-list-item .task-list-item-checkbox 
+    { margin-left: -21px; }
+    & li.task-list-item {
+        padding-left: 2px;
+        margin-left: 3px;
+        margin-right: 0px;
+    }
+} 

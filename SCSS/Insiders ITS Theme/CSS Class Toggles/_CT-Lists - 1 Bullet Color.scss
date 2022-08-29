@@ -1,0 +1,13 @@
+
+/*Single Bullet/1 Bullet Color*/
+.bl-c.bl-c {
+    & ol li::marker,
+    & li::before { color: var(--accent2); }
+    &li { border-color: var(--accent2); }
+}
+
+.ind-accent.theme-dark,
+.ind-accent.theme-light {
+    --indentation-guide: var(--accent);
+    --indentation-guide-active: var(--headers);
+}

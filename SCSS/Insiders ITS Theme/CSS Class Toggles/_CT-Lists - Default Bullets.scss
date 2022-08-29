@@ -1,0 +1,18 @@
+/*Default Bullets*/
+.def-bull {
+    --bullet: "•";
+
+    & .kanban li:before {
+        visibility: hidden;
+    }
+    
+    & .markdown-source-view.mod-cm6 .list-bullet::after,
+    & ul li:before,
+    & .cm-s-obsidian:not(.mod-cm6) span.cm-formatting-list-ul::before {
+        font-size: 20px;
+        font-family: 'Inter';
+    }
+}
+.def-bull ul li:nth-child(even):before {
+    color: var(--accent);
+}

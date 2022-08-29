@@ -1,0 +1,37 @@
+.writing-document:not(.is-mobile) {
+    & .markdown-source-view.mod-cm6 .cm-scroller {
+        padding: 0;
+    }
+    & .is-live-preview .HyperMD-header::before {
+        margin-left: -10px;
+        margin-right: 15px;
+    }
+    
+    /* Fix embeds */
+    & div:not(.workspace-tabs):not(.markdown-embed-content) > :is(.markdown-preview-view, .cm-editor):not(.kanban-plugin__markdown-preview-view):not(.BC-Matrix):not(.community-plugin-readme) {
+        background: var(--td);
+        padding: 0;
+    }
+
+    & :not(.markdown-embed-content) .markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
+    & .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
+        --padding: 10px;
+        
+        background: var(--note, var(--background-primary));
+        box-shadow: 0 0 20px var(--outline, var(--background-box-shadow));
+        max-width: calc(var(--note-width) + var(--padding));
+        height: auto;
+        padding: 0 var(--padding);
+    } 
+
+
+    /* Embed */
+    .markdown-embed.markdown-embed.markdown-embed .markdown-preview-section {
+        padding: unset;
+        box-shadow: unset;
+    }
+
+    /* .markdown-preview-section { min-height: 100% !important; } */
+}
+
+

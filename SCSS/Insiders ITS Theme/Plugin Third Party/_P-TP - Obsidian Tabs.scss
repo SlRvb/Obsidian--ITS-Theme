@@ -1,0 +1,20 @@
+
+/*--Obsidian Tabs Plugin--*/
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf {
+    border-radius: var(--radius) !important;
+    border: 0 !important;
+    max-width: unset !important;
+}
+/*Tab Numbers*/
+.view-header .view-header-title::before {
+    background-color: var(--embed-bg) !important;
+    color: var(--soft-text);
+}
+.plugin-tabs .view-header-icon, 
+.plugin-tabs .mod-active .view-header-title::before {
+    background-color: transparent !important;
+}
+.plugin-tabs:not(.plugin-sliding-panes) .view-actions {
+    margin-top: -.05em;
+}

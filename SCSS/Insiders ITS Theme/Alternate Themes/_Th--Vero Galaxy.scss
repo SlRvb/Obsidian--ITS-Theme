@@ -1,0 +1,158 @@
+.theme-dark.u-vglxy, .theme-light.u-vglxy {
+    --font: 'Inter';
+    --f-w-h: 900;
+    --hr-sym: "\2605";
+}
+
+.theme-dark.u-vglxy {
+    --background-primary: var(--note);
+    /*Note background*/
+    --background-primary-alt: var(--outer-bar);
+    /*Note Title background active*/
+    --background-secondary: var(--side-bar);
+    /*Sidebar background*/
+    --background-secondary-alt: var(--outer-bar);
+    /*Sidebar Title background*/
+    --background-modifier-border: var(--table);
+    /*Border outline of quotes, tables, line breaks*/
+    --background-modifier-form-field: rgba(0, 0, 0, 0.3);
+    /*Search Field Bg Color*/
+    --background-modifier-form-field-highlighted: rgba(207, 84, 172, 0.22);
+    /*Searched Highlight Color, modal backdrop*/
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+    /*Obsidian Title Bar Bg*/
+    --text-on-accent: #B8ABD1;
+    /*Program Title bar Text, selected icon in sidebar*/
+    --text-muted: var(--soft-text);
+    /*Text darker for sidebar, toggles, inactive, tags, etc*/
+    --text-normal: var(--text);
+    /*Text body of note*/
+    --text-accent: var(--accent2-lite);
+    /*Links*/
+    --text-accent-hover: var(--accent);
+    /*Links hover*/
+    --text-faint: #565F8F;
+    /*Link brackets color & Gutter Numbers*/
+    --text-error: #e9363f;
+    --text-error-hover: #920b14;
+    --text-highlight-bg: rgba(46, 20, 74, 0.4);
+    /*Text highlights, not used much*/
+    --text-highlight-bg-active: rgba(86, 45, 103, 0.4);
+    /*Searched Result Highlight, graph focused, not used much*/
+    --text-selection: rgba(111, 74, 136, 0.4);
+    /*Cursor dragged highlights - pretty visible*/
+    --interactive-normal: var(--dark-accent);
+    /*Button Color*/
+    --interactive-hover: var(--embed-bg);
+    /*Button Color*/
+    --interactive-accent: var(--accent);
+    /*Workspace Note Title Underline*/
+    --interactive-accent-rgb: 207, 84, 172;
+    /*Publish item select*/
+    --interactive-accent-hover: var(--dark-accent);
+    
+    --highlight-mix-blend-mode: lighten;
+
+    /*--DEFAULT VARIABLES--*/
+    /*Compatibility Color Recoloring*/
+    --deep-dark-accent: #2E144A; /*Obsidian Title Bar, used in first column of this notation [Lines:: Testing] */
+    --dark-accent: #40245f; /* main accent (tag, etc.), header 2, pretty visible */
+    --lite-accent: #C09CDB; /*Menu Button Hover, link hover in preview, other hovers*/
+    --accent: #6F4A88; /* main accent - less present than 10 but still a lot */
+    --accent2: #5654B2; /* secondary accent, mostly used in bullets */
+    --accent2-lite: #D9AF69; /*Links*/
+    --bg: #212C44; /* background of inputs, blockquotes (border), etc */
+    --fg: #C8BDDB; /* graph node, selected file name, etc */
+    --side-bar: var(--note);
+    --outer-bar: #04040B; /* secondary background, also of i for image description */
+    --dark-sidebar: #040410; /* resize bar */
+    --inactive: #8087B3; /* inactive note titlebar, other inactives */
+    --outline: var(--outer-bar);
+    --folder: #6F4A88; /* secondary folder color */
+    --file: #D8CFDE; /* secondary text color, like the sidebar texts, common */
+    --f-icon: var(--inactive);
+    --f-hover: var(--accent);
+    --lines: var(--hr);
+    --note: #0C0C1D; /* note background */
+    --text: #C9C2D6; /* note text */
+    --headers: #856EAF; /* folder/headers color */
+    --soft-text: var(--file);
+    --code-text: #C95DAA; /* text of code */
+    --footnote: #434D63; /* footnote, hN at headings */
+    --code-bg: #1C0E2A; /* background of code */
+    --embed-bg: var(--dark-sidebar);
+    --aside-bg: #1C0E2A; /* background of aside */
+    --th: var(--dark-accent);
+    --td: #03030860; /* dropshadow, table cell */
+    --hvr: var(--text-highlight-bg);
+    --hvr2: var(--text-selection);
+    --tag: var(--dark-accent);
+    --table: #2E144A; /*Border outline of quotes, tables, line breaks*/
+    --hr: #565F8F; /* hr, checked task text */
+    --i-at: #666FA3; /*I text used for image description, em is just regular italics*/
+    --bttn: var(--dark-accent);
+    --graph-bg: var(--outer-bar);
+    --graph-lines: var(--dark-accent);
+    --graph-node: var(--fg);
+    --graph-fill: var(--headers);
+    --graph-404: #434D63; /* graph nonexisting note */
+    --graph-img: #5654B2; /* graph attachment note */
+    --graph-tag: var(--headers);
+    --graph-focused: var(--text-highlight-bg-active);
+
+    /*CSS Specifics*/
+    --b-l-1: var(--sphd-pre-1);
+    --b-l-2: var(--sphd-pre-2);
+    --b-l-3: var(--sphd-pre-3);
+    --b-l-4: var(--sphd-pre-4);
+    --b-l-5: var(--sphd-pre-5);
+    --b-l-6: var(--sphd-pre-6);
+    
+    --sphd-pre-1: #5654B2; /* header 1 */
+    --sphd-pre-2: var(--dark-accent);
+    --sphd-pre-3: #5C497E; /* header 3 */
+    --sphd-pre-4: #8D4A7A; /* header 4 */
+    --sphd-pre-5: #58395E; /* header 5 */
+    --sphd-pre-6: #565F8F; /* header 6 */
+    --sphd-ed-1: var(--sphd-pre-1);
+    --sphd-ed-2: var(--sphd-pre-2);
+    --sphd-ed-3: var(--sphd-pre-3);
+    --sphd-ed-4: var(--sphd-pre-4);
+    --sphd-ed-5: var(--sphd-pre-5);
+    --sphd-ed-6: var(--sphd-pre-6);
+    --em-pre-c: var(--text);
+    --em-ed-c: var(--text);
+    --b-pre-c: var(--text);
+    --b-ed-c: var(--text);
+    --del-pre-c: var(--text);
+    --del-ed-c: var(--text);
+}
+
+body.u-vglxy .cm-s-obsidian .cm-hmd-frontmatter.cm-atom, 
+body.u-vglxy .cm-s-obsidian .cm-math.cm-atom, 
+body.u-vglxy .cm-s-obsidian pre.HyperMD-codeblock .cm-atom {
+    color: var(--code-text);
+}
+
+body.u-vglxy .cm-s-obsidian .cm-hmd-frontmatter.cm-def, 
+body.u-vglxy .cm-s-obsidian .cm-math.cm-def, 
+body.u-vglxy .cm-s-obsidian pre.HyperMD-codeblock .cm-def {
+    color: var(--hr);
+}
+
+.u-vglxy .copy-code-button {
+    background-color: var(--deep-dark-accent);
+}
+
+.u-vglxy .setting-item:not(.setting-item-heading):nth-child(even) {
+    background-color: var(--td);
+}
+
+.u-vglxy pre > code, 
+.u-vglxy .markdown-preview-view pre > code {
+    display: block;
+}
+
+.u-vglxy .nav-file-title .nav-file-title-content::before {
+    color: var(--f-icon);
+}

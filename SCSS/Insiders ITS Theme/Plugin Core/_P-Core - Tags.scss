@@ -1,0 +1,57 @@
+
+/*--Tag Pane--*/
+.workspace-leaf.mod-active .tree-item.has-focus > .tag-pane-tag {
+    border-radius: var(--radius);
+    background-color: var(--text-highlight-bg);
+
+    & .tag-pane-tag-text:before,
+    & .collapse-icon { color: var(--text); font-weight: bold; }
+}
+
+/*Text*/
+.tree-item-self {
+    color: var(--soft-text);
+    border-radius: var(--radius);
+}
+.tag-container .tree-item-self:hover {
+    color: var(--accent);
+    font-weight: 600;
+    background: var(--outline);
+}
+
+/*Count Squared*/
+.tree-item-self.tag-pane-tag {
+    display: flex;
+    align-items: center;
+}
+.tree-item-flair {
+    border-radius: var(--radius);
+    box-shadow: 0 1px var(--outline);
+}
+
+/*Tag Pane Lines*/
+.tag-container .tree-item-children {
+    margin-left: .7em;
+    border-left: 1px solid var(--lines);
+    transition: all 0.5s ease-in-out;
+    padding: 0;
+}
+/*Remove Dot*/
+.tag-container .tree-item-children > div:first-child { display: none; }
+
+.tag-container .tree-item-children:hover {
+    border-left: 1px solid var(--accent);
+}
+
+/*Add # For Tag Pane*/
+/*From California Coast.*/
+.tag-pane-tag-text:before {
+    content: "#";
+    padding-right: 1.3em;
+    position: relative;
+    margin: -1em;
+    color: var(--headers);
+}
+.collapse-icon + .tree-item-inner > .tag-pane-tag-text:before {
+    content: none;
+}

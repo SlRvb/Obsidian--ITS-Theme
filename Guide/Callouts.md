@@ -60,6 +60,41 @@
 | `alt-co` | Alternate Callout Styling, use callout color as background color
 | `co-ttl-ctr` | Center callout titles
 
+## Colors
+
+| Abbr. | Full Title | Description |
+| --- | --- | --- |
+| `c-` | `color-` | Change callout title color |
+| `bg-` | `background-` | Change callout background color |
+| `bg-c-` | `background-color-` | Change callout title and background color |
+
+- **Colors:**
+	- purple
+	- blue
+	- green
+	- red
+	- pink
+	- orange
+	- yellow
+	- gray
+
+**Syntax:**
+```markdown
+> [!recite|color-blue]
+
+> [!recite|background-blue]
+
+> [!recite|background-color-blue]
+```
+
+```markdown
+> [!recite|c-purple]
+
+> [!recite|bg-purple]
+
+> [!recite|bg-c-purple]
+```
+
 # Formatting
 
 ## Infoboxes

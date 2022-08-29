@@ -208,32 +208,32 @@ body .callout.callout.callout:is([data-callout-metadata~="nmg"], [data-callout-m
     //Background Colors
     &:is(
         [data-callout-metadata~="background-blue"], [data-callout-metadata~="bg-blue"],[data-callout-metadata~="background-color-blue"], [data-callout-metadata~="bg-c-blue"]
-    ) { background-color: rgba(var(--callout-blue), 20%); }
+    ) { background-color: rgba(var(--callout-blue), 10%); }
     &:is(
         [data-callout-metadata~="background-green"], [data-callout-metadata~="bg-green"],[data-callout-metadata~="background-color-green"], [data-callout-metadata~="bg-c-green"]
-    ) { background-color: rgba(var(--callout-green), 15%); }
+    ) { background-color: rgba(var(--callout-green), 10%); }
 
     &:is(
         [data-callout-metadata~="background-orange"], [data-callout-metadata~="bg-orange"],[data-callout-metadata~="background-color-orange"], [data-callout-metadata~="bg-c-orange"]
-    ) { background-color: rgba(var(--callout-orange), 20%); }
+    ) { background-color: rgba(var(--callout-orange), 10%); }
 
     &:is(
         [data-callout-metadata~="background-red"], [data-callout-metadata~="bg-red"],[data-callout-metadata~="background-color-red"], [data-callout-metadata~="bg-c-red"]
-    ) { background-color: rgba(var(--callout-red), 15%); }
+    ) { background-color: rgba(var(--callout-red), 10%); }
 
     &:is(
         [data-callout-metadata~="background-purple"], [data-callout-metadata~="bg-purple"],[data-callout-metadata~="background-color-purple"], [data-callout-metadata~="bg-c-purple"]
-    ) { background-color: rgba(var(--callout-purple), 15%); }
+    ) { background-color: rgba(var(--callout-purple), 10%); }
 
     &:is(
         [data-callout-metadata~="background-gray"], [data-callout-metadata~="bg-gray"],[data-callout-metadata~="background-color-gray"], [data-callout-metadata~="bg-c-gray"]
-    ) { background-color: rgba(var(--callout-gray), 15%); }
+    ) { background-color: rgba(var(--callout-gray), 10%); }
     &:is(
         [data-callout-metadata~="background-yellow"], [data-callout-metadata~="bg-yellow"],[data-callout-metadata~="background-color-yellow"], [data-callout-metadata~="bg-c-yellow"]
-    ) { background-color: rgba(var(--callout-yellow), 20%); }
+    ) { background-color: rgba(var(--callout-yellow), 10%); }
     &:is(
         [data-callout-metadata~="background-pink"], [data-callout-metadata~="bg-pink"],[data-callout-metadata~="background-color-pink"], [data-callout-metadata~="bg-c-pink"]
-    ) { background-color: rgba(var(--callout-pink), 20%); }
+    ) { background-color: rgba(var(--callout-pink), 10%); }
 }
 
 

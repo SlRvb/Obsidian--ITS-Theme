@@ -64,7 +64,7 @@
 
 | Abbr. | Full Title | Description |
 | --- | --- | --- |
-| `c-` | `color-` | Change callout title color |
+| `c-` | `color-` | Change callout title/border color |
 | `bg-` | `background-` | Change callout background color |
 | `bg-c-` | `background-color-` | Change callout title and background color |
 

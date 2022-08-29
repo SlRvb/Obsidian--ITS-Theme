@@ -7,14 +7,14 @@
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content
 { border-radius: var(--radius);}
 
-.workspace-tabs .workspace-leaf.mod-active { 
-    border: 1px solid var(--accent);
-    margin-right: 1px;
-}
-.workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
-    margin-right: 1px;
-    margin-left: 3px;
-}
+// .workspace-tabs .workspace-leaf.mod-active { 
+//     border: 1px solid var(--accent);
+//     margin-right: 1px;
+// }
+// .workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
+//     margin-right: 1px;
+//     margin-left: 3px;
+// }
 
 /*Recolor Top*/
 .workspace-tabs,

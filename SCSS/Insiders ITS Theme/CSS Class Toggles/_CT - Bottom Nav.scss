@@ -1,0 +1,31 @@
+
+.btm-nav .nav-header {
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    z-index: 2;
+    width: 100%;
+    justify-content: center;
+}
+.btm-nav .nav-header .nav-buttons-container {
+    padding: 2px 0;
+    align-items: center;
+    background: var(--note);
+    border: 2px solid var(--outline);
+    box-shadow: 4px 4px 5px var(--outline);
+    width: fit-content;
+}
+
+.btm-nav .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root,
+.btm-nav .workspace-tabs .workspace-leaf-content .view-content,
+.btm-nav .workspace-tabs .tag-container,
+.btm-nav .workspace-tabs .search-result-container.mod-global-search {
+    margin-bottom: 80px;
+    background: var(--side-bar);
+    box-shadow: 4px 4px 5px var(--outline);
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.btm-nav .nav-files-container { background: var(--outer-bar); }
+

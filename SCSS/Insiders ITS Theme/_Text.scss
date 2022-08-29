@@ -1,0 +1,151 @@
+
+.markdown-preview-view { height: 100%; }
+
+
+/*Editor Line Numbers*/
+.markdown-source-view.mod-cm6 .cm-gutters,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber {
+    box-sizing: content-box;
+    font-family: var(--font-monospace);
+    text-align: right;
+    background: transparent;
+}
+
+
+/*Note Text Adjustments*/
+.cm-s-obsidian .CodeMirror-line,
+.cm-s-obsidian .cm-line,
+.markdown-preview-section {
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: none;
+    // font-family: var(--default-font);
+    line-height: var(--lh);
+    color: var(--text-normal);
+    z-index: 0 !important;
+}
+/*Comments*/
+.cm-comment,
+.cm-comment + .cm-url,
+.cm-formatting-link-string {
+    font-family: var(--font-monospace);
+}
+
+/*Fix Cursor Highlight*/
+.is-mobile .CodeMirror-selected,
+.CodeMirror-selected,
+.CodeMirror-selected.is-mobile {
+    z-index: 3 !important;
+}
+.CodeMirror .CodeMirror-line,
+.CodeMirror .CodeMirror-line-like {
+    z-index: 0;
+}
+/*Font Sizes*/
+p,
+li,
+table, 
+.markdown-preview-section code,
+.cm-s-obsidian .CodeMirror-lines,
+.cm-s-obsidian .cm-line:not(.HyperMD-codeblock):not(.HyperMD-header) {
+    font-size: var(--f-s-text);
+    font-weight: var(--f-w-t);
+	font-optical-sizing: auto;
+}
+strong { font-weight: 900; }
+
+
+
+/*-Code-*/
+:is(.theme-dark, .theme-light) :not(pre) > code[class*="language-"],
+:is(.theme-dark, .theme-light) pre[class*="language-"],
+.markdown-rendered code,
+code,
+.markdown-preview-view code,
+.markdown-preview-view pre {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    border-radius: var(--radius);
+    
+    line-height: 1.4em;
+    font-size: var(--f-s-code);
+    font-family: var(--font-monospace);
+    
+    overflow: auto;
+    z-index: 0 !important;
+}
+.unwrap-codeblock .markdown-preview-view code {
+    white-space: pre;
+}
+
+/*Apply Dropshadow*/
+.markdown-preview-view pre,
+.markdown-preview-view pre[class*="language-"],
+.markdown-preview-view code,
+.cm-s-obsidian pre.HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code {
+    box-shadow: 0 .2em #00000010;
+}
+
+.markdown-preview-view pre,
+.markdown-preview-view pre[class*="language-"],
+.markdown-preview-view code {
+    border: 1px solid var(--td);
+}
+
+/*Hide box shadow inside codeblock*/
+.markdown-preview-view pre > code {
+    box-shadow: none;
+}
+
+/*Editor Code*/
+.cm-s-obsidian pre.HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.cm-s-obsidian div.HyperMD-codeblock-bg,
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    border-radius: var(--radius);
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    font-family: var(--font-monospace);
+    z-index: 0 !important;
+    text-align: left; /*Fix Codeblock Justify Error*/
+}
+/*Hide weird Tokening BG Coloring
+.token.operator {
+    color: var(--headers) !important;
+    background: transparent !important;
+}*/
+
+/*.is-live-preview .cm-line:not(.cm-active) .cm-inline-code { padding: 2px 4px; }*/
+
+
+
+/*--Latex Math--*/
+.MJX-TEX { 
+    font-size: 130%;
+    color: var(--lite-accent);
+}
+/*Math Block Margin Reduction*/
+mjx-container[jax="CHTML"][display="true"] {
+    margin: 3% 0 !important;
+}
+/*Math Editor $$ and Text*/
+.cm-s-obsidian span.cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder {
+    color: var(--accent2-lite);
+    font-style: normal;
+}
+/*Math Editor Text*/
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end){
+    color: var(--headers);
+}
+
+/*Hide Collapsed Header Line
+.CodeMirror-linebackground {
+    margin-bottom: 2em;
+}*/
+
+

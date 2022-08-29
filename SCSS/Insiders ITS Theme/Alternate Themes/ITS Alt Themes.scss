@@ -1,0 +1,24 @@
+@use 'Style Settings' as StSe;
+@use 'Fonts';
+
+
+// Alternate Themes
+@use 'Th--D&D' as DND;
+@use 'Th--D&D WOTC-Beyond' as WOTC-Beyond;
+@use 'Th--D&D WOTC' as WOTC;
+@use 'Th--SlRvb Blue' as sblue;
+@use 'Th--SlRvb Gray' as sGray;
+@use 'Th--School Days' as sd;
+@use 'Th--Tangerine Dunes' as td;
+@use 'Th--Drowned';
+@use 'Th--Notion';
+@use 'Th--Notion-Dataview';
+@use 'Th--Minimalist';
+@use 'Th--ITS Dark' as itsd;
+
+// User Submitted Themes
+//@use 'Th--Vero Galaxy' as vGlxy;
+
+/* Alternate Color Schemes*/
+@use 'Th--Nord';
+//@use 'Th--Dracula' as Dracula;

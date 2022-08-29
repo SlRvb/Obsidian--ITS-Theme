@@ -1,0 +1,166 @@
+.advt {
+    --font: "Quicksand";
+    --f-w-h: 900;
+
+    --link-f: var(--font);
+    --f-w-l: 700;
+    --f-w-tag: 600;
+}
+.theme-dark.advt,
+.theme-dark .advt {
+    background: var(--note);
+    color: var(--text);
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+
+    --background-modifier-form-field-highlighted: rgba(254, 160, 71, 0.427);
+
+    --text-selection: rgba(241, 173, 105, 0.25);
+    //--text-highlight-bg: rgba(212, 173, 74, 0.56);
+    --text-highlight-bg-active: rgba(255, 187, 124, 0.4);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    --interactive-normal: var(--outer-bar);
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--accent);
+    --interactive-accent-hover: var(--dark-accent);
+
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--tag);
+
+    --text-faint: #886b5e;
+
+
+    // ITS Variables
+    --adcs:    #7bad88; /*#6eca85*/
+    --adcs-2:  #614d3e; /*#5c3e2a*/
+    --adcs-3:  #fc9c42; /*#f54d4d*/
+    --adcs-hr: #8f3434; /*#c06714*/
+
+
+    --note: #392f2b;
+    --outer-bar: #292321;
+    --side-bar: var(--note);
+    //--outer-bar: var(--side-bar);
+    //--side-bar: #292321;
+    // --side-bar-bg: #100c0b;
+    --code-bg: var(--aside-bg);
+    --dark-sidebar: #1d1714;
+
+    --headers: #7bad88;
+    --th: #63816d;
+    
+    // --accent: #bb4040;
+    --accent: #ad4646;
+    --tag: #8f3434;
+    --accent2-lite: #e39b59;
+    --accent2: var(--hr);
+    --bttn: #964242;
+    --dark-accent: #0f0c0b;
+
+    --bg: var(--hr);
+    --table: var(--hr);
+    --hr: #614d3e;
+    --inactive: var(--hr);
+    --td: #29232170;
+    --outline: #100c0b;
+
+    --footnote: #886b5e;
+    --soft-text: #a78a7d;
+    --code-text: #fc9c42;
+
+    --embed-bg: var(--outer-bar);
+    // --aside-bg: #382d28;
+    --aside-bg: #312824;
+    
+
+    --scrollbar-bg: #292321;
+    --scrollbar-thumb-bg: var(--hr);
+
+    --indentation-guide: var(--table);
+    --indentation-guide-active: var(--accent);
+}
+.theme-light.advt,
+.theme-light .advt {
+    --background-primary: var(--note);
+
+    --background-modifier-form-field-highlighted: rgba(249, 133, 25, 0.295);
+
+    --text-selection: rgba(241, 173, 105, 0.25);
+    //--text-highlight-bg: rgba(212, 173, 74, 0.56);
+    --text-highlight-bg-active: rgba(255, 187, 124, 0.4);
+
+    --text-normal: var(--text); 
+    --text-faint: var(--soft-text);
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    --interactive-normal: var(--outer-bar);
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--accent);
+    --interactive-accent-hover: var(--dark-accent);
+    
+    background: var(--note);
+    color: var(--text);
+
+    --adcs:  #6eca85;
+    --adcs-2:  #83644f;
+    --adcs-3:  #fc9637;
+    --adcs-hr: #f54d4d;
+    
+    --note: #6e5849;
+    --outer-bar: #503d35;
+    --outline: #4e3a31;
+    --embed-bg: #58433a;
+    --bg: #796258;
+    --dark-sidebar: #46342e;
+    --aside-bg: #614d3f;
+    --code-bg: #624a40;
+
+    --accent: #6eca85;
+    --lite-accent: #f0db9e;
+    --accent2: #bf5e5e;
+    --dark-accent: #5d4738; //#83644f
+    --bttn: #c5864b;
+    
+    --table: #5e463d;
+    --lines: #a87d68;
+    
+    --text: #eeeae8;
+    --soft-text: #c0a195;
+    --headers: #aadb7f;
+    --code-text: var(--headers);
+    --accent2-lite: #ffb765;
+    --footnote: #9c796b;
+    --inactive: var(--footnote);
+    
+    --f-icon: #ad8271;
+    --file: var(--text);
+
+    --i-at: #f7d26b;    
+    --td: #49383170;
+    --th: #739258;
+    --hr: var(--table);
+
+    --scrollbar-bg: #9d755580;
+    --scrollbar-thumb-bg: var(--accent);
+    
+    --indentation-guide: var(--lines);
+    --indentation-guide-active: var(--accent);
+
+    --ch-class: #fc9637;
+    --ch-delimiter: var(--lines);
+    --ch-num: var(--accent);
+    --ch-keyword: var(--lite-accent);
+    --ch-string: var(--headers);
+
+}

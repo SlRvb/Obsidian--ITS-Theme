@@ -1,0 +1,62 @@
+
+/*Different/Alternate Checkbox*
+input[type=checkbox]:checked::before {
+    padding-left: .2em;
+    font-family: var(--its, var(--font-monospace));
+    color: var(--soft-text);
+    font-weight: 10;
+}
+
+/*CodeMirrorOptions Plugin Support*
+body.theme-dark.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task,
+body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task { filter: unset; }
+
+.hmd-inactive-line .cm-formatting-task {
+    margin-right: -10px;
+}
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task::before {
+    position: absolute;
+    content: " ";
+    font-family: var(--its);
+    border: 1px solid var(--accent, var(--interactive-accent));
+    height: .9em;
+    width: .9em;
+    margin-top: .3em;
+    margin-left: .25em;
+    font-weight: 10;
+}
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task:not([data-task=" "]):not([data-task="x"])::before {
+    border: none;
+}
+.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="x"]::before { 
+    background: var(--accent, var(--interactive-accent)); 
+}
+
+
+/*Live Preview Styling*/
+.markdown-source-view.mod-cm6 span[data-task]:not([data-task=" "]),
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=' ']),
+.markdown-source-view.mod-cm6 span:not(.cm-link):not(.cm-inline-code) span[data-task='x'] {
+    font-weight: bold;
+    color: var(--lines, var(--text-muted));
+}
+.markdown-source-view.mod-cm6 .cm-link span[data-task='x'],
+.markdown-source-view.mod-cm6 .cm-inline-code span[data-task='x'] { opacity: 50%; }
+
+/* Check Background Styling */
+.check-bg ul li:not([data-task=" "]).task-list-item.is-checked,
+.check-color ul li:not([data-task=" "]).task-list-item.is-checked {
+    color: var(--text, var(--text-normal));
+    margin-bottom: 5px;
+}
+body.check-bg:not(.chkbx-strike) li.task-list-item.is-checked > a,
+body.check-bg:not(.chkbx-strike) li.task-list-item.is-checked > code {
+    opacity: unset;
+}
+
+/* Checkbox Text Normal */
+body.check-text.check-text .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task],
+body.check-text.check-text ul li:not([data-task="x"]).task-list-item.is-checked {
+    color: var(--text-normal);
+    font-weight: unset;
+}

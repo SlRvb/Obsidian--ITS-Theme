@@ -1,0 +1,173 @@
+
+/*--List--*/
+.cm-s-obsidian .HyperMD-list-line { padding-top: 0; }
+
+/*Colored List Markers*/
+li::marker,
+.cm-s-obsidian:not(.mod-cm6) .cm-formatting-list-ul.cm-formatting-list,
+.list-bullet {
+    color: transparent;
+}
+/*Lighten Numbered List Marker Color*/
+ol > li::marker { color: var(--headers); }
+
+/*Bullet Shape*/
+//Fix Bullet Disappearing with ul { columns css }
+// ul:nth-child(odd), ul:nth-child(even) {
+//     list-style-type: none;
+// }
+
+
+ul > li::before {
+    content: var(--bullet);
+    font-family: var(--bul-f);
+    margin-left: -22px;
+    color: var(--accent);
+    position: relative; /*For Spaced Lists*/
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: var(--f-text);
+}
+ul > li:nth-child(even)::before { color: var(--accent2); }
+
+
+
+li.task-list-item::before,
+.markdown-preview-view ol > li::before {
+    visibility: collapse;
+}
+ol ul > li::before { visibility: visible; }
+
+// Right to Left
+.rtl ul li::before {
+    float: right;
+    margin-left: unset;
+    margin-right: -22px;
+}
+
+
+/*Smaller Indentation*/
+ul, ol { 
+    padding-inline-start: 25px;
+}
+// Checkbox Alignment Fix
+ul > li.task-list-item .task-list-item-checkbox { margin-left: -26px; }
+.markdown-preview-view ol > li.task-list-item { padding-left: 10px; }
+
+
+
+
+/* Spaced Lists: Fix breaking when Space in between Lists*/
+:is(ul, ol) li.task-list-item > p { margin-block-end: unset; }
+:is(ul, ol) li > p { margin-block-end: unset; }
+
+// .markdown-preview-view .task-list-item-checkbox.task-list-item-checkbox,
+// .task-list-item input[type=checkbox], li.task-list-item {
+//     margin-right: .3em;
+// }
+
+
+/*Editor Bullet Points*/
+.markdown-source-view.mod-cm6 .list-bullet::after,
+.cm-s-obsidian span:is(.cm-formatting-list-ul, .cm-formatting-list-ol)::before {
+    color: var(--soft-text);
+}
+/*List Adjustment*/
+.markdown-source-view.mod-cm6 .list-bullet::after,
+.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
+    content: var(--bullet);
+    font-family: var(--bul-f);
+    margin-right: -11px;
+}
+
+
+.markdown-source-view.mod-cm6 {
+    // Live Preview List Alignment
+    &:not(.is-rtl) .list-bullet::after { 
+        padding-left: 0; 
+        margin-right: 0; 
+    }
+    &.is-live-preview .list-bullet { 
+        padding-right: .45em; 
+    }
+    
+    // Source Mode List Fix
+    &:not(.is-live-preview) .list-bullet { 
+        padding-right: .55em; 
+    }
+}
+
+//Numbered Checklist
+.markdown-rendered.show-indentation-guide ol li.task-list-item > ol::before {
+    left: -20px;
+}
+
+/*Adjust Padding*/
+.cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol { 
+    margin-left: 0; 
+}
+.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol { 
+    padding-right: .3em; 
+}
+// Fix for Numbered Lists sub ol with numbered checkbox
+ol.contains-task-list li > .task-list-item-checkbox {
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+/*Lines*/
+
+/*Preview Bullet Lines*/
+.markdown-source-view.mod-cm6,
+.show-indentation-guide {
+    & .cm-indent::before,
+    &.markdown-rendered li > :is(ul, ol)::before {
+        border-width: var(--b-line);
+    }
+}
+.markdown-source-view.mod-cm6.markdown-rendered li > :is(ul, ol)::before {
+    z-index: -1;
+}
+.markdown-source-view.mod-cm6 .cm-indent::before {
+   margin-left: .35em;
+   width: 0;
+}
+
+
+/*Bullet Line New*/
+li {
+    padding-left: 5px;
+    border-left: var(--b-line) solid var(--accent);
+    line-height: var(--lh);
+    color: var(--text-normal);
+    font-weight: initial;
+}
+li:nth-child(even) {
+    border-left: var(--b-line) solid var(--accent2);
+}
+
+/*List Arrows*/
+.markdown-preview-view ul .list-collapse-indicator {
+    padding-left: 1em;
+    color: var(--soft-text);
+}
+.snug-bul-arrow:not(.is-mobile) .is-live-preview .HyperMD-list-line.HyperMD-list-line.HyperMD-list-line:not(.HyperMD-task-line) .collapse-indicator {
+    padding-right: 0;
+    margin-right: -2px;
+}
+.markdown-preview-view ol .list-collapse-indicator {
+    padding-left: .5em;
+    position: relative;
+}
+ol li:nth-child(n+10):nth-child(-n+99) > .list-collapse-indicator {
+    padding-left: 0em;
+}
+ol li:nth-child(n+100):nth-child(-n+999) > .list-collapse-indicator {
+    padding-left: 0em;
+    margin-left: -57px;
+}
+.markdown-preview-view .task-list-item .list-collapse-indicator {
+    padding-left: .5em;
+    position: relative;
+}

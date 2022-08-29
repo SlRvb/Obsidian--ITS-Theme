@@ -1,0 +1,145 @@
+/*Plugin: Initiative Tracker*/
+.initiative-tracker-creature td {
+    border: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.initiative-tracker-creature:hover{ background: var(--outer-bar); }
+
+
+/*Difficulty Rating*/
+body .obsidian-initiative-tracker span meter.difficulty-bar.difficulty-bar {
+    border: 0;
+    border-radius: var(--radius);
+}
+body .obsidian-initiative-tracker span ::-webkit-meter-bar {
+    background-color: var(--outer-bar);
+    border: 1px var(--accent2);
+    border-radius: var(--radius);
+}
+
+.encounter-xp em { 
+    visibility: visible !important;
+    text-transform: capitalize; 
+    font-style: normal;
+    color: var(--h1-c);
+}
+body .encounter-xp {
+    & > .easy.easy > .difficulty-label { color: var(--interactive-success); }
+    & > .medium.medium > .difficulty-label { color: #ff8800; }
+    & > .deadly.deadly > .difficulty-label { color: var(--interactive-failure); }
+}
+.encounter-xp em em {
+    padding-left: 5px;
+    color: var(--h2-c, var(--interactive-accent));
+}
+
+
+
+
+/*Encounters*/
+//Encounter Background
+body .encounter-container > .encounter-instance {
+    margin: 5px;
+    padding: 15px;
+    border: 2px solid var(--outline, var(--background-modifier-box-shadow));
+    box-shadow: 4px 4px 0px var(--outline, var(--background-modifier-box-shadow));
+    border-radius: var(--radius, .5em);
+}
+//Resize Encounter Block
+body .block-language-encounter .encounter-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+body .block-language-encounter .encounter-name.encounter-name { 
+    display: block;
+}
+
+// body:not(.hcl) :not(.hcl) .encounter-instance {
+//     //Encounter Name Gradient Line
+//     & .encounter-name h3::after {
+//         content: "";
+//         display: block;
+//         background: linear-gradient(to right, var(--interactive-accent), transparent);
+//         height: 4px;
+//     }
+
+//     & .encounter-creatures h4:after { display: none; }
+// }
+body .encounter-instance {
+    //Encounter Name
+    & .encounter-name h3 {
+        font-size: 20px;
+        font-weight: 900;
+        margin-top: -5px !important;
+    }
+    //Creatures Header
+    & .encounter-creatures h4 {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 8px;
+        color: var(--text, var(--text-normal));
+        font-family: var(--default-font);
+        font-weight: bold;
+    }
+    //Sword
+    & .setting-editor-extra-setting-button.clickable-icon {
+        float: right;
+        margin-right: -5px;
+        right: 0;
+    }
+    
+    //List Fixes
+    & ul { margin-left: -25px; }
+    & ul li.creature-li.creature-li { width: unset; }
+    & ul li::before { display: none; }
+    & ul li:nth-child(even) { background: var(--aside-bg, var(--background-modifier-box-shadow)); }
+
+
+    //Encounter Dice Roller
+    & .dice-roller-result {
+        font-family: var(--font-monospace);
+        color: var(--lite-accent);
+    }
+    & .dice-roller-button { 
+        color: var(--text-faint);
+        vertical-align: -2px;
+        margin-right: -5px;
+    }
+    //XP
+    & .encounter-xp,
+    & .xp-parent { 
+        color: var(--h2-c, var(--interactive-accent));
+        font-weight: bold; 
+        margin: 0;
+    }
+    & .xp-parent:after {
+        content: "\f102"; /*"\e4fb" f753*/
+        font-family: var(--fa5);
+        color: var(--h2-c, var(--interactive-accent));
+        font-weight: 10 !important;
+        padding-left: 5px;
+    }
+    //Remove XP Parentheses
+    & .xp-parent .paren.left,
+    & .xp-parent .paren.right,
+    & .xp.text {
+        display: none;
+    }
+    & ul li:not(:hover) .xp-parent.xp-parent.xp-parent { display: none; }
+} 
+
+
+//Hide Player Characters
+.h-pcs .encounter-players {
+    display: none;
+}
+
+
+//Side Panel
+.tracker-table-header th {
+    background: transparent;
+}
+// .tracker-table-header .center { margin: unset; }
+// .tracker-table-header .center svg { text-align: center; }

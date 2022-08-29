@@ -1,0 +1,149 @@
+:root,
+body {
+    /*FONTS*/
+    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; /*Note text*/
+    --editor-font: var(--ed-font), var(--default-font);
+    --mermaid-font: var(--default-font); /*mermaidjs text*/
+    --reveal-font: var(--default-font); /*revealjs slide text*/
+    --font-monospace: 'Fira Code', 'Fira Code Medium', /*'JetBrains Mono Medium', 'Recursive Mono Casual Static Medium', 'Menlo Bold',*/ 'Source Code Pro', monospace; /*Code block text*/
+    
+    --font-text-theme: var(--default-font);
+    --font-interface-theme: var(--default-font);
+    --font-monospace-theme: var(--font-monospace);
+    
+    --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif; /*Works, but if it doesn't, needs !important*/
+    --pre-font: var(--default-font) !important;
+    --ed-font: var(--default-font) !important;
+
+    
+
+    --rmx: 'remixicon';
+    --mdi: 'Material Icons Sharp';
+    --its: 'its';
+    --fa5: 'Font Awesome 5 Free Solid';
+    --rpg: 'rpg-awesome';
+
+
+    //Header Sizes
+    --f-s-h: 34px;
+    --f-s-pre: 16px;
+    --f-s-text: 1em;
+    --f-s-code: calc(var(--f-s-text) - 0.08em);
+
+    --h1: var(--f-s-h);
+    --h2: calc(var(--f-s-h) - 4px);
+    --h3: calc(var(--f-s-h) - 8px);
+    --h4: calc(var(--f-s-h) - 12px);
+    --h5: calc(var(--f-s-h) - 14px);
+    --h6: calc(var(--f-s-h) - 16px);
+}
+
+.workspace {
+    background-color: var(--background-secondary);
+}
+
+.theme-dark, 
+.theme-light {
+    /*Colors*/
+    --slide-shadow: var(--td);
+    --text-dl: #e5ebee;
+    --indentation-guide: var(--table);
+    --indentation-guide-active: var(--accent);
+    
+    /*Sizes*/
+    --scroll-size: 7px;
+    --lh: 1.5em;
+    --vault-f: var(--font);
+    --f-text: 16px;
+    --f-small: .88em;
+    --f-tag: 13px;
+    --note-width: 700px;
+
+    --tbl-th-h: 4px;
+    --tbl-th-w: 10px;
+    --tbl-th-s: var(--f-text);
+    --tbl-th-fw: 800;
+
+    --tbl-td-h: var(--tbl-th-h);
+    --tbl-td-w: var(--tbl-th-w);
+    --tbl-td-s: var(--f-text);
+    --tbl-td-fw: var(--f-w-t);
+    
+    --setting-h: 90vh;
+    --setting-w: 55vw;
+
+    --f-s-ui: 16px;
+    --f-s-sb: 16px;
+    --f-s-nt: 16px;
+    --frnt-text: var(--f-s-code);
+    --f-s-rib-i: 18px;
+    --f-s-tab-i: 17px;
+    --s-rib-pad: 18px;
+
+    --h-brdr: 2px;
+    
+    --f-w-h: 600;
+    --h-line: 100%;
+    --head-h: 15px;
+    --f-w-v: 600;
+    --f-w-t: 500;
+    --f-w-l: 500;
+    
+    /*Other*/
+    --hr-sym: "\e817";
+    --hr-f: var(--its);
+    --tag-o: 1px;
+    --bullet: "\e802";
+    --bul-f: var(--its);
+    --b-line: 2px;
+    --otl-sym: "H";
+    --folder-icon: "\e801";
+    --file-icon: '\e800';
+    --folder-f: var(--its);
+    --file-f: var(--its);
+    --link-f: inherit;
+
+    --tag-txt-align: center;
+    --sd-opacity:  40%;
+
+    /* Images */ 
+    --vlt-sym: ;
+    --vlt-icon-img: url("");
+
+    /*--Specific--*/
+    /*Fonts*/
+    --sphd-pre-ff-1: 'Calisto MT', 'Palatino Black', 'Suez One', serif;
+    --sphd-pre-ff-2: var(--sphd-pre-ff-1);
+    --sphd-pre-ff-3: var(--sphd-pre-ff-1);
+    --sphd-pre-ff-4: var(--sphd-pre-ff-1);
+    --sphd-pre-ff-5: var(--sphd-pre-ff-1);
+    --sphd-pre-ff-6: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-1: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-2: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-3: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-4: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-5: var(--sphd-pre-ff-1);
+    --sphd-ed-ff-6: var(--sphd-pre-ff-1);
+
+    /*Size*/
+    --sphd-pre-fs-1: 34px;
+    --sphd-pre-fs-2: 30px;
+    --sphd-pre-fs-3: 26px;
+    --sphd-pre-fs-4: 24px;
+    --sphd-pre-fs-5: 20px;
+    --sphd-pre-fs-6: 18px;
+    --sphd-ed-fs-1: var(--sphd-pre-fs-1);
+    --sphd-ed-fs-2: var(--sphd-pre-fs-2);
+    --sphd-ed-fs-3: var(--sphd-pre-fs-3);
+    --sphd-ed-fs-4: var(--sphd-pre-fs-4);
+    --sphd-ed-fs-5: var(--sphd-pre-fs-5);
+    --sphd-ed-fs-6: var(--sphd-pre-fs-6);
+
+    /**/
+    --em-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --em-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --b-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --b-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --del-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --del-ed-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}

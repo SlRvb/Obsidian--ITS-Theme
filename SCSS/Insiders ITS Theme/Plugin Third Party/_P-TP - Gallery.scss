@@ -1,0 +1,28 @@
+
+/*--Gallery Plugin--*/
+.workspace-leaf-content[data-type="ob-gallery-info"] .markdown-preview-view { padding: .5em; }
+.ob-gallery-display > ul { padding-inline-start: 0; }
+
+/*Info Block*/
+.gallery-info-container {
+    background-color: transparent !important;
+    border-radius: var(--radius) !important;
+    border: 1px solid var(--outline) !important;
+    box-shadow: -.3em .3em var(--outline);
+}
+/*Tags*/
+.gallery-info-section-tags > .tag {
+    border-radius: var(--radius) !important;
+    color: var(--text-dl) !important;
+    background-color: var(--tag) !important;
+    margin-right: .2em !important;
+}
+.gallery-info-section-tags > .tag:hover { text-decoration: underline !important; }
+
+
+/*Text*/
+.gallery-info-section-label { 
+    color: var(--headers) !important; 
+    font-weight: 900;
+}
+.gallery-info-section-value { color: var(--text) !important; }

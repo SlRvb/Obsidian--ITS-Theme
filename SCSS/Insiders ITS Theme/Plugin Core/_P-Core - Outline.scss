@@ -1,0 +1,34 @@
+/*Outline Pane*/
+/*Set Outline Padding*/
+.outline {
+    margin: .2em .5em;
+    user-select: text;
+}
+.outline .tree-item-self { padding-left: 25px; }
+
+/*Outline Pane Lines*/
+.outline .tree-item-children {
+    margin-left: 15px;
+    border-left: 1px solid var(--lines);
+    transition: all 0.3s ease-in-out;
+}
+.outline .tree-item-children:hover {
+    border-color: var(--headers);
+    border-radius: var(--radius);
+}
+
+/*Outline Header*/
+body:not(.op-h) .outline .tree-item-self:before {
+    content: var(--otl-sym);
+    font-family: var(--default-font);
+    font-weight: 900;
+    color: var(--headers);
+    /*background-color: var(--td);*/
+    margin-left: -15px;
+    padding-right: 4.5px;
+}
+body:not(.op-h) .outline .collapse-icon svg { visibility: hidden; }
+
+/*Collapsed Outline Header*/
+body:not(.op-h) .outline .tree-item.is-collapsed .collapse-icon svg { visibility: visible; }
+body:not(.op-h) .outline .tree-item.is-collapsed .tree-item-self:before { display: none; }

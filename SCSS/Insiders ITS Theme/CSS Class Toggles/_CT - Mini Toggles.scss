@@ -1,0 +1,59 @@
+/*Hide Vault Title*/
+.v-non .nav-folder.mod-root > .nav-folder-title {
+    display: none;
+}
+
+/*Hide HR Icon*/
+.hr-tog .markdown-preview-view hr::after, 
+.markdown-preview-view.hr-tog hr::after, 
+.hr-tog div:not(.CodeMirror-activeline)>.HyperMD-hr-bg::after,
+.hr-tog .hr.cm-line::after {
+    display: none;
+}
+
+
+/*Heading/Header Hash Above Text*/
+.hash-top .cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+    display: block;
+    margin-bottom: -8px;
+}
+
+
+
+/*Show Ligatures*/
+.lig {
+    & .cm-s-obsidian .CodeMirror-line,
+    & .cm-s-obsidian .cm-line,
+    & .markdown-preview-section 
+    { font-variant-ligatures: normal; }
+}
+
+
+/*Remove Note Titlebar Gradient*/
+.nt-g .workspace-leaf.mod-active .view-header {
+    background: var(--dark-accent);
+}
+
+/*Move/Raise Right Sidebar Up*/
+.rsb-up {
+    & .mod-right-split .workspace-leaf-content {
+        padding-bottom: 22px;
+    }
+    
+    & .document-search-container,
+    & .document-search-container.mod-replace-mode {
+        padding-bottom: 20px;
+        height: fit-content;
+    }
+}
+
+/*Folder Hover Arrow*/
+.folder-arrow .nav-folder-title .nav-folder-collapse-indicator,
+.fhvr .nav-folder-title:hover .nav-folder-collapse-indicator {
+    display: flex;
+    margin-left: calc(var(--f-s-sb) - 6px);
+}
+
+.tg-f a.tag {
+    font-size: var(--f-tag);
+}

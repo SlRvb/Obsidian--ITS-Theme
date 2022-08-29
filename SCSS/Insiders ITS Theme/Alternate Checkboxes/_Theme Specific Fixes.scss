@@ -1,0 +1,46 @@
+
+/* Checkbox Icon Setup*/
+.markdown-source-view.mod-cm6 .task-list-item-checkbox::before,
+.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]) {
+    padding-left: 0px;
+    font-family: var(--its);
+    //background: transparent;
+    //position: relative;
+    font-weight: 10;
+}
+.markdown-source-view.mod-cm6 .task-list-item-checkbox {
+    vertical-align: middle; //Primary
+}
+
+/*Fixes*/
+body .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):before,
+body .markdown-preview-view li:not([data-task="x"]) .task-list-item-checkbox:checked::before
+{
+    background-image: unset; //Sanctum
+    transform: none; //Sanctum
+    padding: unset; //Agora
+    -webkit-mask-image: unset; //Pink Topaz
+    left: unset; //Pink Topaz
+    font-size: inherit; //EbullientWorks
+    text-shadow: none; //Dracula
+    
+    //color: unset; Primary
+}
+.markdown-preview-view li:not([data-task="x"]) .task-list-item-checkbox:checked
+{
+    box-shadow: none; //Dracula
+}
+
+input[type=checkbox]:not([data-task="x"]) //Pink Topaz
+{
+    padding: initial; //Pink Topaz
+}
+
+.minimal-light,
+.minimal-dark {
+    & li:not([data-task="x"]) input[type=checkbox i]:checked,
+    & .cm-s-obsidian input[type=checkbox]:not([data-task="x"]):checked
+    {
+    background-color: transparent !important; //Minimal
+}}
+

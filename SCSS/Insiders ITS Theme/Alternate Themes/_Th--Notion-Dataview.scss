@@ -1,0 +1,71 @@
+.dvl-c {
+    //--radius: 3px;
+
+    & .table-view-table > thead::before {
+        content: "⚙";
+        font-family: var(--its, var(--default-font));
+        float: right;
+        padding: 5px 10px 5px 10px;
+    }
+    & .table-view-table > thead > tr { 
+        display: flex;
+        flex-direction: row;
+        border: 1px solid var(--outline, var(--background-modifier-box-shadow));
+        margin: 0;
+        flex-wrap: wrap;
+        border-radius: var(--radius, 3px);
+    }
+    & table .table-view-table > thead > tr {
+        position:absolute;
+        right: 0;
+    }
+    & .table-view-table > thead:not(:hover) > * { display: none; }
+    
+    & .dataview th {
+        font-family: var(--default-font);
+        background: var(--note, var(--background-primary));
+        font-size: var(--f-s-text, var(--editor-font-size));
+        border: 0;
+        color: var(--text, var(--text-normal));
+        opacity: 1;
+    }
+    & .dataview th:hover { background: var(--td, var(--background-modifier-form-field)) }
+
+    & .list-view-ul li,
+    & .dataview.table-view-table > tbody > tr {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--aside-bg, var(--background-primary-alt));
+        box-shadow: 
+            var(--outline, var(--background-modifier-box-shadow)) 0px 0px 0px 1px,
+            var(--outline, var(--background-modifier-box-shadow)) 0px 2px 4px;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: var(--radius, 3px);
+        border: 0;
+    }
+    & .list-view-ul,
+    & .dataview.table-view-table > tbody.table-view-tbody {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-inline-start: 0;
+    }
+    & .block-language-dataviewjs .dataview-result-list-li,
+    & .list-view-ul li,
+    & .dataview.table-view-table > tbody > tr {
+        flex: 1 0 150px;
+        margin: 10px;
+    }
+    & .dataview.dataview.table-view-table td { 
+        padding: 0; 
+        background-color: transparent;
+        border: 0;
+    }
+    & .list-view-ul li::before { display: none; }
+    & .dataview.table-view-table li {
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+    }
+}

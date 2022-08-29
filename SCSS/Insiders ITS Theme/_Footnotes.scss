@@ -1,0 +1,37 @@
+
+/*--Footnotes--*/
+/*Reduce Footnote Number size/line height*/
+.footnote-ref {
+    font-size: 10px;
+    line-height: 0px;
+}
+
+/*Hide HR, Horizontal Line*/
+.footnotes hr { display: none; }
+
+/*Resize text*/
+.footnotes { font-size: calc(var(--f-text) - .12em); color: var(--footnote); }
+
+/*Reduce footnote paragraph/line height*/
+.footnotes p { line-height: 16px; margin: 5px; }
+
+/*Change Footnote Link Icon*/
+/*Hide & Recolor Original Icon*/
+.footnote-backref.footnote-link { 
+    visibility: hidden; 
+    color: var(--headers); 
+}
+
+/*Recolor hover*/
+.footnote-backref.footnote-link:hover { color: var(--accent2-lite); }
+
+/*Display New Icon*/
+.footnote-backref.footnote-link:before { 
+    visibility: visible;
+    display: inline-block;
+    position: absolute;
+    content: "\e820"; 
+    font-size: var(--f-text);
+    font-family: var(--its);
+    padding-bottom: 2px;
+}

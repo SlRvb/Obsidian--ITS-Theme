@@ -1,0 +1,40 @@
+.excalidraw.excalidraw.excalidraw {
+    --default-bg-color: var(--note);
+    --input-bg-color: var(--note);
+    --input-border-color: var(--bg);
+    // --theme-filter: transparent;
+
+    --island-bg-color: var(--note);
+    --button-gray-1: var(--bg);
+    --button-gray-2: var(--bttn);
+
+    --popup-bg-color: var(--code-bg);
+    --overlay-bg-color: var(--embed-bg);
+    
+    --keybinding-color: var(--soft-text);
+    --input-label-color: var(--text);
+    --icon-fill-color: var(--text);
+    --text-primary-color: var(--text);
+
+    --color-primary: var(--accent);
+    --color-primary-darker: var(--bttn);
+    --color-primary-darkest: var(--deep-dark-accent);
+    --color-primary-light: var(--accent2);
+
+    --link-color: var(--accent2-lite);
+    --select-highlight-color: var(--accent);
+
+    --shadow-island: 
+        0 0 0 1px var(--outline),
+        2px 2px 0 var(--outline);
+
+}
+
+.theme-light .excalidraw {
+    --text: black;
+}
+.excalidraw * {
+    // background: transparent;
+    border-radius: var(--radius) !important;
+}
+.excalidraw.excalidraw .HintViewer { color: var(--text-faint); }

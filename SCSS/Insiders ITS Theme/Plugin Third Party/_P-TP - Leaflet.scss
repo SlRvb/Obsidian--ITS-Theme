@@ -1,0 +1,25 @@
+
+/*Plugin: Leaflet*/
+.block-language-leaflet .leaflet-distance-control,
+.leaflet-container .leaflet-control-attribution {
+    background-color: var(--note) !important;
+    color: var(--text) !important;
+}
+
+.leaflet-container { background-color: var(--outer-bar) !important; }
+
+.leaflet-touch .leaflet-control-layers, 
+.leaflet-touch .leaflet-bar,
+.leaflet-touch .leaflet-bar a:first-child {
+    border: .2px solid var(--outline) !important;
+    border-radius: var(--radius) !important;
+}
+
+.leaflet-bar a {
+    background-color: var(--note) !important;
+    border-color: var(--table) !important;
+    color: var(--text) !important;
+}
+.leaflet-container .leaflet-control-attribution a {
+    color: var(--accent2-lite) !important;
+}

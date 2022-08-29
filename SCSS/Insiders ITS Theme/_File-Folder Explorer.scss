@@ -1,0 +1,225 @@
+
+
+/*-File Navbar-*/
+/*Adjusting Padding of Navbar Icons*/
+.nav-header {
+    padding: 7px;
+}
+/*Adjusting Button Padding*/
+.nav-action-button.nav-action-button {
+    padding: 5px 8px 0 8px;
+    margin: 0 3px 0px 3px;
+    border-radius: var(--radius);
+}
+
+/*Remove Bottom Scrollbar*/
+.nav-files-container {
+    overflow-x: hidden;
+    /*padding-top: 2.5em;*/
+}
+
+/*Vault Name*/
+.nav-folder.mod-root > .nav-file-title,
+.nav-folder.mod-root > .nav-folder-title {
+    display: block;
+    color: var(--headers);
+    font-family: var(--vault-f);
+    font-size: calc(var(--f-s-h) - 10px);
+    padding-left: .2em !important;
+    
+    /*border-bottom: 3px solid var(--accent);*/
+    /*position: fixed;
+    top: 1.5em;
+    background-color: var(--side-bar);
+    padding-top: .7em;*/
+}
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+    font-weight: var(--f-w-v);
+}
+
+/* Vault Icon */
+.vlt-icon .workspace-drawer-header-name::before,
+.vlt-icon .nav-folder.mod-root > .nav-folder-title::before {
+    content: '';
+    background-image: var(--vlt-icon-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    width: 32px;
+    height: 28px;
+}
+.vlt-icon .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content { width: unset; }
+.vlt-icon .nav-folder.mod-root > .nav-folder-title {
+    // margin-left: -16px;
+    margin-bottom: 5px;
+}
+// Mobile
+.vlt-icon .workspace-drawer-header-name::before {
+    margin-right: 10px;
+}
+.vlt-icon .workspace-drawer-header {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav-folder.mod-root > .nav-folder-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*Remove Empty Div to Fix Folder Adjusting When Open
+.nav-folder-children > div:not(.nav-folder):not(.nav-file) { display: none; }
+*/
+/*Nav Folder/File Icons*/
+.nav-folder-children .nav-folder-title-content::before,
+.nav-file-title .nav-file-title-content::before {
+    margin-right: 6px;
+    // vertical-align: top;
+    font-size: 13px;
+    font-weight: 10 !important;
+}
+
+.nav-folder-children .nav-folder-title-content::before {
+    content: var(--folder-icon);
+    font-family: var(--folder-f);
+    color: var(--folder);
+}
+.nav-file-title .nav-file-title-content::before {
+    content: var(--file-icon);
+    font-family: var(--file-f);
+    text-align: center;
+    color: var(--file);
+}
+
+// .nav-file-tag + .nav-file-title-content::before {
+//     content: '\ed1e';
+//     font-family: var(--rmx);
+// }
+
+
+/*Move File Extension to Right*/
+.nav-folder-title-content,
+.nav-file-title-content {
+    width: 100%;
+    line-height: 20px;
+    align-content: center;
+    align-items: center;
+}
+body:not(.type-undo) .nav-file-title {
+    flex-direction: row-reverse;
+}
+
+
+
+/*Inactive Folder Color*/
+.is-collapsed .nav-folder-title-content:before {
+    color: var(--headers);
+}
+
+/*Nav Folder Lines*/
+.nav-folder,
+.nav-file {
+    margin: 0 -2px;
+    margin-right: 0px;
+    border: 0;
+    border-left: 2px solid var(--table);
+}
+/*Align Folder Line*/
+.nav-folder-children {
+    padding-left: 18px;
+}
+/*Nav Hover Line Colors*/
+.nav-folder:hover,
+.nav-file:hover {
+    border-color: var(--accent);
+}
+
+/*Text wrap*/
+.nav-file-title,
+.nav-folder-title {
+    white-space: normal;
+    width: auto;
+    border-radius: var(--radius);
+    border: 0;
+    font-size: calc(var(--f-text) - .12em);
+}
+
+/*Folder Bold*/
+.nav-folder-title-content {
+    font-weight: 600;
+}
+
+/*Folder Push Left*/
+.nav-folder-title {
+    padding-left: 4px;
+}
+.nav-folder-title:hover {
+    color: var(--f-hover) !important;
+}
+
+/*File Colors|File Under Folder*/
+.nav-file-title {
+    padding-left: 5px;
+    color: var(--file);
+}
+.nav-folder-children .nav-file-title-content::before{
+    color: var(--f-icon);
+}
+.nav-file-title.is-active, 
+.nav-folder-title.is-active, 
+body:not(.is-grabbing) .nav-file-title:hover, 
+body:not(.is-grabbing) .nav-folder-title:hover
+{
+    color: var(--f-hover);
+    font-weight: 600;
+    background: var(--outer-bar);
+}
+.workspace-leaf.mod-active {
+    & .nav-folder.has-focus > .nav-folder-title, 
+    & .nav-file.has-focus {
+        border-color: var(--interactive-accent);
+        border-radius: var(--radius);
+        box-shadow: inset 0 0 0 1px var(--interactive-accent);
+        background-color: var(--text-highlight-bg);
+        
+        color: var(--text);
+    
+        & .nav-folder-title-content::before,
+        & .nav-file-title-content::before {
+            color: var(--text);
+        }
+    }
+} 
+
+
+/*File selected*/
+.nav-file-title.is-active {
+    background-color: var(--dark-accent);
+    color: var(--fg);
+}
+.nav-file-title.is-active .nav-file-title-content::before {
+    color: var(--soft-text);
+}
+
+/*Dragged*/
+.nav-folder-title.is-being-dragged-over,
+.drag-ghost,
+.workspace-drop-overlay:before {
+    border:none;
+    border-radius: var(--radius);
+}
+
+/*File: Move Further In*/
+.nav-file-icon {
+    top: 5px;
+    display: none;
+}
+
+
+/*Arrows*/
+.nav-folder .collapse-icon {
+    display: none;
+}
+

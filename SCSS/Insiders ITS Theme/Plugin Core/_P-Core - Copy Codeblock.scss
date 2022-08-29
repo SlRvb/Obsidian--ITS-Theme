@@ -1,0 +1,15 @@
+
+/*Copy Codeblock Plugin*/
+.copy-code-button {
+    margin: 0 !important;
+    color: var(--text) !important;
+    font-family: var(--font-monospace);
+    background-color: var(--inactive);
+}
+.copy-code-button:hover { color: var(--text-dl) !important; }
+
+/*Copy Block Button Fix*/
+pre:hover > button.copy-code-button {
+    width: 6em;
+
+}

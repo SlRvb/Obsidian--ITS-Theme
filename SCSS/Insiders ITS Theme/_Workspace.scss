@@ -1,0 +1,143 @@
+
+/*----WORKSPACE----*/
+
+/*Obsidian Title Bar Cover*/
+.titlebar { 
+    background-color: var(--background-modifier-cover); 
+    border: 0;
+}
+.titlebar-text,
+.titlebar-button { 
+    color: var(--text-dl);
+    opacity: 1;
+}
+
+/*Loading Screen*/
+.progress-bar-indicator { border-radius: var(--radius); }
+
+/*Drop Menu*/
+.menu {
+    border-radius: var(--radius) !important;
+    box-shadow: 5px 5px var(--outline);
+    border: 2px solid var(--outline);
+}
+.menu-separator {
+    border-color: var(--code-bg);
+}
+.menu-item.selected:not(.is-disabled):not(.is-label),
+.menu-item:hover:not(.is-disabled):not(.is-label):hover {
+    background-color: var(--outer-bar);
+}
+
+/*Ribbon Icons*/
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action,
+.workspace-tab-header-inner-icon {
+    color: var(--soft-text);
+    text-align: center;
+    cursor: pointer;
+    stroke-width: 2px;
+}
+.side-dock-settings {
+    margin-bottom: 1em;
+}
+.workspace-ribbon.is-collapsed {
+    border: none;
+    background-color: var(--outer-bar);
+}
+.workspace-ribbon { 
+    transition: none; 
+    padding: 0px 18px;
+}
+.thin-ribbon .workspace-ribbon {
+    padding: 0;
+}
+
+
+/*Buttons*/
+.nav-action-button.is-active {
+    background-color: var(--bttn);
+    color: var(--text-dl);
+}
+/*Button Hover Color*/
+.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button:hover,
+.modal button:not(.mod-cta):not(.mod-warning):hover, 
+button:hover, button.mod-cta:hover {
+    background-color: var(--interactive-accent-hover);
+    color: var(--text-dl);
+}
+
+button, 
+button.mod-cta,
+.markdown-source-view.mod-cm6 .cm-embed-block .edit-block-button {
+    border-radius: var(--radius);
+    font-size: calc(var(--f-text) - .12em);
+    font-family: var(--default-font);
+    box-shadow: 0 2px 0 var(--outline);
+}
+
+//button.mod-warning { color: var(--text-error); }
+
+/*Pinned Pane Button Color*/
+.view-action:hover,
+.view-action.is-active {
+    color: var(--accent);
+}
+
+
+
+/* Resize Handle */
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+    top: 0;
+    border: 0;
+}
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+    border-color: var(--dark-sidebar);
+    border-style: unset;
+}
+
+/*Sidebar Resize Handle*/
+.workspace-leaf-resize-handle,
+.workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
+    background-color: var(--dark-sidebar);
+    // height: calc(100% - 0.5px);
+    height: 100%;
+    border: 0;
+}
+.workspace-leaf-resize-handle:hover,
+.workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle:hover {
+    background-color: var(--accent);
+    
+}
+
+/*Word Wrap Pane*/
+.tree-item-inner {
+    word-wrap: break-word;
+    width: 100%;
+}
+
+
+
+
+/*Tooltip Popup*/
+.tooltip {
+    border-radius: var(--radius);
+}
+
+
+
+/*--Bottom Bar--*/
+.app-container .status-bar {
+    position: absolute;
+    background-color: var(--outer-bar);
+    color: var(--text-muted);
+    bottom: 0;
+    right: 0;
+    padding: 0 .1em;
+    border-left: 1px solid var(--th);
+    border-top: 1px solid var(--th);
+}
+
+.o-stat-bar .app-container .status-bar {
+    position: unset;
+}

@@ -1,0 +1,31 @@
+/*Plugin: Longform*/
+.new-scene-container,
+.tab-list,
+.new-draft-container,
+.compile-container {
+    border-color: var(--hr) !important;
+}
+.tab-list button { color: var(--headers) !important; }
+.tab-list .selected {
+    border-color: var(--accent) !important;
+    background-color: var(--aside-bg);
+    color: var(--text) !important;
+}
+[data-type="VIEW_TYPE_LONGFORM_EXPLORER"] ul li::before {
+    display: none;
+}
+.longform-compile-step.longform-compile-step.longform-compile-step.longform-compile-step
+{ 
+    background: var(--note);
+    box-shadow: 2px 2px 0 var(--outline);
+}
+.add-step-container.add-step-container.add-step-container.add-step-container button:hover {
+    color: var(--text-dl);
+}
+
+.longform-compile-step .longform-step-kind-pill.longform-step-kind-pill.longform-step-kind-pill.longform-step-kind-pill 
+{ --text-accent: var(--tag); }
+
+.longform-compile-step.longform-compile-step.longform-compile-step.longform-compile-step,
+.longform-compile-step .longform-step-kind-pill.longform-step-kind-pill.longform-step-kind-pill.longform-step-kind-pill 
+{ border-radius: var(--radius); }

@@ -1,0 +1,14 @@
+
+/*Button Plugin*/
+.block-language-button button,
+body .button-default.button-default {
+    border-radius: var(--radius);
+    box-shadow: none;
+    background-color: var(--bttn);
+    border: 0;
+    color: var(--text-dl);
+}
+body .button-default.button-default:hover {
+    box-shadow: 0 .5em var(--embed-bg);
+    color: var(--text-dl);
+}

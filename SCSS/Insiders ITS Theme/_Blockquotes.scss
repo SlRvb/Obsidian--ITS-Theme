@@ -1,0 +1,190 @@
+/*--Blockquote--*/
+:is(.markdown-preview-view, .reveal, .markdown-rendered) blockquote {
+    display: flow-root;
+    border: 0px;
+    background-color: var(--embed-bg);
+    border-left: 8px solid var(--bg);
+    border-radius: var(--radius);
+    position: relative;
+    margin: 1em;
+    padding-right: 40px; /*Don't overlap with "*/
+    box-shadow: 2px 2px 0 var(--td);
+}
+
+/*Live Preview Quotes*/
+.markdown-source-view.mod-cm6.is-live-preview {
+    & .HyperMD-quote {
+        background-color: var(--embed-bg);
+        border-color: var(--bg);
+        border-left: 8px solid var(--bg);
+        // padding-top: 5px;
+        padding: 7px 20px;
+        padding-right: 15px;
+        box-shadow: 2px 2px 0 var(--td);
+        
+        &:hover { border-color: var(--hr);}
+    }
+
+    & .HyperMD-quote + .HyperMD-quote {
+        padding-top: 0;
+        padding-bottom: 7px;
+    }
+}
+
+/*Quotation Mark*/
+:is(.markdown-preview-view, .reveal) blockquote:before,
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
+    content: '\201D';
+    font-family: var(--font);
+    color: var(--headers);
+    transform: scale(3.2);
+    //font-size: 50px;
+    //margin-top: 10px;
+}
+.reveal blockquote:before,
+.markdown-preview-view blockquote:before {
+    position: absolute;
+    top: 1.4em;
+    right: 1.2em;
+}
+.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {    
+    float: right;
+    padding-top: 5px;
+    padding-left: 1.3em;
+}
+.is-mobile .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before { display: none; }
+
+/*Undo Slides Styling*/
+.reveal blockquote {
+    box-shadow: none;
+    font-style: initial;
+    margin: 10px auto;
+}
+.reveal blockquote p { margin: 10px; }
+.reveal blockquote:before {
+    top: 1.5em;
+    right: 1em;
+    transform: scale(3.2);
+}
+
+/*Paraphrase Quotes*/
+blockquote > blockquote::before { display: none; }
+.markdown-preview-view blockquote > blockquote { 
+    background-color: var(--embed-bg);
+    padding: 0 0 0 20px;
+    margin-right: -30px;
+    margin-left: -20px;
+    padding-right: 20px;
+
+    border-left: 0;
+    border-right: 2px solid;
+    border-color: var(--accent);
+}
+
+.markdown-source-view.mod-cm6 .cm-blockquote-border {
+    border-color: var(--accent);
+    border-left-width: 2px;
+}
+
+
+/*--Special Blockquote Formatting--*/
+body:not(.dis-tri-quote) .cm-line:not(.cm-active) .cm-quote.cm-quote-3,
+body:not(.dis-tri-quote) .markdown-preview-view blockquote > blockquote > blockquote,
+blockquote mark strong {
+	display: block;
+	color: var(--headers);
+	text-align: right;
+    background-color: transparent;
+    font-style: italic;
+    font-weight: 900;
+    border: 0;
+}
+body:not(.dis-tri-quote) .cm-line:not(.cm-active) .cm-quote.cm-quote-3 {
+    display: unset;
+    float: right;
+    margin-top: 0;
+}
+body:not(.dis-tri-quote) .markdown-preview-view blockquote > blockquote > blockquote {
+    padding-right: 37px;
+}
+//Remove LP Quote Borders
+body:not(.dis-tri-quote) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 .cm-blockquote-border { border: 0; }
+
+// em mark,
+em mark em {
+    text-decoration: unset;
+    color: transparent;
+    font-style: normal;
+    text-align: justify;
+    font-weight: unset;
+    float: right;
+    position: relative;
+    margin-right: -25.3em;
+    margin-bottom: .2em;
+    clear: right;
+    width: 400px;
+    padding: 0 1em;
+}
+em mark em {
+    font-style: unset;
+}
+
+
+
+
+
+// /*Fix Blockquote Mark*/
+// .markdown-preview-view li blockquote:before { top: .3em; }
+
+/*Flush Table Embed of Blockquotes*/
+table .markdown-embed-content > .markdown-preview-view blockquote {
+    margin: 0;
+    overflow: hidden !important;
+}
+
+
+
+
+
+
+
+
+
+/*--Blockquote Adjustments--*/
+/*Turn b into a blockquote without the quotations*/
+.markdown-preview-view b {
+    display: flex;
+    border: 0px solid var(--lines);
+    background-color: var(--outer-bar);
+    border-left-width: 8px;
+    border-radius: var(--radius);
+    position: relative;
+    font-weight: unset;
+    padding: 10px 20px;
+    margin-left: 2%;
+}
+
+/*Quotes*/
+#quote {
+    padding-right: 2em;
+    text-align: justify;
+    border-color: var(--bg);
+    background-color: var(--embed-bg);
+}
+#quote:before {
+    content: '\201D';
+    position: absolute;
+    top: .4em;
+    right: .2em;
+    font-size: 50px;
+    font-family: var(--font);
+    color: var(--headers);
+}
+/*Quote Author*/
+b mark strong {
+	display: block;
+	color: var(--lite-accent) !important;
+	text-align: right;
+    background-color: transparent !important;
+    font-style: italic;
+}

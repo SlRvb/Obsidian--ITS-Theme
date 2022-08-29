@@ -1,0 +1,135 @@
+
+/*Colored Bullet Lines*/
+.bul-li-col {
+    & .cm-hmd-list-indent .cm-tab:nth-child(1):before,
+    & :is(ul, ol) > li,
+    & :is(ul ul, ol ol),
+    & ul ul::before,
+    & ol ol::before
+    { border-color: var(--b-l-1); }
+
+    & .cm-hmd-list-indent .cm-tab:nth-child(2):before,
+    & :is(ul ul, ol ol) > li, 
+    & :is(ul ul ul, ol ol ol),
+    & ul ul ul::before,
+    & ol ol ol::before
+    { border-color: var(--b-l-2); }
+
+    & .cm-hmd-list-indent .cm-tab:nth-child(3):before,
+    & :is(ul ul ul, ol ol ol) > li, 
+    & :is(ul ul ul ul, ol ol ol ol),
+    & ul ul ul ul::before,
+    & ol ol ol ol::before
+    { border-color: var(--b-l-3); }
+    
+    & .cm-hmd-list-indent .cm-tab:nth-child(4):before,
+    & :is(ul ul ul ul, ol ol ol ol) > li, 
+    & :is(ul ul ul ul ul, ol ol ol ol ol),
+    & ul ul ul ul ul::before,
+    & ol ol ol ol ol::before
+    { border-color: var(--b-l-4); }
+    
+    & .cm-hmd-list-indent .cm-tab:nth-child(5):before,
+    & :is(ul ul ul ul ul, ol ol ol ol ol) > li, 
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol),
+    & ul ul ul ul ul ul::before,
+    & ol ol ol ol ol ol::before
+    { border-color: var(--b-l-5); }
+    
+    & .cm-hmd-list-indent .cm-tab:nth-child(6):before,
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol) > li, 
+    & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol),
+    & ul ul ul ul ul ul ul::before,
+    & ol ol ol ol ol ol ol::before
+    { border-color: var(--b-l-6); }
+} 
+
+
+/*Rainbow Indenation Guides*/
+.bul-li-col.ig-lists .HyperMD-list-line  {
+    & span.cm-hmd-list-indent .ig-tab:before { background-color: var(--b-l-1); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(2):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:before { background-color: var(--b-l-2); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(3):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(2)::before { background-color: var(--b-l-3); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(4):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(3)::before { background-color: var(--b-l-4); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(5):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(4)::before { background-color: var(--b-l-5); }
+    & span.cm-hmd-list-indent .ig-tab:nth-child(6):before,
+    & span.cm-hmd-list-indent:nth-child(2) .ig-tab:nth-child(5)::before { background-color: var(--b-l-6); }
+}
+
+/*Colored Bullets*/
+.bul-col.bul-col {
+    //Checklists
+    & :is(ul, ol, .HyperMD-list-line-1) .task-list-item-checkbox
+    {   border-color: var(--b-l-1); 
+        &:checked { background: var(--b-l-1); }
+    }
+    & :is(ul ul, ol ol, .HyperMD-list-line-2) .task-list-item-checkbox
+    {   border-color: var(--b-l-2); 
+        &:checked { background: var(--b-l-2); }
+    }
+    
+    & :is(ul ul ul, ol ol ol, .HyperMD-list-line-3) .task-list-item-checkbox
+    {   border-color: var(--b-l-3); 
+        &:checked { background: var(--b-l-3); }
+    }
+    & :is(ul ul ul ul, ol ol ol ol, .HyperMD-list-line-4) .task-list-item-checkbox
+    {   border-color: var(--b-l-4); 
+        &:checked { background: var(--b-l-4); }
+    }
+    & :is(ul ul ul ul ul, ol ol ol ol ol, .HyperMD-list-line-5) .task-list-item-checkbox
+    {   border-color: var(--b-l-5); 
+        &:checked { background: var(--b-l-5); }
+    }
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol, .HyperMD-list-line-6) .task-list-item-checkbox
+    {   border-color: var(--b-l-6); 
+        &:checked { background: var(--b-l-6); }
+    }
+    
+
+    //Lists
+    & .HyperMD-list-line-1 .list-bullet:after,
+    & .HyperMD-list-line-1 .cm-formatting-list::before,
+    & .HyperMD-list-line-1 .cm-formatting-list,
+    & ul > li::before,
+    & ol > li::marker
+    { color: var(--b-l-1); }
+
+    & .HyperMD-list-line-2 .list-bullet:after,
+    & .HyperMD-list-line-2 .cm-formatting-list:before,
+    & .HyperMD-list-line-2 .cm-formatting-list,
+    & ul ul > li::before,
+    & ol ol > li::marker 
+    { color: var(--b-l-2); }
+
+    & .HyperMD-list-line-3 .list-bullet:after,
+    & .HyperMD-list-line-3 .cm-formatting-list:before,
+    & .HyperMD-list-line-3 .cm-formatting-list,
+    & ul ul ul > li::before,
+    & ol ol ol > li::marker 
+    { color: var(--b-l-3); }
+
+    & .HyperMD-list-line-4 .list-bullet:after,
+    & .HyperMD-list-line-4 .cm-formatting-list:before,
+    & .HyperMD-list-line-4 .cm-formatting-list,
+    & ul ul ul ul > li::before,
+    & ol ol ol ol > li::marker 
+    { color: var(--b-l-4); }
+
+    & .HyperMD-list-line-5 .list-bullet:after,
+    & .HyperMD-list-line-5 .cm-formatting-list:before,
+    & .HyperMD-list-line-5 .cm-formatting-list,
+    & ul ul ul ul ul > li::before,
+    & ol ol ol ol ol > li::marker 
+    { color: var(--b-l-5); }
+    
+    & .HyperMD-list-line-6 .list-bullet:after,
+    & .HyperMD-list-line-6 .cm-formatting-list:before,
+    & .HyperMD-list-line-6 .cm-formatting-list,
+    & ul ul ul ul ul ul > li::before,
+    & ol ol ol ol ol ol > li::marker 
+    { color: var(--b-l-6); }
+} 

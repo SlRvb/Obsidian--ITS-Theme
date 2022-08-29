@@ -1,0 +1,41 @@
+
+/*----Export ... I'll figure this out eventually I swear----*/
+/*Remove Page Margins*/
+@page {
+    background-color: var(--note);
+}
+
+/*Fix Dark & Light Themes Colors*/
+@media print {
+    .theme-light {
+        --note: #ffffff /*#f8fbff*/;
+    }
+}
+
+@media print {
+    .theme-dark .markdown-preview-view,
+    .theme-light .markdown-preview-view {
+        background-color: var(--note);
+        color: var(--text);
+    }
+    body {
+        background-color: var(--note);
+    }
+
+
+    /*Print: Fix Quote Height*/
+    .markdown-preview-view blockquote:before { top: -.1em; }
+
+    /*Print: Fix Highlight Text Color*/
+    .theme-dark .markdown-preview-view mark,
+    .theme-light .markdown-preview-view mark {
+        color: var(--text);
+    }
+
+    /*Poem Export: Not Working*/
+    .markdown-preview-section .poem {
+        text-align: center !important;
+        line-height: 1.3em;
+        margin-block-end: 4%;
+    }
+}

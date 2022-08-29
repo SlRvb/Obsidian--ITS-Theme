@@ -58,14 +58,34 @@
 }
 
 // Lists
+body ul > li::marker, 
+.cm-s-obsidian .cm-formatting-list {
+    color: transparent;
+}
 .list-bullet::after,
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
     background-color: transparent;
-
+    
 	width: 7px;
 	height: 7px;
 }
 .markdown-source-view .list-bullet::after { top: 0; }
+
+
+ul > li::before { margin-left: -26px; }
+.markdown-rendered.show-indentation-guide li > ul::before,
+.markdown-rendered.show-indentation-guide li > ol::before,
+.markdown-rendered.show-indentation-guide li.task-list-item > ul::before,
+.markdown-rendered.show-indentation-guide li.task-list-item > ol::before {
+    left: -20px;
+}
+
+.is-collapsed .list-bullet { display: none; }
+.markdown-preview-view li .collapse-icon {
+    margin-top: 7px;
+    margin-left: -47px;
+}
+
 
 
 /* Tabs */
@@ -81,10 +101,6 @@
 
 .callout { mix-blend-mode: unset; }
 
-.callout.callout.callout:is( [data-callout-metadata~=banner], [data-callout-metadata~=sban] ), 
-.callout.callout.callout:is( [data-callout-metadata~=banner], [data-callout-metadata~=sban] ) :is(.internal-embed) {
-    display: unset;
-}
 
 .search-result-file-matches {
     box-shadow: unset;
@@ -108,24 +124,6 @@
 }
 .task-list-item-checkbox.task-list-item-checkbox.task-list-item-checkbox::after {
     display: none;
-}
-
-
-
-
-.BC-trail.BC-trail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2 !important;
-    
-    background-color: transparent;
-}
-.trails-div {
-    padding: 4px 10px;
-    background-color: var(--td);
-    box-shadow: 4px 4px 0 var(--outline), 0 0 0 2px var(--outline);
 }
 
 

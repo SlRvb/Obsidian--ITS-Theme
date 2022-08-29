@@ -1,0 +1,17 @@
+.theme-dark,
+.theme-light {
+    --table-header-weight: var(--font-bold);
+    --table-header-size: var(--font-text);
+
+    --table-header-color: var(--text-dl);
+    --table-header-background: var(--th);
+    --table-header-background-hover: var(--accent);
+
+    
+    --table-border-color: var(--note);
+
+    --table-column-alt-background: var(--td);
+    --table-row-alt-background: var(--td);
+
+    --table-row-background-hover: var(--highlight);
+}

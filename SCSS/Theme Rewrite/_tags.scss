@@ -1,0 +1,12 @@
+.theme-dark,
+.theme-light {    
+    --tag-color: var(--text-dl);
+    --tag-color-hover: var(--text-dl);
+    --tag-background: var(--tag);
+    --tag-background-hover: var(--accent);
+    
+    --tag-border-color: var(--tag);
+    --tag-border-color-hover: var(--accent);
+    
+    --tag-decoration-hover: underline;
+}

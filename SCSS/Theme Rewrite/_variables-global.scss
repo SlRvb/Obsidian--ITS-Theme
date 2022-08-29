@@ -1,0 +1,130 @@
+.theme-dark,
+.theme-light 
+{
+    //Fonts
+    --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif;
+    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --font-monospace: 'Fira Code', 'Fira Code Medium', 'Source Code Pro', monospace;
+    
+
+    --font-text: var(--default-font);
+    --font-monospace-default: var(--font-monospace);
+    --font-interface: var(--default-font);
+
+    --rmx: 'remixicon';
+    --mdi: 'Material Icons Sharp';
+    --its: 'its';
+    --fa5: 'Font Awesome 5 Free Solid';
+    --fa6: 'Font Awesome 6 Free Solid';
+    --rpg: 'rpg-awesome';
+
+
+    
+
+    // Headers
+    --h1-size: 34px;
+    --h2-size: calc(var(--h1-size) - 4px);
+    --h3-size: calc(var(--h1-size) - 8px);
+    --h4-size: calc(var(--h1-size) - 12px);
+    --h5-size: calc(var(--h1-size) - 14px);
+    --h6-size: calc(var(--h1-size) - 16px);
+
+    --h1-weight: 700;
+    --h2-weight: var(--h1-weight);
+    --h3-weight: var(--h1-weight);
+    --h4-weight: var(--h1-weight);
+    --h5-weight: var(--h1-weight);
+    --h6-weight: var(--h1-weight);
+    --h1-font: var(--font);
+    --h2-font: var(--font);
+    --h3-font: var(--font);
+    --h4-font: var(--font);
+    --h5-font: var(--font);
+    --h6-font: var(--font);
+
+
+    //Radius
+    --radius-s: 0; //4px
+    --radius-m: 0; //8px
+    --radius-l: 0; //10px
+    --radius-h: 0; //50%
+
+    
+    --input-radius: var(--radius-s);
+    --icon-btn-radius: var(--radius-s);
+    
+    --tag-radius: var(--radius-l);
+    
+    --slider-thumb-radius: var(--radius-h);
+    --status-bar-radius: var(--radius-m) 0 0 0;
+    --checkbox-radius: var(--radius-m);
+    --toggle-radius: 0;
+    --clickable-icon-radius: var(--radius-s);
+
+    
+    
+    //Size
+    --font-ui-smaller: 13.5px; //.88em
+    --font-ui-small: 14px;
+    --font-ui-medium: 15px;
+    --font-ui-large: 20px;
+    
+    --font-smallest:.88em;
+    --font-smaller:.9em;
+    --font-small: .95em;
+
+    --icon-xs: 14px;
+    --icon-s: 16px;
+    --icon-m: 18px;
+    --icon-l: 18px;
+
+
+ 
+    --scroll-size: 7px;
+    --divider-width: 2px;
+    --divider-width-hover: 5px;
+    
+    --tag-padding-x: 7px;
+    --tag-padding-y: 3px;
+
+    //_tables
+    //_lists
+
+    //Blockquotes
+    --blockquote-border-thickness: 7px;
+    --blockquote-border-color: var(--bg);
+
+    // Weight
+    --tab-font-weight: 900;
+    --tab-font-size: var(--font-size);
+
+    // Border
+    --prompt-border-width: 3px;
+    --tab-outline-width: 2px;
+
+
+    //Shadow
+    --shadow-s: 2px 2px 0 var(--outline);
+    --shadow-l: 5px 5px 0 var(--outline);
+
+    --input-shadow: var(--shadow-s);
+    --input-shadow-hover: var(--input-shadow);
+
+    --hr-thickness: 2px;
+
+    //Icons
+    --hr-sym: "\e817";
+    --hr-f: var(--its);
+    --bullet: "\e802";
+    --bul-f: var(--its);
+
+
+    //
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-external-decoration: none;
+    --link-unresolved-opacity: 1;
+    --link-unresolved-color: var(--inactive);
+    --link-color-hover: var(--lite-accent);
+
+}

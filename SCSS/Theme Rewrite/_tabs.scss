@@ -1,0 +1,20 @@
+.theme-dark,
+.theme-light {
+    // Radius
+    --tab-curve: var(--radius-s);
+    --tab-radius: var(--radius-s);
+    --tab-radius-active: var(--radius-s);
+    
+    //Color
+    --tab-outline-color: var(--accent);
+    --tab-divider-color: var(--hr);
+    
+    --tab-background: var(--outer-bar);
+    --tab-background-active: var(--note);
+
+    --tab-text-color: var(--inactive); //Inactive tab text
+    --tab-text-color-focused: var(--inactive); //Active Window Inactive tab Text
+    --tab-text-color-focused-active: var(--text);
+
+    --tab-container-background: var(--outer-bar); //Horizontal Split Tab background color;
+}

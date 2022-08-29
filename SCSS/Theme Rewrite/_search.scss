@@ -1,0 +1,46 @@
+/*Search Styling*/
+.search-results-children .search-result {
+    margin-right: 7px;
+    margin-bottom: 10px; 
+    
+    background: var(--note);
+    border: 2px solid var(--outline); 
+    box-shadow: 2px 2px 0 var(--outline);
+}
+.search-result-container {
+    padding: 0;
+    padding-left: var(--size-4-3);
+    padding-right: var(--size-4-2);
+}
+
+// Note Title
+.search-result-file-title {
+    background: var(--code-bg);
+    box-shadow: 0 2px 0 var(--td);
+    padding: 5px;
+    padding-left: 20px;
+    line-height: var(--lh);
+}
+.search-result:not(.is-collapsed) .search-result-file-title {
+    color: var(--text);
+}
+
+// Search Note Text
+.search-result-file-matches {
+    margin: 0;
+    padding: 0; 
+    border: 0;
+    box-shadow: unset;
+}
+.search-result-file-match {
+    margin: auto;
+    width: auto;
+    z-index: 0;
+    padding: 8px 10px;
+    color: var(--text);
+    left: 0;
+}
+
+// body:not(.native-scrollbars) ::-webkit-scrollbar-track {
+//     background-color: var(--scrollbar-bg);
+// }

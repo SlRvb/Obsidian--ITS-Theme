@@ -1,0 +1,37 @@
+//---Settings
+@use 'style-settings';
+@use 'fonts';
+@use 'font-icons';
+@use 'variables-colors';
+@use 'variables-global';
+
+//
+@use 'v16-Fixes';
+@use 'settings';
+@use 'status-bar';
+@use 'sidebar';
+@use 'search';
+
+@use 'lists';
+@use 'tables';
+@use 'tags';
+
+//Plugins
+// @use 'Core-Plugins/';
+@use 'tabs';
+
+
+//Alternate Color Schemes
+// @use 'Alternate Themes/Th--D&D' as DND;
+// @use 'Alternate Themes/Th--D&D WOTC-Beyond' as WOTC-Beyond;
+// //@use 'Alternate Themes/Th--D&D WOTC' as WOTC;
+// @use 'Alternate Themes/Th--SlRvb Blue' as sblue;
+// @use 'Alternate Themes/Th--SlRvb Gray' as sGray;
+// @use 'Alternate Themes/Th--School Days' as sd;
+// @use 'Alternate Themes/Th--Tangerine Dunes' as td;
+// @use 'Alternate Themes/Th--Drowned';
+// @use 'Alternate Themes/Th--Nord';
+// @use 'Alternate Themes/Th--Notion';
+// @use 'Alternate Themes/Th--Minimalist';
+// @use 'Alternate Themes/Th--Adventure';
+// @use 'Alternate Themes/Th--ITS Dark' as itsd;

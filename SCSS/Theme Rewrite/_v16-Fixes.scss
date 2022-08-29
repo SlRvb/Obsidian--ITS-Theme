@@ -1,0 +1,34 @@
+
+
+// Hover Text Fix
+.backlink-pane > .tree-item-self.is-collapsed:hover, 
+.outgoing-link-pane > .tree-item-self.is-collapsed:hover,
+.tree-item-self:hover :is(.tree-item-inner-subtext, .tree-item-icon)
+{ color: var(--nav-item-color-hover); }
+
+// Hover Flair Fix
+.tree-item-self:hover .tree-item-flair
+{ color: var(--nav-item-color-hover); }
+
+.nav-file-tag {
+    background-color: var(--tag);
+    color: var(--text-on-accent);
+}
+
+// Hover Arrow Fix
+.nav-folder-title:hover svg.svg-icon,
+.search-result-file-title:hover .collapse-icon svg.svg-icon,
+.search-result .search-result-file-title:hover
+{ color: var(--nav-item-color-hover); }
+
+
+//Remove background-modifier-hover
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active 
+{ --background-modifier-hover: var(--tag) }
+
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active .workspace-tab-header-inner-icon
+{ --icon-color-focused: var(--text-dl) }
+
+.nav-folder-title {
+    --nav-item-weight: 700;
+}

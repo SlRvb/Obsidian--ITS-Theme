@@ -1,0 +1,120 @@
+.theme-dark,
+.theme-light
+{
+    --checkbox-size: var(--font-text-size);
+
+    --checkbox-color: var(--accent);
+    --checkbox-color-hover: var(--dark-accent);
+
+    --checkbox-border-color: var(--accent);
+    --checkbox-border-color-hover: var(--dark-accent);
+
+    --checklist-done-color: var(--inactive);
+    --checklist-done-decoration: none;
+    --checklist-done-weight: 900;
+
+    
+    --list-indent: 20px;
+    --list-spacing: 3px;
+
+    --list-marker-color: var(--text);
+    --list-marker-color-collapsed: var(--inactive);
+    --list-bullet-size: calc(var(--font-text-size) / 2.5);
+    --list-bullet-transform: rotate(45deg);
+    --list-bullet-radius: var(--radius-h);
+    
+    --indentation-guide: var(--lines);
+    --indentation-guide-active: var(--accent);
+    
+}
+
+
+
+
+// .list-bullet:after {
+//     border-radius: 0;
+//     transform: rotate(45deg);
+
+//     width: 7px;
+//     height: 7px;
+// }
+
+// .markdown-rendered .list-bullet { margin-left: -.8em; }
+// // .markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
+// //     margin-left: 0 !important;
+// // }
+
+// // Fix Alignment
+// .list-bullet { margin-right: .4em; }
+// input[type=checkbox] { margin: 0; }
+// .task-list-label.task-list-label input.task-list-item-checkbox { vertical-align: -.2em; }
+
+// /* Spaced Lists: Fix breaking when Space in between Lists*/
+// .markdown-rendered.markdown-rendered :is(ul, ol) li > p:first-of-type { margin-block-start: 15px; }
+:is(ul, ol) li > p { margin-block-end: unset; }
+
+
+// // Right to Left
+// .rtl ul li::before {
+//     float: right;
+//     margin-left: unset;
+//     margin-right: -22px;
+// }
+
+
+
+// /*List Arrows*/
+// .markdown-preview-view ul .list-collapse-indicator {
+//     padding-left: 1em;
+//     color: var(--soft-text);
+// }
+// .snug-bul-arrow:not(.is-mobile) .is-live-preview .HyperMD-list-line.HyperMD-list-line.HyperMD-list-line:not(.HyperMD-task-line) .collapse-indicator {
+//     padding-right: 0;
+//     margin-right: -2px;
+// }
+// .markdown-preview-view ol .list-collapse-indicator {
+//     padding-left: .5em;
+//     position: relative;
+// }
+// ol li:nth-child(n+10):nth-child(-n+99) > .list-collapse-indicator {
+//     padding-left: 0em;
+// }
+// ol li:nth-child(n+100):nth-child(-n+999) > .list-collapse-indicator {
+//     padding-left: 0em;
+//     margin-left: -57px;
+// }
+// .markdown-preview-view .task-list-item .list-collapse-indicator {
+//     padding-left: .5em;
+//     position: relative;
+// }
+
+
+
+
+// .list-bullet:after,
+// ul:not(.contains-task-list) > li .list-bullet::after {
+//     content: var(--bullet);
+//     font-family: var(--bul-f);
+//     color: var(--list-marker-color);
+//     transform: unset;
+//     position: unset;
+//     float: left;
+    
+//     // margin-left: -10px;
+//     margin-top: 5px;
+//     background-color: transparent;
+
+//     width: unset;
+//     height: unset;
+// }
+// .cm-formatting-list .list-bullet:after { 
+//     margin-left: 0; 
+//     margin-top: 0;
+// }
+
+
+// .list-bullet.list-bullet.list-bullet.list-bullet:after
+// {
+//     background-color: transparent;
+//     box-shadow: unset;
+// }

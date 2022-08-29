@@ -1,0 +1,30 @@
+.theme-dark,
+.theme-light {
+    
+    --sidebar-markdown-font-size: var(--font-text-size);
+    --sidebar-tab-text-display: none;
+
+    --ribbon-background: var(--outer-bar);
+    --ribbon-background-collapsed: var(--note);
+    --ribbon-width: 40px;
+    
+    //Vault Title
+    --vault-name-font-size: var(--h6-size);
+    --vault-name-font-weight: var(--font-bold);
+    --vault-name-color: var(--headers);
+
+    
+    //File Explorer
+    --nav-item-color: var(--text);
+    --nav-item-color-hover: var(--text-dl);
+    --nav-item-color-active: var(--text-dl);
+    --nav-item-background-hover: var(--dark-accent);
+    --nav-item-background-active: var(--dark-accent);
+    --nav-item-color-highlighted: var(--text-dl); //Dragged item
+    
+    --nav-item-size: var(--font-ui-small);
+    --nav-item-weight: 500;
+    --nav-item-weight-hover: 700;
+    --nav-item-weight-active: 700;
+    --nav-item-white-space: wrap;
+}

@@ -1,0 +1,60 @@
+/* @settings
+name: In The Shadows Settings
+id: ITS
+settings:
+    -
+        title: Alternate Color Schemes
+        id: Alt-Color-Scheme
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: SlRvb Blue
+        id: slrvb-b
+        type: class-toggle
+    -
+        title: SlRvb Gray
+        id: slrvb-g
+        type: class-toggle
+    - 
+        title: School Days
+        id: s-d
+        type: class-toggle
+    -
+        title: TTRPG
+        id: select
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: SlRvb D&D
+                value: dnd
+            -
+                label: WOTC/Beyond
+                value: wotc-beyond
+    -
+        title: Tangerine Dunes
+        id: t-d
+        type: class-toggle
+    -
+        title: Drowned
+        id: drwn
+        type: class-toggle
+    -
+        title: Nord
+        id: nord
+        type: class-toggle
+    -   
+        title: Minimalist
+        id: mini
+        type: class-toggle
+    -   
+        title: Notion
+        id: notion
+        type: class-toggle
+    -
+        title: ITS Dark
+        id: its-d
+        type: class-toggle
+*/

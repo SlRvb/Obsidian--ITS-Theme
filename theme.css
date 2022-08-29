@@ -4053,13 +4053,6 @@ button.mod-cta,
   margin: auto;
 }
 
-/*--Notes Paddings--*/
-.is-readable-line-width.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row), .is-readable-line-width.markdown-source-view.mod-cm6 .markdown-preview-sizer.markdown-preview-sizer, .is-readable-line-width.markdown-preview-view .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-preview-view .cm-content.cm-content.cm-content, .is-readable-line-width.markdown-preview-view .cm-line.cm-line.cm-line:not(.HyperMD-table-row), .is-readable-line-width.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
-  max-width: var(--note-width);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Note Title */
 .view-header {
   align-content: center;
@@ -4159,16 +4152,6 @@ button.mod-cta,
 .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
   border-radius: var(--radius);
-}
-
-.workspace-tabs .workspace-leaf.mod-active {
-  border: 1px solid var(--accent);
-  margin-right: 1px;
-}
-
-.workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
-  margin-right: 1px;
-  margin-left: 3px;
 }
 
 /*Recolor Top*/
@@ -4470,8 +4453,6 @@ body:not(.type-undo) .nav-file-title {
 .nav-file {
   margin: 0 -2px;
   margin-right: 0px;
-  border: 0;
-  border-left: 2px solid var(--table);
 }
 
 /*Align Folder Line*/
@@ -4972,7 +4953,8 @@ ul > li.task-list-item .task-list-item-checkbox {
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
   content: var(--bullet);
   font-family: var(--bul-f);
-  margin-right: -11px;
+  margin-right: -10px;
+  margin-left: -6px;
 }
 
 .markdown-source-view.mod-cm6:not(.is-rtl) .list-bullet::after {
@@ -9111,7 +9093,6 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
   --callout-gray: 166, 189, 197;
   --callout-yellow: 208, 181, 48;
   --callout-pink: 227, 107, 167;
-  --callout: rgb(227, 107, 167);
 }
 .callout.callout.callout:is([data-callout-metadata~=color-blue], [data-callout-metadata~=c-blue], [data-callout-metadata~=background-color-blue], [data-callout-metadata~=bg-c-blue]) {
   --callout-color: var(--callout-blue);
@@ -9141,28 +9122,28 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
   --callout-color: var(--callout);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-blue], [data-callout-metadata~=bg-blue], [data-callout-metadata~=background-color-blue], [data-callout-metadata~=bg-c-blue]) {
-  background-color: rgba(var(--callout-blue), 20%);
+  background-color: rgba(var(--callout-blue), 10%);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-green], [data-callout-metadata~=bg-green], [data-callout-metadata~=background-color-green], [data-callout-metadata~=bg-c-green]) {
-  background-color: rgba(var(--callout-green), 15%);
+  background-color: rgba(var(--callout-green), 10%);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-orange], [data-callout-metadata~=bg-orange], [data-callout-metadata~=background-color-orange], [data-callout-metadata~=bg-c-orange]) {
-  background-color: rgba(var(--callout-orange), 15%);
+  background-color: rgba(var(--callout-orange), 10%);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-red], [data-callout-metadata~=bg-red], [data-callout-metadata~=background-color-red], [data-callout-metadata~=bg-c-red]) {
-  background-color: rgba(var(--callout-red), 15%);
+  background-color: rgba(var(--callout-red), 10%);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-purple], [data-callout-metadata~=bg-purple], [data-callout-metadata~=background-color-purple], [data-callout-metadata~=bg-c-purple]) {
-  background-color: rgba(var(--callout-purple), 15%);
+  background-color: rgba(var(--callout-purple), 10%);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-gray], [data-callout-metadata~=bg-gray], [data-callout-metadata~=background-color-gray], [data-callout-metadata~=bg-c-gray]) {
-  background-color: rgba(var(--callout-gray), 15%);
+  background-color: rgba(var(--callout-gray), 10%);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-yellow], [data-callout-metadata~=bg-yellow], [data-callout-metadata~=background-color-yellow], [data-callout-metadata~=bg-c-yellow]) {
-  background-color: rgba(var(--callout-yellow), 15%);
+  background-color: rgba(var(--callout-yellow), 10%);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-pink], [data-callout-metadata~=bg-pink], [data-callout-metadata~=background-color-pink], [data-callout-metadata~=bg-c-pink]) {
-  background-color: rgba(var(--callout-pink), 15%);
+  background-color: rgba(var(--callout-pink), 10%);
 }
 
 /*--Callout Types--*/
@@ -15827,4 +15808,157 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 .its-d .markdown-preview-view .list-collapse-indicator {
   position: absolute;
   padding-left: 25px;
+}
+
+/* Obsidian v0.16 */
+.theme-dark, .theme-light {
+  --radius-s: 0;
+  --radius-m: 0;
+  --radius-l: 0;
+  --tab-radius: var(--radius-m);
+  --tab-radius-active: var(--radius-m);
+  --tab-curve: 0;
+  /* --callout-padding: 0; */
+  --callout-title-padding: 10px;
+  --tag-radius: 0;
+  --list-indent: 20px;
+  --dialog-width: unset;
+  --dialog-max-width: 50vw;
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --table-border-color: var(--note);
+  --code-background: var(--code-bg);
+  --nav-item-white-space: wrap;
+  --tag-color: var(--text-dl);
+  --tag-background: var(--tag);
+  --tag-opacity: 1;
+  --graph-controls-width: 20vw;
+  --sidebar-markdown-font-size: calc(var(--f-s-nt) - 2px);
+  --background-modifier-hover: var(--text-highlight-bg);
+}
+
+.is-readable-line-width.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content,
+.is-readable-line-width.markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row),
+.is-readable-line-width.markdown-source-view.mod-cm6 .markdown-preview-sizer.markdown-preview-sizer,
+.is-readable-line-width.markdown-preview-view .cm-line.cm-line.cm-line:not(.HyperMD-table-row) {
+  margin: unset;
+}
+
+.mod-left-split .workspace-tab-container-inner,
+.mod-right-split .workspace-tab-container-inner {
+  gap: 0;
+  padding: 0;
+}
+
+.nav-folder-children {
+  padding: 0;
+}
+
+.nav-folder, .nav-file {
+  border: 0;
+}
+
+.nav-file-title,
+.nav-folder-title.nav-folder-title {
+  padding-left: var(--size-4-3);
+  padding-bottom: 2px;
+  padding-top: 4px;
+  margin-bottom: 0;
+}
+
+.nav-folder.mod-root .nav-folder > .nav-folder-children {
+  margin-left: 17px;
+}
+
+.list-bullet::after,
+.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
+  background-color: transparent;
+  width: 7px;
+  height: 7px;
+}
+
+.markdown-source-view .list-bullet::after {
+  top: 0;
+}
+
+/* Tabs */
+.workspace-tab-header::before, .workspace-tab-header::after {
+  display: none;
+}
+
+.nav-files-container {
+  padding: 0;
+}
+
+.workspace-tab-header.is-active {
+  background: var(--note);
+}
+
+.callout {
+  mix-blend-mode: unset;
+}
+
+.callout.callout.callout:is([data-callout-metadata~=banner], [data-callout-metadata~=sban]),
+.callout.callout.callout:is([data-callout-metadata~=banner], [data-callout-metadata~=sban]) :is(.internal-embed) {
+  display: unset;
+}
+
+.search-result-file-matches {
+  box-shadow: unset;
+}
+
+.markdown-source-view.mod-cm6.mod-cm6 .cm-indent::before {
+  margin-left: -2px;
+}
+
+.cm-s-obsidian span.cm-hashtag {
+  color: var(--tag-color);
+}
+
+.callout-fold svg {
+  margin-bottom: unset;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .list-bullet {
+  margin-left: -7px;
+}
+
+.markdown-rendered blockquote {
+  padding: 10px;
+}
+
+.task-list-item-checkbox.task-list-item-checkbox.task-list-item-checkbox::after {
+  display: none;
+}
+
+.BC-trail.BC-trail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2 !important;
+  background-color: transparent;
+}
+
+.trails-div {
+  padding: 4px 10px;
+  background-color: var(--td);
+  box-shadow: 4px 4px 0 var(--outline), 0 0 0 2px var(--outline);
+}
+
+/* kanban */
+.kanban-plugin__item-title-wrapper {
+  align-content: center;
+  align-items: center;
+}
+
+textarea.kanban-plugin__item-input {
+  background: var(--note);
+  /* resize: vertical; */
+  height: unset;
+  border-style: solid;
+}
+
+.kbn .kanban-plugin__item-title-wrapper {
+  padding: 2px 4px !important;
 }

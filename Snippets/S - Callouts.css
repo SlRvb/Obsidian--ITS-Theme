@@ -745,6 +745,9 @@ body {
   padding-inline-start: unset;
 }
 
+.callout[data-callout~=cards][data-callout-metadata~="1"] :is(.dataview.table-view-table tbody, .callout-content) {
+  grid-template-columns: repeat(1, 1fr);
+}
 .callout[data-callout~=cards][data-callout-metadata~="2"] :is(.dataview.table-view-table tbody, .callout-content) {
   grid-template-columns: repeat(2, 1fr);
 }

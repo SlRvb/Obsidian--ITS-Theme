@@ -9656,6 +9656,9 @@ body {
   padding-inline-start: unset;
 }
 
+.callout[data-callout~=cards][data-callout-metadata~="1"] :is(.dataview.table-view-table tbody, .callout-content) {
+  grid-template-columns: repeat(1, 1fr);
+}
 .callout[data-callout~=cards][data-callout-metadata~="2"] :is(.dataview.table-view-table tbody, .callout-content) {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -15968,6 +15971,10 @@ ul > li::before {
   padding: 10px;
 }
 
+.markdown-rendered thead tr > th:nth-child(2n+2) {
+  background-color: var(--th);
+}
+
 /* kanban */
 .kanban-plugin__item-title-wrapper {
   align-content: center;
@@ -15979,8 +15986,4 @@ textarea.kanban-plugin__item-input {
   /* resize: vertical; */
   height: unset;
   border-style: solid;
-}
-
-.kbn .kanban-plugin__item-title-wrapper {
-  padding: 2px 4px !important;
 }

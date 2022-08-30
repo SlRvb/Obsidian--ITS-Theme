@@ -153,6 +153,10 @@ ul > li::before { margin-left: -26px; }
     padding: 10px;
 }
 
+// Fix Tables
+.markdown-rendered thead tr > th:nth-child(2n+2) {
+    background-color: var(--th);
+}
 
 
 /* kanban */
@@ -166,6 +170,6 @@ textarea.kanban-plugin__item-input {
     height: unset;
     border-style: solid;
 }
-.kbn .kanban-plugin__item-title-wrapper {
-    padding: 2px 4px !important;
-}
+// .kbn .kanban-plugin__item-title-wrapper {
+//     padding: 2px 4px !important;
+// }

@@ -90,7 +90,7 @@ ul > li.task-list-item .task-list-item-checkbox { margin-left: -26px; }
         margin-right: 0; 
     }
     &.is-live-preview .list-bullet { 
-        padding-right: .45em; 
+        padding-right: .4em; 
     }
     
     // Source Mode List Fix
@@ -106,7 +106,7 @@ ul > li.task-list-item .task-list-item-checkbox { margin-left: -26px; }
 
 /*Adjust Padding*/
 .cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol { 
-    margin-left: 0; 
+    margin-left: -7px; 
 }
 .cm-s-obsidian.is-live-preview span.cm-formatting-list-ol { 
     padding-right: .3em; 
@@ -161,6 +161,7 @@ li:nth-child(even) {
     padding-left: .5em;
     position: relative;
 }
+
 ol li:nth-child(n+10):nth-child(-n+99) > .list-collapse-indicator {
     padding-left: 0em;
 }

@@ -58,8 +58,7 @@
 }
 
 // Lists
-body ul > li::marker, 
-.cm-s-obsidian .cm-formatting-list {
+body ul > li::marker {
     color: transparent;
 }
 .list-bullet::after,
@@ -77,15 +76,39 @@ ul > li::before { margin-left: -26px; }
 .markdown-rendered.show-indentation-guide li > ol::before,
 .markdown-rendered.show-indentation-guide li.task-list-item > ul::before,
 .markdown-rendered.show-indentation-guide li.task-list-item > ol::before {
-    left: -20px;
+    left: -19px;
+}
+.markdown-source-view.mod-cm6.mod-cm6 .cm-indent::before {
+    margin-left: -1.5px;
+}
+.markdown-source-view.mod-cm6.is-live-preview .cm-indent::before {
+    margin-left: 1.5px;
 }
 
+
 .is-collapsed .list-bullet { display: none; }
+
+.cm-fold-indicator.cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+.is-collapsed ~ .cm-formatting-list .list-bullet:after,
+.is-collapsed ~ .cm-formatting-list .list-bullet:after { 
+    background: transparent;
+    box-shadow: unset;
+}
+
+// .markdown-source-view.mod-cm6 .list-bullet::after {
+//     margin-left: -8px;
+// }
+// .markdown-source-view.mod-cm6.mod-cm6 .cm-indent::before {
+//     margin-left: -2px;
+// }
+
 .markdown-preview-view li .collapse-icon {
     margin-top: 7px;
     margin-left: -47px;
 }
-
+.task-list-item-checkbox.task-list-item-checkbox.task-list-item-checkbox::after {
+    display: none;
+}
 
 
 /* Tabs */
@@ -95,36 +118,33 @@ ul > li::before { margin-left: -26px; }
 .nav-files-container {
     padding: 0;
 }
+
 .workspace-tab-header.is-active {
     background: var(--note);
 }
+.mod-left-split .markdown-preview-view {
+    padding: 10px;
+}
 
+// Callout
 .callout { mix-blend-mode: unset; }
+.callout-fold svg {
+    margin-bottom: unset;
+}
 
-
+// Search
 .search-result-file-matches {
     box-shadow: unset;
-}
-.markdown-source-view.mod-cm6.mod-cm6 .cm-indent::before {
-    margin-left: -2px;
 }
 
 .cm-s-obsidian span.cm-hashtag {
     color: var(--tag-color);
 }
-.callout-fold svg {
-    margin-bottom: unset;
-}
-.markdown-source-view.mod-cm6.is-live-preview .list-bullet {
-    margin-left: -7px;
-}
 
 .markdown-rendered blockquote {
     padding: 10px;
 }
-.task-list-item-checkbox.task-list-item-checkbox.task-list-item-checkbox::after {
-    display: none;
-}
+
 
 
 /* kanban */

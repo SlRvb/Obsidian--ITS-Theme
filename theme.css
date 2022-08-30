@@ -15854,9 +15854,14 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
   border: 0;
 }
 
+.nav-folder.mod-root {
+  margin-left: 0;
+}
+
 .nav-file-title,
 .nav-folder-title.nav-folder-title {
-  padding-left: var(--size-4-3);
+  margin-left: var(--size-4-3);
+  padding-left: 0;
   padding-bottom: 2px;
   padding-top: 4px;
   margin-bottom: 0;
@@ -15864,6 +15869,8 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 
 .nav-folder.mod-root .nav-folder > .nav-folder-children {
   margin-left: 17px;
+  border-color: var(--lines);
+  border-width: 2px;
 }
 
 body ul > li::marker {

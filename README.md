@@ -15,7 +15,7 @@
 - [CSS Classes](Guide/CSS-Classes.md)
 - [Embed Adjustments](Guide/Embed-Adjustments.md)
 - [Alternate Themes](Guide/Alternate-Themes.md)
-- [Folder Styles](Guide/Snippet-Folder-Styles.md)
+- [Folder Styles](Guide/Snippet--Folder-Styles.md)
 - **⚠ Depreciated Snippets:**
 	- [\<i>\</i>](Guide/HTML-I-Attributes.md)
 	- [Asides](Guide/Asides.md)

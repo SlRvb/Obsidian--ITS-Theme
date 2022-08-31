@@ -1,6 +1,6 @@
 # Embed Adjustments
 
-> **Embed Adjustments use the same [parameters](Guide/Image-Positions#sizing) as the images for resizing it and [moving it](Guide/Image-Positions#leftrightcenter).**
+> **Embed Adjustments use the same [parameters](Image-Positions#sizing) as the images for resizing it and [moving it](Image-Positions#leftrightcenter).**
 
  [Download Embed Adjusment Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Embed%20Adjustments.css)
 

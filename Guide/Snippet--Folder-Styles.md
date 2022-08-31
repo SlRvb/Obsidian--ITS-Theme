@@ -2,6 +2,7 @@
 > Change the colors of your folders with the [Folder Styles Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Folder%20Styles.css)
 
 > **Warning**
+> 
 > This snippet *will* require a bit of manual work. I do not recommend using it if you change your folders often.
 
 ![Image](https://media.discordapp.net/attachments/855181471643861002/930586979295453184/Obsidian_kszRvt3fwb.gif)

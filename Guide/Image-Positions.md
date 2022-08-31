@@ -3,10 +3,24 @@
 
  [Download Image Adjusment Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Images%20Adjustments.css)
 
-> **⚠ Note:** 
-> - Obsidian internal images `![[` will change immediately, but for external images `![]()`, the page needs to be reopened to see the changes. 
+> **Note** 
 > - Might not be 100% compatible with [Lithou's Image Flags snippet.](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)
 > - Image grid doesn't quite work with external images `[]()` as nicely as internally linked ones.
+
+---
+- [Attributes](Image-Positions.md#attributes)
+
+- [Simplified Version](Image-Positions.md#simplified-version)
+	- [Left / Right / Center](Image-Positions.md#leftrightcenter)
+	- [Types](Image-Positions.md#types)
+
+- [Customizable Version](Image-Positions.md#customizable-version)
+	- [Left / Right / Center](Image-Positions.md#leftright)
+	- [Innner Image Positions](Image-Positions.md#inner-image-position)
+	- [Sizing](Image-Positions.md#sizing)
+
+- [Invert Colors](Image-Positions.md#invert-volors)
+
 
 # Syntax
 ```md
@@ -28,7 +42,8 @@
 ### Image Grid
 
 > **Warning**
-> **I recommend using my [Callout Image Grids](Guide/Callouts.md#image-grid) instead**
+> 
+> **I recommend using my [Callout Image Grids](Callouts.md#image-grid) instead**
 
 | Attribute | Description |
 | --- | --- |

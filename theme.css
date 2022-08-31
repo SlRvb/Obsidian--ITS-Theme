@@ -8924,7 +8924,7 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   margin-left: 8px;
 }
 
-.callout.callout:is([data-callout-metadata~=ctr],
+.callout.callout.callout:is([data-callout-metadata~=ctr],
 [data-callout-metadata~=center]) {
   display: block;
   margin: auto;

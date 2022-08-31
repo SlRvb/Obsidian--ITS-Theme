@@ -16,7 +16,7 @@
     margin: unset;
     margin-left: 8px;
 }
-.callout.callout:is(
+.callout.callout.callout:is(
     [data-callout-metadata~="ctr"], 
     [data-callout-metadata~="center"]
     ) {

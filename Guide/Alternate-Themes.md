@@ -3,6 +3,9 @@
 > 
 > Use the **[Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings)** to toggle one of them on.
 
+> **Note**
+> These are also available in the theme itself, if you're using the ITS Theme, the only thing this snippet will offer is preloaded fonts.
+
 # How To Install
 
 1. Go to the [All Alternate Themes Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20All%20Alternate%20Themes.css)

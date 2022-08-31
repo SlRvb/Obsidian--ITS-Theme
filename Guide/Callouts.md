@@ -1,6 +1,6 @@
 
 # Callouts
-> **[Get Callout Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Callouts.css)**
+> **[Get Callout Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Callouts.css)**
 
 ---
 

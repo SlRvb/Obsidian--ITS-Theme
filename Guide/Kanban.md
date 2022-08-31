@@ -10,6 +10,9 @@ Heavily edited version of Maned's Kanban css from their theme [Spectrum
 
 ---
 
+> **Note**
+> **[Callout Kanban](Guide/Callouts.md#image-grid) is also available and mimics the Kanban Plugin styling**
+
 Add this to the frontmatter/yaml of your note:
 ```yaml
 ---

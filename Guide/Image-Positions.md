@@ -1,12 +1,12 @@
 # Image Positions
 > Move/position and re-size the images in notes
 
- [Download Image Adjusment Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Images%20Adjustments.css)
+ [Download Image Adjusment Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Images%20Adjustments.css)
 
-**⚠ Note:** 
-- Obsidian internal images `![[` will change immediately, but for external images `![]()`, the page needs to be reopened to see the changes. 
-- Might not be 100% compatible with [Lithou's Image Flags snippet.](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)
-- Image grid doesn't quite work with external images `[]()` as nicely as internally linked ones.
+> **⚠ Note:** 
+> - Obsidian internal images `![[` will change immediately, but for external images `![]()`, the page needs to be reopened to see the changes. 
+> - Might not be 100% compatible with [Lithou's Image Flags snippet.](https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css)
+> - Image grid doesn't quite work with external images `[]()` as nicely as internally linked ones.
 
 # Syntax
 ```md
@@ -27,7 +27,8 @@
 
 ### Image Grid
 
-> ⚠ **I recommend using my [Callout Image Grids](Callouts.md#image-grid) instead**
+> **Warning**
+> **I recommend using my [Callout Image Grids](Guide/Callouts.md#image-grid) instead**
 
 | Attribute | Description |
 | --- | --- |
@@ -90,11 +91,11 @@ These are particularly useful for images with transparency that are illegible in
 
 #### Portrait
 
-Attribute | Description |
----|---|
-`portrait`| `portrait` will crop the image width-wise to 40% while setting the height to a standard of 400px.
-`portrait+small`| `portrait+small` will crop the image width-wise to 20% while setting the height to a standard of 200px.
-`portrait+tall`| `portrait+tall` will crop the image width-wise to 50% while setting the height to a standard of 500px.
+| Attribute | Description |
+| --- | --- |
+| `portrait` | `portrait` will crop the image width-wise to 40% while setting the height to a standard of 400px. |
+| `portrait+small` | `portrait+small` will crop the image width-wise to 20% while setting the height to a standard of 200px. |
+| `portrait+tall` | `portrait+tall` will crop the image width-wise to 50% while setting the height to a standard of 500px. |
 
 
 #### Profile

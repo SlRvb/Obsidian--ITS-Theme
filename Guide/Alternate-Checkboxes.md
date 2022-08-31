@@ -4,7 +4,7 @@
 
 > Different checkbox types
 
-[Download CSS Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Checkboxes.css)
+[Download CSS Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Checkboxes.css)
 
 #  Checkbox Types
 ```markdown

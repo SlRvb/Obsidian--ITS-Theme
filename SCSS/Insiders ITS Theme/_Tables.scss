@@ -34,7 +34,7 @@ th,
 
     //Alternating Styling
     & table th:nth-child(even) {
-        opacity: 80%;
+        opacity: var(--th-opacity);
         border-left: 1px solid var(--note);
         border-right: 1px solid var(--note);
     }

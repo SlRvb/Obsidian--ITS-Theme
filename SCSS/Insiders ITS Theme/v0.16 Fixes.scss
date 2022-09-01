@@ -154,7 +154,7 @@ ul > li::before { margin-left: -26px; }
 }
 
 // Fix Tables
-.markdown-rendered thead tr > th:nth-child(2n+2) {
+.markdown-rendered table:not(.dataview) thead tr > th:nth-child(2n+2) {
     background-color: var(--th);
 }
 

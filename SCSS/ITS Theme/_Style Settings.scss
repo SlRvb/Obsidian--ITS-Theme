@@ -1377,6 +1377,16 @@ settings:
             -
                 label: Dark and Bold First Column
                 value: table
+    -
+        title: Table Header Alternate Opacity
+        description: Adjust opacity for alternate header opacity
+        id: th-opacity
+        type: variable-number-slider
+        format: "%"
+        default: 80
+        min: 50
+        max: 100
+        step: 10
     - 
         title: Add Table Borders
         id: tbl-b

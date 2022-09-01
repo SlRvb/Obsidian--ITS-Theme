@@ -1378,6 +1378,16 @@ settings:
             -
                 label: Dark and Bold First Column
                 value: table
+    -
+        title: Table Header Alternate Opacity
+        description: Adjust opacity for alternate header opacity
+        id: th-opacity
+        type: variable-number-slider
+        format: "%"
+        default: 80
+        min: 50
+        max: 100
+        step: 10
     - 
         title: Add Table Borders
         id: tbl-b
@@ -2518,6 +2528,7 @@ body {
   --f-small: .88em;
   --f-tag: 13px;
   --note-width: 700px;
+  --th-opacity: 80%;
   --tbl-th-h: 4px;
   --tbl-th-w: 10px;
   --tbl-th-s: var(--f-text);
@@ -5504,7 +5515,7 @@ th,
 .reveal table th:nth-child(even),
 .is-live-preview table th:nth-child(even),
 .markdown-preview-view table th:nth-child(even) {
-  opacity: 80%;
+  opacity: var(--th-opacity);
   border-left: 1px solid var(--note);
   border-right: 1px solid var(--note);
 }

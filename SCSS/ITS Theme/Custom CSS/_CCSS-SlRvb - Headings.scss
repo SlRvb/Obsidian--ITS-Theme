@@ -227,13 +227,26 @@ h5, .HyperMD-header-5
 
 
 /*--Illusion Headers--*/
+
 .illusion.illusion {
-    & h1,
-    & h2,
-    & h3,
-    & h4,
-    & h5,
-    & h6,
+    // --h1-illusion: var(--sphd-ed-1);
+    // --h2-illusion: var(--sphd-ed-2);
+    // --h3-illusion: var(--sphd-ed-3);
+    // --h4-illusion: var(--sphd-ed-4);
+    // --h5-illusion: var(--sphd-ed-5);
+    // --h6-illusion: var(--sphd-ed-6); 
+    
+    &.illusion-one {
+        --h1-illusion: var(--h-illusion-bg);
+        --h2-illusion: var(--h-illusion-bg);
+        --h3-illusion: var(--h-illusion-bg);
+        --h4-illusion: var(--h-illusion-bg);
+        --h5-illusion: var(--h-illusion-bg);
+        --h6-illusion: var(--h-illusion-bg);
+    }
+
+    & :is(h1, h2, h3, h4, h5, h6),
+    & .markdown-embed :is(h1, h2, h3, h4, h5, h6),
     & .cm-s-obsidian .HyperMD-header,
     & .HyperMD-header {
         padding: 7px;
@@ -253,17 +266,17 @@ h5, .HyperMD-header-5
     }
 
     & h1,
-    & .HyperMD-header-1 { background-color: var(--sphd-ed-1); }
+    & .HyperMD-header-1 { background-color: var(--h1-illusion); }
     & h2,
-    & .HyperMD-header-2 { background-color: var(--sphd-ed-2); }
+    & .HyperMD-header-2 { background-color: var(--h2-illusion); }
     & h3,
-    & .HyperMD-header-3 { background-color: var(--sphd-ed-3); }
+    & .HyperMD-header-3 { background-color: var(--h3-illusion); }
     & h4,
-    & .HyperMD-header-4 { background-color: var(--sphd-ed-4); }
+    & .HyperMD-header-4 { background-color: var(--h4-illusion); }
     & h5,
-    & .HyperMD-header-5 { background-color: var(--sphd-ed-5); }
+    & .HyperMD-header-5 { background-color: var(--h5-illusion); }
     & h6,
-    & .HyperMD-header-6 { background-color: var(--sphd-ed-6); }
+    & .HyperMD-header-6 { background-color: var(--h6-illusion); }
 
     //Color White
     & .heading-collapse-indicator svg,

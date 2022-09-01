@@ -28,12 +28,12 @@
 }
 
 /* Recolor Embed Headings*/
-body:not(.em-hd) .markdown-embed h1,
-body:not(.em-hd) .markdown-embed h2,
-body:not(.em-hd) .markdown-embed h3,
-body:not(.em-hd) .markdown-embed h4,
-body:not(.em-hd) .markdown-embed h5,
-body:not(.em-hd) .markdown-embed h6 {
+body:not(.em-hd) div:not(.popover) .markdown-embed h1,
+body:not(.em-hd) div:not(.popover) .markdown-embed h2,
+body:not(.em-hd) div:not(.popover) .markdown-embed h3,
+body:not(.em-hd) div:not(.popover) .markdown-embed h4,
+body:not(.em-hd) div:not(.popover) .markdown-embed h5,
+body:not(.em-hd) div:not(.popover) .markdown-embed h6 {
     font-size: 20px;
     color: var(--accent);
 }

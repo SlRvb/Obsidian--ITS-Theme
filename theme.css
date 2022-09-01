@@ -785,10 +785,6 @@ settings:
         level: 4
         collapsed: true
     -
-        title: Illusion Theme Inspired Headings
-        id: illusion
-        type: class-toggle
-    -
         title: Header Borders
         id: header-borders
         type: class-toggle
@@ -845,6 +841,76 @@ settings:
 	-
 		title: Heading 6 Border Color
 		id: h6-b-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#2e333d'
+		default-light: '#8a92a3'
+    -
+        title: Illusion Style Headers
+        id: illusion-headers
+        type: heading
+        level: 4
+		collapsed: true  
+    -
+        title: Illusion Theme Inspired Headings
+        id: illusion
+        type: class-toggle
+    -
+        title: 1 Header Illusion Color
+        id: illusion-one
+        description: Set all illusion styled headings to 1 color
+        type: class-toggle
+    -
+        title: Illusion Heading Background Color
+		id: h-illusion-bg
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'  
+    -
+        title: Illusion Background Colors
+        id: illusion-headers
+        type: heading
+        level: 5
+		collapsed: true  
+    -
+        title: Illusion Heading 1 Background Color
+		id: h1-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#7c2929'
+		default-light: '#bb5555'
+    -
+        title: Illusion Heading 2 Background Color
+		id: h2-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#652121'
+		default-light: '#a53f3f'
+    -
+        title: Illusion Heading 3 Background Color
+		id: h3-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#471d1d'
+		default-light: '#862c2c'
+    -
+        title: Illusion Heading 4 Background Color
+		id: h4-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#381919'
+		default-light: '#662828'
+    -
+        title: Illusion Heading 5 Background Color
+		id: h5-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#424c61'
+		default-light: '#697795'
+    -
+        title: Illusion Heading 6 Background Color
+		id: h6-illusion
 		type: variable-themed-color
 		format: hex
 		default-dark: '#2e333d'
@@ -2470,6 +2536,7 @@ body {
   --f-s-tab-i: 17px;
   --s-rib-pad: 18px;
   --h-brdr: 2px;
+  --header-lh: 1em;
   --f-w-h: 600;
   --h-line: 100%;
   --head-h: 15px;
@@ -2521,6 +2588,13 @@ body {
   --sphd-ed-fs-4: var(--sphd-pre-fs-4);
   --sphd-ed-fs-5: var(--sphd-pre-fs-5);
   --sphd-ed-fs-6: var(--sphd-pre-fs-6);
+  --h-illusion-bg: var(--headers);
+  --h1-illusion: var(--sphd-ed-1);
+  --h2-illusion: var(--sphd-ed-2);
+  --h3-illusion: var(--sphd-ed-3);
+  --h4-illusion: var(--sphd-ed-4);
+  --h5-illusion: var(--sphd-ed-5);
+  --h6-illusion: var(--sphd-ed-6);
   /**/
   --em-pre-f: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --em-ed-f: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -5582,12 +5656,12 @@ a.tag:hover {
 }
 
 /* Recolor Embed Headings*/
-body:not(.em-hd) .markdown-embed h1,
-body:not(.em-hd) .markdown-embed h2,
-body:not(.em-hd) .markdown-embed h3,
-body:not(.em-hd) .markdown-embed h4,
-body:not(.em-hd) .markdown-embed h5,
-body:not(.em-hd) .markdown-embed h6 {
+body:not(.em-hd) div:not(.popover) .markdown-embed h1,
+body:not(.em-hd) div:not(.popover) .markdown-embed h2,
+body:not(.em-hd) div:not(.popover) .markdown-embed h3,
+body:not(.em-hd) div:not(.popover) .markdown-embed h4,
+body:not(.em-hd) div:not(.popover) .markdown-embed h5,
+body:not(.em-hd) div:not(.popover) .markdown-embed h6 {
   font-size: 20px;
   color: var(--accent);
 }
@@ -7338,12 +7412,20 @@ h5::after, .HyperMD-header-5::after {
 }
 
 /*--Illusion Headers--*/
-.illusion.illusion h1, .illusion.illusion h2, .illusion.illusion h3, .illusion.illusion h4, .illusion.illusion h5, .illusion.illusion h6, .illusion.illusion .cm-s-obsidian .HyperMD-header, .illusion.illusion .HyperMD-header {
+.illusion.illusion.illusion-one {
+  --h1-illusion: var(--h-illusion-bg);
+  --h2-illusion: var(--h-illusion-bg);
+  --h3-illusion: var(--h-illusion-bg);
+  --h4-illusion: var(--h-illusion-bg);
+  --h5-illusion: var(--h-illusion-bg);
+  --h6-illusion: var(--h-illusion-bg);
+}
+.illusion.illusion :is(h1, h2, h3, h4, h5, h6), .illusion.illusion .markdown-embed :is(h1, h2, h3, h4, h5, h6), .illusion.illusion .cm-s-obsidian .HyperMD-header, .illusion.illusion .HyperMD-header {
   padding: 7px;
   color: var(--text-dl);
   box-shadow: 5px 5px var(--outline);
 }
-.illusion.illusion h1:after, .illusion.illusion h1:before, .illusion.illusion h2:after, .illusion.illusion h2:before, .illusion.illusion h3:after, .illusion.illusion h3:before, .illusion.illusion h4:after, .illusion.illusion h4:before, .illusion.illusion h5:after, .illusion.illusion h5:before, .illusion.illusion h6:after, .illusion.illusion h6:before, .illusion.illusion .cm-s-obsidian .HyperMD-header:after, .illusion.illusion .cm-s-obsidian .HyperMD-header:before, .illusion.illusion .HyperMD-header:after, .illusion.illusion .HyperMD-header:before {
+.illusion.illusion :is(h1, h2, h3, h4, h5, h6):after, .illusion.illusion :is(h1, h2, h3, h4, h5, h6):before, .illusion.illusion .markdown-embed :is(h1, h2, h3, h4, h5, h6):after, .illusion.illusion .markdown-embed :is(h1, h2, h3, h4, h5, h6):before, .illusion.illusion .cm-s-obsidian .HyperMD-header:after, .illusion.illusion .cm-s-obsidian .HyperMD-header:before, .illusion.illusion .HyperMD-header:after, .illusion.illusion .HyperMD-header:before {
   height: 0;
 }
 .illusion.illusion .HyperMD-header.CodeMirror-line {
@@ -7352,22 +7434,22 @@ h5::after, .HyperMD-header-5::after {
   padding-bottom: 5px;
 }
 .illusion.illusion h1, .illusion.illusion .HyperMD-header-1 {
-  background-color: var(--sphd-ed-1);
+  background-color: var(--h1-illusion);
 }
 .illusion.illusion h2, .illusion.illusion .HyperMD-header-2 {
-  background-color: var(--sphd-ed-2);
+  background-color: var(--h2-illusion);
 }
 .illusion.illusion h3, .illusion.illusion .HyperMD-header-3 {
-  background-color: var(--sphd-ed-3);
+  background-color: var(--h3-illusion);
 }
 .illusion.illusion h4, .illusion.illusion .HyperMD-header-4 {
-  background-color: var(--sphd-ed-4);
+  background-color: var(--h4-illusion);
 }
 .illusion.illusion h5, .illusion.illusion .HyperMD-header-5 {
-  background-color: var(--sphd-ed-5);
+  background-color: var(--h5-illusion);
 }
 .illusion.illusion h6, .illusion.illusion .HyperMD-header-6 {
-  background-color: var(--sphd-ed-6);
+  background-color: var(--h6-illusion);
 }
 .illusion.illusion .heading-collapse-indicator svg, .illusion.illusion .cm-header, .illusion.illusion pre.HyperMD-header > span > span:first-child {
   color: var(--text-dl);
@@ -12561,6 +12643,11 @@ body .obsidian-statblock-plugin .heading {
   font-size: var(--f-s-h);
   font-weight: var(--f-w-h);
   font-variant: unset;
+  line-height: var(--header-lh);
+}
+
+.illusion.illusion .obsidian-statblock-plugin :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--text-dl);
 }
 
 body .obsidian-statblock-plugin > .content-wrap,

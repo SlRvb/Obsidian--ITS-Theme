@@ -81,6 +81,7 @@ body {
     --s-rib-pad: 18px;
 
     --h-brdr: 2px;
+    --header-lh: 1em;
     
     --f-w-h: 600;
     --h-line: 100%;
@@ -138,6 +139,14 @@ body {
     --sphd-ed-fs-4: var(--sphd-pre-fs-4);
     --sphd-ed-fs-5: var(--sphd-pre-fs-5);
     --sphd-ed-fs-6: var(--sphd-pre-fs-6);
+ 
+    --h-illusion-bg: var(--headers);
+    --h1-illusion: var(--sphd-ed-1);
+    --h2-illusion: var(--sphd-ed-2);
+    --h3-illusion: var(--sphd-ed-3);
+    --h4-illusion: var(--sphd-ed-4);
+    --h5-illusion: var(--sphd-ed-5);
+    --h6-illusion: var(--sphd-ed-6); 
 
     /**/
     --em-pre-f: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;

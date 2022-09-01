@@ -784,10 +784,6 @@ settings:
         level: 4
         collapsed: true
     -
-        title: Illusion Theme Inspired Headings
-        id: illusion
-        type: class-toggle
-    -
         title: Header Borders
         id: header-borders
         type: class-toggle
@@ -844,6 +840,76 @@ settings:
 	-
 		title: Heading 6 Border Color
 		id: h6-b-c
+		type: variable-themed-color
+		format: hex
+		default-dark: '#2e333d'
+		default-light: '#8a92a3'
+    -
+        title: Illusion Style Headers
+        id: illusion-headers
+        type: heading
+        level: 4
+		collapsed: true  
+    -
+        title: Illusion Theme Inspired Headings
+        id: illusion
+        type: class-toggle
+    -
+        title: 1 Header Illusion Color
+        id: illusion-one
+        description: Set all illusion styled headings to 1 color
+        type: class-toggle
+    -
+        title: Illusion Heading Background Color
+		id: h-illusion-bg
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'  
+    -
+        title: Illusion Background Colors
+        id: illusion-headers
+        type: heading
+        level: 5
+		collapsed: true  
+    -
+        title: Illusion Heading 1 Background Color
+		id: h1-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#7c2929'
+		default-light: '#bb5555'
+    -
+        title: Illusion Heading 2 Background Color
+		id: h2-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#652121'
+		default-light: '#a53f3f'
+    -
+        title: Illusion Heading 3 Background Color
+		id: h3-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#471d1d'
+		default-light: '#862c2c'
+    -
+        title: Illusion Heading 4 Background Color
+		id: h4-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#381919'
+		default-light: '#662828'
+    -
+        title: Illusion Heading 5 Background Color
+		id: h5-illusion
+		type: variable-themed-color
+		format: hex
+		default-dark: '#424c61'
+		default-light: '#697795'
+    -
+        title: Illusion Heading 6 Background Color
+		id: h6-illusion
 		type: variable-themed-color
 		format: hex
 		default-dark: '#2e333d'

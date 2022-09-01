@@ -19,6 +19,11 @@ body .obsidian-statblock-plugin .heading {
     font-size: var(--f-s-h);
     font-weight: var(--f-w-h);
     font-variant: unset;
+    line-height: var(--header-lh);
+}
+
+.illusion.illusion .obsidian-statblock-plugin :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--text-dl);
 }
 
 //Old Stat

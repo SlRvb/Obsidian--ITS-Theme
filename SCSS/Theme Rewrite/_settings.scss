@@ -4,10 +4,62 @@
     --modal-border-width: 3px;
 
     --modal-community-sidebar-width: 310px;
-
-
+    --modal-sidebar-background: var(--dark-sidebar); //Personal
     
+    --modal-nav-item-background: transparent; //Personal
+    --modal-nav-item-background-hover: var(--td); //Personal
+
+
+    //Toggle
     --toggle-width: 20px;
+    --toggle-s-width: 20px;
     --toggle-border-width: 1px;
-    
+}
+
+//Setting Hover BG
+.setting-item:hover {
+    background-color: var(--modal-nav-item-background-hover);
+}
+
+//Fixed Settings Padding
+.vertical-tab-content {
+    padding: 35px;
+
+    & .setting-item {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    & .setting-item:first-child { padding-top: 0.75em; }
+    & .installed-plugins-container { padding: 0;}
+
+}
+//Fixed Settings Sidebar
+.vertical-tab-header {
+    background-color: var(--modal-sidebar-background);
+}
+.horizontal-tab-nav-item, 
+.vertical-tab-nav-item {
+    background-color: var(--modal-nav-item-background);
+}
+
+
+//Fixed Toggle Checkbox Dropshadow
+.checkbox-container,
+.checkbox-container:after
+{ box-shadow: var(--toggle-shadow); }
+
+//Fixed Toggle Small Sizing
+.checkbox-container.mod-small {
+    width:var(--toggle-s-width);
+    height: var(--toggle-s-width);
+}
+
+//Fixed Community Theme/Plugin Styling
+.community-item {
+    border: var(--box-border);
+    box-shadow: var(--shadow-s);
+}
+.community-item:hover {
+    background-color: var(--modal-nav-item-background-hover);
+    border-color: var(--outline);
 }

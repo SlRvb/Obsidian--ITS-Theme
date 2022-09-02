@@ -1,4 +1,6 @@
-
+* {
+    transition: none !important;
+}
 
 // Hover Text Fix
 .backlink-pane > .tree-item-self.is-collapsed:hover, 
@@ -32,3 +34,16 @@
 .nav-folder-title {
     --nav-item-weight: 700;
 }
+
+
+
+//Fixed Scrollbars
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+    background-color: var(--scrollbar-bg);
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+}
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
+    border-width: var(--scrollbar-border-width);
+}
+

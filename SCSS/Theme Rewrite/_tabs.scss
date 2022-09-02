@@ -4,6 +4,7 @@
     --tab-curve: var(--radius-s);
     --tab-radius: var(--radius-s);
     --tab-radius-active: var(--radius-s);
+
     
     //Color
     --tab-outline-color: var(--accent);
@@ -11,10 +12,20 @@
     
     --tab-background: var(--outer-bar);
     --tab-background-active: var(--note);
-
+    --tab-container-background: var(--outer-bar); //Horizontal Split Tab background color;
+    
     --tab-text-color: var(--inactive); //Inactive tab text
     --tab-text-color-focused: var(--inactive); //Active Window Inactive tab Text
     --tab-text-color-focused-active: var(--text);
+    --tab-text-color-hover: var(--text); //Personal
+    
+    //Tab Stacked
+    --tab-stacked-font-weight: 700;
+    --tab-stacked-font-size: 15px;
+    --tab-stacked-shadow: -10px 0 10px var(--td);
+}
 
-    --tab-container-background: var(--outer-bar); //Horizontal Split Tab background color;
+//Fix Tab Hover
+.workspace-tab-header.workspace-tab-header:hover {
+    color: var(--tab-text-color-hover);
 }

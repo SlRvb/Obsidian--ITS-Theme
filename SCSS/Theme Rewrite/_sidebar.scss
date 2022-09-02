@@ -28,3 +28,9 @@
     --nav-item-weight-active: 700;
     --nav-item-white-space: wrap;
 }
+
+//Fixed
+.side-dock-ribbon .clickable-icon:hover {
+    background-color: var(--bttn);
+    color: var(--text-dl);
+}

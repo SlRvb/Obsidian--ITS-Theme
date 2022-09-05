@@ -87,6 +87,56 @@ th,
     & .table-view-table.table-view-table > tbody > tr > td 
     { border-color: var(--table); }
 }
+.tbl-row-even {
+    & .reveal,
+    & .is-live-preview.is-live-preview,
+    & .markdown-preview-view.markdown-preview-view {
+        & table tr:nth-child(even)
+        { background-color: var(--td); }
+        
+        & table tr:nth-child(odd),
+        & table td:nth-child(odd)
+        { background-color: unset; }
+
+    }
+}
+.tbl-row-odd {
+    & .reveal,
+    & .is-live-preview.is-live-preview,
+    & .markdown-preview-view.markdown-preview-view {
+        & table tr:nth-child(odd)
+        { background-color: var(--td); }
+        
+        & table tr:nth-child(even),
+        & table td:nth-child(odd)
+        { background-color: unset; }
+
+    }
+}
+.tbl-column-odd {
+    & .reveal,
+    & .is-live-preview,
+    & .markdown-preview-view {
+        & table td:nth-child(even),
+        & table tr:nth-child(even) 
+        { background-color: unset; }
+
+        & table td:nth-child(odd)
+        { background-color: var(--td); }
+    }
+}
+.tbl-column-even {
+    & .reveal,
+    & .is-live-preview,
+    & .markdown-preview-view {
+        & table td:nth-child(odd),
+        & table tr:nth-child(even) 
+        { background-color: unset; }
+
+        & table td:nth-child(even)
+        { background-color: var(--td); }
+    }
+}
 
 // .markdown-preview-sizer { min-height: auto !important; }
 

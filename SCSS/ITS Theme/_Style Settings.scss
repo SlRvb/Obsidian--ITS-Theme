@@ -854,6 +854,10 @@ settings:
         title: Illusion Theme Inspired Headings
         id: illusion
         type: class-toggle
+    - 
+        title: Illusion Hide Box Shadow
+        id: illusion-bxsh
+        type: class-toggle    
     -
         title: 1 Header Illusion Color
         id: illusion-one
@@ -877,6 +881,7 @@ settings:
 		id: h1-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#7c2929'
 		default-light: '#bb5555'
     -
@@ -884,6 +889,7 @@ settings:
 		id: h2-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#652121'
 		default-light: '#a53f3f'
     -
@@ -891,6 +897,7 @@ settings:
 		id: h3-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#471d1d'
 		default-light: '#862c2c'
     -
@@ -898,6 +905,7 @@ settings:
 		id: h4-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#381919'
 		default-light: '#662828'
     -
@@ -905,6 +913,7 @@ settings:
 		id: h5-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#424c61'
 		default-light: '#697795'
     -
@@ -912,6 +921,7 @@ settings:
 		id: h6-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#2e333d'
 		default-light: '#8a92a3'
     -
@@ -1377,6 +1387,18 @@ settings:
             -
                 label: Dark and Bold First Column
                 value: table
+            -
+                label: Odd Columns Only
+                value: tbl-column-odd
+            -
+                label: Even Columns Only
+                value: tbl-column-even
+            -
+                label: Even Rows Only
+                value: tbl-row-even
+            -
+                label: Odd Rows Only
+                value: tbl-row-odd
     -
         title: Table Header Alternate Opacity
         description: Adjust opacity for alternate header opacity

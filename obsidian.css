@@ -855,6 +855,10 @@ settings:
         title: Illusion Theme Inspired Headings
         id: illusion
         type: class-toggle
+    - 
+        title: Illusion Hide Box Shadow
+        id: illusion-bxsh
+        type: class-toggle    
     -
         title: 1 Header Illusion Color
         id: illusion-one
@@ -878,6 +882,7 @@ settings:
 		id: h1-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#7c2929'
 		default-light: '#bb5555'
     -
@@ -885,6 +890,7 @@ settings:
 		id: h2-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#652121'
 		default-light: '#a53f3f'
     -
@@ -892,6 +898,7 @@ settings:
 		id: h3-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#471d1d'
 		default-light: '#862c2c'
     -
@@ -899,6 +906,7 @@ settings:
 		id: h4-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#381919'
 		default-light: '#662828'
     -
@@ -906,6 +914,7 @@ settings:
 		id: h5-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#424c61'
 		default-light: '#697795'
     -
@@ -913,6 +922,7 @@ settings:
 		id: h6-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#2e333d'
 		default-light: '#8a92a3'
     -
@@ -1378,6 +1388,18 @@ settings:
             -
                 label: Dark and Bold First Column
                 value: table
+            -
+                label: Odd Columns Only
+                value: tbl-column-odd
+            -
+                label: Even Columns Only
+                value: tbl-column-even
+            -
+                label: Even Rows Only
+                value: tbl-row-even
+            -
+                label: Odd Rows Only
+                value: tbl-row-odd
     -
         title: Table Header Alternate Opacity
         description: Adjust opacity for alternate header opacity
@@ -5558,6 +5580,34 @@ th,
   border-color: var(--table);
 }
 
+.tbl-row-even .reveal table tr:nth-child(even), .tbl-row-even .is-live-preview.is-live-preview table tr:nth-child(even), .tbl-row-even .markdown-preview-view.markdown-preview-view table tr:nth-child(even) {
+  background-color: var(--td);
+}
+.tbl-row-even .reveal table tr:nth-child(odd), .tbl-row-even .reveal table td:nth-child(odd), .tbl-row-even .is-live-preview.is-live-preview table tr:nth-child(odd), .tbl-row-even .is-live-preview.is-live-preview table td:nth-child(odd), .tbl-row-even .markdown-preview-view.markdown-preview-view table tr:nth-child(odd), .tbl-row-even .markdown-preview-view.markdown-preview-view table td:nth-child(odd) {
+  background-color: unset;
+}
+
+.tbl-row-odd .reveal table tr:nth-child(odd), .tbl-row-odd .is-live-preview.is-live-preview table tr:nth-child(odd), .tbl-row-odd .markdown-preview-view.markdown-preview-view table tr:nth-child(odd) {
+  background-color: var(--td);
+}
+.tbl-row-odd .reveal table tr:nth-child(even), .tbl-row-odd .reveal table td:nth-child(odd), .tbl-row-odd .is-live-preview.is-live-preview table tr:nth-child(even), .tbl-row-odd .is-live-preview.is-live-preview table td:nth-child(odd), .tbl-row-odd .markdown-preview-view.markdown-preview-view table tr:nth-child(even), .tbl-row-odd .markdown-preview-view.markdown-preview-view table td:nth-child(odd) {
+  background-color: unset;
+}
+
+.tbl-column-odd .reveal table td:nth-child(even), .tbl-column-odd .reveal table tr:nth-child(even), .tbl-column-odd .is-live-preview table td:nth-child(even), .tbl-column-odd .is-live-preview table tr:nth-child(even), .tbl-column-odd .markdown-preview-view table td:nth-child(even), .tbl-column-odd .markdown-preview-view table tr:nth-child(even) {
+  background-color: unset;
+}
+.tbl-column-odd .reveal table td:nth-child(odd), .tbl-column-odd .is-live-preview table td:nth-child(odd), .tbl-column-odd .markdown-preview-view table td:nth-child(odd) {
+  background-color: var(--td);
+}
+
+.tbl-column-even .reveal table td:nth-child(odd), .tbl-column-even .reveal table tr:nth-child(even), .tbl-column-even .is-live-preview table td:nth-child(odd), .tbl-column-even .is-live-preview table tr:nth-child(even), .tbl-column-even .markdown-preview-view table td:nth-child(odd), .tbl-column-even .markdown-preview-view table tr:nth-child(even) {
+  background-color: unset;
+}
+.tbl-column-even .reveal table td:nth-child(even), .tbl-column-even .is-live-preview table td:nth-child(even), .tbl-column-even .markdown-preview-view table td:nth-child(even) {
+  background-color: var(--td);
+}
+
 /*Plugin: Advanced Table*/
 .cm-s-obsidian .HyperMD-table-row {
   font-family: var(--font-monospace);
@@ -7457,6 +7507,9 @@ h5::after, .HyperMD-header-5::after {
 .illusion.illusion :is(h1, h2, h3, h4, h5, h6):after, .illusion.illusion :is(h1, h2, h3, h4, h5, h6):before, .illusion.illusion .markdown-embed :is(h1, h2, h3, h4, h5, h6):after, .illusion.illusion .markdown-embed :is(h1, h2, h3, h4, h5, h6):before, .illusion.illusion .cm-s-obsidian .HyperMD-header:after, .illusion.illusion .cm-s-obsidian .HyperMD-header:before, .illusion.illusion .HyperMD-header:after, .illusion.illusion .HyperMD-header:before {
   height: 0;
 }
+.illusion.illusion.illusion-bxsh :is(h1, h2, h3, h4, h5, h6), .illusion.illusion.illusion-bxsh .cm-s-obsidian .HyperMD-header {
+  box-shadow: none;
+}
 .illusion.illusion .HyperMD-header.CodeMirror-line {
   box-shadow: 0px 2px var(--outline);
   padding: 2px;
@@ -7485,6 +7538,42 @@ h5::after, .HyperMD-header-5::after {
 }
 .illusion.illusion.markdown-preview-view .heading-collapse-indicator {
   padding-left: 40px;
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h1, .illusion.illusion.head-spec-note h1 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-1);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-1, .illusion.illusion.head-spec-note .HyperMD-header-1 .cm-fold-indicator svg {
+  color: var(--sphd-ed-1);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h2, .illusion.illusion.head-spec-note h2 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-2);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-2, .illusion.illusion.head-spec-note .HyperMD-header-2 .cm-fold-indicator svg {
+  color: var(--sphd-ed-2);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h3, .illusion.illusion.head-spec-note h3 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-3);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-3, .illusion.illusion.head-spec-note .HyperMD-header-3 .cm-fold-indicator svg {
+  color: var(--sphd-ed-3);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h4, .illusion.illusion.head-spec-note h4 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-4);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-4, .illusion.illusion.head-spec-note .HyperMD-header-4 .cm-fold-indicator svg {
+  color: var(--sphd-ed-4);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h5, .illusion.illusion.head-spec-note h5 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-5);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-5, .illusion.illusion.head-spec-note .HyperMD-header-5 .cm-fold-indicator svg {
+  color: var(--sphd-ed-5);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h6, .illusion.illusion.head-spec-note h6 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-6);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-6, .illusion.illusion.head-spec-note .HyperMD-header-6 .cm-fold-indicator svg {
+  color: var(--sphd-ed-6);
 }
 
 .header-borders h1, .header-borders h2, .header-borders h3, .header-borders h4, .header-borders h5, .header-borders h6, .header-borders .HyperMD-header-1, .header-borders .HyperMD-header-2, .header-borders .HyperMD-header-3, .header-borders .HyperMD-header-4, .header-borders .HyperMD-header-5, .header-borders .HyperMD-header-6 {

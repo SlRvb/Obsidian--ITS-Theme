@@ -14009,18 +14009,12 @@ body:not(.h-b-li).bul-li-neon ul ul ul ul ul ul li, body:not(.h-b-li).bul-li-neo
 }
 
 /*Embed Headings*/
-.dnd .markdown-embed h1,
-.dnd .markdown-embed h2,
-.dnd .markdown-embed h3,
-.dnd .markdown-embed h4,
-.dnd .markdown-embed h5,
-.dnd .markdown-embed h6,
-.wotc .markdown-embed h1,
-.wotc .markdown-embed h2,
-.wotc .markdown-embed h3,
-.wotc .markdown-embed h4,
-.wotc .markdown-embed h5,
-.wotc .markdown-embed h6 {
+:is(.dnd, .wotc) div:not(.popover) .markdown-embed :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) {
   color: var(--embed-h);
   font-style: normal;
 }

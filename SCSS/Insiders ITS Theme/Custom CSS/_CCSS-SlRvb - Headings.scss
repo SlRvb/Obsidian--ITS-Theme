@@ -289,6 +289,67 @@ h5, .HyperMD-header-5
     }
 
     //& h1 .heading-collapse-indicator { margin-top: -10px; }
+    
+    &.head-spec-note {
+        & .markdown-preview-view h1,
+        & .markdown-embed h1,
+        & h1 .heading-collapse-indicator svg 
+        { color: var(--sphd-pre-1); }
+
+        & .cm-header.cm-header-1,
+        & .HyperMD-header-1 .cm-fold-indicator svg 
+        { color: var(--sphd-ed-1); }
+        
+
+        & .markdown-preview-view h2,
+        & .markdown-embed h2,
+        & h2 .heading-collapse-indicator svg 
+        { color: var(--sphd-pre-2); }
+        
+        & .cm-header.cm-header-2,
+        & .HyperMD-header-2 .cm-fold-indicator svg 
+        { color: var(--sphd-ed-2); }
+
+
+        & .markdown-preview-view h3,
+        & .markdown-embed h3,
+        & h3 .heading-collapse-indicator svg 
+        { color: var(--sphd-pre-3); }
+        
+        & .cm-header.cm-header-3,
+        & .HyperMD-header-3 .cm-fold-indicator svg 
+        { color: var(--sphd-ed-3); }
+
+
+        & .markdown-preview-view h4,
+        & .markdown-embed h4,
+        & h4 .heading-collapse-indicator svg 
+        { color: var(--sphd-pre-4); }
+        
+        & .cm-header.cm-header-4,
+        & .HyperMD-header-4 .cm-fold-indicator svg 
+        { color: var(--sphd-ed-4); }
+
+
+        & .markdown-preview-view h5,
+        & .markdown-embed h5,
+        & h5 .heading-collapse-indicator svg 
+        { color: var(--sphd-pre-5); }
+        
+        & .cm-header.cm-header-5,
+        & .HyperMD-header-5 .cm-fold-indicator svg 
+        { color: var(--sphd-ed-5); }
+
+
+        & .markdown-preview-view h6,
+        & .markdown-embed h6,
+        & h6 .heading-collapse-indicator svg 
+        { color: var(--sphd-pre-6); }
+        
+        & .cm-header.cm-header-6,
+        & .HyperMD-header-6 .cm-fold-indicator svg 
+        { color: var(--sphd-ed-6); }
+    }
 }
 .header-borders {
     & h1,

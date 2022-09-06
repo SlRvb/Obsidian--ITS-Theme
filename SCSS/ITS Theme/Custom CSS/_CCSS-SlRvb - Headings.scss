@@ -297,6 +297,7 @@ h5, .HyperMD-header-5
 
     &.head-spec-note {
         & .markdown-preview-view h1,
+        & .markdown-embed h1,
         & h1 .heading-collapse-indicator svg 
         { color: var(--sphd-pre-1); }
 
@@ -306,6 +307,7 @@ h5, .HyperMD-header-5
         
 
         & .markdown-preview-view h2,
+        & .markdown-embed h2,
         & h2 .heading-collapse-indicator svg 
         { color: var(--sphd-pre-2); }
         
@@ -315,6 +317,7 @@ h5, .HyperMD-header-5
 
 
         & .markdown-preview-view h3,
+        & .markdown-embed h3,
         & h3 .heading-collapse-indicator svg 
         { color: var(--sphd-pre-3); }
         
@@ -324,6 +327,7 @@ h5, .HyperMD-header-5
 
 
         & .markdown-preview-view h4,
+        & .markdown-embed h4,
         & h4 .heading-collapse-indicator svg 
         { color: var(--sphd-pre-4); }
         
@@ -333,6 +337,7 @@ h5, .HyperMD-header-5
 
 
         & .markdown-preview-view h5,
+        & .markdown-embed h5,
         & h5 .heading-collapse-indicator svg 
         { color: var(--sphd-pre-5); }
         
@@ -342,6 +347,7 @@ h5, .HyperMD-header-5
 
 
         & .markdown-preview-view h6,
+        & .markdown-embed h6,
         & h6 .heading-collapse-indicator svg 
         { color: var(--sphd-pre-6); }
         

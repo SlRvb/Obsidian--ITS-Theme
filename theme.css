@@ -7459,6 +7459,42 @@ h5::after, .HyperMD-header-5::after {
 .illusion.illusion.markdown-preview-view .heading-collapse-indicator {
   padding-left: 40px;
 }
+.illusion.illusion.head-spec-note .markdown-preview-view h1, .illusion.illusion.head-spec-note .markdown-embed h1, .illusion.illusion.head-spec-note h1 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-1);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-1, .illusion.illusion.head-spec-note .HyperMD-header-1 .cm-fold-indicator svg {
+  color: var(--sphd-ed-1);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h2, .illusion.illusion.head-spec-note .markdown-embed h2, .illusion.illusion.head-spec-note h2 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-2);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-2, .illusion.illusion.head-spec-note .HyperMD-header-2 .cm-fold-indicator svg {
+  color: var(--sphd-ed-2);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h3, .illusion.illusion.head-spec-note .markdown-embed h3, .illusion.illusion.head-spec-note h3 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-3);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-3, .illusion.illusion.head-spec-note .HyperMD-header-3 .cm-fold-indicator svg {
+  color: var(--sphd-ed-3);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h4, .illusion.illusion.head-spec-note .markdown-embed h4, .illusion.illusion.head-spec-note h4 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-4);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-4, .illusion.illusion.head-spec-note .HyperMD-header-4 .cm-fold-indicator svg {
+  color: var(--sphd-ed-4);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h5, .illusion.illusion.head-spec-note .markdown-embed h5, .illusion.illusion.head-spec-note h5 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-5);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-5, .illusion.illusion.head-spec-note .HyperMD-header-5 .cm-fold-indicator svg {
+  color: var(--sphd-ed-5);
+}
+.illusion.illusion.head-spec-note .markdown-preview-view h6, .illusion.illusion.head-spec-note .markdown-embed h6, .illusion.illusion.head-spec-note h6 .heading-collapse-indicator svg {
+  color: var(--sphd-pre-6);
+}
+.illusion.illusion.head-spec-note .cm-header.cm-header-6, .illusion.illusion.head-spec-note .HyperMD-header-6 .cm-fold-indicator svg {
+  color: var(--sphd-ed-6);
+}
 
 .header-borders h1, .header-borders h2, .header-borders h3, .header-borders h4, .header-borders h5, .header-borders h6, .header-borders .HyperMD-header-1, .header-borders .HyperMD-header-2, .header-borders .HyperMD-header-3, .header-borders .HyperMD-header-4, .header-borders .HyperMD-header-5, .header-borders .HyperMD-header-6 {
   border-width: var(--h-brdr);

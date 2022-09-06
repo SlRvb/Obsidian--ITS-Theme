@@ -33,17 +33,17 @@ h1, h2, h3, h4, h5, h6,
 {
     //Font Sizes
     & h1,
-    & .cm-header-1  { font-size: var(--f-s-h); }
-    & h2            { font-size: calc(var(--f-s-h) - 4px); }
-    & .cm-header-2  { font-size: calc(var(--f-s-h) - 6px); }
-    & h3            { font-size: calc(var(--f-s-h) - 8px); }
-    & .cm-header-3  { font-size: calc(var(--f-s-h) - 10px); }
-    & h4            { font-size: calc(var(--f-s-h) - 10px); }
-    & .cm-header-4  { font-size: calc(var(--f-s-h) - 12px); }
+    & .cm-header-1  { font-size: var(--h1); }
+    & h2, 
+    & .cm-header-2  { font-size: var(--h2); }
+    & h3,
+    & .cm-header-3  { font-size: var(--h3); }
+    & h4,
+    & .cm-header-4  { font-size: var(--h4); }
     & h5,
-    & .cm-header-5  { font-size: calc(var(--f-s-h) - 14px); }
+    & .cm-header-5  { font-size: var(--h5); }
     & h6,
-    & .cm-header-6  { font-size: calc(var(--f-s-h) - 16px); }
+    & .cm-header-6  { font-size: var(--h6); }
 }
 
 

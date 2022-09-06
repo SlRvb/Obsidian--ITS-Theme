@@ -7242,41 +7242,32 @@ h1, h2, h3, h4, h5, h6,
 .markdown-preview-view h1, .markdown-preview-view .cm-header-1,
 .cm-s-obsidian h1,
 .cm-s-obsidian .cm-header-1 {
-  font-size: var(--f-s-h);
+  font-size: var(--h1);
 }
-.markdown-preview-view h2,
-.cm-s-obsidian h2 {
-  font-size: calc(var(--f-s-h) - 4px);
-}
-.markdown-preview-view .cm-header-2,
+.markdown-preview-view h2, .markdown-preview-view .cm-header-2,
+.cm-s-obsidian h2,
 .cm-s-obsidian .cm-header-2 {
-  font-size: calc(var(--f-s-h) - 6px);
+  font-size: var(--h2);
 }
-.markdown-preview-view h3,
-.cm-s-obsidian h3 {
-  font-size: calc(var(--f-s-h) - 8px);
-}
-.markdown-preview-view .cm-header-3,
+.markdown-preview-view h3, .markdown-preview-view .cm-header-3,
+.cm-s-obsidian h3,
 .cm-s-obsidian .cm-header-3 {
-  font-size: calc(var(--f-s-h) - 10px);
+  font-size: var(--h3);
 }
-.markdown-preview-view h4,
-.cm-s-obsidian h4 {
-  font-size: calc(var(--f-s-h) - 10px);
-}
-.markdown-preview-view .cm-header-4,
+.markdown-preview-view h4, .markdown-preview-view .cm-header-4,
+.cm-s-obsidian h4,
 .cm-s-obsidian .cm-header-4 {
-  font-size: calc(var(--f-s-h) - 12px);
+  font-size: var(--h4);
 }
 .markdown-preview-view h5, .markdown-preview-view .cm-header-5,
 .cm-s-obsidian h5,
 .cm-s-obsidian .cm-header-5 {
-  font-size: calc(var(--f-s-h) - 14px);
+  font-size: var(--h5);
 }
 .markdown-preview-view h6, .markdown-preview-view .cm-header-6,
 .cm-s-obsidian h6,
 .cm-s-obsidian .cm-header-6 {
-  font-size: calc(var(--f-s-h) - 16px);
+  font-size: var(--h6);
 }
 
 /*Editor Heading Re-size*/

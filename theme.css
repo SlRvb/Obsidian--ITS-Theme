@@ -16065,10 +16065,6 @@ ul > li::before {
   color: var(--tag-color);
 }
 
-.markdown-rendered blockquote {
-  padding: 10px;
-}
-
 .markdown-rendered table:not(.dataview) thead tr > th:nth-child(2n+2) {
   background-color: var(--th);
 }

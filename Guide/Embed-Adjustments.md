@@ -15,6 +15,7 @@
 | Attribute | Description |
 | --- | --- |
 | `nlk` | Hide the embed link icon |
+| `lk-hvr` | Hide embed unless hovering over embed |
 | `lk-l` | Move link to the left |
 | `lk-clear` | Make background of the link transparent |
 | `nmg` | Will remove margins and padding |

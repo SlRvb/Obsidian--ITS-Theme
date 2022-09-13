@@ -1,6 +1,7 @@
 .callout {
     border-radius: var(--radius);
     background: var(--background-secondary);
+    display: flow-root;
     
     & a,
     & .internal-link,

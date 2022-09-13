@@ -6164,6 +6164,7 @@ progress::-webkit-progress-value {
 .callout {
   border-radius: var(--radius);
   background: var(--background-secondary);
+  display: flow-root;
 }
 .callout a, .callout .internal-link, .callout .external-link {
   text-decoration: none;
@@ -6806,6 +6807,7 @@ img[alt*=sprf] {
 }
 
 /*Embed Link Hide/Move*/
+.internal-embed[alt*=lk-hvr]:not(:hover) .markdown-embed-link,
 .internal-embed[alt*=nlk] .markdown-embed-link {
   display: none;
 }

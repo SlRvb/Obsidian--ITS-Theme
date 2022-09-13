@@ -414,8 +414,9 @@ body {
     &[data-callout-metadata][data-callout-metadata][data-callout-metadata~="left"] {
         margin-right: 25px;
     }
-
 }
+@media print { .callout[data-callout~="infobox"] { max-width: 400px; } }
+
 
 /*Image Grid*/
 .callout.callout[data-callout="grid"] {

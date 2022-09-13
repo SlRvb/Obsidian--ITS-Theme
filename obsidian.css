@@ -855,6 +855,10 @@ settings:
         title: Illusion Theme Inspired Headings
         id: illusion
         type: class-toggle
+    - 
+        title: Illusion Hide Box Shadow
+        id: illusion-bxsh
+        type: class-toggle    
     -
         title: 1 Header Illusion Color
         id: illusion-one
@@ -878,6 +882,7 @@ settings:
 		id: h1-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#7c2929'
 		default-light: '#bb5555'
     -
@@ -885,6 +890,7 @@ settings:
 		id: h2-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#652121'
 		default-light: '#a53f3f'
     -
@@ -892,6 +898,7 @@ settings:
 		id: h3-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#471d1d'
 		default-light: '#862c2c'
     -
@@ -899,6 +906,7 @@ settings:
 		id: h4-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#381919'
 		default-light: '#662828'
     -
@@ -906,6 +914,7 @@ settings:
 		id: h5-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#424c61'
 		default-light: '#697795'
     -
@@ -913,6 +922,7 @@ settings:
 		id: h6-illusion
 		type: variable-themed-color
 		format: hex
+        opacity: true
 		default-dark: '#2e333d'
 		default-light: '#8a92a3'
     -
@@ -1377,7 +1387,19 @@ settings:
                 value: tbl-nalt
             -
                 label: Dark and Bold First Column
-                value: table   
+                value: table
+            -
+                label: Odd Columns Only
+                value: tbl-column-odd
+            -
+                label: Even Columns Only
+                value: tbl-column-even
+            -
+                label: Even Rows Only
+                value: tbl-row-even
+            -
+                label: Odd Rows Only
+                value: tbl-row-odd
     -
         title: Table Header Alternate Opacity
         description: Adjust opacity for alternate header opacity
@@ -4138,6 +4160,13 @@ button.mod-cta,
   margin: auto;
 }
 
+/*--Notes Paddings--*/
+.is-readable-line-width.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row), .is-readable-line-width.markdown-source-view.mod-cm6 .markdown-preview-sizer.markdown-preview-sizer, .is-readable-line-width.markdown-preview-view .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-preview-view .cm-content.cm-content.cm-content, .is-readable-line-width.markdown-preview-view .cm-line.cm-line.cm-line:not(.HyperMD-table-row), .is-readable-line-width.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+  max-width: var(--note-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Note Title */
 .view-header {
   align-content: center;
@@ -4237,6 +4266,16 @@ button.mod-cta,
 .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
   border-radius: var(--radius);
+}
+
+.workspace-tabs .workspace-leaf.mod-active {
+  border: 1px solid var(--accent);
+  margin-right: 1px;
+}
+
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf.mod-active {
+  margin-right: 1px;
+  margin-left: 3px;
 }
 
 /*Recolor Top*/
@@ -4538,6 +4577,8 @@ body:not(.type-undo) .nav-file-title {
 .nav-file {
   margin: 0 -2px;
   margin-right: 0px;
+  border: 0;
+  border-left: 2px solid var(--table);
 }
 
 /*Align Folder Line*/
@@ -5038,8 +5079,7 @@ ul > li.task-list-item .task-list-item-checkbox {
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
   content: var(--bullet);
   font-family: var(--bul-f);
-  margin-right: -10px;
-  margin-left: -6px;
+  margin-right: -11px;
 }
 
 .markdown-source-view.mod-cm6:not(.is-rtl) .list-bullet::after {
@@ -5047,7 +5087,7 @@ ul > li.task-list-item .task-list-item-checkbox {
   margin-right: 0;
 }
 .markdown-source-view.mod-cm6.is-live-preview .list-bullet {
-  padding-right: 0.4em;
+  padding-right: 0.45em;
 }
 .markdown-source-view.mod-cm6:not(.is-live-preview) .list-bullet {
   padding-right: 0.55em;
@@ -5059,7 +5099,7 @@ ul > li.task-list-item .task-list-item-checkbox {
 
 /*Adjust Padding*/
 .cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol {
-  margin-left: -7px;
+  margin-left: 0;
 }
 
 .cm-s-obsidian.is-live-preview span.cm-formatting-list-ol {
@@ -5538,6 +5578,34 @@ th,
 }
 .tbl-b table th, .tbl-b table td, .tbl-b .table-view-table > thead > tr > th, .tbl-b .table-view-table.table-view-table > tbody > tr > td {
   border-color: var(--table);
+}
+
+.tbl-row-even .reveal table tr:nth-child(even), .tbl-row-even .is-live-preview.is-live-preview table tr:nth-child(even), .tbl-row-even .markdown-preview-view.markdown-preview-view table tr:nth-child(even) {
+  background-color: var(--td);
+}
+.tbl-row-even .reveal table tr:nth-child(odd), .tbl-row-even .reveal table td:nth-child(odd), .tbl-row-even .is-live-preview.is-live-preview table tr:nth-child(odd), .tbl-row-even .is-live-preview.is-live-preview table td:nth-child(odd), .tbl-row-even .markdown-preview-view.markdown-preview-view table tr:nth-child(odd), .tbl-row-even .markdown-preview-view.markdown-preview-view table td:nth-child(odd) {
+  background-color: unset;
+}
+
+.tbl-row-odd .reveal table tr:nth-child(odd), .tbl-row-odd .is-live-preview.is-live-preview table tr:nth-child(odd), .tbl-row-odd .markdown-preview-view.markdown-preview-view table tr:nth-child(odd) {
+  background-color: var(--td);
+}
+.tbl-row-odd .reveal table tr:nth-child(even), .tbl-row-odd .reveal table td:nth-child(odd), .tbl-row-odd .is-live-preview.is-live-preview table tr:nth-child(even), .tbl-row-odd .is-live-preview.is-live-preview table td:nth-child(odd), .tbl-row-odd .markdown-preview-view.markdown-preview-view table tr:nth-child(even), .tbl-row-odd .markdown-preview-view.markdown-preview-view table td:nth-child(odd) {
+  background-color: unset;
+}
+
+.tbl-column-odd .reveal table td:nth-child(even), .tbl-column-odd .reveal table tr:nth-child(even), .tbl-column-odd .is-live-preview table td:nth-child(even), .tbl-column-odd .is-live-preview table tr:nth-child(even), .tbl-column-odd .markdown-preview-view table td:nth-child(even), .tbl-column-odd .markdown-preview-view table tr:nth-child(even) {
+  background-color: unset;
+}
+.tbl-column-odd .reveal table td:nth-child(odd), .tbl-column-odd .is-live-preview table td:nth-child(odd), .tbl-column-odd .markdown-preview-view table td:nth-child(odd) {
+  background-color: var(--td);
+}
+
+.tbl-column-even .reveal table td:nth-child(odd), .tbl-column-even .reveal table tr:nth-child(even), .tbl-column-even .is-live-preview table td:nth-child(odd), .tbl-column-even .is-live-preview table tr:nth-child(even), .tbl-column-even .markdown-preview-view table td:nth-child(odd), .tbl-column-even .markdown-preview-view table tr:nth-child(even) {
+  background-color: unset;
+}
+.tbl-column-even .reveal table td:nth-child(even), .tbl-column-even .is-live-preview table td:nth-child(even), .tbl-column-even .markdown-preview-view table td:nth-child(even) {
+  background-color: var(--td);
 }
 
 /*Plugin: Advanced Table*/
@@ -7430,6 +7498,9 @@ h5::after, .HyperMD-header-5::after {
 .illusion.illusion :is(h1, h2, h3, h4, h5, h6):after, .illusion.illusion :is(h1, h2, h3, h4, h5, h6):before, .illusion.illusion .markdown-embed :is(h1, h2, h3, h4, h5, h6):after, .illusion.illusion .markdown-embed :is(h1, h2, h3, h4, h5, h6):before, .illusion.illusion .cm-s-obsidian .HyperMD-header:after, .illusion.illusion .cm-s-obsidian .HyperMD-header:before, .illusion.illusion .HyperMD-header:after, .illusion.illusion .HyperMD-header:before {
   height: 0;
 }
+.illusion.illusion.illusion-bxsh :is(h1, h2, h3, h4, h5, h6), .illusion.illusion.illusion-bxsh .cm-s-obsidian .HyperMD-header {
+  box-shadow: none;
+}
 .illusion.illusion .HyperMD-header.CodeMirror-line {
   box-shadow: 0px 2px var(--outline);
   padding: 2px;
@@ -8899,6 +8970,10 @@ body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   display: none;
 }
 
+.workspace-tabs .markdown-preview-view {
+  padding: 0 0 0 5px;
+}
+
 /*Workspace Tab*/
 .starp .workspace-tab-header[aria-label="Star Pane"] svg {
   color: transparent;
@@ -9418,6 +9493,11 @@ body {
   margin-right: 25px;
 }
 
+@media print {
+  .callout[data-callout~=infobox] {
+    max-width: 400px;
+  }
+}
 /*Image Grid*/
 .callout.callout[data-callout=grid] {
   background: transparent;
@@ -9562,7 +9642,7 @@ body {
   --callout-icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path stroke="none" fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>';
   padding: 10px;
   padding-top: 5px;
-  margin: 10px;
+  margin: 25px 10px;
   border-style: solid;
   border-width: 11px;
   border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAFWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjgwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iNjAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSI4MCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iNjAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjMwMC8xIgogICB0aWZmOllSZXNvbHV0aW9uPSIzMDAvMSIKICAgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIKICAgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIgogICB4bXA6TW9kaWZ5RGF0ZT0iMjAyMi0wMS0wMlQxNjowNTo0MS0wODowMCIKICAgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMi0wMS0wMlQxNjowNTo0MS0wODowMCI+CiAgIDxkYzp0aXRsZT4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+RCZhbXA7RCBCb3JkZXI8L3JkZjpsaT4KICAgIDwvcmRmOkFsdD4KICAgPC9kYzp0aXRsZT4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNCIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMS0wMlQxNjowNTo0MS0wODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+SLcLyAAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZHPK0RRFMc/8xD50SiUhcVLWA35UWJjMZNfhcXMKIPNm2fejJo3Xu+NJFtlO0WJjV8L/gK2ylopIiVLWRMbpuc8o0Yy53bP/dzvPed077mgRNO66ZR3g5nJ2uHRoDoTm1Urn/Ch0EQdqqY71mRkJEpJe7+VaLHrTq9W6bh/rWYh4ejgqxIe0i07KzwmPLGStTzeEm7UU9qC8IlwwJYLCt94erzAzx4nC/zpsR0Nh0CpF1aTvzj+i/WUbQrLy2kz08v6z328l9QmMtMRWVtltuAQZpQgKuMME6KfHgbF99NJL12yo0R+93f+FEuSq4u3WMVmkSQpsgREXZbqCVkN0RMy0qx6/f/bV8fo6y1Urw1CxaPrvrZD5Sbkc677ceC6+UMoe4DzTDF/aR8G3kTPFbW2PfCvw+lFUYtvw9kGNN9bmq19S2UyFcOAl2Ooi0HDFVTPFXr2c87RHUTX5KsuYWcXOiTeP/8FK5Jny8RYHqYAAAAJcEhZcwAALiMAAC4jAXilP3YAAAG5SURBVHic7dyxSiNRFMbxv0OwEkvZfrEWleWAvbA+giB5ANtgcx/gFJK0+wAbwUdYV7bZRjiIirXYL1tbiajFXHV3Y5KBbIyTfL8yOQxfPu5kprkXKnCzRTfrVpmdBm7WdbPFKrNFhYt9As6BnVGD1cgOcJ5/+0CNfl+4WQG0AB80N8U+AiduloBOirh/bejVFehmH4AjYJ/ZLO9Jg7KDo9xJj54C3ewzcAlsjjdbrWwCl7mbvzyvLjebp7xdW28YrE6WgG9u1gFSiriFvALdbBk4QeVV0aL8b1wGKNysCVwA6xONVS/rwIWbNefc7GHSaeps6HugiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIyCzQTqURaafSiBpAE/gCLAwbThFzY0/0DlS8K2+A3SJFdIE14Gy8sabKGbCWIroFQIq4AjaA9kRj1UMb2MidvexYzzuw99zsB/CVcoe2vPgNNFPE9z8/7HmI5IEV4PiNgtXBMbDyb3nQ5ymcIn4BW8AecDfebO/aHWUHW7mTHn2PNMnnpLTd7CdwSHmOyiy5BrZTxOmgoaHvgfkCq8DBfwpWBwfA6rDyAB4BTjVxWZByO0gAAAAASUVORK5CYII=") 11;
@@ -15926,179 +16006,4 @@ body .wotc-beyond.theme-dark .HyperMD-hr-bg {
 .its-d .markdown-preview-view .list-collapse-indicator {
   position: absolute;
   padding-left: 25px;
-}
-
-/* Obsidian v0.16 */
-.theme-dark, .theme-light {
-  --radius-s: 0;
-  --radius-m: 0;
-  --radius-l: 0;
-  --tab-radius: var(--radius-m);
-  --tab-radius-active: var(--radius-m);
-  --tab-curve: 0;
-  /* --callout-padding: 0; */
-  --callout-title-padding: 10px;
-  --tag-radius: 0;
-  --list-indent: 20px;
-  --dialog-width: unset;
-  --dialog-max-width: 50vw;
-  --link-decoration: none;
-  --link-decoration-hover: none;
-  --table-border-color: var(--note);
-  --code-background: var(--code-bg);
-  --nav-item-white-space: wrap;
-  --tag-color: var(--text-dl);
-  --tag-background: var(--tag);
-  --tag-opacity: 1;
-  --graph-controls-width: 20vw;
-  --sidebar-markdown-font-size: calc(var(--f-s-nt) - 2px);
-  --background-modifier-hover: var(--text-highlight-bg);
-}
-
-.is-readable-line-width.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content,
-.is-readable-line-width.markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row),
-.is-readable-line-width.markdown-source-view.mod-cm6 .markdown-preview-sizer.markdown-preview-sizer,
-.is-readable-line-width.markdown-preview-view .cm-line.cm-line.cm-line:not(.HyperMD-table-row) {
-  margin: unset;
-}
-
-.mod-left-split .workspace-tab-container-inner,
-.mod-right-split .workspace-tab-container-inner {
-  gap: 0;
-  padding: 0;
-}
-
-.nav-folder-children {
-  padding: 0;
-}
-
-.nav-folder, .nav-file {
-  border: 0;
-}
-
-.nav-folder.mod-root {
-  margin-left: 0;
-}
-
-.nav-file-title,
-.nav-folder-title.nav-folder-title {
-  margin-left: var(--size-4-3);
-  padding-left: 0;
-  padding-bottom: 2px;
-  padding-top: 4px;
-  margin-bottom: 0;
-}
-
-.nav-folder.mod-root .nav-folder > .nav-folder-children {
-  margin-left: 17px;
-  border-color: var(--lines);
-  border-width: 2px;
-}
-
-.nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
-  padding-left: 0;
-}
-
-body ul > li::marker {
-  color: transparent;
-}
-
-.list-bullet::after,
-.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
-  background-color: transparent;
-  width: 7px;
-  height: 7px;
-}
-
-.markdown-source-view .list-bullet::after {
-  top: 0;
-}
-
-ul > li::before {
-  margin-left: -26px;
-}
-
-.markdown-rendered.show-indentation-guide li > ul::before,
-.markdown-rendered.show-indentation-guide li > ol::before,
-.markdown-rendered.show-indentation-guide li.task-list-item > ul::before,
-.markdown-rendered.show-indentation-guide li.task-list-item > ol::before {
-  left: -19px;
-}
-
-.markdown-source-view.mod-cm6.mod-cm6 .cm-indent::before {
-  margin-left: -1.5px;
-}
-
-.markdown-source-view.mod-cm6.is-live-preview .cm-indent::before {
-  margin-left: 1.5px;
-}
-
-.is-collapsed .list-bullet {
-  display: none;
-}
-
-.cm-fold-indicator.cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after,
-.is-collapsed ~ .cm-formatting-list .list-bullet:after,
-.is-collapsed ~ .cm-formatting-list .list-bullet:after {
-  background: transparent;
-  box-shadow: unset;
-}
-
-.markdown-preview-view li .collapse-icon {
-  margin-top: 7px;
-  margin-left: -47px;
-}
-
-.task-list-item-checkbox.task-list-item-checkbox.task-list-item-checkbox::after {
-  display: none;
-}
-
-/* Tabs */
-.workspace-tab-header::before, .workspace-tab-header::after {
-  display: none;
-}
-
-.nav-files-container {
-  padding: 0;
-}
-
-.workspace-tab-header.is-active {
-  background: var(--note);
-}
-
-.mod-left-split .markdown-preview-view {
-  padding: 10px;
-}
-
-.callout {
-  mix-blend-mode: unset;
-}
-
-.callout-fold svg {
-  margin-bottom: unset;
-}
-
-.search-result-file-matches {
-  box-shadow: unset;
-}
-
-.cm-s-obsidian span.cm-hashtag {
-  color: var(--tag-color);
-}
-
-.markdown-rendered table:not(.dataview) thead tr > th:nth-child(2n+2) {
-  background-color: var(--th);
-}
-
-/* kanban */
-.kanban-plugin__item-title-wrapper {
-  align-content: center;
-  align-items: center;
-}
-
-textarea.kanban-plugin__item-input {
-  background: var(--note);
-  /* resize: vertical; */
-  height: unset;
-  border-style: solid;
 }

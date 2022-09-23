@@ -62,7 +62,7 @@
         & .cm-line.cm-line.cm-line:not(.HyperMD-table-row),
         & .markdown-preview-sizer.markdown-preview-sizer {           
             max-width: var(--note-width);
-            margin-left: auto;
+            // margin-left: auto;
             margin-right: auto;
         }
     }

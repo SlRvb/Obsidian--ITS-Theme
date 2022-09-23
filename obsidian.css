@@ -4163,7 +4163,6 @@ button.mod-cta,
 /*--Notes Paddings--*/
 .is-readable-line-width.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-content.cm-content.cm-content, .is-readable-line-width.markdown-source-view.mod-cm6 .cm-line.cm-line.cm-line:not(.HyperMD-table-row), .is-readable-line-width.markdown-source-view.mod-cm6 .markdown-preview-sizer.markdown-preview-sizer, .is-readable-line-width.markdown-preview-view .cm-contentContainer.cm-contentContainer.cm-contentContainer, .is-readable-line-width.markdown-preview-view .cm-content.cm-content.cm-content, .is-readable-line-width.markdown-preview-view .cm-line.cm-line.cm-line:not(.HyperMD-table-row), .is-readable-line-width.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
   max-width: var(--note-width);
-  margin-left: auto;
   margin-right: auto;
 }
 

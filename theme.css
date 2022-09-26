@@ -6708,6 +6708,22 @@ img[alt*="p+bcc"],
   object-position: 50% 90%;
 }
 
+/*--Image Rotation--*/
+img[alt~="r+r" i],
+.image-embed[src~="r+r" i] img {
+  transform: rotate(90deg);
+}
+
+img[alt~="r+l" i],
+.image-embed[src~="r+l" i] img {
+  transform: rotate(-90deg);
+}
+
+img[alt~="r+180"],
+.image-embed[src~="r+180"] img {
+  transform: rotate(-180deg);
+}
+
 /*--Image Shapes--*/
 /*Banners*/
 :is(img, .internal-embed)[alt*=sban],
@@ -6738,6 +6754,7 @@ img[alt*=sprf] {
 }
 
 /*Embed Link Hide/Move*/
+.internal-embed[alt*=lk-hvr]:not(:hover) .markdown-embed-link,
 .internal-embed[alt*=nlk] .markdown-embed-link {
   display: none;
 }
@@ -9418,6 +9435,11 @@ body {
   margin-right: 25px;
 }
 
+@media print {
+  .callout[data-callout~=infobox] {
+    max-width: 400px;
+  }
+}
 /*Image Grid*/
 .callout.callout[data-callout=grid] {
   background: transparent;

@@ -183,3 +183,11 @@ Attributes | Resize Image to:  |
 `wm-tl`| 600px in width.
 `wtall`| 700px in width.
 `wfull` | Expand to the full height of the image or line
+
+### Rotation
+
+| Attributes | Rotation |
+|---|---|
+| r+r | 90 to the right |
+| r+l | -90 to the left |
+| r+180 | Flip image upside down | 

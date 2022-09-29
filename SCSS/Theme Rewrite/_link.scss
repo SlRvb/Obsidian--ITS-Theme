@@ -1,0 +1,21 @@
+.theme-dark,
+.theme-light 
+{
+    //
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-external-decoration: none;
+    --link-unresolved-opacity: 1;
+    
+    --link-unresolved-color: var(--inactive);
+    --link-color-hover: var(--lite-accent);
+
+}
+
+//Recolor []
+.cm-s-obsidian {
+    & .cm-link.cm-link,
+    & .cm-image-alt-text.cm-link:not(.cm-formatting),
+    & .cm-formatting-link-string.cm-string
+    { color: var(--text-muted); }
+}

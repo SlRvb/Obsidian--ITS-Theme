@@ -12,6 +12,8 @@
 @use 'sidebar';
 @use 'search';
 
+@use 'mode-source';
+@use 'link';
 @use 'lists';
 @use 'tables';
 @use 'tags';
@@ -22,12 +24,12 @@
 
 
 //Alternate Color Schemes
+@use 'alt-colors/SlRvb-Gray';
+// @use 'Alternate Themes/Th--SlRvb Blue' as sblue;
+// @use 'Alternate Themes/Th--School Days' as sd;
 // @use 'Alternate Themes/Th--D&D' as DND;
 // @use 'Alternate Themes/Th--D&D WOTC-Beyond' as WOTC-Beyond;
 // //@use 'Alternate Themes/Th--D&D WOTC' as WOTC;
-// @use 'Alternate Themes/Th--SlRvb Blue' as sblue;
-// @use 'Alternate Themes/Th--SlRvb Gray' as sGray;
-// @use 'Alternate Themes/Th--School Days' as sd;
 // @use 'Alternate Themes/Th--Tangerine Dunes' as td;
 // @use 'Alternate Themes/Th--Drowned';
 // @use 'Alternate Themes/Th--Nord';

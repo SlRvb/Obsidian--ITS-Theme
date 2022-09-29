@@ -53,6 +53,10 @@
     width:var(--toggle-s-width);
     height: var(--toggle-s-width);
 }
+//Fix Checked Checkbox Color
+.checkbox-container.is-enabled {
+    background-color: var(--accent);
+}
 
 //Fixed Community Theme/Plugin Styling
 .community-item {
@@ -62,4 +66,19 @@
 .community-item:hover {
     background-color: var(--modal-nav-item-background-hover);
     border-color: var(--outline);
+}
+
+
+//Fix Dropdown Menu Styling
+.menu {
+    border-width: var(--modal-border-width);
+    border-color: var(--modal-border-color);
+    
+    // & .menu-separator {
+    //     border-width: 2px;
+    //     border-color: var(--modal-border-color);
+    // }
+
+    & .menu-item.selected .menu-item-icon 
+    { color: var(--text-normal); }
 }

@@ -29,12 +29,13 @@
     --h5-size: calc(var(--h1-size) - 14px);
     --h6-size: calc(var(--h1-size) - 16px);
 
-    --h1-weight: 700;
-    --h2-weight: var(--h1-weight);
-    --h3-weight: var(--h1-weight);
-    --h4-weight: var(--h1-weight);
-    --h5-weight: var(--h1-weight);
-    --h6-weight: var(--h1-weight);
+    --header-weight: 700; //Personal
+    --h1-weight: var(--header-weight);
+    --h2-weight: var(--header-weight);
+    --h3-weight: var(--header-weight);
+    --h4-weight: var(--header-weight);
+    --h5-weight: var(--header-weight);
+    --h6-weight: var(--header-weight);
     --h1-font: var(--font);
     --h2-font: var(--font);
     --h3-font: var(--font);
@@ -75,7 +76,7 @@
 
     --icon-xs: 14px;
     --icon-s: 16px;
-    --icon-m: 18px;
+    --icon-m: 17px;
     --icon-l: 18px;
 
 
@@ -94,9 +95,6 @@
     --blockquote-border-thickness: 7px;
     --blockquote-border-color: var(--bg);
 
-    // Weight
-    --tab-font-weight: 900;
-    --tab-font-size: var(--font-size);
 
     // Border
     --prompt-border-width: 3px;
@@ -109,6 +107,7 @@
 
     --input-shadow: var(--shadow-s);
     --input-shadow-hover: var(--input-shadow);
+    --embed-block-shadow-hover: var(--input-shadow);
 
     --hr-thickness: 2px;
 
@@ -119,14 +118,7 @@
     --bul-f: var(--its);
 
 
-    //
-    --link-decoration: none;
-    --link-decoration-hover: none;
-    --link-external-decoration: none;
-    --link-unresolved-opacity: 1;
-    --link-unresolved-color: var(--inactive);
-    --link-color-hover: var(--lite-accent);
-
+    //Link
 
 
     //Personal variables

@@ -41,6 +41,11 @@
 .vertical-tab-nav-item {
     background-color: var(--modal-nav-item-background);
 }
+//Fix Sidebar Group Title Color
+.vertical-tab-header-group-title {
+    color: var(--headers);
+    font-size: var(--font-ui);
+}
 
 
 //Fixed Toggle Checkbox Dropshadow

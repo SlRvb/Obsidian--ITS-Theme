@@ -1,0 +1,19 @@
+
+body {
+    --code-background: var(--code-bg);
+}
+    
+//Codeblock top padding
+.cm-s-obsidian div.HyperMD-codeblock.HyperMD-codeblock-begin-bg {
+    padding-top: 10px;
+}
+
+//Fix Codeblock Radius
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+    border-top-left-radius: var(--radius-s);
+    border-top-right-radius: var(--radius-s);
+}
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    border-bottom-left-radius: var(--radius-s);
+    border-bottom-right-radius: var(--radius-s);
+}

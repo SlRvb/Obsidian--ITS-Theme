@@ -1,5 +1,4 @@
-.theme-dark,
-.theme-light {
+body {
     //Radius
     --tab-curve: var(--radius-s);
     --tab-radius: var(--radius-s);
@@ -57,4 +56,9 @@ body.is-focused .workspace-tab-header:not(.is-active):hover .workspace-tab-heade
        opacity: 1;
        color: var(--text);
    }
+}
+
+//Fix Fade Spacing on Text
+.workspace .mod-root .workspace-tab-header-inner-title {
+    padding-right: 10px;
 }

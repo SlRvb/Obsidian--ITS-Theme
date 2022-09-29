@@ -4,6 +4,8 @@
     --sidebar-markdown-font-size: var(--font-text-size);
     --sidebar-tab-text-display: none;
 
+    --sidebar-tab-background-color: var(--th);
+
     --ribbon-background: var(--outer-bar);
     --ribbon-background-collapsed: var(--note);
     --ribbon-width: 40px;
@@ -28,9 +30,67 @@
     --nav-item-weight-active: 700;
     --nav-item-white-space: wrap;
 }
+//Fix Tab Sizing / Padding
+:is(.mod-right-split, .mod-left-split) .workspace-tab-header-container-inner {
+    padding: 0;
+    margin: 0;
+}
+.mod-right-split .workspace-tab-header-container-inner {
+    margin-left: 2px;
+}
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header-inner {
+    padding: 0 var(--size-4-3);
+}
 
-//Fixed
+// Fix Sidebar Button
+.has-left-sidebar-toggle .sidebar-toggle-button {
+    padding: 0;
+
+    & .clickable-icon { width: 100%; }
+}
+
+//Fixed Hover Icon Background Color
+.clickable-icon:hover,
+.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
 .side-dock-ribbon .clickable-icon:hover {
     background-color: var(--bttn);
     color: var(--text-dl);
 }
+
+//Fix Active Left Sidebar Tab Icon Color
+.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.workspace-tab-header-inner:hover .workspace-tab-header-inner-icon,
+.mod-top-left-space.mod-active .workspace-tab-header.is-active {
+    --titlebar-text-color-focused: var(--text-dl);
+    --tab-text-color-hover: var(--text-dl);
+    --icon-color-hover: var(--text-dl);
+}
+
+//Fix Left Sidebar Tab Icons
+.clickable-icon.side-dock-ribbon-action {
+    padding: 10px;
+}
+.workspace-ribbon { padding: 0; }
+
+//Fix Remove background-modifier-hover
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active 
+{ 
+    --background-modifier-hover: var(--sidebar-tab-background-color); 
+    
+    & .workspace-tab-header-inner-icon
+    { --icon-color-focused: var(--text-dl) }
+}
+
+
+.nav-folder-title { --nav-item-weight: 700; }
+
+
+
+//Fix File Explorer
+.nav-folder.mod-root > .nav-folder-title:hover {
+    color: var(--dark-accent);
+}
+.nav-files-container { padding: 0; }
+
+
+

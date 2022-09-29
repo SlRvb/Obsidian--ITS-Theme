@@ -15,3 +15,8 @@
 
     --table-row-background-hover: var(--highlight);
 }
+
+//Fix Table Header Row Editmode Colors
+.cm-s-obsidian .HyperMD-table-row-0 {
+    color: var(--table-header-background);
+}

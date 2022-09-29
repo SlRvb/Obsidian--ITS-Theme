@@ -44,10 +44,10 @@
 // //     margin-left: 0 !important;
 // // }
 
-// // Fix Alignment
-// .list-bullet { margin-right: .4em; }
-// input[type=checkbox] { margin: 0; }
-// .task-list-label.task-list-label input.task-list-item-checkbox { vertical-align: -.2em; }
+// Fix Alignment
+.list-bullet { margin-right: .4em; }
+input[type=checkbox] { margin: 0; }
+.task-list-label.task-list-label input.task-list-item-checkbox { vertical-align: -.2em; }
 
 // /* Spaced Lists: Fix breaking when Space in between Lists*/
 // .markdown-rendered.markdown-rendered :is(ul, ol) li > p:first-of-type { margin-block-start: 15px; }

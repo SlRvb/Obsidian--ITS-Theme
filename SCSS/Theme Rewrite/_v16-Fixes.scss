@@ -19,21 +19,9 @@
 
 // Hover Arrow Fix
 .nav-folder-title:hover svg.svg-icon,
-.search-result-file-title:hover .collapse-icon svg.svg-icon,
-.search-result .search-result-file-title:hover
+.search-result-file-title:hover .collapse-icon svg.svg-icon
 { color: var(--nav-item-color-hover); }
 
-
-//Remove background-modifier-hover
-:is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active 
-{ --background-modifier-hover: var(--tag) }
-
-:is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active .workspace-tab-header-inner-icon
-{ --icon-color-focused: var(--text-dl) }
-
-.nav-folder-title {
-    --nav-item-weight: 700;
-}
 
 
 
@@ -43,7 +31,14 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
     width: var(--scrollbar-width);
     height: var(--scrollbar-width);
 }
-body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
-    border-width: var(--scrollbar-border-width);
+// body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
+//     border-width: var(--scrollbar-border-width);
+// }
+
+//Blockquote
+.markdown-rendered blockquote {
+    padding: var(--size-4-1) var(--size-4-6);
 }
 
+//Fix Tag Dot
+.tag-container .tree-item-children > div:first-child { display: none; }

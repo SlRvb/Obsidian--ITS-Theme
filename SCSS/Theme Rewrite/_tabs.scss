@@ -1,11 +1,18 @@
 .theme-dark,
 .theme-light {
-    // Radius
+    //Radius
     --tab-curve: var(--radius-s);
     --tab-radius: var(--radius-s);
     --tab-radius-active: var(--radius-s);
 
+    //Font
+    --tab-font-size: var(--font-size);
+    --tab-font-weight: 900;
     
+    //Width
+    --tab-width: auto;
+    --tab-max-width: 250px;
+
     //Color
     --tab-outline-color: var(--accent);
     --tab-divider-color: var(--hr);
@@ -25,7 +32,29 @@
     --tab-stacked-shadow: -10px 0 10px var(--td);
 }
 
+
 //Fix Tab Hover
 .workspace-tab-header.workspace-tab-header:hover {
     color: var(--tab-text-color-hover);
+}
+
+//Fix Focused Inactive Tab Hover
+.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button,
+body.is-focused .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
+    color: var(--text-dl);
+}
+
+
+//----
+//Hide Active Note Title
+.workspace .mod-root .workspace-tab-header { flex: unset; }
+
+:is(.show-inline-title, .show-view-header) .mod-root .workspace-tab-header.is-active {
+    & .workspace-tab-header-inner-title { display: none; }
+
+    & .workspace-tab-header-inner-icon {
+       display: flex;
+       opacity: 1;
+       color: var(--text);
+   }
 }

@@ -21,8 +21,8 @@
     padding-left: 20px;
     line-height: var(--lh);
 }
-.search-result:not(.is-collapsed) .search-result-file-title {
-    color: var(--text);
+.search-result:not(.is-collapsed) .search-result-file-title:not(:hover) {
+    color: var(--text)
 }
 
 // Search Note Text
@@ -40,7 +40,6 @@
     color: var(--text);
     left: 0;
 }
-
-// body:not(.native-scrollbars) ::-webkit-scrollbar-track {
-//     background-color: var(--scrollbar-bg);
-// }
+.search-result-file-match:hover {
+    padding-right: var(--size-4-5);
+}

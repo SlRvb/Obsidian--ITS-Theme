@@ -1,0 +1,26 @@
+body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
+
+    //Tag Fixes
+    --tag-background: transparent;
+    --tag-color: var(--accent2-lite);
+    --tag-padding-x: 0;
+    --tag-size: var(--font-size);
+
+    //Header Fixes
+    --h1-font: var(--default-font);
+    --h2-font: var(--default-font);
+    --h3-font: var(--default-font);
+    --h4-font: var(--default-font);
+    --h5-font: var(--default-font);
+    --h6-font: var(--default-font);
+
+    --header-weight: 900;
+
+    --h1-size: var(--font-text);
+    --h2-size: var(--font-text);
+    --h3-size: var(--font-text);
+    --h4-size: var(--font-text);
+    --h5-size: var(--font-text);
+    --h6-size: var(--font-text);
+
+}

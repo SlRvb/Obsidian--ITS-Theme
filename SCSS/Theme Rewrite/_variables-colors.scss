@@ -20,11 +20,11 @@
     
     //Borders
     --background-modifier-border: var(--lines);
-    --background-modifier-border-hover: var(--hr);
+    --background-modifier-border-hover: var(--bg);
     --background-modifier-border-focus: var(--accent);
     
     --divider-color: var(--outer-bar);
-    --divider-color-hover: var(--outer-bar);
+    --divider-color-hover: var(--accent);
     
     --prompt-border-color: var(--outline);
     
@@ -62,11 +62,11 @@
 
 
     //Icon
-    --icon-opacity: .7;
+    --icon-opacity: 1;
     --icon-color: var(--soft-text);//lite-accent
     --icon-color-active: var(--text-dl);
     --icon-color-hover: var(--text);
-    --icon-color-focused: var(--lite-accent);
+    --icon-color-focused: var(--text-dl);
 
     //File Explorer: _sidebar
 

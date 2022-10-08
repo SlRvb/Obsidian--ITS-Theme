@@ -1024,7 +1024,9 @@ settings:
 .wotc-beyond .workspace-drawer-inner,
 .wotc-beyond .modal,
 .wotc-beyond .community-plugin-search,
-.wotc-beyond .prompt {
+.wotc-beyond .prompt,
+.wotc .workspace-leaf-content[data-type=empty] .view-content,
+.wotc-beyond .workspace-leaf-content[data-type=empty] .view-content {
   box-shadow: 0 0 60px var(--outline) inset;
 }
 .paper .workspace-tabs, .paper .modal.mod-settings .vertical-tab-header,
@@ -1054,7 +1056,9 @@ settings:
 .wotc-beyond .horizontal-tab-content,
 .wotc-beyond .vertical-tab-content,
 .wotc-beyond .horizontal-tab-nav-item:not(.is-active),
-.wotc-beyond .vertical-tab-nav-item:not(.is-active) {
+.wotc-beyond .vertical-tab-nav-item:not(.is-active),
+.wotc .workspace-leaf-content[data-type=empty] .empty-state-container,
+.wotc-beyond .workspace-leaf-content[data-type=empty] .empty-state-container {
   background: transparent;
 }
 

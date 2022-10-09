@@ -1,0 +1,38 @@
+body {
+    --folder-icon: "\e801";
+    --folder-font: var(--its);
+
+    --file-icon: "\e800";
+    --file-font: var(--its);
+}
+
+.nav-folder-collapse-indicator { display: none; }
+.nav-folder.mod-root .nav-folder > .nav-folder-children {
+    margin-left: 13px;
+}
+.nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
+    padding: var(--size-4-1) var(--size-4-2);
+}
+
+/*Nav Folder/File Icons*/
+.nav-folder-children .nav-folder-title-content::before,
+.nav-file-title .nav-file-title-content::before {
+    margin-right: 6px;
+    font-size: calc(var(--nav-item-size) - 1px);
+    font-weight: 10;
+}
+
+//Folder
+.nav-folder-children .nav-folder-title-content::before {
+    content: var(--folder-icon);
+    font-family: var(--folder-font);
+    color: var(--folder);
+}
+
+//Files
+.nav-file-title .nav-file-title-content::before {
+    content: var(--file-icon);
+    font-family: var(--file-font);
+    text-align: center;
+    color: var(--file);
+}

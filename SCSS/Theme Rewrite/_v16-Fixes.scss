@@ -1,16 +1,12 @@
-* {
-    transition: none !important;
-}
+// * { transition: none !important; }
 
 // Hover Text Fix
 .backlink-pane > .tree-item-self.is-collapsed:hover, 
 .outgoing-link-pane > .tree-item-self.is-collapsed:hover,
-.tree-item-self:hover :is(.tree-item-inner-subtext, .tree-item-icon)
+.tree-item-self:hover :is(.tree-item-inner-subtext, .tree-item-icon, .tree-item-flair) 
 { color: var(--nav-item-color-hover); }
 
-// Hover Flair Fix
-.tree-item-self:hover .tree-item-flair
-{ color: var(--nav-item-color-hover); }
+.tree-item-self:hover .collapse-icon svg.svg-icon { color: unset;}
 
 .nav-file-tag {
     background-color: var(--tag);
@@ -18,6 +14,7 @@
 }
 
 // Hover Arrow Fix
+.search-result-hover-button,
 .nav-folder-title:hover svg.svg-icon,
 .search-result-file-title:hover .collapse-icon svg.svg-icon
 { color: var(--nav-item-color-hover); }
@@ -42,3 +39,17 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 
 //Fix Tag Dot
 .tag-container .tree-item-children > div:first-child { display: none; }
+
+//Fix Document Search Highlight
+.cm-s-obsidian span.obsidian-search-match-highlight {
+    box-shadow: 0 0 0 2px var(--accent);
+    border-radius: var(--radius-s);
+    background-color: var(--text-highlight-bg-active)
+}
+
+
+
+
+
+
+

@@ -29,6 +29,7 @@
     --nav-item-weight-hover: 700;
     --nav-item-weight-active: 700;
     --nav-item-white-space: wrap;
+    --nav-indentation-guide-width: 2px;
 }
 //Fix Tab Sizing / Padding
 :is(.mod-right-split, .mod-left-split) .workspace-tab-header-container-inner {
@@ -81,11 +82,6 @@
     { --icon-color-focused: var(--text-dl) }
 }
 
-
-.nav-folder-title { --nav-item-weight: 700; }
-
-
-
 //Fix File Explorer
 .nav-folder.mod-root > .nav-folder-title:hover {
     color: var(--dark-accent);
@@ -93,4 +89,8 @@
 .nav-files-container { padding: 0; }
 
 
+
+
+//Styling
+.nav-folder-title { --nav-item-weight: 700; }
 

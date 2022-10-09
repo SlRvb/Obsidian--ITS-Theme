@@ -1,0 +1,83 @@
+/*----Theme: SlRvb Blue----*/
+.slrvb-b {
+    --font: 'Recursive Sans Linear Static Black', 'Oleo Script', 'Calisto MT'; /*Works, but if it doesn't, needs !important*/
+    --font-monospace: "Fira Code";
+
+    // background: var(--note);
+
+    --highlight: rgba(46, 124, 214, 0.25);
+    --hvr: rgba(0, 137, 255, 0.4);
+    --hvr-active: rgba(60, 102, 168, 0.4);
+}
+.theme-dark {
+    &.slrvb-b,
+    & .slrvb-b {
+        --outer-bar: #0e0f15;
+        --dark-sidebar: #10161d;
+        --side-bar: var(--note);
+
+        --note: #1a1e24;
+        --note-rgb: 26, 30, 36;
+        
+        --accent: #394d64;
+        --lite-accent: #6ca6e0;
+        --dark-accent: #293e64;
+        --deep-dark-accent: #1f283b;
+        --accent2: #4c78cc;
+        --accent2-lite: #4c87cc;
+
+        --headers: #2b71cd;
+        --text: #AAB3CA;
+        --soft-text: #6d7a9b;
+        --code-text: slategray;
+        --i-at: #5d7b98;
+        --footnote: #6e7e89;
+        
+        --code-bg: #232831;
+        --hr: #3c5274;
+        
+        --file: #63748d;
+        --folder: #386ab6;
+        --lines: #465164;
+    }
+}
+.theme-light {
+    &.slrvb-b,
+    & .slrvb-b {
+        --outer-bar: #eef3fd;
+        --dark-sidebar: #f1f5ff;
+        --side-bar: var(--note);
+
+        --note: #f8fbff;
+        --note-rgb: 248, 251, 255;
+        
+        --accent: #64a0db;
+        --lite-accent: #5174a3;
+        --dark-accent: #517cbf;
+        --deep-dark-accent: #101b2f;
+        --accent2: #4c78cc;
+        --accent2-lite: #5599d0;
+        --bg: #dde4ef;
+        --fg: #025d9f;
+
+        --headers: #4378c1;
+        --text: #283a67;
+        --soft-text: #4e99d0;
+        --code-text: #4296ea;
+        --i-at: var(--headers);
+        --footnote: #8996a0;
+        --inactive: #a6bbde;
+        
+        --code-bg: #f1f5ff;
+        --hr: #d6deea;
+        --table: #ccd6eb;
+        --th: #587aa8;
+        --td: #d0ddef62;
+        --tag: #5885b2;
+        
+        --file: #8897b4;
+        --folder: #6da5ce;
+        --f-hover: #3685e0;
+        --lines: #b5c2d8;
+    }
+}

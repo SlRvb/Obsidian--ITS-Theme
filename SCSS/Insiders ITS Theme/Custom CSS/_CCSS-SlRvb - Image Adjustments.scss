@@ -366,6 +366,8 @@ img[alt~="r+l" i],
 img[alt~="r+180"],
 .image-embed[src~="r+180"] img      { transform: rotate(-180deg); }
 
+img[alt*="r+"][alt*='sban'] { height: 100%; }
+
 /*--Image Shapes--*/
 /*Banners*/
 :is(img, .internal-embed)[alt*="sban"],

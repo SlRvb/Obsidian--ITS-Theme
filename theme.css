@@ -6724,6 +6724,10 @@ img[alt~="r+180"],
   transform: rotate(-180deg);
 }
 
+img[alt*="r+"][alt*=sban] {
+  height: 100%;
+}
+
 /*--Image Shapes--*/
 /*Banners*/
 :is(img, .internal-embed)[alt*=sban],
@@ -10537,6 +10541,10 @@ body .search-result-file-match-destination-file-container .search-result-file-ma
 .backlink-pane > .tree-item-self .tree-item-flair-outer,
 .outgoing-link-pane > .tree-item-self .tree-item-flair-outer {
   margin-top: -2px;
+}
+
+.outgoing-link-pane .search-result-file-match-destination-file {
+  background-color: var(--td);
 }
 
 .backlink-pane .search-result-container {

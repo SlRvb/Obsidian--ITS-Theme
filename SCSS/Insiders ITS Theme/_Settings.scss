@@ -53,16 +53,16 @@
     border: 0;
 }
 /*Resize Settings*/
-.modal.mod-settings {
-    width: var(--setting-w);
-    height: var(--setting-h);
-    overflow: visible;
-}
-.modal.mod-settings .vertical-tab-content-container,
-.modal.mod-settings .vertical-tab-header {
-    height: var(--setting-h);
-    padding: 0;
-}
+// .modal.mod-settings {
+//     width: var(--setting-w);
+//     height: var(--setting-h);
+//     overflow: visible;
+// }
+// .modal.mod-settings .vertical-tab-content-container,
+// .modal.mod-settings .vertical-tab-header {
+//     height: var(--setting-h);
+//     padding: 0;
+// }
 
 /*Setting Header Underline*/
 .setting-item-heading {

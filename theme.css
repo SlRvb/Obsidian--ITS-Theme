@@ -3715,18 +3715,6 @@ body:not(.its-i) svg.clock-glyph {
 }
 
 /*Resize Settings*/
-.modal.mod-settings {
-  width: var(--setting-w);
-  height: var(--setting-h);
-  overflow: visible;
-}
-
-.modal.mod-settings .vertical-tab-content-container,
-.modal.mod-settings .vertical-tab-header {
-  height: var(--setting-h);
-  padding: 0;
-}
-
 /*Setting Header Underline*/
 .setting-item-heading {
   border-bottom: 2px solid var(--headers);
@@ -5873,11 +5861,6 @@ iframe {
 }
 
 /*Unset Mobile Changes*/
-.is-mobile .modal.mod-settings {
-  width: calc(100% - 20px);
-  height: 70vh;
-}
-
 /*Mobile: Square UI*/
 .is-mobile .modal,
 .is-mobile .workspace,

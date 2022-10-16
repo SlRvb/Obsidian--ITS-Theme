@@ -48,6 +48,7 @@ body:not(.em-hd) div:not(.popover) .markdown-embed h6 {
     background-color: var(--note);
     box-shadow: -.3em .3em var(--td);
     border-radius: var(--radius);
+    display: flow-root;
 }
 
 .internal-embed .markdown-embed-content > ::-webkit-scrollbar {

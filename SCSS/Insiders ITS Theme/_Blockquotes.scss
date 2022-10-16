@@ -32,8 +32,7 @@
 }
 
 /*Quotation Mark*/
-:is(.markdown-preview-view, .reveal) blockquote:before,
-.is-live-preview .cm-line:not(.HyperMD-quote) + .HyperMD-quote::before {
+:is(.markdown-preview-view, .reveal) blockquote:before {
     content: '\201D';
     font-family: var(--font);
     color: var(--headers);

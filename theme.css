@@ -5213,6 +5213,7 @@ input[type=checkbox]:checked {
   border-radius: var(--radius);
   position: relative;
   margin: 1em;
+  padding: 10px 25px;
   padding-right: 40px;
   /*Don't overlap with "*/
   box-shadow: 2px 2px 0 var(--td);

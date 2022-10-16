@@ -95,6 +95,12 @@
 > [!recite|bg-c-purple]
 ```
 
+**Text Color:** ![[Callout-color.png]]
+
+**Background Color:** ![[Callout-background-color.png]]
+
+**Text & Background Colors:**![[Callout-background-text-color.png]]
+
 # Formatting
 
 ## Infoboxes
@@ -104,9 +110,13 @@
 > ![[Image.png|cover hsmall]]
 > ###### Stats
 > | Type |  Stat |
-> |---|---|
+> | ---- | ---- |
 > | Test | Testing |
 > | Test | Testing |
+> 
+> ##### Stats 2
+> | Type | Stat |
+> | ---- | ---- |
 > | Test | Testing |
 > | Test | Testing |
 ```
@@ -117,9 +127,13 @@
 > ![[Image.png|cover hsmall]]
 > ###### Stats
 > | Type |  Stat |
-> |---|---|
+> | ---- | ---- |
 > | Test | Testing |
 > | Test | Testing |
+> 
+> ###### Stats 2
+> | Type | Stat |
+> | ---- | ---- |
 > | Test | Testing |
 > | Test | Testing |
 ```
@@ -130,12 +144,18 @@
 > ![[Image.png|cover hsmall]]
 > ###### Stats
 > | Type |  Stat |
-> |---|---|
+> | ---- | ---- |
 > | Test | Testing |
 > | Test | Testing |
+> 
+> ###### Stats 2
+> | Type | Stat |
+> | ---- | ---- |
 > | Test | Testing |
 > | Test | Testing |
-```
+> ```
+
+![[Callout-Infobox.png]]
 
 ## Image Grid
 | | |
@@ -159,6 +179,10 @@
 ```
 
 
+![[Callout-Grid.png]]
+
+![[Callout-Grid-Masonry.gif]]
+
 ## Kanban
 ```markdown
 > [!kanban]+
@@ -168,7 +192,11 @@
 > - [[Link|Lane 2 Title]]
 > 	![[Image without background card styling.png]]
 > 	- [[Link|Card]]
+> - Text
+> 	- [ ] Text
 ```
+
+![[Callout-Kanban.png]]
 
 ## Cards
 > Might want to install the [Image Adjustments snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Images%20Adjustments.css) to control the images sizing
@@ -221,6 +249,8 @@
 > ```
 ````
 
+![Cards](https://media.discordapp.net/attachments/855181471643861002/966564567087992832/Obsidian_uex4d1nifB.png)
+
 ## Column
 | Adjustment | Description |
 | --- | --- |
@@ -255,6 +285,9 @@
 > ```
 ````
 
+![](https://cdn.discordapp.com/attachments/855181471643861002/1007438472757383368/Obsidian_90Ehg2COYn.png)
+
+
 ## Timeline
 | Adjustment | Description |
 | --- | --- |
@@ -273,6 +306,8 @@
 > [!timeline|t-r t-10] **Title** *Subtitle*
 > Spaced timeline piece
 ```
+
+![](https://cdn.discordapp.com/attachments/855181471643861002/977756711618228325/Obsidian_FXcbH8YskB.gif)
 
 ## Asides
 | Adjustment | Description |

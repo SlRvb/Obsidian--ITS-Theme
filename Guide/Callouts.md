@@ -95,11 +95,11 @@
 > [!recite|bg-c-purple]
 ```
 
-**Text Color:** ![[Callout-color.png]]
+**Text Color:** ![](../Images/Callout-color.png)
 
-**Background Color:** ![[Callout-background-color.png]]
+**Background Color:** ![](../Images/Callout-background-color.png)
 
-**Text & Background Colors:**![[Callout-background-text-color.png]]
+**Text & Background Colors:** ![](../Images/Callout-background-text-color.png)
 
 # Formatting
 
@@ -155,7 +155,7 @@
 > | Test | Testing |
 > ```
 
-![[Callout-Infobox.png]]
+![](../Images/Callout-Infobox.png)
 
 ## Image Grid
 | | |
@@ -179,9 +179,9 @@
 ```
 
 
-![[Callout-Grid.png]]
+![](../Images/Callout-Grid.png)
 
-![[Callout-Grid-Masonry.gif]]
+![](../Images/Callout-Grid-Masonry.gif)
 
 ## Kanban
 ```markdown
@@ -196,7 +196,7 @@
 > 	- [ ] Text
 ```
 
-![[Callout-Kanban.png]]
+![](../Images/Callout-Kanban.png)
 
 ## Cards
 > Might want to install the [Image Adjustments snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Images%20Adjustments.css) to control the images sizing
@@ -329,3 +329,4 @@
 > Show callout title for asides
 ```
 
+![](https://cdn.discordapp.com/attachments/855181471643861002/977756711618228325/Obsidian_FXcbH8YskB.gif)

@@ -3939,7 +3939,6 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 
 .titlebar-text,
 .titlebar-button {
-  color: var(--text-dl);
   opacity: 1;
 }
 

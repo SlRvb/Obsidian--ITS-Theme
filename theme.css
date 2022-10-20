@@ -6072,7 +6072,8 @@ progress::-webkit-progress-value {
 
 .callout {
   border-radius: var(--radius);
-  background: var(--background-secondary);
+  --callout-padding: 5px 10px;
+  --callout-content-padding: 0 10px;
 }
 .callout a, .callout .internal-link, .callout .external-link {
   text-decoration: none;
@@ -9174,6 +9175,8 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
 .callout.callout.callout[data-callout-metadata~=clean] .callout-content {
   border: 0;
   box-shadow: none;
+  --callout-color: transparent;
+  --callout-padding: 0;
 }
 .callout.callout.callout[data-callout-metadata~=clean] .callout-content,
 .callout.callout.callout[data-callout-metadata~=clean] .callout-content .callout-content {

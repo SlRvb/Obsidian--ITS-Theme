@@ -100,6 +100,8 @@ body .callout.callout.callout:is([data-callout-metadata~="nmg"], [data-callout-m
 .callout.callout.callout[data-callout-metadata~="clean"] .callout-content {
     border: 0;
     box-shadow: none;
+    --callout-color: transparent;
+    --callout-padding: 0;
 
     & .callout-content {
         padding: 0;

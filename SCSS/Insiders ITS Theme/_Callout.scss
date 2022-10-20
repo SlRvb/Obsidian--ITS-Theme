@@ -1,6 +1,8 @@
 .callout {
     border-radius: var(--radius);
-    background: var(--background-secondary);
+    // background: var(--background-secondary);
+    --callout-padding: 5px 10px;
+    --callout-content-padding: 0 10px;
     
     & a,
     & .internal-link,

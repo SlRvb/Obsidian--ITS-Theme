@@ -314,8 +314,9 @@ body {
     width: auto;
 }
 .callout[data-callout~="infobox"] {
-    --callout-color: var(--interactive-accent-rgb);
-    background: var(--note, var(--background-primary));
+    // --callout-color: var(--interactive-accent-rgb);
+    --callout-color: var(--note, var(--background-primary));
+    --callout-padding: 0;
 
     border: 0;
     box-shadow: none;
@@ -422,6 +423,9 @@ body {
 
 /*Image Grid*/
 .callout.callout[data-callout="grid"] {
+    --callout-padding: 0;
+    --callout-content-padding: 0;
+
     background: transparent;
     border: 0;
     margin: 0; 
@@ -438,6 +442,7 @@ body {
     
     //Internal Images
     & .callout-content {
+
         & p {
             display: flex;
             margin-block-start: 0;
@@ -447,7 +452,7 @@ body {
         & img {
             display: table-cell;
             vertical-align: middle;
-            padding: 1px;
+            padding: 3px;
             max-height: 35vh;
         }
         & img[alt="wfull"] { max-height: unset; }
@@ -458,9 +463,9 @@ body {
         & p {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(0, auto));
-            grid-gap: 2px;
+            grid-gap: 0;
             margin: 0;
-            margin-top: 5px;
+            margin-top: 1px;
         }
         & img {
             display: flex;
@@ -736,11 +741,11 @@ body {
 .callout[data-callout~="cards"] {
     --callout-color: none;
     --callout-icon: layout-dashboard;
+    --callout-content-padding: 0px;
 
     box-shadow: none;
     border: 0;
     width: auto;
-    padding: 0;
     background: transparent;
     
     & .callout-title { display: none; }
@@ -775,6 +780,8 @@ body {
 //Table
 .callout[data-callout~="cards"][data-callout-metadata~="dataview"] {
     // Undo General Cards Grid Styling
+    --callout-content-padding: 0px;
+
     & .callout-content {
         display: unset;
         grid-template-columns: unset;
@@ -971,12 +978,8 @@ body {
         }
     }
 }
-// .markdown-source-view,
-// .markdown-reading-view,
-// .markdown-preview-view,
-// .workspace-leaf-content[data-type='markdown'] .view-content {
-//     overflow-x: auto;
-// }
+// LP Fix
+.is-live-preview.is-live-preview .callout.callout[data-callout~=aside] { margin: 5px; }
 
 
 /* Columns */
@@ -1051,6 +1054,7 @@ body {
 .callout.callout[data-callout~="timeline"] {
     --callout-icon: clock-12;
     // --callout-color: 209, 220, 226;
+    --callout-padding: 0px;
     
     --micro: 50px;
     --tiny: 100px;
@@ -1060,8 +1064,11 @@ body {
     --medium: 500px;
     --med-tall: 600px;
     --tall: 700px;
+    --c-timeline: 49.72%;
 
-    --c-timeline: 49.6%;
+    @media all and (max-width: 450px) { --c-timeline: 49.5%; }
+    // @media all and (max-width: 30px) { --c-timeline: 20%; }
+    // @media all and (max-width: 60px) { --c-timeline: 100%; }
     
 
     background-color: transparent;
@@ -1096,14 +1103,14 @@ body {
     }
     
     //Side Alignment
-    &[data-callout-metadata~="t-l"] {
+    &[data-callout-metadata~="t-l"] :is(.callout-title, .callout-content) {
         border-right: 4px solid rgb(var(--callout-color));
         margin-right: var(--c-timeline);
 
         & > .callout-title,
         & > .callout-content { box-shadow: -4px 4px 0 var(--outline, var(--background-modifier-box-shadow)); }
     }
-    &[data-callout-metadata~="t-r"] {
+    &[data-callout-metadata~="t-r"] :is(.callout-title, .callout-content) {
         border-left: 4px solid rgb(var(--callout-color));
         margin-left: var(--c-timeline);
         

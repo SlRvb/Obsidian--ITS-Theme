@@ -417,9 +417,19 @@ body {
     &[data-callout-metadata][data-callout-metadata][data-callout-metadata~="left"] {
         margin-right: 25px;
     }
+    &[data-callout-metadata~="wikipedia"] table {
+        & th, & th:nth-child(even),
+        & :is(td, tr) { background: transparent; }
+
+        & tr td { border-top: 1.1px solid var(--hr); }
+        & tr:last-child { margin-bottom: 2px; }
+    }
+
 }
 @media print { .callout[data-callout~="infobox"] { max-width: 400px; } }
-
+.theme-light .callout[data-callout~="infobox"][data-callout-metadata~="wikipedia"] {
+    --th-text: var(--th)
+}
 
 /*Image Grid*/
 .callout.callout[data-callout="grid"] {

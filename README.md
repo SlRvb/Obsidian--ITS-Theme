@@ -27,7 +27,7 @@ Download these for a better experience
 
 - **[Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings)** <br> Allows you to customize the ITS Theme to your liking
 
-- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Encoded%20Icons.css)** <br> Other icon fonts that are used in the [Alternate Themes Snippet](Guide/Alternate-Themes.md)
+- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Encoded%20Icons.css)** <br> Other icon fonts that are used in the [Alternate Themes Snippet](Guide/Alternate-Themes.md)
 
 ###### Snippets Already Included
 No need to download these snippets to your vault if you're using the ITS Theme, they work out of the box the moment you install ITS

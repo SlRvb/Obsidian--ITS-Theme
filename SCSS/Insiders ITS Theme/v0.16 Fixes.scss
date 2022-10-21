@@ -182,3 +182,7 @@ textarea.kanban-plugin__item-input {
 .workspace .mod-root .workspace-tab-header {
     padding: 0;
 }
+
+
+// Indented text remove line (Not in codeblocks though)
+.cm-line > .cm-indent.cm-indent::before { display: none; }

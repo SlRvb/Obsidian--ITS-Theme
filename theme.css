@@ -10009,8 +10009,10 @@ body {
 
 /* Timeline */
 .callout.callout[data-callout~=timeline] {
-  --callout-icon: clock-12;
+  --callout-icon: "clock-12";
   --callout-padding: 0px;
+  --callout-title-padding: 10px;
+  --callout-content-padding: 10px;
   --micro: 50px;
   --tiny: 100px;
   --small: 200px;
@@ -16178,4 +16180,8 @@ textarea.kanban-plugin__item-input {
 
 .workspace .mod-root .workspace-tab-header {
   padding: 0;
+}
+
+.cm-line > .cm-indent.cm-indent::before {
+  display: none;
 }

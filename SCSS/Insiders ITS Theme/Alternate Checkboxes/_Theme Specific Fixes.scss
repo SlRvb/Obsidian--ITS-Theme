@@ -44,3 +44,11 @@ input[type=checkbox]:not([data-task="x"]) //Pink Topaz
     background-color: transparent !important; //Minimal
 }}
 
+
+.check-bg.check-bg {
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task],
+    & .rtl li[data-task].task-list-item.is-checked,
+    & li[data-task].task-list-item.is-checked {
+        border-left: unset;
+    }
+}

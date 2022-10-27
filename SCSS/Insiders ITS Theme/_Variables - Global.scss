@@ -36,6 +36,10 @@ body {
     --h4: calc(var(--f-s-h) - 12px);
     --h5: calc(var(--f-s-h) - 14px);
     --h6: calc(var(--f-s-h) - 16px);
+
+    --titlebar-background-focused: var(--outer-bar);
+    --titlbar-background: var(--outer-bar);
+    --tab-container-background: var(--outer-bar);
 }
 
 .workspace {

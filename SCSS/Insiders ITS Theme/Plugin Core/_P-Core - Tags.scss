@@ -31,7 +31,7 @@
 
 /*Tag Pane Lines*/
 .tag-container .tree-item-children {
-    margin-left: .7em;
+    margin-left: 1em;
     border-left: 1px solid var(--lines);
     transition: all 0.5s ease-in-out;
     padding: 0;
@@ -47,9 +47,9 @@
 /*From California Coast.*/
 .tag-pane-tag-text:before {
     content: "#";
-    padding-right: 1.3em;
+    padding-right: .7em;
     position: relative;
-    margin: -1em;
+    margin: -.2em;
     color: var(--headers);
 }
 .collapse-icon + .tree-item-inner > .tag-pane-tag-text:before {

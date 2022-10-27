@@ -17,6 +17,7 @@ ol > li::marker { color: var(--headers); }
 //     list-style-type: none;
 // }
 
+.markdown-embed .list-bullet::after { display: none; }
 
 ul > li::before {
     content: var(--bullet);

@@ -317,6 +317,127 @@ body:not(.alt-chkbx-off) {
         content: "\EC26";   
         }
     }
+    /* [@]: Person / Character */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="@"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="@"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="@"],
+    & .task-list-item.is-checked[data-task="@"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="@"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-b));
+        content: "\E900";
+        }
+    }
+    /* [t]: Talk */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="t"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="t"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="t"],
+    & .task-list-item.is-checked[data-task="t"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="t"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-R));
+        content: "\EC27";   
+        }
+    }
+    /* [O]: Outline */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="O"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="O"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="O"],
+    & .task-list-item.is-checked[data-task="O"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="O"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: var(--accent, var(--interactive-accent));
+        content: "\E805";   
+        }
+    }
+    /* [W]: World */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="W"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="W"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="W"],
+    & .task-list-item.is-checked[data-task="W"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="W"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-P));
+        content: "\E813";   
+        }
+    }
+    /* [F]: Foreshadow */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="F"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="F"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="F"],
+    & .task-list-item.is-checked[data-task="F"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="F"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-h));
+        content: "\EC28";
+        margin-left: -4px;
+        }
+    }
+    /* [f]: Clue / Find */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="f"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="f"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="f"],
+    & .task-list-item.is-checked[data-task="f"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="f"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-N));
+        content: "\E81E";
+        }
+    }
+    /* [~]: Conflict */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="~"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="~"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="~"],
+    & .task-list-item.is-checked[data-task="~"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="~"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-C));
+        content: "\EC33";
+        }
+    }
+    /* [H]: Health */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="H"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="H"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="H"],
+    & .task-list-item.is-checked[data-task="H"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="H"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-C));
+        content: "\EC30";
+        }
+    }
+    /* [&]: Symbolism */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="&"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="&"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="&"],
+    & .task-list-item.is-checked[data-task="&"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="&"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-B));
+        content: "\EC32";
+        }
+    }
+    /* [s]: Secret */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="s"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="s"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="s"],
+    & .task-list-item.is-checked[data-task="s"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="s"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-d));
+        content: "\EC31";
+        }
+    }
 }
 
 
@@ -493,6 +614,66 @@ body:not(.alt-chkbx-off) {
     &.check-color ul li[data-task="T"].task-list-item.is-checked {
         color: rgb(var(--chbx-R));
     }
+    //[@]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="@"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="@"],
+    &.check-color ul li[data-task="@"].task-list-item.is-checked {
+        color: rgb(var(--chbx-b));
+    }
+    //[t]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="t"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="t"],
+    &.check-color ul li[data-task="t"].task-list-item.is-checked {
+        color: rgb(var(--chbx-R));
+    }
+    //[O]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="O"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="O"],
+    &.check-color ul li[data-task="O"].task-list-item.is-checked {
+        color: var(--text-normal);
+    }
+    //[~]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="~"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="~"],
+    &.check-color ul li[data-task="~"].task-list-item.is-checked {
+        color: rgb(var(--chbx-C));
+    }
+    //[W]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="W"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="W"],
+    &.check-color ul li[data-task="W"].task-list-item.is-checked {
+        color: rgb(var(--chbx-P));
+    }
+    //[f]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="f"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="f"],
+    &.check-color ul li[data-task="f"].task-list-item.is-checked {
+        color: rgb(var(--chbx-N));
+    }
+    //[F]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="F"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="F"],
+    &.check-color ul li[data-task="F"].task-list-item.is-checked {
+        color: rgb(var(--chbx-h));
+    }
+    //[H]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="H"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="H"],
+    &.check-color ul li[data-task="H"].task-list-item.is-checked {
+        color: rgb(var(--chbx-a));
+    }
+    //[&]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="&"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="&"],
+    &.check-color ul li[data-task="&"].task-list-item.is-checked {
+        color: rgb(var(--chbx-B));
+    }
+    //[s]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="s"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="s"],
+    &.check-color ul li[data-task="s"].task-list-item.is-checked {
+        color: rgb(var(--chbx-d));
+    }
 }
 
 
@@ -504,277 +685,387 @@ body:not(.alt-chkbx-off) {
     //[X]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"],
     & li[data-task="X"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-R));
+        //border-left: 2px solid rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
     }
     & .rtl li[data-task="X"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-R));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-R));
     }
     //[>]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
     & li[data-task=">"].task-list-item.is-checked {
-        border-left: 2px double rgb(var(--chbx-h));
+        //border-left: 2px double rgb(var(--chbx-h));
         background: rgba(var(--chbx-h), 20%); 
     }
     & .rtl li[data-task=">"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px double rgb(var(--chbx-h));
+        //border-left: unset;
+        //border-right: 2px double rgb(var(--chbx-h));
     }
     
     //[D]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="D"],
     & li[data-task="D"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-h));
+        //border-left: 2px solid rgb(var(--chbx-h));
         background: rgba(var(--chbx-h), 20%); 
     }
     & .rtl li[data-task="D"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-h));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-h));
     }
     
     //[-]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
     & li[data-task="-"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-d));
+        //border-left: 2px solid rgb(var(--chbx-d));
         background: rgba(var(--chbx-d), 20%); 
     }
     & .rtl li[data-task="-"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-d));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-d));
     }
     
     //[?]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
     & li[data-task="?"].task-list-item.is-checked {
-        border-left: 2px dashed rgb(var(--chbx-q));
+        //border-left: 2px dashed rgb(var(--chbx-q));
         background: rgba(var(--chbx-q), 20%); /*#fac35d17*/
     }
     & .rtl li[data-task="?"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px dashed rgb(var(--chbx-q));
+        //border-left: unset;
+        //border-right: 2px dashed rgb(var(--chbx-q));
     }
     
     //[!]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
     & li[data-task="!"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-i));
+        //border-left: 2px solid rgb(var(--chbx-i));
         background: rgba(var(--chbx-i), 20%); 
     }
     & .rtl li[data-task="!"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-i));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-i));
     }
     
     //[+]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
     & li[data-task="+"].task-list-item.is-checked {
-        border-left: 2px dashed rgb(var(--chbx-a));
+        //border-left: 2px dashed rgb(var(--chbx-a));
         background: rgba(var(--chbx-a), 20%); 
     }
     & .rtl li[data-task="+"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px dashed rgb(var(--chbx-a));
+        //border-left: unset;
+        //border-right: 2px dashed rgb(var(--chbx-a));
     }
     
     //[/]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
     & li[data-task="/"].task-list-item.is-checked {
-        border-left: 2px dashed rgb(var(--chbx-R));
+        //border-left: 2px dashed rgb(var(--chbx-R));
         background: linear-gradient(to left, var(--accent, var(--interactive-accent)) 0%,transparent 1%);
     }
     & .rtl li[data-task="/"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px dashed rgb(var(--chbx-R));
+        //border-left: unset;
+        //border-right: 2px dashed rgb(var(--chbx-R));
     }
     
     //[R]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="R"],
     & li[data-task="R"].task-list-item.is-checked {
-        border-left: 2px dashed rgb(var(--chbx-R));
+        //border-left: 2px dashed rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%); /*#bbcbff17*/
     }
     & .rtl li[data-task="R"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px dashed rgb(var(--chbx-R));
+        //border-left: unset;
+        //border-right: 2px dashed rgb(var(--chbx-R));
     }
     
     //[i]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="i"],
     & li[data-task="i"].task-list-item.is-checked {
-        border-left: 2px dashed rgb(var(--chbx-id));
+        //border-left: 2px dashed rgb(var(--chbx-id));
         background: rgba(var(--chbx-id), 20%); 
     }
     & .rtl li[data-task="i"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px dashed rgb(var(--chbx-id));
+        //border-left: unset;
+        //border-right: 2px dashed rgb(var(--chbx-id));
     }
     
     //[B]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="B"],
     & li[data-task="B"].task-list-item.is-checked {
-        border-left: 2px double rgb(var(--chbx-B));
+        //border-left: 2px double rgb(var(--chbx-B));
         background: rgba(var(--chbx-B), 20%); /*#945dfa25*/
     }
     & .rtl li[data-task="B"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px double rgb(var(--chbx-B));
+        //border-left: unset;
+        //border-right: 2px double rgb(var(--chbx-B));
     }
     
     //[P]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="P"],
     & li[data-task="P"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-P));
+        //border-left: 2px solid rgb(var(--chbx-P));
         background: rgba(var(--chbx-P), 20%); 
     }
     & .rtl li[data-task="P"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-P));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-P));
     }
     
     //[C]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="C"],
     & li[data-task="C"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-C));
+        //border-left: 2px solid rgb(var(--chbx-C));
         background: rgba(var(--chbx-C), 20%); 
     }
     & .rtl li[data-task="C"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-C));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-C));
     }
     
     //[I]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="I"],
     & li[data-task="I"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-I));
+        //border-left: 2px solid rgb(var(--chbx-I));
         background: rgba(var(--chbx-I), 20%); 
     }
     & .rtl li[data-task="I"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-I));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-I));
     }
     
     //[Q]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="Q"],
     & li[data-task="Q"].task-list-item.is-checked {
-        border-left:  2px solid rgb(var(--chbx-R));
-        border-right: 2px solid rgb(var(--chbx-R));
+        //border-left:  2px solid rgb(var(--chbx-R));
+        //border-right: 2px solid rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%);
     }
     & .rtl li[data-task="Q"].task-list-item.is-checked {
-        border-left:  2px solid rgb(var(--chbx-R));
-        border-right: 2px solid rgb(var(--chbx-R));
+        //border-left:  2px solid rgb(var(--chbx-R));
+        //border-right: 2px solid rgb(var(--chbx-R));
     }
     
     //[N]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="N"],
     & li[data-task="N"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-N));
+        //border-left: 2px solid rgb(var(--chbx-N));
         background: rgba(var(--chbx-N), 20%); 
     }
     & .rtl li[data-task="N"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-N));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-N));
     }
     
     //[b]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="b"],
     & li[data-task="b"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-b));
+        //border-left: 2px solid rgb(var(--chbx-b));
         background: rgba(var(--chbx-b), 20%); 
     }
     & .rtl li[data-task="b"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-b));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-b));
     }
     
 
     //[p]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="p"],
     & li[data-task="p"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-R));
+        //border-left: 2px solid rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%); 
     }
     & .rtl li[data-task="p"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-R));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-R));
     }
     
     //[L]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="L"],
     & li[data-task="L"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-N));
+        //border-left: 2px solid rgb(var(--chbx-N));
         background: rgba(var(--chbx-N), 20%); 
     }
     & .rtl li[data-task="L"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-N));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-N));
     }
     
     //[E]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="E"],
     & li[data-task="E"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-I));
+        //border-left: 2px solid rgb(var(--chbx-I));
         background: rgba(var(--chbx-I), 20%); 
     }
     & .rtl li[data-task="E"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-I));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-I));
     }
     
     //[A]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="A"],
     & li[data-task="A"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-P));
+        //border-left: 2px solid rgb(var(--chbx-P));
         background: rgba(var(--chbx-P), 20%); 
     }
     & .rtl li[data-task="A"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-P));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-P));
     }
     
     //[r]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="r"],
     & li[data-task="r"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-r));
+        //border-left: 2px solid rgb(var(--chbx-r));
         background: rgba(var(--chbx-r), 20%); 
     }
     & .rtl li[data-task="r"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-r));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-r));
     }
     
     //[c]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="c"],
     & li[data-task="c"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-c));
+        //border-left: 2px solid rgb(var(--chbx-c));
         background: rgba(var(--chbx-c), 20%); 
     }
     & .rtl li[data-task="c"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-c));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-c));
     }
 
     //[d]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="d"],
     & li[data-task="d"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-I));
+        //border-left: 2px solid rgb(var(--chbx-I));
         background: rgba(var(--chbx-I), 20%); 
     }
     & .rtl li[data-task="d"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-I));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-I));
     }
 
     //[T]
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="T"],
     & li[data-task="T"].task-list-item.is-checked {
-        border-left: 2px solid rgb(var(--chbx-R));
+        //border-left: 2px solid rgb(var(--chbx-R));
         background: rgba(var(--chbx-R), 20%); 
     }
     & .rtl li[data-task="T"].task-list-item.is-checked {
-        border-left: unset;
-        border-right: 2px solid rgb(var(--chbx-R));
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-R));
+    }
+
+    //[@]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="@"],
+    & li[data-task="@"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-b));
+        background: rgba(var(--chbx-b), 20%); 
+    }
+    & .rtl li[data-task="@"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-b));
+    }
+
+    //[t]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="t"],
+    & li[data-task="t"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-R));
+        background: rgba(var(--chbx-R), 20%); 
+    }
+    & .rtl li[data-task="t"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-R));
+    }
+
+    //[O]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="O"],
+    & li[data-task="O"].task-list-item.is-checked {
+        //border-left: 2px solid var(--interactive-accent);
+        background: var(--background-modifier-active-hover); 
+    }
+    & .rtl li[data-task="O"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid var(--interactive-accent);
+    }
+
+    //[W]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="W"],
+    & li[data-task="W"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-P));
+        background: rgba(var(--chbx-P), 20%); 
+    }
+    & .rtl li[data-task="W"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-P));
+    }
+
+    //[f]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="f"],
+    & li[data-task="f"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-N));
+        background: rgba(var(--chbx-N), 20%); 
+    }
+    & .rtl li[data-task="f"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-N));
+    }
+
+    //[F]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="F"],
+    & li[data-task="F"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-h));
+        background: rgba(var(--chbx-h), 20%); 
+    }
+    & .rtl li[data-task="F"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-h));
+    }
+
+    //[~]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="~"],
+    & li[data-task="~"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-C));
+        background: rgba(var(--chbx-C), 20%); 
+    }
+    & .rtl li[data-task="~"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-C));
+    }
+
+    //[H]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="H"],
+    & li[data-task="H"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-a));
+        background: rgba(var(--chbx-a), 20%); 
+    }
+    & .rtl li[data-task="H"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-a));
+    }
+
+    //[&]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="&"],
+    & li[data-task="&"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-B));
+        background: rgba(var(--chbx-B), 20%); 
+    }
+    & .rtl li[data-task="&"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-B));
+    }
+
+    //[s]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="s"],
+    & li[data-task="s"].task-list-item.is-checked {
+        //border-left: 2px solid rgb(var(--chbx-d));
+        background: rgba(var(--chbx-d), 20%); 
+    }
+    & .rtl li[data-task="s"].task-list-item.is-checked {
+        //border-left: unset;
+        //border-right: 2px solid rgb(var(--chbx-d));
     }
 }
 

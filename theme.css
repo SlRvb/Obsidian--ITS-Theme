@@ -4689,9 +4689,9 @@ input[type=range]::-webkit-slider-thumb {
 .markdown-preview-section {
   text-rendering: optimizeLegibility;
   font-variant-ligatures: none;
+  font-family: var(--default-font);
   line-height: var(--lh);
   color: var(--text-normal);
-  z-index: 0 !important;
 }
 
 /*Comments*/
@@ -7526,15 +7526,17 @@ h5::after, .HyperMD-header-5::after {
 }
 
 /* Heading Indicators */
-body:not(.hd-indi) .is-live-preview .cm-header::before, body:not(.hd-indi) .is-live-preview .cm-header .cm-fold-indicator {
-  float: left;
+body:not(.hd-indi) .is-live-preview .HyperMD-header:hover .cm-header::before {
+  margin-top: -10px;
 }
+
 body:not(.hd-indi) .is-live-preview .cm-header::before {
+  float: left;
   font-family: var(--font-monospace);
   color: var(--footnote);
   font-size: 12px;
   padding-top: 2px;
-  margin-left: -20px;
+  margin-left: -18px;
 }
 body:not(.hd-indi) .is-live-preview .cm-header:not(.cm-formatting-header):not(.cm-inline-code).cm-header-1::before {
   content: "H1";

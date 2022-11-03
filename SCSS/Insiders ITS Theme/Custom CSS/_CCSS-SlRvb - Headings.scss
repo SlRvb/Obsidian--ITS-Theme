@@ -384,19 +384,22 @@ h5, .HyperMD-header-5
 
 
 /* Heading Indicators */
+body:not(.hd-indi) .is-live-preview .HyperMD-header:hover {
+    & .cm-header::before {
+        margin-top: -10px;
+    }
+}
 body:not(.hd-indi) .is-live-preview .cm-header {
-    &::before,
-    & .cm-fold-indicator
-    { float: left; }
-    
     &::before
     {
+        float: left; 
+
         font-family: var(--font-monospace);
         color: var(--footnote);
         font-size: 12px;
         
         padding-top: 2px;
-        margin-left: -30px;
+        margin-left: -18px;
     }
 
     &:not(.cm-formatting-header):not(.cm-inline-code)

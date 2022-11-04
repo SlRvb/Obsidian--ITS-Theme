@@ -410,6 +410,7 @@ body {
     & .internal-embed img,
     & img
     { 
+        display: block;
         margin: auto;
         padding: auto;
         text-align: center; 

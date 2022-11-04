@@ -9672,6 +9672,7 @@ body {
   background: var(--outer-bar, var(--background-secondary));
 }
 .callout[data-callout~=infobox] .internal-embed img, .callout[data-callout~=infobox] img {
+  display: block;
   margin: auto;
   padding: auto;
   text-align: center;

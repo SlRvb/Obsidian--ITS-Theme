@@ -4148,10 +4148,6 @@ button.mod-cta,
   -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0, #000000 30px);
 }
 
-.markdown-source-view.mod-cm6 .cm-scroller {
-  padding: 10px 20px;
-}
-
 /*Remove Note Padding*/
 .workspace-split.mod-root .view-content {
   padding: 0;

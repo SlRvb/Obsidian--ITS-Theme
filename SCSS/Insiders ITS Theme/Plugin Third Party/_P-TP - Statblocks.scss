@@ -1,63 +1,103 @@
 
 /*--Plugin: 5e Statblock--*/
-body.theme-dark,
-body.theme-light {
-    /*Plugin: 5e Statblock*/
+body {
     --statblock-primary-color: var(--text);
     --statblock-background-color: var(--note);
     --statblock-bar-color: var(--accent);
     --statblock-rule-color: var(--accent);
     --statblock-alt: var(--td);
+
+    --statblock-image-border-color: var(--hr);
+
+    --statblock-border-size: 0;
+    --statblock-border-color: var(--lines);
+
+    --statblock-box-shadow-color: var(--outline);
+    --statblock-box-shadow-x-offset: 0;
+    --statblock-box-shadow-y-offset: 0;
+    --statblock-box-shadow-blur: 20px;
+
+    //Text
+    --statblock-heading-font: var(--font);
+    --statblock-heading-font-size: var(--f-s-h);
+    --statblock-heading-font-color: var(--headers);
+    --statblock-heading-font-variant: normal;
+    --statblock-heading-font-weight: var(--f-w-h);
+
+    --statblock-subheading-font-size: var(--font-small);
+    --statblock-subheading-font-style: italic;
+    --statblock-subheading-font-weight: normal;
+
+    --statblock-font-color: var(--text);
+    --statblock-content-font: var(--default);
+    --statblock-content-font-size: var(--f-text);
+    
+    --statblock-property-name-font-color: var(--headers);
+
+    --statblock-section-heading-border-size: 0;
+    --statblock-section-heading-border-color: var(--statblock-primary-color);
+    --statblock-section-heading-font-color: var(--accent2-lite); 
+    --statblock-section-heading-font-size: var(--h3-size);
+    --statblock-section-heading-font-variant: normal;
+    --statblock-section-heading-font-weight: var(--f-w-h);
+
+    --statblock-traits-font-weight: bold;
+    --statblock-traits-font-style: normal;
+
 }
 
-//Old Stat
-body .obsidian-statblock-plugin .creature-heading > .name, 
 //New
-body .obsidian-statblock-plugin .heading {
-    font-family: var(--font);
-    color: var(--headers);
-    font-size: var(--f-s-h);
-    font-weight: var(--f-w-h);
-    font-variant: unset;
-    line-height: var(--header-lh);
-}
-
-.illusion.illusion .obsidian-statblock-plugin :is(h1, h2, h3, h4, h5, h6) {
-    color: var(--text-dl);
-}
-
-//Old Stat
-body .obsidian-statblock-plugin > .content-wrap, 
-//New
-body .obsidian-statblock-plugin .statblock-content {
-    border: none;
-    box-shadow: 0px 0px 20px var(--outline);
-    font-family: inherit;
-}
-
-//New
-body .statblock-item-container:nth-child(odd) .line,
-body .statblock-item-container:nth-child(odd) .property {
+body .statblock-item-container:nth-child(odd) :is(.line, .property) {
     background: var(--statblock-alt);
 }
-//Old Stat
-body .obsidian-statblock-plugin .property > .property-name,
-//New
-body .obsidian-statblock-plugin .property-name {
-    color: var(--headers);
-    font-style: normal;
-    font-size: var(--f-text);
+
+// //Old Stat
+// body .obsidian-statblock-plugin .creature-heading > .name, 
+// //New
+body .obsidian-statblock-plugin .heading {
+//     font-family: var(--font);
+//     color: var(--headers);
+//     font-size: var(--f-s-h);
+//     font-weight: var(--f-w-h);
+//     font-variant: unset;
+    line-height: var(--header-lh);
 }
-body .obsidian-statblock-plugin .section-header {
-    border: none;
-    color: var(--accent2-lite);
-    font-weight: var(--f-w-h);
-    text-transform: uppercase;
-}
-body .obsidian-statblock-plugin > .bar {
-    border: none;
+body .obsidian-statblock-plugin .property-text {
+    color: var(--statblock-font-color);
 }
 
-.obsidian-statblock-plugin .subheading {
-    font-size: .9em !important;
-}
+
+// .illusion.illusion .obsidian-statblock-plugin :is(h1, h2, h3, h4, h5, h6) {
+//     color: var(--text-dl);
+// }
+
+// //Old Stat
+// body .obsidian-statblock-plugin > .content-wrap, 
+// //New
+// body .obsidian-statblock-plugin .statblock-content {
+//     border: none;
+//     box-shadow: 0px 0px 20px var(--outline);
+//     font-family: inherit;
+// }
+
+// //Old Stat
+// body .obsidian-statblock-plugin .property > .property-name,
+// //New
+// body .obsidian-statblock-plugin .property-name {
+//     color: var(--headers);
+//     font-style: normal;
+//     font-size: var(--f-text);
+// }
+// body .obsidian-statblock-plugin .section-header {
+//     border: none;
+//     color: var(--accent2-lite);
+//     font-weight: var(--f-w-h);
+//     text-transform: uppercase;
+// }
+// body .obsidian-statblock-plugin > .bar {
+//     border: none;
+// }
+
+// .obsidian-statblock-plugin .subheading {
+//     font-size: .9em !important;
+// }

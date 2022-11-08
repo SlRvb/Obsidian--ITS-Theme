@@ -11,6 +11,8 @@ body {
 
     --statblock-border-size: 0;
     --statblock-border-color: var(--lines);
+    --statblock-bar-border-size: 0;
+    --statblock-bar-border-color: var(--statblock-bar-color);
 
     --statblock-box-shadow-color: var(--outline);
     --statblock-box-shadow-x-offset: 0;

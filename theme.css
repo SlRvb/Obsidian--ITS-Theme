@@ -13007,7 +13007,7 @@ body .obsidian-statblock-plugin .heading {
   line-height: var(--header-lh);
 }
 
-body .obsidian-statblock-plugin .property-text {
+body .obsidian-statblock-plugin :is(.property-text, .line) {
   color: var(--statblock-font-color);
 }
 

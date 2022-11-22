@@ -32,11 +32,12 @@ body:not(.alt-chkbx-off) {
         [data-task="r"],
         [data-task="c"],
         [data-task="o"],
-        [data-task="d"]
+        [data-task="d"],
+        [data-task="T"]
             ) {
             & > .task-list-item-checkbox,
             & input:is([type=checkbox], [type=checkbox i]):checked,
-            & input:is([type=checkbox], [type=checkbox i]):checked::before {
+            & input:is([type=checkbox], [type=checkbox i]):checked::after {
 
                 background-image: url();
                 position: relative;

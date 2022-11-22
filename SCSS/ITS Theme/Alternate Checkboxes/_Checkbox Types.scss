@@ -305,6 +305,18 @@ body:not(.alt-chkbx-off) {
         content: "\EC25";   
         }
     }
+    /* [T]: Time */
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="T"],
+    & .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="T"],
+    & .task-list-item.is-checked .task-list-item-checkbox[data-task="T"],
+    & .task-list-item.is-checked[data-task="T"] > input[type=checkbox]:checked,
+	& .task-list-item.is-checked[data-task="T"] p > input[type=checkbox]:checked
+    {
+        &::before {
+        color: rgb(var(--chbx-R));
+        content: "\EC26";   
+        }
+    }
 }
 
 
@@ -468,6 +480,18 @@ body:not(.alt-chkbx-off) {
     & span:not(.cm-link):not(.cm-inline-code) span[data-task="c"],
     &.check-color ul li[data-task="c"].task-list-item.is-checked {
         color: rgb(var(--chbx-c));
+    }
+    //[d]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="d"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="d"],
+    &.check-color ul li[data-task="d"].task-list-item.is-checked {
+        color: rgb(var(--chbx-I));
+    }
+    //[T]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="T"],
+    & span:not(.cm-link):not(.cm-inline-code) span[data-task="T"],
+    &.check-color ul li[data-task="T"].task-list-item.is-checked {
+        color: rgb(var(--chbx-R));
     }
 }
 
@@ -729,6 +753,28 @@ body:not(.alt-chkbx-off) {
     & .rtl li[data-task="c"].task-list-item.is-checked {
         border-left: unset;
         border-right: 2px solid rgb(var(--chbx-c));
+    }
+
+    //[d]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="d"],
+    & li[data-task="d"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-I));
+        background: rgba(var(--chbx-I), 20%); 
+    }
+    & .rtl li[data-task="d"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-I));
+    }
+
+    //[T]
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="T"],
+    & li[data-task="T"].task-list-item.is-checked {
+        border-left: 2px solid rgb(var(--chbx-R));
+        background: rgba(var(--chbx-R), 20%); 
+    }
+    & .rtl li[data-task="T"].task-list-item.is-checked {
+        border-left: unset;
+        border-right: 2px solid rgb(var(--chbx-R));
     }
 }
 

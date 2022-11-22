@@ -5015,6 +5015,15 @@ ul > li.task-list-item .task-list-item-checkbox {
   margin-block-end: unset;
 }
 
+.markdown-rendered ul.has-list-bullet li p:first-of-type {
+  margin-block-start: 1em;
+}
+
+:is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li {
+  padding-top: unset;
+  padding-bottom: 0;
+}
+
 /*Editor Bullet Points*/
 .markdown-source-view.mod-cm6 .list-bullet::after,
 .cm-s-obsidian span:is(.cm-formatting-list-ul, .cm-formatting-list-ol)::before {

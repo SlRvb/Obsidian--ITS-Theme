@@ -11385,10 +11385,6 @@ body div.BC-Matrix-square ol {
   text-align: left;
 }
 
-body .BC-Matrix.markdown-preview-view {
-  height: unset;
-}
-
 /*Banner + Breadcrumbs Trail Fixes*/
 body .markdown-preview-view:not(.is-live-preview).bc-ban .markdown-preview-section.BC-trail {
   margin-top: 200px !important;

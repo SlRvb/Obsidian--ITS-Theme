@@ -151,19 +151,31 @@ body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) im
 body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) img[src*="#locl"] img,
 body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) .image-embed:is([alt*=left], [alt*=locl]),
 body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) .image-embed[src*="#locl"] img {
-  float: left;
-  margin-right: 2%;
-  margin-top: 0px;
-  margin-bottom: 0px;
+    float: left;
+    margin-right: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 body .popover.hover-popover img:is([alt*=right], [alt*=locr]), body .popover.hover-popover img[src*="#locr"] img, body .popover.hover-popover .image-embed:is([alt*=right], [alt*=locr]), body .popover.hover-popover .image-embed[src*="#locr"] img,
 body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) img:is([alt*=right], [alt*=locr]),
 body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) img[src*="#locr"] img,
 body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) .image-embed:is([alt*=right], [alt*=locr]),
 body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) .image-embed[src*="#locr"] img {
-  float: right;
-  margin-left: 2%;
-  margin-bottom: 0px;
+    float: right;
+    margin-left: 2%;
+    margin-bottom: 0px;
+}
+
+.is-live-preview.is-live-preview :is(img, .image-embed)[alt*=lp]:is([alt*=left], [alt*=locl]) {
+    float: left;
+    margin-right: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.is-live-preview.is-live-preview :is(img, .image-embed)[alt*=lp]:is([alt*=right], [alt*=locr]) {
+    float: right;
+    margin-left: 2%;
+    margin-bottom: 0px;
 }
 
 /*Image Shapes*/

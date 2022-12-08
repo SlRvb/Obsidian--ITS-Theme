@@ -108,7 +108,8 @@ img:is([alt*="ctr"], [alt*="center"]),
 /*Image Locations*/
 /*Left & Right*/
 body .popover.hover-popover,
-body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) {
+body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview)
+{
     & img,
     & .image-embed {
         &:is([alt*="left"],[alt*="locl"]),
@@ -127,6 +128,7 @@ body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) {
             margin-left: 2%;
             margin-bottom: 0px;
         }
+        
         &[alt*="block"] {
             float: unset !important;
             display: block;
@@ -135,6 +137,26 @@ body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) {
         &:is([alt*="block+left"],  [alt*="block+locl"])  { margin-right: auto; }
     }
 }
+
+.is-live-preview.is-live-preview {
+    & :is(img, .image-embed)[alt*="lp"] {
+        &:is([alt*="left"],[alt*="locl"])
+        {
+            float:left;
+            margin-right: 2%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    
+        &:is([alt*="right"], [alt*="locr"])
+        {
+            float:right;
+            margin-left: 2%;
+            margin-bottom: 0px;
+        }
+    }
+}
+
 
 /*Image Shapes*/
 /*Banners*/

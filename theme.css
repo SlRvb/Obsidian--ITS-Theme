@@ -6411,6 +6411,18 @@ body :is(.markdown-source-view, .markdown-preview-view):not(.is-live-preview) .i
   margin-right: auto;
 }
 
+.is-live-preview.is-live-preview :is(img, .image-embed)[alt*=lp]:is([alt*=left], [alt*=locl]) {
+  float: left;
+  margin-right: 2%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.is-live-preview.is-live-preview :is(img, .image-embed)[alt*=lp]:is([alt*=right], [alt*=locr]) {
+  float: right;
+  margin-left: 2%;
+  margin-bottom: 0px;
+}
+
 /*Image Shapes*/
 /*Banners*/
 img[alt*=banner],
@@ -11976,6 +11988,14 @@ body .fantasy-calendar-create-calendar details[open] {
 }
 .fantasy-calendar-container .event:nth-child(even) {
   box-shadow: 0 0 10px var(--outline);
+}
+
+.fantasy-calendar.full-view .fantasy-day.day:nth-child(even) {
+  background-color: var(--td);
+}
+
+.fantasy-calendar.full-view .flag.flag {
+  padding: 2px 10px;
 }
 
 /*Plugin: File Tree Alternative*/

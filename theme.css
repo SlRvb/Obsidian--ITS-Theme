@@ -6847,12 +6847,18 @@ img[alt*=sprf] {
 }
 
 /*Hide Headings*/
-.internal-embed[alt*=no-h] .markdown-embed h1,
-.internal-embed[alt*=no-h] .markdown-embed h2,
-.internal-embed[alt*=no-h] .markdown-embed h3,
-.internal-embed[alt*=no-h] .markdown-embed h4,
-.internal-embed[alt*=no-h] .markdown-embed h5,
-.internal-embed[alt*=no-h] .markdown-embed h6 {
+.internal-embed[alt*=no-h] .markdown-embed :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6),
+.internal-embed[alt*=no-h].markdown-embed :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) {
   display: none;
 }
 
@@ -6862,7 +6868,13 @@ img[alt*=sprf] {
 .internal-embed[alt*=n-h3] .markdown-embed h3,
 .internal-embed[alt*=n-h4] .markdown-embed h4,
 .internal-embed[alt*=n-h5] .markdown-embed h5,
-.internal-embed[alt*=n-h6] .markdown-embed h6 {
+.internal-embed[alt*=n-h6] .markdown-embed h6,
+.internal-embed[alt*=n-h1].markdown-embed h1,
+.internal-embed[alt*=n-h2].markdown-embed h2,
+.internal-embed[alt*=n-h3].markdown-embed h3,
+.internal-embed[alt*=n-h4].markdown-embed h4,
+.internal-embed[alt*=n-h5].markdown-embed h5,
+.internal-embed[alt*=n-h6].markdown-embed h6 {
   display: none;
 }
 

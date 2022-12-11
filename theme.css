@@ -10322,18 +10322,18 @@ body {
 .callout.callout[data-callout~=timeline] .callout-content {
   background-color: rgb(var(--callout-color), 0.1);
 }
-.callout.callout[data-callout~=timeline][data-callout-metadata~=t-l] :is(.callout-title, .callout-content) {
+.callout.callout[data-callout~=timeline][data-callout-metadata~=t-l] > :is(.callout-title, .callout-content) {
   border-right: 4px solid rgb(var(--callout-color));
   margin-right: var(--c-timeline);
 }
-.callout.callout[data-callout~=timeline][data-callout-metadata~=t-l] :is(.callout-title, .callout-content) > .callout-title, .callout.callout[data-callout~=timeline][data-callout-metadata~=t-l] :is(.callout-title, .callout-content) > .callout-content {
+.callout.callout[data-callout~=timeline][data-callout-metadata~=t-l] > :is(.callout-title, .callout-content) > .callout-title, .callout.callout[data-callout~=timeline][data-callout-metadata~=t-l] > :is(.callout-title, .callout-content) > .callout-content {
   box-shadow: -4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
 }
-.callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] :is(.callout-title, .callout-content) {
+.callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] > :is(.callout-title, .callout-content) {
   border-left: 4px solid rgb(var(--callout-color));
   margin-left: var(--c-timeline);
 }
-.callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] :is(.callout-title, .callout-content) > .callout-title, .callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] :is(.callout-title, .callout-content) > .callout-content {
+.callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] > :is(.callout-title, .callout-content) > .callout-title, .callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] > :is(.callout-title, .callout-content) > .callout-content {
   box-shadow: 4px 4px 0 var(--outline, var(--background-modifier-box-shadow));
 }
 .callout.callout[data-callout~=timeline][data-callout-metadata~=t-l] > .callout-title {

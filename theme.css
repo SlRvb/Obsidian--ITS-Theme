@@ -13531,7 +13531,20 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 }
 
 .naked-em .internal-embed:not(.image-embed):not(.media-embed) {
-  display: inline-flex;
+  display: inline;
+}
+
+.naked-em [src*="#"] .markdown-embed-title, .naked-em [src*="#"] .file-embed-title {
+  width: unset;
+  display: none;
+}
+.naked-em [src*="#"] .markdown-embed-content .markdown-preview-view {
+  display: inline;
+  width: unset;
+}
+.naked-em [src*="#"] .markdown-embed-content .markdown-preview-section div {
+  display: inline;
+  width: unset;
 }
 
 /*Fix For Embed Adjustments*/

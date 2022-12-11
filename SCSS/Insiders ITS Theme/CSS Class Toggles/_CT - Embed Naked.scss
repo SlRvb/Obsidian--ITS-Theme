@@ -24,7 +24,18 @@
     width: 0px;
 }
 .naked-em .internal-embed:not(.image-embed):not(.media-embed) {
-	display: inline-flex;
+	display: inline;
+}
+.naked-em [src*='#'] {
+    & .markdown-embed-title, .file-embed-title { 
+        width: unset; 
+        display: none;
+    }
+    & .markdown-embed-content .markdown-preview-view {  
+        display: inline; 
+        width: unset;
+    }
+    & .markdown-embed-content .markdown-preview-section div { display: inline; width: unset; }
 }
 
 

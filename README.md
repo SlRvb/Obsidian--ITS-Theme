@@ -9,17 +9,17 @@
 ---
 # Guide/Reference
 
-- [Image Positions/Adjustments](Guide/Image-Positions.md)
-- [Alternate Checkboxes](Guide/Alternate-Checkboxes.md)
-- [Callouts](Guide/Callouts.md)
-- [CSS Classes](Guide/CSS-Classes.md)
-- [Embed Adjustments](Guide/Embed-Adjustments.md)
-- [Alternate Themes](Guide/Alternate-Themes.md)
-- [Folder Styles](Guide/Snippet--Folder-Styles.md)
+- [Image Positions/Adjustments](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Image-Positions.md)
+- [Alternate Checkboxes](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Checkboxes.md)
+- [Callouts](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Callouts.md)
+- [CSS Classes](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/CSS-Classes.md)
+- [Embed Adjustments](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Embed-Adjustments.md)
+- [Alternate Themes](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Themes.md)
+- [Folder Styles](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Snippet--Folder-Styles.md)
 - **⚠ Depreciated Snippets:**
-	- [\<i>\</i>](Guide/HTML-I-Attributes.md)
-	- [Asides](Guide/Asides.md)
-	- [Alternate Admonitions](Guide/Alternate-Admonitions.md)
+	- [\<i>\</i>](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/HTML-I-Attributes.md)
+	- [Asides](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Asides.md)
+	- [Alternate Admonitions](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Admonitions.md)
 
 ---
 ###### Download
@@ -27,7 +27,7 @@ Download these for a better experience
 
 - **[Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings)** <br> Allows you to customize the ITS Theme to your liking
 
-- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Encoded%20Icons.css)** <br> Other icon fonts that are used in the [Alternate Themes Snippet](Guide/Alternate-Themes.md)
+- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Encoded%20Icons.css)** <br> Other icon fonts that are used in the [Alternate Themes Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Themes.md)
 
 ###### Snippets Already Included
 No need to download these snippets to your vault if you're using the ITS Theme, they work out of the box the moment you install ITS

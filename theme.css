@@ -10049,6 +10049,9 @@ body {
   display: unset;
   grid-template-columns: unset;
 }
+.callout[data-callout~=cards][data-callout-metadata~=dataview] br {
+  display: block;
+}
 .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table {
   display: grid;
 }

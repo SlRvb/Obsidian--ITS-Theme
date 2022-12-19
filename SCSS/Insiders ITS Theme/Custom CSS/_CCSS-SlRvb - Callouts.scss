@@ -798,6 +798,8 @@ body {
         display: unset;
         grid-template-columns: unset;
     }
+    & br { display: block; }
+
     & .dataview.table-view-table {
         display: grid;
 

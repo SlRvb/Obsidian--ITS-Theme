@@ -1,0 +1,22 @@
+
+/*Fit image within bounds WITHOUT stretching*/
+img:is([alt*="cover"], [alt*="cvr"]), 
+.image-embed:is([src*="#cover"], [src*="#cvr"]), 
+span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
+    object-fit: cover;
+}
+
+/*Fix Float Issues*/
+img[alt*="clear"],
+.image-embed[src*="#clear"] {
+    clear: both;
+}
+img[alt*="unclr"],
+.image-embed[src*="#unclr"] {
+    clear: none !important;
+}
+
+/*Round Image*/
+img[alt*="circle"] {
+    border-radius: 50%;
+}

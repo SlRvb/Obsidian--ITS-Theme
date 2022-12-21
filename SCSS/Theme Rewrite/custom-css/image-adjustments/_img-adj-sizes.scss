@@ -1,0 +1,114 @@
+/*----Image Positions/Adjustments----*/
+body {
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 200px;
+    --small-med: 300px;
+    --med-small: 400px;
+    --medium: 500px;
+    --med-tall: 600px;
+    --tall: 700px;
+}
+.popover.hover-popover {
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 150px;
+    --small-med: 200px;
+    --med-small: 250px;
+    --medium: 300px;
+    --med-tall: 450px;
+    --tall: 500px;
+}
+
+
+
+/*-Image Sizing-*/
+
+/*Fit image within bounds WITHOUT stretching*/
+img:is([alt*="cover"], [alt*="cvr"]), 
+.image-embed:is([src*="#cover"], [src*="#cvr"]), 
+span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
+    object-fit: cover;
+}
+
+/*Height*/
+// [alt][alt] for overriding Popover img css
+img[alt][alt][alt*="hmicro"],
+.image-embed[src*="#hmicro"] img {
+    height: var(--micro);
+}
+img[alt][alt][alt*="htiny"],
+.image-embed[src*="#htiny"] img {
+    height: var(--tiny);
+}
+img[alt][alt][alt*="hsmall"],
+.image-embed[src*="#hsmall"] img {
+    height: var(--small);
+}
+img[alt][alt][alt*="hs-med"],
+.image-embed[src*="#hs-med"] img {
+    height: var(--small-med);
+}
+img[alt][alt][alt*="hm-sm"],
+.image-embed[src*="#hs-sm"] img {
+    height: var(--med-small);
+}
+img[alt][alt][alt*="hmed"],
+.image-embed[src*="#hmed"] img {
+    height: var(--medium);
+}
+img[alt][alt][alt*="hm-tl"],
+.image-embed[src*="#hm-tl"],
+.image-embed[src*="#hm-tl"] img {
+    height: var(--med-tall);
+}
+img[alt][alt][alt*="htall"],
+.image-embed[src*="#htall"] img {
+    height: var(--tall);
+}
+img[alt][alt][alt*=hfull],
+.internal-embed[src*="#hfull"] img { height: 100%; }
+
+/*Width*/
+img[alt][alt][alt*="wmicro"],
+.image-embed[src*="#wmicro"] img,
+.image-embed[alt*="#wmicro"]::after {
+    width: var(--micro); 
+}
+img[alt][alt][alt*="wtiny"],
+.image-embed[src*="#wtiny"] img,
+.image-embed[src*="#wtiny"]::after { 
+    width: var(--tiny); 
+}
+img[alt][alt][alt*="wsmall"],
+.image-embed[src*="#wsmall"] img,
+.image-embed[src*="#wsmall"]::after {
+    width: var(--small);
+}
+img[alt][alt][alt*="ws-med"],
+.image-embed[src*="#ws-med"] img,
+.image-embed[src*="#ws-med"]::after {
+    width: var(--small-med); 
+}
+img[alt][alt][alt*="wm-sm"],
+.image-embed[src*="#wm-sm"] img,
+.image-embed[src*="#wm-sm"]::after {
+    width: var(--med-small); 
+}
+img[alt][alt][alt*="wmed"],
+.image-embed[src*="#wmed"] img,
+.image-embed[src*="#wmed"]::after {
+    width: var(--medium); 
+}
+img[alt][alt][alt*="wm-tl"],
+.image-embed[src*="#wm-tl"] img,
+.image-embed[src*="#wm-tl"]::after {
+    width: var(--med-tall); 
+}
+img[alt][alt][alt*="wtall"],
+.image-embed[src*="#wtall"] img,
+.image-embed[src*="#wtall"]::after {
+    width: var(--tall); 
+}
+img[alt][alt][alt*=wfull],
+.internal-embed[src*="#wfull"] img { width: 100%; }

@@ -1,0 +1,84 @@
+
+
+/*Kanban*/
+.callout.callout[data-callout~="kanban"] {
+    --callout-color: var(--text-normal);
+    --callout-icon: layout-dashboard;
+    --callout-padding: 0;
+
+    --item-outline: 0 0 0 2px var(--outline, var(--background-modifier-border));
+
+    --lane-width: 250px;
+    
+    //Undo Styling
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    width: auto;
+
+    & .callout-title {
+        justify-content: center;
+        background: var(--background-primary-alt);
+        padding: 5px;
+        border-radius: var(--radius, var(--co-radius));
+    }
+    & .callout-title-inner { flex: unset; }
+    & .callout-content { padding: 0; }
+    
+    //Hide List Bullet
+    & ul li::marker,
+    & ul li::before, 
+    & .list-bullet,
+    & ul::before, 
+    & :is(ul, ul ul) .list-collapse-indicator
+    {
+        list-style-type: none;
+        color: transparent;
+        display: none !important;
+    }
+
+    //Kanban Styling
+    & ul {
+        display: flex;
+        margin-block-start: 5px;
+        padding-inline-start: 0;
+        text-align: center;
+        overflow: auto;
+        
+        &.dataview-ul { margin-inline-start: unset; }
+        
+        //Lane
+        & li {
+            min-width: var(--lane-width);
+            border: 0;
+            padding: 5px;
+            
+            margin: 5px 3px;
+            padding-top: 4px;
+            
+            background: var(--note, var(--background-primary-alt));
+            border-radius: var(--radius, var(--kbn-radius));
+            box-shadow: var(--item-outline), var(--shadow-s);
+        }
+    }
+    //Sub Lists
+    & ul ul {
+        flex-direction: column;
+        text-align: left;
+        overflow: unset;
+        
+        //List Items
+        & li {
+            min-width: calc(var(--lane-width) / 2);
+            padding: 5px;
+        
+            box-shadow: var(--item-outline), var(--shadow-s);
+            background: var(--code-bg, var(--background-primary));
+            
+            & :is(img, .internal-embed) { margin-bottom: -6px; }
+        }
+    }
+    //Fix checkboxes
+    & ul.contains-task-list { padding-inline-start: 20px; }
+    & .task-list-item-checkbox { cursor: default; }
+}

@@ -1,0 +1,34 @@
+
+// Align Callout Content Text
+.callout.callout:is(
+    [data-callout-metadata~="txt-l"],
+    [data-callout-metadata~="text-Left"]
+) > .callout-content {
+    text-align: left;
+}
+.callout.callout:is(
+    [data-callout-metadata~="txt-r"],
+    [data-callout-metadata~="text-Right"]
+) > .callout-content {
+    text-align: right;
+}
+.callout.callout:is(
+    [data-callout-metadata~="txt-c"],
+    [data-callout-metadata~="text-Center"]
+) > .callout-content {
+    text-align: center;
+}
+
+
+// Align Callout Title Text
+.callout.callout:is(
+    [data-callout-metadata~="ttl-c"], 
+    [data-callout-metadata~="title-Center"]
+) {
+    & .callout-title { justify-content: center; }
+    
+    & .callout-title-inner {
+        display: block;
+        flex: unset;
+    }
+}

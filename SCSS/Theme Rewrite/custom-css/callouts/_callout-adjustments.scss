@@ -1,0 +1,93 @@
+
+// No Title
+.callout:is(
+    [data-callout-metadata~="no-t"], 
+    [data-callout-metadata~="no-title"]
+) > .callout-title { display: none; }
+
+// Show Title
+.callout.callout.callout.callout:is(
+    [data-callout-metadata~="s-t"], 
+    [data-callout-metadata~="show-title"]
+) {
+    & > .callout-title { display: flex; }
+    
+    & p { margin-top: 0; }
+} 
+// Subtitle
+.callout.callout.callout.callout:is(
+    [data-callout-metadata~="subtitle"], 
+    [data-callout-metadata~="subt"]
+) {
+    & .callout-title {
+        align-content: center;
+        align-items: center;
+        
+        & em {
+            display: block;
+            font-style: normal;
+            font-size: var(--font-small);
+            line-height: 12px;
+            font-weight: normal;
+        }
+    }
+}
+
+// No Icon
+.callout:is(
+    [data-callout-metadata~="no-i"], 
+    [data-callout-metadata~="no-icon"]
+) > .callout-title .callout-icon { display: none; }
+
+
+//No Table Header
+.callout:is(
+    [data-callout-metadata~="n-th"], 
+    [data-callout-metadata~="no-table-header"]
+) .callout-content > {
+    & table { 
+        margin-bottom: 5px; 
+
+        & th { display: none; }
+    }
+}
+//Wide Table
+.callout[data-callout-metadata~="t-w"] table td { width: calc(var(--tbl-w) /2); }
+.callout[data-callout-metadata~="t-w"] table { width: 100%; }
+
+//Expand for Embed
+.callout[data-callout-metadata~="embed"] {
+    .callout-content,
+    & p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+//No Margin
+body .callout.callout.callout:is([data-callout-metadata~="nmg"], [data-callout-metadata~="no-margin"]) {
+    --callout-margin: 0;
+    > .callout { --callout-margin: 0; }
+}
+.callout[data-callout-metadata~="collapse"] * {
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-gap: 0 !important;
+}
+.callout.callout.callout:is([data-callout-metadata~="nbrd"], [data-callout-metadata~="no-border"]) {
+    border: 0;
+}
+
+.callout.callout.callout[data-callout-metadata~="clean"],
+.callout.callout.callout[data-callout-metadata~="clean"] .callout-content {
+    border: 0;
+    box-shadow: none;
+    --callout-color: transparent;
+    --callout-padding: 0;
+
+    & .callout-content {
+        padding: 0;
+    }
+}

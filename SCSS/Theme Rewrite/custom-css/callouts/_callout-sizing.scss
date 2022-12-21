@@ -1,0 +1,38 @@
+
+.callout.callout {
+    --callout-micro: 10%;
+    --callout-tiny: 20%;
+    --callout-small: 30%;
+    --callout-small-med: 40%;
+    --callout-med-small: 50%;
+    --callout-medium: 60%;
+    --callout-med-tall: 80%;
+    --callout-tall: 95%;
+
+    &[data-callout-metadata~="wmicro"]   { width: var(--callout-micro); }
+    &[data-callout-metadata~="wtiny"]    { width: var(--callout-tiny); }
+    &[data-callout-metadata~="wsmall"]   { width: var(--callout-small); }
+    &[data-callout-metadata~="ws-med"]   { width: var(--callout-small-med); }
+    &[data-callout-metadata~="wm-sm"]    { width: var(--callout-med-small); }
+    &[data-callout-metadata~="wmed"]     { width: var(--callout-medium); }
+    &[data-callout-metadata~="wm-tl"]    { width: var(--callout-med-tall); }
+    &[data-callout-metadata~="wtall"]    { width: var(--callout-tall); }
+    &[data-callout-metadata~="wfull"]    { width: 100%; }
+
+    &[data-callout-metadata~="wtiny-c"]    { width: 19%; }
+    &[data-callout-metadata~="wsmall-c"]   { width: 32.4%; }
+    &[data-callout-metadata~="ws-med-c"]   { width: 39%; }
+    &[data-callout-metadata~="wm-sm-c"]    { width: 49%; }
+    &[data-callout-metadata~="wmed-c"]     { width: 59%; }
+    &[data-callout-metadata~="wm-tl-c"]    { width: 79%; }
+}
+.callout.callout[data-callout-metadata~="static"] {
+    --callout-micro: 50px;
+    --callout-tiny: 100px;
+    --callout-small: 200px;
+    --callout-small-med: 300px;
+    --callout-med-small: 400px;
+    --callout-medium: 500px;
+    --callout-med-tall: 600px;
+    --callout-tall: 700px;
+}

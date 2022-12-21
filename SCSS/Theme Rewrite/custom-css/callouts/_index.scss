@@ -1,0 +1,34 @@
+@use 'callout-positions';
+@use 'callout-adjustments';
+@use 'callout-coloring';
+@use 'callout-sizing';
+
+@use 'callout-type-infobox';
+
+@use 'callout-type-img-grids';
+@use 'callout-type-cards';
+@use 'callout-type-captions';
+@use 'callout-type-recite';
+@use 'callout-type-table';
+
+@use 'callout-type-metadata';
+@use 'callout-type-columns';
+@use 'callout-type-kanban';
+@use 'callout-type-timeline';
+
+@use 'callout-type-asides';
+
+body {
+    --callout-margin: 0; // Personal
+    --callout-padding: var(--size-4-3);
+}
+
+.callout.callout.callout {
+    --callout-blend-mode: normal;
+    
+    margin: var(--callout-margin);
+}
+.markdown-embed .markdown-rendered .callout {
+    --callout-margin: 5px 0;
+}
+

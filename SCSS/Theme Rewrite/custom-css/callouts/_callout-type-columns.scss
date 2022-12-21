@@ -1,0 +1,67 @@
+
+/* Columns */
+.callout[data-callout*="column"] {
+    --callout-color: var(--text-normal);
+    --callout-icon: layout-dashboard;
+    --columns: 2;
+
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    width: auto;
+    padding: 0;
+
+    & > .callout-content .callout-content { border: 0; }
+    
+    & > .callout-content {
+        display: grid;
+        grid-template-columns: repeat(var(--columns), 1fr);
+        gap: 10px;
+
+        background: transparent;
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+    }
+    &[data-callout-metadata~="3"] .callout-content {
+        --columns: 3;
+    }
+    &[data-callout-metadata~="4"] .callout-content {
+        --columns: 4;
+    }
+
+
+    // Flex
+    &[data-callout-metadata~="flex"] > .callout-content {
+        gap: unset;
+        grid-template-columns: none;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        // Sub Callout Sizing
+        & .callout {
+            flex: 1 1 250px;
+            margin: 5px;
+            //background: transparent;
+        }
+    }
+
+    //Dataview List Columns
+    &[data-callout-metadata~="dataview"] {
+        & > .callout-content { 
+            grid-template-columns: unset; 
+            gap: unset; 
+        }
+
+
+        & > .callout-content .dataview.list-view-ul {
+            columns: var(--columns);
+        }
+
+        & > .callout-content .dataview li {
+            break-inside: avoid;
+        }
+    }
+}

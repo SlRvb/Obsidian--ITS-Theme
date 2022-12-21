@@ -1,0 +1,25 @@
+/*Callout Positioning*/
+:not(.is-live-preview) .callout.callout.callout:is(
+    [data-callout-metadata~="p+l"], 
+    [data-callout-metadata~="left"]
+    ) { 
+    float: left; 
+    margin: unset;
+    margin-right: 8px;
+}
+:not(.is-live-preview) .callout.callout:is(
+    [data-callout-metadata~="p+r"], 
+    [data-callout-metadata~="right"]
+    ) { 
+    float: right;
+    margin: unset;
+    margin-left: 8px;
+}
+.callout.callout.callout:is(
+    [data-callout-metadata~="ctr"], 
+    [data-callout-metadata~="center"]
+    ) {
+    display: block;
+    margin: auto;
+    float: unset;
+}

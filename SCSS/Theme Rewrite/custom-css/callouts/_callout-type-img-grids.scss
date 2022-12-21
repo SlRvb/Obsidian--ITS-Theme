@@ -1,0 +1,57 @@
+
+/*Image Grid*/
+.callout.callout[data-callout="grid"] {
+    --callout-padding: 0;
+    --callout-content-padding: 0;
+
+    background: transparent;
+    border: 0;
+    margin: 0; 
+    box-shadow: none;
+
+    & .callout-content {
+        display: block;
+        width: 100%;
+        border: 0;
+        box-shadow: unset;
+        padding: 0;
+    }
+    & .callout-title { display: none; }
+    
+    //Internal Images
+    & .callout-content {
+
+        & p {
+            display: flex;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            justify-content: center;
+        }
+        & img {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3px;
+            max-height: 35vh;
+        }
+        & img[alt="wfull"] { max-height: unset; }
+    } 
+    
+    //External Images
+    &[data-callout-metadata~="masonry"] .callout-content {
+        & p {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(0, auto));
+            grid-gap: 0;
+            margin: 0;
+            margin-top: 1px;
+        }
+        & img {
+            display: flex;
+          
+            flex: 1;
+            align-self: stretch;
+            object-fit: cover;
+            max-height: unset;
+        }
+    } 
+}

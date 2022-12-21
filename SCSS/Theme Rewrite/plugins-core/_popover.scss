@@ -1,0 +1,12 @@
+body {
+    --popover-width: 650px;
+    --popover-font-size: var(--font-size);
+    --popover-max-height: 600px;
+
+    --popover-border: 3px solid var(--outline);
+}
+
+.popover.hover-popover {
+    border: var(--popover-border);
+    box-shadow: var(--shadow-l);
+}

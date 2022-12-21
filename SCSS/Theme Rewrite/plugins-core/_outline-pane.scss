@@ -1,0 +1,30 @@
+body {
+    --outline-symbol: "H";
+}
+
+//Outline Icon
+body:not(.op-h) .outline {
+    & .tree-item-self { padding-left: 20px; }
+
+    & .tree-item-children {
+        transition: all 0.3s ease-in-out;
+        margin-left: 10px;
+    }
+
+    //Arrow
+    & .collapse-icon svg { visibility: hidden; }
+    & .tree-item-icon.collapse-icon { margin-left: calc(var(--size-4-4) * -1); }
+    
+    //Symbol
+    & .tree-item-self::before {
+        content: var(--outline-symbol);
+        font-family: var(--default-font);
+        font-weight: 900;
+        color: var(--headers);
+        margin-left: -15px;
+        padding-right: 4.5px;
+    }
+    //Collapsed Fixes
+    & .tree-item.is-collapsed .collapse-icon svg { visibility: visible; }
+    & .tree-item.is-collapsed .tree-item-self::before { display: none; }
+} 

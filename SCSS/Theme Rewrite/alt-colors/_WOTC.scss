@@ -1,0 +1,124 @@
+.theme-dark,
+.theme-light {
+    &.wotc-beyond,
+    & .wotc-beyond {
+        --header-weight: 500;
+        --font: 'its-Draconis', 'Draconis', Inter;
+        
+        --font-monospace: 'its-Fira Code', 'Fira Code', Inter;
+        --default-font: 'its-Bookerly', 'Bookerly', Inter;
+        --font-text: var(--default-font);
+
+        --vault-name-font-size: 25px;
+    
+        --hr-sym: "\E803";
+        --hr-f: var(--its);
+
+        --embed-h: #c93c3c;
+        --h1-border-color: linear-gradient(to right, var(--embed-h), transparent);
+        --h2-border-color: linear-gradient(to right, sandybrown, transparent);
+        --h3-border-color: linear-gradient(to right, #642020, transparent);
+        --h4-border-color: linear-gradient(to right, var(--header-border-line-color), transparent);
+        --h5-border-color: linear-gradient(to right, var(--header-border-line-color), transparent);
+        --h6-border-color: linear-gradient(to right, var(--header-border-line-color), transparent);
+
+        --icon-color: var(--text);
+
+        // Paper Burn
+        --tab-container-background: transparent;
+        --tab-titlebar-color: transparent;
+        // --tab-background-active: var(--tab-outline-color);
+        --pane-background: transparent;
+        // --modal-background: transparent;
+    }
+}
+
+
+.theme-dark {
+    &.wotc-beyond,
+    & .wotc-beyond {
+        
+        --outline: #0000008c;
+
+        --hr-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Crect id='Artboard1' x='0' y='0' width='100' height='7' style='fill:none;'/%3E%3Cpath d='M50,2.5L100,3.5L50,4L0,3.5L50,2.5Z' style='fill:rgb(146, 47, 47);'/%3E%3C/svg%3E") no-repeat center center;
+        
+}}
+
+.theme-light {
+    &.wotc-beyond,
+    & .wotc-beyond {
+        --hr-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Crect id='Artboard1' x='0' y='0' width='100' height='7' style='fill:none;'/%3E%3Cpath d='M50,2.5L100,3.5L50,4L0,3.5L50,2.5Z' style='fill:rgb(200, 57, 57);'/%3E%3C/svg%3E") no-repeat center center;
+        
+        --outer-bar: #fbe2c5;
+        --dark-sidebar: #f6e3cd;
+        --side-bar: #fff6e4;
+        
+        --note: #fffcf0; //#fffcf0
+        --note-rgb: 255, 252, 240;
+
+        --accent: #c75959;
+        --lite-accent: #a35158;
+        --dark-accent: #cd645e; //#ffefda
+        --deep-dark-accent: #2e1010;
+
+        --text: #412f2f;
+        --code-text: #681010;
+
+
+        --outline: #fbb4577e;
+        
+        
+        --table: var(--outline);
+        --aside-bg: #faf2e9;
+        --embed-bg: var(--aside-bg);
+
+        --file-icon-color: #ebbd92;
+        --file: var(--text);
+    
+        --bg: var(--dark-sidebar);
+
+        --td: #fae0be60;
+        --code-bg: #f3e6d2;
+        --hr: var(--table);
+        --lines: var(--inactive);
+        
+        --accent2: #000000;
+        --accent2-lite: #df6262;
+        --inactive: #e2b7a3;
+
+
+}}
+
+
+
+//Paper Edges
+body.wotc-beyond {
+    & .workspace-leaf-content,
+    & .workspace-tabs,
+    & .vertical-tab-content,
+    & .modal.modal,
+    & .community-modal-sidebar
+    { box-shadow: 0 0 60px var(--outline) inset; }
+}
+
+//Note CSSClass 
+body:not(.wotc-beyond) .wotc-beyond:is(
+    .markdown-source-view,
+    .markdown-preview-view
+){ box-shadow: 0 0 60px var(--outline) inset; }
+
+
+//Hr 
+.wotc-beyond
+{
+    & .markdown-rendered hr,
+    & .cm-line:not(.cm-active) hr 
+    {
+        background: var(--hr-image);
+        background-size: 100%;
+        height: 15px;
+        border: none;
+    
+        // &::after  { content: ''; }
+    }
+}

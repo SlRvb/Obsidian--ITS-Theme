@@ -1,15 +1,118 @@
 //Alternate Color Schemes
+
 @use 'SlRvb-Gray';
 @use 'SlRvb-Blue';
+@use 'WOTC';
+@use 'Minimalist';
+@use 'Drowned';
+@use 'ITS-Dark';
+@use 'Nebula';
+@use 'SlRvb-DnD';
+@use 'Notion';
+@use 'School-Days';
+@use 'Tangerine-Dunes';
+@use 'Nord';
+@use 'Adventure';
 
-// @use 'Alternate Themes/Th--School Days' as sd;
-// @use 'Alternate Themes/Th--D&D' as DND;
-// @use 'Alternate Themes/Th--D&D WOTC-Beyond' as WOTC-Beyond;
-// //@use 'Alternate Themes/Th--D&D WOTC' as WOTC;
-// @use 'Alternate Themes/Th--Tangerine Dunes' as td;
-// @use 'Alternate Themes/Th--Drowned';
-// @use 'Alternate Themes/Th--Nord';
-// @use 'Alternate Themes/Th--Notion';
-// @use 'Alternate Themes/Th--Minimalist';
-// @use 'Alternate Themes/Th--Adventure';
-// @use 'Alternate Themes/Th--ITS Dark' as itsd;
+//Reapplication
+.slrvb-g,
+.slrvb-b,
+.wotc-beyond,
+.drwn,
+.its-d,
+.mini,
+.nebula,
+.dnd,
+.s-d,
+.t-d,
+.nord
+{
+    --h1-font: var(--font);
+    --h2-font: var(--font);
+    --h3-font: var(--font);
+    --h4-font: var(--font);
+    --h5-font: var(--font);
+    --h6-font: var(--font);
+    --h1-weight: var(--header-weight);
+    --h2-weight: var(--header-weight);
+    --h3-weight: var(--header-weight);
+    --h4-weight: var(--header-weight);
+    --h5-weight: var(--header-weight);
+    --h6-weight: var(--header-weight);
+    --h1-color: var(--headers);
+    --h2-color: var(--headers);
+    --h3-color: var(--headers);
+    --h4-color: var(--headers);
+    --h5-color: var(--headers);
+    --h6-color: var(--headers);
+    --h1-border-line-height: var(--header-border-line-height);
+    --h2-border-line-height: var(--header-border-line-height);
+    --h3-border-line-height: var(--header-border-line-height);
+    --h4-border-line-height: var(--header-border-line-height);
+    --h5-border-line-height: var(--header-border-line-height);
+    --h6-border-line-height: var(--header-border-line-height);
+    --header-border-line-color: var(--table);
+    --h1-border-color: var(--header-border-line-color);
+    --h2-border-color: var(--header-border-line-color);
+    --h3-border-color: var(--header-border-line-color);
+    --h4-border-color: var(--header-border-line-color);
+    --h5-border-color: var(--header-border-line-color);
+    --h6-border-color: var(--header-border-line-color);
+    --inline-title-color: var(--headers);
+
+    --link-color: var(--accent2-lite);
+    --link-color-hover: var(--lite-accent);
+    --link-external-color: var(--text-accent);
+    --link-external-color-hover: var(--text-accent-hover);
+    --link-unresolved-color: var(--inactive);
+
+    --code-normal: var(--code-text);
+    --code-background: var(--code-bg);
+    
+    --checkbox-color: var(--accent);
+    --checkbox-border-color: var(--accent);
+    --list-marker-color: var(--lite-accent);
+    
+    --table-header-background: var(--th);
+    --table-header-background-hover: var(--accent);
+    --table-column-alt-background: var(--td);
+    --table-row-alt-background: var(--td);
+    
+    --tag-background: var(--tag);
+    --tag-background-hover: var(--accent);
+    --tag-border-color: var(--tag);
+    --tag-border-color-hover: var(--accent);
+
+    --embed-border-left: 2px solid var(--headers);
+    --hr-color: var(--hr);
+    
+    --blockquote-border-color: var(--bg);
+    --blockquote-background-color: var(--embed-bg);
+
+    //
+    background-color: var(--background-primary);
+    --background-primary: var(--note);
+    --background-primary-alt: var(--deep-dark-accent);
+    --background-secondary: var(--side-bar);
+    --background-secondary-alt: var(--outer-bar);
+
+    --background-modifier-border: var(--table);
+    --background-modifier-hover: var(--hvr-active);
+    
+    --background-modifier-form-field: var(--bg);
+
+    --text-highlight-bg: var(--highlight);
+
+    --text-normal: var(--text); 
+    --text-muted: var(--soft-text);
+    --text-accent: var(--accent2-lite);
+    --text-accent-hover: var(--accent2);
+
+    --interactive-normal: var(--outer-bar);
+    --interactive-hover: var(--embed-bg);
+    --interactive-accent: var(--dark-accent);
+    --interactive-accent-hover: var(--dark-accent);
+
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--tag);
+}

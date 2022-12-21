@@ -1,0 +1,59 @@
+.theme-dark {
+    &.its-d,
+    & .its-d {
+        --background-modifier-form-field-highlighted: rgba(60, 8, 8, 0.46); 
+        --text-highlight-bg: rgba(139, 6, 6, 0.4);
+
+        
+        --deep-dark-accent: #270f0f;
+        --dark-accent: var(--aside-bg);
+        --outer-bar: black;
+        --dark-sidebar: #000000;
+        --side-bar: var(--outer-bar);
+
+        --note: #070b11;
+        --hr: #571a1a;
+        --file: var(--text);
+        
+        --accent: #803232;
+        --accent2: var(--text);
+        --accent2-lite: #c5575b;
+        
+        --headers: #aa3333;
+        --text: #475569;
+        --soft-text: var(--accent);
+        --code-text: var(--accent);
+        --footnote: #577093;
+
+        --fg: var(--headers);
+        --bg: var(--inactive);
+        --code-bg: var(--aside-bg);
+        --embed-bg: black;
+        --aside-bg: #04070c;
+
+        
+        --th: var(--hr);
+        --td: #03000054;
+        
+        --table: #380b13;
+        --tag: var(--table);
+        
+        --inactive: #1b262f;
+        
+        --graph-bg: rgba(13, 20, 29, 0.51);
+        --graph-lines: var(--hr);
+    }
+}
+.theme-light {
+    &.its-d,
+    & .its-d {
+    
+        --note: #e6edf8;
+        --outer-bar: #d5e1f3;
+        --dark-sidebar: #dce4f6;
+        --dark-accent: #f3d8dd;
+
+        --bg:#d9e4f0;
+        --code-bg: #e6ebf8;
+    }
+}

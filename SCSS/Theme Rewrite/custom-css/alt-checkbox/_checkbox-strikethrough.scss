@@ -1,0 +1,17 @@
+@import 'checkbox-sets';
+
+/*Restore Strike Throughs*/
+.check-strike {
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
+    & .markdown-preview-view ul > li.task-list-item.is-checked, 
+    & .markdown-preview-view ol > li.task-list-item.is-checked 
+    { text-decoration: line-through 2px; }
+} 
+
+@each $checkbox, $set in $checkboxes {
+.#{map-get($set, strike)} {
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="#{$checkbox}"],
+    & ul li[data-task="#{$checkbox}"].task-list-item.is-checked 
+    { text-decoration: line-through 2px; }
+}
+}

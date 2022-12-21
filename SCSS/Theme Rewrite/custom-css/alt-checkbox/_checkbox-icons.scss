@@ -1,0 +1,16 @@
+@import 'checkbox-sets';
+
+/*--Checkbox Type Icons--*/
+body:not(.alt-chkbx-off) {
+@each $checkbox, $set in $checkboxes {
+    & .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="#{$checkbox}"],
+    & .task-list-item.is-checked[data-task="#{$checkbox}"] > input[type=checkbox]:checked,
+    & .task-list-item.is-checked[data-task="#{$checkbox}"] p > input[type=checkbox]:checked
+    {
+        &::after {
+            content: map-get($set, icon);
+            color: map-get($set, color);
+        }
+    }
+}
+}

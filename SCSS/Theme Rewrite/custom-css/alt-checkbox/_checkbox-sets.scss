@@ -1,0 +1,365 @@
+
+$checkboxes: (
+    "X": (
+        icon: "\EC01",
+        color: var(--accent2-lite, var(--text-accent)),
+        text-color: var(--text-faint),
+        norm-text: var(--text-faint),
+		font-weight: bold,
+        background: rgba(var(--chbx-R), 20%),
+        border: 2px solid rgb(var(--chbx-R)),
+        strike: chst-reg,
+    ),
+    ">": (
+        icon: "\EC03",
+        color: var(--text-normal),
+        text-color: var(--text-normal),
+        norm-text: var(--text-faint),
+		font-weight: bold,
+        background: rgba(var(--chbx-h), 20%),
+        border: 2px double rgb(var(--chbx-h)),
+        strike: chst-chk
+    ),
+    "D": (
+        icon: "\EC04",
+        color: rgb(var(--chbx-h)),
+        text-color: rgb(var(--chbx-h)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-h), 20%),
+        border: 2px solid rgb(var(--chbx-h)),
+        strike: chst-drop
+    ),
+    "-": (
+        icon: "\EC02",
+        color: rgb(var(--chbx-d)),
+        text-color: rgb(var(--chbx-d)),
+        norm-text: var(--text-faint),
+		font-weight: bold,
+        background: rgba(var(--chbx-d), 20%),
+        border: 2px solid rgb(var(--chbx-d)),
+        strike: chst-frwd
+    ),
+    "?": (
+        icon: "\EC05",
+        color: rgb(var(--chbx-q)),
+        text-color: rgb(var(--chbx-q)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-q), 20%),
+        border: 2px dashed rgb(var(--chbx-q)),
+        strike: chst-q
+    ),
+    "!": (
+        icon: "\EC08",
+        color: rgb(var(--chbx-i)),
+        text-color: rgb(var(--chbx-i)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-i), 20%),
+        border: 2px solid rgb(var(--chbx-i)),
+        strike: chst-imp
+    ),
+    "+": (
+        icon: "\EC06",
+        color: rgb(var(--chbx-a)),
+        text-color: rgb(var(--chbx-a)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-a), 20%),
+        border: 2px dashed rgb(var(--chbx-a)),
+        strike: chst-add
+    ),
+    "/": (
+        icon: "\EC17",
+        color: var(--accent, var(--interactive-accent)),
+        text-color: var(--text-muted),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: linear-gradient(to left, var(--accent, var(--interactive-accent)) 0%,transparent 1%),
+        border: 2px dashed rgb(var(--chbx-R)),
+        strike: chst-half
+    ),
+    "R": (
+        icon: "\EC07",
+        color: rgb(var(--chbx-R)),
+        text-color: rgb(var(--chbx-R)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-R), 20%),
+        border: 2px dashed rgb(var(--chbx-R)),
+        strike: chst-rsrch
+    ),
+    "i": (
+        icon: "\EC09",
+        color: rgb(var(--chbx-id)),
+        text-color: rgb(var(--chbx-id)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-id), 20%),
+        border: 2px dashed rgb(var(--chbx-id)),
+        strike: chst-idea
+    ),
+    "B": (
+        icon: "\EC10",
+        color: rgb(var(--chbx-B)),
+        text-color: rgb(var(--chbx-B)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-B), 20%),
+        border: 2px double rgb(var(--chbx-B)),
+        strike: chst-brn
+    ),
+    "P": (
+        icon: "\EC11",
+        color: rgb(var(--chbx-P)),
+        text-color: rgb(var(--chbx-P)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-P), 20%),
+        border: 2px solid rgb(var(--chbx-P)),
+        strike: chst-pro
+    ),
+    "C": (
+        icon: "\EC12",
+        color: rgb(var(--chbx-C)),
+        text-color: rgb(var(--chbx-C)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-C), 20%),
+        border: 2px solid rgb(var(--chbx-C)),
+        strike: chst-con
+    ),
+    "I": (
+        icon: "\EC16",
+        color: rgb(var(--chbx-I)),
+        text-color: rgb(var(--chbx-I)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-I), 20%),
+        border: 2px solid rgb(var(--chbx-I)),
+        strike: chst-info
+    ),
+    "Q": (
+        icon: "\EC13",
+        color: rgb(var(--chbx-R)),
+        text-color: rgb(var(--chbx-R)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-R), 20%),
+        border: 2px solid rgb(var(--chbx-R)),
+        strike: chst-quot
+    ),
+    "N": (
+        icon: "\EC14",
+        color: rgb(var(--chbx-N)),
+        text-color: rgb(var(--chbx-N)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-N), 20%),
+        border: 2px solid rgb(var(--chbx-N)),
+        strike: chst-note
+    ),
+    "b": (
+        icon: "\EC15",
+        color: rgb(var(--chbx-b)),
+        text-color: rgb(var(--chbx-b)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-b), 20%),
+        border: 2px solid rgb(var(--chbx-b)),
+        strike: cst-book
+    ),
+    "p": (
+        icon: "\EC19",
+        color: rgb(var(--chbx-R)),
+        text-color: rgb(var(--chbx-R)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-R), 20%),
+        border: 2px solid rgb(var(--chbx-R)),
+        strike: chst-para
+    ),
+    "E": (
+        icon: "\EC18",
+        color: rgb(var(--chbx-I)),
+        text-color: rgb(var(--chbx-I)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-I), 20%),
+        border: 2px solid rgb(var(--chbx-I)),
+        strike: chst-ex
+    ),
+    "L": (
+        icon: "\EC21",
+        color: rgb(var(--chbx-N)),
+        text-color: rgb(var(--chbx-N)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-N), 20%),
+        border: 2px solid rgb(var(--chbx-N)),
+        strike: chst-loc
+    ),
+    "A": (
+        icon: "\EC20",
+        color: rgb(var(--chbx-P)),
+        text-color: rgb(var(--chbx-P)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-P), 20%),
+        border: 2px solid rgb(var(--chbx-P)),
+        strike: chst-ans
+    ),
+    "r": (
+        icon: "\EC22",
+        color: rgb(var(--chbx-r)),
+        text-color: rgb(var(--chbx-r)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-r), 20%),
+        border: 2px solid rgb(var(--chbx-r)),
+        strike: chst-rwd
+    ),
+    "c": (
+        icon: "\EC29",
+        color: rgb(var(--chbx-c)),
+        text-color: rgb(var(--chbx-c)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-c), 20%),
+        border: 2px solid rgb(var(--chbx-c)),
+        strike: chst-choice
+    ),
+    "o": (
+        icon: "\EC24",
+        color: rgb(var(--chbx-b)),
+        text-color: rgb(var(--chbx-b)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-b), 20%),
+        border: 2px solid rgb(var(--chbx-b)),
+        strike: chst-option
+    ),
+    "d": (
+        icon: "\EC25",
+        color: rgb(var(--chbx-I)),
+        text-color: rgb(var(--chbx-I)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-I), 20%),
+        border: 2px dashed rgb(var(--chbx-I)),
+        strike: chst-do
+    ),
+    "T": (
+        icon: "\EC26",
+        color: rgb(var(--chbx-R)),
+        text-color: rgb(var(--chbx-R)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-R), 20%),
+        border: 2px solid rgb(var(--chbx-R)),
+        strike: chst-time
+    ),
+    "t": (
+        icon: "\EC27",
+        color: rgb(var(--chbx-R)),
+        text-color: rgb(var(--chbx-R)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-R), 20%),
+        border: 2px solid rgb(var(--chbx-R)),
+        strike: chst-talk
+    ),
+    "O": (
+        icon: "\E805",
+        color: rgb(var(--selected-rgb)),
+        text-color: rgb(var(--selected-rgb)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--selected-rgb), 20%),
+        border: 2px solid rgb(var(--selected-rgb)),
+        strike: chst-plot
+    ),
+    "F": (
+        icon: "\EC28",
+        color: rgb(var(--chbx-h)),
+        text-color: rgb(var(--chbx-h)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-h), 20%),
+        border: 2px solid rgb(var(--chbx-h)),
+        strike: chst-fore
+    ),
+    "W": (
+        icon: "\E813",
+        color: rgb(var(--chbx-P)),
+        text-color: rgb(var(--chbx-R)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-R), 20%),
+        border: 2px solid rgb(var(--chbx-R)),
+        strike: chst-world
+    ),
+    "~": (
+        icon: "\EC33",
+        color: rgb(var(--chbx-C)),
+        text-color: rgb(var(--chbx-R)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-R), 20%),
+        border: 2px solid rgb(var(--chbx-R)),
+        strike: chst-conf
+    ),
+    "@": (
+        icon: "\E900",
+        color: rgb(var(--chbx-b)),
+        text-color: rgb(var(--chbx-b)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-b), 20%),
+        border: 2px solid rgb(var(--chbx-b)),
+        strike: chst-char
+    ),
+    "f": (
+        icon: "\E81E",
+        color: rgb(var(--chbx-N)),
+        text-color: rgb(var(--chbx-N)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-N), 20%),
+        border: 2px solid rgb(var(--chbx-N)),
+        strike: chst-clue
+    ),
+    "H": (
+        icon: "\EC30",
+        color: rgb(var(--chbx-a)),
+        text-color: rgb(var(--chbx-a)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-a), 20%),
+        border: 2px solid rgb(var(--chbx-a)),
+        strike: chst-heal
+    ),
+    "&": (
+        icon: "\EC32",
+        color: rgb(var(--chbx-B)),
+        text-color: rgb(var(--chbx-B)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-B), 20%),
+        border: 2px solid rgb(var(--chbx-B)),
+        strike: chst-symb
+    ),
+    "s": (
+        icon: "\EC31",
+        color: rgb(var(--chbx-d)),
+        text-color: rgb(var(--chbx-d)),
+        norm-text: var(--text),
+		font-weight: normal,
+        background: rgba(var(--chbx-d), 20%),
+        border: 2px solid rgb(var(--chbx-d)),
+        strike: chst-lock
+    )
+    
+);
+

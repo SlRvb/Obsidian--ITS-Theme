@@ -1,0 +1,12 @@
+//Size
+.inline-title-small {
+    --inline-title-size: var(--font-size);
+}
+
+//Font
+.inline-title-normal-font {}
+
+//Position
+.inline-title-position-left { --inline-title-position: left; }
+.inline-title-position-center { --inline-title-position: center; }
+.inline-title-position-right { --inline-title-position: right; }

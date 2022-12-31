@@ -16,6 +16,13 @@
     --callout-color: var(--note, var(--background-primary));
     --callout-padding: 0;
 
+    --h1-border-line-height: 0;
+    --h2-border-line-height: 0;
+    --h3-border-line-height: 0;
+    --h4-border-line-height: 0;
+    --h5-border-line-height: 0;
+    --h5-border-line-height: 0;
+
     border: 0;
     box-shadow: none;
     margin: 0; 
@@ -31,7 +38,8 @@
         padding: 0; 
         justify-content: center;
     }
-    
+    & .callout-fold { padding-right: 0; }
+
     &.is-collapsed .callout-fold {
         border: 1px solid var(--hr, var(--background-modifier-border));
         padding: 5px 10px;
@@ -119,10 +127,17 @@
 
     
     &[data-callout-metadata~="wikipedia"] table {
-        & th, & th:nth-child(even),
-        & :is(td, tr) { background: transparent; }
+        --table-header-color: var(--text);
+        --table-header-background: transparent;
+        --table-header-background-hover: var(--td);
 
-        & tr td { border-top: 1.1px solid var(--hr); }
+        --table-row-background-hover: var(--td);
+        --table-row-alt-background: transparent;
+        --table-column-alt-background: transparent;
+        // --table-border-color: var(--table);
+
+        // & tr td { border-top-color: var(--hr); }
+        // & tr td { border-top: 1.1px solid var(--hr); }
         & tr:last-child { margin-bottom: 2px; }
     }
 

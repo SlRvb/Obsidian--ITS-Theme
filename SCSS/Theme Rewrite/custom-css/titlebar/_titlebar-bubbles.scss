@@ -1,0 +1,35 @@
+.titlebar-bubbles.titlebar-bubbles {
+    --tab-outline-width: 0;
+}
+
+.titlebar-bubbles .mod-root {
+    --tab-radius: 4px;
+    --tab-radius-active: 4px;
+
+    --tab-text-padding: 3px 5px;
+    --tab-gap: 0 10px;
+
+    // & .workspace-tab-header { padding: var(--tab-gap); }
+
+    & .workspace-tab-header-container-inner,
+    & .workspace-tab-header-container {
+        align-items: center;
+        align-content: center;
+        gap: var(--size-2-3);
+    }
+    & .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
+    & .workspace-tab-header-container-inner,
+    & .workspace-tab-header-inner {
+        margin: unset;
+        padding: var(--tab-text-padding);
+    }
+
+    //Hover Color
+    & .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner 
+    { background-color: unset; }
+    & .workspace-tab-header:not(.is-active):hover { background-color: var(--td); }
+
+    //New Tab
+    & .workspace-tab-header-new-tab { padding: 0; }
+}
+

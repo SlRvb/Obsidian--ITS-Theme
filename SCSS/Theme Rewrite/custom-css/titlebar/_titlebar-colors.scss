@@ -1,0 +1,19 @@
+.titlebar-colors {
+    --titlebar-background: var(--accent);
+    --titlebar-background-focused: var(--accent);
+
+    --tab-text-color: var(--soft-text);
+    --tab-text-color-focused: var(--text);
+
+    --tab-font-weight: 500;
+    --tab-font-weight-active: 900;
+
+    --tab-divider-color: var(--td);
+
+
+    & .sidebar-toggle-button, 
+    & .workspace-tabs.mod-top {
+        background-color: var(--titlebar-background);
+        padding: 0;
+    }
+}

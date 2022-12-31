@@ -1,0 +1,37 @@
+body {
+    --folder-icon: "\e801";
+    --folder-font: var(--its);
+
+    --file-icon: "\e800";
+    --file-font: var(--its);
+    --file-icon-margin: 6px;
+}
+
+
+/*Nav Folder/File Icons*/
+.nav-folder-children .nav-folder-title-content::before,
+.nav-file-title .nav-file-title-content::before {
+    margin-right: var(--file-icon-margin);
+    font-size: calc(var(--nav-item-size) - 1px);
+    font-weight: 10;
+}
+
+//Folder
+.nav-folder-children .nav-folder-title-content::before {
+    content: var(--folder-icon);
+    font-family: var(--folder-font);
+    color: var(--folder);
+}
+
+//Files
+.nav-file-title .nav-file-title-content::before {
+    content: var(--file-icon);
+    font-family: var(--file-font);
+    text-align: center;
+    color: var(--file);
+}
+
+//Hover
+.nav-folder-title:is(.is-active, :hover) .nav-folder-title-content::before,
+.nav-file-title:is(.is-active, :hover) :is(.nav-file-title-content::before, .nav-file-icon)
+{ color: var(--nav-item-color-active); }

@@ -1,0 +1,30 @@
+/* Vault Icon */
+body {
+    --vault-icon-image: url("https://cdn.discordapp.com/emojis/936715199942119494.webp");
+}
+
+.nav-folder.mod-root > .nav-folder-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// .vlt-icon {
+.nav-folder.mod-root > .nav-folder-title::before {
+    content: '';
+    background-image: var(--vault-icon-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    width: 32px;
+    height: 28px;
+}
+// }
+
+// Mobile
+.vlt-icon .workspace-drawer-header-name::before {
+    margin-right: 10px;
+}
+.vlt-icon .workspace-drawer-header {
+    padding-left: 10px;
+    padding-right: 10px;
+}

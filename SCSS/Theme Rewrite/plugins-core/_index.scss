@@ -1,4 +1,10 @@
 @use 'tag-pane';
 @use 'outline-pane';
 @use 'popover';
-@use 'back-outgoing-links'
+@use 'back-outgoing-links';
+@use 'graph';
+@use 'mermaid';
+@use 'publish';
+@use 'query';
+@use 'slides';
+@use 'starred-pane';

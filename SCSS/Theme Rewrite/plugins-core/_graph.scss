@@ -1,0 +1,68 @@
+body {
+    //Graph Controls
+    // --graph-controls-width: 40vw;
+    --graph-controls-section-header-padding: var(--nav-item-parent-padding);
+    
+    //Graph
+    --graph-background: var(--graph-bg);
+    --graph-text: var(--text-normal);
+    --graph-arrow: var(--soft-text); //Personal
+
+    --graph-line: var(--graph-lines);
+    --graph-line-hover: var(--accent); //Personal
+
+    --graph-node: var(--headers);
+    --graph-node-focused: var(--graph-focused); //hvr
+    --graph-node-hover-outline: var(--text-dl); //Personal
+    --graph-node-hover-fill: var(--graph-fill); //Personal
+
+    
+    --graph-node-tag: var(--graph-tag);
+    --graph-node-attachment: var(--graph-img);
+    --graph-node-unresolved: var(--graph-404);
+
+}
+// Graph Background
+.workspace-leaf-content[data-type = "graph"] .view-content {
+    background-color: var(--graph-background); 
+}
+//Fix Graph Colors
+.graph-view {
+    //Hover Node
+    &.color-circle { color: var(--graph-node-hover-outline); }
+    &.color-line-highlight { color: var(--graph-line-hover); }
+    &.color-fill-highlight { color: var(--graph-node-hover-fill); }
+    &.color-arrow { color: var(--graph-arrow); }
+}
+
+
+
+
+
+// Settings
+.graph-controls {
+    --nav-item-color-hover: var(--text);
+}
+
+.graph-control-section {
+    padding: 0;
+    border-bottom-color: var(--table);
+
+    //Headers
+    & > .tree-item-self {
+        padding: var(--size-4-2) var(--size-4-2);
+    }
+    &:not(.is-collapsed) > .tree-item-self { 
+        font-weight: 900;
+        border-bottom: 2px solid var(--accent);
+    }
+    & .graph-control-section-header {
+        font-size: var(--font-ui-medium);
+    }
+
+    //Settings: Sliders / Toggles
+    & .setting-item:not(.setting-item-heading) {
+        padding: .5em .8em;
+    }
+}
+

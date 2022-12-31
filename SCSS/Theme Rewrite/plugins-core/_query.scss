@@ -1,0 +1,38 @@
+.internal-query {
+    background: var(--note);
+    border: 3px solid var(--outline);
+
+    //Query Header
+    .internal-query-header {
+        background-color: var(--code-bg);
+        box-shadow: 0 2px 0 var(--td);
+        padding: 5px;
+    }
+    & .internal-query-header-title {
+        font-size: var(--font-smallest);
+        font-weight: 600;
+        line-height: 18px;
+        
+        color: var(--soft-text);
+    }
+
+    //Container
+    & .search-result-container { 
+        padding: 0 7px; 
+        border: 0;
+    }    
+    //Files
+    & .search-results-children .tree-item {
+        background: var(--note);
+        margin: 10px 0;
+    }
+    & .search-result-file-match { width: 100%; }
+
+    //No Match Found
+    & .search-empty-state {
+        color: var(--text-error);
+        font-family: var(--font-monospace);
+        text-align: center;
+        margin: 10px;
+    }
+}

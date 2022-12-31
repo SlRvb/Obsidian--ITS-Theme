@@ -1,5 +1,28 @@
+.backlink-pane, 
+.outgoing-link-pane {
+    padding: var(--size-4-3);
+
+    //Headers
+    & > .tree-item-self {
+        text-align: center;
+        background-color: var(--code-bg);
+        margin-bottom: 10px;
+        padding: 4px 6px;
+
+        box-shadow: 0 4px 0 var(--outline);
+
+        // & .tree-item-flair { background-color: var(--note);  }
+        // & .tree-item-flair-outer { margin-top: -2px; }
+    }
+}
 
 .outgoing-link-item {
-    & .tree-item-inner-subtext { font-size: var(--font-small); }
-
+    align-items: center; // Center Icon
+    
+    //Fix Text Sizing
+    & .tree-item-inner { font-size: var(--font-ui-medium); }
+    & .tree-item-inner-subtext { font-size: var(--font-ui-smaller); }
+    
+    //Alternate BG Colors
+    &:nth-child(odd):not(:hover) { background-color: var(--td); }
 }

@@ -1,0 +1,49 @@
+body {
+    --slide-background: var(--note);
+
+    --r-heading-color: var(--headers);
+    --r-heading-font: var(--font);
+    --r-heading-text-transform: capitalize;
+    --r-heading-font-weight: var(--header-weight);
+    
+    --h1-border-line-width: 100%;
+    --h2-border-line-width: 100%;
+    --h3-border-line-width: 100%;
+    --h4-border-line-width: 100%;
+    --h5-border-line-width: 100%;
+    --h6-border-line-width: 100%;
+
+    --r-main-font: var(--default-font);
+
+    --r-progress-color: var(--lite-accent);
+}
+
+
+.slides-container,
+.reveal-viewport {
+    background-color: var(--slide-background);
+}
+
+.reveal { 
+    color: var(--text); 
+    font-size: calc(var(--font-text-size) + .7em);
+    
+    //Code
+    & code {
+        color: var(--code-text);
+        background: var(--code-bg);
+        padding: 4px;
+        font-family: var(--font-monospace);
+        box-shadow: var(--code-shadow);
+    }
+    & button { --input-shadow: none; --input-shadow-hover: none; }
+
+    //Progress 
+    & .progress { color: var(--r-progress-color); }
+
+    & img { margin: 5px; }
+
+    & table :is(td, th) { border-color: var(--table); }
+    
+    & li::marker { --list-marker-color: transparent; }
+}

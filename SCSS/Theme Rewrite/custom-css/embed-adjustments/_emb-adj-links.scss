@@ -1,0 +1,12 @@
+
+/*Embed Link Hide/Move*/
+.internal-embed:is([alt~="lk-hvr"], [alt~="link-hover"]):not(:hover) .markdown-embed-link,
+.internal-embed:is([alt~="nlk"], [alt~="no-link"]) .markdown-embed-link 
+{ display: none; }
+
+.internal-embed:is([alt*="lk-l"], [alt~="link-left"]) .markdown-embed-link {
+    left: 10px;
+    right: unset;
+}
+.internal-embed:is([alt*="lk-clear"], [alt~="link-clear"]) .markdown-embed-link 
+{ background-color: transparent; }

@@ -1,0 +1,13 @@
+.view-content > :not(.is-live-preview) {
+    & .internal-embed[alt*="right"] {
+        float: right;
+        margin-left: .5em;
+    }
+    & .internal-embed[alt*="left"] {
+        float: left;
+        margin-right: .5em;
+    }
+}
+.internal-embed[alt*="center"] {
+    margin: auto;
+}

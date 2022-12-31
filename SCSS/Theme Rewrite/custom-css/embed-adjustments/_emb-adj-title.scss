@@ -1,0 +1,8 @@
+/*Title Hide/Show*/
+.internal-embed:is([alt~="no-t"], [alt~="no-title"]) .markdown-embed-title,
+.file-embed-title {
+    display: none;
+}
+.internal-embed:is([alt*="ttl"], [alt~="title"]) .markdown-embed-title, 
+.file-embed-title 
+{ display: block; }

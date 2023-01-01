@@ -1,0 +1,34 @@
+
+/*Profile*/
+img[alt*="profile"],
+.image-embed[alt*="profile"] img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+img[alt~="profile"],
+.image-embed[alt~="profile"] img,
+.image-embed[src*="#profile"] {
+    height: var(--tiny);
+    width: var(--tiny);
+}
+
+img[alt~="profile+medium"],
+.image-embed[alt~="profile+medium"] img,
+.image-embed[src*="#profile+medium"] {
+    height: var(--small);
+    width: var(--small);
+}
+img[alt~="profile+tall"],
+.image-embed[alt~="profile+tall"] img,
+.image-embed[src*="#profile+tall"] {
+    height: var(--medium);
+    width: var(--medium);
+}
+
+
+// Customizable
+img[alt~="sprf"]{
+    object-fit: cover;
+    border-radius: 100%;
+}

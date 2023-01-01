@@ -1,17 +1,27 @@
 /*Invert Colors*/
-.theme-dark img[alt*="invertb"],
-.theme-dark .image-embed[src*="#invertb"] {
-    filter: invert(1) hue-rotate(180deg);
-}  
-.theme-light img[alt*="invertw"],
-.theme-light .image-embed[src*="#invertw"] {
-    filter: invert(1) hue-rotate(180deg);
-}
-.theme-dark img[alt*="invertbc"],
-.theme-dark .image-embed[src*="#invertbc"] {
-    filter: invert(1) hue-rotate(180deg) contrast(1.5);
-}
-.theme-light img[alt*="invertwc"],
-.theme-light .image-embed[src*="#invertwc"] {
-    filter: invert(1) hue-rotate(180deg) contrast(1.45);
-}
+
+//Invert when darkmode
+.theme-dark {
+    & img[alt*="invertb"],
+    & .image-embed[src*="#invertb"] 
+    { filter: invert(1) hue-rotate(180deg); }  
+    
+    img[alt*="invertbc"],
+    .image-embed[src*="#invertbc"] 
+    { filter: invert(1) hue-rotate(180deg) contrast(1.5); }
+
+} 
+
+//Invert when lighmode
+.theme-light {
+    & img[alt*="invertw"],
+    & .image-embed[src*="#invertw"] 
+    { filter: invert(1) hue-rotate(180deg); }
+    
+    & img[alt*="invertwc"],
+    & .image-embed[src*="#invertwc"] {
+        filter: invert(1) hue-rotate(180deg) contrast(1.45);
+    }
+} 
+
+

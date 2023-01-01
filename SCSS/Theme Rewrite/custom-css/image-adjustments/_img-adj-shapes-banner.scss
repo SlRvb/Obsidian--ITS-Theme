@@ -1,0 +1,35 @@
+
+/*Banners*/
+img[alt*="banner"],
+.image-embed[alt*="banner"] img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 0px;
+    clear: both;
+}
+
+img[alt~="banner"],
+.image-embed[alt~="banner"] img,
+.image-embed[src*="#banner"] 
+{ height: var(--small); }
+
+
+img[alt~="banner+small"],
+.image-embed[alt~="banner+small"] img,
+.image-embed[src*="#banner+small"] 
+{ height: var(--tiny); }
+
+img[alt~="banner+tall"],
+.image-embed[alt~="banner+tall"] img,
+.image-embed[src*="#banner+tall"] 
+{ height: var(--medium); }
+
+
+// Customizable
+:is(img, .internal-embed)[alt*="sban"],
+:is(img, .internal-embed)[alt~="sban"],
+.internal-embed[src*="#sban"] img {
+    object-fit: cover;
+    width: 100%;
+}

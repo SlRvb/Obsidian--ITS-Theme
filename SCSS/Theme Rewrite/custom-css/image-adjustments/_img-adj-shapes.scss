@@ -1,102 +1,11 @@
 
 /*Image Shapes*/
-
-
-/*Banners*/
-img[alt*="banner"],
-.image-embed[alt*="banner"] img,
-.image-embed[src*="#banner"] {
-    display: block;
-    object-fit: cover;
-    height: var(--small);
-    width: 100%;
-    margin-bottom: 0px;
-    clear: both;
-}
-img[alt*="banner+small"],
-.image-embed[alt*="banner+small"] img,
-.image-embed[src*="#banner+small"] {
-    display: block;
-    object-fit: cover;
-    height: var(--tiny);
-    width: 100%;
-    margin-bottom: 0px;
-    clear: both;
-}
-img[alt*="banner+tall"],
-.image-embed[alt*="banner+tall"] img,
-.image-embed[src*="#banner+tall"] {
-    display: block;
-    object-fit: cover;
-    height: var(--medium);
-    width: 100%;
-    margin-bottom: 0px;
-    clear: both;
+img[alt*="circle"] {
+    border-radius: 50%;
 }
 
-
-:is(img, .internal-embed)[alt*="sban"],
-.internal-embed[src*="#sban"] img {
-    object-fit: cover;
-    width: 100%;
-}
-
-
-
-
-/*Portait*/
-img[alt*="portrait"],
-.image-embed[alt*="portrait"] img,
-.image-embed[src*="#portrait"] {
-    object-fit: cover;
-    height: var(--small-med);
-    width: 40%;
-}
-
-img[alt*="portrait+small"],
-.image-embed[alt*="portrait+small"] img,
-.image-embed[src*="#portrait+small"] {
-    height: var(--small);
-    width: 20%;
-    object-fit: cover;
-}
-
-img[alt*="portrait+tall"],
-.image-embed[alt*="portrait+tall"] img,
-.image-embed[src*="#portrait+tall"] {
-    height: 500px;
-    width: 50%;
-    object-fit: cover;
-}
-
-
-
-
-/*Profile*/
-img[alt*="profile"],
-.image-embed[alt*="profile"] img,
-.image-embed[src*="#profile"] {
-    object-fit: cover;
-    height: var(--tiny);
-    width: var(--tiny);
-}
-
-img[alt*="profile+medium"],
-.image-embed[alt*="profile+medium"] img,
-.image-embed[src*="#profile+medium"] {
-    object-fit: cover;
-    height: var(--small);
-    width: var(--small);
-}
-img[alt*="profile+tall"],
-.image-embed[alt*="profile+tall"] img,
-.image-embed[src*="#profile+tall"] {
-    object-fit: cover;
-    height: var(--medium);
-    width: var(--medium);
-}
-
-img[alt*="sprf"]{
-    object-fit: cover;
-    border-radius: 100%;
+//Square
+img[alt~="square"],
+.image-embed[alt~="square"] img {
+    border-radius: 0;
 }

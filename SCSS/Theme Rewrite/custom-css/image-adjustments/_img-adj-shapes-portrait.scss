@@ -1,0 +1,31 @@
+
+/*Portait*/
+img[alt*="portrait"],
+.image-embed[alt*="portrait"] img
+{ object-fit: cover; }
+
+img[alt~="portrait"],
+.image-embed[alt~="portrait"] img,
+.image-embed[src~="#portrait"] 
+{
+    height: var(--small-med);
+    width: 40%;
+}
+
+img[alt~="portrait+small"],
+.image-embed[alt~="portrait+small"] img,
+.image-embed[src~="#portrait+small"] 
+{
+    height: var(--small);
+    width: 25%;
+}
+
+img[alt~="portrait+tall"],
+.image-embed[alt~="portrait+tall"] img,
+.image-embed[src~="#portrait+tall"] 
+{
+    height: 500px;
+    width: 50%;
+}
+
+

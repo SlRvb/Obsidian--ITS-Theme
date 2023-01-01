@@ -1,22 +1,17 @@
 
 /*Fit image within bounds WITHOUT stretching*/
+img[alt*="cover"],
 img:is([alt*="cover"], [alt*="cvr"]), 
 .image-embed:is([src*="#cover"], [src*="#cvr"]), 
-span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
-    object-fit: cover;
-}
+span.image-embed:is([src*="#cover"], [src*="#cvr"]) img 
+{ object-fit: cover; }
 
 /*Fix Float Issues*/
 img[alt*="clear"],
-.image-embed[src*="#clear"] {
-    clear: both;
-}
-img[alt*="unclr"],
-.image-embed[src*="#unclr"] {
-    clear: none !important;
-}
+.image-embed[src*="#clear"] 
+{ clear: both; }
 
-/*Round Image*/
-img[alt*="circle"] {
-    border-radius: 50%;
-}
+
+img[alt*="unclr"],
+.image-embed[src*="#unclr"] 
+{ clear: none !important; }

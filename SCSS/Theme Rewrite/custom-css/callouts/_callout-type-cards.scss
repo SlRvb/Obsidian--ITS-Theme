@@ -27,7 +27,7 @@
         padding: 0;
     }
     
-    & strong {
+    &:not([data-callout-metadata~='nstr'], [data-callout-metadata~='no-strong']) strong {
         display: block;
         text-align: center;
         margin: auto;

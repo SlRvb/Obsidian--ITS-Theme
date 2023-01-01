@@ -1,0 +1,13 @@
+body {
+    --callout-margin: 0; // Personal
+    --callout-padding: var(--size-4-3) var(--size-4-4);
+}
+
+.callout.callout.callout {
+    --callout-blend-mode: normal;
+    
+    margin: var(--callout-margin);
+}
+.markdown-embed .markdown-rendered .callout {
+    --callout-margin: 5px 0;
+}

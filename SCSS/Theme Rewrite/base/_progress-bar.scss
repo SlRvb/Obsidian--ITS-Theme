@@ -1,0 +1,9 @@
+:is(
+    .markdown-preview-view, 
+    .markdown-rendered, 
+    .markdown-source-view.is-live-preview.is-live-preview
+) progress::-webkit-progress-bar {
+    background-color: var(--bg);
+    box-shadow: none;
+    border-radius: var(--radius-s);
+}

@@ -4,6 +4,8 @@
     --table-header-size: var(--font-text);
 
     --table-header-color: var(--text-dl);
+    --table-header-text-color: var(--lite-accent);
+    
     --table-header-background: var(--th);
     --table-header-background-hover: var(--accent);
 
@@ -14,9 +16,22 @@
     --table-row-alt-background: var(--td);
 
     --table-row-background-hover: var(--highlight);
+    --table-row-edit-font-size: var(--font-small); //Personal
 }
+
 
 //Fix Table Header Row Editmode Colors
 .cm-s-obsidian .HyperMD-table-row-0 {
-    color: var(--table-header-background);
+    color: var(--table-header-text-color);
+}
+
+//Wrap table rows
+body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row {
+    min-width: min-content;
+    white-space: pre-wrap;
+}
+
+//Fix Missing Font Size Variable
+.cm-s-obsidian .HyperMD-table-row {
+    font-size: var(--table-row-edit-font-size);
 }

@@ -6,13 +6,15 @@ body {
 
     //Font
     --tab-font-size: var(--font-size);
-    --tab-font-weight: 900;
+    --tab-font-weight: 500;
+    --tab-font-weight-active: 900; //Personal
     
     //Width
     --tab-width: auto;
     --tab-max-width: 250px;
 
     //Color
+    --tab-outline-width: 0;
     --tab-outline-color: var(--accent);
     --tab-divider-color: var(--hr);
     
@@ -21,8 +23,10 @@ body {
     --tab-container-background: var(--outer-bar); //Horizontal Split Tab background color;
     
     --tab-text-color: var(--inactive); //Inactive tab text
+    --tab-text-color-active: var(--text);
     --tab-text-color-focused: var(--inactive); //Active Window Inactive tab Text
     --tab-text-color-focused-active: var(--text);
+    --tab-text-color-focused-active-current: var(--text); //Active Pane
     --tab-text-color-hover: var(--text); //Personal
     
     //Tab Stacked
@@ -32,33 +36,48 @@ body {
 }
 
 
+
+.view-header-title-container:not(.mod-at-end):after 
+{ display: none; }
+
 //Fix Tab Hover
-.workspace-tab-header.workspace-tab-header:hover {
-    color: var(--tab-text-color-hover);
-}
+.workspace-tab-header.workspace-tab-header:hover 
+{ color: var(--tab-text-color-hover); }
 
 //Fix Focused Inactive Tab Hover
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button,
-body.is-focused .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
-    color: var(--text-dl);
+body.is-focused .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title 
+{ color: var(--text-dl); }
+
+//Font weight of active note
+.is-active .workspace-tab-header-inner-title 
+{ font-weight: var(--tab-font-weight-active); }
+
+
+//Fix Fade Spacing on Text
+.workspace .mod-root .workspace-tab-header-inner-title 
+{ padding-right: 10px; }
+
+
+//Fix Tab Top Outline
+.mod-root .workspace-tab-header-container-inner {
+    padding-top: 2px;
 }
+
 
 
 //----
 //Hide Active Note Title
-.workspace .mod-root .workspace-tab-header { flex: unset; }
 
-:is(.show-inline-title, .show-view-header) .mod-root .workspace-tab-header.is-active {
-    & .workspace-tab-header-inner-title { display: none; }
+// :is(.show-inline-title, .show-view-header) .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+//     flex: 0 1 auto; 
 
-    & .workspace-tab-header-inner-icon {
-       display: flex;
-       opacity: 1;
-       color: var(--text);
-   }
-}
+//     & .workspace-tab-header-inner-title { display: none; }
 
-//Fix Fade Spacing on Text
-.workspace .mod-root .workspace-tab-header-inner-title {
-    padding-right: 10px;
-}
+//     & .workspace-tab-header-inner-icon {
+//        display: flex;
+//        opacity: 1;
+//        color: var(--text);
+//    }
+// }
+

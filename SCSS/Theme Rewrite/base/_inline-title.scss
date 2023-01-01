@@ -1,0 +1,5 @@
+body {
+    --inline-title-position: left;
+}
+
+.inline-title { text-align: var(--inline-title-position); }

@@ -2,7 +2,7 @@ body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
 
     //Tag Fixes
     --tag-background: transparent;
-    --tag-color: var(--accent2-lite);
+    --tag-color: var(--tag-text);
     --tag-padding-x: 0;
     --tag-size: var(--font-size);
 
@@ -15,6 +15,12 @@ body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
     --h6-font: var(--default-font);
 
     --header-weight: 900;
+    --h1-weight: var(--header-weight);
+    --h2-weight: var(--header-weight);
+    --h3-weight: var(--header-weight);
+    --h4-weight: var(--header-weight);
+    --h5-weight: var(--header-weight);
+    --h6-weight: var(--header-weight);
 
     --h1-size: var(--font-text);
     --h2-size: var(--font-text);

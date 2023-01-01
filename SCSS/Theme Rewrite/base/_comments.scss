@@ -1,3 +1,8 @@
+
+body {
+    --comment-font: var(--font-monospace);
+    --code-comment: var(--text-faint);
+}
 .cm-s-obsidian span.cm-comment {
-    font-family: var(--font-monospace);
+    font-family: var(--comment-font);
 }

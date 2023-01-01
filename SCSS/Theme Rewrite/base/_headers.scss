@@ -1,0 +1,230 @@
+$headings: (
+    "1": (
+        size: var(--h1-size),
+        background: var(--h1-background),
+        text-alignment: var(--h1-text-align),
+        padding: var(--h1-padding),
+        border-color: var(--h1-border-color),
+        border-width: var(--h1-border-width),
+        border-line-width: var(--h1-border-line-width),
+        border-line-left-color: var(--h1-border-left-color),
+        border-line-right-color: var(--h1-border-right-color),
+        border-line-height: var(--h1-border-line-height)
+    ),
+    "2": (
+        size: var(--h2-size),
+        background: var(--h2-background),
+        text-alignment: var(--h2-text-align),
+        padding: var(--h2-padding),
+        border-color: var(--h2-border-color),
+        border-width: var(--h2-border-width),
+        border-line-width: var(--h2-border-line-width),
+        border-line-left-color: var(--h2-border-left-color),
+        border-line-right-color: var(--h2-border-right-color),
+        border-line-height: var(--h2-border-line-height)
+    ),
+    "3": (
+        size: var(--h3-size),
+        background: var(--h3-background),
+        text-alignment: var(--h3-text-align),
+        padding: var(--h3-padding),
+        border-color: var(--h3-border-color),
+        border-width: var(--h3-border-width),
+        border-line-width: var(--h3-border-line-width),
+        border-line-left-color: var(--h3-border-left-color),
+        border-line-right-color: var(--h3-border-right-color),
+        border-line-height: var(--h3-border-line-height)
+    ),
+    "4": (
+        size: var(--h4-size),
+        background: var(--h4-background),
+        text-alignment: var(--h4-text-align),
+        padding: var(--h4-padding),
+        border-color: var(--h4-border-color),
+        border-width: var(--h4-border-width),
+        border-line-width: var(--h4-border-line-width),
+        border-line-left-color: var(--h4-border-left-color),
+        border-line-right-color: var(--h4-border-right-color),
+        border-line-height: var(--h4-border-line-height)
+    ),
+    "5": (
+        size: var(--h5-size),
+        background: var(--h5-background),
+        text-alignment: var(--h5-text-align),
+        padding: var(--h5-padding),
+        border-color: var(--h5-border-color),
+        border-width: var(--h5-border-width),
+        border-line-width: var(--h5-border-line-width),
+        border-line-left-color: var(--h5-border-left-color),
+        border-line-right-color: var(--h5-border-right-color),
+        border-line-height: var(--h5-border-line-height)
+    ),
+    "6": (
+        size: var(--h6-size),
+        background: var(--h6-background),
+        text-alignment: var(--h6-text-align),
+        padding: var(--h6-padding),
+        border-color: var(--h6-border-color),
+        border-width: var(--h6-border-width),
+        border-line-width: var(--h6-border-line-width),
+        border-line-left-color: var(--h6-border-left-color),
+        border-line-right-color: var(--h6-border-right-color),
+        border-line-height: var(--h6-border-line-height)
+    )
+);
+
+body {
+    // Headers
+    --h1-size: 34px;
+    --h2-size: calc(var(--h1-size) - 4px);
+    --h3-size: calc(var(--h1-size) - 8px);
+    --h4-size: calc(var(--h1-size) - 12px);
+    --h5-size: calc(var(--h1-size) - 14px);
+    --h6-size: calc(var(--h1-size) - 16px);
+
+    --header-weight: 700; //Personal
+    --h1-weight: var(--header-weight);
+    --h2-weight: var(--header-weight);
+    --h3-weight: var(--header-weight);
+    --h4-weight: var(--header-weight);
+    --h5-weight: var(--header-weight);
+    --h6-weight: var(--header-weight);
+    
+    --font: 'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif;
+    --h1-font: var(--font);
+    --h2-font: var(--font);
+    --h3-font: var(--font);
+    --h4-font: var(--font);
+    --h5-font: var(--font);
+    --h6-font: var(--font);
+    
+    --heading-formatting: var(--inactive);
+
+    --h1-color: var(--headers);
+    --h2-color: var(--headers);
+    --h3-color: var(--headers);
+    --h4-color: var(--headers);
+    --h5-color: var(--headers);
+    --h6-color: var(--headers);
+
+    //Personal
+    --header-text-align: left;
+    --h1-text-align: var(--header-text-align);
+    --h2-text-align: var(--header-text-align);
+    --h3-text-align: var(--header-text-align);
+    --h4-text-align: var(--header-text-align);
+    --h5-text-align: var(--header-text-align);
+    --h6-text-align: var(--header-text-align);
+
+    --header-padding: 0;
+    --h1-padding: var(--header-padding);
+    --h2-padding: var(--header-padding);
+    --h3-padding: var(--header-padding);
+    --h4-padding: var(--header-padding);
+    --h5-padding: var(--header-padding);
+    --h6-padding: var(--header-padding);
+
+    //Header Background Color
+    --header-background: transparent;
+    --h1-background: var(--header-background);
+    --h2-background: var(--header-background);
+    --h3-background: var(--header-background);
+    --h4-background: var(--header-background);
+    --h5-background: var(--header-background);
+    --h6-background: var(--header-background);
+
+    //Header Borders
+    --h1-border-color: var(--theme-rainbow-1);
+    --h2-border-color: var(--theme-rainbow-2);
+    --h3-border-color: var(--theme-rainbow-3);
+    --h4-border-color: var(--theme-rainbow-4);
+    --h5-border-color: var(--theme-rainbow-5);
+    --h6-border-color: var(--theme-rainbow-6);
+
+    --h1-border-width: 0;
+    --h2-border-width: 0;
+    --h3-border-width: 0;
+    --h4-border-width: 0;
+    --h5-border-width: 0;
+    --h6-border-width: 0;
+
+    //After/Before
+    --header-border-line-color: var(--table);
+    --h1-border-left-color: var(--header-border-line-color);
+    --h2-border-left-color: var(--header-border-line-color);
+    --h3-border-left-color: var(--header-border-line-color);
+    --h4-border-left-color: var(--header-border-line-color);
+    --h5-border-left-color: var(--header-border-line-color);
+    --h6-border-left-color: var(--header-border-line-color);
+    
+    --h1-border-right-color: var(--header-border-line-color);
+    --h2-border-right-color: var(--header-border-line-color);
+    --h3-border-right-color: var(--header-border-line-color);
+    --h4-border-right-color: var(--header-border-line-color);
+    --h5-border-right-color: var(--header-border-line-color);
+    --h6-border-right-color: var(--header-border-line-color);
+
+
+    --header-border-line-width: 100%;
+    --h1-border-line-width: 100%;
+    --h2-border-line-width: 85%;
+    --h3-border-line-width: 65%;
+    --h4-border-line-width: 44%;
+    --h5-border-line-width: 25%;
+    --h6-border-line-width: 0;
+
+    --header-border-line-left: none;
+
+    --header-border-line-height: 4px;
+    --h1-border-line-height: var(--header-border-line-height);
+    --h2-border-line-height: var(--header-border-line-height);
+    --h3-border-line-height: var(--header-border-line-height);
+    --h4-border-line-height: var(--header-border-line-height);
+    --h5-border-line-height: var(--header-border-line-height);
+    --h6-border-line-height: var(--header-border-line-height);
+}
+
+//Header Under Lines
+@each $num, $set in $headings {
+h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        background: map-get($set, border-line-right-color);
+        width: map-get($set, border-line-width);
+        height: map-get($set, border-line-height);
+    }
+    &::before { 
+        display: var(--header-border-line-left); 
+        background: map-get($set, border-line-left-color);
+    }
+    
+    //Align Header Arrow
+    & .heading-collapse-indicator,
+    & .cm-fold-indicator.cm-fold-indicator { position: absolute; }
+}}
+
+
+//Fix Arrow Padding
+.HyperMD-header.HyperMD-header .cm-fold-indicator .collapse-indicator {
+    padding-right: 5px;
+}
+
+//Headings
+@each $num, $set in $headings {
+h#{$num},
+.markdown-rendered h#{$num},
+.is-live-preview .HyperMD-header-#{$num}.cm-line
+    {
+    display: block;
+    background: map-get($set, background);
+    text-align: map-get($set, text-alignment);
+    padding: map-get($set, padding);
+    border: map-get($set, border-width) solid map-get($set, border);
+    border-radius: var(--radius-m);
+
+    word-wrap: normal;
+    word-break: keep-all;
+    }
+}

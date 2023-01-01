@@ -1,0 +1,58 @@
+body {
+    //Vault Title
+    --vault-name-font-size: 20px;
+    --vault-name-font-weight: var(--font-bold);
+    --vault-name-color: var(--headers);
+    --vault-font: var(--font);
+
+    
+    //File Explorer
+    --nav-item-color: var(--text);
+    --nav-item-color-hover: var(--text-dl);
+    --nav-item-color-active: var(--text-dl);
+    --nav-item-background-hover: var(--dark-accent);
+    --nav-item-background-active: var(--dark-accent);
+    --nav-item-color-highlighted: var(--text-dl); //Dragged item
+    --nav-item-border-width: 0px;//Personal
+    --nav-item-border-color: var(--lite-accent);//Personal
+    
+    --nav-item-size: var(--font-ui-small);
+    --nav-item-weight: 500;
+    --nav-item-weight-hover: 700;
+    --nav-item-weight-active: 700;
+    --nav-item-white-space: wrap;
+    
+    --nav-indentation-guide-width: 2px;
+    --nav-indentation-guide-color: var(--lines);
+}
+
+// Hide Collapse Indicator
+.nav-folder-collapse-indicator { display: none; }
+
+//Thick Folder Text
+.nav-folder-title { --nav-item-weight: 700; }
+
+
+//Fix File Explorer
+.nav-folder.mod-root > .nav-folder-title:hover {
+    color: var(--dark-accent);
+}
+.nav-files-container { padding: 4px; padding-left: 3px; }
+
+//Fix File Padding
+.nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
+    padding: var(--nav-item-padding);
+}
+
+//Hover
+.nav-file-title:hover .nav-file-title-content,
+.nav-folder-title:hover .nav-folder-title-content {
+    // text-decoration-line: underline;
+    text-decoration-color: var(--nav-item-border-color);
+    text-decoration-thickness: var(--nav-item-border-width);
+}
+
+//Vault Name
+.nav-folder.mod-root > .nav-folder-title {
+    font-family: var(--vault-font);
+}

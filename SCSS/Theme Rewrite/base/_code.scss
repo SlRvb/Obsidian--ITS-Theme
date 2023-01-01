@@ -1,11 +1,20 @@
 
 body {
     --code-background: var(--code-bg);
+    --code-normal: var(--code-text);
+
+    --code-shadow: 0 2px 0 var(--outline);
 }
     
 //Codeblock top padding
 .cm-s-obsidian div.HyperMD-codeblock.HyperMD-codeblock-begin-bg {
-    padding-top: 10px;
+    padding-top: 6px;
+}
+
+// Codeblock shadow
+.cm-s-obsidian span.cm-inline-code,
+.markdown-rendered pre {
+    box-shadow: var(--code-shadow);
 }
 
 //Fix Codeblock Radius

@@ -10,26 +10,19 @@
     --ribbon-background-collapsed: var(--note);
     --ribbon-width: 40px;
     
-    //Vault Title
-    --vault-name-font-size: var(--h6-size);
-    --vault-name-font-weight: var(--font-bold);
-    --vault-name-color: var(--headers);
+    --ribbon-border-width: 0;
+    --ribbon-border-color: var(--outer-bar);
 
-    
-    //File Explorer
-    --nav-item-color: var(--text);
-    --nav-item-color-hover: var(--text-dl);
-    --nav-item-color-active: var(--text-dl);
-    --nav-item-background-hover: var(--dark-accent);
-    --nav-item-background-active: var(--dark-accent);
-    --nav-item-color-highlighted: var(--text-dl); //Dragged item
-    
-    --nav-item-size: var(--font-ui-small);
-    --nav-item-weight: 500;
-    --nav-item-weight-hover: 700;
-    --nav-item-weight-active: 700;
-    --nav-item-white-space: wrap;
-    --nav-indentation-guide-width: 2px;
+    --sidebar-icon-color: var(--text);
+    --sidebar-icon-color-active: var(--text-dl);
+
+    --sidebar-tab-background-color-hover: var(--bttn);
+    --sidebar-tab-color-hover: var(--text-dl);
+
+    --sidebar-tab-border-color: transparent;
+    --sidebar-tab-border-color-active: var(--accent);
+    --sidebar-tab-border-width: 0;
+    --sidebar-tab-padding: 0 var(--size-4-3);
 }
 //Fix Tab Sizing / Padding
 :is(.mod-right-split, .mod-left-split) .workspace-tab-header-container-inner {
@@ -40,8 +33,9 @@
     margin-left: 2px;
 }
 :is(.mod-left-split, .mod-right-split) .workspace-tab-header-inner {
-    padding: 0 var(--size-4-3);
+    padding: var(--sidebar-tab-padding);
 }
+
 
 // Fix Sidebar Button
 .has-left-sidebar-toggle .sidebar-toggle-button {
@@ -50,47 +44,77 @@
     & .clickable-icon { width: 100%; }
 }
 
-//Fixed Hover Icon Background Color
-.clickable-icon:hover,
-.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
-.side-dock-ribbon .clickable-icon:hover {
-    background-color: var(--bttn);
-    color: var(--text-dl);
+
+
+//Sidebar Tab Outline
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header-inner {
+    background-color: transparent;
+    border-bottom: var(--sidebar-tab-border-width) solid var(--sidebar-tab-border-color);
+}
+:is(.mod-left-split, .mod-right-split) .is-active .workspace-tab-header-inner {
+    border-color: var(--sidebar-tab-border-color-active);
 }
 
-//Fix Active Left Sidebar Tab Icon Color
-.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.workspace-tab-header-inner:hover .workspace-tab-header-inner-icon,
-.mod-top-left-space.mod-active .workspace-tab-header.is-active {
-    --titlebar-text-color-focused: var(--text-dl);
-    --tab-text-color-hover: var(--text-dl);
-    --icon-color-hover: var(--text-dl);
-}
 
 //Fix Left Sidebar Tab Icons
 .clickable-icon.side-dock-ribbon-action {
     padding: 10px;
 }
-.workspace-ribbon { padding: 0; }
 
+//Ribbon
+.workspace-ribbon { 
+    padding: 0; 
+    border-right: var(--ribbon-border-width) solid var(--ribbon-border-color);
+}
+
+//Fix Active Left Sidebar Tab Icon Color
 //Fix Remove background-modifier-hover
-:is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active 
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active,
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header .workspace-tab-header-inner-icon
 { 
     --background-modifier-hover: var(--sidebar-tab-background-color); 
     
-    & .workspace-tab-header-inner-icon
-    { --icon-color-focused: var(--text-dl) }
+    --tab-text-color: var(--text);
+    --tab-text-color-active: var(--text-dl);
+    --tab-text-color-focused: var(--text);
+    --tab-text-color-focused-active: var(--text-dl);
+    --tab-text-color-focused-active-current: var(--text-dl);
+    
+    // --icon-color-focused: var(--sidebar-icon-color-active);
+    & .workspace-tab-header-inner-icon { --icon-color-focused: var(--sidebar-icon-color-active); }
 }
 
-//Fix File Explorer
-.nav-folder.mod-root > .nav-folder-title:hover {
-    color: var(--dark-accent);
+//Fix Active Left Sidebar Tab Icon Color
+// .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+// .workspace-tab-header-inner:hover .workspace-tab-header-inner-icon,
+// .mod-top-left-space.mod-active .workspace-tab-header.is-active {
+//     --titlebar-text-color-focused: var(--sidebar-icon-color-active);
+//     --tab-text-color-hover: var(--sidebar-icon-color-active);
+//     --icon-color-hover: var(--sidebar-icon-color-active);
+// }
+
+
+//Fixed Hover Icon Background Color
+:is(.mod-left-split, .mod-right-split) .is-active:hover .workspace-tab-header-inner,
+
+.clickable-icon:hover,
+
+.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
+
+.side-dock-ribbon .clickable-icon:hover,
+
+.workspace-tab-header:hover .workspace-tab-header-inner .workspace-tab-header-inner-icon
+{
+    background-color: var(--sidebar-tab-background-color-hover);
+    color: var(--sidebar-tab-color-hover);
 }
-.nav-files-container { padding: 0; }
 
 
 
 
-//Styling
-.nav-folder-title { --nav-item-weight: 700; }
+//
+.workspace-tab-header-inner .workspace-tab-header-inner-icon {
+    color: var(--sidebar-icon-color);
+}
+
 

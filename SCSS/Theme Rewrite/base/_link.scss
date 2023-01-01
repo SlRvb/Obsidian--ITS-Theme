@@ -1,5 +1,4 @@
-.theme-dark,
-.theme-light 
+body
 {
     //
     --link-decoration: none;
@@ -9,13 +8,42 @@
     
     --link-unresolved-color: var(--inactive);
     --link-color-hover: var(--lite-accent);
+    
+    --link-font: inherit;
+    --link-external-font: var(--link-font); //Pesonal
 
+    --link-external-color-hover: var(--text-accent-hover);
 }
+
+//Link
+.internal-link { font-family: var(--link-font); }
+.external-link { font-family: var(--link-external-font); }
+
 
 //Recolor []
 .cm-s-obsidian {
-    & .cm-link.cm-link,
+    &:not(.is-live-preview) .cm-link,
+    & .cm-line.cm-active .cm-link.cm-link,
     & .cm-image-alt-text.cm-link:not(.cm-formatting),
     & .cm-formatting-link-string.cm-string
     { color: var(--text-muted); }
+}
+
+/*-External Links-*/
+//Hide SVG Image
+.external-link {
+    background-image: url();
+    padding-right: unset;
+}
+
+/*Change External Link Symbol*/
+.external-link:after {
+    content: "\e809";
+    font-family: var(--its);
+    padding-left: 2px;
+    display: inline-block;
+    font-size: inherit;
+    opacity: .5;
+    font-weight: 100 !important;
+    font-style: normal !important;
 }

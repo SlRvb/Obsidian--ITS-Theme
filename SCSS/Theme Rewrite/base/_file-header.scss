@@ -1,0 +1,37 @@
+body {
+    --file-header-font-size: var(--font-text-size);   
+    
+    --file-header-breadcrumb-font-size: var(--font-smaller);
+    --file-header-breadcrumb-color: var(--inactive);
+    --file-header-color: var(--inactive);
+    --file-header-color-active: var(--text);
+
+    
+    --file-header-background: var(--note);
+    --file-header-left-color: var(--dark-accent);
+    --file-header-right-color: var(--outer-bar);
+}
+
+//Fix Header Title Padding
+.is-focused .workspace-leaf.mod-active .view-header,
+.workspace-leaf .view-header {
+    gap: 0;
+    margin: 0;
+    padding: 0 var(--size-4-3);
+    background: var(--file-header-background);
+}
+
+//Inactive header text color
+.view-header-title { color: var(--file-header-color); }
+.mod-active { color: var(--file-header-color-active); }
+
+.view-header-title-container,
+.view-header-title-parent {
+    align-content: center;
+    align-items: center;
+}
+
+.view-header-breadcrumb {
+    font-size: var(--file-header-breadcrumb-font-size);
+    color: var(--file-header-breadcrumb-color);
+}

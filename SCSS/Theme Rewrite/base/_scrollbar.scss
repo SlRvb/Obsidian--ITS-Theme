@@ -1,0 +1,20 @@
+body {        
+    //Scrollbar
+    --scrollbar-bg: var(--bg);
+    --scrollbar-thumb-bg: var(--accent);
+    --scrollbar-active-thumb-bg: var(--lite-accent);
+
+    --scrollbar-border-width: 0; //personal
+    --scrollbar-width: 8px; //personal
+}
+
+//Fixed Scrollbars
+// body:not(.native-scrollbars) ::-webkit-scrollbar {
+//     background-color: var(--scrollbar-bg);
+//     width: var(--scrollbar-width);
+//     height: var(--scrollbar-width);
+// }
+
+// body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
+//     border-width: var(--scrollbar-border-width);
+// }

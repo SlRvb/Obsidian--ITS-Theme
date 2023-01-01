@@ -1,0 +1,11 @@
+body {
+    --titlebar-background: var(--note);
+    --titlebar-background-focused: var(--outer-bar);
+    --titlebar-text-color: var(--text-normal);
+}
+
+
+.is-hidden-frameless:not(.is-fullscreen) {
+    &.is-focused .titlebar-button-container.mod-right,
+    & .titlebar-button-container.mod-right { background: transparent }
+}

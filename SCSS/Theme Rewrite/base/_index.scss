@@ -3,7 +3,15 @@
 @use 'sidebar';
 @use 'search';
 @use 'tabs';
+@use 'file-explorer';
+@use 'titlebar';
+@use 'file-header';
 
+@use 'scrollbar';
+
+@use 'inline-title';
+@use 'headers';
+@use 'note';
 @use 'mode-source';
 @use 'link';
 @use 'lists';
@@ -12,3 +20,6 @@
 @use 'embeds';
 @use 'code';
 @use 'comments';
+@use 'hr';
+@use 'blockquote';
+@use 'callout';

@@ -1,0 +1,43 @@
+body {
+    --hr-icon-symbol: "\e817";
+    --hr-icon-font: var(--its);
+    --hr-icon-background: var(--note);
+    
+    --hr-icon-color: 0 0 0 var(--headers);
+    --hr-thickness: 2px;
+    --hr-color: var(--hr);
+}
+
+
+/*Stylized HR/Horizontal Line*/
+.hr.cm-line:not(.cm-active),
+.markdown-preview-view hr {
+    &::after {
+        content: var(--hr-icon-symbol);
+        font-family: var(--hr-icon-font);
+        font-size: var(--font-text-size);
+
+        display: inline-block;
+        position: absolute;
+        
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        transform-origin: 50% 50%;
+        
+        color: transparent;
+        text-shadow: var(--hr-icon-color);
+
+        padding: 0 4px; //Symbol Padding
+        background-color: var(--hr-icon-background); //Color bg to cover line
+    }
+}
+//Live Preview hr
+.hr.cm-line { 
+    border-top: 2px solid var(--hr); 
+    --hr-color: transparent; 
+}
+
+//Unset Live Preview's Contain Paint for HR & Plugins
+.markdown-source-view.mod-cm6 .cm-content :is(.hr, .HyperMD-hr) { 
+    contain: style !important;
+}

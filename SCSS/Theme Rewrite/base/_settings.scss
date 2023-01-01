@@ -63,6 +63,7 @@
     background-color: var(--accent);
 }
 
+
 //Fixed Community Theme/Plugin Styling
 .community-item {
     border: var(--box-border);
@@ -72,6 +73,7 @@
     background-color: var(--modal-nav-item-background-hover);
     border-color: var(--outline);
 }
+
 
 
 //Fix Dropdown Menu Styling
@@ -86,4 +88,16 @@
 
     & .menu-item.selected .menu-item-icon 
     { color: var(--text-normal); }
+}
+
+
+// Hotkeys
+.setting-hotkey,
+.suggestion-hotkey {
+    border-radius: var(--radius-s);
+    background-color: var(--code-bg);
+    color: var(--soft-text);
+    font-size: 12px;
+    
+    box-shadow: var(--code-shadow);
 }

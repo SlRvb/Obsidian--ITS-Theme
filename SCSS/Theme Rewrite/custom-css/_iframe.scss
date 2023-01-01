@@ -1,0 +1,19 @@
+iframe {
+    border-width: var(--radius);
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+
+/* Video w/ Aspect Ratio: <div><iframe></iframe></div> */
+#vid {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+#vid iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

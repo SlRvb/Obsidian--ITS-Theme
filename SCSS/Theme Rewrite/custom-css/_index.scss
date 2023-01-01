@@ -1,2 +1,24 @@
-@use 'file-explorer-icons';
-@use 'alt-checkbox'
+@use 'file-explorer';
+
+@use 'image-adjustments';
+@use 'embed-adjustments';
+
+@use 'alt-checkbox';
+@use 'callouts';
+
+@use 'sizing';
+
+@use 'iframe';
+@use 'hr-adj';
+
+
+//CSS Classes
+@use 'tables';
+@use 'note';
+@use 'outline-hide';
+@use 'titlebar';
+@use 'tags';
+@use 'lists';
+@use 'header-bar';
+@use 'sidebar';
+@use 'headings';

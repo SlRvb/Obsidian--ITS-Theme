@@ -1,0 +1,38 @@
+.navbar-bottom {
+    & .nav-header {
+        display: flex;
+        position: absolute;
+        bottom: 5px;
+        z-index: 2;
+
+        width: 100%;
+        justify-content: center;
+    }
+    & .nav-header .nav-buttons-container {
+        padding: 2px 0;
+        align-items: center;
+        background: var(--note);
+        border: 2px solid var(--outline);
+        //box-shadow: 4px 4px 5px var(--outline);
+        box-shadow: var(--shadow-s);
+        width: fit-content;
+    }
+    & .workspace-tabs {
+        .backlink-pane,
+        .search-result-container.mod-global-search,
+        & .nav-header + div:is(.tag-container, .nav-files-container) 
+        {
+            margin-bottom: 60px;
+            background: var(--side-bar);
+            box-shadow: 4px 4px 5px var(--outline);
+            padding-bottom: 20px;
+            padding-top: 10px;        
+        }
+    } 
+    & .nav-files-container { background: var(--outer-bar); }
+    
+    //Input
+    & .nav-header ~ .search-input-container { margin: 15px auto; }
+    & .mod-global-search { padding-top: 0; }
+}
+

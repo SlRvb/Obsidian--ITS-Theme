@@ -1,0 +1,44 @@
+// Wide Tabs
+.sidebar-tabs-wide :is(.mod-left-split, .mod-right-split) {
+    & .workspace-tab-header-container { padding-right: 0; }
+    & .workspace-tab-header-container-inner { flex: 1 0 auto; }
+    & .workspace-tab-header { width: 100%; }
+    & .workspace-tab-header-inner { justify-content: center; }
+    & .workspace-tab-header-spacer { display: none; }
+}
+
+// Sidebar Tabs Underline
+.sidebar-tabs-underline :is(.mod-left-split, .mod-right-split) {    
+    --tab-outline-width: 0;
+    --sidebar-icon-color: var(--inactive);
+    --sidebar-icon-color-active: var(--lite-accent);
+    
+    --sidebar-tab-border-color: var(--inactive);
+    --sidebar-tab-border-color-active: var(--accent);
+    --sidebar-tab-border-width: 2px;
+    // --icon-color-focused: var(--text-dl);
+    // --sidebar-tab-background-color: transparent;
+
+    & .is-active:hover {
+        --sidebar-icon-color-active: var(--text-dl);
+        // --sidebar-tab-border-color-active: var(--text-dl);
+        --icon-color-focused: var(--text-dl);
+    }
+}
+
+// Tabs Sidebar?
+
+
+// Sidebar Tabs
+.sidebar-tabs-tabular :is(.mod-left-split, .mod-right-split) {
+    --sidebar-tab-background-color: var(--note);
+    --sidebar-tab-border-width: 0;
+    --sidebar-tab-padding: 0 var(--size-4-4);
+    --sidebar-icon-color-active: var(--lite-accent);
+    --sidebar-icon-color: var(--soft-text);
+    
+    --tab-outline-width: 0;
+    --tab-container-background: var(--outer-bar);
+
+    --titlebar-background: var(--outer-bar);
+}

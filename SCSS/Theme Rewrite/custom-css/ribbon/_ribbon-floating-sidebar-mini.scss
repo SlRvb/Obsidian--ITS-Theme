@@ -1,0 +1,36 @@
+
+// Mini Sidebar Ribbon Float
+.sd-mini-float:not(.is-mobile) {
+    & .side-dock-ribbon:not(:hover) {
+        flex: 0 0 20px;
+        width: 20px;
+        padding: 10px;
+        animation-duration: 5s;
+        background-color: var(--accent);
+        border: none;
+    }
+    & .side-dock-ribbon.mod-right:not(:hover)   { right: 20px; }
+    & .side-dock-ribbon.mod-left:not(:hover)    { left: 20px; }
+    &.sd-flt-top {
+        & .side-dock-ribbon.mod-right,
+        & .side-dock-ribbon.mod-left {
+            margin-top: 45px;
+        }
+    }
+
+    & .side-dock-ribbon:not(:hover) .workspace-ribbon-collapse-btn {
+        padding: 0;
+        height: auto;
+        
+        & svg { display: none; }
+    }
+    // & .side-dock-ribbon.mod-left:not(:hover), 
+    // & .side-dock-ribbon.mod-right:not(:hover) {
+    //     box-shadow: none;
+    // }
+
+    & .side-dock-ribbon.mod-left:not(:hover) .side-dock-actions,
+    & .side-dock-ribbon.mod-left:not(:hover) .side-dock-settings {
+        display: none;
+    }
+}

@@ -1,0 +1,35 @@
+.sizing-readable {
+    --font-ui-smaller: 13.5px;
+    --font-ui-small: 14px;
+    --font-ui-medium: 15px;
+    --font-ui-large: 20px;
+    
+    --font-smallest:.88em;
+    --font-smaller:.9em;
+    --font-small: .95em;
+
+    --icon-xs: 14px;
+    --icon-s: 16px;
+    --icon-m: 17px;
+    --icon-l: 18px;
+}
+
+.sizing-mini {
+    --font-ui-smaller: 12px; //.88em
+    --font-ui-small: 14px;
+    --font-ui-medium: 15px;
+    --font-ui-large: 20px;
+    
+    --font-smallest:.88em;
+    --font-smaller:.9em;
+    --font-small: .95em;
+
+    --icon-xs: 14px;
+    --icon-s: 16px;
+    --icon-m: 17px;
+    --icon-l: 18px;
+}
+
+.sizing-large {
+
+}

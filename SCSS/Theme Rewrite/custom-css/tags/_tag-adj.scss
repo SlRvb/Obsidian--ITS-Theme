@@ -1,0 +1,14 @@
+.tag-notion {
+    --tag-border-radius: 5px;
+}
+
+.tag-bubble {
+    --tag-border-radius: 25px;
+}
+
+.tag-text {
+    --tag-background: transparent;
+    --tag-color: var(--lite-accent);
+    --tag-padding: 0;
+    --font-size: var(--font-size);
+}

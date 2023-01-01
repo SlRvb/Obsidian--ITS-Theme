@@ -33,5 +33,6 @@ body {
 
 //Hover
 .nav-folder-title:is(.is-active, :hover) .nav-folder-title-content::before,
-.nav-file-title:is(.is-active, :hover) :is(.nav-file-title-content::before, .nav-file-icon)
+.nav-file-title:is(.is-active, :hover) .nav-file-title-content::before,
+.nav-file-title:is(.is-active, :hover) .nav-file-icon
 { color: var(--nav-item-color-active); }

@@ -1,8 +1,8 @@
 /*Clean Embeds*/
+.embed-clean .internal-embed,
 .internal-embed[alt*="clean"] {
     & > .markdown-embed,
-    &.is-loaded:not(.image-embed),
-    & .admonition {
+    &.is-loaded:not(.image-embed) {
         --embed-padding: 0;
 
         --embed-border-color: transparent;

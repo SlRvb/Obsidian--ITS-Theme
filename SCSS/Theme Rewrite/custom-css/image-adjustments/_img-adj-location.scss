@@ -31,17 +31,6 @@ img,
     }
 }
 
-.no-lp-img-float {
-    & img,
-    & .image-embed {
-        &:is([alt*="right"], [alt*="locr"]),
-        &:is([alt*="left"], [alt*="locl"]) {
-            float: unset;
-        }
-
-    }
-}
-
 
 
 //Customizable Version

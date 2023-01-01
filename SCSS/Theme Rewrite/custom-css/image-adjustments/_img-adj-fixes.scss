@@ -15,3 +15,17 @@ img[alt*="clear"],
 img[alt*="unclr"],
 .image-embed[src*="#unclr"] 
 { clear: none !important; }
+
+
+
+//Live Preview Location Override
+:not(.lp-img-float) .is-live-preview  {
+    & img,
+    & .image-embed {
+        &:is([alt*="right"], [alt*="locr"]),
+        &:is([alt*="left"], [alt*="locl"]) {
+            float: unset;
+        }
+
+    }
+}

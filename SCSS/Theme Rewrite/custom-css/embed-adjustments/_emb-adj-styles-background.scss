@@ -1,0 +1,15 @@
+.embed-dark-background {
+    --embed-background: var(--embed-bg);
+    --embed-border-left-color: transparent;
+
+    --embed-border-color-hover: var(--accent);
+    --embed-border-left-color-hover:    var(--embed-border-color-hover);
+    --embed-border-right-color-hover:   var(--embed-border-color-hover);
+    --embed-border-top-color-hover:     var(--embed-border-color-hover);
+    --embed-border-bottom-color-hover:  var(--embed-border-color-hover);
+
+    //Fix Styling
+    --hr-icon-background: var(--embed-bg);
+    --blockquote-background-color: linear-gradient(to right, var(--note), transparent);
+    --table-border-color: var(--embed-bg);
+}

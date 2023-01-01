@@ -5,4 +5,8 @@
 @use 'emb-adj-links';
 @use 'emb-adj-title';
 @use 'emb-adj-headings';
-@use 'emb-adj-styling';
+
+
+@use 'emb-adj-styles-mini-headers';
+@use 'emb-adj-styles-clean';
+@use 'emb-adj-styles-background';

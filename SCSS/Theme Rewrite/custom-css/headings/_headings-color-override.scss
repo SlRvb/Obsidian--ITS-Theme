@@ -1,0 +1,27 @@
+.heading-color-override {
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6,
+    & .cm-s-obsidian .cm-header
+    { & > * { color: var(--headers); } }
+
+
+    // &.head-spec {
+    //     & h1 > * { color: var(--sphd-pre-1); }
+    //     & h1 > * { color: var(--sphd-pre-1); }
+    //     & h2 > * { color: var(--sphd-pre-2); }
+    //     & h3 > * { color: var(--sphd-pre-3); }
+    //     & h4 > * { color: var(--sphd-pre-4); }
+    //     & h5 > * { color: var(--sphd-pre-5); }
+    //     & h6 > * { color: var(--sphd-pre-6); }
+    //     & .cm-header-1 > * { color: var(--sphd-ed-1); }
+    //     & .cm-header-2 > * { color: var(--sphd-ed-2); }
+    //     & .cm-header-3 > * { color: var(--sphd-ed-3); }
+    //     & .cm-header-4 > * { color: var(--sphd-ed-4); }
+    //     & .cm-header-5 > * { color: var(--sphd-ed-5); }
+    //     & .cm-header-6 > * { color: var(--sphd-ed-6); }
+    // }
+}

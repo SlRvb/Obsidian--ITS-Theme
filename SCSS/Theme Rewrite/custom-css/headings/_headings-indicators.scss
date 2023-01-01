@@ -1,0 +1,33 @@
+.heading-indicator .is-live-preview {
+    & .HyperMD-header.HyperMD-header.HyperMD-header:hover .cm-header.cm-header:not(.cm-header-6)::before {
+        margin-top: 0px;
+    }
+
+    & .HyperMD-header .cm-header:not(.cm-formatting) {
+        // display: flex;
+
+        &::before
+        {
+            float: left; 
+            position: relative;
+    
+            font-family: var(--font-monospace);
+            color: var(--footnote);
+            font-size: 12px;
+
+            
+            // padding-top: 2px;
+            margin-left: -18px;
+        }
+    
+        &:not(.cm-formatting-header):not(.cm-inline-code)
+        {
+            &.cm-header-1::before { content: "H1"; margin-top: calc(var(--h1-size) / 2); }
+            &.cm-header-2::before { content: "H2"; margin-top: calc(var(--h2-size) / 2); }
+            &.cm-header-3::before { content: "H3"; margin-top: calc(var(--h3-size) / 2); }
+            &.cm-header-4::before { content: "H4"; margin-top: calc(var(--h4-size) / 2); }
+            &.cm-header-5::before { content: "H5"; margin-top: calc(var(--h5-size) / 2); }
+            &.cm-header-6::before { content: "H6"; margin-top: calc(var(--h6-size) / 2); }
+        }
+    } 
+}

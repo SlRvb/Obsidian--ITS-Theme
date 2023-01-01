@@ -1,0 +1,45 @@
+.hcl,
+.headings-center-lines {
+    --header-text-align: center;
+    --h1-text-align: var(--header-text-align);
+    --h2-text-align: var(--header-text-align);
+    --h3-text-align: var(--header-text-align);
+    --h4-text-align: var(--header-text-align);
+    --h5-text-align: var(--header-text-align);
+    --h6-text-align: var(--header-text-align);
+
+    // --h1-border-line-width: auto;
+    
+    --h1-border-line-height: 6px;
+    --h2-border-line-height: 5px;
+    --h3-border-line-height: 4px;
+    --h4-border-line-height: 3px;
+    --h5-border-line-height: 3px;
+    --h6-border-line-height: 3px;
+
+    --header-border-line-left: block;
+
+    .HyperMD-header.cm-line,
+    :is(
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 
+    ) {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        
+        
+        //Padding for Other Elements In Heading
+        &:not(.HyperMD-header) > :not(.collapse-indicator) { margin: 0 10px; }
+        & > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) { margin: 0 10px; }
+
+        //Lines Padding
+        &:before, &:after { flex: 1; }
+        &:before { margin-right: .3em; }
+        &:after  { margin-left: .3em; }
+    }
+}

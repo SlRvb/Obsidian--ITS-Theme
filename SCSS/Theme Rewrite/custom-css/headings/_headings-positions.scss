@@ -1,0 +1,33 @@
+.headings-center,
+.hc
+{
+    --header-text-align: center;
+    --h1-text-align: var(--header-text-align);
+    --h2-text-align: var(--header-text-align);
+    --h3-text-align: var(--header-text-align);
+    --h4-text-align: var(--header-text-align);
+    --h5-text-align: var(--header-text-align);
+    --h6-text-align: var(--header-text-align);
+}
+
+.headings-left
+{
+    --header-text-align: left;
+    --h1-text-align: var(--header-text-align);
+    --h2-text-align: var(--header-text-align);
+    --h3-text-align: var(--header-text-align);
+    --h4-text-align: var(--header-text-align);
+    --h5-text-align: var(--header-text-align);
+    --h6-text-align: var(--header-text-align);
+}
+
+.headings-right
+{
+    --header-text-align: right;
+    --h1-text-align: var(--header-text-align);
+    --h2-text-align: var(--header-text-align);
+    --h3-text-align: var(--header-text-align);
+    --h4-text-align: var(--header-text-align);
+    --h5-text-align: var(--header-text-align);
+    --h6-text-align: var(--header-text-align);
+}

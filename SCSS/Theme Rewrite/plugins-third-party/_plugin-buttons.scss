@@ -1,0 +1,18 @@
+/*Button Plugin*/
+body {
+    --button-border-radius: var(--radius-m);
+    --button-background: var(--bttn);
+    --button-text: var(--text-dl);
+    --button-border: var(--bttn);
+    --button-background-hover: var(--interactive-accent-hover);
+}
+
+body .button-default.button-default {
+    box-shadow: var(--shadow-s);
+}
+body .button-default.button-default:hover {
+    --button-background: var(--button-background-hover);
+    --button-border: var(--button-background-hover);
+    
+    box-shadow: var(--shadow-l);
+}

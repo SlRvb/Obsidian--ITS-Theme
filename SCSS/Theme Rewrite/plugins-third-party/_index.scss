@@ -1,0 +1,24 @@
+@use 'plugin-style-settings';
+@use 'plugin-dataview';
+@use 'plugin-hover-editor';
+@use 'plugin-icon-folder';
+
+@use 'plugin-kanban';
+@use 'plugin-breadcrumbs';
+@use 'plugin-statblocks';
+
+@use 'plugin-excalidraw';
+@use 'plugin-fantasy-calendar';
+@use 'plugin-dice-roller';
+@use 'plugin-buttons';
+@use 'plugin-initiative-tracker';
+@use 'plugin-leaflet';
+@use 'plugin-longform';
+@use 'plugin-auto-class';
+
+//Fixes
+@use 'plugin-link-favicon';
+@use 'plugin-heatmap-calender';
+@use 'plugin-emoji-toolbar';
+@use 'plugin-folder-note-aidenlx';
+@use 'plugin-settings-search';

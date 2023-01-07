@@ -1,0 +1,59 @@
+
+//Sidebar
+.longform-explorer.longform-explorer {
+    & ul li::before { display: none; }
+
+    & button { cursor: pointer; }
+
+    //Fix Border color
+    & .new-scene-container,
+    & .tab-list,
+    & .new-draft-container,
+    & .compile-container 
+    { border-color: var(--hr); }
+
+    #project-picker {
+        justify-content: space-between;
+
+        & select { width: 100%; text-overflow: ellipsis; }
+    }
+
+    //Project Tabs
+    & .tab-list button { color: var(--headers); }
+    & .tab-list .selected {
+        border-color: var(--accent);
+        background-color: var(--outer-bar);
+        color: var(--text);
+    }
+
+
+    //Fix Text Wrapping
+
+    & .draft-container.draft-container { white-space: pre-wrap; }
+
+    & .drafts-title-container.drafts-title-container button { 
+        color: var(--text); 
+        background-color: var(--interactive-normal);
+
+        &:hover { background-color: var(--interactive-accent-hover); }
+    }
+    
+    //Compile Tab
+    & .longform-compile-container {
+        & .longform-compile-step
+        { 
+            background: var(--note);
+            border: var(--box-border);
+            box-shadow: var(--shadow-s);
+            padding: 5px 10px;
+        }
+
+        & .longform-step-kind-pill.longform-step-kind-pill {
+            background-color: var(--tag-background);
+        }
+
+        & .longform-compile-step-options > div {
+            border-color: var(--lite-accent);
+        }
+    }
+}

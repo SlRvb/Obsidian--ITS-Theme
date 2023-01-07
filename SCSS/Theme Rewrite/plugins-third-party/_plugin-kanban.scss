@@ -1,0 +1,104 @@
+//Outerbox
+body {
+    --kanban-lane-background: var(--note);
+    --kanban-lane-border: var(--box-border-m);
+    --kanban-lane-box-shadow: var(--shadow-s);
+    --kanban-lane-padding: 0 4px;
+
+    --kanban-card-border: 2px solid var(--outline);
+    
+    --kanban-card-title-background: var(--code-bg);
+    --kanban-card-title-border: 0px 2px 0 var(--outline);
+
+    // --kanban-card-metadata-background: var(--note);
+    --kanban-card-metadata-background: var(--code-bg);
+
+
+    --tag-background-color: var(--tag-background);
+}
+
+
+//Lanes
+.kanban-plugin__lane.kanban-plugin__lane { 
+    background-color: var(--kanban-lane-background);
+    border-radius: var(--radius-m);
+    border: var(--kanban-lane-border);
+    box-shadow: var(--kanban-lane-box-shadow);
+
+    & .kanban-plugin__lane-items {
+        margin: 0;
+        padding: var(--kanban-lane-padding);
+
+    }
+}
+//Lane Title
+.kanban-plugin__lane-header-wrapper {
+    border: none;
+    padding: 5px 10px;
+    padding-bottom: 0;
+} 
+
+//Cards
+.kanban-plugin__item-content-wrapper.kanban-plugin__item-content-wrapper 
+{ border-radius: var(--radius-m); }
+
+.kanban-plugin__item.kanban-plugin__item {
+    border: var(--kanban-card-border);
+}
+//Card Title
+.kanban-plugin__item-title-wrapper {
+    padding: 2px 8px;
+    background: var(--kanban-card-title-background);
+    
+    &:not(:only-child) {
+        border: none;
+        box-shadow: var(--kanban-card-title-border);
+    }
+    
+}
+//Card Metadata
+.kanban-plugin__item-content-wrapper {
+    background: var(--kanban-card-metadata-background);
+    background-color: var(--kanban-card-metadata-background);
+}
+.kanban-plugin__item-metadata-wrapper:not(:empty) { 
+    padding: 2px 6px; 
+    z-index: 0;
+    background: transparent;
+}
+.kanban-plugin__meta-table td {
+    padding: 0; 
+    
+    &.kanban-plugin__meta-key {
+        color: var(--footnote);
+        font-weight: 600;
+    }
+    & .kanban-plugin__meta-value {
+        display: block;
+    }
+}
+
+//Hide Meta Value Scrollbars
+.kanban-plugin__markdown-preview-view * { overflow-y: hidden; }
+
+
+//Buttons
+.kanban-plugin__item-button-wrapper.kanban-plugin__item-button-wrapper {
+    border: 0;
+    background-color: var(--code-bg);
+    padding: 0;
+}
+
+//Input
+.kanban-plugin__item-form .kanban-plugin__item-input-wrapper textarea {
+    background: transparent;
+}
+
+//Checkbox Fix
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+    filter: none;
+}
+
+
+//hr color fix 
+.kanban-plugin__item hr { --hr-icon-background: var(--kanban-card-title-background); }

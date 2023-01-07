@@ -1,0 +1,75 @@
+body {
+    --dataview-th-border-bottom: var(--headers);
+    --dataview-th-background: var(--outer-bar);
+    --dataview-th-alt-color: var(--hvr2);
+    --dataview-th-color: var(--headers);
+    --dataview-th-font: var(--font);
+    --dataview-th-font-size: 16px;
+    --dataview-th-font-weight: var(--header-weight);
+}
+
+//Table header
+.table-view-table > thead {
+    --table-header-background: var(--dataview-th-background);
+    --table-header-color: var(--dataview-th-color);
+    --table-header-font: var(--dataview-th-font);
+    
+    font-size: var(--dataview-th-font-size);
+    font-weight: var(--dataview-th-font-weight);
+    
+    //Hover Text Color
+    & tr:hover { --table-header-color: var(--text-dl); }
+
+    & > tr > th { 
+        border-color: var(--dataview-th-border-bottom); 
+        
+        //Alternate th color
+        &:nth-child(2n+2) { 
+        --table-column-alt-background: var(--dataview-th-alt-color);
+        }
+    }
+}
+
+
+//List
+.dataview.list-view-ul {
+    & li::marker { color: transparent; }
+}
+
+//dvjs
+.dataview.result-group > .contains-task-list {
+    padding-inline-start: 0;
+
+    & .task-list-item.is-checked .task-list-item-checkbox { margin-left: 0; }
+}
+
+
+
+
+//Inline Bracket Syntax
+.dataview.dataview {
+    &.inline-field-standalone-value {
+        padding-left: 0;
+        padding-right: 0;
+        display: inline;
+        border-radius: 0;
+        font-family: inherit;
+        background-color: transparent;
+    }
+    
+    &.inline-field-key,
+    &.inline-field-value {
+        border-radius: var(--radius);
+        font-family: inherit;
+        font-weight: bold;
+        padding: 0 10px;
+    }
+
+    &.inline-field-key { 
+        background-color: var(--bttn);
+        color: var(--text-dl);
+    }
+
+    &.inline-field-value { background-color: var(--td); }
+    &.inline-field-value a.tag:first-child { display: none; }
+}

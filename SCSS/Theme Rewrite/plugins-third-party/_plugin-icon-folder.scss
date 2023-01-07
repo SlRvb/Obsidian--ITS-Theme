@@ -1,0 +1,15 @@
+.obsidian-icon-folder-icon {
+    margin-left: -2px !important;
+    margin-right: 7px !important;
+    border: 0;
+    
+    width: var(--nav-item-size);
+    height: var(--nav-item-size);
+
+    & + .nav-folder-title-content,
+    & + .nav-file-title-content 
+    { 
+        --folder-icon: ; 
+        --file-icon: ;
+    }
+}

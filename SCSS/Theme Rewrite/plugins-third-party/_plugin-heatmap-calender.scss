@@ -1,0 +1,10 @@
+/* Heatmap Calendar Fix */
+.heatmap-calendar-graph {
+    & ul li {
+      border: 0;
+      &::before { display: none; }
+    }
+}
+.theme-dark .heatmap-calendar-boxes .isEmpty {
+    background-color: var(--inactive);
+}

@@ -1,0 +1,11 @@
+// .nav-folder.alx-folder-with-note > .nav-folder-title > .nav-folder-title-content
+// { text-decoration: none; }
+
+// .nav-folder.nav-folder.alx-folder-with-note .nav-folder-title {
+//     box-shadow: 0 2px 0 var(--inactive);
+// }
+
+
+.nav-folder.alx-folder-with-note > .nav-folder-title > .nav-folder-title-content {
+    text-decoration-color: var(--lite-accent);
+}

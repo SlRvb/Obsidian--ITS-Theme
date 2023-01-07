@@ -1,0 +1,44 @@
+
+
+
+//Sidebar
+.dice-roller-view {
+
+    & .dice-button { 
+        //Dice
+        .clickable-icon {
+            margin: 0 7px; 
+            --sidebar-tab-background-color-hover: transparent;
+
+            & .cls-1 { 
+                fill: var(--interactive-accent);
+                stroke: var(--interactive-accent);
+            }
+        }
+        //Dice Hover
+        &:hover .cls-1 {
+            fill: var(--accent);
+            stroke: var(--accent);
+        }
+        
+        //Dice Numbers
+        & svg g { 
+            color: var(--text-dl); 
+            fill: var(--text-dl);
+        }
+    }
+    
+    // //Center Dice
+    // & .dice-buttons { width: auto; }
+
+    //Advantage/Disadvantage Button
+    & .advantage-disadvantage button { 
+        background: var(--success-bg); 
+        
+        &:hover { background-color: var(--interactive-accent-hover); }
+        
+        & + button { background: var(--failure-bg); }
+    }
+
+}
+

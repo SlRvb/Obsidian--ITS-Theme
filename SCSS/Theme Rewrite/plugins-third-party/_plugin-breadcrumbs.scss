@@ -1,0 +1,130 @@
+//Fix Link Cursor
+.internal-link.BC-Link,
+button[class^="BC"]
+{ cursor: pointer; } 
+
+//Trail
+.BC-trail { 
+    border: 0; 
+    z-index: 10;
+
+    & .BC-trail-path-container.BC-trail-path-container {
+        font-weight: var(--bold-weight);
+        
+        //Reading Mode
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    //Fix Separator
+    & .BC-trail-sep { 
+        color: var(--inactive); 
+        font-weight: 900; 
+    }
+}
+//Fix Width
+.BC-trail.is-readable-line-width { width: auto !important; }
+
+
+
+//Sidebar Matrix
+[data-type="BC-matrix"] div.view-content.view-content {
+    padding: 0; // Remove Sidebar Padding
+
+    & .BC-matrix-buttons {
+        padding: var(--size-4-2) var(--size-4-4) var(--size-4-1);
+    }
+}
+
+.BC-Matrix.BC-Matrix.BC-Matrix > .BC-matrix-hier { 
+    border: 0; //Remove Border from outer box
+    
+    //Add Box Border to pieces
+    & .BC-Matrix-square { 
+        border: 2px solid var(--outline);
+        border-radius: var(--radius-s);
+        box-shadow: var(--shadow-m);
+    }
+
+    //Headers
+    & .BC-Matrix-header {
+        --h4-border-line-height: 0;
+        --h6-border-line-height: 0;
+    }
+
+    ol {
+        --list-numbered-color: transparent;
+        padding-left: 10px;
+    }
+}
+
+
+
+//Bullet List
+/* .BC-Matrix .BC-Matrix-square li::before {
+    content: var(--bullet);
+    font-family: var(--its);
+    color: var(--bullet-icon-color);
+    visibility: visible;
+    margin-top: -2px;
+    margin-left: -5px;
+} */
+
+//Blocked Trail
+.breadcrumbs-block .BC-trail { 
+    background-color: var(--note);
+    padding: var(--size-4-1);
+    border: var(--box-border);
+    box-shadow: var(--shadow-m);
+    border-radius: var(--radius);
+    
+    //Center Text
+    justify-content: center;
+    text-align: center;
+
+    & .BC-trail-grid-item { 
+        box-shadow: var(--shadow-s); 
+        background-color: var(--outer-bar);
+    }
+}
+
+
+.BC-grid-wrapper.BC-grid-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & .BC-grid-options.BC-grid-options {
+        position: relative;
+        width: unset;
+        height: unset;
+        border: 0;
+
+        &:hover .BC-grid-options-options.BC-grid-options-options { 
+            display:flex; 
+            flex-direction: row;
+            flex-wrap: nowrap; 
+            align-items: center;
+
+            & .tree-item-flair { margin: 0 10px; }
+        }
+    }
+    & .BC-trail-grid.BC-trail-grid,
+    & .BC-trail-grid-item.BC-trail-grid-item  {
+        border: 0;
+        font-size: var(--font-ui-small);
+        font-weight: bold;
+    }
+       
+    //Color Div Item
+    & .BC-trail-grid-item.BC-trail-grid-item {
+        padding: 5px 10px;
+        margin: 5px;
+        text-align: center;
+        
+        border: var(--box-border);
+        border-radius: var(--radius);
+    }
+}

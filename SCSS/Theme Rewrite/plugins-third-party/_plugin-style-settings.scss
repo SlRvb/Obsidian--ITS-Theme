@@ -1,0 +1,60 @@
+
+//Sub Sections
+// .style-settings-heading + .style-settings-container {
+//     padding-left: 0px;
+//     margin-left: 20px;
+//     border-left: 2px solid var(--table);
+// }
+// .style-settings-container:hover { 
+//     border-color: var(--accent); 
+// }
+
+.style-settings-heading[data-level="0"] + .style-settings-container {
+    padding-left: 10px;
+}
+
+/*Headings*/
+.style-settings-heading.style-settings-heading {
+    border-bottom: 2px solid transparent;
+    margin-bottom: 0;
+}
+.style-settings-heading[data-level="0"] { border-color: var(--accent); }
+// .style-settings-heading[data-level="2"]  { border-color: var(--lines); }
+
+.style-settings-heading .setting-item-name { 
+    // color: var(--headers);
+    font-weight: 900;
+    font-size: var(--font-ui-medium);
+}
+
+
+//Pane View
+.workspace-leaf-content[data-type="style-settings"] .view-content {
+    padding: 20px;
+}
+
+
+
+
+
+
+//Style Settings ITS Styling
+.style-settings-heading .style-settings-collapse-indicator::after {
+    font-family: var(--its);
+    padding-left: 10px;
+    font-weight: 100;
+}
+.style-settings-heading[data-id="ITS"] .style-settings-collapse-indicator::after 
+{ content: '\E817'; }
+.style-settings-heading[data-id="Text-CSS"] .style-settings-collapse-indicator::after 
+{ content: '\E80D'; }
+.style-settings-heading[data-id="ITS-Workspace"] .style-settings-collapse-indicator::after 
+{ content: '\E805'; }
+.style-settings-heading[data-id="ITS-Note"] .style-settings-collapse-indicator::after 
+{ content: '\E804'; }
+.style-settings-heading[data-id="ITS-Colors"] .style-settings-collapse-indicator::after 
+{ content: '\EC10'; }
+.style-settings-heading[data-id="ITS-Plugins"] .style-settings-collapse-indicator::after 
+{ content: '\EC06'; }
+.style-settings-heading[data-id="ITS-Alt-Color-Scheme"] .style-settings-collapse-indicator::after 
+{ content: '\EC24'; }

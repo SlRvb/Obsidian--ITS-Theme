@@ -1,0 +1,27 @@
+/* Hover Editor */
+body:is(.theme-dark, .theme-light) {
+  --he-title-bar-active-fg: var(--text);
+  --he-title-bar-active-pinned-bg: var(--note);
+  --he-title-bar-active-action: var(--lite-accent);
+  --he-title-bar-active-bg: var(--embed-bg);
+
+  --he-title-bar-inactive-fg: var(--inactive);
+  --he-title-bar-inactive-bg: var(--note);
+  --he-title-bar-inactive-pinned-bg: var(--note);
+  --he-title-bar-inactive-action: var(--soft-text);
+  
+  --he-popover-border-radius: var(--radius-s);
+
+  --he-text-on-accent-inactive: var(--text);
+  // --he-text-on-accent-active: var(--text-dl);
+  --he-text-on-accent-active: var(--headers);
+}
+.popover.hover-editor:not(.show-navbar) .view-header {
+  padding: 0;
+}
+
+.popover.hover-editor {
+  & .markdown-source-view {
+    --file-margins: var(--size-4-3);
+  }
+}

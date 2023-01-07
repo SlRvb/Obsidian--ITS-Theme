@@ -1,0 +1,29 @@
+.block-language-leaflet .leaflet-distance-control,
+.leaflet-container .leaflet-control-attribution {
+    background-color: var(--note) !important;
+    color: var(--text) !important;
+}
+
+
+.leaflet-container.leaflet-container { background-color: var(--outer-bar); }
+
+//Controls
+.leaflet-touch {
+    & .leaflet-control-layers, 
+    & .leaflet-bar,
+    & .leaflet-bar a:first-child {
+        border: none;
+        border-radius: var(--radius-s);
+    }
+
+    & .leaflet-control-expandable,
+    & .leaflet-bar.leaflet-bar a {
+        background-color: var(--note);
+        border-color: var(--table);
+        color: var(--text);
+    }
+}
+
+.leaflet-container .leaflet-control-attribution a {
+    color: var(--accent2-lite) !important;
+}

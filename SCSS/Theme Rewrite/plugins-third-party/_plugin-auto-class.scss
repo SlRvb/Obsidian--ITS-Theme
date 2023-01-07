@@ -1,0 +1,32 @@
+//Settings
+.auto-class-settings__match-list li {
+    // padding: 5px;
+    border-radius: var(--radius-s);
+
+    --list-marker-color: transparent;
+}
+//Hover BG Color
+.auto-class-settings__match-group-header:hover,
+li.auto-class-settings__match-list-item:hover {
+  background-color: var(--td);
+}
+
+
+//Settings Group
+ul.auto-class-settings__match-group-list {
+    margin-left: 16px;
+    border-left: 2px solid var(--accent);
+}
+
+//Edit > Classes
+.auto-class-manage-match__class-list-item {
+    justify-content: start;
+    flex-direction: row-reverse;
+    --list-marker-color: transparent;
+
+    & span { margin-right: 10px; }
+
+    & .auto-class-manage-match__class-list-control {
+        margin-bottom: -4px;
+    }
+}

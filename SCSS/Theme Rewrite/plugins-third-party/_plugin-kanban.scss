@@ -1,20 +1,28 @@
 //Outerbox
 body {
-    --kanban-lane-background: var(--note);
+    --kanban-lane-background: var(--code-bg);
     --kanban-lane-border: var(--box-border-m);
     --kanban-lane-box-shadow: var(--shadow-s);
     --kanban-lane-padding: 0 4px;
 
-    --kanban-card-border: 2px solid var(--outline);
     
-    --kanban-card-title-background: var(--code-bg);
+    --kanban-card-title-background: var(--note);
     --kanban-card-title-border: 0px 2px 0 var(--outline);
-
+    
     // --kanban-card-metadata-background: var(--note);
-    --kanban-card-metadata-background: var(--code-bg);
+    --kanban-card-metadata-background: var(--note);
+    --kanban-card-border: var(--box-border);
+    --kanban-card-margin:  2px 0;
 
-
+    --kanban-link-color: var(--accent2-lite);
+    --kanban-link-font-weight: inherit;
+    --kanban-link-symbol: ;
+    
+    --kanban-tag-background: var(--tag-background);
     --tag-background-color: var(--tag-background);
+
+    --kanban-button-background: var(--code-bg);
+    --kanban-button-shadow: var(--input-shadow);
 }
 
 
@@ -44,6 +52,7 @@ body {
 
 .kanban-plugin__item.kanban-plugin__item {
     border: var(--kanban-card-border);
+    margin: var(--kanban-card-margin);
 }
 //Card Title
 .kanban-plugin__item-title-wrapper {
@@ -54,8 +63,26 @@ body {
         border: none;
         box-shadow: var(--kanban-card-title-border);
     }
-    
 }
+.kanban-plugin__item.kanban-plugin__item,
+.kanban-plugin__item-title {
+    & .markdown-preview-view {
+        & a.internal-link {
+            color: var(--kanban-link-color);
+            font-weight: var(--kanban-link-font-weight);
+        }
+
+        & a.tag {
+            --tag-background: var(--kanban-tag-background);
+        }
+    }
+}
+.kanban-plugin__item-title .markdown-preview-view a.internal-link:after {
+    content: var(--kanban-link-symbol);
+    font-family: var(--its);
+    color: var(--accent);
+}
+
 //Card Metadata
 .kanban-plugin__item-content-wrapper {
     background: var(--kanban-card-metadata-background);
@@ -85,8 +112,11 @@ body {
 //Buttons
 .kanban-plugin__item-button-wrapper.kanban-plugin__item-button-wrapper {
     border: 0;
-    background-color: var(--code-bg);
+    background-color: var(--kanban-button-background);
     padding: 0;
+    & button {
+        box-shadow: var(--kanban-button-shadow);
+    }
 }
 
 //Input

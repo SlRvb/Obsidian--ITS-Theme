@@ -20,7 +20,6 @@ body {
 
     //Text
     --statblock-heading-font: var(--font);
-    --statblock-heading-font-size: var(--h3-size);
     --statblock-heading-font-color: var(--headers);
     --statblock-heading-font-variant: normal;
     --statblock-heading-font-weight: var(--header-weight);
@@ -36,8 +35,8 @@ body {
     
     --statblock-property-name-font-color: var(--headers);
 
-    --statblock-section-heading-border-size: 0;
-    --statblock-section-heading-border-color: var(--statblock-primary-color);
+    --statblock-section-heading-border-size: 4px;
+    --statblock-section-heading-border-color: var(--table);
     --statblock-section-heading-font-color: var(--accent2-lite); 
     --statblock-section-heading-font-size: var(--h3-size);
     --statblock-section-heading-font-variant: normal;
@@ -49,6 +48,15 @@ body {
 
 
 .obsidian-statblock-plugin {
+    --header-border-line-width: 0;
+    --h1-border-line-width: var(--header-border-line-width);
+    --h2-border-line-width: var(--header-border-line-width);
+    --h3-border-line-width: var(--header-border-line-width);
+    --h4-border-line-width: var(--header-border-line-width);
+    --h5-border-line-width: var(--header-border-line-width);
+    --h6-border-line-width: var(--header-border-line-width);
+
+
     //Alt Coloring
     // & .statblock-item-container:nth-child(odd) :is(.line, .property) { background: var(--statblock-alt); }
 

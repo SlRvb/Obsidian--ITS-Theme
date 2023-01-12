@@ -29,10 +29,15 @@ body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
     --h5-size: var(--font-text);
     --h6-size: var(--font-text);
 
+    //Lists
+    --list-marker-color-collapsed: var(--list-marker-color);
 
+    //Tags
+    --tag-radius: 0;
+    --tag-border-radius: 0;
+    --tag-border-width: 0;
+    
     //Fix codeblock
-    .cm-line.HyperMD-codeblock {
-        padding-left: 5px;
-    }
+    .cm-line.HyperMD-codeblock { padding-left: 5px; }
 
 }

@@ -10,6 +10,7 @@
 @use 'scrollbar';
 
 @use 'inline-title';
+@use 'frontmatter';
 @use 'headers';
 @use 'note';
 @use 'mode-source';
@@ -23,3 +24,4 @@
 @use 'hr';
 @use 'blockquote';
 @use 'callout';
+@use 'text-decoration';

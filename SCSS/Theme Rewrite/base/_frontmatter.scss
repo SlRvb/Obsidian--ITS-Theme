@@ -1,0 +1,21 @@
+.frontmatter-container:not(.is-collapsed) {
+    border-bottom: 2px solid var(--hr);
+
+    & .frontmatter-container-header {
+        border-bottom: 0;
+        margin-bottom: 0;
+        
+        border-top: 2px solid var(--hr);
+        padding-top: var(--size-4-2);
+    }
+}
+.frontmatter-container {
+    & .frontmatter-container-header {
+        justify-content: center;
+        font-weight: 600;
+        content: '/ec10';
+    }
+    & .frontmatter-section-data-item {
+        color: var(--text);
+    }
+}

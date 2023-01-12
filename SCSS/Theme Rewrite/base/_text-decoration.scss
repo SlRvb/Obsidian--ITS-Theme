@@ -1,0 +1,12 @@
+body {
+    --strikethrough-color: inherit;
+    --strikethrough-line-color: inherit;
+    --strikethrough-line-thickness: 1px;
+}
+
+del,
+.cm-strikethrough {
+    color: var(--strikethrough-color);
+    text-decoration-thickness: var(--strikethrough-line-thickness);
+    text-decoration-color: var(--strikethrough-line-color);
+}

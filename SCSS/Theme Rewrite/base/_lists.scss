@@ -34,52 +34,84 @@
     --indentation-guide-width: 2px;
     --indentation-guide-color-active: var(--accent);
     
+    --list-color-1: var(--indentation-guide-color);
+    --list-color-2: var(--indentation-guide-color);
+    --list-color-3: var(--indentation-guide-color);
+    --list-color-4: var(--indentation-guide-color);
+    --list-color-5: var(--indentation-guide-color);
+    --list-color-6: var(--indentation-guide-color);
 }
+
+
 
 //Bullet List
 //Remove Obsidian Bullet
 .list-bullet {
     &::after,
     &::before { display: none; }
-    width: 12px;
 }
 .is-live-preview .cm-formatting-list-ul::before,
 ul > li:not(.task-list-item)::before {
     content: var(--bullet);
     font-family: var(--bullet-font);
+    font-size: var(--font-text-size);
+
     color: var(--list-marker-color);
     background-color: transparent;
     
-    float: left;
-    
-    margin-left: -23px;
     transform: unset;
     position: unset;
-
-    width: unset;
+    
     height: unset;
     
 }
-.is-live-preview .cm-formatting-list-ul::before { margin-left: -18px; }
-
-// Alternating Bullet Colors
-// ul li:nth-child(even)::before { color: var(--list-marker-color-other) !important; }
-
-// Right to Left
-// .rtl ul li::before {
-//     float: right;
-//     margin-left: unset;
-//     margin-right: -22px;
-// }
+//Alignment
+ul > li:not(.task-list-item)::before { 
+    float: left; //Spaced list bullet fix
+    margin-left: -23px; 
+    margin-right: 7px; 
+}
+.is-live-preview .cm-formatting-list-ul::before { 
+    margin-right: -6px; 
+    margin-left: -4px;
+}
+// Checklist Alignment
+.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
+    vertical-align: -3px;
+    margin: 0;
+    // margin-left: 2px;
+    margin-right: 2px;
+}
 
 //Numbered List
 ol > li::marker,
 .cm-line .cm-formatting-list-ol { color: var(--list-numbered-color); }
-// .cm-line .cm-formatting-list-ol { margin-left: -3px;}
 
 
-// /* Spaced Lists: Fix breaking when Space in between Lists*/
+
+//Rainbow Indentation Line Colors
+:is(ul, ol) > li,
+.cm-hmd-list-indent .cm-indent:nth-child(1)::before { --indentation-guide-color: var(--list-color-1); }
+:is(ul ul, ol ol) > li,
+.cm-hmd-list-indent .cm-indent:nth-child(2)::before { --indentation-guide-color: var(--list-color-2); }
+:is(ul ul ul, ol ol ol) > li,
+.cm-hmd-list-indent .cm-indent:nth-child(3)::before { --indentation-guide-color: var(--list-color-3); }
+:is(ul ul ul ul, ol ol ol ol) > li,
+.cm-hmd-list-indent .cm-indent:nth-child(4)::before { --indentation-guide-color: var(--list-color-4); }
+:is(ul ul ul ul ul, ol ol ol ol ol) > li,
+.cm-hmd-list-indent .cm-indent:nth-child(5)::before { --indentation-guide-color: var(--list-color-5); }
+:is(ul ul ul ul ul ul, ol ol ol ol ol ol) > li,
+.cm-hmd-list-indent .cm-indent:nth-child(6)::before { --indentation-guide-color: var(--list-color-6); }
+
+
+
+// Spaced Lists: Fix breaking when Space in between Lists
+:is(ul, ol) li.task-list-item > p,
 :is(ul, ol) li > p { margin-block-end: unset; }
+.markdown-rendered ul.has-list-bullet li p:first-of-type { margin-block-start: 1em; }
+
+:is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li 
+{ padding-top: unset; padding-bottom: 0; }
 
 
 
@@ -91,17 +123,12 @@ li.is-collapsed .list-bullet:after,
 
 
 
-// Checklist
-.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
-    vertical-align: -3px;
-    margin: 0;
-}
-
-
-// ul:not(.has-list-bullet) input[type=checkbox] { vertical-align: -3px; }
-// .task-list-label.task-list-label input.task-list-item-checkbox { vertical-align: -.2em; }
-
-
+// Right to Left
+// .rtl ul li::before {
+//     float: right;
+//     margin-left: unset;
+//     margin-right: -22px;
+// }
 
 
 // /*List Arrows*/

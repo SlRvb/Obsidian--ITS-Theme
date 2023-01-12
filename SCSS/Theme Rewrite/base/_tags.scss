@@ -9,5 +9,11 @@
     --tag-border-color-hover: var(--accent);
     
     --tag-decoration-hover: underline;
-    
+
+    --tag-font: var(--default-font);
 }
+
+//Tag Font
+a.tag,
+.cm-hashtag
+{ font-family: var(--tag-font); }

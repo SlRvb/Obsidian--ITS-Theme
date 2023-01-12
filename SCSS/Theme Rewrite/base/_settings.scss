@@ -8,7 +8,13 @@
     
     --modal-nav-item-background: transparent; //Personal
     --modal-nav-item-background-hover: var(--td); //Personal
-
+    
+    --setting-item-padding: 10px 15px;
+    --setting-item-background: transparent;
+    --setting-item-alt-background: var(--setting-item-background);
+    --setting-item-alt-background-hover: var(--td);
+    --setting-item-border-color: var(--table);
+    --setting-item-heading-background: transparent;
 
     //Toggle
     --toggle-width: 20px;
@@ -17,7 +23,7 @@
 }
 
 //Setting Hover BG
-.setting-item:hover {
+.setting-item.setting-item:hover {
     background-color: var(--modal-nav-item-background-hover);
 }
 
@@ -29,8 +35,32 @@
         padding-left: 18px;
         padding-right: 18px;
     }
-    & .setting-item:first-child { padding-top: 0.75em; }
-    & .installed-plugins-container { padding: 0;}
+    & .setting-item:first-child { padding-top: 0; }
+    & .installed-plugins-container { padding: 0; }
+
+    //Settings
+    .setting-item.setting-item {
+        border: 0;
+        border-bottom: 1px solid;
+        padding: var(--setting-item-padding);
+        background: var(--setting-item-background);
+        border-color: var(--setting-item-border-color);
+    }
+    .setting-item-heading.setting-item-heading.setting-item-heading {
+        background: var(--setting-item-heading-background);
+        border-bottom: 2px solid var(--headers);
+
+        &:hover { 
+            background: var(--td); 
+        }
+    }
+    .setting-item:nth-child(even):not(.setting-item-heading) {
+        background-color: var(--setting-item-alt-background);
+
+        &:hover {
+            background-color: var(--setting-item-alt-background-hover);
+        }
+    }
 
 }
 //Fixed Settings Sidebar
@@ -48,11 +78,16 @@
 }
 
 
+
+
+.u-pop { color: var(--text); }
+
+
+
 //Fixed Toggle Checkbox Dropshadow
 .checkbox-container,
 .checkbox-container:after
 { box-shadow: var(--toggle-shadow); }
-
 //Fixed Toggle Small Sizing
 .checkbox-container.mod-small {
     width:var(--toggle-s-width);
@@ -62,6 +97,8 @@
 .checkbox-container.is-enabled {
     background-color: var(--accent);
 }
+
+.setting-item:hover .checkbox-container { box-shadow: 0 0 0 1px var(--background-modifier-border); }
 
 
 //Fixed Community Theme/Plugin Styling

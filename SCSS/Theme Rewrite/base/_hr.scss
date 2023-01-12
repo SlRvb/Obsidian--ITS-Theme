@@ -2,16 +2,22 @@ body {
     --hr-icon-symbol: "\e817";
     --hr-icon-font: var(--its);
     --hr-icon-background: var(--note);
+    --hr-icon-padding-x: 4px;
     
     --hr-icon-color: 0 0 0 var(--headers);
-    --hr-thickness: 2px;
     --hr-color: var(--hr);
+    --hr-thickness: 2px;
+    --hr-width: 100%;
 }
 
 
 /*Stylized HR/Horizontal Line*/
 .hr.cm-line:not(.cm-active),
 .markdown-preview-view hr {
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--hr-width);
+
     &::after {
         content: var(--hr-icon-symbol);
         font-family: var(--hr-icon-font);
@@ -27,7 +33,7 @@ body {
         color: transparent;
         text-shadow: var(--hr-icon-color);
 
-        padding: 0 4px; //Symbol Padding
+        padding: 0 var(--hr-icon-padding-x); //Symbol Padding
         background-color: var(--hr-icon-background); //Color bg to cover line
     }
 }

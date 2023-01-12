@@ -10,12 +10,21 @@ body {
     --nav-item-color: var(--text);
     --nav-item-color-hover: var(--text-dl);
     --nav-item-color-active: var(--text-dl);
+    --nav-item-color-highlighted: var(--text-dl); //Dragged item
+
     --nav-item-background-hover: var(--dark-accent);
     --nav-item-background-active: var(--dark-accent);
-    --nav-item-color-highlighted: var(--text-dl); //Dragged item
+    --nav-item-background-selected: var(--hvr);
+    
     --nav-item-border-width: 0px;//Personal
     --nav-item-border-color: var(--lite-accent);//Personal
+
+    --nav-item-padding: 4px 8px;
+    --explorer-padding: 2px 8px;
+    --nav-item-children-padding-left: 8px;
+    --nav-item-children-margin-left: 15px;
     
+
     --nav-item-size: var(--font-ui-small);
     --nav-item-weight: 500;
     --nav-item-weight-hover: 700;
@@ -32,27 +41,44 @@ body {
 //Thick Folder Text
 .nav-folder-title { --nav-item-weight: 700; }
 
-
 //Fix File Explorer
-.nav-folder.mod-root > .nav-folder-title:hover {
-    color: var(--dark-accent);
+.nav-folder.mod-root > .nav-folder-title:hover 
+{ color: var(--dark-accent); }
+
+.nav-files-container { 
+    padding: 4px; 
+    padding-left: 3px; 
 }
-.nav-files-container { padding: 4px; padding-left: 3px; }
 
 //Fix File Padding
-.nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
-    padding: var(--nav-item-padding);
-}
+// .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {  }
 
 //Hover
-.nav-file-title:hover .nav-file-title-content,
-.nav-folder-title:hover .nav-folder-title-content {
-    // text-decoration-line: underline;
-    text-decoration-color: var(--nav-item-border-color);
-    text-decoration-thickness: var(--nav-item-border-width);
-}
+// .nav-file-title:hover .nav-file-title-content,
+// .nav-folder-title:hover .nav-folder-title-content {
+//     text-decoration-line: underline;
+//     text-decoration-color: var(--nav-item-decoration-border-color);
+//     text-decoration-thickness: var(--nav-item-decoration-border-width);
+// }
 
 //Vault Name
-.nav-folder.mod-root > .nav-folder-title {
-    font-family: var(--vault-font);
+.nav-folder.mod-root > .nav-folder-title 
+{ font-family: var(--vault-font); }
+
+//nav-folder
+.nav-folder.mod-root > .nav-folder-children {
+    & .nav-folder > .nav-folder-title,
+    & .nav-file > .nav-file-title { 
+        // align-items: baseline;
+        border: 2px solid transparent; 
+        margin-bottom: 0; 
+        padding: var(--explorer-padding);
+
+        &:hover { border-color: var(--nav-item-background-hover); }
+    }
+
+    // & .has-focus {
+    //     border-color: var(--nav-item-border-color);
+    // }
+
 }

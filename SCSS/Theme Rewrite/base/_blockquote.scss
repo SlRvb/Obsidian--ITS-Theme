@@ -6,15 +6,19 @@ body {
     --blockquote-padding: var(--size-4-3) var(--size-4-6); //Personal
 
     --blockquote-background-color: var(--embed-bg);
-    --blockquote-border-color: var(--bg);
 }
 
-// .is-live-preview .HyperMD-quote.HyperMD-quote,
 .markdown-rendered blockquote { 
     background: var(--blockquote-background-color); 
     display: flow-root;
 }
-.HyperMD-quote { z-index: -1; }
+.is-live-preview .HyperMD-quote.HyperMD-quote.HyperMD-quote { 
+    &::before { display: none; }
+    border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+
+    padding: 7px 20px;
+    z-index: -1; 
+}
 
 //Fix Blockquote Padding
 .markdown-rendered blockquote,
@@ -31,3 +35,5 @@ body {
     --blockquote-border-thickness: 2px;
     --blockquote-border-color: var(--accent);
 }
+
+

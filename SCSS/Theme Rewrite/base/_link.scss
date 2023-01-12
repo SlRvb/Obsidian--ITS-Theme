@@ -8,16 +8,29 @@ body
     
     --link-unresolved-color: var(--inactive);
     --link-color-hover: var(--lite-accent);
+    --link-external-color-hover: var(--text-accent-hover);
     
     --link-font: inherit;
     --link-external-font: var(--link-font); //Pesonal
-
-    --link-external-color-hover: var(--text-accent-hover);
+    --link-weight: inherit;
+    --link-border: none;
+    
+    --link-transform: none;
 }
+
 
 //Link
 .internal-link { font-family: var(--link-font); }
 .external-link { font-family: var(--link-external-font); }
+
+a[href^='https'],
+.internal-link,
+.external-link,
+.cm-underline {
+    font-weight: var(--link-weight);
+    border-bottom: var(--link-border);
+    text-transform: var(--link-transform);
+}
 
 
 //Recolor []

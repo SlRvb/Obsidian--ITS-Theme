@@ -32,7 +32,8 @@ body {
     //Tab Stacked
     --tab-stacked-font-weight: 700;
     --tab-stacked-font-size: 15px;
-    --tab-stacked-shadow: -10px 0 10px var(--td);
+    --tab-stacked-shadow: -10px 0 10px var(--tab-stacked-shadow-color);
+    --tab-stacked-shadow-color: var(--drop-shadow);
 }
 
 

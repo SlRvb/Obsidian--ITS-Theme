@@ -1,0 +1,10 @@
+@import 'checkbox-sets';
+
+/*----Checked Bg----*/
+.check-bg {
+    @each $checkbox, $set in $checkboxes {
+        .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="#{$checkbox}"],
+        :is(ul, ol) > li[data-task="#{$checkbox}"].task-list-item.is-checked 
+        { background: map-get($set, background); }
+    }
+}

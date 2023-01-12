@@ -1,14 +1,27 @@
-.tag-notion {
+.tag-notion.tag-notion {
+    --tag-radius: 5px;
     --tag-border-radius: 5px;
 }
 
-.tag-bubble {
+.tag-bubble.tag-bubble {
+    --tag-radius: 25px;
     --tag-border-radius: 25px;
 }
 
-.tag-text {
+.tag-outline {
+    --tag-border-width: 2px;
+
+    &.tag-outline {
+    --tag-background: transparent;
+    --tag-color: var(--tag-text);
+    }
+}
+
+.tag-text.tag-text {
     --tag-background: transparent;
     --tag-color: var(--lite-accent);
     --tag-padding: 0;
+    --tag-padding-x: 0;
+    --tag-padding-y: 0;
     --font-size: var(--font-size);
 }

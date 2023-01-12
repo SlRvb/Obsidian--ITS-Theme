@@ -1,6 +1,15 @@
 
 // Mini Sidebar Ribbon Float
-.sd-mini-float:not(.is-mobile) {
+.sidebar-ribbon-mini-float:not(.is-mobile) {
+    & .side-dock-ribbon.mod-right,
+    & .side-dock-ribbon.mod-left {
+        position: absolute;
+        margin-top: 38px;
+        border: 1px solid var(--lines);
+        box-shadow: 4px 4px 0 var(--outline);
+        width: 40px;
+    }
+
     & .side-dock-ribbon:not(:hover) {
         flex: 0 0 20px;
         width: 20px;

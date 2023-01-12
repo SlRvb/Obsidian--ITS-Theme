@@ -1,0 +1,48 @@
+.lists-neon {
+    --neon: 0 0 5px;
+    --neon-wide: -2px 0 10px; // -2px 0 20px
+
+    --indentation-guide-color-active: var(--text-dl);
+
+    --list-color-1: var(--rainbow-1);
+    --list-color-2: var(--rainbow-2);
+    --list-color-3: var(--rainbow-3);
+    --list-color-4: var(--rainbow-4);
+    --list-color-5: var(--rainbow-5);
+    --list-color-6: var(--rainbow-6);
+
+    --list-shadow-color-1: var(--neon) var(--rainbow-1), var(--neon-wide) var(--rainbow-1);
+    --list-shadow-color-2: var(--neon) var(--rainbow-2), var(--neon-wide) var(--rainbow-2);
+    --list-shadow-color-3: var(--neon) var(--rainbow-3), var(--neon-wide) var(--rainbow-3);
+    --list-shadow-color-4: var(--neon) var(--rainbow-4), var(--neon-wide) var(--rainbow-4);
+    --list-shadow-color-5: var(--neon) var(--rainbow-5), var(--neon-wide) var(--rainbow-5);
+    --list-shadow-color-6: var(--neon) var(--rainbow-6), var(--neon-wide) var(--rainbow-6);
+
+    //Fix empty box Issues
+    & .cm-hmd-list-indent .cm-indent::before { width: 0; }
+
+    //Add Neon
+    & :is(ul ul, ol ol)::before,
+    & .cm-indent::before 
+    { box-shadow: var(--list-shadow-color-1); }
+
+    & :is(ul ul ul, ol ol ol)::before,
+    & .cm-indent:nth-child(2)::before 
+    { box-shadow: var(--list-shadow-color-2); }
+
+    & :is(ul ul ul ul, ol ol ol ol)::before,
+    & .cm-indent:nth-child(3)::before
+    { box-shadow: var(--list-shadow-color-3); }
+
+    & :is(ul ul ul ul ul, ol ol ol ol ol)::before,
+    & .cm-indent:nth-child(4)::before
+    { box-shadow: var(--list-shadow-color-4); }
+
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol)::before,
+    & .cm-indent:nth-child(5)::before
+    { box-shadow: var(--list-shadow-color-5); }
+
+    & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol)::before,
+    & .cm-indent:nth-child(6)::before
+    { box-shadow: var(--list-shadow-color-6); }
+}

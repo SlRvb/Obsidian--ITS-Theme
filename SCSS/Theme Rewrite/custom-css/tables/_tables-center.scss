@@ -1,5 +1,8 @@
 /*Table Centered*/
-.t-c table {
-    margin-left: auto;
-    margin-right: auto
+.tables-center,
+.t-c {
+    & table {
+        margin-left: auto;
+        margin-right: auto
+    }
 }

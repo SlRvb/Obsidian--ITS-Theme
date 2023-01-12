@@ -1,6 +1,6 @@
-.titlebar-colors {
-    --titlebar-background: var(--accent);
-    --titlebar-background-focused: var(--accent);
+.titlebar-colors.titlebar-colors {
+    --titlebar-background: var(--dark-accent);
+    --titlebar-background-focused: var(--dark-accent);
 
     --tab-text-color: var(--soft-text);
     --tab-text-color-focused: var(--text);
@@ -8,6 +8,7 @@
     --tab-font-weight: 500;
     --tab-font-weight-active: 900;
 
+    --tab-outline-width: 0;
     --tab-divider-color: var(--td);
 
 

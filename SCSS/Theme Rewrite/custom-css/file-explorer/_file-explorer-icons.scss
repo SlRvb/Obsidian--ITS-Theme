@@ -5,6 +5,8 @@ body {
     --file-icon: "\e800";
     --file-font: var(--its);
     --file-icon-margin: 6px;
+    
+    --nav-item-children-padding-left: 2px;
 }
 
 
@@ -21,6 +23,10 @@ body {
     content: var(--folder-icon);
     font-family: var(--folder-font);
     color: var(--folder);
+}
+
+.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content::before {
+    color: var(--folder-open);
 }
 
 //Files

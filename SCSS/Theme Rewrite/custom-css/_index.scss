@@ -9,8 +9,7 @@
 @use 'sizing';
 
 @use 'iframe';
-@use 'hr-adj';
-
+@use 'plugins';
 
 //CSS Classes
 @use 'tables';
@@ -22,3 +21,5 @@
 @use 'header-bar';
 @use 'sidebar';
 @use 'headings';
+@use 'links';
+@use 'hr';

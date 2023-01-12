@@ -1,0 +1,16 @@
+//Odd Table Alt Background
+.tables-alt-original .markdown-rendered tbody tr {
+    & > td:nth-child(2n+2),
+    &:nth-child(odd)
+    { background-color: transparent; }
+
+    //Column
+    & > td:nth-child(odd) {
+        background-color: var(--table-column-alt-background);
+    }
+    
+    //Row
+    &:nth-child(even) {
+        background-color: var(--table-row-alt-background);
+    }
+}

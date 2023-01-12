@@ -2,6 +2,9 @@
 .inline-title-small {
     --inline-title-size: var(--font-size);
 }
+.inline-title-medium {
+    --inline-title-size: var(--font-ui-medium);
+}
 
 //Font
 .inline-title-normal-font {}

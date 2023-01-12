@@ -39,7 +39,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
+        
         // Sub Callout Sizing
         & .callout {
             flex: 1 1 250px;
@@ -64,4 +64,14 @@
             break-inside: avoid;
         }
     }
+
+
+    // &[data-callout-metadata~="statblock"] > .callout-content {
+    //     display: flex;
+    //     // flex-direction: row;
+    //     // flex-wrap: wrap;
+    //     // flex: 1 1 400px;
+
+    //     grid-template-columns: none;
+    // }
 }

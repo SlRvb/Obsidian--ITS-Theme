@@ -1,0 +1,28 @@
+.list-default-bullet {
+    --list-bullet-border: none;
+    --list-bullet-radius: 50%;
+    --list-bullet-size: 0.3em;
+    --list-bullet-transform: none;
+    
+    --list-marker-color: var(--text-faint);
+    --list-marker-color-hover: var(--text-muted);
+    --list-marker-color-collapsed: transparent;
+    --list-bullet-box-shadow-color: var(--lines);
+
+    //Reshow Bullets
+    & .list-bullet::after, 
+    & .list-bullet::before { display: initial; }
+    
+    //Undo Before Alignments
+    & .is-live-preview .cm-formatting-list-ul::before,
+    & ul > li:not(.task-list-item)::before {
+        display: none;
+        margin: unset; 
+    }
+
+    //Fix Bullet Alignment
+    & .list-bullet { padding-left: 1px; }
+    & li .list-bullet { padding-left: 2px; }
+    & .is-live-preview .cm-formatting-list-ul { margin-right: 7px; }
+    
+}

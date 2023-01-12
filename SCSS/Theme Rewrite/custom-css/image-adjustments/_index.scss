@@ -1,3 +1,4 @@
+@use 'img-variables';
 @use 'img-adj-sizes';
 @use 'img-adj-location';
 @use 'img-adj-invert';
@@ -7,3 +8,5 @@
 @use 'img-adj-shapes-portrait';
 @use 'img-adj-shapes-profile';
 @use 'img-adj-shapes';
+
+@use 'img-adj-styling';

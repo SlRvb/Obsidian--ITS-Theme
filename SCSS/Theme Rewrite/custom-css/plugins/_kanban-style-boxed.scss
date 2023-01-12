@@ -1,0 +1,14 @@
+
+//CSS Styling
+
+.kanban-boxed .kanban-plugin__lane {
+    --kanban-lane-border: var(--box-border-m);
+    --kanban-lane-box-shadow: var(--shadow-m);
+}
+//Cards Side Style
+.kanban-boxed .kanban-plugin__item.kanban-plugin__item {
+    border: 0;
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+}
+

@@ -1,0 +1,18 @@
+.kanban-minimal,
+.kbn {
+    --kanban-lane-background: transparent;
+    --kanban-lane-border: none;
+    --kanban-lane-box-shadow: none;
+
+    --kanban-card-title-background: var(--code-bg);
+    --kanban-card-title-border: 0 1px 0 var(--outline);
+    --kanban-card-metadata-background: var(--code-bg);
+    --kanban-card-margin: 0;
+    
+    --kanban-link-color: var(--text);
+    --kanban-link-font-weight: 600;
+    --kanban-link-symbol: "\e819";
+
+    --kanban-button-background: transparent;
+    --kanban-button-shadow: transparent;
+}

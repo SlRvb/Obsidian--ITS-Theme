@@ -1,0 +1,17 @@
+
+.hide-header-underline.hide-header-underline { 
+    --header-border-line-height: 0;
+    --h1-border-line-height: var(--header-border-line-height);
+    --h2-border-line-height: var(--header-border-line-height);
+    --h3-border-line-height: var(--header-border-line-height);
+    --h4-border-line-height: var(--header-border-line-height);
+    --h5-border-line-height: var(--header-border-line-height);
+    --h6-border-line-height: var(--header-border-line-height);
+}
+
+.hide-header-underline-1 { --h1-border-line-height: 0; }
+.hide-header-underline-2 { --h2-border-line-height: 0; }
+.hide-header-underline-3 { --h3-border-line-height: 0; }
+.hide-header-underline-4 { --h4-border-line-height: 0; }
+.hide-header-underline-5 { --h5-border-line-height: 0; }
+.hide-header-underline-6 { --h6-border-line-height: 0; }

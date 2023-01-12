@@ -1,0 +1,8 @@
+img[alt~="border"],
+.internal-embed[alt~="border"] img
+{
+    border: var(--image-border-width) solid var(--image-border-color);
+    padding: var(--image-border-padding);
+
+    background: var(--image-border-background);
+}

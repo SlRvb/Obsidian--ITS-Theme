@@ -3,6 +3,7 @@
 
 /*Center Image*/
 // .image-embed:is([src*="#ctr"], [src*="#center"])
+.img-adj-center,
 img:is([alt*="ctr"], [alt*="center"]) {
     display:block;
     margin-left: auto;
@@ -11,23 +12,25 @@ img:is([alt*="ctr"], [alt*="center"]) {
 
 
 /*Left & Right*/
-img,
-.image-embed {
-    &:is([alt*="left"], [alt*="locl"]),
-    &[src*="#locl"] img 
-    {
-        float:left;
-        margin-right: 2%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    &:is([alt*="right"], [alt*="locr"]),
-    &[src*="#locr"] img 
-    {
-        float:right;
-        margin-left: 2%;
-        margin-bottom: 0px;
+:not(.is-live-preview) {
+    img,
+    .image-embed {
+        &:is([alt*="left"], [alt*="locl"]),
+        &[src*="#locl"] img 
+        {
+            float:left;
+            margin-right: 2%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    
+        &:is([alt*="right"], [alt*="locr"]),
+        &[src*="#locr"] img 
+        {
+            float:right;
+            margin-left: 2%;
+            margin-bottom: 0px;
+        }
     }
 }
 

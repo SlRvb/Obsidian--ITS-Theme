@@ -1,0 +1,27 @@
+.list-bullet-side-lines {
+    & .markdown-rendered {
+        --indentation-guide-color: transparent;
+        --list-color-1: var(--indentation-guide-color);
+        --list-color-2: var(--indentation-guide-color);
+        --list-color-3: var(--indentation-guide-color);
+        --list-color-4: var(--indentation-guide-color);
+        --list-color-5: var(--indentation-guide-color);
+        --list-color-6: var(--indentation-guide-color);
+    }
+
+    & :is(ul, ol) li { 
+        border-left: var(--indentation-guide-width) solid var(--accent); 
+        padding-left: 3px;
+
+        --list-numbered-color: var(--headers);
+    }
+
+    //Even Coloring
+    & :is(ul, ol) > li:nth-child(even) {
+        border-left-color: var(--accent2);
+        
+        --list-numbered-color: var(--accent2);
+
+        &::before { --list-marker-color: var(--accent2); }
+    }
+}

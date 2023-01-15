@@ -47,7 +47,7 @@ body {
 
 //Fix Focused Inactive Tab Hover
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button,
-body.is-focused .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title 
+body.is-focused :is(.mod-left-split, .mod-right-split) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title 
 { color: var(--text-dl); }
 
 //Font weight of active note
@@ -63,6 +63,11 @@ body.is-focused .workspace-tab-header:not(.is-active):hover .workspace-tab-heade
 //Fix Tab Top Outline
 .mod-root .workspace-tab-header-container-inner {
     padding-top: 2px;
+}
+
+// Fix Tab Stacked Hover
+.mod-root .mod-stacked .workspace-tab-header:hover .workspace-tab-header-inner {
+    color: var(--tab-text-color-hover);
 }
 
 

@@ -36,7 +36,7 @@ a[href^='https'],
 //Recolor []
 .cm-s-obsidian {
     &:not(.is-live-preview) .cm-link,
-    & .cm-line.cm-active .cm-link.cm-link,
+    & .cm-line.cm-active .cm-formatting-link + .cm-link.cm-link,
     & .cm-image-alt-text.cm-link:not(.cm-formatting),
     & .cm-formatting-link-string.cm-string
     { color: var(--text-muted); }

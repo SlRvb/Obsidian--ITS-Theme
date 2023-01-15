@@ -15,6 +15,8 @@
     --setting-item-alt-background-hover: var(--td);
     --setting-item-border-color: var(--table);
     --setting-item-heading-background: transparent;
+    --setting-item-background-hover: var(--hvr);
+    --setting-item-heading-border: 2px solid var(--headers);
 
     //Toggle
     --toggle-width: 20px;
@@ -22,10 +24,7 @@
     --toggle-border-width: 1px;
 }
 
-//Setting Hover BG
-.setting-item.setting-item:hover {
-    background-color: var(--modal-nav-item-background-hover);
-}
+
 
 //Fixed Settings Padding
 .vertical-tab-content {
@@ -39,19 +38,19 @@
     & .installed-plugins-container { padding: 0; }
 
     //Settings
-    .setting-item.setting-item {
+    & .setting-item {
         border: 0;
         border-bottom: 1px solid;
         padding: var(--setting-item-padding);
         background: var(--setting-item-background);
         border-color: var(--setting-item-border-color);
     }
-    .setting-item-heading.setting-item-heading.setting-item-heading {
+    & .setting-item-heading.setting-item-heading.setting-item-heading {
         background: var(--setting-item-heading-background);
-        border-bottom: 2px solid var(--headers);
+        border-bottom: var(--setting-item-heading-border);
 
         &:hover { 
-            background: var(--td); 
+            background: var(--setting-item-background-hover); 
         }
     }
     .setting-item:nth-child(even):not(.setting-item-heading) {
@@ -63,6 +62,11 @@
     }
 
 }
+//Setting Hover BG
+.setting-item.setting-item:hover {
+    background-color: var(--modal-nav-item-background-hover);
+}
+
 //Fixed Settings Sidebar
 .vertical-tab-header {
     background-color: var(--modal-sidebar-background);
@@ -77,9 +81,12 @@
     font-size: var(--font-ui);
 }
 
+//Fix Close Button
+:is(.mod-linux, .mod-windows) .titlebar-button.mod-close:hover {
+    color: var(--text-dl);
+}
 
-
-
+//
 .u-pop { color: var(--text); }
 
 

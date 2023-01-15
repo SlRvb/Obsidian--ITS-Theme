@@ -18,4 +18,8 @@
     & .frontmatter-section-data-item {
         color: var(--text);
     }
+
+    & .frontmatter-section-label {
+        text-transform: unset;
+    }
 }

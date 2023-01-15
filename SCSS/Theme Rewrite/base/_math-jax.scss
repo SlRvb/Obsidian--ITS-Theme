@@ -1,0 +1,26 @@
+body {
+    --latex-color: var(--lite-accent);
+    --latex-format-color: var(--inactive);
+    --latex-syntax-color: var(--soft-text);
+}
+
+.mjx-math { font-style: normal; }
+.MJX-TEX { 
+    font-size: 130%;
+    color: var(--latex-color);
+}
+
+/*Math Block Margin Reduction*/
+.mjx-container[jax="CHTML"][display="true"] {
+    margin: 3% 0 !important;
+}
+/*Math Editor*/
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end) {
+    color: var(--latex-syntax-color);
+}
+
+.cm-s-obsidian span.cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder {
+    color: var(--latex-format-color);
+    font-style: normal;
+}

@@ -4,10 +4,10 @@ body {
     --hr-icon-background: var(--note);
     --hr-icon-padding-x: 4px;
     
-    --hr-icon-color: 0 0 0 var(--headers);
+    --hr-icon-color: var(--headers);
     --hr-color: var(--hr);
     --hr-thickness: 2px;
-    --hr-width: 100%;
+    --hr-width: auto;
 }
 
 
@@ -31,7 +31,7 @@ body {
         transform-origin: 50% 50%;
         
         color: transparent;
-        text-shadow: var(--hr-icon-color);
+        text-shadow: 0 0 0 var(--hr-icon-color);
 
         padding: 0 var(--hr-icon-padding-x); //Symbol Padding
         background-color: var(--hr-icon-background); //Color bg to cover line
@@ -46,4 +46,9 @@ body {
 //Unset Live Preview's Contain Paint for HR & Plugins
 .markdown-source-view.mod-cm6 .cm-content :is(.hr, .HyperMD-hr) { 
     contain: style !important;
+}
+
+//Fix Sidebar HR Icon BG Color
+:is(.mod-left-split, .mod-right-split) {
+    --hr-icon-background: var(--side-bar);
 }

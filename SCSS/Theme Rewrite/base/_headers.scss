@@ -150,19 +150,26 @@ body {
 
     //After/Before
     --header-border-line-color: var(--table);
-    --h1-border-left-color: var(--header-border-line-color);
-    --h2-border-left-color: var(--header-border-line-color);
-    --h3-border-left-color: var(--header-border-line-color);
-    --h4-border-left-color: var(--header-border-line-color);
-    --h5-border-left-color: var(--header-border-line-color);
-    --h6-border-left-color: var(--header-border-line-color);
+    --h1-border-line-color: var(--header-border-line-color);
+    --h2-border-line-color: var(--header-border-line-color);
+    --h3-border-line-color: var(--header-border-line-color);
+    --h4-border-line-color: var(--header-border-line-color);
+    --h5-border-line-color: var(--header-border-line-color);
+    --h6-border-line-color: var(--header-border-line-color);
+
+    --h1-border-left-color: var(--h1-border-line-color);
+    --h2-border-left-color: var(--h2-border-line-color);
+    --h3-border-left-color: var(--h3-border-line-color);
+    --h4-border-left-color: var(--h4-border-line-color);
+    --h5-border-left-color: var(--h5-border-line-color);
+    --h6-border-left-color: var(--h6-border-line-color);
     
-    --h1-border-right-color: var(--header-border-line-color);
-    --h2-border-right-color: var(--header-border-line-color);
-    --h3-border-right-color: var(--header-border-line-color);
-    --h4-border-right-color: var(--header-border-line-color);
-    --h5-border-right-color: var(--header-border-line-color);
-    --h6-border-right-color: var(--header-border-line-color);
+    --h1-border-right-color: var(--h1-border-line-color);
+    --h2-border-right-color: var(--h2-border-line-color);
+    --h3-border-right-color: var(--h3-border-line-color);
+    --h4-border-right-color: var(--h4-border-line-color);
+    --h5-border-right-color: var(--h5-border-line-color);
+    --h6-border-right-color: var(--h6-border-line-color);
 
 
     --header-border-line-width: 100%;

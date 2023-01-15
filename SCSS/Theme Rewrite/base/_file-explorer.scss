@@ -18,6 +18,7 @@ body {
     
     --nav-item-border-width: 0px;//Personal
     --nav-item-border-color: var(--lite-accent);//Personal
+    --nav-item-background-border-color-hover: var(--dark-accent);
 
     --nav-item-padding: 4px 8px;
     --explorer-padding: 2px 8px;
@@ -74,7 +75,7 @@ body {
         margin-bottom: 0; 
         padding: var(--explorer-padding);
 
-        &:hover { border-color: var(--nav-item-background-hover); }
+        &:hover { border-color: var(--nav-item-background-border-color-hover); }
     }
 
     // & .has-focus {

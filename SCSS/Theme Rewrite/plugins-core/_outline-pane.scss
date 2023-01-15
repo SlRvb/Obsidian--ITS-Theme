@@ -27,6 +27,7 @@ body .outline {
         color: var(--headers);
         padding-right: var(--outline-symbol-padding-right);
     }
+    & .tree-item-self:hover::before { color: var(--text-dl); }
     
     //Collapsed Fixes
     & .tree-item.is-collapsed {

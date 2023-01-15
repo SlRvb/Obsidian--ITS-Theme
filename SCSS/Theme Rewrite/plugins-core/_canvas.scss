@@ -1,0 +1,19 @@
+body.theme-dark {
+    --canvas-color: 88, 100, 159;
+}
+body.theme-light {
+    --canvas-color: 166, 180, 204;
+}
+
+.canvas-control-group,
+.canvas-control-item {
+    border-width: 2px;
+    border-color: var(--outline);
+}
+.canvas-control-item {
+    background-color: var(--note);
+}
+
+.canvas-card-menu {
+    border: var(--box-border);
+}

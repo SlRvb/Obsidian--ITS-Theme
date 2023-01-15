@@ -36,3 +36,8 @@ img,
     &:is([alt*="left"], [alt*="locl"]) { float: left !important; }
 }
 }
+
+.img-clear-hr { --hr-width: 100%; }
+.img-clear-headings { 
+    --h1-width: 100%;
+}

@@ -25,9 +25,11 @@ body {
     color: var(--folder);
 }
 
-.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content::before {
-    color: var(--folder-open);
+.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content {
+    &::before { color: var(--folder-open); } 
+    &:hover::before { color: var(--nav-item-color-active); }
 }
+
 
 //Files
 .nav-file-title .nav-file-title-content::before {

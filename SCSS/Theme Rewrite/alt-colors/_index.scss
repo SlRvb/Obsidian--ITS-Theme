@@ -71,7 +71,8 @@
     
     --checkbox-color: var(--accent);
     --checkbox-border-color: var(--accent);
-    --list-marker-color: var(--lite-accent);
+    --list-marker-color: var(--accent);
+    --list-numbered-color: var(--lite-accent);
     
     --table-header-background: var(--th);
     --table-header-background-hover: var(--accent);
@@ -84,11 +85,18 @@
     --tag-border-color-hover: var(--accent);
 
     --embed-border-left: 2px solid var(--headers);
+
     --hr-color: var(--hr);
+    // --hr-icon-color: var(--accent);
     
     --blockquote-border-color: var(--bg);
     --blockquote-background-color: var(--embed-bg);
 
+    // --folder: var(--headers);
+    // --folder-open: var(--text);
+    // --file: var(--inactive);
+
+    
     //
     background-color: var(--background-primary);
     --background-primary: var(--note);
@@ -99,7 +107,7 @@
     --background-modifier-border: var(--table);
     --background-modifier-hover: var(--hvr-active);
     
-    --background-modifier-form-field: var(--bg);
+    --background-modifier-form-field: var(--td);
 
     --text-highlight-bg: var(--highlight);
 
@@ -107,6 +115,7 @@
     --text-muted: var(--soft-text);
     --text-accent: var(--accent2-lite);
     --text-accent-hover: var(--accent2);
+    // --text-faint: var(--accent2);
 
     --interactive-normal: var(--outer-bar);
     --interactive-hover: var(--embed-bg);

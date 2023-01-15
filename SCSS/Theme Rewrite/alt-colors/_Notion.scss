@@ -6,6 +6,7 @@
     --hr-sym: "";
 
     background: var(--note);
+    --text-dl: white;
 }
 .theme-dark {
     & .notion,
@@ -13,32 +14,42 @@
     {
         --scrollbar-bg: #3b4044;
         --scrollbar-thumb-bg: #474C50;
-        --background-modifier-form-field: rgb(255, 255, 255, 0.1);
-        --background-modifier-form-field-highlighted: rgb(255, 255, 255, 0.1);
-        --text-highlight-bg: rgb(255, 255, 255, 0.1);
-        --text-highlight-bg-active: rgba(45, 170, 219, 0.3);
-        --text-selection: rgba(45, 170, 219, 0.3);
-
-        --text: #EBEBEB;
-        --headers: var(--text);
-        --accent2-lite: #2EA1CF;
-        --lite-accent: var(--bttn);
-        --soft-text: #A8ABAC;
-        --inactive: #5D6265;
-        --footnote: #7A7D7F;
-        --file: var(--text);
-        --code-text: var(--text);
-        --code-bg: #3F4447;
-    
+        
+        --outer-bar: var(--embed-bg);
+        --dark-sidebar: var(--side-bar);
+        --side-bar: #373C3F;
+        
         --note: #2F3437;
         --note-rgb: 47, 52, 55;
-        --outline: #0f0f0f40;
-        --bttn: transparent;
+
+        --headers: var(--text);
+        --text: #EBEBEB;
+        --soft-text: #A8ABAC;
+        --code-text: var(--text);
+        --i-at: var(--bttn);
+        --footnote: #7A7D7F;
+        --inactive: #5D6265;
+
+        --accent-color: 66, 180, 224;
+        --accent: var(--tag); /*#474C50*/
+        --lite-accent: var(--bttn);
+        --dark-accent: #4B5053; /*#26292B*/
+        --deep-dark-accent: var(--outer-bar);
+        --accent2: var(--soft-text);
+        --accent2-lite: #2EA1CF;
+    
+        --folder: var(--bttn);
+        --f-hover: var(--text);
+        --file: var(--text);
+        
         --bg: #3C4144;
-        --side-bar: #373C3F;
-        --outer-bar: var(--embed-bg);
-        --embed-bg: #3F4447;
+        // --code-bg: #3F4447;
         --code-bg: var(--bg);
+        --embed-bg: #3F4447;
+        // --aside-bg: #373C3F;
+        --aside-bg: var(--note);
+        --tag: #708dbb;
+        --bttn: #43B3E0; /*#889FC3*/
         
         --th: #373c3f;
         --td: #0f0f0f33;
@@ -46,22 +57,12 @@
         --hr: #3C3F43;
         --table: #4C5153;
         --lines: var(--table); /*#3E4245*/
-    
-        --bttn: #43B3E0; /*#889FC3*/
-        --tag: #708dbb;
-        --folder: var(--bttn);
-        --text-dl: white;
-        --i-at: var(--bttn);
-    
-        --f-hover: var(--text);
-        --accent: var(--tag); /*#474C50*/
-        --accent2: var(--soft-text);
-        --dark-accent: #4B5053; /*#26292B*/
-        --dark-sidebar: var(--side-bar);
-        // --aside-bg: #373C3F;
-        --aside-bg: var(--note);
-        --deep-dark-accent: var(--outer-bar);
-    
+        --outline: #0f0f0f40;
+        
+        --highlight: rgb(255, 255, 255, 0.1);
+        --hvr: rgba(45, 170, 219, 0.3);
+        --hvr-active: rgba(45, 170, 219, 0.3);
+
         --graph-bg: var(--note);
         --graph-lines: #5D626555;
         --graph-node: var(--headers);
@@ -76,61 +77,55 @@
 .theme-light {
     &.notion,
     & .notion {
-        --background-modifier-form-field: rgba(242, 241, 238, 0.6);
-        --background-modifier-form-field-highlighted: rgba(45, 170, 219, 0.2);
-        --text-highlight-bg: rgba(55, 53, 47, 0.078);
-        --text-highlight-bg-active: rgba(45, 170, 219, 0.2);
-        --text-selection: rgba(45, 170, 219, 0.3);
-
         --scrollbar-bg: #EDECE9;
         --scrollbar-thumb-bg: #D3D1CB;
 
         --text-on-accent: white;
+        
+        --outer-bar: #F1F1EF;
+        --dark-sidebar: var(--side-bar);
+        --side-bar: #F7F6F3;
 
         --note: #FFFFFF;
         --note-rgb: 247, 246, 243;
-        --side-bar: #F7F6F3;
-        --accent: #D3D1CB;
-        --dark-accent: #E8E7E4;
         
-        --outer-bar: #F1F1EF;
-        --inactive: #CFCECD;
-        --bg: #EDECE9;
-        --embed-bg: #F1F1EF;
-        --dark-sidebar: var(--side-bar);
-        --aside-bg: var(--note);
+        --accent: #D3D1CB;
+        --accent-color: 67, 179, 224; 
+        --accent: #43B3E0; 
+        --lite-accent: var(--bttn);
+        --dark-accent: var(--accent);//#E8E7E4;
+        --accent2: var(--soft-text);
+        --accent2-lite: #2EA1CF;
         --deep-dark-accent: var(--outer-bar);
         
         --headers: var(--text);
         --text: #37352f; /*#8D8C89*/
-        --accent2-lite: #2EA1CF;
-        --lite-accent: var(--bttn);
+        --inactive: #CFCECD;
         --soft-text: #82817C;
-        --hr: #EDEDEC;
-        --file: #69685f;
-        --outline: #0f0f0f15;
+        --code-text: var(--text);
+        --i-at: var(--bttn);
+        --footnote: #A09E9A;
         
-        --td: #37352F10;
+        --file: #69685f;
+        --folder: var(--text);
+        --folder-open: var(--bttn);
+            
         --th: var(--side-bar);
-        --th-text: var(--text);
-    
+        --table-header-color: var(--text);
+        --td: #37352F10;
+
+        --bg: #EDECE9;
+        --code-bg: #f7f6f3;
+        --embed-bg: #F1F1EF;
+        --aside-bg: var(--note);
+        --tag: var(--bttn);
+        --bttn: #43B3E0;
+        
+        --table:#e9e9e7;
+        --hr: #EDEDEC;
         --hr: rgba(55, 53, 47, 0.1);
         --lines: var(--hr);
-        --table:#e9e9e7;
-    
-        --bttn: #43B3E0;
-        --tag: var(--bttn);
-        --folder: var(--bttn);
-        --text-dl: white;
-        --i-at: var(--bttn);
-    
-        --f-hover: var(--text);
-        --accent: #43B3E0; 
-        --accent2: var(--soft-text);
-        --footnote: #A09E9A;
-    
-        --code-bg: #f7f6f3;
-        --code-text: var(--text);
+        --outline: #0f0f0f15;    
         
         --graph-bg: var(--note);
         --graph-lines: #CFCECD55;
@@ -140,5 +135,16 @@
         --graph-img: #000;
         --graph-tag: var(--accent);
         --graph-focused: var(--accent);
+
+        --highlight: rgba(55, 53, 47, 0.078);
+        --hvr: rgba(45, 170, 219, 0.2);
+        --hvr-active: rgba(45, 170, 219, 0.3);
+
+        --theme-rainbow-1: var(--lite-accent);
+        --theme-rainbow-2: var(--accent2);
+        --theme-rainbow-3: var(--inactive);
+        --theme-rainbow-4: var(--hr);
+        --theme-rainbow-5: var(--note);
+        --theme-rainbow-6: var(--td);
     }
 }

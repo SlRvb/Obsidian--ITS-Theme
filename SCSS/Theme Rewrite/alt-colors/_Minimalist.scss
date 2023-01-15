@@ -4,132 +4,127 @@
     --tag-color: var(--accent2-lite);
     
     //Minimalist Adjustments
-    --hr-sym: "";
-    --header-border-line-height: 0;
+    --hr-icon-symbol: ;
     --file-icon: ;
     --folder-icon: ;
+    
+    --header-border-line-height: 0;
     --nav-item-border-width: 2px;
     --nav-item-border-color: var(--text);
-    
+    --setting-item-heading-border: 2px solid var(--accent);
+
     --shadow-s: 1px 1px 0 var(--outline);
     --shadow-l: 4px 4px 0 var(--outline);
     --modal-border-width: 1px;
     --modal-border-color: var(--table);
     --tab-outline-color: transparent;
+    // --nav-item-background-border-color-hover: var(--accent);
 
     --drag-ghost-text-color: var(--text);
     
     --message-color: var(--text);
     --message-border-width: 1px;
-
-    --hvr-active: var(--background-modifier-form-field-highlighted);
 }
 
-.theme-dark.mini,
-.theme-dark .mini {
-    // --background-primary: var(--note);
-    // --background-primary-alt: var(--note);
-    // --background-secondary: var(--note);
-    // --background-secondary-alt: var(--note);
-    // --background-modifier-cover: var(--note);
+.theme-dark {
+    &.mini,
+    & .mini {
+        // --background-modifier-form-field-highlighted: rgba(113, 132, 162, 0.295);
+        --outer-bar: var(--note);
+        --dark-sidebar: var(--note);
+        --side-bar: var(--note);
 
-    // --text-accent: var(--accent2-lite);
-    // --text-muted: var(--soft-text);
+        --note: #1a1e24;
+        --note-rgb: 26, 30, 36;
 
-    --background-modifier-form-field-highlighted: rgba(113, 132, 162, 0.295);
-
-    --text-selection: #4f5b6a78;
-    --text-highlight-bg: rgba(87, 113, 156, 0.4);
-    --text-highlight-bg-active: rgba(112, 132, 160, 0.4);
-
-    --scrollbar-bg: var(--td);
-    --scrollbar-thumb-bg: var(--table);
-
-    --note: #1a1e24;
-    --dark-accent: var(--code-bg);
-    --accent: #414958;
-    --lite-accent: #aab3ca;
-    --table: var(--bg);
-
-    //--bg: #191d22;
-    --inactive: #586477;
-    --file: #aab3ca;
-    --code-bg: #232831;
-    --td: #06080c50;
-    --outline: #0b0f13;
+        --accent-color: ;
+        --accent: #546078;
+        --lite-accent: #aab3ca;
+        --dark-accent: #394151;
+        --deep-dark-accent: var(--note);
+        --accent2-lite: var(--text-dl);
+        
+        --headers: var(--text);
+        --code-text: var(--text);
+        --i-at: var(--text-faint);
+        --inactive: #586477;
+        --tag-text: var(--accent2-lite);
+        
+        //--bg: #191d22;
+        --code-bg: #232831;
+        --aside-bg: var(--note);
+        --embed-bg: var(--note);
+        --tag: var(--note);
+        
+        --folder: var(--text-dl);
+        --file: #aab3ca;
     
-    --deep-dark-accent: var(--note);
-    --dark-sidebar: var(--note);
-    --outer-bar: var(--note);
-    --side-bar: var(--note);
-    --aside-bg: var(--note);
-    --embed-bg: var(--note);
-    --folder: var(--text-dl);
-    --th: var(--note);
-    --tag: var(--note);
-    
-    --i-at: var(--text-faint);
-    --accent2-lite: var(--text-dl);
-    --headers: var(--text);
-    --code-text: var(--text);
+        --th: var(--note);
+        --td: #06080c50;
 
-    --graph-bg: var(--outer-bar);
-    --graph-lines: #363c4950;
-    --graph-node: var(--fg);
-    --graph-fill: var(--headers);
-    --graph-404: #727e93;
-    --graph-img: #6b90ad;
-    --graph-tag: black;
-    --graph-focused: var(--text-highlight-bg-active);
+        --table: var(--bg);
+        --outline: #0b0f13;
+
+        --highlight: rgba(81, 100, 122, 0.6);
+        --hvr: rgba(87, 113, 156, 0.4);
+        --hvr-active: rgba(101, 124, 156, 0.4);
+        
+        --graph-bg: var(--outer-bar);
+        --graph-lines: #363c4950;
+        --graph-node: var(--fg);
+        --graph-fill: var(--headers);
+        --graph-404: #727e93;
+        --graph-img: #6b90ad;
+        --graph-tag: black;
+        --graph-focused: var(--text-highlight-bg-active);
+
+        --theme-rainbow-1: var(--graph-404);
+        --theme-rainbow-2: var(--accent);
+        --theme-rainbow-3: var(--dark-accent);
+        --theme-rainbow-4: var(--code-bg);
+        --theme-rainbow-5: var(--td);
+        --theme-rainbow-6: var(--graph-tag);
+    }
 }
-.theme-light.mini,
-.theme-light .mini {
-    // --background-primary: var(--note);
-    // --background-primary-alt: var(--note);
-    // --background-secondary: var(--note);
-    // --background-secondary-alt: var(--note);
-    // --background-modifier-cover: var(--note);
-
-    // --interactive-accent: var(--inactive);
-    // --background-modifier-error: var(--interactive-failure);
-
+.theme-light {
+    &.mini,
+    & .mini {
     --background-modifier-form-field-highlighted: #99a4bb30;
-    --text-highlight-bg: #99a4bb50;
-    --text-highlight-bg-active: #99a4bb50;
-    --text-selection: #99a4bb50;
+    --highlight: #99a4bb50;
+    --hvr: #99a4bb50;
+    --hvr-active: #99a4bb50;
 
-    --text-muted: var(--soft-text);
-
-    --scrollbar-bg: var(--bg);
-    --scrollbar-thumb-bg: var(--outline);
+    --outer-bar: var(--note);
+    --dark-sidebar: var(--note);
+    --side-bar: var(--note);
 
     --note: #f8fbff;
-    --dark-accent: var(--note);
+
+    --text-dl: #000000;
+    --soft-text: #99a4bb;
+    --inactive: #d2daee;
+
     --accent: #b5c2d8;
     --lite-accent: #aab3ca;
-    --soft-text: #99a4bb;
-    --text-dl: #000000;
+    --dark-accent: #d5ddeb;
+    --deep-dark-accent: var(--note);
     --accent2: #d6def3;
+    --accent2-lite: var(--text-dl);
     
     --bg: #eef3ff;
-    --inactive: #d2daee;
-    --outline: #e1e9f6;
-    
-    --deep-dark-accent: var(--note);
-    --dark-sidebar: var(--note);
-    --outer-bar: var(--note);
-    --side-bar: var(--note);
     --aside-bg: var(--note);
     --embed-bg: var(--note);
-    --bttn: var(--note);
+    --bttn: var(--dark-accent);
     --tag: var(--note);
+    
+    --outline: #e1e9f6;
+    
     --th: var(--note);
-    --text-on-accent: var(--text-dl);
+
     --folder: var(--text-dl);
 
-    --i-at: var(--soft-text);
-    --accent2-lite: var(--text-dl);
     --headers: var(--text);
+    --i-at: var(--soft-text);
     --code-text: var(--text);
 
     --graph-bg: var(--outer-bar);
@@ -140,7 +135,14 @@
     --graph-img: #8ec1e9;
     --graph-tag: var(--accent2-lite);
     --graph-focused: #b6c9f1;
-}
+
+    --theme-rainbow-1: var(--bg);
+    --theme-rainbow-2: var(--td);
+    --theme-rainbow-3: var(--outline);
+    --theme-rainbow-4: var(--inactive);
+    --theme-rainbow-5: var(--accent);
+    --theme-rainbow-6: var(--graph-img);
+}}
 
 // .mini{
 //     & .nav-folder-children .nav-folder-title-content::before {

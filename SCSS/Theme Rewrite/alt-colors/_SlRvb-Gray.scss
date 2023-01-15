@@ -1,17 +1,17 @@
 .slrvb-g {
-    --header-weight: 100;
     --font: 'Norwester', 'Staatliches', 'Racing Sans One', 'Heavitas', 'Playfair Display', serif;    
+    --header-weight: 100;
+
     --vault-name-font-size: 25px;
     --vault-name-font-weight: 300;
     
     --font-monospace: 'Fira Code';
     
-    --hr-sym: "🏴";
+    --hr-icon-symbol: "🏴";
     
-    --highlight: rgba(123, 167, 221, 0.15);
+    --highlight: rgba(163, 188, 218, 0.3);
     --hvr: rgba(129,155,199,0.25);
-    --hvr-active: rgba(103, 136, 176, 0.22);
-
+    --hvr-active: rgba(163, 188, 218, 0.22);
 }
 
 
@@ -26,29 +26,38 @@
     --note: #171B21;
     --note-rgb: 23, 27, 33;
 
+    --color-accent: 81, 91, 113;
     --accent: #515b71;
     --lite-accent: #8e9ab4;
     --dark-accent: #333A49;
     --deep-dark-accent: #222731;
-
+    --accent2: #889FC3;
+    --accent2-lite: #cde2ff;
     --headers: #9DB1CA;
     --text: #AAB3CA;
     --soft-text: #778495;
     --code-text: #707a90;
     --i-at: #5D7B98;
     --footnote: #576571;
-    
-    --accent2: #889FC3;
-    --accent2-lite: #cde2ff;
     --inactive: #3c4a64;
+    --tag-text: #8690ab;
+    
+    --folder-open: #F1F7FF;
 
     --tag: #353d52;
-    --tag-text: #8690ab;
+    
     --th: var(--dark-accent);
+
     --table: #242b3d;
 
-    --highlight: rgba(87, 113, 156, 0.4);
+    --highlight: rgba(101, 116, 135, 0.27);
 
+    --theme-rainbow-1: var(--lite-accent);
+    --theme-rainbow-2: var(--code-text);
+    --theme-rainbow-3: var(--accent);
+    --theme-rainbow-4: var(--inactive);
+    --theme-rainbow-5: var(--table);
+    --theme-rainbow-6: var(--aside-bg);
 }}
 
 .theme-light {
@@ -61,12 +70,17 @@
     
     --note: #f8fbff;
     --note-rgb: 248, 251, 255;
-
+    
+    --color-accent: 174, 189, 212;
     --accent: #aebdd4;
     --lite-accent: #a6aec7;
     --dark-accent: #6e7a92;
     --deep-dark-accent: #171C22;
     --inactive: #C0C8D6;
+
+    --file: #A6B4CC;
+    --folder: var(--headers);
+    --folder-open: var(--accent);
 
     --headers: #6e7a92; 
     // --text: #76859c;
@@ -75,7 +89,7 @@
     --accent2-lite: #000000;
     --soft-text: #90a0c3;
     --code-text: #8193b5;
-    --i-at: #8FAABE;
+    --i-at: #8f9cbe;
 
     --table: #ccd6eb;
     --tag: #7485a3;
@@ -83,4 +97,10 @@
     
     --hr: #d6deea;
 
+    --theme-rainbow-1: var(--file);
+    --theme-rainbow-2: var(--soft-text);
+    --theme-rainbow-3: var(--tag);
+    --theme-rainbow-4: var(--dark-accent);
+    --theme-rainbow-5: var(--accent2);
+    --theme-rainbow-6: var(--deep-dark-accent);
 }}

@@ -11,25 +11,41 @@
 
         --vault-name-font-size: 25px;
     
-        --hr-sym: "\E803";
-        --hr-f: var(--its);
+        --hr-icon-symbol: "\E803";
+        --hr-icon-font: var(--its);
+        --hr-icon-symbol: ;
 
         --embed-h: #c93c3c;
-        --h1-border-color: linear-gradient(to right, var(--embed-h), transparent);
-        --h2-border-color: linear-gradient(to right, sandybrown, transparent);
-        --h3-border-color: linear-gradient(to right, #642020, transparent);
-        --h4-border-color: linear-gradient(to right, var(--header-border-line-color), transparent);
-        --h5-border-color: linear-gradient(to right, var(--header-border-line-color), transparent);
-        --h6-border-color: linear-gradient(to right, var(--header-border-line-color), transparent);
+        --h1-border-right-color: linear-gradient(to right, var(--embed-h), transparent);
+        --h2-border-right-color: linear-gradient(to right, sandybrown, transparent);
+        --h3-border-right-color: linear-gradient(to right, #642020, transparent);
+        --h4-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
+        --h5-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
+        --h6-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
+
+        --h1-border-left-color: linear-gradient(to left, var(--embed-h), transparent);
+        --h2-border-left-color: linear-gradient(to left, sandybrown, transparent);
+        --h3-border-left-color: linear-gradient(to left, #642020, transparent);
+        --h4-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);
+        --h5-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);
+        --h6-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);
 
         --icon-color: var(--text);
+        --drop-shadow: var(--td);
 
         // Paper Burn
+        --paper-edges: 0 0 60px var(--outline) inset;
+        --paper-edges-m: 0 0 100px var(--outline) inset;
         --tab-container-background: transparent;
         --tab-titlebar-color: transparent;
         // --tab-background-active: var(--tab-outline-color);
         --pane-background: transparent;
         // --modal-background: transparent;
+        --file-header-background: transparent;
+
+        //kanban
+        --kanban-card-title-background: var(--td);
+        --kanban-card-metadata-background: var(--note);
     }
 }
 
@@ -47,8 +63,7 @@
 .theme-light {
     &.wotc-beyond,
     & .wotc-beyond {
-        --hr-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Crect id='Artboard1' x='0' y='0' width='100' height='7' style='fill:none;'/%3E%3Cpath d='M50,2.5L100,3.5L50,4L0,3.5L50,2.5Z' style='fill:rgb(200, 57, 57);'/%3E%3C/svg%3E") no-repeat center center;
-        
+
         --outer-bar: #fbe2c5;
         --dark-sidebar: #f6e3cd;
         --side-bar: #fff6e4;
@@ -60,32 +75,30 @@
         --lite-accent: #a35158;
         --dark-accent: #cd645e; //#ffefda
         --deep-dark-accent: #2e1010;
+        --accent2: #000000;
+        --accent2-lite: #df6262;
 
         --text: #412f2f;
         --code-text: #681010;
-
-
-        --outline: #fbb4577e;
-        
-        
-        --table: var(--outline);
-        --aside-bg: #faf2e9;
-        --embed-bg: var(--aside-bg);
+        --inactive: #e2b7a3;
 
         --file-icon-color: #ebbd92;
         --file: var(--text);
-    
+        
         --bg: var(--dark-sidebar);
-
-        --td: #fae0be60;
         --code-bg: #f3e6d2;
+        --aside-bg: #faf2e9;
+        --embed-bg: var(--aside-bg);
+        
+        --td: #fae0be60;
+        
+        --table: var(--outline);
         --hr: var(--table);
         --lines: var(--inactive);
-        
-        --accent2: #000000;
-        --accent2-lite: #df6262;
-        --inactive: #e2b7a3;
+        --outline: #fbb4577e;
 
+        --hr-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Crect id='Artboard1' x='0' y='0' width='100' height='7' style='fill:none;'/%3E%3Cpath d='M50,2.5L100,3.5L50,4L0,3.5L50,2.5Z' style='fill:rgb(200, 57, 57);'/%3E%3C/svg%3E") no-repeat center center;
+        
 
 }}
 
@@ -97,15 +110,16 @@ body.wotc-beyond {
     & .workspace-tabs,
     & .vertical-tab-content,
     & .modal.modal,
-    & .community-modal-sidebar
-    { box-shadow: 0 0 60px var(--outline) inset; }
+    & .community-modal-sidebar,
+    & .canvas-wrapper
+    { box-shadow: var(--paper-edges); }
 }
 
 //Note CSSClass 
 body:not(.wotc-beyond) .wotc-beyond:is(
     .markdown-source-view,
     .markdown-preview-view
-){ box-shadow: 0 0 60px var(--outline) inset; }
+){ box-shadow: var(--paper-edges); }
 
 
 //Hr 
@@ -116,7 +130,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(
     {
         background: var(--hr-image);
         background-size: 100%;
-        height: 15px;
+        height: 10px;
         border: none;
     
         // &::after  { content: ''; }

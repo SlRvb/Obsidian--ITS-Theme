@@ -3,11 +3,10 @@
     --font: 'Recursive Sans Linear Static Black', 'Oleo Script', 'Calisto MT'; /*Works, but if it doesn't, needs !important*/
     --font-monospace: "Fira Code";
 
-    // background: var(--note);
-
-    --highlight: rgba(46, 124, 214, 0.25);
+    --highlight: rgba(46, 124, 214, 0.3);
     --hvr: rgba(0, 137, 255, 0.4);
     --hvr-active: rgba(60, 102, 168, 0.4);
+
 }
 .theme-dark {
     &.slrvb-b,
@@ -33,17 +32,24 @@
         --i-at: #5d7b98;
         --footnote: #6e7e89;
         
+        --folder: #386ab6;
+        --file: #63748d;
+
         --code-bg: #232831;
-        --hr: #3c5274;
+        --tag: var(--dark-accent);
         
         --th: var(--dark-accent);
         --td: #030a1495;
         
-        --tag: var(--dark-accent);
-
-        --file: #63748d;
-        --folder: #386ab6;
+        --hr: #3c5274;
         --lines: #465164;
+
+        --theme-rainbow-1: var(--accent2);
+        --theme-rainbow-2: var(--headers);
+        --theme-rainbow-3: var(--dark-accent);
+        --theme-rainbow-4: var(--deep-dark-accent);
+        --theme-rainbow-5: var(--accent);
+        --theme-rainbow-6: var(--soft-text);
     }
 }
 .theme-light {
@@ -62,9 +68,7 @@
         --deep-dark-accent: #101b2f;
         --accent2: #4c78cc;
         --accent2-lite: #5599d0;
-        --bg: #dde4ef;
-        --fg: #025d9f;
-
+        
         --headers: #4378c1;
         --text: #283a67;
         --soft-text: #4e99d0;
@@ -73,16 +77,29 @@
         --footnote: #8996a0;
         --inactive: #a6bbde;
         
+        --folder: #6da5ce;
+        --file: #8897b4;
+        // --f-hover: #3685e0;
+        
+        --bg: #dde4ef;
+        --fg: #025d9f;
         --code-bg: #f1f5ff;
-        --hr: #d6deea;
-        --table: #ccd6eb;
-        --th: #587aa8;
-        --td: #d0ddef62;
         --tag: #5885b2;
         
-        --file: #8897b4;
-        --folder: #6da5ce;
-        --f-hover: #3685e0;
+        --th: #587aa8;
+        --td: #d0ddef62;
+        
+        --table: #ccd6eb;
+        --hr: #d6deea;
         --lines: #b5c2d8;
+
+        --highlight: rgba(46, 124, 214, 0.2);
+
+        --theme-rainbow-1: var(--accent);
+        --theme-rainbow-2: var(--headers);
+        --theme-rainbow-3: var(--th);
+        --theme-rainbow-4: var(--text);
+        --theme-rainbow-5: var(--file);
+        --theme-rainbow-6: var(--inactive);
     }
 }

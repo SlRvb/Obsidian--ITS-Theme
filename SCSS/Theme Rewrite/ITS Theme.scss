@@ -8,13 +8,14 @@
 //
 @use 'v16-Fixes';
 
-//Sub-folder Modules
 @use 'base';
-@use 'custom-css';
-@use 'alt-colors';
 
 //Plugins
 @use 'plugins-core';
 @use 'plugins-third-party';
+
+//Sub-folder Modules
+@use 'custom-css';
+@use 'alt-colors';
 
 

@@ -4,6 +4,8 @@
 
     & .tree-item-self { align-items: center; }
     & .tree-item-children { padding: 0; }
+    
+    --nav-item-children-margin-left: 12px;
 }
 
 //Fix Tag Dot

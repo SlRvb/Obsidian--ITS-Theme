@@ -2035,6 +2035,10 @@ body.theme-light {
   color: var(--text);
 }
 
+button.mod-cta:hover {
+  color: var(--text);
+}
+
 .checkbox-container,
 .checkbox-container:after {
   box-shadow: var(--toggle-shadow);

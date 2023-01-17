@@ -13,10 +13,11 @@
     --setting-item-background: transparent;
     --setting-item-alt-background: var(--setting-item-background);
     --setting-item-alt-background-hover: var(--td);
-    --setting-item-border-color: var(--table);
     --setting-item-heading-background: transparent;
     --setting-item-background-hover: var(--hvr);
+    
     --setting-item-heading-border: 2px solid var(--headers);
+    --setting-item-border-color: var(--table);
 
     //Toggle
     --toggle-width: 20px;
@@ -45,7 +46,7 @@
         background: var(--setting-item-background);
         border-color: var(--setting-item-border-color);
     }
-    & .setting-item-heading.setting-item-heading.setting-item-heading {
+    & .setting-item-heading {
         background: var(--setting-item-heading-background);
         border-bottom: var(--setting-item-heading-border);
 

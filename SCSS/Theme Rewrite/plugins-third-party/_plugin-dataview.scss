@@ -1,7 +1,7 @@
 body {
     --dataview-th-border-bottom: var(--headers);
     --dataview-th-background: var(--outer-bar);
-    --dataview-th-alt-color: var(--hvr2);
+    --dataview-th-alt-color: rgba(var(--accent-color), 20%);
     --dataview-th-color: var(--headers);
     --dataview-th-font: var(--font);
     --dataview-th-font-size: 16px;
@@ -10,17 +10,18 @@ body {
 
 //Table header
 .table-view-table > thead {
-    --table-header-background: var(--dataview-th-background);
-    --table-header-color: var(--dataview-th-color);
-    --table-header-font: var(--dataview-th-font);
     
     font-size: var(--dataview-th-font-size);
     font-weight: var(--dataview-th-font-weight);
     
     //Hover Text Color
     & tr:hover { --table-header-color: var(--text-dl); }
-
+    
+    & > tr,
     & > tr > th { 
+        --table-header-background: var(--dataview-th-background);
+        --table-header-color: var(--dataview-th-color);
+        --table-header-font: var(--dataview-th-font);
         border-color: var(--dataview-th-border-bottom); 
         
         //Alternate th color

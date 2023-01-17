@@ -1,14 +1,4 @@
 
-//Sub Sections
-// .style-settings-heading + .style-settings-container {
-//     padding-left: 0px;
-//     margin-left: 20px;
-//     border-left: 2px solid var(--table);
-// }
-// .style-settings-container:hover { 
-//     border-color: var(--accent); 
-// }
-
 body {
     --style-settings-heading-border-top-color: transparent;
     --style-settings-heading-border-bottom-color: transparent;
@@ -25,8 +15,9 @@ body {
 
 
 .style-settings-container {
-    & .setting-item.setting-item { padding: 7px 15px; }
+    --setting-item-heading-border: transparent;
 
+    & .setting-item.setting-item { padding: 7px 15px; }
 
     & .setting-item-heading.setting-item-heading:not(.is-collapsed) {
         --icon-color: var(--text-dl);
@@ -89,10 +80,12 @@ body {
 }
 //Levels
 .style-settings-heading[data-level="0"] { 
-    --style-settings-heading-border-bottom-color: var(--accent); 
+    --setting-item-heading-border: 2px solid var(--table);
     margin-bottom: 0;
 }
-
+.style-settings-heading[data-level="0"]:not(.is-collapsed) {
+    --setting-item-heading-border: 2px solid var(--accent); 
+}
 .style-settings-container[data-level="0"] { 
     border: 2px solid var(--outline);
     border-top: 0;

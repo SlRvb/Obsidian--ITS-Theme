@@ -1,0 +1,35 @@
+// body {
+.file-explorer-flat {
+    // --explorer-padding: 0;
+    --explorer-root-folder-margin: 0;
+    --explorer-root-folder-padding: 0;
+    --explorer-root-folder-indentation-width: 0;
+
+    --explorer-root-folder-background: rgb(var(--accent-color), 0.3);
+    --explorer-root-background: rgb(var(--accent-color), 0.1);
+    --explorer-root-border-color: var(--accent);
+
+    //Root folder
+    .nav-folder.mod-root > .nav-folder-children > .nav-folder {
+ 
+        & > .nav-folder-children {
+            margin: var(--explorer-root-folder-margin);
+            padding-left: var(--explorer-root-folder-padding);
+            border-width: var(--explorer-root-folder-indentation-width);
+            border-color: var(--explorer-root-folder-indentation-color);
+
+            border-bottom: 2px solid var(--explorer-root-border-color);
+            background-color: var(--explorer-root-background);
+        }
+        & > .nav-folder-title {
+            background-color: var(--explorer-root-collapsed-background);
+        }
+        
+        &:not(.is-collapsed) > .nav-folder-title {
+            background-color: var(--explorer-root-folder-background);
+            border-bottom-color: var(--explorer-root-border-color);
+            
+            justify-content: center;
+        }
+    }
+}

@@ -15,6 +15,7 @@
     // --callout-color: var(--interactive-accent-rgb);
     --callout-color: var(--note, var(--background-primary));
     --callout-padding: 0;
+    background: var(--note, var(--background-primary));
 
     --h1-border-line-height: 0;
     --h2-border-line-height: 0;
@@ -28,7 +29,7 @@
     margin: 0; 
     margin-left: 8px;
     width: auto;
-    max-width: 20vw;
+    max-width: 300px;
     float: right;
 
     // & .image-embed.is-loaded { height: 0; }

@@ -21,7 +21,8 @@ body {
     --nav-item-background-border-color-hover: var(--dark-accent);
 
     --nav-item-padding: 4px 8px;
-    --explorer-padding: 2px 8px;
+    --explorer-padding: 4px 4px 4px 3px;
+    --explorer-item-padding: 2px 8px;
     --nav-item-children-padding-left: 8px;
     --nav-item-children-margin-left: 15px;
     
@@ -34,6 +35,8 @@ body {
     
     --nav-indentation-guide-width: 2px;
     --nav-indentation-guide-color: var(--lines);
+
+
 }
 
 // Hide Collapse Indicator
@@ -47,12 +50,9 @@ body {
 { color: var(--dark-accent); }
 
 .nav-files-container { 
-    padding: 4px; 
-    padding-left: 3px; 
+    padding: var(--explorer-padding);
 }
 
-//Fix File Padding
-// .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {  }
 
 //Hover
 // .nav-file-title:hover .nav-file-title-content,
@@ -73,7 +73,7 @@ body {
         // align-items: baseline;
         border: 2px solid transparent; 
         margin-bottom: 0; 
-        padding: var(--explorer-padding);
+        padding: var(--explorer-item-padding);
 
         &:hover { border-color: var(--nav-item-background-border-color-hover); }
     }
@@ -81,5 +81,5 @@ body {
     // & .has-focus {
     //     border-color: var(--nav-item-border-color);
     // }
-
 }
+

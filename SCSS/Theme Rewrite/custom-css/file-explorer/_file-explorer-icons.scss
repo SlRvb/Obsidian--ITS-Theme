@@ -23,6 +23,7 @@ body {
     content: var(--folder-icon);
     font-family: var(--folder-font);
     color: var(--folder);
+    text-align: center;
 }
 
 .nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content {

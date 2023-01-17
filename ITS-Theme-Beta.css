@@ -3,6 +3,10 @@
 name: In The Shadows Settings
 id: ITS
 settings:
+#    -
+#        title: Class Test toggle
+#        id: file-explorer-flat
+#        type: class-toggle
     -
         title: Workspace
         id: ITS-Workspace
@@ -1728,6 +1732,7 @@ body,
   --accent: #863737;
   --accent2: #42536e;
   --accent2-lite: #61afef;
+  --accent-color: 134, 55, 55;
   --side-bar: var(--note);
   --side-bar-bg: var(--outer-bar);
   --outer-bar: #0b0f13;
@@ -2310,7 +2315,8 @@ body {
   --nav-item-border-color: var(--lite-accent);
   --nav-item-background-border-color-hover: var(--dark-accent);
   --nav-item-padding: 4px 8px;
-  --explorer-padding: 2px 8px;
+  --explorer-padding: 4px 4px 4px 3px;
+  --explorer-item-padding: 2px 8px;
   --nav-item-children-padding-left: 8px;
   --nav-item-children-margin-left: 15px;
   --nav-item-size: var(--font-ui-small);
@@ -2335,8 +2341,7 @@ body {
 }
 
 .nav-files-container {
-  padding: 4px;
-  padding-left: 3px;
+  padding: var(--explorer-padding);
 }
 
 .nav-folder.mod-root > .nav-folder-title {
@@ -2346,7 +2351,7 @@ body {
 .nav-folder.mod-root > .nav-folder-children .nav-folder > .nav-folder-title, .nav-folder.mod-root > .nav-folder-children .nav-file > .nav-file-title {
   border: 2px solid transparent;
   margin-bottom: 0;
-  padding: var(--explorer-padding);
+  padding: var(--explorer-item-padding);
 }
 .nav-folder.mod-root > .nav-folder-children .nav-folder > .nav-folder-title:hover, .nav-folder.mod-root > .nav-folder-children .nav-file > .nav-file-title:hover {
   border-color: var(--nav-item-background-border-color-hover);
@@ -4562,6 +4567,7 @@ body {
   content: var(--folder-icon);
   font-family: var(--folder-font);
   color: var(--folder);
+  text-align: center;
 }
 
 .nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content::before {
@@ -4582,6 +4588,31 @@ body {
 .nav-file-title:is(.is-active, :hover) .nav-file-title-content::before,
 .nav-file-title:is(.is-active, :hover) .nav-file-icon {
   color: var(--nav-item-color-active);
+}
+
+.file-explorer-flat {
+  --explorer-root-folder-margin: 0;
+  --explorer-root-folder-padding: 0;
+  --explorer-root-folder-indentation-width: 0;
+  --explorer-root-folder-background: rgb(var(--accent-color), 0.3);
+  --explorer-root-background: rgb(var(--accent-color), 0.1);
+  --explorer-root-border-color: var(--accent);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
+  margin: var(--explorer-root-folder-margin);
+  padding-left: var(--explorer-root-folder-padding);
+  border-width: var(--explorer-root-folder-indentation-width);
+  border-color: var(--explorer-root-folder-indentation-color);
+  border-bottom: 2px solid var(--explorer-root-border-color);
+  background-color: var(--explorer-root-background);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title {
+  background-color: var(--explorer-root-collapsed-background);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title {
+  background-color: var(--explorer-root-folder-background);
+  border-bottom-color: var(--explorer-root-border-color);
+  justify-content: center;
 }
 
 body {
@@ -6462,6 +6493,7 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
 .callout[data-callout~=infobox] {
   --callout-color: var(--note, var(--background-primary));
   --callout-padding: 0;
+  background: var(--note, var(--background-primary));
   --h1-border-line-height: 0;
   --h2-border-line-height: 0;
   --h3-border-line-height: 0;
@@ -6473,7 +6505,7 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
   margin: 0;
   margin-left: 8px;
   width: auto;
-  max-width: 20vw;
+  max-width: 300px;
   float: right;
 }
 .callout[data-callout~=infobox] > .callout-title {
@@ -7245,8 +7277,8 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
 }
 
 .sizing-mini.sizing-mini {
-  --font-ui-smaller: 12px;
-  --font-ui-small: 13px;
+  --font-ui-smaller: 11px;
+  --font-ui-small: 12px;
   --font-ui-medium: 14px;
   --font-ui-large: 20px;
   --font-smallest: .70em;
@@ -8078,6 +8110,7 @@ h6):after {
   --highlight: rgba(163, 188, 218, 0.3);
   --hvr: rgba(129,155,199,0.25);
   --hvr-active: rgba(163, 188, 218, 0.22);
+  --setting-item-heading-border: 2px solid var(--dark-accent);
 }
 
 .theme-dark.slrvb-g, .theme-dark .slrvb-g {

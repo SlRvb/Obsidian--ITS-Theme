@@ -11,9 +11,13 @@
     --tag-decoration-hover: underline;
 
     --tag-font: var(--default-font);
+    --tag-font-weight: inherit;
 }
 
 //Tag Font
 a.tag,
 .cm-hashtag
-{ font-family: var(--tag-font); }
+{ 
+    font-family: var(--tag-font);
+    font-weight: var(--tag-font-weight);
+}

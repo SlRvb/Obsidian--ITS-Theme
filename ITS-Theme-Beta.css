@@ -48,6 +48,22 @@ settings:
         max: 15
         step: 1
     -
+        title: Sizing
+        id: ITS-Sizing
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Sidebar Text Sizing
+        id: nav-item-size
+        type: variable-number-slider
+        default: 14
+        format: px
+        min: 0
+        max: 15
+        step: 1
+
+    -
         title: Settings
         id: ITS-Settings
         type: heading
@@ -1025,546 +1041,546 @@ settings:
         description: Shrink embed headers
         id: embed-mini-headers
         type: class-toggle
-#    -
-#        title: Colors
-#        id: ITS-Colors
-#        type: heading
-#        level: 1
-#        collapsed: true
-#    -
-#        title: Text
-#        id: ITS-Colors-Text
-#        type: heading
-#        level: 2
-#        collapsed: true
-#    - 
-#        title: Text
-#        id: text
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#bccad8'
-#        default-light: '#697580'
-#    - 
-#        title: Soft Text
-#        id: soft-text
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#aab3ca'
-#        default-light: '#d04e4e'
-#    - 
-#        title: Faint Text
-#        id: text-faint
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#4e5b6f'
-#        default-light: '#4e5b6f'
-#    - 
-#        title: File Explorer Titles
-#        description: File/Folder text color.
-#        id: nav-item-color
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#aab3ca'
-#        default-light: '#7e8ea3'
-#    -
-#        title: "`<i></i>` Text"
-#        description: "Html `<i></i>` text color."
-#        id: i-at
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#bf5e5e'
-#        default-light: '#c14343'
-#    -
-#        title: Workspace
-#        description: Recolor some UI colors
-#        id: Workspace-Colors
-#        type: heading
-#        level: 2
-#        collapsed: true
-#    - 
-#        title: Note
-#        description: Note and sidebar colors.
-#        id: note
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#1a1e24'
-#        default-light: '#f8fbff'
-#    - 
-#        title: Outer Sidebar
-#        id: outer-bar
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#0e0f15'
-#        default-light: '#dfe7ef'
-#    - 
-#        title: Sidebar
-#        description: Change only sidebar, right settings pane colors.
-#        id: side-bar
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#1a1e24'
-#        default-light: '#f8fbff'
-#    - 
-#        title: Dark Sidebar
-#        description: Left settings bar, <i></i> background, graph background, and pane separator colors.
-#        id: dark-sidebar
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#10161d'
-#        default-light: '#7e8ea3'
-#    -
-#        title: UI Elements
-#        id: Workspace-Colors-Elements
-#        type: heading
-#        level: 3
-#    -
-#        title: Button
-#        id: bttn
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#7c2929'
-#        default-light: '#c24747'
-#    - 
-#        title: File Icon
-#        description: File icon color.
-#        id: file
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#586477'
-#        default-light: '#a6bbde'
-#    - 
-#        title: Folder Icon
-#        description: Folder icon color.
-#        id: folder
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#883737'
-#        default-light: '#c14343'
-#    - 
-#        title: Folder Icon Open
-#        description: Open folder icon color.
-#        id: folder-open
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#e05858'
-#        default-light: '#ce6d6d'
-#    -
-#        title: Scrollbar FG Color
-#        description: Scrollbar thumb/foreground color
-#        id: scrollbar-thumb-bg
-#        type: variable-themed-color
-#        format: hex
-#        opacity: true
-#        default-dark: '#863737'
-#        default-light: 'rgba(134, 173, 218, 0.157)'
-#    -
-#        title: Tab Stack Shadow
-#        id: tab-stacked-shadow-color
-#        type: variable-themed-color
-#        format: rgba
-#        opacity: true
-#        default-dark: '#001c4a15'
-#        default-light: '#001c4a15'
-#    -
-#        title: Note Elements
-#        id: Note-Element-Colors
-#        type: heading
-#        level: 2
-#        collapsed: true
-#    -
-#        title: Headers / Headings
-#        id: ITS-Colors-Headings
-#        type: heading
-#        level: 3
-#    - 
-#        title: Headings
-#        description: Heading (Vault, etc) Color
-#        id: headers
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#c14343'
-#        default-light: '#d04e4e'
-#    -
-#        title: Tags
-#        id: ITS-Colors-Tags
-#        type: heading
-#        level: 3
-#    - 
-#        title: Tag Background
-#        id: tag
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#571a1a'
-#        default-light: '#c65656'
-#    - 
-#        title: Tag Text Color
-#        id: tag-color
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#e5ebee'
-#        default-light: '#e5ebee'
-#    -
-#        title: Lists
-#        id: ITS-Colors-Lists
-#        type: heading
-#        level: 3
-#    - 
-#        title: Bullet Color
-#        id: list-marker-color
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#883737'
-#        default-light: '#c14343'
-#    - 
-#        title: Number Color
-#        id: list-numbered-color
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#883737'
-#        default-light: '#c14343'
-#    -
-#        title: List Line Color
-#        id: indentation-guide-color
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#283846'
-#        default-light: '#ccd6eb'
-#    -
-#        title: Blockquote
-#        id: ITS-Colors-Blockquotes
-#        type: heading
-#        level: 3
-#    - 
-#        title: Embed/Blockquote
-#        description: Embed/Blockquote color.
-#        id: embed-bg
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#10161d'
-#        default-light: '#f1f5ff'
-#    - 
-#        title: Blockquote Border
-#        description: Blockquote Border color.
-#        id: blockquote-border-color
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#252c36'
-#        default-light: '#dde4ef'
-#    -
-#        title: Code
-#        id: ITS-Colors-Code
-#        type: heading
-#        level: 3
-#    - 
-#        title: Code Background
-#        id: code-bg
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#232831'
-#        default-light: '#eef6ff'
-#    - 
-#        title: Code Text
-#        id: code-text
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#fa4545'
-#        default-light: '#ea4262'
-#    -
-#        title: Horizontal Line
-#        id: ITS-Colors-HR
-#        type: heading
-#        level: 3
-#    - 
-#        title: HR Border Line
-#        id: hr
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#3c5274'
-#        default-light: '#d6deea'
-#    - 
-#        title: HR Icon
-#        id: hr-icon-color
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#883737'
-#        default-light: '#c14343'
-#    -
-#        title: Progress Bar
-#        id: ITS-Colors-Progress-Bar
-#        type: heading
-#        level: 3
-#    -
-#        title: Progress Bar Value Color
-#        description: HTML <progress> value color
-#        id: progress
-#        type: variable-themed-color
-#		format: hex
-#		default-dark: '#863737'
-#		default-light: '#912e2e'
-#    -
-#        title: Progress Bar Background Color
-#        description: HTML <progress> value color
-#        id: progress
-#        type: variable-themed-color
-#		format: hex
-#		default-dark: '#252c36'
-#		default-light: '#e1e9f6'
-#    -
-#        title: Tables
-#        id: ITS-Colors-Tables
-#        type: heading
-#        level: 3
-#    -
-#        title: Table Header BG Color
-#        id: th
-#        type: variable-themed-color
-#		format: hex
-#		default-dark: '#652121'
-#		default-light: '#c14343'
-#    -
-#        title: Table Header Text Color
-#        id: th-text
-#        type: variable-themed-color
-#		format: hex
-#		default-dark: '#e5ebee'
-#		default-light: '#e5ebee'
-#    -
-#        title: Table Header Text Edit Color
-#        id: table-header-text-color
-#        type: variable-themed-color
-#		format: hex
-#        default-dark: '#e06c75'
-#        default-light: '#a35158'	
-#    -
-#		title: Table Alt Row Colors
-#		description: Alternating row/column color for table.
-#		id: td
-#		type: variable-themed-color
-#        format: rgb
-#        opacity: true
-#        default-dark: '#06080c60'
-#		default-light: '#d0ddef62'
-#    -
-#        title: Other Elements
-#        id: ITS-Colors-Others
-#        type: heading
-#        level: 3
-#    - 
-#        title: Comments
-#        id: code-comment
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#4e5b6f'
-#        default-light: '#4e5b6f'
-#    - 
-#        title: Footnotes
-#        id: footnote
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#6e7e89'
-#        default-light: '#8996a0'
-#    -
-#		title: Aside Background Color
-#		id: aside-bg
-#		description: Aside background color and dark theme setting alternating setting item color.
-#		type: variable-themed-color
-#		format: hex
-#		default-dark: '#11151d'
-#		default-light: '#f1f5ff'
-#    -
-#        title: Other
-#        id: Other-Colors
-#        type: heading
-#        level: 2
-#        collapsed: true
-#    - 
-#        title: Accent
-#        id: accent
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#883737'
-#        default-light: '#c14343'
-#    - 
-#        title: Lite Accent
-#        id: lite-accent
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#e06c75'
-#        default-light: '#a35158'
-#    - 
-#        title: Accent 2
-#        id: accent2
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#3c5274'
-#        default-light: '#d6deea'
-#    -
-#        title: Lite Accent 2
-#        description: Link color.
-#        id: accent2-lite
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#61afef'
-#        default-light: '#5599d0'
-#    -
-#        title: Dark Accent
-#        id: dark-accent
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#652121'
-#        default-light: '#c35c5c'
-#    -
-#        title: Deep Dark Accent
-#        id: deep-dark-accent
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#3f1010'
-#        default-light: '#2f1010'
-#    -
-#        title: Inactive
-#        description: Inactive note; file text; unresolved and external link, editor and external link hover; and mermaid text color.
-#        id: inactive
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#586477'
-#        default-light: '#a6bbde'
-#    -
-#        title: Background
-#        description: Scrollbar background color
-#        id: bg
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#252c36'
-#        default-light: '#dde4ef'
-#    -
-#        title: Lines
-#        description: Explorer, heading, input box, settings, frontmatter, and mermaidjs lines
-#        id: lines
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#283846'
-#        default-light: '#ccd6eb'
-#    -
-#		title: Outline
-#		id: outline
-#		type: variable-themed-color
-#		format: hex
-#		default-dark: '#cfd7dd'
-#		default-light: '#912e2e'
-#    -
-#		title: Foreground
-#		description: Active file selected title color, Graph Node Color, Kanban Plugin Button color.
-#		id: fg
-#		type: variable-themed-color
-#		format: hex
-#		default-dark: '#cfd7dd'
-#		default-light: '#912e2e'
-#    -
-#        title: Highlights
-#        id: RGBA
-#        type: heading
-#        level: 2
-#        collapsed: true
-#    -
-#        title: Text Highlight
-#        description: Markdown highlight color.
-#        id: highlight
-#        type: variable-themed-color
-#        format: rgb
-#        opacity: true
-#        default-dark: '#7a141466'
-#        default-light: 'rgba(229, 149, 149, 0.37)'
-#    -
-#        title: Hover Color
-#        id: hvr
-#        type: variable-themed-color
-#        format: rgb
-#        opacity: true
-#        default-dark: 'rgba(168, 60, 60, 0.4)'
-#        default-light: 'rgba(255, 0, 0, 0.212)'
-#    -
-#        title: Hover Active color
-#        id: hvr-active
-#        type: variable-themed-color
-#        format: rgb
-#        opacity: true
-#        default-dark: 'rgba(212, 47, 47, 0.4)'
-#        default-light: 'rgba(253, 115, 115, 0.4)'
-#    -
-#        title: Search Highlight
-#        id: text-highlight-bg-active
-#        type: variable-themed-color
-#        format: rgb
-#        opacity: true
-#        default-dark: '#fd737340'
-#        default-light: '#fd737340'
-#    #-
-#    #    title: Search 2
-#    #    description: Search match highlight and background transparent color for settings.
-#    #    id: background-modifier-form-field-highlighted
-#    #    type: variable-themed-color
-#    #    format: rgb
-#    #    opacity: true
-#    #    default-dark: '#347bed22'
-#    #    default-light: '#f0838322'
-#    #-
-#    #    title: Text Selection
-#    #    description: Cursor dragged highlights
-#    #    id: text-selection
-#    #    type: variable-themed-color
-#    #    format: rgb
-#    #    opacity: true
-#    #    default-dark: '#4d171746'
-#    #    default-light: '#e5959537'
-#    -
-#        title: Graph Colors
-#        id: Graph
-#        type: heading
-#        level: 2
-#        collapsed: true
-#    - 
-#        title: Graph Background
-#        id: graph-bg
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#0b0f13'
-#        default-light: '#eef3fd'
-#    - 
-#        title: Graph Lines
-#        id: graph-lines
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#571a1a'
-#        default-light: '#e4e7f8'
-#    - 
-#        title: Graph Node
-#        id: graph-node
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#cfd7dd'
-#        default-light: '#c14343'
-#    -
-#        title: Graph Current Node
-#        id: graph-focused
-#        type: variable-themed-color
-#        format: hex
-#        opacity: true
-#        default-dark: '#fd737366'
-#        default-light: '#fd737366'
-#    -
-#        title: Graph Attachment
-#        id: graph-img
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#4c78cc'
-#        default-light: '#4c78cc'
-#    -
-#        title: Graph Tags
-#        id: graph-tag
-#        type: variable-themed-color
-#        format: hex
-#        default-dark: '#c14343'
-#        default-light: '#000000'
+    -
+        title: Colors
+        id: ITS-Colors
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        title: Text
+        id: ITS-Colors-Text
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        title: Text
+        id: text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bccad8'
+        default-light: '#697580'
+    - 
+        title: Soft Text
+        id: soft-text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#aab3ca'
+        default-light: '#d04e4e'
+    - 
+        title: Faint Text
+        id: text-faint
+        type: variable-themed-color
+        format: hex
+        default-dark: '#4e5b6f'
+        default-light: '#4e5b6f'
+    - 
+        title: File Explorer Titles
+        description: File/Folder text color.
+        id: nav-item-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#aab3ca'
+        default-light: '#7e8ea3'
+    -
+        title: "`<i></i>` Text"
+        description: "Html `<i></i>` text color."
+        id: i-at
+        type: variable-themed-color
+        format: hex
+        default-dark: '#bf5e5e'
+        default-light: '#c14343'
+    -
+        title: Workspace
+        description: Recolor some UI colors
+        id: Workspace-Colors
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        title: Note
+        description: Note and sidebar colors.
+        id: note
+        type: variable-themed-color
+        format: hex
+        default-dark: '#1a1e24'
+        default-light: '#f8fbff'
+    - 
+        title: Outer Sidebar
+        id: outer-bar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#0e0f15'
+        default-light: '#dfe7ef'
+    - 
+        title: Sidebar
+        description: Change only sidebar, right settings pane colors.
+        id: side-bar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#1a1e24'
+        default-light: '#f8fbff'
+    - 
+        title: Dark Sidebar
+        description: Left settings bar, <i></i> background, graph background, and pane separator colors.
+        id: dark-sidebar
+        type: variable-themed-color
+        format: hex
+        default-dark: '#10161d'
+        default-light: '#7e8ea3'
+    -
+        title: UI Elements
+        id: Workspace-Colors-Elements
+        type: heading
+        level: 3
+    -
+        title: Button
+        id: bttn
+        type: variable-themed-color
+        format: hex
+        default-dark: '#7c2929'
+        default-light: '#c24747'
+    - 
+        title: File Icon
+        description: File icon color.
+        id: file
+        type: variable-themed-color
+        format: hex
+        default-dark: '#586477'
+        default-light: '#a6bbde'
+    - 
+        title: Folder Icon
+        description: Folder icon color.
+        id: folder
+        type: variable-themed-color
+        format: hex
+        default-dark: '#883737'
+        default-light: '#c14343'
+    - 
+        title: Folder Icon Open
+        description: Open folder icon color.
+        id: folder-open
+        type: variable-themed-color
+        format: hex
+        default-dark: '#e05858'
+        default-light: '#ce6d6d'
+    -
+        title: Scrollbar FG Color
+        description: Scrollbar thumb/foreground color
+        id: scrollbar-thumb-bg
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-dark: '#863737'
+        default-light: 'rgba(134, 173, 218, 0.157)'
+    -
+        title: Tab Stack Shadow
+        id: tab-stacked-shadow-color
+        type: variable-themed-color
+        format: rgba
+        opacity: true
+        default-dark: '#001c4a15'
+        default-light: '#001c4a15'
+    -
+        title: Note Elements
+        id: Note-Element-Colors
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Headers / Headings
+        id: ITS-Colors-Headings
+        type: heading
+        level: 3
+    - 
+        title: Headings
+        description: Heading (Vault, etc) Color
+        id: headers
+        type: variable-themed-color
+        format: hex
+        default-dark: '#c14343'
+        default-light: '#d04e4e'
+    -
+        title: Tags
+        id: ITS-Colors-Tags
+        type: heading
+        level: 3
+    - 
+        title: Tag Background
+        id: tag
+        type: variable-themed-color
+        format: hex
+        default-dark: '#571a1a'
+        default-light: '#c65656'
+    - 
+        title: Tag Text Color
+        id: tag-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#e5ebee'
+        default-light: '#e5ebee'
+    -
+        title: Lists
+        id: ITS-Colors-Lists
+        type: heading
+        level: 3
+    - 
+        title: Bullet Color
+        id: list-marker-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#883737'
+        default-light: '#c14343'
+    - 
+        title: Number Color
+        id: list-numbered-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#883737'
+        default-light: '#c14343'
+    -
+        title: List Line Color
+        id: indentation-guide-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#283846'
+        default-light: '#ccd6eb'
+    -
+        title: Blockquote
+        id: ITS-Colors-Blockquotes
+        type: heading
+        level: 3
+    - 
+        title: Embed/Blockquote
+        description: Embed/Blockquote color.
+        id: embed-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#10161d'
+        default-light: '#f1f5ff'
+    - 
+        title: Blockquote Border
+        description: Blockquote Border color.
+        id: blockquote-border-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#252c36'
+        default-light: '#dde4ef'
+    -
+        title: Code
+        id: ITS-Colors-Code
+        type: heading
+        level: 3
+    - 
+        title: Code Background
+        id: code-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#232831'
+        default-light: '#eef6ff'
+    - 
+        title: Code Text
+        id: code-text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#fa4545'
+        default-light: '#ea4262'
+    -
+        title: Horizontal Line
+        id: ITS-Colors-HR
+        type: heading
+        level: 3
+    - 
+        title: HR Border Line
+        id: hr
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3c5274'
+        default-light: '#d6deea'
+    - 
+        title: HR Icon
+        id: hr-icon-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#883737'
+        default-light: '#c14343'
+    -
+        title: Progress Bar
+        id: ITS-Colors-Progress-Bar
+        type: heading
+        level: 3
+    -
+        title: Progress Bar Value Color
+        description: HTML <progress> value color
+        id: progress
+        type: variable-themed-color
+		format: hex
+		default-dark: '#863737'
+		default-light: '#912e2e'
+    -
+        title: Progress Bar Background Color
+        description: HTML <progress> value color
+        id: progress
+        type: variable-themed-color
+		format: hex
+		default-dark: '#252c36'
+		default-light: '#e1e9f6'
+    -
+        title: Tables
+        id: ITS-Colors-Tables
+        type: heading
+        level: 3
+    -
+        title: Table Header BG Color
+        id: th
+        type: variable-themed-color
+		format: hex
+		default-dark: '#652121'
+		default-light: '#c14343'
+    -
+        title: Table Header Text Color
+        id: th-text
+        type: variable-themed-color
+		format: hex
+		default-dark: '#e5ebee'
+		default-light: '#e5ebee'
+    -
+        title: Table Header Text Edit Color
+        id: table-header-text-color
+        type: variable-themed-color
+		format: hex
+        default-dark: '#e06c75'
+        default-light: '#a35158'	
+    -
+		title: Table Alt Row Colors
+		description: Alternating row/column color for table.
+		id: td
+		type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#06080c60'
+		default-light: '#d0ddef62'
+    -
+        title: Other Elements
+        id: ITS-Colors-Others
+        type: heading
+        level: 3
+    - 
+        title: Comments
+        id: code-comment
+        type: variable-themed-color
+        format: hex
+        default-dark: '#4e5b6f'
+        default-light: '#4e5b6f'
+    - 
+        title: Footnotes
+        id: footnote
+        type: variable-themed-color
+        format: hex
+        default-dark: '#6e7e89'
+        default-light: '#8996a0'
+    -
+		title: Aside Background Color
+		id: aside-bg
+		description: Aside background color and dark theme setting alternating setting item color.
+		type: variable-themed-color
+		format: hex
+		default-dark: '#11151d'
+		default-light: '#f1f5ff'
+    -
+        title: Other
+        id: Other-Colors
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        title: Accent
+        id: accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#883737'
+        default-light: '#c14343'
+    - 
+        title: Lite Accent
+        id: lite-accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#e06c75'
+        default-light: '#a35158'
+    - 
+        title: Accent 2
+        id: accent2
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3c5274'
+        default-light: '#d6deea'
+    -
+        title: Lite Accent 2
+        description: Link color.
+        id: accent2-lite
+        type: variable-themed-color
+        format: hex
+        default-dark: '#61afef'
+        default-light: '#5599d0'
+    -
+        title: Dark Accent
+        id: dark-accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#652121'
+        default-light: '#c35c5c'
+    -
+        title: Deep Dark Accent
+        id: deep-dark-accent
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3f1010'
+        default-light: '#2f1010'
+    -
+        title: Inactive
+        description: Inactive note; file text; unresolved and external link, editor and external link hover; and mermaid text color.
+        id: inactive
+        type: variable-themed-color
+        format: hex
+        default-dark: '#586477'
+        default-light: '#a6bbde'
+    -
+        title: Background
+        description: Scrollbar background color
+        id: bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#252c36'
+        default-light: '#dde4ef'
+    -
+        title: Lines
+        description: Explorer, heading, input box, settings, frontmatter, and mermaidjs lines
+        id: lines
+        type: variable-themed-color
+        format: hex
+        default-dark: '#283846'
+        default-light: '#ccd6eb'
+    -
+		title: Outline
+		id: outline
+		type: variable-themed-color
+		format: hex
+		default-dark: '#cfd7dd'
+		default-light: '#912e2e'
+    -
+		title: Foreground
+		description: Active file selected title color, Graph Node Color, Kanban Plugin Button color.
+		id: fg
+		type: variable-themed-color
+		format: hex
+		default-dark: '#cfd7dd'
+		default-light: '#912e2e'
+    -
+        title: Highlights
+        id: RGBA
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Text Highlight
+        description: Markdown highlight color.
+        id: highlight
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#7a141466'
+        default-light: 'rgba(229, 149, 149, 0.37)'
+    -
+        title: Hover Color
+        id: hvr
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: 'rgba(168, 60, 60, 0.4)'
+        default-light: 'rgba(255, 0, 0, 0.212)'
+    -
+        title: Hover Active color
+        id: hvr-active
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: 'rgba(212, 47, 47, 0.4)'
+        default-light: 'rgba(253, 115, 115, 0.4)'
+    -
+        title: Search Highlight
+        id: text-highlight-bg-active
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#fd737340'
+        default-light: '#fd737340'
+    #-
+    #    title: Search 2
+    #    description: Search match highlight and background transparent color for settings.
+    #    id: background-modifier-form-field-highlighted
+    #    type: variable-themed-color
+    #    format: rgb
+    #    opacity: true
+    #    default-dark: '#347bed22'
+    #    default-light: '#f0838322'
+    #-
+    #    title: Text Selection
+    #    description: Cursor dragged highlights
+    #    id: text-selection
+    #    type: variable-themed-color
+    #    format: rgb
+    #    opacity: true
+    #    default-dark: '#4d171746'
+    #    default-light: '#e5959537'
+    -
+        title: Graph Colors
+        id: Graph
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        title: Graph Background
+        id: graph-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#0b0f13'
+        default-light: '#eef3fd'
+    - 
+        title: Graph Lines
+        id: graph-lines
+        type: variable-themed-color
+        format: hex
+        default-dark: '#571a1a'
+        default-light: '#e4e7f8'
+    - 
+        title: Graph Node
+        id: graph-node
+        type: variable-themed-color
+        format: hex
+        default-dark: '#cfd7dd'
+        default-light: '#c14343'
+    -
+        title: Graph Current Node
+        id: graph-focused
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-dark: '#fd737366'
+        default-light: '#fd737366'
+    -
+        title: Graph Attachment
+        id: graph-img
+        type: variable-themed-color
+        format: hex
+        default-dark: '#4c78cc'
+        default-light: '#4c78cc'
+    -
+        title: Graph Tags
+        id: graph-tag
+        type: variable-themed-color
+        format: hex
+        default-dark: '#c14343'
+        default-light: '#000000'
     -
         title: Plugins
         id: ITS-Plugins
@@ -1574,6 +1590,16 @@ settings:
     -
         title: Breadcrumbs Box Style
         id: breadcrumbs-block
+        type: class-toggle
+    -
+        title: Dataview
+        id: ITS-Plugins-Dataview
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Restore Wide Dataview Tables
+        id: dataview-table-wide
         type: class-toggle
     -
         title: Kanban Adjustments
@@ -2454,6 +2480,7 @@ body {
 
 .inline-title {
   text-align: var(--inline-title-position);
+  padding-bottom: 0;
 }
 
 .frontmatter-container:not(.is-collapsed) {
@@ -3011,11 +3038,13 @@ body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row {
   --tag-border-color-hover: var(--accent);
   --tag-decoration-hover: underline;
   --tag-font: var(--default-font);
+  --tag-font-weight: inherit;
 }
 
 a.tag,
 .cm-hashtag {
   font-family: var(--tag-font);
+  font-weight: var(--tag-font-weight);
 }
 
 body {
@@ -3145,6 +3174,7 @@ body {
   --blockquote-border-color: var(--bg);
   --blockquote-style: normal;
   --blockquote-padding: var(--size-4-3) var(--size-4-6);
+  --blockquote-padding-lp: 7px 20px;
   --blockquote-background-color: var(--embed-bg);
 }
 
@@ -3155,11 +3185,14 @@ body {
 
 .is-live-preview .HyperMD-quote.HyperMD-quote.HyperMD-quote {
   border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
-  padding: 7px 20px;
+  padding: var(--blockquote-padding-lp);
   z-index: -1;
 }
 .is-live-preview .HyperMD-quote.HyperMD-quote.HyperMD-quote::before {
   display: none;
+}
+.is-live-preview .HyperMD-quote.HyperMD-quote.HyperMD-quote + .HyperMD-quote {
+  padding-top: 0;
 }
 
 .markdown-rendered blockquote,
@@ -3464,14 +3497,17 @@ body {
   --r-heading-font: var(--font);
   --r-heading-text-transform: capitalize;
   --r-heading-font-weight: var(--header-weight);
+  --r-main-font: var(--default-font);
+  --r-progress-color: var(--lite-accent);
+}
+
+.reveal {
   --h1-border-line-width: 100%;
   --h2-border-line-width: 100%;
   --h3-border-line-width: 100%;
   --h4-border-line-width: 100%;
   --h5-border-line-width: 100%;
   --h6-border-line-width: 100%;
-  --r-main-font: var(--default-font);
-  --r-progress-color: var(--lite-accent);
 }
 
 .slides-container,
@@ -3728,13 +3764,14 @@ body {
   --dataview-th-font: var(--font);
   --dataview-th-font-size: 16px;
   --dataview-th-font-weight: var(--header-weight);
+  --dataview-table-width: auto;
 }
 
 .table-view-table > thead {
   font-size: var(--dataview-th-font-size);
   font-weight: var(--dataview-th-font-weight);
 }
-.table-view-table > thead tr:hover {
+.table-view-table > thead tr:hover > th {
   --table-header-color: var(--text-dl);
 }
 .table-view-table > thead > tr, .table-view-table > thead > tr > th {
@@ -3745,6 +3782,10 @@ body {
 }
 .table-view-table > thead > tr:nth-child(2n+2), .table-view-table > thead > tr > th:nth-child(2n+2) {
   --table-column-alt-background: var(--dataview-th-alt-color);
+}
+
+.table-view-table {
+  width: var(--dataview-table-width);
 }
 
 .dataview.list-view-ul li::marker {
@@ -3943,6 +3984,7 @@ button[class^=BC] {
 .BC-trail {
   border: 0;
   z-index: 10;
+  margin-bottom: 0 !important;
 }
 .BC-trail .BC-trail-path-container.BC-trail-path-container {
   font-weight: var(--bold-weight);
@@ -4086,7 +4128,7 @@ body {
   --h5-border-line-width: var(--header-border-line-width);
   --h6-border-line-width: var(--header-border-line-width);
 }
-.obsidian-statblock-plugin :is(.property-text, .line) {
+.obsidian-statblock-plugin .property-text, .obsidian-statblock-plugin .line.line {
   color: var(--statblock-font-color);
 }
 .obsidian-statblock-plugin .spell-list .spell-level .property-text, .obsidian-statblock-plugin .property-name {
@@ -6932,6 +6974,7 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
 .callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at] .callout-content {
   padding: 0px;
   margin: auto;
+  overflow-y: hidden;
 }
 .callout.callout[data-callout~=Metadata i]:is([data-callout-metadata~=tbl-cln], [data-callout-metadata~=table-clean]) table :is(td, tr, th) {
   background-color: transparent;
@@ -7332,6 +7375,10 @@ iframe {
   height: 100%;
 }
 
+.dataview-table-wide {
+  --dataview-table-width: 100%;
+}
+
 .kanban-title-center .kanban-plugin__item-title-wrapper {
   text-align: center;
 }
@@ -7447,26 +7494,6 @@ iframe {
 }
 .paper .CodeMirror-gutter.CodeMirror-linenumbers, .paper .CodeMirror-gutter.CodeMirror-foldgutter, .paper .markdown-source-view.mod-cm6 .cm-gutters, .paper .workspace-leaf:not(.mod-active) .workspace-tab-header-container, .paper .workspace-tabs .workspace-leaf, .paper .workspace-tab-header-container, .paper .horizontal-tab-content, .paper .vertical-tab-content, .paper .horizontal-tab-nav-item:not(.is-active), .paper .vertical-tab-nav-item:not(.is-active) {
   background: transparent;
-}
-
-.inline-title-small {
-  --inline-title-size: var(--font-size);
-}
-
-.inline-title-medium {
-  --inline-title-size: var(--font-ui-medium);
-}
-
-.inline-title-position-left {
-  --inline-title-position: left;
-}
-
-.inline-title-position-center {
-  --inline-title-position: center;
-}
-
-.inline-title-position-right {
-  --inline-title-position: right;
 }
 
 .hide-outline-symbol {
@@ -8105,6 +8132,30 @@ h6):after {
 .hr-no-icon.hr-no-icon,
 .hr-tog.hr-tog {
   --hr-icon-symbol: ;
+}
+
+.show-inline-title {
+  --file-margins: 10px 32px 32px 32px;
+}
+
+.inline-title-small {
+  --inline-title-size: var(--font-size);
+}
+
+.inline-title-medium {
+  --inline-title-size: var(--font-ui-medium);
+}
+
+.inline-title-position-left {
+  --inline-title-position: left;
+}
+
+.inline-title-position-center {
+  --inline-title-position: center;
+}
+
+.inline-title-position-right {
+  --inline-title-position: right;
 }
 
 .slrvb-g {

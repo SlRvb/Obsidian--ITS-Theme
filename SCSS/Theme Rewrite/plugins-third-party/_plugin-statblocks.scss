@@ -63,7 +63,9 @@ body {
     // & .heading { line-height: var(--header-lh); } 
     
     //Fix Text Color
-    & :is(.property-text, .line) { color: var(--statblock-font-color); }
+    & .property-text, 
+    & .line.line 
+    { color: var(--statblock-font-color); }
 
     & .spell-list .spell-level .property-text,
     & .property-name { color: var(--statblock-property-name-font-color); }
@@ -75,3 +77,4 @@ body {
 
     & li::marker { --list-marker-color: transparent; }
 }
+

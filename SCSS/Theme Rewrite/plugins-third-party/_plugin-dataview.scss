@@ -6,6 +6,7 @@ body {
     --dataview-th-font: var(--font);
     --dataview-th-font-size: 16px;
     --dataview-th-font-weight: var(--header-weight);
+    --dataview-table-width: auto;
 }
 
 //Table header
@@ -15,7 +16,7 @@ body {
     font-weight: var(--dataview-th-font-weight);
     
     //Hover Text Color
-    & tr:hover { --table-header-color: var(--text-dl); }
+    & tr:hover > th { --table-header-color: var(--text-dl); }
     
     & > tr,
     & > tr > th { 
@@ -29,6 +30,9 @@ body {
         --table-column-alt-background: var(--dataview-th-alt-color);
         }
     }
+}
+.table-view-table {
+    width: var(--dataview-table-width);
 }
 
 

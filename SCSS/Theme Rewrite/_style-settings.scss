@@ -4,7 +4,8 @@ id: ITS
 settings:
 #    -
 #        title: Class Test toggle
-#        id: file-explorer-flat
+#        #id: file-explorer-flat
+#        id: dataview-regular-table
 #        type: class-toggle
     -
         title: Workspace
@@ -1596,6 +1597,10 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        title: Dataview Regular Styled Tables
+        id: dataview-regular-table
+        type: class-toggle
     -
         title: Restore Wide Dataview Tables
         id: dataview-table-wide

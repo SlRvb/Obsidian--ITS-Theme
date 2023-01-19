@@ -5,7 +5,8 @@ id: ITS
 settings:
 #    -
 #        title: Class Test toggle
-#        id: file-explorer-flat
+#        #id: file-explorer-flat
+#        id: dataview-regular-table
 #        type: class-toggle
     -
         title: Workspace
@@ -1597,6 +1598,10 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        title: Dataview Regular Styled Tables
+        id: dataview-regular-table
+        type: class-toggle
     -
         title: Restore Wide Dataview Tables
         id: dataview-table-wide
@@ -3757,35 +3762,41 @@ body {
 }
 
 body {
-  --dataview-th-border-bottom: var(--headers);
+  --dataview-th-border-bottom: 2px solid var(--headers);
   --dataview-th-background: var(--outer-bar);
   --dataview-th-alt-color: rgba(var(--accent-color), 20%);
   --dataview-th-color: var(--headers);
   --dataview-th-font: var(--font);
-  --dataview-th-font-size: 16px;
+  --dataview-th-font-size: larger;
   --dataview-th-font-weight: var(--header-weight);
+  --dataview-th-count-font-size: var(--font-text-size);
+  --dataview-th-count-color: var(--text-on-accent);
   --dataview-table-width: auto;
-}
-
-.table-view-table > thead {
-  font-size: var(--dataview-th-font-size);
-  font-weight: var(--dataview-th-font-weight);
-}
-.table-view-table > thead tr:hover > th {
-  --table-header-color: var(--text-dl);
-}
-.table-view-table > thead > tr, .table-view-table > thead > tr > th {
-  --table-header-background: var(--dataview-th-background);
-  --table-header-color: var(--dataview-th-color);
-  --table-header-font: var(--dataview-th-font);
-  border-color: var(--dataview-th-border-bottom);
-}
-.table-view-table > thead > tr:nth-child(2n+2), .table-view-table > thead > tr > th:nth-child(2n+2) {
-  --table-column-alt-background: var(--dataview-th-alt-color);
 }
 
 .table-view-table {
   width: var(--dataview-table-width);
+}
+.table-view-table > thead > tr {
+  --table-header-background: var(--dataview-th-background);
+}
+.table-view-table > thead > tr > th {
+  --table-header-color: var(--dataview-th-color);
+  --table-header-font: var(--dataview-th-font);
+  font-size: var(--dataview-th-font-size);
+  font-weight: var(--dataview-th-font-weight);
+  border-bottom: var(--dataview-th-border-bottom);
+}
+.table-view-table > thead > tr > th:nth-child(2n+2) {
+  --table-column-alt-background: var(--dataview-th-alt-color);
+}
+.table-view-table > thead > tr:hover > th {
+  --table-header-color: var(--text-dl);
+}
+
+.dataview.small-text {
+  font-size: var(--dataview-th-count-font-size);
+  color: var(--dataview-th-count-color);
 }
 
 .dataview.list-view-ul li::marker {
@@ -7377,6 +7388,16 @@ iframe {
 
 .dataview-table-wide {
   --dataview-table-width: 100%;
+}
+
+.dataview-regular-table {
+  --dataview-th-background: var(--th);
+  --dataview-th-color: var(--th-text);
+  --dataview-th-font: var(--default-font);
+  --dataview-th-font-size: var(--font-text-size);
+  --dataview-th-font-weight: var(--header-weight);
+  --dataview-th-border-bottom: var(--table-border-width) solid var(--table-border-color);
+  --dataview-th-alt-color: var(--td);
 }
 
 .kanban-title-center .kanban-plugin__item-title-wrapper {

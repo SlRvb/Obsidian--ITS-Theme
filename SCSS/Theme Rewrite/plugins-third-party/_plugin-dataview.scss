@@ -1,40 +1,47 @@
 body {
-    --dataview-th-border-bottom: var(--headers);
+    --dataview-th-border-bottom: 2px solid var(--headers);
     --dataview-th-background: var(--outer-bar);
     --dataview-th-alt-color: rgba(var(--accent-color), 20%);
     --dataview-th-color: var(--headers);
     --dataview-th-font: var(--font);
-    --dataview-th-font-size: 16px;
+    --dataview-th-font-size: larger;
     --dataview-th-font-weight: var(--header-weight);
+
+    --dataview-th-count-font-size: var(--font-text-size);
+    --dataview-th-count-color: var(--text-on-accent);
+    
     --dataview-table-width: auto;
 }
 
-//Table header
-.table-view-table > thead {
-    
-    font-size: var(--dataview-th-font-size);
-    font-weight: var(--dataview-th-font-weight);
-    
-    //Hover Text Color
-    & tr:hover > th { --table-header-color: var(--text-dl); }
-    
-    & > tr,
-    & > tr > th { 
-        --table-header-background: var(--dataview-th-background);
-        --table-header-color: var(--dataview-th-color);
-        --table-header-font: var(--dataview-th-font);
-        border-color: var(--dataview-th-border-bottom); 
-        
-        //Alternate th color
-        &:nth-child(2n+2) { 
-        --table-column-alt-background: var(--dataview-th-alt-color);
-        }
-    }
-}
 .table-view-table {
     width: var(--dataview-table-width);
-}
 
+    //Table header
+    & > thead > tr {
+        --table-header-background: var(--dataview-th-background);
+        
+        & > th { 
+            --table-header-color: var(--dataview-th-color);
+            --table-header-font: var(--dataview-th-font);
+            font-size: var(--dataview-th-font-size);
+            font-weight: var(--dataview-th-font-weight);
+            border-bottom: var(--dataview-th-border-bottom); 
+        }
+        //Alternate th color
+        & > th:nth-child(2n+2) { 
+        --table-column-alt-background: var(--dataview-th-alt-color);
+        }
+
+        //Hover Text Color
+        &:hover > th { --table-header-color: var(--text-dl); }
+    }
+}
+    
+//Dataview List Count   
+.dataview.small-text {
+    font-size: var(--dataview-th-count-font-size);
+    color: var(--dataview-th-count-color);
+}
 
 //List
 .dataview.list-view-ul {

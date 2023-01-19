@@ -4,6 +4,7 @@ body {
     --blockquote-border-color: var(--bg);
     --blockquote-style: normal;
     --blockquote-padding: var(--size-4-3) var(--size-4-6); //Personal
+    --blockquote-padding-lp: 7px 20px;
 
     --blockquote-background-color: var(--embed-bg);
 }
@@ -16,8 +17,10 @@ body {
     &::before { display: none; }
     border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
 
-    padding: 7px 20px;
+    padding: var(--blockquote-padding-lp);
     z-index: -1; 
+    
+    & + .HyperMD-quote { padding-top: 0; }
 }
 
 //Fix Blockquote Padding

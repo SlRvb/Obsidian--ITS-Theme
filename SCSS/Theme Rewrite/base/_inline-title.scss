@@ -2,4 +2,7 @@ body {
     --inline-title-position: left;
 }
 
-.inline-title { text-align: var(--inline-title-position); }
+.inline-title { 
+    text-align: var(--inline-title-position); 
+    padding-bottom: 0;
+}

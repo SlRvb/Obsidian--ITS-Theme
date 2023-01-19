@@ -6,17 +6,18 @@ body {
     --r-heading-text-transform: capitalize;
     --r-heading-font-weight: var(--header-weight);
     
+    --r-main-font: var(--default-font);
+
+    --r-progress-color: var(--lite-accent);
+}
+.reveal {
     --h1-border-line-width: 100%;
     --h2-border-line-width: 100%;
     --h3-border-line-width: 100%;
     --h4-border-line-width: 100%;
     --h5-border-line-width: 100%;
     --h6-border-line-width: 100%;
-
-    --r-main-font: var(--default-font);
-
-    --r-progress-color: var(--lite-accent);
-}
+}    
 
 
 .slides-container,

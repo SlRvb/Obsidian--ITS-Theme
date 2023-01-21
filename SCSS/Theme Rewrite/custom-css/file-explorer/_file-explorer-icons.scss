@@ -11,11 +11,12 @@ body {
 
 
 /*Nav Folder/File Icons*/
-.nav-folder-children .nav-folder-title-content::before,
+.nav-folder-children .nav-folder-title .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
     margin-right: var(--file-icon-margin);
     font-size: calc(var(--nav-item-size) - 1px);
     font-weight: 10;
+    width: var(--nav-item-size);
 }
 
 //Folder

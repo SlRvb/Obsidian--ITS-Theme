@@ -34,6 +34,7 @@ body {
     --statblock-content-font-size: var(--font-text-size);
     
     --statblock-property-name-font-color: var(--headers);
+    --statblock-property-font-color: var(--text);
 
     --statblock-section-heading-border-size: 4px;
     --statblock-section-heading-border-color: var(--table);
@@ -63,9 +64,9 @@ body {
     // & .heading { line-height: var(--header-lh); } 
     
     //Fix Text Color
-    & .property-text, 
-    & .line.line 
-    { color: var(--statblock-font-color); }
+    // & .property-text, 
+    // & .line.line 
+    // { color: var(--statblock-font-color); }
 
     & .spell-list .spell-level .property-text,
     & .property-name { color: var(--statblock-property-name-font-color); }

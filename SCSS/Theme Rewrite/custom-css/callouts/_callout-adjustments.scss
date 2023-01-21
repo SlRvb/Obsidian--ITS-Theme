@@ -29,15 +29,23 @@
             font-size: var(--font-small);
             line-height: 12px;
             font-weight: normal;
+
+            & em {
+                font-style: italic;
+                display: inline-block;
+            }
         }
     }
 }
+
+
 
 // No Icon
 .callout:is(
     [data-callout-metadata~="no-i"], 
     [data-callout-metadata~="no-icon"]
 ) > .callout-title .callout-icon { display: none; }
+
 
 
 //No Table Header
@@ -67,7 +75,10 @@
 
 
 //No Margin
-body .callout.callout.callout:is([data-callout-metadata~="nmg"], [data-callout-metadata~="no-margin"]) {
+body .callout.callout.callout:is(
+    [data-callout-metadata~="nmg"], 
+    [data-callout-metadata~="no-margin"]
+) {
     --callout-margin: 0;
     > .callout { --callout-margin: 0; }
 }
@@ -76,7 +87,10 @@ body .callout.callout.callout:is([data-callout-metadata~="nmg"], [data-callout-m
     padding: 0 !important;
     grid-gap: 0 !important;
 }
-.callout.callout.callout:is([data-callout-metadata~="nbrd"], [data-callout-metadata~="no-border"]) {
+.callout.callout.callout:is(
+    [data-callout-metadata~="nbrd"], 
+    [data-callout-metadata~="no-border"]
+) {
     border: 0;
 }
 

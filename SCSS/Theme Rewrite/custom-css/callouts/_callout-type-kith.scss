@@ -1,0 +1,44 @@
+.callout[data-callout="kith"] {
+    --callout-icon: user;
+    --callout-color: 115, 167, 202;
+    
+    border-color: rgba(var(--callout-color), .7);
+
+    & .callout-title-inner {
+        font-weight: unset;
+        color: rgb(var(--callout-color));
+
+        //_Underscored Text_
+        & em {
+            display: block;
+            font-style: normal;
+            font-size: var(--font-small);
+            line-height: 12px;
+            font-weight: normal;
+
+            //_Double _em_ fix_
+            & em {
+                font-style: italic;
+                display: inline-block;
+            }
+        }
+    }
+
+
+    //Types
+    &[data-callout-metadata="family"] {
+        --callout-icon: users;
+    }
+    &[data-callout-metadata="friend"] {
+        --callout-icon: user-check;
+        --callout-color: 115, 202, 144;
+    }
+    &[data-callout-metadata="romantic"] {
+        --callout-icon: user-plus;
+        --callout-color: 202, 115, 180;
+    }
+    &[data-callout-metadata="antagonist"] {
+        --callout-icon: user-x;
+        --callout-color: 241, 74, 74;
+    } 
+}

@@ -3859,11 +3859,11 @@ body:is(.theme-dark, .theme-light) {
 }
 
 .obsidian-icon-folder-icon {
-  margin-left: -2px !important;
-  margin-right: 7px !important;
+  margin-left: -1px;
+  margin-right: var(--file-icon-margin);
   border: 0;
+  padding: 0 !important;
   width: var(--nav-item-size);
-  height: var(--nav-item-size);
 }
 .obsidian-icon-folder-icon + .nav-folder-title-content, .obsidian-icon-folder-icon + .nav-file-title-content {
   --folder-icon: ;
@@ -4120,6 +4120,7 @@ body {
   --statblock-content-font: var(--default-font);
   --statblock-content-font-size: var(--font-text-size);
   --statblock-property-name-font-color: var(--headers);
+  --statblock-property-font-color: var(--text);
   --statblock-section-heading-border-size: 4px;
   --statblock-section-heading-border-color: var(--table);
   --statblock-section-heading-font-color: var(--footnote);
@@ -4138,9 +4139,6 @@ body {
   --h4-border-line-width: var(--header-border-line-width);
   --h5-border-line-width: var(--header-border-line-width);
   --h6-border-line-width: var(--header-border-line-width);
-}
-.obsidian-statblock-plugin .property-text, .obsidian-statblock-plugin .line.line {
-  color: var(--statblock-font-color);
 }
 .obsidian-statblock-plugin .spell-list .spell-level .property-text, .obsidian-statblock-plugin .property-name {
   color: var(--statblock-property-name-font-color);
@@ -4616,11 +4614,12 @@ body {
 }
 
 /*Nav Folder/File Icons*/
-.nav-folder-children .nav-folder-title-content::before,
+.nav-folder-children .nav-folder-title .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
   margin-right: var(--file-icon-margin);
   font-size: calc(var(--nav-item-size) - 1px);
   font-weight: 10;
+  width: var(--nav-item-size);
 }
 
 .nav-folder-children .nav-folder-title-content::before {
@@ -6353,6 +6352,11 @@ ul > li.task-list-item.is-checked {
   line-height: 12px;
   font-weight: normal;
 }
+.callout.callout.callout.callout:is([data-callout-metadata~=subtitle],
+[data-callout-metadata~=subt]) .callout-title em em {
+  font-style: italic;
+  display: inline-block;
+}
 
 .callout:is([data-callout-metadata~=no-i],
 [data-callout-metadata~=no-icon]) > .callout-title .callout-icon {
@@ -6381,10 +6385,12 @@ ul > li.task-list-item.is-checked {
   padding: 0;
 }
 
-body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-metadata~=no-margin]) {
+body .callout.callout.callout:is([data-callout-metadata~=nmg],
+[data-callout-metadata~=no-margin]) {
   --callout-margin: 0;
 }
-body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-metadata~=no-margin]) > .callout {
+body .callout.callout.callout:is([data-callout-metadata~=nmg],
+[data-callout-metadata~=no-margin]) > .callout {
   --callout-margin: 0;
 }
 
@@ -6394,7 +6400,8 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
   grid-gap: 0 !important;
 }
 
-.callout.callout.callout:is([data-callout-metadata~=nbrd], [data-callout-metadata~=no-border]) {
+.callout.callout.callout:is([data-callout-metadata~=nbrd],
+[data-callout-metadata~=no-border]) {
   border: 0;
 }
 
@@ -6538,6 +6545,31 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
   --callout-medium: 500px;
   --callout-med-tall: 600px;
   --callout-tall: 700px;
+}
+
+.callout.callout:is([data-callout-metadata~=txt-l],
+[data-callout-metadata~=text-Left]) > .callout-content {
+  text-align: left;
+}
+
+.callout.callout:is([data-callout-metadata~=txt-r],
+[data-callout-metadata~=text-Right]) > .callout-content {
+  text-align: right;
+}
+
+.callout.callout:is([data-callout-metadata~=txt-c],
+[data-callout-metadata~=text-Center]) > .callout-content {
+  text-align: center;
+}
+
+.callout.callout:is([data-callout-metadata~=ttl-c],
+[data-callout-metadata~=title-Center]) .callout-title {
+  justify-content: center;
+}
+.callout.callout:is([data-callout-metadata~=ttl-c],
+[data-callout-metadata~=title-Center]) .callout-title-inner {
+  display: block;
+  flex: unset;
 }
 
 /*Infobox*/
@@ -7213,6 +7245,42 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg], [data-callout-met
 }
 .callout.callout[data-callout~=timeline][data-callout-metadata~=t-10] {
   padding-top: 750px;
+}
+
+.callout[data-callout=kith] {
+  --callout-icon: user;
+  --callout-color: 115, 167, 202;
+  border-color: rgba(var(--callout-color), 0.7);
+}
+.callout[data-callout=kith] .callout-title-inner {
+  font-weight: unset;
+  color: rgb(var(--callout-color));
+}
+.callout[data-callout=kith] .callout-title-inner em {
+  display: block;
+  font-style: normal;
+  font-size: var(--font-small);
+  line-height: 12px;
+  font-weight: normal;
+}
+.callout[data-callout=kith] .callout-title-inner em em {
+  font-style: italic;
+  display: inline-block;
+}
+.callout[data-callout=kith][data-callout-metadata=family] {
+  --callout-icon: users;
+}
+.callout[data-callout=kith][data-callout-metadata=friend] {
+  --callout-icon: user-check;
+  --callout-color: 115, 202, 144;
+}
+.callout[data-callout=kith][data-callout-metadata=romantic] {
+  --callout-icon: user-plus;
+  --callout-color: 202, 115, 180;
+}
+.callout[data-callout=kith][data-callout-metadata=antagonist] {
+  --callout-icon: user-x;
+  --callout-color: 241, 74, 74;
 }
 
 /* Asides */

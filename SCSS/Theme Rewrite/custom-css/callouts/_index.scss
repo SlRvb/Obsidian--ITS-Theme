@@ -2,6 +2,7 @@
 @use 'callout-adjustments';
 @use 'callout-coloring';
 @use 'callout-sizing';
+@use 'callout-text-align';
 
 @use 'callout-type-infobox';
 
@@ -15,6 +16,9 @@
 @use 'callout-type-columns';
 @use 'callout-type-kanban';
 @use 'callout-type-timeline';
+
+@use 'callout-type-kith';
+
 
 @use 'callout-type-asides';
 

@@ -5818,6 +5818,10 @@ ul > li.task-list-item:not(.is-checked) {
   color: var(--text-normal);
 }
 
+.HyperMD-task-line.HyperMD-task-line.HyperMD-task-line .cm-strong.cm-strong.cm-strong.cm-strong {
+  font-weight: var(--bold-weight);
+}
+
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) :not(.cm-formatting-task),
 ul > li.task-list-item.is-checked {
   color: var(--text-faint);
@@ -6361,6 +6365,7 @@ ul > li.task-list-item.is-checked {
 .callout:is([data-callout-metadata~=no-i],
 [data-callout-metadata~=no-icon]) > .callout-title .callout-icon {
   display: none;
+  width: 0;
 }
 
 .callout:is([data-callout-metadata~=n-th],
@@ -6611,8 +6616,12 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg],
   border: 1px solid var(--hr, var(--background-modifier-border));
   padding: 5px 10px;
 }
-.callout[data-callout~=infobox] > .callout-title :is(.callout-icon, .callout-title-inner) {
+.callout[data-callout~=infobox] > .callout-title :is(.callout-title-inner, .callout-icon) {
   display: none;
+}
+.callout[data-callout~=infobox]:not([data-callout-metadata~=show-title],
+[data-callout-metadata~=s-t]) .callout-icon svg {
+  width: 0;
 }
 .callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) .callout-title {
   background-color: transparent;

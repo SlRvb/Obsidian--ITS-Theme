@@ -47,12 +47,19 @@
     }
     
     //Display title collapse arrow on hover only
-    & > .callout-title :is(.callout-icon, .callout-title-inner)
+    & > .callout-title :is(.callout-title-inner, .callout-icon) 
     { display: none; }
+    
+    // Fixed for export: DO NOT display: none; ON CALLOUT ICON
+    &:not(
+        [data-callout-metadata~="show-title"], 
+        [data-callout-metadata~="s-t"]
+    ) .callout-icon svg { width: 0; }
 
-    &:not(:hover):not(.is-collapsed) .callout-title {
-        background-color: transparent;
-    }
+
+    //Hide Background Color 
+    &:not(:hover):not(.is-collapsed) .callout-title 
+    { background-color: transparent; }
     
 
     //Show title

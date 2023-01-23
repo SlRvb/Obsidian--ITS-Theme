@@ -44,7 +44,7 @@
 .callout:is(
     [data-callout-metadata~="no-i"], 
     [data-callout-metadata~="no-icon"]
-) > .callout-title .callout-icon { display: none; }
+) > .callout-title .callout-icon { display: none; width: 0; }
 
 
 

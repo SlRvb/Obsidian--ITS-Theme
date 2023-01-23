@@ -5,6 +5,9 @@ ul > li.task-list-item:not(.is-checked) {
     font-weight: initial;
     color: var(--text-normal);
 }
+.HyperMD-task-line.HyperMD-task-line.HyperMD-task-line .cm-strong.cm-strong.cm-strong.cm-strong {
+    font-weight: var(--bold-weight);
+}
 
 //Default x checked text
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) :not(.cm-formatting-task),

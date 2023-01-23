@@ -47,15 +47,14 @@
     }
     
     //Display title collapse arrow on hover only
-    & > .callout-title :is(.callout-title-inner, .callout-icon) 
+    & > .callout-title .callout-title-inner 
     { display: none; }
     
     // Fixed for export: DO NOT display: none; ON CALLOUT ICON
     &:not(
         [data-callout-metadata~="show-title"], 
         [data-callout-metadata~="s-t"]
-    ) .callout-icon svg { width: 0; }
-
+    ) .callout-icon svg { width: 0; height: 0; }
 
     //Hide Background Color 
     &:not(:hover):not(.is-collapsed) .callout-title 

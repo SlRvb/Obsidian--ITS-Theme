@@ -6364,8 +6364,8 @@ ul > li.task-list-item.is-checked {
 
 .callout:is([data-callout-metadata~=no-i],
 [data-callout-metadata~=no-icon]) > .callout-title .callout-icon {
-  display: none;
   width: 0;
+  height: 0;
 }
 
 .callout:is([data-callout-metadata~=n-th],
@@ -6616,12 +6616,13 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg],
   border: 1px solid var(--hr, var(--background-modifier-border));
   padding: 5px 10px;
 }
-.callout[data-callout~=infobox] > .callout-title :is(.callout-title-inner, .callout-icon) {
+.callout[data-callout~=infobox] > .callout-title .callout-title-inner {
   display: none;
 }
 .callout[data-callout~=infobox]:not([data-callout-metadata~=show-title],
 [data-callout-metadata~=s-t]) .callout-icon svg {
   width: 0;
+  height: 0;
 }
 .callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) .callout-title {
   background-color: transparent;

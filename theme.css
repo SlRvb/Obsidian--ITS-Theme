@@ -13047,10 +13047,6 @@ body {
   --statblock-traits-font-style: normal;
 }
 
-body .statblock-item-container:nth-child(odd) :is(.line, .property) {
-  background: var(--statblock-alt);
-}
-
 body .obsidian-statblock-plugin .heading {
   line-height: var(--header-lh);
 }

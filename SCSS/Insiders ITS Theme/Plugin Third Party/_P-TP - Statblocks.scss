@@ -49,9 +49,9 @@ body {
 }
 
 //New
-body .statblock-item-container:nth-child(odd) :is(.line, .property) {
-    background: var(--statblock-alt);
-}
+// body .statblock-item-container:nth-child(odd) :is(.line, .property) {
+//     background: var(--statblock-alt);
+// }
 
 // //Old Stat
 // body .obsidian-statblock-plugin .creature-heading > .name, 

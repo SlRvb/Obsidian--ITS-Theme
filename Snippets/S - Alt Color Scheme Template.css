@@ -1,0 +1,86 @@
+body {
+	--font: ;
+	--header-weight: ;
+	
+	--vault-name-font-size: ;
+	--vault-name-font-weight: ;
+	
+	--font-monospace: ;
+	
+	
+	--hr-icon-symbol: ;
+	--hr-icon-font: ;
+	
+	--highlight: ;
+	--hvr: ;
+	--hvr-active: ;
+}
+
+
+body {
+    /*Colors*/
+    --outer-bar: ;
+    --dark-sidebar: ;
+    --side-bar: ;
+
+    --note: ;
+    --note-rgb: ;
+    
+    --accent-color: ;
+    --accent: ;
+    --lite-accent: ;
+    --dark-accent: ;
+    --deep-dark-accent: ;
+    --accent2: ;
+    --accent2-lite: ;
+    
+    --headers: ;
+    --text: ;
+    --soft-text: ;
+    --code-text: ;
+    --i-at: ;
+    --footnote: ;
+    --inactive: ;
+    --tag-text: ;
+    
+    --folder: ;
+    --folder-open: ;
+    --file: ;
+    --file-icon-color: ;
+	
+    --fg: ;
+    --bg: ;
+    --code-bg: ;
+    --embed-bg: ;
+    --aside-bg: ;
+    --tag: ;
+    --bttn: ;
+    
+    --th: ;
+    --table-header-text: ;
+    --td: ;
+    
+    --table: ;
+    --hr: ;
+    --lines: ;
+    --outline: ;
+	
+	--hr-image: ;
+	
+	--highlight: ;
+	--hvr: ;
+	--hvr-active: ;
+    
+    --graph-bg: ;
+    --graph-lines: ;
+    --graph-node: ;
+    --graph-fill: ;
+    --graph-404: ;
+
+	--theme-rainbow-1: ;
+    --theme-rainbow-2: ;
+    --theme-rainbow-3: ;
+    --theme-rainbow-4: ;
+    --theme-rainbow-5: ;
+    --theme-rainbow-6: ;
+}

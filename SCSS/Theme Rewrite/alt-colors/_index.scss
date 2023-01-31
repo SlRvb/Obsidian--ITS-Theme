@@ -87,7 +87,8 @@
     --embed-border-left: 2px solid var(--headers);
 
     --hr-color: var(--hr);
-    // --hr-icon-color: var(--accent);
+    --hr-icon-color: var(--headers);
+    --hr-icon-background: var(--note);
     
     --blockquote-border-color: var(--bg);
     --blockquote-background-color: var(--embed-bg);

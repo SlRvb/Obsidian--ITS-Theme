@@ -35,7 +35,7 @@
         padding-left: 18px;
         padding-right: 18px;
     }
-    & .setting-item:first-child { padding-top: 0; }
+    // & .setting-item:first-child { padding: var(--setting-item-padding); }
     & .installed-plugins-container { padding: 0; }
 
     //Settings

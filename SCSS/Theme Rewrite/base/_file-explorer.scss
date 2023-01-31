@@ -53,7 +53,6 @@ body {
     padding: var(--explorer-padding);
 }
 
-
 //Hover
 // .nav-file-title:hover .nav-file-title-content,
 // .nav-folder-title:hover .nav-folder-title-content {
@@ -70,7 +69,7 @@ body {
 .nav-folder.mod-root > .nav-folder-children {
     & .nav-folder > .nav-folder-title,
     & .nav-file > .nav-file-title { 
-        // align-items: baseline;
+        // align-items: center;
         border: 2px solid transparent; 
         margin-bottom: 0; 
         padding: var(--explorer-item-padding);

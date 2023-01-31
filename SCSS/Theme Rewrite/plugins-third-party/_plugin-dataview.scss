@@ -1,7 +1,7 @@
 body {
     --dataview-th-border-bottom: 2px solid var(--headers);
     --dataview-th-background: var(--outer-bar);
-    --dataview-th-alt-color: rgba(var(--accent-color), 20%);
+    --dataview-th-alt-color: rgba(var(--accent-color), 10%);
     --dataview-th-color: var(--headers);
     --dataview-th-font: var(--font);
     --dataview-th-font-size: larger;
@@ -19,7 +19,7 @@ body {
     //Table header
     & > thead > tr {
         --table-header-background: var(--dataview-th-background);
-        
+
         & > th { 
             --table-header-color: var(--dataview-th-color);
             --table-header-font: var(--dataview-th-font);
@@ -33,7 +33,10 @@ body {
         }
 
         //Hover Text Color
-        &:hover > th { --table-header-color: var(--text-dl); }
+        &:hover {
+            & > th { --table-header-color: var(--text-dl); }
+            --dataview-th-count-color: var(--text-dl);
+        }
     }
 }
     

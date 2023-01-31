@@ -1,6 +1,7 @@
-.titlebar-colors.titlebar-colors {
+.titlebar-colors.titlebar-colors.titlebar-colors {
     --titlebar-background: var(--dark-accent);
     --titlebar-background-focused: var(--dark-accent);
+    --titlebar-bubble-colors: var(--outline);
 
     --tab-text-color: var(--soft-text);
     --tab-text-color-focused: var(--text);

@@ -32,3 +32,12 @@
         flex: unset;
     }
 }
+
+
+// Text Sizing
+.callout.callout:is(
+    [data-callout-metadata~='text-small'],
+    [data-callout-metadata~='txt-s']
+) {
+    --font-text-size: var(--font-smallest);
+}

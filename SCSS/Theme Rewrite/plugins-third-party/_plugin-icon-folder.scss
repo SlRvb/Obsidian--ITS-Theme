@@ -1,10 +1,12 @@
 .obsidian-icon-folder-icon {
-    margin-left: -1px;
+    // margin-left: -1px;
     margin-right: var(--file-icon-margin);
     border: 0;
     padding: 0 !important;
     
     width: var(--nav-item-size);
+
+    & svg { width: var(--nav-item-size); }
 
     & + .nav-folder-title-content,
     & + .nav-file-title-content 

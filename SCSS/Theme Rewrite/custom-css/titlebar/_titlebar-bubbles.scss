@@ -1,13 +1,16 @@
 .titlebar-bubbles.titlebar-bubbles {
     --tab-outline-width: 0;
+    --titlebar-bubble-colors: var(--accent);
 }
 
 .titlebar-bubbles .mod-root {
-    --tab-radius: 4px;
-    --tab-radius-active: 4px;
+    --tab-radius: var(--radius-m);
+    --tab-radius-active: var(--radius-m);
 
     --tab-text-padding: 3px 5px;
+    --tab-text-padding-inner: 1px 3px;
     --tab-gap: 0 10px;
+
 
     // & .workspace-tab-header { padding: var(--tab-gap); }
 
@@ -24,6 +27,13 @@
         padding: var(--tab-text-padding);
     }
 
+    //Tab
+    & .workspace-tab-header {
+        box-shadow: 2px 2px 0 var(--titlebar-bubble-colors);
+        border: 2px solid var(--titlebar-bubble-colors);
+        padding: var(--tab-text-padding-inner);
+    }
+
     //Hover Color
     & .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner 
     { background-color: unset; }
@@ -31,5 +41,9 @@
 
     //New Tab
     & .workspace-tab-header-new-tab { padding: 0; }
+
+    //Remove Tab Corners
+    & .workspace-tab-header.is-active::before,
+    & .workspace-tab-header.is-active::after { display: none; }
 }
 

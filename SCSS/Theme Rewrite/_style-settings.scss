@@ -4,8 +4,7 @@ id: ITS
 settings:
 #    -
 #        title: Class Test toggle
-#        #id: file-explorer-flat
-#        id: dataview-regular-table
+#        id: file-explorer-flat
 #        type: class-toggle
     -
         title: Workspace
@@ -44,7 +43,7 @@ settings:
         type: variable-number-slider
         default: 12
         format: px
-        min: 0
+        min: 4
         max: 15
         step: 1
     -

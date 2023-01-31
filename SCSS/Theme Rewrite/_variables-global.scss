@@ -55,7 +55,7 @@ body.theme-light
     --icon-s: 16px;
     --icon-m: 17px;
     --icon-l: 18px;
-
+    --line-height-tight: 1.3em;
 
  
     --scroll-size: 7px;
@@ -97,6 +97,7 @@ body.theme-light
 
     //Personal variables
     --toggle-shadow: none;
+    --box-border-s: 1px solid var(--outline);
     --box-border: 2px solid var(--outline);
     --box-border-m: 3px solid var(--outline);
     

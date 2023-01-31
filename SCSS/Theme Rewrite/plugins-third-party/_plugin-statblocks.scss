@@ -59,7 +59,11 @@ body {
 
 
     //Alt Coloring
-    // & .statblock-item-container:nth-child(odd) :is(.line, .property) { background: var(--statblock-alt); }
+    & .column > .statblock-item-container:nth-child(odd):not(
+        .rule-container, 
+        .table-container,
+        .traits-container
+    ) { background: var(--statblock-alt); }
 
     // & .heading { line-height: var(--header-lh); } 
     

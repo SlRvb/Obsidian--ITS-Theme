@@ -1,11 +1,11 @@
 body {
     --embed-block-shadow-hover: inset 0 0 0 2px var(--outline); //LP preview
 
-    --embed-padding: 0 24px;
+    --embed-padding: 0 0 0 24px;
     --embed-header-size: 18px; //Personal
     
     //Embed Title
-    --embed-title-padding: 5px 0; //Personal
+    --embed-title-padding: 5px 24px; //Personal
     --embed-title-align: center; //Personal
     --embed-title-white-space: wrap; //Personal
     --embed-title-overflow: unset;
@@ -28,7 +28,7 @@ body {
     --embed-border-bottom: 2px solid var(--embed-border-bottom-color);
 
     --embed-border-color-hover: var(--outline);
-    --embed-border-left-color-hover:    var(--embed-border-color-hover);
+    --embed-border-left-color-hover:    var(--embed-border-left-color);
     --embed-border-right-color-hover:   var(--embed-border-color-hover);
     --embed-border-top-color-hover:     var(--embed-border-color-hover);
     --embed-border-bottom-color-hover:  var(--embed-border-color-hover);
@@ -54,3 +54,8 @@ body {
     text-overflow: var(--embed-title-overflow);
 }
 
+.markdown-embed {
+    padding: 0; 
+
+    & .markdown-embed-content { padding: var(--embed-padding);}
+}

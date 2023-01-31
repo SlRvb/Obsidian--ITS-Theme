@@ -1,0 +1,82 @@
+
+//List
+.dataview-cards,
+.dvl-c {
+    --dataview-th-color: var(--text);
+    --dataview-th-font: var(--font-default);
+    --dataview-th-font-size: var(--font-text-size);
+    --dataview-th-count-color: var(--text);
+    --dataview-th-background: var(--note);
+    --dataview-th-border-bottom: none;
+    
+
+    & .table-view-table > thead::before {
+        content: "\E805";
+        font-family: var(--its);
+        float: left;
+        padding: 5px 10px 5px 10px;
+    }
+    & .table-view-table > thead > tr { 
+        display: flex;
+        flex-direction: column;
+        border: var(--box-border-s);
+        box-shadow: var(--shadow-m);
+        margin: 0;
+        flex-wrap: wrap;
+        float: left;
+        position: absolute;
+        margin-top: 30px;
+
+        &:hover {
+            --text-selection: var(--td);
+        }
+    }
+    & table .table-view-table > thead > tr {
+        position:absolute;
+        right: 0;
+    }
+    & .table-view-table > thead:not(:hover) > * { display: none; }
+    
+    & .dataview th:hover { background: var(--td) }
+
+
+    & .list-view-ul li,
+    & .dataview.table-view-table > tbody > tr {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--note);
+        border: var(--box-border);
+        box-shadow: var(--shadow-m);
+        margin: 5px 0;
+        padding: 10px;
+
+        &:hover { 
+            --text-selection: var(--td); 
+            background-color: var(--text-selection);
+        }
+    }
+    & .list-view-ul,
+    & .dataview.table-view-table > tbody.table-view-tbody {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-inline-start: 0;
+    }
+    & .block-language-dataviewjs .dataview-result-list-li,
+    & .list-view-ul li,
+    & .dataview.table-view-table > tbody > tr {
+        flex: 1 0 200px;
+        margin: 5px;
+    }
+    & .dataview.table-view-table td { 
+        padding: 0; 
+        background-color: transparent;
+        border: 0;
+    }
+    & .list-view-ul li::before { display: none; }
+    & .dataview.table-view-table li {
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+    }
+}

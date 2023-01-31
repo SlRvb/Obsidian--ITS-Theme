@@ -1,6 +1,8 @@
 .callout-original .callout,
-.callout:is([data-callout-metadata~='callout-original'], [data-callout-metadata~='co-o'])
-{
+.callout:is(
+    [data-callout-metadata~='callout-original'], 
+    [data-callout-metadata~='co-o']
+) {
     --callout-padding: 0;
     --callout-title-padding: 10px 15px;
     --callout-content-padding: 5px 15px;

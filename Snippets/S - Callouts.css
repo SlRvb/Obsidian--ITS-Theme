@@ -701,18 +701,13 @@ body {
   margin-block-end: 0;
   padding: 0;
 }
-.callout[data-callout~=cards] strong {
-  display: block;
-  text-align: center;
-  margin: auto;
-  background-color: var(--outer-bar, var(--background-secondary));
-}
 .callout[data-callout~=cards]:not([data-callout-metadata~=nstr], [data-callout-metadata~=no-strong]) strong {
   display: block;
   text-align: center;
   margin: auto;
   background-color: var(--outer-bar, var(--background-secondary));
 }
+
 
 .callout[data-callout~=cards] br {
   display: none;

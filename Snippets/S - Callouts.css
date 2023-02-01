@@ -707,6 +707,12 @@ body {
   margin: auto;
   background-color: var(--outer-bar, var(--background-secondary));
 }
+.callout[data-callout~=cards]:not([data-callout-metadata~=nstr], [data-callout-metadata~=no-strong]) strong {
+  display: block;
+  text-align: center;
+  margin: auto;
+  background-color: var(--outer-bar, var(--background-secondary));
+}
 
 .callout[data-callout~=cards] br {
   display: none;
@@ -1050,19 +1056,6 @@ body {
   padding-top: 750px;
 }
 
-.is-live-preview.is-live-preview .callout.callout.callout[data-callout-metadata~="lp"]:is([data-callout-metadata~="p+l"],
-[data-callout-metadata~=left]) {
-  float: left;
-  margin: unset;
-  margin-right: 8px;
-}
-
-.is-live-preview.is-live-preview .callout.callout[data-callout-metadata~="lp"]:is([data-callout-metadata~="p+r"],
-[data-callout-metadata~=right]) {
-  float: right;
-  margin: unset;
-  margin-left: 8px;
-}
 
 /*@settings
 name: Alternate Callouts

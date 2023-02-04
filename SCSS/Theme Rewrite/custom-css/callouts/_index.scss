@@ -24,4 +24,10 @@
 
 @use 'callout-styling';
 
-
+//Fix Obsidian's Callout Print Display Issue
+@media print {
+.print.print .markdown-preview-view .callout:is(
+    [data-callout*="cards"],
+    [data-callout*="column"]
+) .callout-content { display: grid !important; }
+}

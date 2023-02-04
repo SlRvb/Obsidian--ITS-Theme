@@ -6538,8 +6538,9 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg],
 .callout.callout[data-callout-metadata~=wtall] {
   width: var(--callout-tall);
 }
-.callout.callout[data-callout-metadata~=wfull] {
+.callout.callout[data-callout-metadata~=sban], .callout.callout[data-callout-metadata~=wfull] {
   width: 100%;
+  float: unset;
 }
 .callout.callout[data-callout-metadata~=wtiny-c] {
   width: 19%;
@@ -6569,6 +6570,21 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg],
   --callout-medium: 500px;
   --callout-med-tall: 600px;
   --callout-tall: 700px;
+}
+
+.callout.callout:is([data-callout-metadata~=content-padding-small],
+[data-callout-metadata~=c-p-sm]) {
+  --callout-content-padding: 6px;
+}
+
+.callout.callout:is([data-callout-metadata~=content-padding-medium],
+[data-callout-metadata~=c-p-med]) {
+  --callout-content-padding: 12px;
+}
+
+.callout.callout:is([data-callout-metadata~=content-padding-large],
+[data-callout-metadata~=c-p-lg]) {
+  --callout-content-padding: 24px;
 }
 
 .callout.callout:is([data-callout-metadata~=txt-l],
@@ -6659,7 +6675,7 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg],
   border: 1px solid var(--hr, var(--background-modifier-border));
   display: flex;
 }
-.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-fold, .callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-title .callout-title-inner {
+.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-title .callout-title-inner {
   display: unset;
   align-items: center;
   align-content: center;
@@ -6674,7 +6690,6 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg],
   border: 0;
 }
 .callout[data-callout~=infobox] > .callout-content {
-  padding: 1px;
   border: 1px solid var(--table, var(--background-modifier-border));
   margin: 0;
   border-radius: var(--radius, var(--co-radius));
@@ -7429,6 +7444,12 @@ body .callout.callout.callout:is([data-callout-metadata~=nmg],
   background: rgba(var(--callout-color), 0.1);
 }
 
+@media print {
+  .print.print .markdown-preview-view .callout:is([data-callout*=cards],
+[data-callout*=column]) .callout-content {
+    display: grid !important;
+  }
+}
 .sizing-readable.sizing-readable {
   --font-ui-smaller: 13.5px;
   --font-ui-small: 14px;

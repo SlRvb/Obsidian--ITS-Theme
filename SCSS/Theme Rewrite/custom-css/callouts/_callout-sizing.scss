@@ -17,7 +17,8 @@
     &[data-callout-metadata~="wmed"]     { width: var(--callout-medium); }
     &[data-callout-metadata~="wm-tl"]    { width: var(--callout-med-tall); }
     &[data-callout-metadata~="wtall"]    { width: var(--callout-tall); }
-    &[data-callout-metadata~="wfull"]    { width: 100%; }
+    &[data-callout-metadata~="sban"],
+    &[data-callout-metadata~="wfull"]    { width: 100%; float: unset; }
 
     &[data-callout-metadata~="wtiny-c"]    { width: 19%; }
     &[data-callout-metadata~="wsmall-c"]   { width: 32.4%; }
@@ -36,3 +37,20 @@
     --callout-med-tall: 600px;
     --callout-tall: 700px;
 }
+
+
+//Padding Sizing
+.callout.callout:is(
+    [data-callout-metadata~="content-padding-small"],
+    [data-callout-metadata~="c-p-sm"]
+) { --callout-content-padding: 6px; }
+
+.callout.callout:is(
+    [data-callout-metadata~="content-padding-medium"],
+    [data-callout-metadata~="c-p-med"]
+) { --callout-content-padding: 12px; }
+
+.callout.callout:is(
+    [data-callout-metadata~="content-padding-large"],
+    [data-callout-metadata~="c-p-lg"]
+) { --callout-content-padding: 24px; }

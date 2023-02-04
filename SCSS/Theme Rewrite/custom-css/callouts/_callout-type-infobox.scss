@@ -71,7 +71,6 @@
             border: 1px solid var(--hr, var(--background-modifier-border));
             display: flex;
         }
-        & .callout-fold,
         & .callout-title .callout-title-inner {
             display: unset;
             align-items: center;
@@ -90,7 +89,6 @@
 
     //Flush content and add border
     & > .callout-content {
-        padding: 1px;
         border: 1px solid var(--table, var(--background-modifier-border));
         margin: 0;
         border-radius: var(--radius, var(--co-radius));

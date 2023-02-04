@@ -1051,6 +1051,13 @@ body {
   padding-top: 750px;
 }
 
+@media print {
+.print.print .markdown-preview-view .callout:is(
+    [data-callout*="cards"],
+    [data-callout*="column"]
+) .callout-content { display: grid !important; }
+}
+
 
 /*@settings
 name: Alternate Callouts

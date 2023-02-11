@@ -30,7 +30,7 @@
 
 
 // Sidebar Tabs
-.sidebar-tabs-tabular :is(.mod-left-split, .mod-right-split) {
+.sidebar-tabs-tabular :is(.mod-left-split, .mod-right-split, .workspace-ribbon.mod-left) {
     --sidebar-tab-background-color: var(--note);
     --sidebar-tab-border-width: 0;
     --sidebar-tab-padding: 0 var(--size-4-4);

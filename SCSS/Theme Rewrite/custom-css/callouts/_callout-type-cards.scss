@@ -57,7 +57,8 @@
 //Table
 .callout[data-callout~="cards"][data-callout-metadata~="dataview"] {
     // Undo General Cards Grid Styling
-    --callout-content-padding: 0px;
+    --callout-content-padding: 0;
+    // --callout-cards-outline: ;
 
     & .callout-content {
         display: unset;
@@ -65,6 +66,8 @@
     }
     & br { display: block; }
 
+
+    & .block-language-dataview { padding: 5px; }
     & .dataview.table-view-table {
         display: grid;
 
@@ -99,9 +102,8 @@
             padding: 10px;
 
             // background-color: var(--aside-bg);
-            box-shadow: 
-                0 0 0 1px var(--outline, var(--background-modifier-box-shadow)),
-                var(--shadow-m);
+            border: 2px solid var(--outline, var(--background-modifier-box-shadow));
+            box-shadow: var(--shadow-ml, var(--input-shadow));
         }
     }
 }

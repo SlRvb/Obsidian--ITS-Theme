@@ -57,7 +57,8 @@ body:not(.alt-chkbx-off) {
                 cursor: pointer;
 
                 &::after { 
-                    margin-top: -2px; 
+                    top: -3px; 
+                    left: 1px;
                     -webkit-mask-image: unset;
                 }
             }

@@ -63,25 +63,40 @@ ul > li:not(.task-list-item)::before {
     position: unset;
     
     height: unset;
-    
 }
+ul > li:not(.task-list-item)::marker,
+.is-live-preview .cm-formatting-list { color: transparent; }
+
 //Alignment
 ul > li:not(.task-list-item)::before { 
     float: left; //Spaced list bullet fix
-    margin-left: -23px; 
-    margin-right: 7px; 
+    margin-left: -22px;
+    margin-right: 7px;
 }
-.is-live-preview .cm-formatting-list-ul::before { 
-    margin-right: -6px; 
-    margin-left: -4px;
+.is-live-preview .cm-formatting-list-ul { 
+    font-family: var(--font-monospace); 
+
+    &::before { 
+        margin-right: -15px;
+        margin-left: -4px;
+    }
 }
+
 // Checklist Alignment
 .markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
-    vertical-align: -3px;
+    // vertical-align: -3px;
     margin: 0;
     // margin-left: 2px;
-    margin-right: 2px;
+    // margin-right: 2px;
 }
+.markdown-preview-view .task-list-item-checkbox { margin-right: 8px; }
+
+
+//Callout Alignment Fixes
+.callout li { margin-inline-start: calc(var(--checkbox-size) / 4); }
+.is-live-preview .callout li.task-list-item 
+{ margin-inline-start: calc(var(--checkbox-size) * -1.2); }
+
 
 //Numbered List
 ol > li::marker,

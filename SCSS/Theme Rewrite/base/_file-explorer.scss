@@ -26,6 +26,8 @@ body {
     --nav-item-children-padding-left: 8px;
     --nav-item-children-margin-left: 15px;
     
+    --folder-text-color: var(--nav-item-color);
+    --file-text-color: var(--nav-item-color);
 
     --nav-item-size: var(--font-ui-small);
     --nav-item-weight: 500;
@@ -35,8 +37,6 @@ body {
     
     --nav-indentation-guide-width: 2px;
     --nav-indentation-guide-color: var(--lines);
-
-
 }
 
 // Hide Collapse Indicator
@@ -52,6 +52,16 @@ body {
 .nav-files-container { 
     padding: var(--explorer-padding);
 }
+
+.nav-folder.is-collapsed .nav-folder-title { 
+    color: var(--folder-text-color); 
+}
+.nav-folder .nav-folder-title {
+    color: var(--folder-open-text-color);
+}
+.nav-file-title { color: var(--file-text-color); }
+
+
 
 //Hover
 // .nav-file-title:hover .nav-file-title-content,

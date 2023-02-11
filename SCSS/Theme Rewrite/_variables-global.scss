@@ -47,8 +47,8 @@ body.theme-light
     --font-ui-medium: 15px;
     --font-ui-large: 20px;
     
-    --font-smallest:.88em;
-    --font-smaller:.9em;
+    --font-smallest: .85em;
+    --font-smaller:.90em;
     --font-small: .95em;
 
     --icon-xs: 14px;
@@ -78,6 +78,7 @@ body.theme-light
     //Shadow
     --shadow-s: 2px 2px 0 var(--outline);
     --shadow-m: 3px 3px 0 var(--outline);
+    --shadow-ml: 4px 4px 0 var(--outline);
     --shadow-l: 5px 5px 0 var(--outline);
 
     --input-shadow: var(--shadow-s);

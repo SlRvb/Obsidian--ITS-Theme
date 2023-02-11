@@ -2,10 +2,10 @@
 name: In The Shadows Settings
 id: ITS
 settings:
-#    -
-#        title: Class Test toggle
-#        id: file-explorer-flat
-#        type: class-toggle
+    #-
+    #    title: Class Test toggle
+    #    id: file-explorer-flat
+    #    type: class-toggle
     -
         title: Workspace
         id: ITS-Workspace
@@ -150,6 +150,10 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    - 
+        title: File Explorer Styling
+        id: file-explorer-flat
+        type: class-toggle
     -
         title: Hide Vault Title
         id: vault-title-none
@@ -964,6 +968,88 @@ settings:
         description: Tables widened to touch ends of the page
         id: tables-wide
         type: class-toggle
+    -
+        title: Table Header Adjustments
+        id: ITS-Table-Header-Adj
+        type: heading
+        level: 3 
+        collapsed: true
+    -
+        title: Table Header Height Padding
+        id: table-header-padding-y
+        type: variable-number-slider
+        format: px
+        default: 4
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Table Header Width Padding
+        id: table-header-padding-x
+        type: variable-number-slider
+        format: px
+        default: 10
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Table Header Font Size
+        id: table-header-size
+        type: variable-number-slider
+        format: px
+        default: 16
+        min: 12
+        max: 30
+        step: 1
+    -
+        title: Table Header Font Weight
+        id: table-header-weight
+        type: variable-number-slider
+        default: 800
+        min: 100
+        max: 900
+        step: 100
+    -
+        title: Table Cell Adjustments
+        id: ITS-Table-Cell-Adj
+        type: heading
+        level: 3 
+        collapsed: true
+    -
+        title: Table Cell Height Padding
+        id: table-cell-padding-y
+        type: variable-number-slider
+        format: px
+        default: 4
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Table Cell Width Padding
+        id: table-cell-padding-x
+        type: variable-number-slider
+        format: px
+        default: 10
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Table Cell Font Size
+        id: table-text-size
+        type: variable-number-slider
+        format: px
+        default: 16
+        min: 12
+        max: 30
+        step: 1
+    #-
+    #    title: Table Cell Font Weight
+    #    id: table-text-weight
+    #    type: variable-number-slider
+    #    default: 500
+    #    min: 100
+    #    max: 900
+    #    step: 100
     -
         title: Horizontal Line
         id: ITS-HR-Line

@@ -8,6 +8,10 @@
     --explorer-root-folder-background: rgb(var(--accent-color), 0.3);
     --explorer-root-background: rgb(var(--accent-color), 0.1);
     --explorer-root-border-color: var(--accent);
+    --explorer-root-folder-color: var(--folder);
+    --explorer-root-folder-open-color: var(--folder);
+    
+    --explorer-folder-open-background: var(--td);
 
     //Root folder
     .nav-folder.mod-root > .nav-folder-children > .nav-folder {
@@ -23,14 +27,36 @@
         }
         & > .nav-folder-title {
             background-color: var(--explorer-root-collapsed-background);
+            color: var(--explorer-root-folder-color);
         }
         
         &:not(.is-collapsed) > .nav-folder-title {
             background-color: var(--explorer-root-folder-background);
             border-bottom-color: var(--explorer-root-border-color);
+            color: var(--explorer-root-folder-open-color);
             
             justify-content: center;
         }
 
+    }
+    
+    // Opened Folder 
+    .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
+        text-align: center;
+        transition:cubic-bezier(1, 0, 0, 1);
+        text-transform: uppercase;
+        letter-spacing: .25em;
+        padding: 3px 0;
+        
+        //Icon Float
+        &::before {
+            float: left;
+            padding-left: 1px;
+            margin-right: -10px;
+        }
+    }
+    .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+        background-color: var(--explorer-folder-open-background);
+        border-bottom-color: var(--explorer-root-border-color);
     }
 }

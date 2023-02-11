@@ -96,13 +96,9 @@
 
 //Fixed Hover Icon Background Color
 :is(.mod-left-split, .mod-right-split) .is-active:hover .workspace-tab-header-inner,
-
 .clickable-icon:hover,
-
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
-
 .side-dock-ribbon .clickable-icon:hover,
-
 .workspace-tab-header:hover .workspace-tab-header-inner .workspace-tab-header-inner-icon
 {
     background-color: var(--sidebar-tab-background-color-hover);

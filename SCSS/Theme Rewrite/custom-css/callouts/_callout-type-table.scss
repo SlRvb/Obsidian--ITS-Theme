@@ -3,6 +3,8 @@
 .callout.callout[data-callout-metadata~="table"],
 .callout.callout[data-callout~="table"] {
     border: 0;
+    background-color: transparent;
+    --callout-padding: 0;
 
     & .callout-content {
         padding: 0;

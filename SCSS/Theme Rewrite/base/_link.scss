@@ -20,7 +20,10 @@ body
 
 
 //Link
+.is-live-preview .cm-hmd-internal-link,
 .internal-link { font-family: var(--link-font); }
+
+.is-live-preview .cm-underline,
 .external-link { font-family: var(--link-external-font); }
 
 a[href^='https'],

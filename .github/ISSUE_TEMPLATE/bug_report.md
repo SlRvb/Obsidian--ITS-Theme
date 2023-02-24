@@ -29,8 +29,9 @@ Where does the bug occur?
 - [ ] Desktop
 - [ ] Mobile
 
-Obsidian Version:
-ITS Theme Version:
+### Versions
+- Obsidian Version: 
+- ITS Theme Version: 
 
 ### Additional context
 Add any other context about the problem here.

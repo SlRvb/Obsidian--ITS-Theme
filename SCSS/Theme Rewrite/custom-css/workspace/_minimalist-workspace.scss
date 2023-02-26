@@ -1,0 +1,109 @@
+.minimalist-workspace.minimalist-workspace {
+    --divider-color: transparent;
+    --scrollbar-thumb-bg: transparent;
+    --tab-outline-width: 0;
+    --tab-outline-color: transparent;
+}
+
+.hide-resize-handle {
+    --divider-color: transparent;
+}
+.hide-scrollbar {
+    --scrollbar-thumb-bg: transparent;
+}
+.hide-tab-outline.hide-tab-outline {
+    --tab-outline-width: 0;
+    --tab-outline-color: transparent;
+}
+
+// Hide Vault Name
+.minimalist-workspace,
+.hide-vault-name {
+    & .nav-folder.mod-root > .nav-folder-title:not(:hover) {
+        height: 6px;
+        opacity: 0;
+    }
+}
+
+
+// Hide Note title
+.minimalist-workspace,
+.hide-note-title {
+    & .view-header:not(:hover):not(:focus-within) {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        z-index: 5;
+    }
+} 
+
+.minimalist-workspace,
+.hide-note-title-icons {
+& .view-header:not(:hover):not(:focus-within) {
+    & .view-header-icon,
+    & .view-header-nav-buttons,
+    & .view-actions {
+        opacity: 0;
+        width: 0;
+        padding: 0 5px;
+    }
+}}
+
+.minimalist-workspace,
+.hide-sidebar-ribbon
+{
+    & .side-dock-ribbon:is(.mod-left, .mod-right):not(:hover) {
+        opacity: 0;
+        flex: 0 0 10px;
+        padding: 0;
+    }
+    // & .workspace-drawer.mod-left .workspace-drawer-inner:not(:hover) { padding-left: 12px; }
+
+    // .side-dock-ribbon .mod-left .workspace-drawer-ribbon:not(:hover) {
+    //     width: 12px;
+    // }
+}
+
+.minimalist-workspace,
+.hide-titlebar {
+    & .titlebar:not(:hover) {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+.minimalist-workspace,
+.hide-status-bar
+{ & .status-bar:not(:hover) { 
+    min-height: 10px; 
+    padding: 0;
+    position: absolute;
+    
+    --icon-s: 0;
+    --status-bar-font-size: 0;
+    --status-bar-background: transparent;
+} }
+
+.minimalist-workspace,
+.hide-titlebar-tab {
+    & .workspace-tab-header-container:not(:hover) {
+        height: 12px;
+        opacity: 0;
+    }
+}
+
+.minimalist-workspace,
+.hide-nav-header {
+    & .nav-header:not(:hover) .nav-buttons-container 
+    { display: none; }
+}
+
+.minimalist-workspace,
+.hide-frontmatter {
+    & .frontmatter-container:not(:hover) { 
+        height: 10px;
+        opacity: 0;
+
+        & > * { display: none; }
+    }
+}

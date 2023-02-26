@@ -1,0 +1,17 @@
+.nav-view-outer .tree-item-children .tree-item-children {
+    padding-left: 0;
+}
+.nav-view .tree-item-children .tree-item-children .tree-item {
+    border-left: var(--nav-item-border-color) 1px solid;
+    padding-left: 18px;
+}
+.nav-view-outer .tree-item-children .tree-item-children .tree-item-children,
+.nav-view-outer .tree-item-children .tree-item-self:not(.mod-collapsible) {
+    border-color: transparent;
+}
+.nav-view-outer .tree-item-children .tree-item-children .tree-item-children {
+    margin-left: -20px;   
+}
+.nav-view-outer .tree-item-self:not(.mod-collapsible) {
+    margin-left: -4px;
+}

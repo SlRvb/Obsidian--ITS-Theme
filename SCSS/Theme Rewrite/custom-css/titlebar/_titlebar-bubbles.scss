@@ -1,15 +1,18 @@
-.titlebar-bubbles.titlebar-bubbles {
+.titlebar-bubbles.titlebar-bubbles.titlebar-bubbles {
     --tab-outline-width: 0;
-    --titlebar-bubble-colors: var(--accent);
+    --titlebar-bubble-colors: #0b0f13;
+    --titlebar-bubble-colors-inactive: #0b0f1350;
 }
 
-.titlebar-bubbles .mod-root {
+ 
+.titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) {
     --tab-radius: var(--radius-m);
     --tab-radius-active: var(--radius-m);
 
     --tab-text-padding: 3px 5px;
     --tab-text-padding-inner: 1px 3px;
     --tab-gap: 0 10px;
+    --sidebar-tab-background-color-hover: transparent;
 
 
     // & .workspace-tab-header { padding: var(--tab-gap); }
@@ -26,18 +29,24 @@
         margin: unset;
         padding: var(--tab-text-padding);
     }
-
+    
     //Tab
     & .workspace-tab-header {
         box-shadow: 2px 2px 0 var(--titlebar-bubble-colors);
         border: 2px solid var(--titlebar-bubble-colors);
         padding: var(--tab-text-padding-inner);
+
+        &:not(.is-active) {
+            --titlebar-bubble-colors: var(--titlebar-bubble-colors-inactive);
+        }
     }
 
     //Hover Color
-    & .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner 
-    { background-color: unset; }
-    & .workspace-tab-header:not(.is-active):hover { background-color: var(--td); }
+    & .workspace-tab-header:not(.is-active):hover { 
+        background-color: var(--titlebar-bubble-colors-inactive); 
+        
+        & .workspace-tab-header-inner { background-color: unset; }
+    }
 
     //New Tab
     & .workspace-tab-header-new-tab { padding: 0; }
@@ -45,5 +54,10 @@
     //Remove Tab Corners
     & .workspace-tab-header.is-active::before,
     & .workspace-tab-header.is-active::after { display: none; }
+
+
+    & .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+        color: var(--text-on-accent);
+    }
 }
 

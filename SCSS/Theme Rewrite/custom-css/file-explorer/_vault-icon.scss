@@ -10,7 +10,7 @@ body {
 
     margin-bottom: 0;
 }
-// .vlt-icon {
+
 .nav-folder.mod-root > .nav-folder-title::before {
     content: '';
     background-image: var(--vault-icon-image);
@@ -21,6 +21,7 @@ body {
 .vault-icon .nav-folder.mod-root > .nav-folder-title::before {
     width: 32px;
     height: 28px;
+    margin-right: 5px;
 }
 
 // Mobile

@@ -2,6 +2,7 @@
     --titlebar-background: var(--dark-accent);
     --titlebar-background-focused: var(--dark-accent);
     --titlebar-bubble-colors: var(--outline);
+    --sidebar-tab-background-color: var(--note);
 
     --tab-text-color: var(--soft-text);
     --tab-text-color-focused: var(--text);
@@ -12,10 +13,16 @@
     --tab-outline-width: 0;
     --tab-divider-color: var(--td);
 
+    &.theme-light {        
+        --sidebar-icon-color-active: var(--text);
+    }
 
     & .sidebar-toggle-button, 
     & .workspace-tabs.mod-top {
         background-color: var(--titlebar-background);
         padding: 0;
+
+        --sidebar-icon-color: var(--text-on-accent);
+        --icon-color: var(--text-dl);
     }
 }

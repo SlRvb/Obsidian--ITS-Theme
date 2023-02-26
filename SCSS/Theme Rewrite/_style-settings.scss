@@ -2,10 +2,10 @@
 name: In The Shadows Settings
 id: ITS
 settings:
-    #-
-    #    title: Class Test toggle
-    #    id: file-explorer-flat
-    #    type: class-toggle
+    -
+        title: Class Test toggle
+        id: minimalist-workspace
+        type: class-toggle
     -
         title: Workspace
         id: ITS-Workspace
@@ -61,7 +61,15 @@ settings:
         min: 0
         max: 15
         step: 1
-
+    -
+        title: Sidebar Tab Icon Sizing
+        id: icon-size
+        type: variable-number-slider
+        default: 18
+        format: px
+        min: 5
+        max: 20
+        step: 1
     -
         title: Settings
         id: ITS-Settings
@@ -150,10 +158,6 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    - 
-        title: File Explorer Styling
-        id: file-explorer-flat
-        type: class-toggle
     -
         title: Hide Vault Title
         id: vault-title-none
@@ -167,6 +171,10 @@ settings:
         id: vault-icon-image
         type: variable-text
         default: "url()"
+    - 
+        title: File Explorer Styling
+        id: file-explorer-flat
+        type: class-toggle
     -
         title: Folder Icon
         id: folder-icon
@@ -187,6 +195,127 @@ settings:
         id: file-f
         type: variable-text
         default: 'its'
+    -
+        title: Background Image
+        id: ITS-Background-Image
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        title: Background Image
+        description: Toggle to apply background image to vault
+        id: background-image
+        type: class-toggle
+    - 
+        title: Background Image
+        id: background-image-url
+        type: variable-text
+        default: "url()"
+    -
+        title: Background Position Height
+        id: background-image-height
+        type: variable-number-slider
+        format: "%"
+        default: 50
+        min: 0
+        max: 100
+        step: 1
+    -
+        title: Background Position Width
+        id: background-image-width
+        type: variable-number-slider
+        format: "%"
+        default: 50
+        min: 0
+        max: 100
+        step: 1
+    -
+        title: Image Blur
+        id: background-image-blur
+        type: variable-number-slider
+        format: px
+        default: 11
+        min: 0
+        max: 20
+        step: 1
+    -
+        title: Note Opacity
+        id: background-image-opacity
+        type: variable-number-slider
+        format: "%"
+        default: 90
+        min: 20
+        max: 100
+        step: 1
+    -
+        title: Side Panel Opacity
+        id: background-image-sidebar-opacity
+        type: variable-number-slider
+        format: "%"
+        default: 90
+        min: 20
+        max: 100
+        step: 1
+    -
+        title: Minimalist Workspace
+        description: Hide UI elements unless hovered over.
+        id: ITS-Minimalist-Workspace
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Minimalist Workspace
+        description: Hide everything listed below with just 1 toggle
+        id: minimalist-workspace
+        type: class-toggle
+    -
+        title: Hide Resize Handles
+        id: hide-resize-handle
+        type: class-toggle
+    -
+        title: Hide Scrollbars
+        id: hide-scrollbar
+        type: class-toggle
+    -
+        title: Hide Sidebar Ribbon
+        id: hide-sidebar-ribbon
+        type: class-toggle
+    -
+        title: Hide Vault Name
+        id: hide-vault-name
+        type: class-toggle
+    -
+        title: Hide Search/File Explorer Nav Icons
+        id: hide-nav-header
+        type: class-toggle
+    -
+        title: Hide App Title Bar
+        id: hide-titlebar
+        type: class-toggle
+    -
+        title: Hide Status Bar
+        id: hide-status-bar
+        type: class-toggle
+    -
+        title: Hide Tabs
+        id: hide-titlebar-tab
+        type: class-toggle
+    -
+        title: Hide Tab Outline
+        id: hide-tab-outline
+        type: class-toggle
+    -
+        title: Hide Note Title Bar
+        id: hide-note-title
+        type: class-toggle
+    -
+        title: Hide Note Title Bar Icons
+        id: hide-note-title-icons
+        type: class-toggle
+    #-
+    #    title: Hide Frontmatter
+    #    id: hide-frontmatter
+    #    type: class-toggle
     -
         title: Note
         id: ITS-Note
@@ -1687,8 +1816,8 @@ settings:
         id: dataview-regular-table
         type: class-toggle
     -
-        title: Restore Wide Dataview Tables
-        id: dataview-table-wide
+        title: Auto Sized Dataview Tables
+        id: dataview-table-auto
         type: class-toggle
     -
         title: Kanban Adjustments

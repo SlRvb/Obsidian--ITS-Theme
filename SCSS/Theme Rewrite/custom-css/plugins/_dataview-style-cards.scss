@@ -38,6 +38,12 @@
     & .table-view-table > thead:not(:hover) > * { display: none; }
     
     & .dataview th:hover { background: var(--td) }
+    & .dataview strong {
+        display: block;
+        text-align: center;
+        margin: auto;
+        background-color: var(--outer-bar, var(--background-secondary));
+    }
 
 
     & .list-view-ul li,

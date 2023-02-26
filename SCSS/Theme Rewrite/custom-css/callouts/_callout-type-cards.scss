@@ -11,8 +11,8 @@
     border: 0;
     width: auto;
     
-    & .callout-title { display: none; }
-    & .callout-content {
+    & > .callout-title { display: none; }
+    & > .callout-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5px;

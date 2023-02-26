@@ -74,19 +74,15 @@
 
 
 
-//No Margin
-body .callout.callout.callout:is(
-    [data-callout-metadata~="nmg"], 
-    [data-callout-metadata~="no-margin"]
-) {
-    --callout-margin: 0;
-    > .callout { --callout-margin: 0; }
-}
+
+//Collapse
 .callout[data-callout-metadata~="collapse"] * {
     margin: 0 !important;
     padding: 0 !important;
     grid-gap: 0 !important;
 }
+
+//Borderless
 .callout.callout.callout:is(
     [data-callout-metadata~="nbrd"], 
     [data-callout-metadata~="no-border"]
@@ -94,6 +90,7 @@ body .callout.callout.callout:is(
     border: 0;
 }
 
+//Clean
 .callout.callout.callout[data-callout-metadata~="clean"],
 .callout.callout.callout[data-callout-metadata~="clean"] .callout-content {
     border: 0;
@@ -106,5 +103,5 @@ body .callout.callout.callout:is(
     }
 }
 
-
-
+//Clear
+.callout[data-callout-metadata~="clear"] { clear: both; }

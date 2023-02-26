@@ -18,7 +18,7 @@
     &[data-callout-metadata~="wm-tl"]    { width: var(--callout-med-tall); }
     &[data-callout-metadata~="wtall"]    { width: var(--callout-tall); }
     &[data-callout-metadata~="sban"],
-    &[data-callout-metadata~="wfull"]    { width: 100%; float: unset; }
+    &[data-callout-metadata~="wfull"]    { width: 100%; float: unset; max-width: 100%; }
 
     &[data-callout-metadata~="wtiny-c"]    { width: 19%; }
     &[data-callout-metadata~="wsmall-c"]   { width: 32.4%; }

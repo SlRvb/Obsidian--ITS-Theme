@@ -15,6 +15,7 @@
     // --callout-color: var(--interactive-accent-rgb);
     --callout-color: var(--note, var(--background-primary));
     --callout-padding: 0;
+    --callout-margin: 0 0 0 5px;
     background: var(--note, var(--background-primary));
 
     --h1-border-line-height: 0;
@@ -26,8 +27,6 @@
 
     border: 0;
     box-shadow: none;
-    margin: 0; 
-    margin-left: 8px;
     width: auto;
     max-width: 300px;
     float: right;
@@ -127,7 +126,7 @@
     }
 
     &[data-callout-metadata][data-callout-metadata][data-callout-metadata~="left"] {
-        margin-right: 25px;
+        --callout-margin: 0 5px 0 0;
     }
 
     

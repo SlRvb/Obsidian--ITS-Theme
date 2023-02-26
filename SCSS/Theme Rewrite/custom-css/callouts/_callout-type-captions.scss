@@ -10,7 +10,9 @@
     margin-top: -10px;
     max-width: 30vh;
     
-    & .callout-title { display: none; }
+    & > .callout-content { overflow: hidden; }
+    
+    & > .callout-title { display: none; }
     & p {
         margin-block-start: 0;
         margin-block-end: 0;

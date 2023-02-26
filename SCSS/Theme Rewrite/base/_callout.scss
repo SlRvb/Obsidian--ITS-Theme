@@ -1,5 +1,5 @@
 body {
-    --callout-margin: 0; // Personal
+    --callout-margin: 5px 0; // Personal
     --callout-padding: var(--size-4-3) var(--size-4-4);
 }
 
@@ -8,6 +8,13 @@ body {
     
     margin: var(--callout-margin);
 }
+.callout .callout { --callout-margin: 0; }
+
 .markdown-embed .markdown-rendered .callout {
     --callout-margin: 5px 0;
+
+    & p {
+        margin-block-start: 1em;
+        margin-block-end: 1em; 
+    }
 }

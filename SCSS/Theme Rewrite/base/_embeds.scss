@@ -57,5 +57,11 @@ body {
 .markdown-embed {
     padding: 0; 
 
-    & .markdown-embed-content { padding: var(--embed-padding);}
+    & .markdown-preview-view { padding: var(--embed-padding);}
+}
+
+
+.markdown-embed-link {
+    top: 8px;
+    right: var(--scrollbar-width);
 }

@@ -7,7 +7,7 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img
 { object-fit: cover; }
 
 /*Fix Float Issues*/
-img[alt*="clear"],
+:is(img, .image-embed)[alt*="clear"],
 .image-embed[src*="#clear"] 
 { clear: both; }
 

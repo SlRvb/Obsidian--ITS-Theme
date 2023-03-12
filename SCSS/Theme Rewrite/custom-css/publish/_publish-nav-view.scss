@@ -1,17 +1,85 @@
-.nav-view-outer .tree-item-children .tree-item-children {
-    padding-left: 0;
-}
-.nav-view .tree-item-children .tree-item-children .tree-item {
-    border-left: var(--nav-item-border-color) 1px solid;
-    padding-left: 18px;
-}
-.nav-view-outer .tree-item-children .tree-item-children .tree-item-children,
-.nav-view-outer .tree-item-children .tree-item-self:not(.mod-collapsible) {
-    border-color: transparent;
-}
-.nav-view-outer .tree-item-children .tree-item-children .tree-item-children {
-    margin-left: -20px;   
-}
-.nav-view-outer .tree-item-self:not(.mod-collapsible) {
-    margin-left: -4px;
+.nav-view-outer {
+    --nav-parent-item-color: var(--nav-item-color);
+    
+    //Unset Hover Opacity
+    .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self:hover {
+        opacity: 1;
+    }
+    
+    //Nested Levels
+    & .tree-item-children {
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        
+        & .tree-item-children {
+            padding-left: 8px;
+            margin-left: 0;
+            
+            & .tree-item-children {
+                padding-left: 21px;
+                margin-left: 0;
+            }
+        }
+    }
+
+    //Root Folder 
+    & .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self {
+        padding-left: 0;
+    }
+    & .tree-item-self {
+        padding-left: 12px;
+        
+        &:not(.mod-collapsible) { margin-left: 0; }
+        &.mod-collapsible.mod-collapsible { 
+            margin-bottom: 0; 
+            margin-left: 0;  
+            border-color: var(--lines);
+            
+        }
+        &.is-clickable.is-clickable.is-clickable:hover {
+            color: var(--nav-item-color-hover);
+            border-color: var(--nav-item-color-hover);
+            background: var(--nav-item-background-hover);
+        }
+        & .tree-item-icon { padding-inline-end: 0; }
+    }
+
+
+    // & .tree-item-children .tree-item > .tree-item-children .tree-item-self:not(.mod-collapsible) {
+    //     padding-left: 10px;
+    // }
+    & .tree-item-icon.collapse-icon {
+        visibility: hidden;
+    }
+
+
+    //File Icons
+    & .tree-item-self[data-path$=".md"] .tree-item-inner::before,
+    & .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
+        margin-left: -15px;
+        padding-right: 5px;
+        font-weight: 100;
+    }
+    & .tree-item-self:hover .tree-item-inner.tree-item-inner::before { color: var(--nav-item-color-hover); }
+    
+    & .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
+        content: var(--folder-icon);
+        font-family: var(--folder-font);
+        color: var(--folder);
+        margin-left: 0;
+    }
+    & .tree-item-self[data-path$=".md"] .tree-item-inner::before {
+        content: var(--file-icon);
+        font-family: var(--file-font);
+        color: var(--file-icon-color);
+        margin-left: 3px;
+        padding-right: 4px;
+    }
+} 
+    
+@media screen and (max-width: 750px) {
+    .nav-view-outer .tree-item-children .tree-item-self.mod-collapsible.is-clickable {
+        padding-left: 18px;
+    }
 }

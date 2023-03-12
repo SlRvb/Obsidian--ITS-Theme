@@ -1,0 +1,26 @@
+/*Site*/
+
+body:is(.theme-dark, .theme-light),
+.published-container
+{
+    --font-text-size: 16px;
+
+    --font-text: var(--font-default);
+    --font-interface: var(--font-default);
+    --font-monospace-default: var(--font-monospace);
+
+    --sidebar-left-background: var(--outer-bar);
+    --sidebar-left-border-width: 0;
+    --sidebar-left-width: 280px;
+    --sidebar-right-background: var(--outer-bar);
+}
+
+
+
+.site-body {
+    & .site-footer { background-color: var(--note); }
+    & .site-body-left-column-site-name {
+        color: var(--headers);
+        text-align: center;
+    }
+}

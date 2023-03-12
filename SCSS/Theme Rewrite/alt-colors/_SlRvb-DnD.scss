@@ -40,7 +40,7 @@
         --inactive: #587770;
         
         --folder: var(--accent);
-        --file: var(--soft-text);
+        --file-icon-color: var(--soft-text);
         --folder-open: #9a5f3b;
         
         --bg: #1e3831;
@@ -95,7 +95,7 @@
         
         --file-select: #64c9a3;
         --folder: var(--headers);
-        --file: #64896d;
+        --file-icon-color: #64896d;
         --folder-open: var(--accent2);
         
         --fg: #029f08;
@@ -125,7 +125,7 @@
         --theme-rainbow-3: var(--h3-color);
         --theme-rainbow-4: var(--headers);
         --theme-rainbow-5: var(--code-text);
-        --theme-rainbow-6: var(--file);
+        --theme-rainbow-6: var(--file-icon-color);
 
         --hvr-active: rgba(255, 128, 0, 0.2);
     }

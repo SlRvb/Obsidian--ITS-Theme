@@ -30,7 +30,7 @@
     --i-at: #BF7F5E;
     
     --folder-open: #D8AF97;
-    --f-icon: #8F3F2B;
+    --file-icon-color: #8F3F2B;
 
     --tag: var(--th);
     
@@ -96,8 +96,8 @@
         --theme-rainbow-1: var(--headers);
         --theme-rainbow-2: var(--soft-text);
         --theme-rainbow-3: var(--i-at);
-        --theme-rainbow-4: var(--f-icon);
+        --theme-rainbow-4: var(--file-icon-color);
         --theme-rainbow-5: var(--tag);
-        --theme-rainbow-6: var(--file);
+        --theme-rainbow-6: var(--file-icon-color);
     }
 }

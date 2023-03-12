@@ -6,8 +6,8 @@
         --font: 'its-Draconis', 'Draconis', Inter;
         
         --font-monospace: 'its-Fira Code', 'Fira Code', Inter;
-        --default-font: 'its-Bookerly', 'Bookerly', Inter;
-        --font-text: var(--default-font);
+        --font-default: 'its-Bookerly', 'Bookerly', Inter;
+        --font-text: var(--font-default);
 
         --vault-name-font-size: 25px;
     
@@ -83,7 +83,7 @@
         --inactive: #e2b7a3;
 
         --file-icon-color: #ebbd92;
-        --file: var(--text);
+        --file-icon-color: var(--text);
         
         --bg: var(--dark-sidebar);
         --code-bg: #f3e6d2;
@@ -125,13 +125,15 @@ body:not(.wotc-beyond) .wotc-beyond:is(
 //Hr 
 .wotc-beyond
 {
+    & hr,
     & .markdown-rendered hr,
     & .cm-line:not(.cm-active) hr 
     {
         background: var(--hr-image);
         background-size: 100%;
-        height: 10px;
-        border: none;
+        height: 5px;
+        //border: none;
+        --hr-thickness: 0;
     
         // &::after  { content: ''; }
     }

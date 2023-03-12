@@ -131,8 +131,8 @@ body,
     //Nav
     --folder: var(--accent); //#e05858;
     --folder-open: #e05858;
-    --file: #586477;
-    --f-icon: var(--inactive);
+    --file-icon-color: #586477;
+    --file-icon-color: var(--inactive);
     --lines: var(--hr); //#465164
     
     //Notes
@@ -224,8 +224,8 @@ body,
     
     //Nav
     --folder: var(--accent);
-    --file: #7e8ea3;
-    --f-icon: var(--inactive);
+    --file-icon-color: #7e8ea3;
+    --file-icon-color: var(--inactive);
     --folder-open: #ce6d6d;
     --lines: #b5c2d8;
     --icons: #d04e4e;

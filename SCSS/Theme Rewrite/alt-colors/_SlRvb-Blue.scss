@@ -32,8 +32,8 @@
         --i-at: #5d7b98;
         --footnote: #6e7e89;
         
-        --folder: #386ab6;
-        --file: #63748d;
+        --folder-open: #386ab6;
+        --file-icon-color: #63748d;
 
         --code-bg: #232831;
         --tag: var(--dark-accent);
@@ -77,8 +77,8 @@
         --footnote: #8996a0;
         --inactive: #a6bbde;
         
-        --folder: #6da5ce;
-        --file: #8897b4;
+        --folder-open: #6da5ce;
+        --file-icon-color: #8897b4;
         // --f-hover: #3685e0;
         
         --bg: #dde4ef;
@@ -99,7 +99,7 @@
         --theme-rainbow-2: var(--headers);
         --theme-rainbow-3: var(--th);
         --theme-rainbow-4: var(--text);
-        --theme-rainbow-5: var(--file);
+        --theme-rainbow-5: var(--file-icon-color);
         --theme-rainbow-6: var(--inactive);
     }
 }

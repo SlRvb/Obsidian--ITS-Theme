@@ -1,5 +1,5 @@
 .notion.notion {
-    --font: var(--default-font);
+    --font: var(--font-default);
     --header-font-weight: 900;
     --vault-name-font-weight: 900;
     
@@ -40,7 +40,7 @@
     
         --folder: var(--bttn);
         --f-hover: var(--text);
-        --file: var(--text);
+        --file-icon-color: var(--text);
         
         --bg: #3C4144;
         // --code-bg: #3F4447;
@@ -106,7 +106,7 @@
         --i-at: var(--bttn);
         --footnote: #A09E9A;
         
-        --file: #69685f;
+        --file-icon-color: #69685f;
         --folder: var(--text);
         --folder-open: var(--bttn);
             
@@ -131,7 +131,7 @@
         --graph-lines: #CFCECD55;
         --graph-node: var(--soft-text);
         --graph-fill: var(--folder);
-        --graph-404: var(--file);
+        --graph-404: var(--file-icon-color);
         --graph-img: #000;
         --graph-tag: var(--accent);
         --graph-focused: var(--accent);

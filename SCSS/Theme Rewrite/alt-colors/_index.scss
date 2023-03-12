@@ -93,9 +93,9 @@
     --blockquote-border-color: var(--bg);
     --blockquote-background-color: var(--embed-bg);
 
-    // --folder: var(--headers);
+    --folder: var(--headers);
     // --folder-open: var(--text);
-    // --file: var(--inactive);
+    // --file-icon-color: var(--inactive);
 
     
     //
@@ -119,9 +119,9 @@
     // --text-faint: var(--accent2);
 
     --interactive-normal: var(--outer-bar);
-    --interactive-hover: var(--embed-bg);
+    --interactive-hover: var(--inactive);
     --interactive-accent: var(--dark-accent);
-    --interactive-accent-hover: var(--dark-accent);
+    --interactive-accent-hover: var(--inactive);
 
     --scrollbar-bg: var(--bg);
     --scrollbar-thumb-bg: var(--tag);

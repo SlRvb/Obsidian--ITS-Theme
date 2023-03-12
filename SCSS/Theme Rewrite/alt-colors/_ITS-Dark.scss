@@ -23,7 +23,7 @@
         --footnote: #577093;
         --inactive: #1b262f;
 
-        --file: var(--text);
+        --file-icon-color: var(--text);
         
         --fg: var(--headers);
         --bg: var(--inactive);
@@ -45,7 +45,7 @@
         --theme-rainbow-2: var(--accent);
         --theme-rainbow-3: var(--hr);
         --theme-rainbow-4: var(--table);
-        --theme-rainbow-5: var(--file);
+        --theme-rainbow-5: var(--file-icon-color);
         --theme-rainbow-6: var(--code-bg);
     }
 }

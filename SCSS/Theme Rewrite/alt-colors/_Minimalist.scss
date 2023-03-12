@@ -1,5 +1,5 @@
 .mini {
-    --font: var(--default-font);
+    --font: var(--font-default);
     --background-modifier-hover: var(--td);
     --tag-color: var(--accent2-lite);
     
@@ -57,7 +57,7 @@
         --tag: var(--note);
         
         --folder: var(--text-dl);
-        --file: #aab3ca;
+        --file-icon-color: #aab3ca;
     
         --th: var(--note);
         --td: #06080c50;

@@ -1,5 +1,5 @@
 .nebula {
-    --font: 'Norwester', var(--default-font);
+    --font: 'Norwester', var(--font-default);
     --header-weight: 500;
     --vault-name-font-weight: 500;
 
@@ -41,17 +41,17 @@
     --outline: var(--outer-bar);
     
     // --folder: #6F4A88;
-    // --file: #D8CFDE;
-    --file: #6F4A88;
+    // --file-icon-color: #D8CFDE;
+    --file-icon-color: #6F4A88;
     --folder: var(--headers);
-    --f-icon: var(--inactive);
+    --file-icon-color: var(--inactive);
 
     --f-hover: var(--accent);
     --lines: var(--hr);
     --note: #0f0f1b;//#0C0C1D;
     --text: #C9C2D6;
     --headers: #c882eb;//#856EAF;
-    --soft-text: var(--file);
+    --soft-text: var(--file-icon-color);
     --code-text: #C95DAA;
     --footnote: #434D63;
     --code-bg: #1C0E2A;

@@ -23,7 +23,7 @@ body .outline {
     //Symbol
     & .tree-item-self::before {
         content: var(--outline-symbol);
-        font-family: var(--default-font);
+        font-family: var(--font-default);
         font-weight: 900;
         color: var(--headers);
         padding-right: var(--outline-symbol-padding-right);

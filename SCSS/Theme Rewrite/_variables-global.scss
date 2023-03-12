@@ -2,13 +2,13 @@ body.theme-dark,
 body.theme-light
 {
     //Fonts
-    --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --font-default: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
     --font-monospace: 'Fira Code', 'Fira Code Medium', 'Source Code Pro', monospace;
     
 
-    --font-text: var(--font-text-override), var(--default-font);
+    --font-text: var(--font-text-override), var(--font-default);
     --font-monospace-default: var(--font-monospace-default-override), var(--font-monospace);
-    --font-interface: var(--font-interface-override), var(--default-font);
+    --font-interface: var(--font-interface-override), var(--font-default);
 
     --rmx: 'remixicon';
     --mdi: 'Material Icons Sharp';
@@ -25,9 +25,10 @@ body.theme-light
     --radius-s: 0; //4px
     --radius-m: calc(var(--radius-s) * 1.1); //8px
     --radius-l: calc(var(--radius-s) * 1.2); //10px
+    --radius-xl: calc(var(--radius-s) * 1.5);
     --radius-h: calc(var(--radius-s) / .50); //50%
 
-    
+    --slider-track-radius: var(--radius-h);
     --input-radius: var(--radius-s);
     --icon-btn-radius: var(--radius-s);
     
@@ -82,7 +83,7 @@ body.theme-light
     --shadow-l: 5px 5px 0 var(--outline);
 
     --input-shadow: var(--shadow-s);
-    --input-shadow-hover: var(--input-shadow);
+    --input-shadow-hover: var(--shadow-m);
     --embed-block-shadow-hover: var(--input-shadow); 
 
     

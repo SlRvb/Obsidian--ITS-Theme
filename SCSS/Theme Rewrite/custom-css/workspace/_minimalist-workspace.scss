@@ -65,10 +65,20 @@
 }
 
 .minimalist-workspace,
+.hide-sidebar-ribbon-icons {
+    & .side-dock-ribbon:is(.mod-left, .mod-right):not(:hover) {
+        & :is(.side-dock-actions, .side-dock-settings)
+        { display: none; }
+    }
+}
+
+.minimalist-workspace,
 .hide-titlebar {
     & .titlebar:not(:hover) {
         width: 100%;
         opacity: 0;
+        --titlebar-background: transparent;
+        --titlebar-background-focused: transparent;
     }
 }
 

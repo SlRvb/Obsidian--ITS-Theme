@@ -1,0 +1,34 @@
+.sidebar-ribbon-float:not(.is-mobile),
+.sidebar-ribbon-mini-float:not(.is-mobile)
+{
+    //Float
+    & .side-dock-ribbon.mod-right,
+    & .side-dock-ribbon.mod-left {
+        position: absolute;
+        border: 1px solid var(--lines);
+        box-shadow: 4px 4px 0 var(--outline);
+        width: var(--ribbon-width);
+        bottom: 10px;
+
+        --ribbon-background-collapsed: var(--ribbon-background)
+    }
+
+    //Float Positioning
+    & .side-dock-ribbon.mod-right   { right: 10px; }
+    & .side-dock-ribbon.mod-left    { left: 10px; }
+    
+    &.sd-flt-top {
+        & .side-dock-ribbon.mod-right,
+        & .side-dock-ribbon.mod-left {
+            margin-top: 45px;
+        }
+    }
+
+    //Styling
+    & .side-dock-settings 
+    { border-top: var(--tab-outline-width) solid var(--tab-outline-color); }
+
+    & .sidebar-toggle-button {
+        position: relative;
+    }
+}

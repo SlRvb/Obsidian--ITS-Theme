@@ -12,6 +12,9 @@
     --icon-s: 16px;
     --icon-m: 17px;
     --icon-l: 18px;
+
+    --header-height: 40px;
+    --ribbon-width: 40px;
 }
 
 .sizing-mini.sizing-mini {
@@ -29,7 +32,15 @@
     --icon-xs: 12px;
     --icon-s: 13px;
     --icon-m: 14px;
-    --icon-l: 16px;
+    --icon-l: 15px;
+
+    --vault-name-font-size: 14px;
+    --header-height: 35px;
+    --ribbon-width: 30px;
+    --inline-title-size: 20px;
+
+    --scrollbar-width: 8px;
+    --scrollbar-height: 8px;
 }
 
 .sizing-large.sizing-large {
@@ -48,4 +59,10 @@
     --icon-s: 18px;
     --icon-m: 20px;
     --icon-l: 24px;
+
+    --header-height: 50px;
+    --ribbon-width: 50px;
+    --inline-title-size: 40px;
+
+    --scrollbar-width: 15px;
 }

@@ -1,0 +1,9 @@
+.wide,
+.note-width-wide {
+    --file-line-width: 100%;
+}
+.readable,
+.note-width-readable {
+    --file-line-width: 700px;
+    --page-width: 700px;
+}

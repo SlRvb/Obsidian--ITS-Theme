@@ -21,7 +21,7 @@
         color: rgb(var(--callout-color)); 
     }
     // Fields
-    & .callout-content strong { color: rgb(var(--callout-color)) }
+    &:not([callout-metadata~="no-strong"], [callout-metadata~="no-str"]) .callout-content strong { color: rgb(var(--callout-color)) }
     & .dataview.inline-field-key {
         background: rgb(var(--callout-color));
         color: var(--text-on-accent);

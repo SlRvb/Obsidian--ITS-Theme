@@ -23,7 +23,7 @@
 // Align Callout Title Text
 .callout.callout:is(
     [data-callout-metadata~="ttl-c"], 
-    [data-callout-metadata~="title-Center"]
+    [data-callout-metadata~="title-center"]
 ) {
     & .callout-title { justify-content: center; }
     

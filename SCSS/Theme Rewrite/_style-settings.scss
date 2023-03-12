@@ -2,10 +2,10 @@
 name: In The Shadows Settings
 id: ITS
 settings:
-    -
-        title: Class Test toggle
-        id: minimalist-workspace
-        type: class-toggle
+    #-
+    #    title: Class Test toggle
+    #    id: minimalist-workspace
+    #    type: class-toggle
     -
         title: Workspace
         id: ITS-Workspace
@@ -17,7 +17,7 @@ settings:
         id: ITS-Sizes
         type: class-select
         allowEmpty: true
-        default: none
+        default: Readable
         options:
             -
                 label: Readable
@@ -50,6 +50,21 @@ settings:
         title: Sizing
         id: ITS-Sizing
         type: heading
+        level: 2
+        collapsed: true
+    #-
+    #    title: Titlebar Sizing
+    #    id: titlebar-height
+    #    type: variable-number-slider
+    #    default: 40
+    #    format: px
+    #    min: 20
+    #    max: 50
+    #    step: 10
+    -
+        title: Sidebar
+        id: ITS-Sizing-Sidebar
+        type: heading
         level: 3
         collapsed: true
     -
@@ -58,18 +73,27 @@ settings:
         type: variable-number-slider
         default: 14
         format: px
-        min: 0
+        min: 10
         max: 15
         step: 1
     -
         title: Sidebar Tab Icon Sizing
-        id: icon-size
+        id: sidebar-tab-icon-size
         type: variable-number-slider
         default: 18
         format: px
-        min: 5
+        min: 10
         max: 20
         step: 1
+    -
+        title: Sidebar Ribbon Width Sizing
+        id: ribbon-width
+        type: variable-number-slider
+        default: 40
+        format: px
+        min: 20
+        max: 50
+        step: 5
     -
         title: Settings
         id: ITS-Settings
@@ -131,6 +155,10 @@ settings:
                 label: Tabular
                 value: sidebar-tabs-tabular
     -
+        title: Bottom Navbar Buttons
+        id: navbar-bottom
+        type: class-toggle
+    -
         title: Sidebar Ribbon
         id: ITS-Sidebar-Ribbon
         type: heading
@@ -144,14 +172,10 @@ settings:
         options: 
             - 
                 label: Plain
-                value: sd-float
+                value: sidebar-ribbon-float
             -
                 label: Minimized
                 value: sidebar-ribbon-mini-float
-    -
-        title: Bottom Navbar Buttons
-        id: navbar-bottom
-        type: class-toggle
     -
         title: File Explorer
         id: ITS-File-Explorer
@@ -279,6 +303,10 @@ settings:
     -
         title: Hide Sidebar Ribbon
         id: hide-sidebar-ribbon
+        type: class-toggle
+    -
+        title: Hide Sidebar Ribbon Icons
+        id: hide-sidebar-ribbon-icons
         type: class-toggle
     -
         title: Hide Vault Name
@@ -467,10 +495,10 @@ settings:
                 label: Small
                 value: inline-title-small
             - 
-                label: Center
+                label: Medium
                 value: inline-title-medium
             - 
-                label: Right
+                label: Large
                 value: inline-title-large
     -
         title: Inline Title Fonts
@@ -523,11 +551,6 @@ settings:
         max: 8
         step: 1
     -
-        title: Header Color Override
-        description: Header color always applied over other markdown in the header
-        id: heading-color-override
-        type: class-toggle
-    -
         title: Header Positions
         id: ITS-Header-positions
         type: class-select
@@ -561,9 +584,230 @@ settings:
         id: hcl
         type: class-toggle
     -
+        title: Header Color Override
+        description: Header color always applied over other markdown in the header
+        id: heading-color-override
+        type: class-toggle
+    -
         title: Illusion Theme Inspired Headings
         id: illusion
         type: class-toggle
+    -
+		title: Advanced Heading Options
+		id: ITS-Advanced-Header
+		type: heading
+		level: 3
+		collapsed: true
+    -
+		title: Header Font
+		id: ITS-Header-Fonts
+		type: heading
+		level: 4
+		collapsed: true
+    -
+        title: Heading 1
+        id: h1-font
+        type: variable-text
+        default: '"Calisto MT"'
+    -
+        title: Heading 2
+        id: h2-font
+        type: variable-text
+        default: '"Calisto MT"'
+    -
+        title: Heading 3
+        id: h3-font
+        type: variable-text
+        default: '"Calisto MT"'
+    -
+        title: Heading 4
+        id: h4-font
+        type: variable-text
+        default: '"Calisto MT"'      
+    -
+        title: Heading 5
+        id: h5-font
+        type: variable-text
+        default: '"Calisto MT"'
+    -
+        title: Heading 6
+        id: h6-font
+        type: variable-text
+        default: '"Calisto MT"'
+    -
+		title: Header Font Size
+		id: ITS-Header-Font-Size
+		type: heading
+		level: 4
+		collapsed: true
+	-
+		title: Heading 1
+		id: h1-size
+		type: variable-number-slider
+        default: 34
+        format: px
+        min: 12
+        max: 40
+        step: 2
+	-
+		title: Heading 2
+		id: h2-size
+		type: variable-number-slider
+        default: 30
+        format: px
+        min: 12
+        max: 40
+        step: 2
+	-
+		title: Heading 3
+		id: h3-size
+		type: variable-number-slider
+        default: 26
+        format: px
+        min: 12
+        max: 40
+        step: 2
+	-
+		title: Heading 4
+		id: h4-size
+		type: variable-number-slider
+        default: 24
+        format: px
+        min: 12
+        max: 40
+        step: 2
+	-
+		title: Heading 5
+		id: h5-size
+		type: variable-number-slider
+        default: 20
+        format: px
+        min: 12
+        max: 40
+        step: 2
+	-
+		title: Heading 6
+		id: h6-size
+		type: variable-number-slider
+        default: 18
+        format: px
+        min: 12
+        max: 40
+        step: 2	
+    -
+		title: Header Colors
+		id: ITS-Header-Colors
+		type: heading
+		level: 4
+		collapsed: true
+	-
+		title: Heading 1 Color
+		id: h1-color
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+	-
+		title: Heading 2 Color
+		id: h2-color
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+	-
+		title: Heading 3 Color
+		id: h3-color
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+	-
+		title: Heading 4 Color
+		id: h4-color
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+	-
+		title: Heading 5 Color
+		id: h5-color
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+	-
+		title: Heading 6 Color
+		id: h6-color
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+    -
+		title: Header Alignment
+		id: ITS-Header-Alignment
+		type: heading
+		level: 4
+		collapsed: true
+    -
+        title: Heading 1
+        id: h1-text-align
+        type: variable-select
+        allowEmpty: true
+        default: left
+        options:
+            - left
+            - center
+            - right
+    -
+        title: Heading 2
+        id: h2-text-align
+        type: variable-select
+        allowEmpty: true
+        default: left
+        options:
+            - left
+            - center
+            - right
+    -
+        title: Heading 3
+        id: h3-text-align
+        type: variable-select
+        allowEmpty: true
+        default: left
+        options:
+            - left
+            - center
+            - right
+    -
+        title: Heading 4
+        id: h4-text-align
+        type: variable-select
+        allowEmpty: true
+        default: left
+        options:
+            - left
+            - center
+            - right
+    -
+        title: Heading 5
+        id: h5-text-align
+        type: variable-select
+        allowEmpty: true
+        default: left
+        options:
+            - left
+            - center
+            - right
+    -
+        title: Heading 6
+        id: h6-text-align
+        type: variable-select
+        allowEmpty: true
+        default: left
+        options:
+            - left
+            - center
+            - right
     -
 		title: Advanced Heading Underlines
 		description: Specific adjustments to heading underlines.
@@ -1357,7 +1601,7 @@ settings:
     - 
         title: File Icon
         description: File icon color.
-        id: file
+        id: file-icon-color
         type: variable-themed-color
         format: hex
         default-dark: '#586477'

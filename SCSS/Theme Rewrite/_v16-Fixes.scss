@@ -22,7 +22,10 @@
 { color: var(--nav-item-color-hover); }
 
 
-
+//Sliders
+input[type='range'] {
+    border-radius: var(--slider-track-radius);
+}
 
 
 

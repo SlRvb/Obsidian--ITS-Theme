@@ -12,7 +12,7 @@ body {
 body:not(.native-scrollbars) ::-webkit-scrollbar {
     // background-color: var(--scrollbar-bg);
     width: var(--scrollbar-width);
-    // height: var(--scrollbar-width);
+    height: calc(var(--scrollbar-width) + 1px);
 }
 
 // body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {

@@ -7,12 +7,12 @@ body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
     --tag-size: var(--font-size);
 
     //Header Fixes
-    --h1-font: var(--default-font);
-    --h2-font: var(--default-font);
-    --h3-font: var(--default-font);
-    --h4-font: var(--default-font);
-    --h5-font: var(--default-font);
-    --h6-font: var(--default-font);
+    --h1-font: var(--font-default);
+    --h2-font: var(--font-default);
+    --h3-font: var(--font-default);
+    --h4-font: var(--font-default);
+    --h5-font: var(--font-default);
+    --h6-font: var(--font-default);
 
     --header-weight: 900;
     --h1-weight: var(--header-weight);

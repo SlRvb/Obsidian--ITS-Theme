@@ -12,9 +12,13 @@
     
     --ribbon-border-width: 0;
     --ribbon-border-color: var(--outer-bar);
+    --ribbon-icon-size: var(--icon-l);
+    --ribbon-icon-stroke: var(--icon-l-stroke-width);
 
     --sidebar-icon-color: var(--text);
     --sidebar-icon-color-active: var(--text-dl);
+    --sidebar-tab-icon-size: var(--icon-l);
+    --sidebar-tab-icon-stroke: var(--icon-l-stroke-width);
 
     --sidebar-tab-background-color-hover: var(--accent);
     --sidebar-tab-color-hover: var(--text-dl);
@@ -38,12 +42,25 @@
 
 
 // Fix Sidebar Button
-.has-left-sidebar-toggle .sidebar-toggle-button {
+.workspace-ribbon.mod-left { 
+    margin-top: 0; 
+    gap: 0;
+}
+.sidebar-toggle-button {
     padding: 0;
+    position: relative;
+    height: var(--header-height);
 
-    & .clickable-icon { width: 100%; }
+    // & .clickable-icon { width: 100%; }
+    & .clickable-icon {
+        padding: 10px;
+    }
 }
 
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header-inner-icon .svg-icon {
+    --icon-size: var(--sidebar-tab-icon-size);
+    --icon-stroke: var(--sidebar-tab-icon-stroke);
+}
 
 
 //Sidebar Tab Outline
@@ -65,6 +82,10 @@
 .workspace-ribbon { 
     padding: 0; 
     border-right: var(--ribbon-border-width) solid var(--ribbon-border-color);
+}
+.workspace-ribbon .side-dock-ribbon-action .svg-icon {
+    --icon-size: var(--ribbon-icon-size);
+    --icon-stroke: var(--ribbon-icon-stroke);
 }
 
 //Fix Active Left Sidebar Tab Icon Color

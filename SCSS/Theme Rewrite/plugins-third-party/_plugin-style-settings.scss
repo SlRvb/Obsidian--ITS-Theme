@@ -86,11 +86,11 @@ body {
 .style-settings-heading[data-level="0"]:not(.is-collapsed) {
     --setting-item-heading-border: 2px solid var(--accent); 
 }
-.style-settings-container[data-level="0"] { 
+.style-settings-heading[data-level="0"] + .style-settings-container { 
     border: 2px solid var(--outline);
     border-top: 0;
 }
-.style-settings-container.style-settings-container[data-level="0"] {
+.style-settings-heading[data-level="0"] + .style-settings-container {
     padding-left: 0;
 
     & .style-settings-collapse-indicator { margin: 0; }
@@ -104,7 +104,7 @@ body {
     --style-settings-background-color: var(--theme-rainbow-1);
     --setting-item-heading-background: var(--theme-rainbow-1);
 }
-.style-settings-container[data-level="1"] {
+.style-settings-heading[data-level="1"] + .style-settings-container {
     --style-settings-border-bottom-color: var(--theme-rainbow-1);
 }
 .setting-item-heading[data-level="2"]:not(.is-collapsed) { 
@@ -112,7 +112,7 @@ body {
     --style-settings-background-color: var(--theme-rainbow-2);
     --setting-item-heading-background: var(--theme-rainbow-2);
 }
-.style-settings-container[data-level="2"] {
+.style-settings-heading[data-level="2"] + .style-settings-container {
     --style-settings-border-bottom-color: var(--theme-rainbow-2);
 }
 .setting-item-heading[data-level="3"]:not(.is-collapsed) { 
@@ -120,7 +120,7 @@ body {
     --style-settings-background-color: var(--theme-rainbow-3);
     --setting-item-heading-background: var(--theme-rainbow-3);
 }
-.style-settings-container[data-level="3"] {
+.style-settings-heading[data-level="3"] + .style-settings-container {
     --style-settings-border-bottom-color: var(--theme-rainbow-3);
 }
 .setting-item-heading[data-level="4"]:not(.is-collapsed) { 
@@ -128,7 +128,7 @@ body {
     --style-settings-background-color: var(--theme-rainbow-4);
     --setting-item-heading-background: var(--theme-rainbow-4);
 }
-.style-settings-container[data-level="4"] {
+.style-settings-heading[data-level="4"] + .style-settings-container {
     --style-settings-border-bottom-color: var(--theme-rainbow-4);
 }
 .setting-item-heading[data-level="5"]:not(.is-collapsed) { 
@@ -136,7 +136,7 @@ body {
     --style-settings-background-color: var(--theme-rainbow-5);
     --setting-item-heading-background: var(--theme-rainbow-5);
 }
-.style-settings-container[data-level="5"] {
+.style-settings-heading[data-level="5"] + .style-settings-container {
     --style-settings-border-bottom-color: var(--theme-rainbow-5);
 }
 .setting-item-heading[data-level="6"]:not(.is-collapsed) { 
@@ -144,7 +144,7 @@ body {
     --style-settings-background-color: var(--theme-rainbow-6);
     --setting-item-heading-background: var(--theme-rainbow-6);
 }
-.style-settings-container[data-level="6"] {
+.style-settings-heading[data-level="6"] + .style-settings-container {
     --style-settings-border-bottom-color: var(--theme-rainbow-6);
 }
 

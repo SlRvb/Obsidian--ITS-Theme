@@ -1,3 +1,6 @@
+> **Warning** This guide is outdated, check out the [new updated guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Folder+Styles) for more accurate information about the CSS Classes available in the ITS Theme.
+
+
 # Folder Styles Snippet
 > Change the colors of your folders with the [Folder Styles Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Folder%20Styles.css)
 

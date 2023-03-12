@@ -1,14 +1,17 @@
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N64JN4L)
-
 # ITS Theme by SlRvb
 
 > Theme for my Obsidian Story Vault: **In The Shadows**.
 
 ![](ITS.png)
 
----
-# Guide/Reference
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N64JN4L)
 
+---
+# Guide
+
+Check out the [ITS Theme Documentation](https://publish.obsidian.md/slrvb-docs/ITS+Theme/ITS+Theme) hosted on Obsidian Publish!
+
+<!--
 - [Image Positions/Adjustments](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Image-Positions.md)
 - [Alternate Checkboxes](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Checkboxes.md)
 - [Callouts](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Callouts.md)
@@ -20,6 +23,8 @@
 	- [\<i>\</i>](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/HTML-I-Attributes.md)
 	- [Asides](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Asides.md)
 	- [Alternate Admonitions](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Admonitions.md)
+
+-->
 
 ---
 ###### Download

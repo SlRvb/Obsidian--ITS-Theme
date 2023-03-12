@@ -1,3 +1,5 @@
+> **Warning** This guide is outdated, check out the [new updated guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Embed+Adjustments) for more accurate information about the Embed Adjustment snippet.
+
 # Embed Adjustments
 
 > **Embed Adjustments use the same [parameters](Image-Positions#sizing) as the images for resizing it and [moving it](Image-Positions#leftrightcenter).**

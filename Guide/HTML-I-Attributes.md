@@ -1,5 +1,4 @@
-> **NOTE**
-> Depreciated, use 
+> **Warning** This html function/styling is defunct.
 
 # `<i></i>` Attributes
 

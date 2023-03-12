@@ -1,3 +1,4 @@
+> **Warning** This guide is outdated, check out the [new updated guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Callout+Adjustments) for more accurate information about the callout snippet.
 
 # Callouts
 > **[Get Callout Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Callouts.css)**
@@ -208,7 +209,7 @@
 | --- | --- |
 | `2`, `4`, `5` | Change number of columns; 3 is default |
 | `dataview` | Style dataview table and lists as cards |
-| `dvl` | Style dataview list
+| `dvl` | Style dataview list |
 
 **External and Internal Images:**
 ```markdown

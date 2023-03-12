@@ -1,3 +1,5 @@
+> **Warning** This guide is outdated, check out the [new updated guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/CSS+Classes) for more accurate information about the CSS Classes available in the ITS Theme.
+
 # CSS Classes
 > CSS Classes to add in the frontmatter/yaml to change the way a page looks.
 
@@ -66,11 +68,11 @@ cssclass: table, t-c, no-m
 
 `<s id="#col"></s>`
 
-Classes | Description
----|---|
-`#col` | Show/Create a color block
-`#font` | Showcase a font in huge sized text
-`#vid` | 16:9 aspect ratio for videos. Used before an iframe:<br>`<div id=vid><iframe></iframe></div>`
+| Classes | Description |
+| --- | --- |
+| `#col` | Show/Create a color block |
+| `#font` | Showcase a font in huge sized text |
+| `#vid` | 16:9 aspect ratio for videos. Used before an iframe:<br>`<div id=vid><iframe></iframe></div>` |
 
 **Examples:**
 ![](https://i.imgur.com/FHYhFcR.png)

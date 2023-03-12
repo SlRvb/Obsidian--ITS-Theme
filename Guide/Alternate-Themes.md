@@ -1,3 +1,6 @@
+> **Warning** This guide is outdated, check out the [new updated guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Alternate+Color+Schemes) for more accurate information about the Alternate Themes/Color Schemes available within the ITS Theme.
+
+
 # Alternate Themes
 > [All Alternate Themes](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Theme%20-%20All%20Alternate%20Themes.css) are available in 1 snippet as well instead of many separate css snippets. 
 > 

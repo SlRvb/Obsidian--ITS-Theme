@@ -1,3 +1,5 @@
+> **Warning** This snippet is defunct, use [callout snippet](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Callouts/Callout+-+Asides) instead.
+
 # Aside
 > Add comments/asides within text that supports _most_ markdown syntax.
 

@@ -1,3 +1,5 @@
+> **Warning** This snippet is defunct, use callouts instead.
+
 # Alternate Admonitions
 
 > HTML version of the [Admonition](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/obsidian-admonition) plugin.

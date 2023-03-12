@@ -1,3 +1,5 @@
+> **Warning** This guide is outdated, check out the [new updated guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Image+Adjustments) for more accurate information about the Image Adjustments snippet.
+
 # Image Positions
 > Move/position and re-size the images in notes
 

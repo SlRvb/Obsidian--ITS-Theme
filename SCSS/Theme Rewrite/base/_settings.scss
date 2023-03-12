@@ -91,7 +91,9 @@
 .u-pop { color: var(--text); }
 
 //Fix Button hover color
-button.mod-cta:hover { color: var(--text); }
+button.mod-cta:hover { 
+    color: var(--text);
+}
 
 
 //Fixed Toggle Checkbox Dropshadow

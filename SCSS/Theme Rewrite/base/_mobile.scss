@@ -1,0 +1,103 @@
+@media (max-width: 500px) {
+    .theme-dark, .theme-light {
+        /*Mobile Sizes*/
+        --radius: 0px;
+
+        --micro: 70px;
+        --tiny: 100px;
+        --small: 150px;
+        --small-med: 200px;
+        --med-small: 250px;
+        --medium: 300px;
+        --med-tall: 450px;
+        --tall: 500px;
+    }
+}
+
+//Fixes
+.is-mobile.is-mobile {
+    --interactive-accent: var(--lite-accent);
+    --caret-color: var(--text-normal);
+
+    --tag-background: var(--tag);
+    
+    --modal-background: var(--background-primary);
+    --settings-home-background: var(--background-primary);
+    --search-result-background: var(--background-secondary);
+
+    --background-modifier-form-field: var(--td);
+    --background-modifier-cover:  var(--outer-bar);
+    --background-modifier-hover: var(--hvr-active);
+    --toggle-width: 22px;
+    
+    & .prompt { border: var(--prompt-border-width) solid var(--prompt-border-color); }
+    & .menu { border: var(--prompt-border-width) solid var(--modal-border-color); }
+    
+    //Fix Interactive Accent backgrounds
+    & .vertical-tab-nav-item.is-active,
+    & button.mod-cta:not(:hover)
+    { background-color: var(--dark-accent); }
+
+    //Settings Checkbox Size
+    & .checkbox-container { height: var(--toggle-width); }
+
+    //Ribbon Color
+    & .side-dock-ribbon { background-color: var(--ribbon-background); }
+    &.is-tablet .sidebar-toggle-button {
+        padding-left: unset;
+    }
+
+    //Prompt Radius Fixes
+    & .pull-down-action,
+    & .pull-out-action
+    { border-radius: var(--radius-h); }
+    
+    & .notice { border-radius: var(--radius-s); }
+    
+    &.is-phone {
+        & .vertical-tab-header-group-title, 
+        & .setting-item-heading .setting-item-name 
+        { font-size: var(--font-ui-medium); }
+
+        & .setting-item { 
+            gap: unset;
+            padding: var(--setting-item-padding);
+        }
+        & .setting-item-heading { margin: 0; }
+
+    }
+
+    
+}
+
+.is-mobile {
+    --mobile-toolbar-background: var(--deep-dark-accent);
+
+    //Workspace Drawer
+    & .workspace-drawer-backdrop { opacity: 0.90 !important; }
+    & .workspace-drawer:is(.mod-left, .mod-right) {
+        border: none;
+        box-shadow:
+            0 0 5px var(--outline),
+            0 0 5px var(--outline),
+            0 0 5px var(--outline);
+    }
+    //Fullscreen center title
+    & .workspace-drawer-active-tab-container.is-fullscreen .workspace-drawer-active-tab-title 
+    { text-align: center; }
+    
+    //Settings
+    & .modal.mod-settings .vertical-tab-content {
+        padding: var(--size-4-2) max(var(--size-4-2), var(--safe-area-inset-right)) 100px max(var(--size-4-2), var(--safe-area-inset-left))
+    }
+    
+    //
+    & .mobile-toolbar { 
+        background-color: var(--mobile-toolbar-background); 
+
+    }
+    & .mobile-toolbar-option {
+        color: var(--text-dl);
+    }
+    // &.theme-light { --mobile-toolbar-background: var(--accent); }
+}

@@ -2,8 +2,8 @@
 
 /*Infobox*/
 :is(
-    .is-mobile, 
-    .is-mobile .is-live-preview, 
+    .is-mobile:not(.is-tablet), 
+    .is-mobile:not(.is-tablet) .is-live-preview, 
     .is-live-preview
 ) .callout[data-callout~="infobox"]:not([data-callout-metadata~="mobile"]) { 
     float: unset !important; 

@@ -1,3 +1,4 @@
+> **Warning** This guide is outdated, check out the [new updated guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Alternate+Checkboxes) for more accurate information about the Alternate Checkboxes within the ITS Theme.
 
 
 # Alternate Checkboxes

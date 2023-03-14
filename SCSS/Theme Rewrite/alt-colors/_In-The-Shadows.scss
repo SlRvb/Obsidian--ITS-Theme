@@ -1,6 +1,10 @@
-.its {
+.its.its {
     --font-default: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
     --font-monospace: 'Fira Code', 'Fira Code Medium', 'Source Code Pro', monospace;
+
+    --hr-icon-symbol: "\e817";
+    --hr-icon-font: var(--its);
+   
 }
 
 .theme-dark {
@@ -67,8 +71,8 @@
         --tag: var(--dark-accent);
         --tag-text: #d04e4e;
     
-        --table: #283345; //#202836;
-        --hr: #2f3b4d; //#2a3b55, #3c5274
+        --table: #283345;
+        --hr: #2f3b4d;
         --i-at: #bf5e5e;
         --progress: var(--accent);
         --progress-bg: var(--bg);

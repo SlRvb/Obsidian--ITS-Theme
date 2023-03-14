@@ -10684,9 +10684,11 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --ch-string: var(--headers);
 }
 
-.its {
+.its.its {
   --font-default: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --font-monospace: "Fira Code", "Fira Code Medium", "Source Code Pro", monospace;
+  --hr-icon-symbol: "";
+  --hr-icon-font: var(--its);
 }
 
 .theme-dark.its, .theme-dark .its {
@@ -10862,28 +10864,61 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --h5-border-line-height: var(--header-border-line-height);
   --h6-border-line-height: var(--header-border-line-height);
   --header-border-line-color: var(--table);
-  --h1-border-color: var(--header-border-line-color);
-  --h2-border-color: var(--header-border-line-color);
-  --h3-border-color: var(--header-border-line-color);
-  --h4-border-color: var(--header-border-line-color);
-  --h5-border-color: var(--header-border-line-color);
-  --h6-border-color: var(--header-border-line-color);
+  --h1-border-line-color: var(--header-border-line-color);
+  --h2-border-line-color: var(--header-border-line-color);
+  --h3-border-line-color: var(--header-border-line-color);
+  --h4-border-line-color: var(--header-border-line-color);
+  --h5-border-line-color: var(--header-border-line-color);
+  --h6-border-line-color: var(--header-border-line-color);
+  --h1-border-left-color: var(--h1-border-line-color);
+  --h2-border-left-color: var(--h2-border-line-color);
+  --h3-border-left-color: var(--h3-border-line-color);
+  --h4-border-left-color: var(--h4-border-line-color);
+  --h5-border-left-color: var(--h5-border-line-color);
+  --h6-border-left-color: var(--h6-border-line-color);
+  --h1-border-right-color: var(--h1-border-line-color);
+  --h2-border-right-color: var(--h2-border-line-color);
+  --h3-border-right-color: var(--h3-border-line-color);
+  --h4-border-right-color: var(--h4-border-line-color);
+  --h5-border-right-color: var(--h5-border-line-color);
+  --h6-border-right-color: var(--h6-border-line-color);
   --inline-title-color: var(--headers);
   --link-color: var(--accent2-lite);
   --link-color-hover: var(--lite-accent);
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
   --link-unresolved-color: var(--inactive);
+  --embed-border-left-color: var(--headers);
+  --embed-border-color-hover: var(--outline);
+  --embed-border-left-color-hover: var(--embed-border-left-color);
+  --embed-border-right-color-hover: var(--embed-border-color-hover);
+  --embed-border-top-color-hover: var(--embed-border-color-hover);
+  --embed-border-bottom-color-hover: var(--embed-border-color-hover);
   --code-normal: var(--code-text);
   --code-background: var(--code-bg);
   --checkbox-color: var(--accent);
   --checkbox-border-color: var(--accent);
+  --checkbox-color-hover: var(--dark-accent);
+  --indentation-guide-color: var(--lines);
+  --indentation-guide-color-active: var(--accent);
+  --list-color-1: var(--indentation-guide-color);
+  --list-color-2: var(--indentation-guide-color);
+  --list-color-3: var(--indentation-guide-color);
+  --list-color-4: var(--indentation-guide-color);
+  --list-color-5: var(--indentation-guide-color);
+  --list-color-6: var(--indentation-guide-color);
   --list-marker-color: var(--accent);
   --list-numbered-color: var(--lite-accent);
   --table-header-background: var(--th);
   --table-header-background-hover: var(--accent);
   --table-column-alt-background: var(--td);
   --table-row-alt-background: var(--td);
+  --table-row-background-hover: var(--highlight);
+  --dataview-th-count-color: var(--text-on-accent);
+  --dataview-th-background: var(--outer-bar);
+  --dataview-th-alt-color: rgba(var(--accent-color), 10%);
+  --dataview-th-color: var(--headers);
+  --dataview-th-border-bottom: 2px solid var(--headers);
   --tag-background: var(--tag);
   --tag-background-hover: var(--accent);
   --tag-border-color: var(--tag);
@@ -10895,6 +10930,10 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --blockquote-border-color: var(--bg);
   --blockquote-background-color: var(--embed-bg);
   --folder: var(--headers);
+  --nav-item-background-hover: var(--dark-accent);
+  --latex-color: var(--lite-accent);
+  --latex-format-color: var(--inactive);
+  --latex-syntax-color: var(--soft-text);
   background-color: var(--background-primary);
   --background-primary: var(--note);
   --background-primary-alt: var(--deep-dark-accent);
@@ -10903,7 +10942,9 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --background-modifier-border: var(--table);
   --background-modifier-hover: var(--hvr-active);
   --background-modifier-form-field: var(--td);
-  --text-highlight-bg: var(--highlight);
+  --text-highlight-bg: var(--hvr);
+  --text-highlight-bg-active: var(--hvr-active);
+  --text-selection: var(--highlight);
   --text-normal: var(--text);
   --text-muted: var(--soft-text);
   --text-accent: var(--accent2-lite);

@@ -37,7 +37,12 @@ img,
 }
 }
 
-.img-clear-hr { --hr-width: 100%; }
-.img-clear-headings { 
-    --h1-width: 100%;
-}
+
+//Clears
+.clear-hr { --hr-width: 100%; }
+.clear-heading-1 h1 { clear: both; }
+.clear-heading-2 h2 { clear: both; }
+.clear-heading-3 h3 { clear: both; }
+.clear-heading-4 h4 { clear: both; }
+.clear-heading-5 h5 { clear: both; }
+.clear-heading-6 h6 { clear: both; }

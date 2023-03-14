@@ -8,6 +8,8 @@
     --h4-text-align: var(--header-text-align);
     --h5-text-align: var(--header-text-align);
     --h6-text-align: var(--header-text-align);
+
+    & :is(h5, .HyperMD-header-5)::after { margin: auto; }
 }
 
 .headings-left

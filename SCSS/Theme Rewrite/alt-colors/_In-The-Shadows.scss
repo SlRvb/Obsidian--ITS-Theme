@@ -1,0 +1,199 @@
+.its {
+    --font-default: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --font-monospace: 'Fira Code', 'Fira Code Medium', 'Source Code Pro', monospace;
+}
+
+.theme-dark {
+    &.its,
+    & .its {
+        //Bright colors
+        --deep-dark-accent: #3f1010; //#2f1010
+        --dark-accent: #652121; //#571a1a, #53201F
+        --lite-accent: #c94d4d; //#ec4c4c//#e06c75
+        --accent: #863737;//#883737, #c14343
+        --accent2: #42536e;//#4c78cc
+        --accent2-lite: #61afef;
+        --accent-color: 134, 55, 55;
+        
+        //Workspace
+        --side-bar: var(--note);
+        --side-bar-bg: var(--outer-bar);
+        --outer-bar: #0b0f13; //#0e0f15
+        --dark-sidebar: #0d1014;
+        --bttn: var(--dark-accent);
+        
+    
+        --input-bg: rgba(0, 0, 0, 0.3);
+        --selected-rgb: 168, 60, 60;
+        --hvr: rgba(168, 60, 60, 0.4);
+        --hvr2: var(--highlight);
+        --hvr-active: rgba(212, 47, 47, 0.4);
+        --highlight: #7a141466;
+        
+        --bg: #252c36;
+        --fg: #cfd7dd;
+        --success-bg: #32603e;
+        --failure-bg: #772d2d;
+        
+        --inactive: #586477;
+        --outline: var(--outer-bar);
+    
+        //Nav
+        --folder: var(--accent); //#e05858;
+        --folder-open: #e05858;
+        --file-icon-color: #586477;
+        --file-icon-color: var(--inactive);
+        --lines: var(--hr); //#465164
+        
+        //Notes
+        --note: #1a1e24; //#0d131c
+        --note-rgb: 26, 30, 36;
+        --text: #bccad8; //
+        --headers: #c14343;
+        --soft-text: #97a1b9; //#aab3ca//#d04e4e
+        --faint-text: #4e5b6f;
+        --code-text: #fa4545;
+        --footnote: #63778f;//#6e7e89
+    
+        --code-bg: #232831;
+        --embed-bg: var(--dark-sidebar);//#111417
+        --aside-bg: #11151d;
+    
+        --th: var(--dark-accent);
+        --th-text: var(--text-dl);
+        --td: #06080c60;
+        --drop-shadow: #06080c60;
+        
+        --tag: var(--dark-accent);
+        --tag-text: #d04e4e;
+    
+        --table: #283345; //#202836;
+        --hr: #2f3b4d; //#2a3b55, #3c5274
+        --i-at: #bf5e5e;
+        --progress: var(--accent);
+        --progress-bg: var(--bg);
+        
+        //Graph
+        --graph-bg: var(--outer-bar);
+        --graph-lines: rgba(var(--selected-rgb), .2);
+        --graph-node: var(--text);
+        --graph-fill: var(--headers);
+        --graph-404: #727e93;
+        --graph-img: #4c78cc;
+        --graph-tag: var(--headers);
+        --graph-focused: var(--text-highlight-bg-active);
+    
+        //Colors
+        --theme-rainbow-1: #7c2929;
+        --theme-rainbow-2: #652121;
+        --theme-rainbow-3: #471d1d;
+        --theme-rainbow-4: #381919;
+        --theme-rainbow-5: #424c61;
+        --theme-rainbow-6: #2e333d;
+    
+        // --rainbow-1: #b03a3a;
+        // --rainbow-2: #d59929;
+        // --rainbow-3: #207a20;
+        // --rainbow-4: #3232c5;
+        // --rainbow-5: #7f307f;
+        // --rainbow-6: #dd4794;
+    }
+}
+.theme-light {
+    &.its,
+    & .its {
+    //Bright colors
+    --deep-dark-accent: #2f1010;
+    --dark-accent: #c35c5c;
+    --lite-accent: #cd2626;//#a35158
+    --accent: #912e2e;
+    --accent2: #aac1d3; //#4c78cc
+    --accent2-lite: #5599d0;
+
+    //Workspace
+    --side-bar: var(--note);
+    --side-bar-bg: var(--outer-bar);
+    --outer-bar: #eef3fd;//#e1e9f6
+    --dark-sidebar: #f1f5ff;
+    --bttn: var(--headers);
+    
+    
+    --input-bg: var(--td);
+    --selected-rgb: 52, 123, 237;
+    --hvr: rgba(255, 0, 0, 0.212);
+    --hvr2: var(--highlight);
+    --hvr-active:rgba(253, 115, 115, 0.4);
+    --highlight: rgba(229, 149, 149, 0.37);
+    
+    --bg: #e1e9f6;
+    --fg: var(--accent); //#9f0202
+    --success-bg: #599049;
+    --failure-bg: #772d2d;
+    
+    
+    --inactive: #a6bbde; //#91a3c1
+    --outline: var(--bg);
+    
+    //Nav
+    --folder: var(--accent);
+    --file-icon-color: #7e8ea3;
+    --file-icon-color: var(--inactive);
+    --folder-open: #ce6d6d;
+    --lines: #b5c2d8;
+    --icons: #d04e4e;
+    
+    //Notes
+    --note: #f8fbff;
+    --note-rgb: 248, 251, 255;
+    --text: #30353a;
+    --headers: #c14343;
+    --faint-text: #4e5b6f;
+    --soft-text: #697580;
+    --code-text: #ea4262;
+    --footnote: #8996a0;
+
+    --code-bg: var(--embed-bg); 
+    --embed-bg: var(--dark-sidebar);
+    --aside-bg: var(--dark-sidebar);
+    
+    --th: var(--headers);
+    --th-text: var(--text-dl);
+    --td: #d0ddef62;
+    --drop-shadow: #d0ddef62;
+
+    --tag: #c65656;
+    --tag-text: var(--lite-accent);
+
+    --table: #ccd6eb;
+    --hr: #d6deea;
+
+    --i-at: var(--folder);
+    --progress: var(--accent);
+    --progress-bg: var(--bg);
+    
+    --graph-bg: var(--note);
+    --graph-lines: #e4e7f8;
+    --graph-node: var(--headers);
+    --graph-fill: var(--folder);
+    --graph-404: #727e93;
+    --graph-img: #4c78cc;
+    --graph-tag: #000000; 
+    --graph-focused: var(--text-highlight-bg-active);
+
+
+    //Colors
+    --theme-rainbow-1: #bb5555;
+    --theme-rainbow-2: #a53f3f;
+    --theme-rainbow-3: #862c2c;
+    --theme-rainbow-4: #662828;
+    --theme-rainbow-5: #697795;
+    --theme-rainbow-6: #a4aec2;
+
+    // --rainbow-1: #dd3c3c;
+    // --rainbow-2: #f1ab27;
+    // --rainbow-3: #118811;
+    // --rainbow-4: #3333cc;
+    // --rainbow-5: #a824a8;
+    // --rainbow-6: #e83b94;
+    }
+}

@@ -13,6 +13,7 @@
 @use 'Tangerine-Dunes';
 @use 'Nord';
 @use 'Adventure';
+@use 'In-The-Shadows';
 
 //Reapplication
 .slrvb-g,
@@ -25,7 +26,8 @@
 .dnd,
 .s-d,
 .t-d,
-.nord
+.nord,
+.its
 {
     --h1-font: var(--font);
     --h2-font: var(--font);

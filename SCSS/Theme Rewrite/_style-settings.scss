@@ -52,6 +52,15 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        title: Note Width
+        id: file-line-width
+        type: variable-number-slider
+        default: 700
+        format: px
+        min: 400
+        max: 1800
+        step: 100
     #-
     #    title: Titlebar Sizing
     #    id: titlebar-height
@@ -485,6 +494,25 @@ settings:
         id: file-header-gradient
         type: class-toggle
     -
+        title: Inline Title Styling
+        id: Inline-Title-Styling
+        type: class-select
+        allowEmpty: true
+        default: Heading
+        options:
+            -
+                label: Heading
+                value: inline-title-style-heading
+            - 
+                label: Text
+                value: inline-title-style-text
+    -
+        title: Inline Title Specifics
+        id: ITS-Inline-Title
+        type: heading
+        level: 3
+        collapsed: true
+    -
         title: Inline Title Sizes
         id: Inline-Title-Sizes
         type: class-select
@@ -505,6 +533,14 @@ settings:
         id: inline-title-font
         type: variable-text
         default: 'Calisto MT'
+    -
+        title: Inline Title Font Weights
+        id: inline-title-weight
+        type: variable-number-slider
+        default: 700
+        min: 100
+        max: 900
+        step: 100
     -
         title: Inline Title Positions
         id: Inline-Title-Positions
@@ -1121,7 +1157,7 @@ settings:
     -
         title: Neon Lines
         description: Toggle on for lines to have a neon glow effect
-        id: lists-neon
+        id: list-neon
         type: class-toggle
     -
         title: Checkboxes
@@ -1147,7 +1183,7 @@ settings:
         default: true
     - 
         title: Normal Task Text
-        description: Reapply regular text color to the text of the task.
+        description: Reapply regular text color and font weight to the text of the task.
         id: check-text
         type: class-toggle
     -

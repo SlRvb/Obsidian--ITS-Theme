@@ -1,9 +1,10 @@
 @use 'tables-center';
 @use 'tables-wide';
 
-@use 'tables-column-header';
-
 @use 'tables-alt-no-background';
 @use 'tables-alt-background-original';
 
 @use 'tables-borders';
+
+@use 'tables-styling-column-header';
+@use 'tables-styling-wikipedia';

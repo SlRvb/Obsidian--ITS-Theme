@@ -1,0 +1,16 @@
+.tables-styling-wikipedia,
+.table-wikipedia 
+{
+    --table-header-color: var(--text);
+    --table-header-background: transparent;
+    --table-header-background-hover: var(--td);
+    
+    --table-row-background-hover: var(--td);
+    --table-row-alt-background: transparent;
+    --table-column-alt-background: transparent;
+    // --table-border-color: var(--table);
+    
+    // & tr td { border-top-color: var(--hr); }
+    // & tr td { border-top: 1.1px solid var(--hr); }
+    & tr:last-child { margin-bottom: 2px; }
+}

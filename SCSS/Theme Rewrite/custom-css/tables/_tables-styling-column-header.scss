@@ -1,0 +1,13 @@
+/*Bolded Right Side Table*/
+.table.table tr:not(:hover) td:nth-child(1) {
+    background-color: var(--outer-bar);
+    font-weight: 900;
+}
+
+.table-column-header tr {
+    & td:nth-child(1) {
+        background-color: var(--table-header-background);
+        
+        &:hover { background-color: var(--table-header-background-hover); }
+    }
+}

@@ -2,6 +2,10 @@ body {
     --inline-title-position: left;
 }
 
+.show-inline-title .markdown-preview-view {
+    --file-margins: 0 32px;
+}
+
 .inline-title { 
     text-align: var(--inline-title-position); 
     padding-bottom: 0;

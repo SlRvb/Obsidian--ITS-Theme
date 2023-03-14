@@ -1,5 +1,18 @@
 // .show-inline-title { --file-margins: 10px 32px 32px 32px; }
 
+//Styling
+.inline-title-style-heading { 
+    --inline-title-size: var(--h1-size);
+    --inline-title-weight: var(--header-weight);
+    --inline-title-color: var(--h1-color);
+}
+.inline-title-style-text.inline-title-style-text {
+    --inline-title-font: var(--font-default);
+    --inline-title-size: var(--font-text-size);
+    --inline-title-weight: var(--font-bold);
+    --inline-title-color: var(--text-normal);
+}
+
 //Size
 .inline-title-small {
     --inline-title-size: var(--font-size);
@@ -9,7 +22,9 @@
 }
 
 //Font
-.inline-title-normal-font {}
+.inline-title-font-normal {
+    --inline-title-size: var(--font-size);
+}
 
 //Position
 .inline-title-position-left { --inline-title-position: left; }

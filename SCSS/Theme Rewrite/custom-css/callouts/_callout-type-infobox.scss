@@ -52,7 +52,9 @@
     // Fixed for export: DO NOT display: none; ON CALLOUT ICON
     &:not(
         [data-callout-metadata~="show-title"], 
-        [data-callout-metadata~="s-t"]
+        [data-callout-metadata~="s-t"],
+        [data-callout-metadata~="show-icon"],
+        [data-callout-metadata~="s-i"]
     ) .callout-icon svg { width: 0; height: 0; }
 
     //Hide Background Color 
@@ -61,6 +63,7 @@
     
 
     //Show title
+    & .callout-content > .callout[data-callout~="infobox"],
     &:is([data-callout-metadata~="show-title"], [data-callout-metadata~="s-t"]) {
         &:not(:hover):not(.is-collapsed) > .callout-title {
             display: flex;
@@ -69,6 +72,8 @@
         &.is-collapsed .callout-title {
             border: 1px solid var(--hr, var(--background-modifier-border));
             display: flex;
+            align-items: center;
+            align-content: center;
         }
         & .callout-title .callout-title-inner {
             display: unset;
@@ -77,7 +82,6 @@
             padding: 5px 10px;
         }
         & .callout-fold {
-            padding: unset;
             margin-top: auto;
             margin-bottom: auto; 
         }
@@ -130,6 +134,8 @@
     }
 
     
+
+    //Wikipedia Styling
     &[data-callout-metadata~="wikipedia"] table {
         --table-header-color: var(--text);
         --table-header-background: transparent;
@@ -145,8 +151,15 @@
         & tr:last-child { margin-bottom: 2px; }
     }
 
+
+    //Sub Infobox callout
+    & .callout-content > .callout[data-callout~="infobox"] {
+        max-width: unset;
+        float: unset;
+    }
 }
 @media print { .callout[data-callout~="infobox"] { max-width: 400px; } }
+
 .theme-light .callout[data-callout~="infobox"][data-callout-metadata~="wikipedia"] {
     --th-text: var(--th)
 }

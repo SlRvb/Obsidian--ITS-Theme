@@ -32,19 +32,25 @@
 
 
     // Flex
-    &[data-callout-metadata~="flex"] > .callout-content {
-        gap: unset;
-        grid-template-columns: none;
+    &[data-callout-metadata~="flex"] {
+        & > .callout-content {
+            gap: unset;
+            grid-template-columns: none;
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-        // Sub Callout Sizing
-        & .callout {
-            flex: 1 1 250px;
-            margin: 5px;
-            //background: transparent;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            // Sub Callout Sizing
+            & .callout {
+                margin: 5px;
+                flex: 1 1 calc(var(--file-line-width) / 2.5);
+                // flex: 1 1 250px;
+                //background: transparent;
+            }
+        }
+        &[data-callout-metadata~="3"] > .callout-content .callout {
+            flex: 1 1 calc(var(--file-line-width) / 3.5);
         }
     }
 
@@ -66,12 +72,9 @@
     }
 
 
-    // &[data-callout-metadata~="statblock"] > .callout-content {
-    //     display: flex;
-    //     // flex-direction: row;
-    //     // flex-wrap: wrap;
-    //     // flex: 1 1 400px;
-
-    //     grid-template-columns: none;
-    // }
+    &[data-callout-metadata~="list"] .callout-content > ul {
+        columns: var(--columns);
+        
+        & > li { break-inside: avoid; }
+    }
 }

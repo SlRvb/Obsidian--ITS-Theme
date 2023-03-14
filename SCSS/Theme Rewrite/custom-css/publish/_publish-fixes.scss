@@ -17,7 +17,11 @@ body.theme-dark {
         padding: 4px 20px 10px 0;
     }
 
-    
+    & .publish-renderer > .markdown-preview-view > .markdown-preview-sizer {
+        width: var(--page-width);
+        padding: 0;
+        margin: auto;
+    }
 
 
     //Light/Dark Mode Toggle

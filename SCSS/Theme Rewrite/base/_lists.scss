@@ -16,7 +16,7 @@
     --bullet: "\e802";
     --bullet-font: var(--its);
     
-    --list-indent: 20px;
+    --list-indent: 25px;
     // --list-spacing: 3px;
     
     --list-marker-color: var(--accent);
@@ -90,12 +90,9 @@ ul > li:not(.task-list-item)::before {
     // margin-right: 2px;
 }
 .markdown-preview-view .task-list-item-checkbox { margin-right: 8px; }
-
-
-//Callout Alignment Fixes
-.callout li { margin-inline-start: calc(var(--checkbox-size) / 4); }
-.is-live-preview .callout li.task-list-item 
-{ margin-inline-start: calc(var(--checkbox-size) * -1.2); }
+ul > li.task-list-item.task-list-item .task-list-item-checkbox {
+    margin-inline-start: calc(var(--checkbox-size) * -1.4);
+}
 
 
 //Numbered List

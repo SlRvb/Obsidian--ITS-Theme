@@ -1,10 +1,13 @@
 /* Heatmap Calendar Fix */
 .heatmap-calendar-graph {
-    & ul li {
-      border: 0;
-      &::before { display: none; }
-    }
+  & ul li {
+    border: 0;
+
+    &::before { display: none; }
+  }
+
+  --list-indent: 0;
 }
 .theme-dark .heatmap-calendar-boxes .isEmpty {
-    background-color: var(--inactive);
+  background-color: var(--inactive);
 }

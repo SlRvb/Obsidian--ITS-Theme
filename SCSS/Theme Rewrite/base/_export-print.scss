@@ -1,0 +1,13 @@
+//Fix Obsidian's Callout Print Display Issue
+@media print {
+    
+    //Calouts
+    .callout[data-callout~="infobox"] { max-width: 400px; }
+    .print.print .markdown-preview-view .callout:is(
+        [data-callout*="cards"],
+        [data-callout*="column"]
+    ) .callout-content { display: grid !important; }
+
+
+
+}

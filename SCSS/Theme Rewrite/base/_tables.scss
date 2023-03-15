@@ -35,6 +35,10 @@ body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row {
     min-width: min-content;
     white-space: pre-wrap;
 }
+//Fix table breaking text
+.markdown-rendered table td {
+    word-break: normal;
+}
 
 //Fix Missing Font Size Variable
 .cm-s-obsidian .HyperMD-table-row {

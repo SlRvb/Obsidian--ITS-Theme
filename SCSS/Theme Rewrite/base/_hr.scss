@@ -43,6 +43,8 @@ body {
     --hr-color: transparent; 
 }
 
+
+
 //Unset Live Preview's Contain Paint for HR & Plugins
 .markdown-source-view.mod-cm6 .cm-content :is(.hr, .HyperMD-hr) { 
     contain: style !important;

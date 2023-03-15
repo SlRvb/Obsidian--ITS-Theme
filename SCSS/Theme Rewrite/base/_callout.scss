@@ -7,9 +7,12 @@ body {
     --callout-blend-mode: normal;
     
     margin: var(--callout-margin);
+    
 }
 .callout .callout { --callout-margin: 0; }
 
+
+//Fixes
 .markdown-embed .markdown-rendered .callout {
     --callout-margin: 5px 0;
 

@@ -42,9 +42,6 @@ body {
     --embed-border-bottom: var(--embed-thickness) var(--embed-border-type) var(--embed-border-bottom-color-hover);
 }
 
-// //Fix Lists
-// body .markdown-embed ul.contains-task-list { margin-inline-start: 0px; }
-
 
 //Fix Embed Title Variables
 .markdown-embed-title {
@@ -56,11 +53,14 @@ body {
 
 .markdown-embed {
     padding: 0; 
-
-    & .markdown-preview-view { padding: var(--embed-padding);}
+    // & .markdown-preview-view { padding: var(--embed-padding);}
+    & .markdown-embed-content { padding: var(--embed-padding); }
+}
+.markdown-embed.markdown-embed hr {
+    margin: 1.5em 0;
 }
 
-
+//Embed link
 .markdown-embed-link {
     top: 8px;
     right: var(--scrollbar-width);

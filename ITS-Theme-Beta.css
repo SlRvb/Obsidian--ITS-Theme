@@ -3527,7 +3527,7 @@ a[href^=https],
   --checklist-done-weight: 900;
   --bullet: "";
   --bullet-font: var(--its);
-  --list-indent: 20px;
+  --list-indent: 25px;
   --list-marker-color: var(--accent);
   --list-marker-color-other: var(--accent2);
   --list-marker-color-collapsed: var(--inactive);
@@ -3591,12 +3591,8 @@ ul > li:not(.task-list-item)::before {
   margin-right: 8px;
 }
 
-.callout li {
-  margin-inline-start: calc(var(--checkbox-size) / 4);
-}
-
-.is-live-preview .callout li.task-list-item {
-  margin-inline-start: calc(var(--checkbox-size) * -1.2);
+ul > li.task-list-item.task-list-item .task-list-item-checkbox {
+  margin-inline-start: calc(var(--checkbox-size) * -1.4);
 }
 
 ol > li::marker,
@@ -3681,6 +3677,10 @@ body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row {
   white-space: pre-wrap;
 }
 
+.markdown-rendered table td {
+  word-break: normal;
+}
+
 .cm-s-obsidian .HyperMD-table-row {
   font-size: var(--table-row-edit-font-size);
 }
@@ -3755,8 +3755,12 @@ body {
 .markdown-embed {
   padding: 0;
 }
-.markdown-embed .markdown-preview-view {
+.markdown-embed .markdown-embed-content {
   padding: var(--embed-padding);
+}
+
+.markdown-embed.markdown-embed hr {
+  margin: 1.5em 0;
 }
 
 .markdown-embed-link {
@@ -5244,6 +5248,9 @@ object.link-favicon {
 }
 
 /* Heatmap Calendar Fix */
+.heatmap-calendar-graph {
+  --list-indent: 0;
+}
 .heatmap-calendar-graph ul li {
   border: 0;
 }
@@ -8468,9 +8475,11 @@ iframe {
 }
 
 /*Bolded Right Side Table*/
+.table.table td:nth-child(1) {
+  font-weight: 900;
+}
 .table.table tr:not(:hover) td:nth-child(1) {
   background-color: var(--outer-bar);
-  font-weight: 900;
 }
 
 .table-column-header tr td:nth-child(1) {
@@ -10882,12 +10891,6 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --h4-border-right-color: var(--h4-border-line-color);
   --h5-border-right-color: var(--h5-border-line-color);
   --h6-border-right-color: var(--h6-border-line-color);
-  --h1-background: var(--theme-rainbow-1);
-  --h2-background: var(--theme-rainbow-2);
-  --h3-background: var(--theme-rainbow-3);
-  --h4-background: var(--theme-rainbow-4);
-  --h5-background: var(--theme-rainbow-5);
-  --h6-background: var(--theme-rainbow-6);
   --inline-title-color: var(--headers);
   --link-color: var(--accent2-lite);
   --link-color-hover: var(--lite-accent);

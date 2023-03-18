@@ -1,6 +1,6 @@
 
 /*Hide Headings*/
-.internal-embed[alt*="no-h"].markdown-embed :is(
+.internal-embed[alt~="no-h"].markdown-embed :is(
     h1,
     h2,
     h3,
@@ -10,10 +10,10 @@
 ) { display: none; }
 
 /*Hide Specific Headings*/
-.internal-embed[alt*="n-h1"].markdown-embed h1,
-.internal-embed[alt*="n-h2"].markdown-embed h2,
-.internal-embed[alt*="n-h3"].markdown-embed h3,
-.internal-embed[alt*="n-h4"].markdown-embed h4,
-.internal-embed[alt*="n-h5"].markdown-embed h5,
-.internal-embed[alt*="n-h6"].markdown-embed h6 
+.internal-embed[alt~="no-h1"].markdown-embed h1,
+.internal-embed[alt~="no-h2"].markdown-embed h2,
+.internal-embed[alt~="no-h3"].markdown-embed h3,
+.internal-embed[alt~="no-h4"].markdown-embed h4,
+.internal-embed[alt~="no-h5"].markdown-embed h5,
+.internal-embed[alt~="no-h6"].markdown-embed h6 
 { display: none; }

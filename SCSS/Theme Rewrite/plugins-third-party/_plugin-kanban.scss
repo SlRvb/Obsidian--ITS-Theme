@@ -58,6 +58,8 @@ body {
 .kanban-plugin__item-title-wrapper {
     padding: 2px 8px;
     background: var(--kanban-card-title-background);
+    align-self: center;
+    align-items: center;
     
     &:not(:only-child) {
         border: none;
@@ -117,6 +119,11 @@ body {
     & button {
         box-shadow: var(--kanban-button-shadow);
     }
+}
+.kanban-plugin__item-postfix-button { 
+    padding-left: 0; 
+    padding-right: 0; 
+    margin-right: -7px;
 }
 
 //Input

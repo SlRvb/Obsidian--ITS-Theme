@@ -165,13 +165,13 @@ body,
     
     //Graph
     --graph-bg: var(--outer-bar);
-    --graph-lines: rgba(var(--selected-rgb), .2);
+    --graph-lines: rgba(var(--selected-rgb), .6);
     --graph-node: var(--text);
     --graph-fill: var(--headers);
     --graph-404: #727e93;
     --graph-img: #4c78cc; //#ff86be
     --graph-tag: var(--headers);
-    --graph-focused: var(--text-highlight-bg-active);
+    --graph-focused: var(--accent2-lite);
 
     //Colors
     --theme-rainbow-1: #7c2929;

@@ -183,4 +183,13 @@
 
     --scrollbar-bg: var(--bg);
     --scrollbar-thumb-bg: var(--tag);
+
+    --graph-bg: var(--note);
+    --graph-lines: var(--highlight);
+    --graph-node: var(--text);
+    --graph-fill: var(--lite-accent);
+    --graph-404: var(--inactive);
+    --graph-img: var(--accent2);
+    --graph-tag: var(--dark-accent);
+    --graph-focused: var(--accent2-lite);
 }

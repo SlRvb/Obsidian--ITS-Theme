@@ -4,18 +4,20 @@
     --callout-icon: layers;
     --callout-color: 82, 139, 212;
     --callout-border-width: 2px;
-    --callout-padding: 10px 24px 24px 24px;
+    // --callout-padding: 10px 24px 24px 24px;
+    --callout-title-padding: 5px;
+    --callout-content-padding: 0px 10px 10px;
 
     box-shadow: 0px 0px 0px 1px var(--outline);
     
     // Title
     & .callout-title { 
-        padding: 5px; 
+        // padding: 5px; 
         background-color: transparent; 
         justify-content: center; 
     }
     // & .callout-icon { padding-bottom: 6px;}
-    & .callout-fold { color: rgb(var(--callout-color)) }
+    // & .callout-fold { color: rgb(var(--callout-color)) }
     & .callout-title-inner { 
         flex: unset;
         color: rgb(var(--callout-color)); 

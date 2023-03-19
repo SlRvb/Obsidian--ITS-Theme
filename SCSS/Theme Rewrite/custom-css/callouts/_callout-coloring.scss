@@ -9,6 +9,8 @@
     --callout-gray: 166, 189, 197;
     --callout-yellow: 208, 181, 48;
     --callout-pink: 227, 107, 167;
+    --callout-brown: 161, 106, 73;
+    --callout-black: 0, 0, 0;
     // --callout: rgb(227, 107, 167);
 
     //Title Text Colors
@@ -40,6 +42,12 @@
     &:is(
         [data-callout-metadata~="color-pink"], [data-callout-metadata~="c-pink"],[data-callout-metadata~="background-color-pink"], [data-callout-metadata~="bg-c-pink"]
     ) { --callout-color: var(--callout-pink); }
+    &:is(
+        [data-callout-metadata~="color-brown"], [data-callout-metadata~="c-pink"],[data-callout-metadata~="background-color-pink"], [data-callout-metadata~="bg-c-pink"]
+    ) { --callout-color: var(--callout-brown); }
+    &:is(
+        [data-callout-metadata~="background-black"], [data-callout-metadata~="bg-pink"],[data-callout-metadata~="background-color-pink"], [data-callout-metadata~="bg-c-pink"]
+    ) { background-color: rgba(var(--callout-black), 10%); }
     &:is(
         [data-callout-metadata~="color-"], [data-callout-metadata~="c-"]
     ) { --callout-color: var(--callout); }
@@ -74,5 +82,11 @@
     &:is(
         [data-callout-metadata~="background-pink"], [data-callout-metadata~="bg-pink"],[data-callout-metadata~="background-color-pink"], [data-callout-metadata~="bg-c-pink"]
     ) { background-color: rgba(var(--callout-pink), 10%); }
+    &:is(
+        [data-callout-metadata~="background-brown"], [data-callout-metadata~="bg-pink"],[data-callout-metadata~="background-color-pink"], [data-callout-metadata~="bg-c-pink"]
+    ) { background-color: rgba(var(--callout-brown), 10%); }
+    &:is(
+        [data-callout-metadata~="background-black"], [data-callout-metadata~="bg-pink"],[data-callout-metadata~="background-color-pink"], [data-callout-metadata~="bg-c-pink"]
+    ) { background-color: rgba(var(--callout-black), 10%); }
 }
 

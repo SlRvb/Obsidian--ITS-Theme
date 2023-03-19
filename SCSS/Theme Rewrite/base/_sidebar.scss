@@ -127,7 +127,8 @@
 }
 
 
-
+//Fix Icon Height
+.side-dock-actions { margin-top: var(--header-height); }
 
 //
 .workspace-tab-header-inner .workspace-tab-header-inner-icon {

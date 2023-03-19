@@ -2,6 +2,9 @@
     --tab-outline-width: 0;
     --titlebar-bubble-colors: #0b0f13;
     --titlebar-bubble-colors-inactive: #0b0f1350;
+
+    --tab-text-color-focused-active: var(--text);
+    --tab-divider-color: transparent;
 }
 
  
@@ -14,6 +17,8 @@
     --tab-gap: 0 10px;
     --sidebar-tab-background-color-hover: transparent;
 
+    --tab-text-color-focused-active-current: var(--text);
+    
 
     // & .workspace-tab-header { padding: var(--tab-gap); }
 
@@ -52,8 +57,8 @@
     & .workspace-tab-header-new-tab { padding: 0; }
 
     //Remove Tab Corners
-    & .workspace-tab-header.is-active::before,
-    & .workspace-tab-header.is-active::after { display: none; }
+    // & .workspace-tab-header.is-active::before,
+    // & .workspace-tab-header.is-active::after { display: none; }
 
 
     & .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {

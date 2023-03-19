@@ -13,16 +13,30 @@
     --tab-outline-width: 0;
     --tab-divider-color: var(--td);
 
-    &.theme-light {        
+    & .workspace-tab-header.is-active {
+        --sidebar-tab-color-hover: var(--text);
+        --sidebar-icon-color: var(--text);
+    }
+
+    &.theme-light {
         --sidebar-icon-color-active: var(--text);
     }
 
     & .sidebar-toggle-button, 
-    & .workspace-tabs.mod-top {
+    & .workspace-tabs.mod-top .workspace-tab-header-container {
         background-color: var(--titlebar-background);
-        padding: 0;
+        // padding: 0;
 
         --sidebar-icon-color: var(--text-on-accent);
         --icon-color: var(--text-dl);
     }
+
+    // & :is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active,
+    // & :is(.mod-left-split, .mod-right-split) .workspace-tab-header .workspace-tab-header-inner-icon {
+    //     --tab-text-color: var(--text);
+    //     --tab-text-color-active: var(--text);
+    //     --tab-text-color-hover: var(--text);
+    //     --tab-text-color-focused-active: var(--text);
+    //     --tab-text-color-focused-active-current: var(--text);
+    // }
 }

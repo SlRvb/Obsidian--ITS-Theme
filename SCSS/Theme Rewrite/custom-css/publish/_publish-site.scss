@@ -4,6 +4,7 @@ body:is(.theme-dark, .theme-light),
 .published-container
 {
     --font-text-size: 16px;
+    --page-width: 100%;
 
     --font-text: var(--font-default);
     --font-interface: var(--font-default);

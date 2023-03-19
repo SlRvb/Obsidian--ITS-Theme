@@ -13,14 +13,15 @@ body.theme-dark {
         background: unset;
     }
 
+    //Vault
     & .site-body-left-column-site-name {
         padding: 4px 20px 10px 0;
+        font-weight: var(--site-name-weight);
     }
-
-    & .publish-renderer > .markdown-preview-view > .markdown-preview-sizer {
-        width: var(--page-width);
-        padding: 0;
+    //Center Image
+    .site-body-left-column-site-logo {
         margin: auto;
+        display: block;
     }
 
 
@@ -37,6 +38,12 @@ body.theme-dark {
 
     }
 
+    //Note Sizing Fixes
+    & .publish-renderer > .markdown-preview-view > .markdown-preview-sizer {
+        max-width: var(--page-width);
+        // padding: 0;
+        margin: auto;
+    }
 
     //Lists Re-add 
     & ul ul.has-list-bullet {

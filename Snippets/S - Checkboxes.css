@@ -542,7 +542,12 @@ input[type=checkbox]:not([data-task=x]) {
 
 input[type=checkbox]:checked {
   -webkit-mask-image: unset;
-}  
+  overflow: unset;
+} 
+  
+input[type=checkbox]:checked:after {
+  content: unset;
+} 
 
 /*--Checkbox Type Icons--*/
 body:not(.alt-chkbx-off) {

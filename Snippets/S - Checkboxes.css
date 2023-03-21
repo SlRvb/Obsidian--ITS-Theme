@@ -540,6 +540,10 @@ input[type=checkbox]:not([data-task=x]) {
   border-left: unset;
 }
 
+input[type=checkbox]:checked {
+  -webkit-mask-image: unset;
+}  
+
 /*--Checkbox Type Icons--*/
 body:not(.alt-chkbx-off) {
   /* [X]: Checked: Checkmark */

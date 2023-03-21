@@ -540,14 +540,18 @@ input[type=checkbox]:not([data-task=x]) {
   border-left: unset;
 }
 
-input[type=checkbox]:checked {
+input[type=checkbox]:checked,  
+li > input[type=checkbox]:checked,
+li > p > input[type=checkbox]:checked {
   -webkit-mask-image: unset;
   overflow: unset;
 } 
   
-input[type=checkbox]:checked:after {
+input[type=checkbox]:checked:after,
+li > input[type=checkbox]:checked:after,
+li > p > input[type=checkbox]:checked:after {
   content: "";
-} 
+}
 
 /*--Checkbox Type Icons--*/
 body:not(.alt-chkbx-off) {

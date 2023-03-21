@@ -546,7 +546,7 @@ input[type=checkbox]:checked {
 } 
   
 input[type=checkbox]:checked:after {
-  content: unset;
+  content: "";
 } 
 
 /*--Checkbox Type Icons--*/

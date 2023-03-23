@@ -161,6 +161,9 @@ settings:
                 label: Underline
                 value: sidebar-tabs-underline
             - 
+                label: Overline
+                value: sidebar-tabs-overline
+            - 
                 label: Tabular
                 value: sidebar-tabs-tabular
     -
@@ -185,6 +188,22 @@ settings:
             -
                 label: Minimized
                 value: sidebar-ribbon-mini-float
+    -
+        title: Floating Sidebar Ribbon
+        id: ITS-Sidebar-Ribbon-Float-Position
+        type: class-select
+        default: Bottom
+        options: 
+            -
+                label: Bottom
+                value: sidebar-float-bottom
+            -
+                label: Center
+                value: sidebar-float-center
+            - 
+                label: Top
+                value: sidebar-float-top
+
     -
         title: File Explorer
         id: ITS-File-Explorer

@@ -91,7 +91,7 @@
 //Fix Active Left Sidebar Tab Icon Color
 //Fix Remove background-modifier-hover
 :is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active,
-:is(.mod-left-split, .mod-right-split) .workspace-tab-header .workspace-tab-header-inner-icon
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header
 { 
     --background-modifier-hover: var(--sidebar-tab-background-color); 
     

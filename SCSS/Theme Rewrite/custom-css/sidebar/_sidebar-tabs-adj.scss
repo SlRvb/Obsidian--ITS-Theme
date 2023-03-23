@@ -8,25 +8,40 @@
 }
 
 // Sidebar Tabs Underline
-.sidebar-tabs-underline :is(.mod-left-split, .mod-right-split) {    
+.sidebar-tabs-underline,
+.sidebar-tabs-overline {
+    & :is(.mod-left-split.mod-left-split, .mod-right-split.mod-right-split) {    
     --tab-outline-width: 0;
     --sidebar-icon-color: var(--inactive);
-    --sidebar-icon-color-active: var(--lite-accent);
+    --sidebar-icon-color-active: var(--headers);
+    --icon-color-focused: var(--text);
     
     --sidebar-tab-border-color: var(--inactive);
-    --sidebar-tab-border-color-active: var(--accent);
-    --sidebar-tab-border-width: 2px;
-    // --icon-color-focused: var(--text-dl);
-    // --sidebar-tab-background-color: transparent;
-
-    & .is-active:hover {
-        --sidebar-icon-color-active: var(--text-dl);
-        // --sidebar-tab-border-color-active: var(--text-dl);
-        --icon-color-focused: var(--text-dl);
+    --sidebar-tab-border-color-active: var(--headers);
+    --sidebar-tab-border-width: 4px;
+    --sidebar-tab-background-color: var(--note);
+    
+    
+    & .is-active.is-active {
+        --sidebar-tab-border-color: var(--sidebar-icon-color-active);
+        --tab-text-color-focused-active: var(--text);
+        --tab-text-color-focused-active-current: var(--text);
+        
+        &:hover {
+            --sidebar-icon-color-active: var(--text);
+            --sidebar-tab-border-color: var(--sidebar-tab-border-color-active);
+            --sidebar-tab-background-color-hover: var(--accent);
+        }
     }
+}}
+.sidebar-tabs-overline :is(.mod-left-split, .mod-right-split) {
+    & .workspace-tab-header-inner {
+        border-bottom: unset;
+        border-top: var(--sidebar-tab-border-width) solid var(--sidebar-tab-border-color);
+    }
+    
 }
 
-// Tabs Sidebar?
 
 
 // Sidebar Tabs

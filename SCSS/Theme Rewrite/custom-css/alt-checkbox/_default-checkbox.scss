@@ -57,7 +57,7 @@ body:not(.alt-chkbx-off) {
                 cursor: pointer;
 
                 &::after { 
-                    top: -3px; 
+                    top: -5px; 
                     left: 1px;
                     -webkit-mask-image: unset;
                 }
@@ -65,3 +65,13 @@ body:not(.alt-chkbx-off) {
         }
     }
 }
+
+
+//Checked Text
+body:not(.check-text.check-text, .check-color.check-color) {
+    & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) :not(.cm-formatting-task),
+    & ul > li.task-list-item.is-checked {
+        color: var(--text-faint);
+        font-weight: bold;
+    }
+} 

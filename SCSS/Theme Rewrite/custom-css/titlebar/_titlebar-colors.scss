@@ -31,12 +31,12 @@
         --icon-color: var(--text-dl);
     }
 
-    // & :is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active,
-    // & :is(.mod-left-split, .mod-right-split) .workspace-tab-header .workspace-tab-header-inner-icon {
+    & :is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active,
+    & :is(.mod-left-split, .mod-right-split) .workspace-tab-header .workspace-tab-header-inner-icon {
     //     --tab-text-color: var(--text);
     //     --tab-text-color-active: var(--text);
     //     --tab-text-color-hover: var(--text);
     //     --tab-text-color-focused-active: var(--text);
-    //     --tab-text-color-focused-active-current: var(--text);
-    // }
+        --tab-text-color-focused-active-current: var(--text);
+    }
 }

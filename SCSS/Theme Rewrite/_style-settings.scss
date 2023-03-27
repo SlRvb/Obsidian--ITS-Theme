@@ -71,6 +71,15 @@ settings:
     #    max: 50
     #    step: 10
     -
+        title: Vault Title Size
+        id: vault-name-font-size
+        type: variable-number-slider
+        default: 20
+        format: px
+        min: 10
+        max: 25
+        step: 1
+    -
         title: Sidebar
         id: ITS-Sizing-Sidebar
         type: heading
@@ -104,10 +113,43 @@ settings:
         max: 50
         step: 5
     -
+        title: Notes
+        id: ITS-Note-Sizing
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Note Title Size
+        id: file-header-font-size
+        type: variable-number-slider
+        default: 15
+        format: px
+        min: 10
+        max: 20
+        step: 1
+    -
+        title: Note Breadcrumb Title Size
+        id: file-header-breadcrumb-font-size
+        type: variable-number-slider
+        default: 13.5
+        format: px
+        min: 10
+        max: 20
+        step: 1
+    -
+        title: Inline Title Size
+        id: inline-title-font-size
+        type: variable-number-slider
+        default: 34
+        format: px
+        min: 10
+        max: 50
+        step: 1
+    -
         title: Settings
         id: ITS-Settings
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     -
         title: Settings Menu Width

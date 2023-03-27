@@ -72,6 +72,15 @@ settings:
     #    max: 50
     #    step: 10
     -
+        title: Vault Title Size
+        id: vault-name-font-size
+        type: variable-number-slider
+        default: 20
+        format: px
+        min: 10
+        max: 25
+        step: 1
+    -
         title: Sidebar
         id: ITS-Sizing-Sidebar
         type: heading
@@ -105,10 +114,43 @@ settings:
         max: 50
         step: 5
     -
+        title: Notes
+        id: ITS-Note-Sizing
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Note Title Size
+        id: file-header-font-size
+        type: variable-number-slider
+        default: 15
+        format: px
+        min: 10
+        max: 20
+        step: 1
+    -
+        title: Note Breadcrumb Title Size
+        id: file-header-breadcrumb-font-size
+        type: variable-number-slider
+        default: 13.5
+        format: px
+        min: 10
+        max: 20
+        step: 1
+    -
+        title: Inline Title Size
+        id: inline-title-font-size
+        type: variable-number-slider
+        default: 34
+        format: px
+        min: 10
+        max: 50
+        step: 1
+    -
         title: Settings
         id: ITS-Settings
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     -
         title: Settings Menu Width
@@ -2822,6 +2864,11 @@ body {
   background-color: var(--text-highlight-bg-active);
 }
 
+.search-results-info .dropdown:hover {
+  color: var(--lite-accent);
+  font-weight: 900;
+}
+
 body {
   --tab-curve: var(--radius-s);
   --tab-radius: var(--radius-s);
@@ -3062,6 +3109,9 @@ body {
 .is-mobile.is-mobile.is-phone .setting-item-heading {
   margin: 0;
 }
+.is-mobile.is-mobile .view-header-title {
+  padding: 0 var(--size-4-1);
+}
 
 .is-mobile {
   --mobile-toolbar-background: var(--deep-dark-accent);
@@ -3087,7 +3137,7 @@ body {
 }
 
 body {
-  --scrollbar-bg: var(--bg);
+  --scrollbar-bg: var(--note);
   --scrollbar-thumb-bg: var(--accent);
   --scrollbar-active-thumb-bg: var(--lite-accent);
   --scrollbar-border-width: 0;
@@ -3095,6 +3145,7 @@ body {
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar {
+  background-color: var(--scrollbar-bg);
   width: var(--scrollbar-width);
   height: calc(var(--scrollbar-width) + 1px);
 }
@@ -3134,13 +3185,10 @@ body {
   --inline-title-position: left;
 }
 
-.show-inline-title .markdown-preview-view {
-  --file-margins: 0 32px;
-}
-
 .inline-title {
   text-align: var(--inline-title-position);
   padding-bottom: 0;
+  z-index: 2;
 }
 
 .frontmatter-container:not(.is-collapsed) {
@@ -3864,7 +3912,7 @@ body {
 }
 
 .hr.cm-line {
-  border-top: 2px solid var(--hr);
+  border-top: var(--hr-thickness) solid var(--hr);
   --hr-color: transparent;
 }
 
@@ -3893,7 +3941,6 @@ body {
 .is-live-preview .HyperMD-quote.HyperMD-quote.HyperMD-quote {
   border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
   padding: var(--blockquote-padding-lp);
-  z-index: -1;
 }
 .is-live-preview .HyperMD-quote.HyperMD-quote.HyperMD-quote::before {
   display: none;
@@ -4273,6 +4320,10 @@ body {
   --file-icon-margin: 0;
 }
 
+body {
+  --canvas-node-padding: 0 5px;
+}
+
 body.theme-dark {
   --canvas-color: 88, 100, 159;
 }
@@ -4293,6 +4344,14 @@ body.theme-light {
 
 .canvas-card-menu {
   border: var(--box-border);
+}
+
+.canvas .canvas-node-content .markdown-embed-content {
+  --embed-padding: 0;
+}
+
+.canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
+  padding: var(--canvas-node-padding);
 }
 
 body {
@@ -4540,6 +4599,9 @@ body {
   border-radius: 0;
   font-family: inherit;
   background-color: transparent;
+}
+.dataview.dataview.inline-field-standalone-value span > a.tag:nth-of-type(odd) {
+  display: none;
 }
 .dataview.dataview.inline-field-key, .dataview.dataview.inline-field-value {
   border-radius: var(--radius);
@@ -8439,6 +8501,9 @@ iframe {
   --sidebar-icon-color: var(--text-on-accent);
   --icon-color: var(--text-dl);
 }
+.titlebar-colors.titlebar-colors.titlebar-colors :is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active, .titlebar-colors.titlebar-colors.titlebar-colors :is(.mod-left-split, .mod-right-split) .workspace-tab-header .workspace-tab-header-inner-icon {
+  --tab-text-color-focused-active-current: var(--text);
+}
 
 .titlebar-bubbles.titlebar-bubbles.titlebar-bubbles {
   --tab-outline-width: 0;
@@ -8697,6 +8762,80 @@ iframe {
 }
 .list-bullet-side-lines :is(ul, ol) > li:nth-child(even)::before {
   --list-marker-color: var(--accent2);
+}
+
+/*--Kanban--*/
+/*Credit: https://github.com/Braweria/Spectrum*/
+.kanban {
+  --list-indent: -15px;
+}
+
+/*Hide Bullet*/
+.kanban ul {
+  list-style: none;
+}
+
+.kanban ul li::before {
+  content: "";
+  margin: 0px;
+  padding: 0;
+  float: unset;
+}
+
+.kanban.kanban li > ul::before {
+  left: 0;
+}
+
+.kanban :is(ul, ol) {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0;
+  flex-wrap: wrap;
+}
+.kanban :is(ul, ol) li {
+  flex: 1 1 25%;
+  margin-left: 0px;
+  margin-right: 10px;
+  border: 0;
+}
+
+.kanban ol li {
+  margin-left: 15px;
+}
+
+.kanban ul ul,
+.kanban ol ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+  background: var(--td);
+}
+.kanban ul ul > li,
+.kanban ol ol > li {
+  margin-left: 20px;
+  margin-right: 0;
+  width: 100%;
+}
+
+.kanban.markdown-rendered .list-collapse-indicator {
+  margin-left: -15px;
+  padding-right: 0px;
+}
+
+.kanban.markdown-rendered ol .list-collapse-indicator {
+  margin-left: -30px;
+}
+
+.kanban ul > li.task-list-item.task-list-item .task-list-item-checkbox {
+  margin-inline-start: calc(var(--checkbox-size) * -0.45);
+}
+.kanban ul > li.task-list-item.task-list-item .list-collapse-indicator {
+  margin-left: -18px;
+}
+
+.markdown-rendered ul.has-list-bullet li p:first-of-type {
+  margin-block-start: 0;
 }
 
 /*Remove Note Titlebar Gradient*/
@@ -9234,6 +9373,10 @@ h6):after {
   --background-image-shadow: var(--outline);
   --background-image-opacity: 90%;
   --background-image-sidebar-opacity: var(--background-image-opacity);
+  --background-image-note-padding: 20px;
+  --background-image-note-width: calc(var(--file-line-width) + var(--background-image-note-padding));
+  --file-margins: 0 0;
+  --scrollbar-bg: rgba(var(--note-rgb));
 }
 .background-image.theme-light {
   --background-image-shadow: #0E0F1530;
@@ -9248,7 +9391,7 @@ body.background-image:is(.theme-dark, .theme-light) .workspace {
 body.background-image .workspace-tab-header-container, body.background-image .workspace > .workspace-leaf, body.background-image .workspace-split.mod-root .view-content, body.background-image .workspace-tabs .workspace-leaf {
   backdrop-filter: blur(var(--background-image-blur));
 }
-body.background-image .kanban-plugin.kanban-plugin, body.background-image .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.background-image .cm-editor .cm-contentContainer {
+body.background-image .workspace-leaf-content[data-type=style-settings], body.background-image .kanban-plugin.kanban-plugin, body.background-image .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.background-image .cm-editor .cm-contentContainer, body.background-image .cm-editor .inline-title {
   background: rgba(var(--note-rgb), var(--background-image-opacity));
 }
 body.background-image .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.background-image .cm-editor .cm-contentContainer {
@@ -9260,20 +9403,18 @@ body.background-image.is-focused .workspace-leaf.mod-active .view-header, body.b
 body.background-image .kanban-plugin.kanban-plugin, body.background-image .workspace > .workspace-split, body.background-image .workspace-split.mod-root .view-content, body.background-image .workspace-tabs .workspace-leaf, body.background-image.is-focused .workspace-tabs.mod-top, body.background-image .workspace-tabs.mod-top, body.background-image :is(.markdown-preview-view, .markdown-source-view) {
   background: transparent;
 }
-body.background-image:not(.is-mobile) :is(.markdown-preview-view,
+body.background-image :is(.markdown-preview-view,
 .markdown-source-view.mod-cm6 .cm-scroller) {
   padding-top: 0;
   padding-bottom: 0;
 }
-body.background-image:not(.is-mobile) .markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.background-image:not(.is-mobile) .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
-  --padding: 10px;
-  max-width: calc(var(--file-line-width) + var(--padding));
+body.background-image .cm-editor .inline-title, body.background-image .markdown-preview-section, body.background-image .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
   height: auto;
-  padding: 0 var(--padding);
+  padding: 0 var(--background-image-note-padding);
   box-shadow: 0 0 20px var(--background-image-shadow);
 }
-body.background-image .workspace-leaf-content {
-  justify-content: center;
+body.background-image .cm-contentContainer .cm-gutter {
+  margin-left: calc(var(--background-image-note-padding) * -1);
 }
 body.background-image .markdown-embed-content .markdown-preview-section:not(.kanban-plugin__markdown-preview-view), body.background-image .popover.popover .markdown-preview-section {
   box-shadow: unset;
@@ -10788,6 +10929,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --checkbox-color: var(--accent);
   --checkbox-border-color: var(--accent);
   --checkbox-color-hover: var(--dark-accent);
+  --lines: var(--hr);
   --indentation-guide-color: var(--lines);
   --indentation-guide-color-active: var(--accent);
   --list-color-1: var(--indentation-guide-color);
@@ -10798,6 +10940,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --list-color-6: var(--indentation-guide-color);
   --list-marker-color: var(--accent);
   --list-numbered-color: var(--lite-accent);
+  --th: var(--dark-accent);
   --table-header-background: var(--th);
   --table-header-background-hover: var(--accent);
   --table-column-alt-background: var(--td);
@@ -10808,6 +10951,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --dataview-th-alt-color: rgba(var(--accent-color), 10%);
   --dataview-th-color: var(--headers);
   --dataview-th-border-bottom: 2px solid var(--headers);
+  --tag: var(--dark-accent);
   --tag-background: var(--tag);
   --tag-background-hover: var(--accent);
   --tag-border-color: var(--tag);
@@ -10823,6 +10967,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --latex-color: var(--lite-accent);
   --latex-format-color: var(--inactive);
   --latex-syntax-color: var(--soft-text);
+  --i-at: var(--soft-text);
   background-color: var(--background-primary);
   --background-primary: var(--note);
   --background-primary-alt: var(--deep-dark-accent);

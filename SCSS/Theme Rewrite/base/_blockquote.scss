@@ -18,7 +18,7 @@ body {
     border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
 
     padding: var(--blockquote-padding-lp);
-    z-index: -1; 
+    // z-index: -1; 
     
     & + .HyperMD-quote { padding-top: 0; }
 }

@@ -52,8 +52,10 @@
     & .pull-out-action
     { border-radius: var(--radius-h); }
     
+    //Notice Border Radius
     & .notice { border-radius: var(--radius-s); }
     
+    //Phone Fixes
     &.is-phone {
         & .vertical-tab-header-group-title, 
         & .setting-item-heading .setting-item-name 
@@ -67,6 +69,8 @@
 
     }
 
+    //Fix Breadcrumb Note Title Padding
+    & .view-header-title { padding: 0 var(--size-4-1); }
     
 }
 

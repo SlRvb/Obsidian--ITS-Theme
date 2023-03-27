@@ -39,7 +39,7 @@ body {
 }
 //Live Preview hr
 .hr.cm-line { 
-    border-top: 2px solid var(--hr); 
+    border-top: var(--hr-thickness) solid var(--hr); 
     --hr-color: transparent; 
 }
 

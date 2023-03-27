@@ -106,7 +106,8 @@
     --checkbox-color: var(--accent);
     --checkbox-border-color: var(--accent);
     --checkbox-color-hover: var(--dark-accent);
-
+    
+    --lines: var(--hr);
     --indentation-guide-color: var(--lines);
     --indentation-guide-color-active: var(--accent);
     --list-color-1: var(--indentation-guide-color);
@@ -119,6 +120,7 @@
     --list-marker-color: var(--accent);
     --list-numbered-color: var(--lite-accent);
     
+    --th: var(--dark-accent);
     --table-header-background: var(--th);
     --table-header-background-hover: var(--accent);
     --table-column-alt-background: var(--td);
@@ -130,6 +132,7 @@
     --dataview-th-color: var(--headers);
     --dataview-th-border-bottom: 2px solid var(--headers);
     
+    --tag: var(--dark-accent);
     --tag-background: var(--tag);
     --tag-background-hover: var(--accent);
     --tag-border-color: var(--tag);
@@ -153,6 +156,8 @@
     --latex-format-color: var(--inactive);
     --latex-syntax-color: var(--soft-text);
     
+    --i-at: var(--soft-text);
+
     //
     background-color: var(--background-primary);
     --background-primary: var(--note);

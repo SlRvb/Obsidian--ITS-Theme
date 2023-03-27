@@ -8,8 +8,11 @@
     
     --background-image-opacity: 90%;
     --background-image-sidebar-opacity: var(--background-image-opacity);
+    --background-image-note-padding: 20px;
+    --background-image-note-width: calc(var(--file-line-width) + var(--background-image-note-padding));
+    --file-margins: 0 0;
     
-    // --scrollbar-bg: rgba(var(--note-rgb)) !important;
+    --scrollbar-bg: rgba(var(--note-rgb));
 
     &.theme-light {
         --background-image-shadow: #0E0F1530;
@@ -35,15 +38,17 @@ body.background-image {
     { backdrop-filter: blur(var(--background-image-blur)); }
 
     // Note
+    & .workspace-leaf-content[data-type="style-settings"],
     & .kanban-plugin.kanban-plugin,
     & .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
-    & .cm-editor .cm-contentContainer { 
-        background: rgba(var(--note-rgb), var(--background-image-opacity));
-    }
+    & .cm-editor .cm-contentContainer,
+    & .cm-editor .inline-title
+    { background: rgba(var(--note-rgb), var(--background-image-opacity)); }
+
+
     & .markdown-preview-section.markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
-    & .cm-editor .cm-contentContainer {
-        height: auto;
-    }
+    & .cm-editor .cm-contentContainer 
+    { height: auto; }
   
     // Sidebars
     // .workspace-tab-header-inner
@@ -77,29 +82,29 @@ body.background-image {
 
     // --- ---
     //Note Padding Fixes
-    &:not(.is-mobile) {
-        & :is(
-            .markdown-preview-view,
-            .markdown-source-view.mod-cm6 .cm-scroller 
-        ) { 
-            padding-top: 0; 
-            padding-bottom: 0;
-        }
-        
-        & .markdown-preview-section:not(.kanban-plugin__markdown-preview-view),
-        & .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer {
-            --padding: 10px;
-        
-            max-width: calc(var(--file-line-width) + var(--padding));
-            height: auto;
-            padding: 0 var(--padding);
-            box-shadow: 0 0 20px var(--background-image-shadow);
-        }
-
+    & :is(
+        .markdown-preview-view,
+        .markdown-source-view.mod-cm6 .cm-scroller 
+    ) { 
+        padding-top: 0; 
+        padding-bottom: 0;
     }
     
+    & .cm-editor .inline-title,
+    & .markdown-preview-section,
+    & .view-content .cm-s-obsidian > .cm-editor .cm-contentContainer
+    {
+        height: auto;
+        padding: 0 var(--background-image-note-padding);
+        box-shadow: 0 0 20px var(--background-image-shadow);
+        
+        // width: var(--background-image-note-width);
+    }
+    & .cm-contentContainer .cm-gutter { margin-left: calc(var(--background-image-note-padding) * -1); }
+    
+    
     //height 100%
-    & .workspace-leaf-content { justify-content: center; } 
+    // & .workspace-leaf-content { justify-content: center; } 
     
     //Undo
     & .markdown-embed-content .markdown-preview-section:not(.kanban-plugin__markdown-preview-view),

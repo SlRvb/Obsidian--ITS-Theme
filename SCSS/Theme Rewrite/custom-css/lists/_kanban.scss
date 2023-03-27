@@ -1,0 +1,80 @@
+
+/*--Kanban--*/
+/*Credit: https://github.com/Braweria/Spectrum*/
+
+.kanban {
+    --list-indent: -15px;
+}
+
+/*Hide Bullet*/
+.kanban ul {
+    list-style: none;
+}
+
+.kanban ul li::before {
+    content: "";
+    margin: 0px;
+    padding: 0;
+    float: unset;
+}
+.kanban.kanban li > ul::before { left: 0; }
+
+//Columns
+.kanban :is(ul, ol) {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0;
+    flex-wrap: wrap;
+    // padding-inline-start: 0px;
+    
+    & li {
+        flex: 1 1 25%;
+        margin-left: 0px;
+        margin-right: 10px;
+        border: 0;
+    }
+}
+
+.kanban ol li { margin-left: 15px; }
+
+//Sub List Items
+.kanban ul ul,
+.kanban ol ol 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px; //Alt BG Alignment
+    // margin-top: 5px;
+    
+    background: var(--td);
+    
+    & > li {
+        margin-left: 20px;
+        margin-right: 0;
+        width: 100%;   
+    }
+}
+
+//
+.kanban.markdown-rendered .list-collapse-indicator {
+    margin-left: -15px;
+    padding-right: 0px;
+}
+
+.kanban.markdown-rendered ol .list-collapse-indicator 
+{ margin-left: -30px; }
+
+
+
+.kanban ul > li.task-list-item.task-list-item {
+    & .task-list-item-checkbox 
+    { margin-inline-start: calc(var(--checkbox-size) * -0.45); }
+
+    & .list-collapse-indicator { margin-left: -18px; }
+}
+
+
+//Spaced List
+.markdown-rendered ul.has-list-bullet li p:first-of-type 
+{ margin-block-start: 0; }

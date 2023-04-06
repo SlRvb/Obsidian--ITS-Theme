@@ -57,7 +57,9 @@ body {
 
     & .task-list-item.is-checked .task-list-item-checkbox { margin-left: 0; }
 }
-
+.is-live-preview .block-language-dataviewjs > :is(p, span) {
+    line-height: var(--lh);
+}
 
 
 

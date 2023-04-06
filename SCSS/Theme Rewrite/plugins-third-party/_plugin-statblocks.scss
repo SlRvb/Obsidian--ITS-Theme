@@ -57,6 +57,11 @@ body {
     --h5-border-line-width: var(--header-border-line-width);
     --h6-border-line-width: var(--header-border-line-width);
 
+    //Fix HCL Styling
+    & :is(.statblock-heading.heading, .section-header) {
+        &::before,
+        &::after { display: none; }
+    }
 
     //Alt Coloring
     & .column > .statblock-item-container:nth-child(odd):not(
@@ -64,8 +69,6 @@ body {
         .table-container,
         .traits-container
     ) { background: var(--statblock-alt); }
-
-    // & .heading { line-height: var(--header-lh); } 
     
     //Fix Text Color
     // & .property-text, 

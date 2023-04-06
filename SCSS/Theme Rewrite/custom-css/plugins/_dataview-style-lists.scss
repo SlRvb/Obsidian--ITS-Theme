@@ -1,0 +1,37 @@
+/*Dataview*/
+.dvl {
+    & .block-language-dataviewjs .dataview-result-list-li,
+    & .list-view-ul li {
+        background-color: var(--note);
+        border: var(--box-border-m);
+        box-shadow: var(--shadow-m);
+        
+        margin-bottom: 8px;
+        padding: 10px;
+        margin-left: -25px;
+        
+        &::before { margin-left: -27px; display: none; }
+        &:nth-child(even) { border: var(--box-border-m); }
+    }
+    
+    //Kanban CSSClass
+    &.kanban {
+        & .block-language-dataviewjs .dataview-result-list-li,
+        & .list-view-ul li {
+            background-color: var(--aside-bg);
+        }
+        & .block-language-dataviewjs .dataview-result-list-li,
+        & .list-view-ul li {
+            flex: 1 1 200px;
+            box-shadow: 4px 4px 0 var(--outline);
+            border: 1px solid var(--outline);
+            margin-bottom: 10px;
+        }
+        & table td > .dataview-ul {
+           display: block;
+           padding-inline-start: 1em;
+        }
+    
+    }
+    
+}

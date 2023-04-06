@@ -40,7 +40,7 @@ body {
 }
 
 // Hide Collapse Indicator
-.nav-folder-collapse-indicator { display: none; }
+.tree-item-icon.nav-folder-collapse-indicator { display: none; }
 
 //Thick Folder Text
 .nav-folder-title { --nav-item-weight: 700; }
@@ -53,10 +53,10 @@ body {
     padding: var(--explorer-padding);
 }
 
-.nav-folder.is-collapsed .nav-folder-title { 
+.nav-folder.is-collapsed .nav-folder-title:not(.is-being-dragged) { 
     color: var(--folder-text-color); 
 }
-.nav-folder .nav-folder-title {
+.nav-folder:not(.mod-root) .nav-folder-title:not(.is-being-dragged) {
     color: var(--folder-open-text-color);
 }
 .nav-file-title { color: var(--file-text-color); }
@@ -72,7 +72,7 @@ body {
 // }
 
 //Vault Name
-.nav-folder.mod-root > .nav-folder-title 
+.nav-folder.mod-root > .nav-folder-title
 { font-family: var(--vault-font); }
 
 //nav-folder

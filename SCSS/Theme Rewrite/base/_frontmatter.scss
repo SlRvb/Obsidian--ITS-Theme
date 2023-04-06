@@ -1,3 +1,6 @@
+//Fix front-matter font size
+.cm-hmd-frontmatter { font-size: var(--font-small); }
+
 .frontmatter-container:not(.is-collapsed) {
     border-bottom: 2px solid var(--hr);
 

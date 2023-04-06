@@ -35,3 +35,8 @@ body {
     font-size: var(--file-header-breadcrumb-font-size);
     color: var(--file-header-breadcrumb-color);
 }
+
+//Forward/Back Buttons
+.clickable-icon[aria-disabled='true']:hover {
+    color: var(--inactive);
+}

@@ -66,6 +66,7 @@ body {
     border-radius: var(--radius-s);
     background-color: var(--text-highlight-bg-active)
 }
+.search-results-result-count:hover,
 .search-results-info .dropdown:hover {
     color: var(--lite-accent);
     font-weight: 900;

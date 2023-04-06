@@ -189,6 +189,7 @@ body {
     --h4-border-line-height: var(--header-border-line-height);
     --h5-border-line-height: var(--header-border-line-height);
     --h6-border-line-height: var(--header-border-line-height);
+    --header-border-line-align: none;
 }
 
 //Header Under Lines
@@ -201,6 +202,7 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
         background: map-get($set, border-line-right-color);
         width: map-get($set, border-line-width);
         height: map-get($set, border-line-height);
+        margin: var(--header-border-line-align);
     }
     &::before { 
         display: var(--header-border-line-left); 

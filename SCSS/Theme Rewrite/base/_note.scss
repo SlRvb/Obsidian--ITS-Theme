@@ -1,16 +1,14 @@
 body {
     --pane-background: var(--note);
+    --font-ligatures: none;
 }
 .cm-s-obsidian .CodeMirror-line,
 .cm-s-obsidian .cm-line,
 .markdown-preview-section {
     text-rendering: optimizeLegibility;
-    font-variant-ligatures: none;
+    font-variant-ligatures: var(--font-ligatures);
 }
 
 .workspace-split.mod-root .view-content {
     background-color: var(--pane-background);
 }
-
-//Fix front-matter font size
-.cm-hmd-frontmatter { font-size: var(--font-small); }

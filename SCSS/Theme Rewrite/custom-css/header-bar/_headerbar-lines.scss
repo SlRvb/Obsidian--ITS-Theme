@@ -1,0 +1,34 @@
+body {
+    --note-title-border-color: var(--headers);
+}
+
+.note-title-underline.note-title-underline {
+    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
+    & .workspace-leaf-content .view-header {
+        border-bottom: 4px solid transparent;
+    }
+
+    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
+    & .workspace-leaf.mod-active .view-header {
+        border-bottom-color: var(--note-title-border-color);
+    }
+    & .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+        border-right: 4px solid var(--note-title-border-color);
+    }
+}
+
+.note-title-overline.note-title-overline {
+    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
+    & .workspace-leaf-content .view-header {
+        border-top: 4px solid transparent;
+    }
+
+    & .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
+    & .workspace-leaf.mod-active .view-header {
+        border-top-color: var(--note-title-border-color);
+    }
+
+    & .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+        border-left: 4px solid var(--note-title-border-color);
+    }
+}

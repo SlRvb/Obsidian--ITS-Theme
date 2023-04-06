@@ -14,18 +14,23 @@
         --hr-icon-symbol: "\E803";
         --hr-icon-font: var(--its);
         --hr-icon-symbol: ;
+        --hr-image-height: 5px;
+        --hr-image-width: 100%;
+        --hr-thickness: 0;
 
         --embed-h: #c93c3c;
+        --h2-color: sandybrown;
+        --h3-color: #642020;
         --h1-border-right-color: linear-gradient(to right, var(--embed-h), transparent);
-        --h2-border-right-color: linear-gradient(to right, sandybrown, transparent);
-        --h3-border-right-color: linear-gradient(to right, #642020, transparent);
+        --h2-border-right-color: linear-gradient(to right, var(--h2-color), transparent);
+        --h3-border-right-color: linear-gradient(to right, var(--h3-color), transparent);
         --h4-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
         --h5-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
         --h6-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
 
         --h1-border-left-color: linear-gradient(to left, var(--embed-h), transparent);
-        --h2-border-left-color: linear-gradient(to left, sandybrown, transparent);
-        --h3-border-left-color: linear-gradient(to left, #642020, transparent);
+        --h2-border-left-color: linear-gradient(to left, var(--h2-color), transparent);
+        --h3-border-left-color: linear-gradient(to left, var(--h3-color), transparent);
         --h4-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);
         --h5-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);
         --h6-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);
@@ -56,8 +61,19 @@
         
         --outline: #0000008c;
 
+        --headers: #c14343;
+        --code-text: #fa4545;
+        --tag-text: #d04e4e;
+        // --accent2-lite: #e06c75;
+        --dark-accent: #652121;
+        --accent: #863737;
+        --i-at: #bf5e5e;
+
         --hr-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Crect id='Artboard1' x='0' y='0' width='100' height='7' style='fill:none;'/%3E%3Cpath d='M50,2.5L100,3.5L50,4L0,3.5L50,2.5Z' style='fill:rgb(146, 47, 47);'/%3E%3C/svg%3E") no-repeat center center;
-        
+        --hr: #772d2d;
+
+        --hvr-active: rgba(212, 47, 47, 0.4);
+        --highlight: #7a141466;
 }}
 
 .theme-light {
@@ -78,6 +94,7 @@
         --accent2: #000000;
         --accent2-lite: #df6262;
 
+        --headers: #c14343;
         --text: #412f2f;
         --code-text: #681010;
         --inactive: #e2b7a3;
@@ -104,7 +121,7 @@
 
 
 
-//Paper Edges
+//Paper Edge
 body.wotc-beyond {
     & .workspace-leaf-content,
     & .workspace-tabs,
@@ -123,17 +140,20 @@ body:not(.wotc-beyond) .wotc-beyond:is(
 
 
 //Hr 
-.wotc-beyond
+.wotc-beyond,
+.pathfinder
 {
-    & hr,
+    // & hr,
     & .markdown-rendered hr,
     & .cm-line:not(.cm-active) hr 
     {
         background: var(--hr-image);
-        background-size: 100%;
-        height: 5px;
+        background-size: var(--hr-image-width);
+        height: var(--hr-image-height);
+        background-repeat: no-repeat;
+        background-position: center;
+        // background-size: contain;
         //border: none;
-        --hr-thickness: 0;
     
         // &::after  { content: ''; }
     }

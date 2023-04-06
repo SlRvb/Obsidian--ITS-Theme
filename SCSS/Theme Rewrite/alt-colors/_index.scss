@@ -3,11 +3,12 @@
 @use 'SlRvb-Gray';
 @use 'SlRvb-Blue';
 @use 'WOTC';
+@use 'SlRvb-DnD';
+@use 'Pathfinder';
 @use 'Minimalist';
 @use 'Drowned';
 @use 'ITS-Dark';
 @use 'Nebula';
-@use 'SlRvb-DnD';
 @use 'Notion';
 @use 'School-Days';
 @use 'Tangerine-Dunes';
@@ -19,11 +20,12 @@
 .slrvb-g,
 .slrvb-b,
 .wotc-beyond,
+.dnd,
+.pathfinder,
 .drwn,
 .its-d,
 .mini,
 .nebula,
-.dnd,
 .s-d,
 .t-d,
 .nord,
@@ -151,6 +153,7 @@
     // --folder-open: var(--text);
     // --file-icon-color: var(--inactive);
     --nav-item-background-hover: var(--dark-accent);
+    --sidebar-tab-background-color-hover: var(--accent);
 
     --latex-color: var(--lite-accent);
     --latex-format-color: var(--inactive);

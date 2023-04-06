@@ -1,0 +1,187 @@
+// @font-face {
+//     font-family: "Taroca";
+//     src: url("https://content.demiplane.com/fonts/Taroca.ttf")
+// }
+
+.pathfinder {
+	--font: "Taroca";
+	--header-weight: 100;
+    --h1-border-line-height: 1.5px;
+    --h2-border-line-height: 1.5px;
+    --h3-border-line-height: 2px;
+    --h4-border-line-height: 0;
+    --h5-border-line-height: 0;
+    --h6-border-line-height: 0;
+	
+	// --vault-name-font-size: ;
+	--vault-name-font-weight: 100;
+	
+	// --font-monospace: ;
+	
+    --hr-image-height: 16px;
+    // --hr-image-width: 30%;
+    --hr-thickness: 0//2px;
+    
+	--hr-icon-symbol: ;
+	// --hr-icon-font: ;
+	
+	--highlight: rgba(191, 0, 0, 0.2);
+	--hvr: rgba(191, 0, 0, 0.2);
+	--hvr-active: #e5800040;
+}
+.theme-dark {
+    & .pathfinder,
+    &.pathfinder {
+    // --outer-bar: ;
+    // --dark-sidebar: ;
+    // --side-bar: ;
+
+    // --note: #2C2722;
+    // --note-rgb: ;
+    
+    // --accent-color: ;
+    // --accent: ;
+    // --lite-accent: ;
+    // --dark-accent: ;
+    // --deep-dark-accent: ;
+    // --accent2: ;
+    // --accent2-lite: ;
+    
+    --headers: #ddaf78;
+    --h1-color: var(--headers);
+    --h2-color: #2f4f87;
+    --h3-color: #a22b30;
+    --h4-color: #d0765b;
+    --h5-color: #694b3c;
+    --h6-color: var(--text);
+    // --text: ;
+    // --soft-text: ;
+    // --code-text: ;
+    // --i-at: ;
+    // --footnote: ;
+    // --inactive: ;
+    // --tag-text: ;
+    
+    --folder: #a22b30;
+    --folder-open: #e58000;
+    // --file: ;
+    // --file-icon-color: ;
+    
+    // --fg: ;
+    // --bg: ;
+    // --code-bg: ;
+    // --embed-bg: ;
+    // --aside-bg: ;
+    // --tag: ;
+    // --bttn: ;
+    
+    // --th: ;
+    // --table-header-text: ;
+    // --td: ;
+    
+    // --table: ;
+    --hr: #8b262d;
+    --hr-thickness: 2px;
+    // --lines: ;
+    // --outline: ;
+    
+    // --hr-image: ;
+    
+    // --highlight: ;
+    // --hvr: ;
+    // --hvr-active: ;
+    
+    // --graph-bg: ;
+    // --graph-lines: ;
+    // --graph-node: ;
+    // --graph-fill: ;
+    // --graph-404: ;
+
+    // --theme-rainbow-1: ;
+    // --theme-rainbow-2: ;
+    // --theme-rainbow-3: ;
+    // --theme-rainbow-4: ;
+    // --theme-rainbow-5: ;
+    // --theme-rainbow-6: ;
+    }
+}
+
+.theme-light {
+    & .pathfinder,
+    &.pathfinder {
+    /*Colors*/
+    --outer-bar: #e2ded8;
+    --dark-sidebar: #e2ded8;
+    --side-bar: #ECE9E4;
+
+    --note: #ECE9E4;//#f6f4f2;
+    --note-rgb: 236, 233, 228;
+    
+    --accent-color: rgb(128, 0, 8);
+    --accent: #800008;
+    --lite-accent: #e58000;
+    --dark-accent: #800008;
+    --deep-dark-accent: #5e0000;
+    --accent2: #461413;
+    --accent2-lite: #0f5cbc;
+    --link-color-hover: #1B9AF0;
+    
+    --headers: #ca9759;
+    --h1-color: var(--headers);
+    --h2-color: #002564;
+    --h3-color: #5d0000;
+    --h4-color: #a76652;
+    --h5-color: #393636;
+
+    --text: #393636;
+    --soft-text: #5C1C16;
+    --code-text: #5C1C16;
+    --i-at: #5C1C16;
+    --footnote: #676767;
+    --inactive: #b7b5b4;
+    // --tag-text: ;
+    
+    --folder: #a22b30;
+    --folder-open: var(--headers);
+    // --file: ;
+    // --file-icon-color: ;
+    
+    // --fg: #461413;
+    --bg: #d2c4be;
+    // --code-bg: ;
+    --embed-bg: #E0DACB;
+    --aside-bg: #E0DACB;
+    --tag: #5e0000;
+    // --bttn: ;
+    
+    --th: #5e0000;
+    // --table-header-text: ;
+    --td: #E0DACB99;
+    
+    --header-border-line-color: black;
+    --table: #00000060;
+    --hr: #5c1c16;
+    --lines: #b6a697;
+    --outline: rgba(0, 0, 0, 0.4);
+    
+    --hr-image: url("https://content.demiplane.com/elements/pathfinder-2e/archetypes/PFN-Center-Flourish.png");
+    --hr-image-width: contain;
+    
+    // --highlight: ;
+    // --hvr: ;
+    // --hvr-active: ;
+    
+    // --graph-bg: ;
+    // --graph-lines: ;
+    // --graph-node: ;
+    // --graph-fill: ;
+    // --graph-404: ;
+
+    --theme-rainbow-1: #ca9759;
+    --theme-rainbow-2: #3276b5;
+    --theme-rainbow-3: #002564;
+    --theme-rainbow-4: #5d0000;
+    --theme-rainbow-5: #e58000;
+    --theme-rainbow-6: #393636;
+}
+}

@@ -71,13 +71,13 @@ settings:
     #    max: 50
     #    step: 10
     -
-        title: Vault Title Size
-        id: vault-name-font-size
+        title: Tab Outline Height
+        id: tab-outline-width
         type: variable-number-slider
-        default: 20
+        default: 2
         format: px
-        min: 10
-        max: 25
+        min: 0
+        max: 4
         step: 1
     -
         title: Sidebar
@@ -252,19 +252,6 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    -
-        title: Hide Vault Title
-        id: vault-title-none
-        type: class-toggle
-    -
-        title: Add Vault Title Icon
-        id: vault-icon
-        type: class-toggle
-    -
-        title: Vault Image
-        id: vault-icon-image
-        type: variable-text
-        default: "url()"
     - 
         title: File Explorer Styling
         id: file-explorer-flat
@@ -289,6 +276,56 @@ settings:
         id: file-f
         type: variable-text
         default: 'its'
+    -
+        title: Vault Title
+        id: ITS-Vault-Title
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Vault Font
+        description: Vault Title fonts.
+        id: vault-font
+        type: variable-text
+        default: "'Calisto MT', 'Palatino Black', 'Book Antiqua', 'Georgia', 'Suez One', serif"
+    -
+        title: Vault Title Size
+        id: vault-name-font-size
+        type: variable-number-slider
+        default: 20
+        format: px
+        min: 10
+        max: 25
+        step: 1
+    -
+        title: Vault Title Font Weight
+        id: vault-name-font-weight
+        type: variable-number-slider
+        format: px
+        default: 900
+        min: 100
+        max: 900
+        step: 100
+    -
+		title: Vault Title Color
+		id: vault-name-color
+		type: variable-themed-color
+		format: hex
+		default-dark: '#c14343'
+		default-light: '#c14343'
+    -
+        title: Hide Vault Title
+        id: vault-title-none
+        type: class-toggle
+    -
+        title: Add Vault Title Icon
+        id: vault-icon
+        type: class-toggle
+    -
+        title: Vault Image
+        id: vault-icon-image
+        type: variable-text
+        default: "url()"
     -
         title: Background Image
         id: ITS-Background-Image
@@ -551,9 +588,21 @@ settings:
         level: 2
         collapsed: true
     -
-        title: Note Title Gradient
-        id: file-header-gradient
-        type: class-toggle
+        title: Note Title Styling
+        id: ITS-Note-Title-Styling
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            -
+                label: Note Title Gradient
+                value: file-header-gradient
+            -
+                label: Note Title Underline
+                value: note-title-underline
+            - 
+                label: Note Title Overline
+                value: note-title-overline
     -
         title: Inline Title Styling
         id: Inline-Title-Styling
@@ -667,6 +716,10 @@ settings:
         title: Hide Header Underline
         description: Hide ALL header underlines.
         id: hide-header-underline
+        type: class-toggle
+    -
+        title: Heading Indicators
+        id: heading-indicator
         type: class-toggle
     -
 		title: Heading Styles
@@ -2213,6 +2266,9 @@ settings:
             -
                 label: WOTC/Beyond
                 value: wotc-beyond
+            -
+                label: Pathfinder
+                value: pathfinder
     -
         title: Tangerine Dunes
         id: t-d

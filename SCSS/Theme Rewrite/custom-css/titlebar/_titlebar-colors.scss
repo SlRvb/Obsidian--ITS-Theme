@@ -1,11 +1,16 @@
 .titlebar-colors.titlebar-colors.titlebar-colors {
+    --titlebar-text-color: var(--inactive);
+    --titlebar-text-color-focused: var(--text-dl);
+
     --titlebar-background: var(--dark-accent);
     --titlebar-background-focused: var(--dark-accent);
     --titlebar-bubble-colors: var(--outline);
     --sidebar-tab-background-color: var(--note);
 
-    --tab-text-color: var(--soft-text);
-    --tab-text-color-focused: var(--text);
+    // --tab-text-color: var(--soft-text);
+    // --tab-text-color-focused: var(--text);
+    --tab-text-color: var(--text-dl);
+    --tab-text-color-focused: var(--text-dl);
 
     --tab-font-weight: 500;
     --tab-font-weight-active: 900;

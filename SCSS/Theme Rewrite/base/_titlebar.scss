@@ -17,3 +17,8 @@ body {
     & .titlebar-button-container.mod-right 
     { background: transparent }
 }
+
+//Fix Tab Button Colors
+.workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+    color: var(--tab-text-color-focused-active-current);
+}

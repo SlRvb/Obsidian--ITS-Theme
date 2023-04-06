@@ -2,7 +2,7 @@
     --tab-outline-width: 0;
     --titlebar-bubble-colors: #0b0f13;
     --titlebar-bubble-colors-inactive: #0b0f1350;
-
+    
     --tab-text-color-focused-active: var(--text);
     --tab-divider-color: transparent;
 }
@@ -15,7 +15,6 @@
     --tab-text-padding: 3px 5px;
     --tab-text-padding-inner: 1px 3px;
     --tab-gap: 0 10px;
-    --sidebar-tab-background-color-hover: transparent;
 
     --tab-text-color-focused-active-current: var(--text);
     
@@ -28,7 +27,7 @@
         align-content: center;
         gap: var(--size-2-3);
     }
-    & .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
+    & .workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
     & .workspace-tab-header-container-inner,
     & .workspace-tab-header-inner {
         margin: unset;
@@ -40,11 +39,14 @@
         box-shadow: 2px 2px 0 var(--titlebar-bubble-colors);
         border: 2px solid var(--titlebar-bubble-colors);
         padding: var(--tab-text-padding-inner);
+        --sidebar-tab-background-color-hover: transparent;
 
         &:not(.is-active) {
             --titlebar-bubble-colors: var(--titlebar-bubble-colors-inactive);
         }
     }
+    //Sliding Tab Fix
+    & .mod-stacked .workspace-tab-header { border: none; }
 
     //Hover Color
     & .workspace-tab-header:not(.is-active):hover { 
@@ -61,7 +63,7 @@
     // & .workspace-tab-header.is-active::after { display: none; }
 
 
-    & .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    & .workspace-tab:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
         color: var(--text-on-accent);
     }
 }

@@ -575,6 +575,11 @@ settings:
     -
         title: Live Preview Image Float
         id: lp-img-float
+        type: class-toggle   
+    -
+        title: Clear Images with Horizontal Lines
+        description: Force images to stay above horizontal lines
+        id: lp-img-float
         type: class-toggle
     -
         title: Center Images

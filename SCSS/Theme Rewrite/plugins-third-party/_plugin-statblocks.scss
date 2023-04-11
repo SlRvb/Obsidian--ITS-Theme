@@ -4,7 +4,9 @@ body {
     --statblock-background-color: var(--note);
     --statblock-bar-color: var(--accent);
     --statblock-rule-color: var(--accent);
+
     --statblock-alt: var(--td);
+    --statblock-alt-padding: 0.25em 0.3em;
 
     --statblock-image-border-color: var(--hr);
 
@@ -57,10 +59,23 @@ body {
     --h5-border-line-width: var(--header-border-line-width);
     --h6-border-line-width: var(--header-border-line-width);
 
+    & .statblock-content {
+        padding: .45em;
+
+        & .statblock-item-container { margin-bottom: .2rem; }
+        & > div > .statblock-item-container:not(.group-container):not(.inline-container):not(.rule-container) {
+            padding: var(--statblock-alt-padding);
+        }
+    }
+    & .statblock-inline-item { padding: var(--statblock-alt-padding); }
+
     //Fix HCL Styling
-    & :is(.statblock-heading.heading, .section-header) {
+    & :is(.statblock-heading.heading, .section-header)
+    {
         &::before,
         &::after { display: none; }
+
+        & > :not(.collapse-indicator) { margin: 0; }
     }
 
     //Alt Coloring

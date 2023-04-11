@@ -60,8 +60,19 @@
     }
 }
 //Wide Table
-.callout[data-callout-metadata~="t-w"] table td { width: calc(var(--tbl-w) /2); }
-.callout[data-callout-metadata~="t-w"] table { width: 100%; }
+.callout[data-callout-metadata~="t-w"] {
+    & table { 
+        width: 100%; 
+        
+        & td { width: calc(var(--tbl-w) / 2); }
+    }
+} 
+
+.callout[data-callout-metadata~="table-cell-top"] table td {
+    vertical-align: top;
+}
+
+
 
 //Expand for Embed
 .callout[data-callout-metadata~="embed"] {

@@ -576,6 +576,11 @@ settings:
     -
         title: Live Preview Image Float
         id: lp-img-float
+        type: class-toggle   
+    -
+        title: Clear Images with Horizontal Lines
+        description: Force images to stay above horizontal lines
+        id: lp-img-float
         type: class-toggle
     -
         title: Center Images
@@ -7085,12 +7090,15 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   display: none;
 }
 
+.callout[data-callout-metadata~=t-w] table {
+  width: 100%;
+}
 .callout[data-callout-metadata~=t-w] table td {
   width: calc(var(--tbl-w) / 2);
 }
 
-.callout[data-callout-metadata~=t-w] table {
-  width: 100%;
+.callout[data-callout-metadata~=table-cell-top] table td {
+  vertical-align: top;
 }
 
 .callout[data-callout-metadata~=embed] .callout-content, .callout[data-callout-metadata~=embed] p {
@@ -7410,7 +7418,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
   margin-block-end: 0;
   margin: 0;
 }
-.callout[data-callout~=infobox] :is(h1, h2, h3, h4, h5, h6) {
+.callout[data-callout~=infobox] .callout-content > :is(h1, h2, h3, h4, h5, h6) {
   font-size: 20px;
   text-align: center;
   margin: 0;
@@ -9277,37 +9285,41 @@ h6):after {
 .heading-indicator .is-live-preview .HyperMD-header.HyperMD-header.HyperMD-header:hover .cm-header.cm-header:not(.cm-header-6)::before {
   margin-top: 0px;
 }
-.heading-indicator .is-live-preview .HyperMD-header .cm-header:not(.cm-formatting)::before {
+.heading-indicator .is-live-preview .HyperMD-header.HyperMD-header-1 {
+  --indicator-heading-text: "H1";
+  --indicator-heading-size: var(--h1-size);
+}
+.heading-indicator .is-live-preview .HyperMD-header.HyperMD-header-2 {
+  --indicator-heading-text: "H2";
+  --indicator-heading-size: var(--h2-size);
+}
+.heading-indicator .is-live-preview .HyperMD-header.HyperMD-header-3 {
+  --indicator-heading-text: "H3";
+  --indicator-heading-size: var(--h3-size);
+}
+.heading-indicator .is-live-preview .HyperMD-header.HyperMD-header-4 {
+  --indicator-heading-text: "H4";
+  --indicator-heading-size: var(--h4-size);
+}
+.heading-indicator .is-live-preview .HyperMD-header.HyperMD-header-5 {
+  --indicator-heading-text: "H5";
+  --indicator-heading-size: var(--h5-size);
+}
+.heading-indicator .is-live-preview .HyperMD-header.HyperMD-header-6 {
+  --indicator-heading-text: "H6";
+  --indicator-heading-size: var(--h6-size);
+}
+.heading-indicator .is-live-preview .HyperMD-header .cm-fold-indicator::before {
   float: left;
-  position: relative;
   font-family: var(--font-monospace);
   color: var(--footnote);
   font-size: 12px;
+  content: var(--indicator-heading-text);
   margin-left: -18px;
+  margin-top: calc(var(--indicator-heading-size) / 2.5);
 }
-.heading-indicator .is-live-preview .HyperMD-header .cm-header:not(.cm-formatting):not(.cm-formatting-header):not(.cm-inline-code).cm-header-1::before {
-  content: "H1";
-  margin-top: calc(var(--h1-size) / 2);
-}
-.heading-indicator .is-live-preview .HyperMD-header .cm-header:not(.cm-formatting):not(.cm-formatting-header):not(.cm-inline-code).cm-header-2::before {
-  content: "H2";
-  margin-top: calc(var(--h2-size) / 2);
-}
-.heading-indicator .is-live-preview .HyperMD-header .cm-header:not(.cm-formatting):not(.cm-formatting-header):not(.cm-inline-code).cm-header-3::before {
-  content: "H3";
-  margin-top: calc(var(--h3-size) / 2);
-}
-.heading-indicator .is-live-preview .HyperMD-header .cm-header:not(.cm-formatting):not(.cm-formatting-header):not(.cm-inline-code).cm-header-4::before {
-  content: "H4";
-  margin-top: calc(var(--h4-size) / 2);
-}
-.heading-indicator .is-live-preview .HyperMD-header .cm-header:not(.cm-formatting):not(.cm-formatting-header):not(.cm-inline-code).cm-header-5::before {
-  content: "H5";
-  margin-top: calc(var(--h5-size) / 2);
-}
-.heading-indicator .is-live-preview .HyperMD-header .cm-header:not(.cm-formatting):not(.cm-formatting-header):not(.cm-inline-code).cm-header-6::before {
-  content: "H6";
-  margin-top: calc(var(--h6-size) / 2);
+.heading-indicator .is-live-preview .HyperMD-header:hover .cm-fold-indicator::before {
+  margin-top: -5px;
 }
 
 .heading-color-override h1 > *, .heading-color-override h2 > *, .heading-color-override h3 > *, .heading-color-override h4 > *, .heading-color-override h5 > *, .heading-color-override h6 > *, .heading-color-override .cm-s-obsidian .cm-header > * {

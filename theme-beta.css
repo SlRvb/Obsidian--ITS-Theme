@@ -490,6 +490,11 @@ settings:
         id: justified
         type: class-toggle
     -
+        title: Font Ligatures
+        description: (Depends On Font) Text combines into symbols ie. - - > becomes -->.
+        id: lig
+        type: class-toggle
+    -
         title: Fonts
         id: ITS-Fonts
         type: heading
@@ -506,11 +511,6 @@ settings:
         id: font-monospace
         type: variable-text
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
-    -
-        title: Font Ligatures
-        description: (Depends On Font) Text combines into symbols ie. - - > becomes -->.
-        id: lig
-        type: class-toggle
     -
         title: Comments
         id: comment-font
@@ -4986,6 +4986,7 @@ body {
   --statblock-bar-color: var(--accent);
   --statblock-rule-color: var(--accent);
   --statblock-alt: var(--td);
+  --statblock-alt-padding: 0.25em 0.3em;
   --statblock-image-border-color: var(--hr);
   --statblock-border-size: 0;
   --statblock-border-color: var(--lines);
@@ -5030,12 +5031,20 @@ body {
 .obsidian-statblock-plugin .statblock-content {
   padding: 0.45em;
 }
-.obsidian-statblock-plugin .statblock-content > div > .statblock-item-container:not(.group-container) {
-  padding: 0.25em 0.3em;
-  margin-bottom: 0rem;
+.obsidian-statblock-plugin .statblock-content .statblock-item-container {
+  margin-bottom: 0.2rem;
+}
+.obsidian-statblock-plugin .statblock-content > div > .statblock-item-container:not(.group-container):not(.inline-container):not(.rule-container) {
+  padding: var(--statblock-alt-padding);
+}
+.obsidian-statblock-plugin .statblock-inline-item {
+  padding: var(--statblock-alt-padding);
 }
 .obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)::before, .obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)::after {
   display: none;
+}
+.obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header) > :not(.collapse-indicator) {
+  margin: 0;
 }
 .obsidian-statblock-plugin .column > .statblock-item-container:nth-child(odd):not(.rule-container,
 .table-container,
@@ -8547,6 +8556,20 @@ iframe {
 .tables-styling-wikipedia tr:last-child,
 .table-wikipedia tr:last-child {
   margin-bottom: 2px;
+}
+
+.lig,
+.ligatures {
+  --font-ligatures: normal;
+}
+
+/*Justify text*/
+.justify .markdown-preview-section, .justify .cm-s-obsidian, .justify.markdown-preview-view, .justify.cm-s-obsidian,
+.justified .markdown-preview-section,
+.justified .cm-s-obsidian,
+.justified.markdown-preview-view,
+.justified.cm-s-obsidian {
+  text-align: justify;
 }
 
 .writing-document:not(.is-mobile) {

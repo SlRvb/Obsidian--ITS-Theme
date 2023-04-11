@@ -489,6 +489,11 @@ settings:
         id: justified
         type: class-toggle
     -
+        title: Font Ligatures
+        description: (Depends On Font) Text combines into symbols ie. - - > becomes -->.
+        id: lig
+        type: class-toggle
+    -
         title: Fonts
         id: ITS-Fonts
         type: heading
@@ -505,11 +510,6 @@ settings:
         id: font-monospace
         type: variable-text
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
-    -
-        title: Font Ligatures
-        description: (Depends On Font) Text combines into symbols ie. - - > becomes -->.
-        id: lig
-        type: class-toggle
     -
         title: Comments
         id: comment-font

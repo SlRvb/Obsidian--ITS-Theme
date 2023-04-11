@@ -26,6 +26,7 @@
     &[data-callout-metadata~="wm-sm-c"]    { width: 49%; }
     &[data-callout-metadata~="wmed-c"]     { width: 59%; }
     &[data-callout-metadata~="wm-tl-c"]    { width: 79%; }
+    &[data-callout-metadata~="wfit"]       { width: fit-content; }
 }
 .callout.callout[data-callout-metadata~="static"] {
     --callout-micro: 50px;

@@ -5027,6 +5027,13 @@ body {
   --h5-border-line-width: var(--header-border-line-width);
   --h6-border-line-width: var(--header-border-line-width);
 }
+.obsidian-statblock-plugin .statblock-content {
+  padding: 0.45em;
+}
+.obsidian-statblock-plugin .statblock-content > div > .statblock-item-container:not(.group-container) {
+  padding: 0.25em 0.3em;
+  margin-bottom: 0rem;
+}
 .obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)::before, .obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)::after {
   display: none;
 }
@@ -7266,6 +7273,9 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 }
 .callout.callout.callout[data-callout-metadata~=wm-tl-c] {
   width: 79%;
+}
+.callout.callout.callout[data-callout-metadata~=wfit] {
+  width: fit-content;
 }
 
 .callout.callout[data-callout-metadata~=static] {

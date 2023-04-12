@@ -12,8 +12,9 @@
 Check out the [ITS Theme Documentation](https://publish.obsidian.md/slrvb-docs/ITS+Theme/ITS+Theme) hosted on Obsidian Publish!
 
 > **Important** Looking for more ITS Version 1 Beta theme testers!
-> Follow the instructions here on [the forum post announcement](https://forum.obsidian.md/t/theme-its-dark-light-theme/12838/172?u=slrvb) and do feel free to ping me or file an issue on anything that's broken or a feature you want added, thank you! 🙏💖
+> Using the [BRAT plugin](https://github.com/TfTHacker/obsidian42-brat), paste the url to this theme repo into the Beta Themes List section in the BRAT Settings. To pull updates, open the command palette and search for `Update Beta Themes` and the changes should be applied, if not, give it a few minutes then try again.
 >  
+> Do feel free to ping me or file an issue on anything that's broken or a feature you want added, thank you! 🙏💖
 > Every tester that mentions anything missing or broken helps push out the ITS Theme version 1 faster.
 
 <!--

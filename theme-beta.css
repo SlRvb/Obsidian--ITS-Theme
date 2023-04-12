@@ -6925,6 +6925,119 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 }
 
 /*----Checked Text----*/
+body:not(.check-color) ul > li.task-list-item[data-task][data-task=x] span > *, body:not(.check-color) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=x] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=X] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=X] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=">"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=">"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=D] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=D] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="-"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="-"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="?"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="?"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="!"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="!"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="+"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="+"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="/"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="/"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=R] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=R] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=i] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=i] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=B] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=B] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=P] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=P] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=C] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=C] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=I] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=I] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=Q] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=Q] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=N] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=N] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=b] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=b] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=p] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=p] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=E] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=E] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=L] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=L] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=A] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=A] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=r] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=r] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=c] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=c] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=o] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=o] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=d] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=d] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=T] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=T] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=t] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=t] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=O] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=O] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=F] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=F] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=W] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=W] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="~"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="~"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="@"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="@"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=f] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=f] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=H] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=H] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="&"] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="&"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=s] span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=s] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+
 /* Checkbox Text Normal */
 /*--Checkbox Text Colors--*/
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul li[data-task=X].task-list-item.is-checked {

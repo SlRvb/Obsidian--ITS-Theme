@@ -1660,6 +1660,16 @@ settings:
         id: embed-mini-headers
         type: class-toggle
     -
+        title: Canvas
+        id: ITS-Canvas
+        type: heading
+        level: 2 
+        collapsed: true
+    -
+        title: Canvas Cards Styling
+        id: canvas-cards
+        type: class-toggle
+    -
         title: Colors
         id: ITS-Colors
         type: heading
@@ -5048,7 +5058,8 @@ body {
 }
 .obsidian-statblock-plugin .column > .statblock-item-container:nth-child(odd):not(.rule-container,
 .table-container,
-.traits-container) {
+.traits-container,
+.heading-container) {
   background: var(--statblock-alt);
 }
 .obsidian-statblock-plugin .spell-list .spell-level .property-text, .obsidian-statblock-plugin .property-name {
@@ -5224,6 +5235,14 @@ body .fantasy-calendar-create-calendar details[open] {
 }
 .dice-roller-view .advantage-disadvantage button + button {
   background: var(--failure-bg);
+}
+
+.dice-roller.markdown-embed .dice-roller-result ul {
+  margin: 0;
+}
+
+.dice-roller.has-embed .internal-embed *:last-child:not(svg):not(.dice-content-copy):not(.markdown-embed .dice-roller):not(.dice-roller-result > .embedded-table-result *) {
+  margin: unset;
 }
 
 /*Button Plugin*/
@@ -8351,6 +8370,22 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
     display: flex !important;
   }
 }
+.canvas-cards .canvas-node.is-themed {
+  --shadow-border-themed-inset: none;
+  --shadow-border-themed: none;
+}
+.canvas-cards .canvas-node.is-themed .canvas-node-container {
+  border-color: var(--outline);
+  box-shadow: inset 0 0 0 2px var(--outline), var(--shadow-m);
+}
+.canvas-cards .canvas-node.is-themed .canvas-node-container:hover .canvas-node-content {
+  background-color: rgba(var(--canvas-color), 0.2);
+}
+
+.canvas-node-connection-point::after {
+  border-color: rgb(var(--canvas-color));
+}
+
 .sizing-readable.sizing-readable {
   --font-ui-smaller: 13.5px;
   --font-ui-small: 14px;

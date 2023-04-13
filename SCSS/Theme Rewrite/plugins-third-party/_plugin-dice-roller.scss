@@ -42,3 +42,13 @@
 
 }
 
+
+
+
+//Inline Dice Style Fixes
+.dice-roller.markdown-embed .dice-roller-result {
+    & ul
+    { margin: 0 }
+}
+.dice-roller.has-embed .internal-embed *:last-child:not(svg):not(.dice-content-copy):not(.markdown-embed .dice-roller):not(.dice-roller-result > .embedded-table-result *) 
+{ margin: unset; }

@@ -1659,6 +1659,16 @@ settings:
         id: embed-mini-headers
         type: class-toggle
     -
+        title: Canvas
+        id: ITS-Canvas
+        type: heading
+        level: 2 
+        collapsed: true
+    -
+        title: Canvas Cards Styling
+        id: canvas-cards
+        type: class-toggle
+    -
         title: Colors
         id: ITS-Colors
         type: heading

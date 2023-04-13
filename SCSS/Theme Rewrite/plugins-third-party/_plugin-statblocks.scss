@@ -82,7 +82,8 @@ body {
     & .column > .statblock-item-container:nth-child(odd):not(
         .rule-container, 
         .table-container,
-        .traits-container
+        .traits-container,
+        .heading-container
     ) { background: var(--statblock-alt); }
     
     //Fix Text Color

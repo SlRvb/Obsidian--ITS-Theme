@@ -10575,7 +10575,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --font: var(--font-default);
   --header-font-weight: 900;
   --vault-name-font-weight: 900;
-  --hr-sym: "";
+  --hr-icon-symbol: "";
   background: var(--note);
   --text-dl: white;
 }
@@ -10604,9 +10604,9 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --deep-dark-accent: var(--outer-bar);
   --accent2: var(--soft-text);
   --accent2-lite: #2EA1CF;
-  --folder: var(--bttn);
-  --f-hover: var(--text);
-  --file-icon-color: var(--text);
+  --folder: var(--text);
+  --folder-open: var(--bttn);
+  --file-icon-color: var(--dark-accent);
   --bg: #3C4144;
   --code-bg: var(--bg);
   --embed-bg: #3F4447;

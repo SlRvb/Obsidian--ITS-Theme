@@ -3,7 +3,7 @@
     --header-font-weight: 900;
     --vault-name-font-weight: 900;
     
-    --hr-sym: "";
+    --hr-icon-symbol: "";
 
     background: var(--note);
     --text-dl: white;
@@ -38,9 +38,9 @@
         --accent2: var(--soft-text);
         --accent2-lite: #2EA1CF;
     
-        --folder: var(--bttn);
-        --f-hover: var(--text);
-        --file-icon-color: var(--text);
+        --folder: var(--text);
+        --folder-open: var(--bttn);
+        --file-icon-color: var(--dark-accent);
         
         --bg: #3C4144;
         // --code-bg: #3F4447;

@@ -6091,6 +6091,10 @@ img[alt~=border],
   height: var(--medium);
 }
 
+.internal-embed[alt*=hm-tl] .markdown-embed-content {
+  height: var(--med-tall);
+}
+
 .internal-embed[alt*=htall] .markdown-embed-content {
   height: var(--tall);
 }
@@ -6215,6 +6219,10 @@ body.embed-mini-headers .markdown-embed {
 .internal-embed[alt*=clean] > .markdown-embed,
 .internal-embed[alt*=clean].is-loaded:not(.image-embed) {
   --embed-padding: 0;
+}
+.embed-clean .internal-embed > .markdown-embed:not(:hover), .embed-clean .internal-embed.is-loaded:not(.image-embed):not(:hover),
+.internal-embed[alt*=clean] > .markdown-embed:not(:hover),
+.internal-embed[alt*=clean].is-loaded:not(.image-embed):not(:hover) {
   --embed-border-color: transparent;
   --embed-border-left-color: var(--embed-border-color);
   --embed-border-right-color: var(--embed-border-color);
@@ -6224,6 +6232,10 @@ body.embed-mini-headers .markdown-embed {
   --embed-border-right: var(--embed-thickness) var(--embed-border-type) var(--embed-border-right-color);
   --embed-border-top: var(--embed-thickness) var(--embed-border-type) var(--embed-border-top-color);
   --embed-border-bottom: var(--embed-thickness) var(--embed-border-type) var(--embed-border-bottom-color);
+}
+.embed-clean .internal-embed.inline-embed,
+.internal-embed[alt*=clean].inline-embed {
+  --embed-title-padding: 0;
 }
 
 .embed-dark-background {

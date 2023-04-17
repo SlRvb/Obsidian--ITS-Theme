@@ -6070,6 +6070,12 @@ img[alt~=border],
   background: var(--image-border-background);
 }
 
+.mobile-image-viewer img[alt][alt][alt] {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 /*Height Adjustment*/
 .internal-embed[alt*=htiny] .markdown-embed-content {
   height: var(--tiny);

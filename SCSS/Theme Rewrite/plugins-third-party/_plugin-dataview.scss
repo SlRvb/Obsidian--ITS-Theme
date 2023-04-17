@@ -38,6 +38,9 @@ body {
             --dataview-th-count-color: var(--text-dl);
         }
     }
+
+    //Fix List in Table
+    & ul { padding-inline-start: 0; }
 }
     
 //Dataview List Count   

@@ -3763,6 +3763,16 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox {
   margin-inline-start: calc(var(--checkbox-size) * -1.4);
 }
 
+.markdown-rendered.markdown-rendered ul > li:not(.task-list-item)::before, .markdown-rendered.markdown-rendered ul > li .task-list-item-checkbox {
+  margin-left: 0;
+}
+.markdown-rendered.markdown-rendered ul > li ul::before {
+  left: 0.4em;
+}
+.markdown-rendered.markdown-rendered div div > ul {
+  padding-inline-start: 0;
+}
+
 ol > li::marker,
 .cm-line .cm-formatting-list-ol {
   color: var(--list-numbered-color);
@@ -4678,6 +4688,10 @@ body {
 
 .dataview.list-view-ul li::marker {
   color: transparent;
+}
+
+.dataview.result-group {
+  padding-left: 0;
 }
 
 .dataview.result-group > .contains-task-list {

@@ -89,9 +89,20 @@ ul > li:not(.task-list-item)::before {
     // margin-left: 2px;
     // margin-right: 2px;
 }
-.markdown-preview-view .task-list-item-checkbox { margin-right: 8px; }
-ul > li.task-list-item.task-list-item .task-list-item-checkbox {
-    margin-inline-start: calc(var(--checkbox-size) * -1.4);
+.markdown-preview-view .task-list-item-checkbox 
+{ margin-right: 8px; }
+ul > li.task-list-item.task-list-item .task-list-item-checkbox 
+{ margin-inline-start: calc(var(--checkbox-size) * -1.4); }
+
+//Fix Embed Task & List Alignment
+.markdown-rendered.markdown-rendered {
+    & ul > li {
+        &:not(.task-list-item)::before,
+        & .task-list-item-checkbox { margin-left: 0; }
+        
+        & ul::before { left: .4em; } //List Line
+    }
+    & div div > ul { padding-inline-start: 0; }
 }
 
 

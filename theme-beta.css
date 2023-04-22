@@ -3921,6 +3921,11 @@ body {
   --embed-border-bottom-color-hover: var(--embed-border-color-hover);
 }
 
+.markdown-embed,
+.internal-embed:not(.image-embed) {
+  display: flow-root;
+}
+
 .markdown-embed.markdown-embed:hover {
   --embed-border-left: var(--embed-thickness) var(--embed-border-type) var(--embed-border-left-color-hover);
   --embed-border-right: var(--embed-thickness) var(--embed-border-type) var(--embed-border-right-color-hover);

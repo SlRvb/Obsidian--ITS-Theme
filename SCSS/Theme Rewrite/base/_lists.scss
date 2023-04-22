@@ -42,6 +42,8 @@
     --list-color-6: var(--indentation-guide-color);
 }
 
+ul, ol { display: flow-root; }
+
 
 
 //Bullet List

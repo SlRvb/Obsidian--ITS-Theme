@@ -11,10 +11,11 @@
     margin: 0 !important;
     width: auto;
 }
-.callout[data-callout~="infobox"] {
+.callout.callout[data-callout~="infobox"] {
     // --callout-color: var(--interactive-accent-rgb);
     --callout-color: var(--note, var(--background-primary));
     --callout-padding: 0;
+    --callout-content-padding: 0;
     --callout-margin: 0 0 0 5px;
     background: var(--note, var(--background-primary));
 
@@ -23,7 +24,7 @@
     --h3-border-line-height: 0;
     --h4-border-line-height: 0;
     --h5-border-line-height: 0;
-    --h5-border-line-height: 0;
+    --h6-border-line-height: 0;
 
     border: 0;
     box-shadow: none;
@@ -34,15 +35,13 @@
     // & .image-embed.is-loaded { height: 0; }
 
     //Center collapse Arrow
-    & > .callout-title { 
-        padding: 0; 
-        justify-content: center;
-    }
+    & > .callout-title { justify-content: center; }
+    &:not(.is-collapsed) > .callout-title { padding: 0; }
     & .callout-fold { padding-right: 0; }
 
     &.is-collapsed .callout-fold {
         border: 1px solid var(--hr, var(--background-modifier-border));
-        padding: 5px 10px;
+        // padding: 5px 10px;
     }
     
     //Display title collapse arrow on hover only
@@ -92,6 +91,7 @@
 
     //Flush content and add border
     & > .callout-content {
+        // --callout-content-padding: 0;
         border: 1px solid var(--table, var(--background-modifier-border));
         margin: 0;
         border-radius: var(--radius, var(--co-radius));

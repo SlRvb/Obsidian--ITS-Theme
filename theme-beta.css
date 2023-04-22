@@ -3717,6 +3717,10 @@ a[href^=https],
   --list-color-6: var(--indentation-guide-color);
 }
 
+ul, ol {
+  display: flow-root;
+}
+
 .list-bullet::after, .list-bullet::before {
   display: none;
 }
@@ -4080,6 +4084,10 @@ body {
 
 .callout .callout {
   --callout-margin: 0;
+}
+
+.callout-icon {
+  align-self: center;
 }
 
 .markdown-embed .markdown-rendered .callout {
@@ -7523,9 +7531,10 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   width: auto;
 }
 
-.callout[data-callout~=infobox] {
+.callout.callout[data-callout~=infobox] {
   --callout-color: var(--note, var(--background-primary));
   --callout-padding: 0;
+  --callout-content-padding: 0;
   --callout-margin: 0 0 0 5px;
   background: var(--note, var(--background-primary));
   --h1-border-line-height: 0;
@@ -7533,79 +7542,80 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --h3-border-line-height: 0;
   --h4-border-line-height: 0;
   --h5-border-line-height: 0;
-  --h5-border-line-height: 0;
+  --h6-border-line-height: 0;
   border: 0;
   box-shadow: none;
   width: auto;
   max-width: 300px;
   float: right;
 }
-.callout[data-callout~=infobox] > .callout-title {
-  padding: 0;
+.callout.callout[data-callout~=infobox] > .callout-title {
   justify-content: center;
 }
-.callout[data-callout~=infobox] .callout-fold {
+.callout.callout[data-callout~=infobox]:not(.is-collapsed) > .callout-title {
+  padding: 0;
+}
+.callout.callout[data-callout~=infobox] .callout-fold {
   padding-right: 0;
 }
-.callout[data-callout~=infobox].is-collapsed .callout-fold {
+.callout.callout[data-callout~=infobox].is-collapsed .callout-fold {
   border: 1px solid var(--hr, var(--background-modifier-border));
-  padding: 5px 10px;
 }
-.callout[data-callout~=infobox] > .callout-title .callout-title-inner {
+.callout.callout[data-callout~=infobox] > .callout-title .callout-title-inner {
   display: none;
 }
-.callout[data-callout~=infobox]:not([data-callout-metadata~=show-title],
+.callout.callout[data-callout~=infobox]:not([data-callout-metadata~=show-title],
 [data-callout-metadata~=s-t],
 [data-callout-metadata~=show-icon],
 [data-callout-metadata~=s-i]) .callout-icon svg {
   width: 0;
   height: 0;
 }
-.callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) .callout-title {
+.callout.callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) .callout-title {
   background-color: transparent;
 }
-.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) > .callout-title, .callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]):not(:hover):not(.is-collapsed) > .callout-title {
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) > .callout-title, .callout.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]):not(:hover):not(.is-collapsed) > .callout-title {
   display: flex;
   gap: 0;
 }
-.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox].is-collapsed .callout-title, .callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]).is-collapsed .callout-title {
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox].is-collapsed .callout-title, .callout.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]).is-collapsed .callout-title {
   border: 1px solid var(--hr, var(--background-modifier-border));
   display: flex;
   align-items: center;
   align-content: center;
 }
-.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] .callout-title .callout-title-inner, .callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-title .callout-title-inner {
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] .callout-title .callout-title-inner, .callout.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-title .callout-title-inner {
   display: unset;
   align-items: center;
   align-content: center;
   padding: 5px 10px;
 }
-.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] .callout-fold, .callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-fold {
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] .callout-fold, .callout.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]) .callout-fold {
   margin-top: auto;
   margin-bottom: auto;
 }
-.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox].is-collapsed .callout-fold, .callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]).is-collapsed .callout-fold {
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox].is-collapsed .callout-fold, .callout.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]).is-collapsed .callout-fold {
   border: 0;
 }
-.callout[data-callout~=infobox] > .callout-content {
+.callout.callout[data-callout~=infobox] > .callout-content {
   border: 1px solid var(--table, var(--background-modifier-border));
   margin: 0;
   border-radius: var(--radius, var(--co-radius));
 }
-.callout[data-callout~=infobox] table {
+.callout.callout[data-callout~=infobox] table {
   width: 100%;
 }
-.callout[data-callout~=infobox] table td {
+.callout.callout[data-callout~=infobox] table td {
   white-space: pre-wrap;
   word-wrap: normal;
   word-break: normal;
 }
-.callout[data-callout~=infobox] :is(p, table) {
+.callout.callout[data-callout~=infobox] :is(p, table) {
   margin-block-start: 0;
   margin-block-end: 0;
   margin: 0;
 }
-.callout[data-callout~=infobox] .callout-content > :is(h1, h2, h3, h4, h5, h6) {
+.callout.callout[data-callout~=infobox] .callout-content > :is(h1, h2, h3, h4, h5, h6) {
   font-size: 20px;
   text-align: center;
   margin: 0;
@@ -7613,16 +7623,16 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   color: var(--text-normal);
   background: var(--outer-bar, var(--background-secondary));
 }
-.callout[data-callout~=infobox] .internal-embed, .callout[data-callout~=infobox] img {
+.callout.callout[data-callout~=infobox] .internal-embed, .callout.callout[data-callout~=infobox] img {
   display: block;
   margin: auto;
   padding: auto;
   text-align: center;
 }
-.callout[data-callout~=infobox][data-callout-metadata][data-callout-metadata][data-callout-metadata~=left] {
+.callout.callout[data-callout~=infobox][data-callout-metadata][data-callout-metadata][data-callout-metadata~=left] {
   --callout-margin: 0 5px 0 0;
 }
-.callout[data-callout~=infobox][data-callout-metadata~=wikipedia] table {
+.callout.callout[data-callout~=infobox][data-callout-metadata~=wikipedia] table {
   --table-header-color: var(--text);
   --table-header-background: transparent;
   --table-header-background-hover: var(--td);
@@ -7630,10 +7640,10 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --table-row-alt-background: transparent;
   --table-column-alt-background: transparent;
 }
-.callout[data-callout~=infobox][data-callout-metadata~=wikipedia] table tr:last-child {
+.callout.callout[data-callout~=infobox][data-callout-metadata~=wikipedia] table tr:last-child {
   margin-bottom: 2px;
 }
-.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] {
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] {
   max-width: unset;
   float: unset;
 }

@@ -11,6 +11,8 @@ body {
 }
 .callout .callout { --callout-margin: 0; }
 
+//Fix Callout icon Alignment
+.callout-icon { align-self: center;}
 
 //Fixes
 .markdown-embed .markdown-rendered .callout {

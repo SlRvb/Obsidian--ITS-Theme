@@ -1,32 +1,69 @@
-.list-bullet-color {
+.list-bullet-color.list-bullet-color {
     --list-bullet-color-1: var(--rainbow-1);
     --list-bullet-color-2: var(--rainbow-2);
     --list-bullet-color-3: var(--rainbow-3);
     --list-bullet-color-4: var(--rainbow-4);
     --list-bullet-color-5: var(--rainbow-5);
     --list-bullet-color-6: var(--rainbow-6);
+    
+    
 
-    & :is(ul ul, ol ol) li::before,
-    & .cm-list-1.cm-formatting-list::before 
+    & :is(ul, ol) li::before,
+    & .HyperMD-list-line-1 .cm-formatting-list::before 
     { color: var(--list-bullet-color-1); }
 
-    & :is(ul ul ul, ol ol ol) li::before,
-    & .cm-list-2.cm-formatting-list::before 
+    & :is(ul ul, ol ol) li::before,
+    & .HyperMD-list-line-2 .cm-formatting-list::before 
     { color: var(--list-bullet-color-2); }
 
-    & :is(ul ul ul ul, ol ol ol ol) li::before,
-    & .cm-list-3.cm-formatting-list::before
+    & :is(ul ul ul, ol ol ol) li::before,
+    & .HyperMD-list-line-3 .cm-formatting-list::before 
     { color: var(--list-bullet-color-3); }
 
-    & :is(ul ul ul ul ul, ol ol ol ol ol) li::before,
-    & .cm-list-4.cm-formatting-list::before
+    & :is(ul ul ul ul, ol ol ol ol) li::before,
+    & .HyperMD-list-line-4 .cm-formatting-list::before
     { color: var(--list-bullet-color-4); }
 
-    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol) li::before,
-    & .cm-list-5.cm-formatting-list::before
+    & :is(ul ul ul ul ul, ol ol ol ol ol) li::before,
+    & .HyperMD-list-line-5 .cm-formatting-list::before
     { color: var(--list-bullet-color-5); }
 
-    & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol) li::before,
-    & .cm-list-6.cm-formatting-list::before
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol) li::before,
+    & .HyperMD-list-line-6 .cm-formatting-list::before
     { color: var(--list-bullet-color-6); }
+
+    // & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol) li::before,
+    // & .HyperMD-list-line-7 .cm-formatting-list::before
+    // { color: var(--lines); }
+
+
+    //Checkboxes
+    & :is(ul, ol) li,
+    & .HyperMD-list-line-1
+    { & .task-list-item-checkbox { --checkbox-border-color: var(--rainbow-1); } }
+
+    
+    & :is(ul ul, ol ol) li,
+    & .HyperMD-list-line-2
+    { & .task-list-item-checkbox { --checkbox-border-color: var(--rainbow-2); } }
+    
+    & :is(ul ul ul, ol ol ol) li,
+    & .HyperMD-list-line-3
+    { & .task-list-item-checkbox { --checkbox-border-color: var(--rainbow-3); } }
+    
+    & :is(ul ul ul ul, ol ol ol ol) li,
+    & .HyperMD-list-line-4
+    { & .task-list-item-checkbox { --checkbox-border-color: var(--rainbow-4); } }
+    
+    & :is(ul ul ul ul ul, ol ol ol ol ol) li,
+    & .HyperMD-list-line-5
+    { & .task-list-item-checkbox { --checkbox-border-color: var(--rainbow-5); } }
+    
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol) li,
+    & .HyperMD-list-line-6
+    { & .task-list-item-checkbox { --checkbox-border-color: var(--rainbow-6); } }
+    
+    & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol) li,
+    & .HyperMD-list-line-7
+    { & .task-list-item-checkbox { --checkbox-border-color: var(--accent); } }
 }

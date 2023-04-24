@@ -52,11 +52,13 @@ ul, ol { display: flow-root; }
     &::after,
     &::before { display: none; }
 }
+ul > li:not(.task-list-item)::marker { margin-right: -10px; }
 .is-live-preview .cm-formatting-list-ul::before,
 ul > li:not(.task-list-item)::before {
     content: var(--bullet);
     font-family: var(--bullet-font);
     font-size: var(--font-text-size);
+    font-weight: 100;
 
     color: var(--list-marker-color);
     background-color: transparent;

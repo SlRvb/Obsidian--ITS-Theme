@@ -67,11 +67,6 @@ body:not(.alt-chkbx-off) {
 }
 
 
-//Checked Text
-// body:not(.check-text.check-text, .check-color.check-color) {
-//     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) span:not(.cm-formatting-task),
-//     & ul > li.task-list-item.is-checked {
-//         color: var(--text-faint);
-//         font-weight: bold;
-//     }
-// } 
+ul > li.task-list-item[data-task="x"] > ul li:not([data-task="x"]) {
+    color: var(--text-normal);
+}

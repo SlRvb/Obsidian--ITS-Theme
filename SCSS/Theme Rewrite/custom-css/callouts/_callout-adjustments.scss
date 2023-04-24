@@ -60,7 +60,7 @@
     }
 }
 //Wide Table
-.callout[data-callout-metadata~="t-w"] {
+.callout:is([data-callout-metadata~="t-w"], [data-callout-metadata~="table-wide"]) {
     & table { 
         width: 100%; 
         

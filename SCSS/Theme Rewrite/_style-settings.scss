@@ -1228,6 +1228,27 @@ settings:
         title: Default Bullet Disc Shape
         id: list-default-bullet
         type: class-toggle
+    -
+        title: Colorful Bullet Color
+        description: Toggle on to use colorful bullets
+        id: list-bullet-color
+        type: class-toggle
+    -
+        title: Colorful Bullet Lines
+        description: Toggle on to use colorful bullet lines
+        id: list-lines-color
+        type: class-toggle
+    -
+        title: Neon Lines
+        description: Toggle on for lines to have a neon glow effect
+        id: list-neon
+        type: class-toggle
+    -
+        title: Lists / Bullet Adjustments
+        id: ITS-Lists-Lines
+        type: heading
+        level: 3
+        collapsed: true
     - 
         title: Bullet Shape
         description: Add quotes around your new bullet. For example "~"
@@ -1239,17 +1260,6 @@ settings:
         id: bullet-font
         type: variable-text
         default: '"ITS"'    
-    -
-        title: Colorful Bullet Color
-        description: Toggle on to use colorful bullets
-        id: list-bullet-color
-        type: class-toggle
-    -
-        title: Lists Lines
-        id: ITS-Lists-Lines
-        type: heading
-        level: 3
-        collapsed: false
 	-
 		title: List Line Width
 		id: indentation-guide-width
@@ -1267,16 +1277,6 @@ settings:
     - 
         title: Alternate Indentation Style
         id: alternate-indent
-        type: class-toggle
-    -
-        title: Colorful Bullet Lines
-        description: Toggle on to use colorful bullet lines
-        id: list-lines-color
-        type: class-toggle
-    -
-        title: Neon Lines
-        description: Toggle on for lines to have a neon glow effect
-        id: list-neon
         type: class-toggle
     -
         title: Checkboxes

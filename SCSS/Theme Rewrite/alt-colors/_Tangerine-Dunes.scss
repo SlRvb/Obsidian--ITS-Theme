@@ -17,6 +17,7 @@
 
     --note: #1a1e24;
     
+    --accent-color: 223, 123, 65;
     --accent: #DF7B41;
     --lite-accent: #C48A69;
     --dark-accent: #c66c39;
@@ -44,18 +45,12 @@
     --hvr: rgba(253,162,115,0.25);
     --hvr-active: rgba(236, 110, 52, 0.3);
 
-    --sphd-pre-1: var(--i-at);
-    --sphd-pre-2: var(--headers);
-    --sphd-pre-3: var(--accent2);
-    --sphd-pre-4: var(--tag);
-    --sphd-pre-5: var(--table);
-    --sphd-pre-6: var(--dark-sidebar);
-    --sphd-ed-1: var(--i-at);
-    --sphd-ed-2: var(--headers);
-    --sphd-ed-3: var(--accent2);
-    --sphd-ed-4: var(--tag);
-    --sphd-ed-5: var(--table);
-    --sphd-ed-6: var(--dark-sidebar);
+    --theme-rainbow-1: var(--i-at);
+    --theme-rainbow-2: var(--headers);
+    --theme-rainbow-3: var(--accent2);
+    --theme-rainbow-4: var(--tag);
+    --theme-rainbow-5: var(--table);
+    --theme-rainbow-6: var(--dark-sidebar);
 }}
 .theme-light {
     &.t-d,
@@ -65,6 +60,7 @@
     
         --note: #f8fbff;
         
+        --accent-color: 232, 175, 142;
         --accent: #E8AF8E;
         --lite-accent: #C48A69;
         --accent2: #A9523C;

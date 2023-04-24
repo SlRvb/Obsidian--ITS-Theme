@@ -2,18 +2,18 @@
 /*----Theme: School Days----*/
 .s-d.s-d {
     /*FONTS*/
-    --font: /*'Recursive Sans Casual Static',*/ 'Recursive Sans Linear Static Black', 'RocknRoll One Regular';
-	--vault-font: "CollegiateBlackFLF", "Jersey M54";
+    --font: /*'Recursive Sans Casual Static',*/ 'Recursive Sans Linear Static Black', 'RocknRoll One Regular', var(--font-default);
+	--vault-font: "CollegiateBlackFLF", "Jersey M54", var(--font-default);
     --vault-name-font-weight: 100;
 
-    --font-monospace: "Recursive Mono Linear Static Medium";
-    --solve-font: 'Recursive Sans Linear Static Regular';
+    --font-monospace: "Recursive Mono Linear Static Medium", var(--font-default);
+    --solve-font: 'Recursive Sans Linear Static Regular', var(--font-default);
     
     --inline-title-font: var(--vault-font);
     --inline-title-color: var(--accent2);
     --inline-title-weight: 500;
 
-    --hr-icon-symbol: "\e3c9";
+    --hr-icon-symbol: "\e3c9", "✏";
     --hr-icon-font: var(--mdi);
     --bullet: "\e80c";
     --bullet-font: var(--mdi);

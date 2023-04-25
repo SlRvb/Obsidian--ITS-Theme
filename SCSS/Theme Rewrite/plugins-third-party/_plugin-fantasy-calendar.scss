@@ -10,14 +10,14 @@ body .fantasy-calendar {
         font-weight: 900;
         background-color: var(--th);
         color: var(--th-text);
-        border-radius: var(--radius);
+        border-radius: var(--radius-s);
     }
 }
 body .fantasy-calendar {
     & .weekdays .weekday,
     & .weeks .week-num {
         padding: 0px;
-        border-radius: var(--radius);
+        border-radius: var(--radius-s);
     }
     & .weeks .week-num-container {
         padding: 0px 5px;
@@ -30,7 +30,7 @@ body .fantasy-calendar {
 textarea,
 body .fantasy-calendar-element details[open],
 body .fantasy-calendar-create-calendar details[open],
-body .fantasy-day.day { border-radius: var(--radius); }
+body .fantasy-day.day { border-radius: var(--radius-s); }
 
 //Day Restyled
 .fantasy-day.day{
@@ -62,7 +62,7 @@ body .fantasy-day.day { border-radius: var(--radius); }
     
     //Settings Title
     & h3 { 
-        font-size: var(--f-s-h); 
+        font-size: var(--h3-size); 
         text-align: center; 
         margin: 10px 0; 
        
@@ -98,7 +98,7 @@ body .fantasy-calendar-create-calendar details[open] {
 
 
 //Full View / Large Calendar
-.fantasy-calendar.full-view .fantasy-day.day:nth-child(even) {
+.fantasy-calendar.full-view .fantasy-day.day:nth-child(even):not(.viewing, .active) {
     background-color: var(--td);
 }
 

@@ -5169,12 +5169,12 @@ body .fantasy-calendar .weekdays.weekdays, body .fantasy-calendar .weeks {
   font-weight: 900;
   background-color: var(--th);
   color: var(--th-text);
-  border-radius: var(--radius);
+  border-radius: var(--radius-s);
 }
 
 body .fantasy-calendar .weekdays .weekday, body .fantasy-calendar .weeks .week-num {
   padding: 0px;
-  border-radius: var(--radius);
+  border-radius: var(--radius-s);
 }
 body .fantasy-calendar .weeks .week-num-container {
   padding: 0px 5px;
@@ -5186,7 +5186,7 @@ textarea,
 body .fantasy-calendar-element details[open],
 body .fantasy-calendar-create-calendar details[open],
 body .fantasy-day.day {
-  border-radius: var(--radius);
+  border-radius: var(--radius-s);
 }
 
 .fantasy-day.day.active {
@@ -5214,7 +5214,7 @@ body .fantasy-day.day {
   padding: 0 30px;
 }
 .fantasy-calendar-create-calendar h3 {
-  font-size: var(--f-s-h);
+  font-size: var(--h3-size);
   text-align: center;
   margin: 10px 0;
 }
@@ -5243,7 +5243,7 @@ body .fantasy-calendar-create-calendar details[open] {
   box-shadow: 0 0 10px var(--outline);
 }
 
-.fantasy-calendar.full-view .fantasy-day.day:nth-child(even) {
+.fantasy-calendar.full-view .fantasy-day.day:nth-child(even):not(.viewing, .active) {
   background-color: var(--td);
 }
 

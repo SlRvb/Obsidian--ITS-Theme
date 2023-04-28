@@ -3697,6 +3697,7 @@ a[href^=https],
   --bullet: "";
   --bullet-font: var(--its);
   --list-indent: 25px;
+  --list-spacing: 1px;
   --list-marker-color: var(--accent);
   --list-marker-color-other: var(--accent2);
   --list-marker-color-collapsed: var(--inactive);
@@ -3773,16 +3774,6 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox {
   margin-inline-start: calc(var(--checkbox-size) * -1.4);
 }
 
-.markdown-rendered.markdown-rendered ul > li:not(.task-list-item)::before, .markdown-rendered.markdown-rendered ul > li .task-list-item-checkbox {
-  margin-left: 0;
-}
-.markdown-rendered.markdown-rendered ul > li ul::before {
-  left: 0.4em;
-}
-.markdown-rendered.markdown-rendered div div > ul {
-  padding-inline-start: 0;
-}
-
 ol > li::marker,
 .cm-line .cm-formatting-list-ol {
   color: var(--list-numbered-color);
@@ -3825,11 +3816,6 @@ ol > li::marker,
 
 .markdown-rendered ul.has-list-bullet li p:first-of-type {
   margin-block-start: 1em;
-}
-
-:is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li {
-  padding-top: unset;
-  padding-bottom: 0;
 }
 
 li.is-collapsed .list-bullet:after,
@@ -4757,6 +4743,16 @@ body {
 }
 .dataview.dataview.inline-field-value a.tag:first-child {
   display: none;
+}
+
+.dataview.dataview ul > li:not(.task-list-item)::before, .dataview.dataview ul > li .task-list-item-checkbox {
+  margin-left: 0;
+}
+.dataview.dataview ul > li ul::before {
+  left: 0.4em;
+}
+.dataview.dataview div div > ul {
+  padding-inline-start: 0;
 }
 
 /* Hover Editor */
@@ -6556,7 +6552,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=s],
 [data-task=H]) input:is([type=checkbox], [type=checkbox i]):checked::after {
   top: -5px;
-  left: 1px;
+  left: 0px;
   -webkit-mask-image: unset;
 }
 

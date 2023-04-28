@@ -97,3 +97,17 @@ body {
     &.inline-field-value { background-color: var(--td); }
     &.inline-field-value a.tag:first-child { display: none; }
 } 
+
+
+
+
+//Fix Embed Task & List Alignment
+.dataview.dataview {
+    & ul > li {
+        &:not(.task-list-item)::before,
+        & .task-list-item-checkbox { margin-left: 0; }
+        
+        & ul::before { left: .4em; } //List Line
+    }
+    & div div > ul { padding-inline-start: 0; }
+}

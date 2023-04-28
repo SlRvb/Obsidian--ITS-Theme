@@ -17,7 +17,7 @@
     --bullet-font: var(--its);
     
     --list-indent: 25px;
-    // --list-spacing: 3px;
+    --list-spacing: 1px; //keep at 1 or popover bullet alignment breaks(??)
     
     --list-marker-color: var(--accent);
     --list-marker-color-other: var(--accent2);
@@ -98,16 +98,6 @@ ul > li:not(.task-list-item)::before {
 ul > li.task-list-item.task-list-item .task-list-item-checkbox 
 { margin-inline-start: calc(var(--checkbox-size) * -1.4); }
 
-//Fix Embed Task & List Alignment
-.markdown-rendered.markdown-rendered {
-    & ul > li {
-        &:not(.task-list-item)::before,
-        & .task-list-item-checkbox { margin-left: 0; }
-        
-        & ul::before { left: .4em; } //List Line
-    }
-    & div div > ul { padding-inline-start: 0; }
-}
 
 
 //Numbered List
@@ -137,8 +127,8 @@ ol > li::marker,
 :is(ul, ol) li > p { margin-block-end: unset; }
 .markdown-rendered ul.has-list-bullet li p:first-of-type { margin-block-start: 1em; }
 
-:is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li 
-{ padding-top: unset; padding-bottom: 0; }
+// :is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li 
+// { padding-top: unset; padding-bottom: 0.1em; }
 
 
 

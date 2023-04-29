@@ -3818,6 +3818,11 @@ ol > li::marker,
   margin-block-start: 1em;
 }
 
+:is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li {
+  padding-top: unset;
+  padding-bottom: 0.1em;
+}
+
 li.is-collapsed .list-bullet:after,
 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
   box-shadow: 0 0 0 4px var(--list-bullet-box-shadow-color);

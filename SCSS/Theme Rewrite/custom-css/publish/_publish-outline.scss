@@ -1,24 +1,24 @@
 .site-body .outline-view {
     //Lines
     & .tree-item-children {
-        margin-left: -10px;
-        padding-left: 25px;
+        margin-left: 3px;
+        // padding-left: 25px;
         border-left: 2px solid var(--lines);
     }
     //Root Header
     & .tree-item-self .tree-item-inner:before {
         content: "H";
         padding-right: 5px;
-        margin-left: -13px;
+        // margin-left: -13px;
         font-weight: 900;
-        font-family: 'Fira Code';
+        font-family: var(--font-monospace);
         color: var(--lite-accent);
     }
     & .tree-item-children .tree-item-self .tree-item-inner:before {
         content: '\E802';
         font-family: var(--its);
         padding-right: 5px;
-        margin-left: -16px;
+        margin-left: -3px;
         color: var(--accent2);
     }
 } 

@@ -1,5 +1,8 @@
 .nav-view-outer {
     --nav-parent-item-color: var(--nav-item-color);
+    --nav-item-border: 2px solid var(--lines);
+    --nav-item-border-width: 2px;
+    --nav-item-border-color: var(--lines);
     
     //Unset Hover Opacity
     .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self:hover {
@@ -19,6 +22,7 @@
             & .tree-item-children {
                 padding-left: 21px;
                 margin-left: 0;
+                border-left: var(--nav-item-border-width) solid var(--nav-item-border-color);
             }
         }
     }
@@ -29,13 +33,13 @@
     }
     & .tree-item-self {
         padding-left: 12px;
+        border-left: var(--nav-item-border-width) solid var(--nav-item-border-color);
         
         &:not(.mod-collapsible) { margin-left: 0; }
         &.mod-collapsible.mod-collapsible { 
             margin-bottom: 0; 
             margin-left: 0;  
             border-color: var(--lines);
-            
         }
         &.is-clickable.is-clickable.is-clickable:hover {
             color: var(--nav-item-color-hover);
@@ -43,6 +47,22 @@
             background: var(--nav-item-background-hover);
         }
         & .tree-item-icon { padding-inline-end: 0; }
+        
+        //File
+        &.mod-active,
+        &:not(.mod-collapsible, .mod-active),
+        &:hover:not(.mod-collapsible):not(.mod-active) { 
+            border-left: var(--nav-item-border-width) solid var(--nav-item-border-color);
+        }
+        //Fix File Active Border Color
+        &.mod-active { 
+            --nav-item-border-color: var(--nav-item-border-color-active);
+
+            //Active Icon Color
+            & .tree-item-inner.tree-item-inner::before {
+                --file-icon-color: var(--nav-item-color-active);
+            }
+        }
     }
 
 

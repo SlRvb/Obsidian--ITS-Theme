@@ -737,6 +737,8 @@ body {
 
 body {
   --file-header-font-size: var(--font-ui-medium);
+  --file-header-font-weight: 600;
+  --file-header-parent-font-weight: 600;
   --file-header-breadcrumb-font-size: var(--font-ui-smaller);
   --file-header-breadcrumb-color: var(--inactive);
   --file-header-color: var(--inactive);
@@ -752,6 +754,10 @@ body {
   margin: 0;
   padding: 0 var(--size-4-3);
   background: var(--file-header-background);
+}
+
+.view-header-title-parent {
+  font-weight: var(--file-header-parent-font-weight);
 }
 
 .view-header-title {
@@ -1342,6 +1348,7 @@ a[href^=https],
   --bullet: "";
   --bullet-font: var(--its);
   --list-indent: 25px;
+  --list-spacing: 1px;
   --list-marker-color: var(--accent);
   --list-marker-color-other: var(--accent2);
   --list-marker-color-collapsed: var(--inactive);
@@ -1418,16 +1425,6 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox {
   margin-inline-start: calc(var(--checkbox-size) * -1.4);
 }
 
-.markdown-rendered.markdown-rendered ul > li:not(.task-list-item)::before, .markdown-rendered.markdown-rendered ul > li .task-list-item-checkbox {
-  margin-left: 0;
-}
-.markdown-rendered.markdown-rendered ul > li ul::before {
-  left: 0.4em;
-}
-.markdown-rendered.markdown-rendered div div > ul {
-  padding-inline-start: 0;
-}
-
 ol > li::marker,
 .cm-line .cm-formatting-list-ol {
   color: var(--list-numbered-color);
@@ -1474,7 +1471,7 @@ ol > li::marker,
 
 :is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li {
   padding-top: unset;
-  padding-bottom: 0;
+  padding-bottom: 0.1em;
 }
 
 li.is-collapsed .list-bullet:after,
@@ -1938,6 +1935,9 @@ body.theme-dark {
 
 .nav-view-outer {
   --nav-parent-item-color: var(--nav-item-color);
+  --nav-item-border: 2px solid var(--lines);
+  --nav-item-border-width: 2px;
+  --nav-item-border-color: var(--lines);
 }
 .nav-view-outer .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self:hover {
   opacity: 1;
@@ -1954,12 +1954,14 @@ body.theme-dark {
 .nav-view-outer .tree-item-children .tree-item-children .tree-item-children {
   padding-left: 21px;
   margin-left: 0;
+  border-left: var(--nav-item-border-width) solid var(--nav-item-border-color);
 }
 .nav-view-outer .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self {
   padding-left: 0;
 }
 .nav-view-outer .tree-item-self {
   padding-left: 12px;
+  border-left: var(--nav-item-border-width) solid var(--nav-item-border-color);
 }
 .nav-view-outer .tree-item-self:not(.mod-collapsible) {
   margin-left: 0;
@@ -1976,6 +1978,15 @@ body.theme-dark {
 }
 .nav-view-outer .tree-item-self .tree-item-icon {
   padding-inline-end: 0;
+}
+.nav-view-outer .tree-item-self.mod-active, .nav-view-outer .tree-item-self:not(.mod-collapsible, .mod-active), .nav-view-outer .tree-item-self:hover:not(.mod-collapsible):not(.mod-active) {
+  border-left: var(--nav-item-border-width) solid var(--nav-item-border-color);
+}
+.nav-view-outer .tree-item-self.mod-active {
+  --nav-item-border-color: var(--nav-item-border-color-active);
+}
+.nav-view-outer .tree-item-self.mod-active .tree-item-inner.tree-item-inner::before {
+  --file-icon-color: var(--nav-item-color-active);
 }
 .nav-view-outer .tree-item-icon.collapse-icon {
   visibility: hidden;
@@ -2008,23 +2019,21 @@ body.theme-dark {
   }
 }
 .site-body .outline-view .tree-item-children {
-  margin-left: -10px;
-  padding-left: 25px;
+  margin-left: 3px;
   border-left: 2px solid var(--lines);
 }
 .site-body .outline-view .tree-item-self .tree-item-inner:before {
   content: "H";
   padding-right: 5px;
-  margin-left: -13px;
   font-weight: 900;
-  font-family: "Fira Code";
+  font-family: var(--font-monospace);
   color: var(--lite-accent);
 }
 .site-body .outline-view .tree-item-children .tree-item-self .tree-item-inner:before {
   content: "\e802";
   font-family: var(--its);
   padding-right: 5px;
-  margin-left: -16px;
+  margin-left: -3px;
   color: var(--accent2);
 }
 
@@ -2352,7 +2361,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=s],
 [data-task=H]) input:is([type=checkbox], [type=checkbox i]):checked::after {
   top: -5px;
-  left: 1px;
+  left: 0px;
   -webkit-mask-image: unset;
 }
 

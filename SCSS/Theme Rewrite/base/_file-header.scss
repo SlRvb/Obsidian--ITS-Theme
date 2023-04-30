@@ -1,11 +1,12 @@
 body {
     --file-header-font-size: var(--font-ui-medium);   
+    --file-header-font-weight: 600;
+    --file-header-parent-font-weight: 600;
     
     --file-header-breadcrumb-font-size: var(--font-ui-smaller);
     --file-header-breadcrumb-color: var(--inactive);
     --file-header-color: var(--inactive);
     --file-header-color-active: var(--text);
-
     
     --file-header-background: var(--note);
     --file-header-left-color: var(--dark-accent);
@@ -20,6 +21,12 @@ body {
     padding: 0 var(--size-4-3);
     background: var(--file-header-background);
 }
+
+//Fix Parent Breadcrumb
+.view-header-title-parent {
+    font-weight: var(--file-header-parent-font-weight);
+}
+
 
 //Inactive header text color
 .view-header-title { color: var(--file-header-color); }

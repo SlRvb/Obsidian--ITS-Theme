@@ -3092,6 +3092,8 @@ body {
 
 body {
   --file-header-font-size: var(--font-ui-medium);
+  --file-header-font-weight: 600;
+  --file-header-parent-font-weight: 600;
   --file-header-breadcrumb-font-size: var(--font-ui-smaller);
   --file-header-breadcrumb-color: var(--inactive);
   --file-header-color: var(--inactive);
@@ -3107,6 +3109,10 @@ body {
   margin: 0;
   padding: 0 var(--size-4-3);
   background: var(--file-header-background);
+}
+
+.view-header-title-parent {
+  font-weight: var(--file-header-parent-font-weight);
 }
 
 .view-header-title {
@@ -4435,7 +4441,7 @@ body {
   --list-marker-color: transparent;
 }
 
-.bookmarks-container .tree-item-children {
+.bookmark + .tree-item-children {
   --nav-item-children-margin-left: 12px;
 }
 

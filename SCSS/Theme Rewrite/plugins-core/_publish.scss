@@ -7,12 +7,18 @@
     color: var(--text);
 }
 
+.publish-upload-item-title {
+    color: var(--text);
+    font-weight: 600;
+}
 
 
 .publish-change-list {
-    & .file-tree-item-checkbox {
-        --checkbox-border-color-hover: var(--text);
-    }
+    & .tree-item-children { --nav-item-children-margin-left: 12px; }
+
+    & .file-tree-item-checkbox { --checkbox-border-color-hover: var(--text); }
+
+    & .tree-item-self.mod-file { margin-left: 16px; }
 }
 
 

@@ -2103,6 +2103,108 @@ settings:
 		default-dark: '#cfd7dd'
 		default-light: '#912e2e'
     -
+		title: Rainbows
+		id: ITS-Rainbows
+		type: heading
+		level: 2
+		collapsed: true
+    -
+		title: Theme Rainbows
+        description: Illusion Header BG, Style Settings Colors, List Lines
+		id: ITS-Rainbows-Theme
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		title: Theme Rainbow 1
+		id: theme-rainbow-1
+		type: variable-themed-color
+		format: hex
+		default-dark: '#7c2929'
+		default-light: '#bb5555'
+	-
+		title: Theme Rainbow 2
+		id: theme-rainbow-2
+		type: variable-themed-color
+		format: hex
+		default-dark: '#652121'
+		default-light: '#a53f3f'
+	-
+		title: Theme Rainbow 3
+		id: theme-rainbow-3
+		type: variable-themed-color
+		format: hex
+		default-dark: '#471d1d'
+		default-light: '#862c2c'
+	-
+		title: Theme Rainbow 4
+		id: theme-rainbow-4
+		type: variable-themed-color
+		format: hex
+		default-dark: '#381919'
+		default-light: '#662828'
+	-
+		title: Theme Rainbow 5
+		id: theme-rainbow-5
+		type: variable-themed-color
+		format: hex
+		default-dark: '#424c61'
+		default-light: '#697795'
+	-
+		title: Theme Rainbow 6
+		id: theme-rainbow-6
+		type: variable-themed-color
+		format: hex
+		default-dark: '#2e333d'
+		default-light: '#a4aec2'
+    -
+		title: Rainbow
+		id: ITS-Rainbows-Rainbow
+		type: heading
+		level: 3
+	-
+		title: Rainbow 1
+		id: theme-rainbow-1
+		type: variable-themed-color
+		format: hex
+		default-dark: '#b03a3a'
+		default-light: '#dd3c3c'
+	-
+		title: Rainbow 2
+		id: theme-rainbow-2
+		type: variable-themed-color
+		format: hex
+		default-dark: '#d59929'
+		default-light: '#f1ab27'
+	-
+		title: Rainbow 3
+		id: theme-rainbow-3
+		type: variable-themed-color
+		format: hex
+		default-dark: '#207a20'
+		default-light: '#118811'
+	-
+		title: Rainbow 4
+		id: theme-rainbow-4
+		type: variable-themed-color
+		format: hex
+		default-dark: '#3232c5'
+		default-light: '#3333cc'
+	-
+		title: Rainbow 5
+		id: theme-rainbow-5
+		type: variable-themed-color
+		format: hex
+		default-dark: '#7f307f'
+		default-light: '#a824a8'
+	-
+		title: Rainbow 6
+		id: theme-rainbow-6
+		type: variable-themed-color
+		format: hex
+		default-dark: '#dd4794'
+		default-light: '#e83b94'
+    -
         title: Highlights
         id: RGBA
         type: heading

@@ -25,7 +25,7 @@
         --h6-color: var(--headers);
         --heading-formatting: var(--headers);
 
-        --header-padding: 5px 20px;
+        --header-padding: 5px 25px;
         --h1-padding: var(--header-padding);
         --h2-padding: var(--header-padding);
         --h3-padding: var(--header-padding);
@@ -38,6 +38,14 @@
             --collapse-icon-color-collapsed: var(--accent-text);
             box-shadow: var(--shadow-l);
 
+            & .collapse-indicator {
+                width: 18px;
+        
+                & svg { 
+                    width: 12px;
+                    height: 12px;
+                }
+            }
         }
     }
 }

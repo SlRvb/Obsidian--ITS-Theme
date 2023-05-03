@@ -8836,17 +8836,17 @@ iframe {
   width: 100%;
 }
 
-.tables-no-alt-background,
+.tables-no-alt-background.tables-no-alt-background,
 .table-nalt.table-nalt {
   --table-column-alt-background: transparent;
   --table-row-alt-background: transparent;
 }
 
-.tables-no-alt-column-background {
+.tables-no-alt-column-background.tables-no-alt-column-background {
   --table-column-alt-background: transparent;
 }
 
-.tables-no-alt-row-background {
+.tables-no-alt-row-background.tables-no-alt-row-background {
   --table-row-alt-background: transparent;
 }
 
@@ -9657,7 +9657,7 @@ h6):after {
   --h5-color: var(--headers);
   --h6-color: var(--headers);
   --heading-formatting: var(--headers);
-  --header-padding: 5px 20px;
+  --header-padding: 5px 25px;
   --h1-padding: var(--header-padding);
   --h2-padding: var(--header-padding);
   --h3-padding: var(--header-padding);
@@ -9669,6 +9669,13 @@ h6):after {
   --collapse-icon-color: var(--headers);
   --collapse-icon-color-collapsed: var(--accent-text);
   box-shadow: var(--shadow-l);
+}
+.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) .collapse-indicator, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) .collapse-indicator {
+  width: 18px;
+}
+.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) .collapse-indicator svg, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) .collapse-indicator svg {
+  width: 12px;
+  height: 12px;
 }
 
 .heading-indicator .is-live-preview .HyperMD-header.HyperMD-header.HyperMD-header:hover .cm-header.cm-header:not(.cm-header-6)::before {

@@ -64,5 +64,14 @@ body {
     & .setting-item:not(.setting-item-heading) {
         padding: .5em .8em;
     }
+
+    & .graph-color-groups-container
+    { padding: 8px 12px; }
+    & .graph-color-button-container { 
+        padding: 0 12px; 
+
+        & button { margin-top: 0; }
+    }
+
 }
 

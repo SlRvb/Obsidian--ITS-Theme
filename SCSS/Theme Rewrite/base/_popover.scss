@@ -1,4 +1,6 @@
 
 .popover.hover-popover {
     min-height: auto; //Fix for mod-empty
+
+    & > .markdown-embed > .markdown-embed-content { padding: 0; }
 }

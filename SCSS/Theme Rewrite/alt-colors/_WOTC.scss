@@ -147,9 +147,13 @@ body:not(.wotc-beyond) .wotc-beyond:is(
 .pathfinder
 {
     // & hr,
-    & .markdown-rendered hr,
-    & .cm-line:not(.cm-active) hr 
+    & .markdown-rendered hr::after,
+    & .cm-line:not(.cm-active) hr
     {
+        content: "";
+        display: block;
+        position: relative;
+        margin-top: -25px;
         background: var(--hr-image);
         background-size: var(--hr-image-width);
         height: var(--hr-image-height);

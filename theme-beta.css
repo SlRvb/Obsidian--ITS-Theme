@@ -7138,7 +7138,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 }
 
 /*----Checked Text----*/
-body:not(.check-color) ul > li.task-list-item[data-task][data-task=x] > span > *, body:not(.check-color) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=x] span:not([class^=cm-list]) {
+body ul > li.task-list-item[data-task][data-task=x] > span > *, body .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=x] span:not([class^=cm-list]) {
   opacity: 70%;
 }
 

@@ -1,7 +1,7 @@
 @import 'checkbox-sets';
 
 /*----Checked Text----*/
-body:not(.check-color) {
+body {
     & ul > li.task-list-item[data-task][data-task="x"] > span > *,
     & .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="x"] span:not([class^="cm-list"]) 
     { opacity: 70%; }

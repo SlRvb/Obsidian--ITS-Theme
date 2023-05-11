@@ -20,9 +20,24 @@ body:is(.theme-dark, .theme-light),
 
 
 .site-body {
-    & .site-footer { background-color: var(--note); }
+    & .site-footer { 
+        background-color: var(--note);
+        border-radius: var(--radius-s);
+    }
+    //Vault
     & .site-body-left-column-site-name {
         color: var(--headers);
         text-align: center;
+
+        padding: 4px 20px 10px 20px;
+        font-weight: var(--site-name-weight);
+    }
+
+    & .site-body-left-column {
+        padding: 32px 0px;
+        
+        & .nav-view-outer { padding: 0 8px 0 25px; }
+        & .search-view-outer { padding: 0 20px; }
+        & .site-body-left-column-site-theme-toggle { margin: 0 20px 12px 20px; padding: 0; }
     }
 }

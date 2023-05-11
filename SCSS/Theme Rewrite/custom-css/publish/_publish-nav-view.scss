@@ -3,6 +3,7 @@
     --nav-item-border: 2px solid var(--lines);
     --nav-item-border-width: 2px;
     --nav-item-border-color: var(--lines);
+    --nav-item-color-hover: var(--text-dl);
     
     //Unset Hover Opacity
     .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self:hover {
@@ -29,7 +30,8 @@
 
     //Root Folder 
     & .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self {
-        padding-left: 0;
+        padding-left: 5px;
+        margin-left: -5px;
     }
     & .tree-item-self {
         padding-left: 12px;
@@ -43,7 +45,7 @@
         }
         &.is-clickable.is-clickable.is-clickable:hover {
             color: var(--nav-item-color-hover);
-            border-color: var(--nav-item-color-hover);
+            border-color: var(--text-normal);
             background: var(--nav-item-background-hover);
         }
         & .tree-item-icon { padding-inline-end: 0; }

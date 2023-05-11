@@ -1900,10 +1900,26 @@ body:is(.theme-dark, .theme-light),
 
 .site-body .site-footer {
   background-color: var(--note);
+  border-radius: var(--radius-s);
 }
 .site-body .site-body-left-column-site-name {
   color: var(--headers);
   text-align: center;
+  padding: 4px 20px 10px 20px;
+  font-weight: var(--site-name-weight);
+}
+.site-body .site-body-left-column {
+  padding: 32px 0px;
+}
+.site-body .site-body-left-column .nav-view-outer {
+  padding: 0 8px 0 25px;
+}
+.site-body .site-body-left-column .search-view-outer {
+  padding: 0 20px;
+}
+.site-body .site-body-left-column .site-body-left-column-site-theme-toggle {
+  margin: 0 20px 12px 20px;
+  padding: 0;
 }
 
 body.theme-dark {
@@ -1917,10 +1933,6 @@ body.theme-dark {
 }
 .published-container .publish-article-heading:hover .clickable-icon:hover {
   background: unset;
-}
-.published-container .site-body-left-column-site-name {
-  padding: 4px 20px 10px 0;
-  font-weight: var(--site-name-weight);
 }
 .published-container .site-body-left-column-site-logo {
   margin: 0 auto;
@@ -1960,6 +1972,7 @@ body.theme-dark {
   --nav-item-border: 2px solid var(--lines);
   --nav-item-border-width: 2px;
   --nav-item-border-color: var(--lines);
+  --nav-item-color-hover: var(--text-dl);
 }
 .nav-view-outer .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self:hover {
   opacity: 1;
@@ -1979,7 +1992,8 @@ body.theme-dark {
   border-left: var(--nav-item-border-width) solid var(--nav-item-border-color);
 }
 .nav-view-outer .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self {
-  padding-left: 0;
+  padding-left: 5px;
+  margin-left: -5px;
 }
 .nav-view-outer .tree-item-self {
   padding-left: 12px;
@@ -1995,7 +2009,7 @@ body.theme-dark {
 }
 .nav-view-outer .tree-item-self.is-clickable.is-clickable.is-clickable:hover {
   color: var(--nav-item-color-hover);
-  border-color: var(--nav-item-color-hover);
+  border-color: var(--text-normal);
   background: var(--nav-item-background-hover);
 }
 .nav-view-outer .tree-item-self .tree-item-icon {

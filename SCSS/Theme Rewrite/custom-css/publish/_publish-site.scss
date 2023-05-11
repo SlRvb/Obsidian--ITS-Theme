@@ -5,6 +5,7 @@ body:is(.theme-dark, .theme-light),
 {
     --font-text-size: 16px;
     --page-width: 100%;
+    --page-margins: auto;
 
     --font-text: var(--font-default);
     --font-interface: var(--font-default);

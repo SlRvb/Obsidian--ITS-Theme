@@ -19,7 +19,7 @@ body.theme-dark {
         font-weight: var(--site-name-weight);
     }
     //Center Image
-    .site-body-left-column-site-logo {
+    & .site-body-left-column-site-logo {
         margin: 0 auto;
         display: block;
     }
@@ -42,7 +42,7 @@ body.theme-dark {
     & .publish-renderer > .markdown-preview-view > .markdown-preview-sizer {
         max-width: var(--page-width);
         // padding: 0;
-        margin: auto;
+        margin: var(--page-margins);
     }
 
     //Lists Re-add 
@@ -50,5 +50,20 @@ body.theme-dark {
         border-left: 2px solid var(--indentation-guide-color);
         padding-left: 35px;
         margin-left: -15px;
+    }
+    
+    
+    // readable line length fixed
+    &.is-readable-line-width {
+        --page-width: 700px;
+        --page-margins: none;
+        
+        & .markdown-preview-view,
+        & .publish-renderer > .markdown-preview-view > .markdown-preview-sizer
+        {
+            --sidebar-right-width: 0;
+            width: var(--page-width);
+            margin: var(--page-margins);
+        }
     }
 } 

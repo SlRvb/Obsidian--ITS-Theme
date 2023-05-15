@@ -215,3 +215,12 @@
 }
 
 
+//Hr Line Fixes
+.pathfinder {
+    &.markdown-rendered hr,
+    & .markdown-rendered hr {
+        overflow: visible;
+        display: flow-root;
+    }
+    & .cm-line:not(.cm-active) hr { margin-top: -25px; }
+}

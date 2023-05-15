@@ -2981,6 +2981,11 @@ button.mod-cta:hover {
   color: var(--sidebar-icon-color);
 }
 
+.tree-item-self .tree-item-icon {
+  position: relative;
+  margin-left: -3px;
+}
+
 body {
   --search-border: var(--box-border);
   --search-box-shadow: var(--shadow-s);
@@ -4281,6 +4286,9 @@ body {
 
 body .outline {
   --nav-item-children-margin-left: 12px;
+}
+body .outline .tree-item-self {
+  align-items: flex-start;
 }
 body .outline .tree-item-children {
   transition: all 0.3s ease-in-out;
@@ -10309,18 +10317,29 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   box-shadow: var(--paper-edges);
 }
 
+.wotc-beyond .cm-line.hr,
+.pathfinder .cm-line.hr {
+  bottom: -10px;
+}
 .wotc-beyond .markdown-rendered hr::after, .wotc-beyond .cm-line:not(.cm-active) hr,
 .pathfinder .markdown-rendered hr::after,
 .pathfinder .cm-line:not(.cm-active) hr {
   content: "";
   display: block;
   position: relative;
-  margin-top: -25px;
   background: var(--hr-image);
   background-size: var(--hr-image-width);
   height: var(--hr-image-height);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.pathfinder .markdown-rendered hr {
+  overflow: visible;
+  display: flow-root;
+}
+.pathfinder .cm-line:not(.cm-active) hr {
+  margin-top: -25px;
 }
 
 .dnd.dnd {
@@ -10438,6 +10457,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --h3-font: "Norwester";
   --h4-font: var(--h3-font);
   --h5-font: var(--h3-font);
+  --h6-font: var(--h3-font);
   --h1-border-line-height: 1.5px;
   --h2-border-line-height: 1.5px;
   --h3-border-line-height: 2px;
@@ -10467,6 +10487,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --dataview-th-alt-color: var(--hvr);
   --dataview-th-color: var(--text-dl);
   --dataview-th-border-bottom: var(--th);
+  --hr-image: url("data:image/svg+xml,%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1000 204' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Cg transform='matrix(1,0,0,1,1.7053e-13,-398.169)'%3E%3Crect id='Artboard1' x='-0' y='398.169' width='1000' height='203.661' style='fill:none;'/%3E%3CclipPath id='_clip1'%3E%3Crect id='Artboard11' serif:id='Artboard1' x='-0' y='398.169' width='1000' height='203.661'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23_clip1)'%3E%3Cg transform='matrix(4.31034,0,0,4.31034,-267.917,-1094.41)'%3E%3Cpath d='M178.389,380.983C175.751,387.924 169.433,393.494 159,393.565C127.289,393.78 136.335,361.89 118,362C108.448,361.996 110.806,374.866 115,377C114.833,377.167 100.762,372.819 105,357C76.617,370.354 62.389,358 62.389,358C62.389,358 80.399,363.885 90.791,357.333C109.271,345.683 133.119,337.401 142,364C147.001,347.144 172.305,357.468 163,370.565C163.721,364.587 151.808,358.708 151,370.565C150.447,378.68 162.397,385.825 170.144,377.076C176.411,369.999 170.344,356.114 162,354C170.327,353.643 175.921,358.556 178.389,365.031C180.857,358.556 186.45,353.643 194.777,354C186.434,356.114 180.367,369.999 186.634,377.076C194.38,385.825 206.33,378.68 205.777,370.565C204.97,358.708 193.056,364.587 193.777,370.565C184.472,357.468 209.776,347.144 214.777,364C223.658,337.401 247.507,345.683 265.986,357.333C276.379,363.885 294.389,358 294.389,358C294.389,358 280.16,370.354 251.777,357C256.015,372.819 241.944,377.167 241.777,377C245.971,374.866 248.329,361.996 238.777,362C220.443,361.89 229.488,393.78 197.777,393.565C187.344,393.494 181.027,387.924 178.389,380.983Z' style='fill:rgb(139,38,45);'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
   --hr-image-height: 16px;
   --hr-thickness: 2px;
   --hr-icon-symbol: ;
@@ -10492,8 +10513,6 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --folder-open: #e58000;
   --hr: #8b262d;
   --header-border-line-color: var(--dark-accent);
-  --hr-image: url("https://content.demiplane.com/elements/pathfinder-2e/archetypes/PFN-Center-Flourish.png");
-  --hr-image-width: contain;
   --theme-rainbow-1: var(--h1-color);
   --theme-rainbow-2: var(--h2-color);
   --theme-rainbow-3: var(--h3-color);
@@ -10542,7 +10561,6 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --hr: #5c1c16;
   --lines: #b6a697;
   --outline: rgba(0, 0, 0, 0.4);
-  --hr-image: url("https://content.demiplane.com/elements/pathfinder-2e/archetypes/PFN-Center-Flourish.png");
   --hr-image-width: contain;
   --theme-rainbow-1: #ca9759;
   --theme-rainbow-2: #3276b5;
@@ -11611,6 +11629,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --h5-border-right-color: var(--h5-border-line-color);
   --h6-border-right-color: var(--h6-border-line-color);
   --inline-title-color: var(--headers);
+  --inline-title-font: var(--h1-font);
   --link-color: var(--accent2-lite);
   --link-color-hover: var(--lite-accent);
   --link-external-color: var(--text-accent);

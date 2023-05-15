@@ -134,4 +134,13 @@
     color: var(--sidebar-icon-color);
 }
 
+//Fix Arrow Alignment
+.tree-item-self .tree-item-icon { 
+    position: relative;
+    margin-left: -3px;
+}
 
+// .tree-item-self.is-clickable {
+//     margin-left: 0 !important;
+//     padding-left: 0 !important;
+// }

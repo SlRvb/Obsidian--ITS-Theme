@@ -146,22 +146,24 @@ body:not(.wotc-beyond) .wotc-beyond:is(
 .wotc-beyond,
 .pathfinder
 {
-    // & hr,
+    & .cm-line.hr { bottom: -10px; }
     & .markdown-rendered hr::after,
     & .cm-line:not(.cm-active) hr
     {
         content: "";
         display: block;
         position: relative;
-        margin-top: -25px;
         background: var(--hr-image);
         background-size: var(--hr-image-width);
         height: var(--hr-image-height);
         background-repeat: no-repeat;
         background-position: center;
-        // background-size: contain;
-        //border: none;
-    
-        // &::after  { content: ''; }
     }
+}
+.pathfinder {
+    & .markdown-rendered hr {
+        overflow: visible;
+        display: flow-root;
+    }
+    & .cm-line:not(.cm-active) hr { margin-top: -25px; }
 }

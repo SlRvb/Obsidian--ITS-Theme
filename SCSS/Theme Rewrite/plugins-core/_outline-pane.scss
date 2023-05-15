@@ -9,7 +9,7 @@ body {
 
 //Outline Icon
 body .outline {
-    // & .tree-item-self { padding-left: 20px; }
+    & .tree-item-self { align-items: flex-start; }
     & .tree-item-children { transition: all 0.3s ease-in-out; }
     --nav-item-children-margin-left: 12px;
 

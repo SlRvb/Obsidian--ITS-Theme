@@ -1,8 +1,14 @@
 @charset "UTF-8";
 /* @settings
-name: In The Shadows Settings
+name: ITS Theme Settings
 id: ITS
 settings:
+    - 
+        id: info-text-SlRvb-ITS-Theme
+        type: info-text
+        title: "ITS Theme by SlRvb"
+        description: "ℹ [Guide / Docs](https://publish.obsidian.md/slrvb-docs/ITS+Theme/ITS+Theme) | ⚙ [Github](https://github.com/SlRvb/Obsidian--ITS-Theme) | ☕ [Support](https://ko-fi.com/slrvb)"
+        markdown: true
     #-
     #    title: Class Test toggle
     #    id: minimalist-workspace
@@ -576,16 +582,59 @@ settings:
     -
         title: Live Preview Image Float
         id: lp-img-float
-        type: class-toggle   
-    -
-        title: Clear Images with Horizontal Lines
-        description: Force images to stay above horizontal lines
-        id: lp-img-float
         type: class-toggle
     -
         title: Center Images
         description: Center ALL images.
         id: img-adj-center
+        type: class-toggle
+    -
+        title: Clear Images
+        description: Push image under/over headings or horizontal lines
+        id: img-adj-clears
+        type: heading
+        level: 3
+        collapsed: false
+    -
+        title: Horizontal Lines
+        description: Push image under/over any horizontal lines
+        id: clear-hr
+        type: class-toggle
+    -
+        title: Headings
+        description: Push image under/over all headings 1-6
+        id: clear-headings
+        type: class-toggle
+    -
+        title: Heading Specific
+        description: Push image under/over some headings and not others
+        id: img-adj-clears-headings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        title: Header 1
+        id: clear-heading-1
+        type: class-toggle
+    -
+        title: Header 2
+        id: clear-heading-2
+        type: class-toggle
+    -
+        title: Header 3
+        id: clear-heading-3
+        type: class-toggle
+    -
+        title: Header 4
+        id: clear-heading-4
+        type: class-toggle
+    -
+        title: Header 5
+        id: clear-heading-5
+        type: class-toggle
+    -
+        title: Header 6
+        id: clear-heading-6
         type: class-toggle
     -
         title: Note Title
@@ -3048,10 +3097,19 @@ body {
   background-color: var(--text-highlight-bg-active);
 }
 
-.search-results-result-count:hover,
 .search-results-info .dropdown:hover {
   color: var(--lite-accent);
   font-weight: 900;
+}
+
+.search-results-result-count:hover {
+  color: var(--text-dl);
+}
+.search-results-result-count:hover .more-options-icon {
+  background-color: var(--text-dl);
+}
+.search-results-result-count:hover .more-options-icon svg {
+  fill: var var(--sidebar-tab-background-color-hover);
 }
 
 body {
@@ -4211,14 +4269,6 @@ body {
   align-self: center;
 }
 
-.markdown-embed .markdown-rendered .callout {
-  --callout-margin: 5px 0;
-}
-.markdown-embed .markdown-rendered .callout p {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
-
 body {
   --strikethrough-color: inherit;
   --strikethrough-line-color: inherit;
@@ -4796,6 +4846,18 @@ body {
 
 .style-settings-heading[data-id=ITS-Alt-Color-Scheme] .style-settings-collapse-indicator::after {
   content: "\ec24";
+}
+
+.style-settings-info-text[data-id^=info-text-SlRvb] {
+  text-align: center;
+  justify-content: center;
+}
+.style-settings-info-text[data-id^=info-text-SlRvb] .setting-item-control {
+  display: none;
+}
+.style-settings-info-text[data-id^=info-text-SlRvb] .link-favicon {
+  display: none !important;
+  vertical-align: unset;
 }
 
 body {
@@ -5839,6 +5901,21 @@ body {
   --tall: 500px;
 }
 
+/*----Mobile----*/
+@media (max-width: 500px) {
+  .theme-dark, .theme-light {
+    /*Mobile Sizes*/
+    --radius: 0px;
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 150px;
+    --small-med: 200px;
+    --med-small: 250px;
+    --medium: 300px;
+    --med-tall: 450px;
+    --tall: 500px;
+  }
+}
 /*-Image Sizing-*/
 /*Fit image within bounds WITHOUT stretching*/
 img:is([alt*=cover], [alt*=cvr]),
@@ -6100,26 +6177,12 @@ img:is([alt~=lp], [alt~=live-preview]):is([alt*=left], [alt*=locl]),
   --hr-width: 100%;
 }
 
-.clear-heading-1 h1 {
-  clear: both;
-}
-
-.clear-heading-2 h2 {
-  clear: both;
-}
-
-.clear-heading-3 h3 {
-  clear: both;
-}
-
-.clear-heading-4 h4 {
-  clear: both;
-}
-
-.clear-heading-5 h5 {
-  clear: both;
-}
-
+.clear-headings :is(h1, h2, h3, h4, h5, h6),
+.clear-heading-1 h1,
+.clear-heading-2 h2,
+.clear-heading-3 h3,
+.clear-heading-4 h4,
+.clear-heading-5 h5,
 .clear-heading-6 h6 {
   clear: both;
 }
@@ -7402,7 +7465,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   display: flex;
 }
 .callout.callout.callout.callout:is([data-callout-metadata~=s-t],
-[data-callout-metadata~=show-title]) p {
+[data-callout-metadata~=show-title]) > .callout-content > p {
   margin-top: 0;
 }
 
@@ -7440,10 +7503,12 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   display: none;
 }
 
-.callout:is([data-callout-metadata~=t-w], [data-callout-metadata~=table-wide]) table {
+.callout:is([data-callout-metadata~=t-w],
+[data-callout-metadata~=table-wide]) table {
   width: 100%;
 }
-.callout:is([data-callout-metadata~=t-w], [data-callout-metadata~=table-wide]) table td {
+.callout:is([data-callout-metadata~=t-w],
+[data-callout-metadata~=table-wide]) table td {
   width: calc(var(--tbl-w) / 2);
 }
 
@@ -7451,7 +7516,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   vertical-align: top;
 }
 
-.callout[data-callout-metadata~=embed] .callout-content, .callout[data-callout-metadata~=embed] p {
+.callout[data-callout-metadata~=embed] .callout-content, .callout[data-callout-metadata~=embed] > .callout-content > p {
   margin: 0;
   padding: 0;
 }
@@ -7468,14 +7533,14 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 
 .callout.callout.callout[data-callout-metadata~=clean],
-.callout.callout.callout[data-callout-metadata~=clean] .callout-content {
+.callout.callout.callout[data-callout-metadata~=clean] > .callout-content {
   border: 0;
   box-shadow: none;
   --callout-color: transparent;
   --callout-padding: 0;
 }
 .callout.callout.callout[data-callout-metadata~=clean] .callout-content,
-.callout.callout.callout[data-callout-metadata~=clean] .callout-content .callout-content {
+.callout.callout.callout[data-callout-metadata~=clean] > .callout-content .callout-content {
   padding: 0;
 }
 
@@ -7709,6 +7774,11 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout.callout[data-callout~=infobox] > .callout-title {
   justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.callout.callout[data-callout~=infobox] > .callout-title > .callout-icon {
+  align-self: center;
 }
 .callout.callout[data-callout~=infobox]:not(.is-collapsed) > .callout-title {
   padding: 0;
@@ -7758,7 +7828,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout.callout[data-callout~=infobox] > .callout-content {
   border: 1px solid var(--table, var(--background-modifier-border));
   margin: 0;
-  border-radius: var(--radius, var(--co-radius));
+  border-radius: var(--radius-s);
 }
 .callout.callout[data-callout~=infobox] table {
   width: 100%;
@@ -7791,12 +7861,14 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --callout-margin: 0 5px 0 0;
 }
 .callout.callout[data-callout~=infobox][data-callout-metadata~=wikipedia] table {
-  --table-header-color: var(--text);
+  --table-header-color: var(--text, var(--text-normal));
   --table-header-background: transparent;
-  --table-header-background-hover: var(--td);
-  --table-row-background-hover: var(--td);
+  --table-header-background-hover: var(--td, var(--table-background));
+  --table-row-background-hover: var(--td, var(--table-background));
   --table-row-alt-background: transparent;
   --table-column-alt-background: transparent;
+  --table-border-color: transparent;
+  --table-header-border-color: transparent;
 }
 .callout.callout[data-callout~=infobox][data-callout-metadata~=wikipedia] table tr:last-child {
   margin-bottom: 2px;
@@ -7812,7 +7884,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   }
 }
 .theme-light .callout[data-callout~=infobox][data-callout-metadata~=wikipedia] {
-  --th-text: var(--th) ;
+  --th-text: var(--th);
 }
 
 /*Image Grid*/
@@ -7951,8 +8023,8 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   grid-gap: 10px;
 }
 .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody tr {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  align-content: flex-start;
   margin: 0;
   padding: 10px;
   border: 2px solid var(--outline, var(--background-modifier-box-shadow));
@@ -7967,8 +8039,8 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout[data-callout~=cards][data-callout-metadata~=dvl] .block-language-dataviewjs .dataview-result-list-li, .callout[data-callout~=cards][data-callout-metadata~=dvl] .list-view-ul li {
   padding: 10px;
-  background-color: var(--outer-bar);
-  box-shadow: var(--shadow-s);
+  background-color: var(--outer-bar, var(--background-secondary));
+  box-shadow: var(--shadow-s, var(--input-shadow));
   margin-bottom: 5px;
 }
 .callout[data-callout~=cards][data-callout-metadata~=dvl] .dataview.list-view-ul li::before {
@@ -7989,6 +8061,35 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout[data-callout~=cards][data-callout-metadata~="5"] :is(.dataview.table-view-table tbody, .callout-content) {
   grid-template-columns: repeat(5, 1fr);
+}
+
+.callout[data-callout~=cards][data-callout-metadata~=dataview] img {
+  width: 100%;
+  object-fit: cover;
+}
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=img-micro] img {
+  height: var(--micro);
+}
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=img-tiny] img {
+  height: var(--tiny);
+}
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=img-small] img {
+  height: var(--small);
+}
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=img-small-med] img {
+  height: var(--small-med);
+}
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=img-med-small] img {
+  height: var(--med-small);
+}
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=img-medium] img {
+  height: var(--medium);
+}
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=img-med-tall] img {
+  height: var(--med-tall);
+}
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=img-tall] img {
+  height: var(--tall);
 }
 
 /*Captions*/
@@ -8125,7 +8226,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   margin: 0;
 }
 .callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at] {
-  background: var(--outer-bar);
+  background: var(--outer-bar, var(--background-secondary-alt));
   border: 0;
   text-align: center;
   padding: 0;
@@ -8220,7 +8321,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --callout-color: var(--text-normal);
   --callout-icon: layout-dashboard;
   --callout-padding: 0;
-  --item-outline: 0 0 0 2px var(--outline, var(--background-modifier-border));
+  --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
   --lane-width: 250px;
   background: transparent;
   box-shadow: none;
@@ -8231,7 +8332,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   justify-content: center;
   background: var(--background-primary-alt);
   padding: 5px;
-  border-radius: var(--radius, var(--co-radius));
+  border-radius: var(--radius-s);
 }
 .callout.callout[data-callout~=kanban] .callout-title-inner {
   flex: unset;
@@ -8261,7 +8362,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   margin: 5px 3px;
   padding-top: 4px;
   background: var(--note, var(--background-primary-alt));
-  border-radius: var(--radius, var(--kbn-radius));
+  border-radius: var(--radius-s);
   box-shadow: var(--item-outline), var(--shadow-s);
 }
 .callout.callout[data-callout~=kanban] ul ul {
@@ -8568,6 +8669,29 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   display: none;
 }
 
+.callout-alternate-line .callout,
+.callout.callout[data-callout-metadata~=alt-line] {
+  border: 0;
+  background-color: transparent;
+  --callout-padding: 0;
+  --callout-title-padding: 5px 10px;
+  --callout-content-padding: 0px 10px 10px;
+}
+.callout-alternate-line .callout .callout-title,
+.callout.callout[data-callout-metadata~=alt-line] .callout-title {
+  background: transparent;
+  border-bottom: 2px solid var(--table, var(--background-modifier-border));
+}
+.callout-alternate-line .callout .callout-fold,
+.callout.callout[data-callout-metadata~=alt-line] .callout-fold {
+  color: rgb(var(--callout-color));
+}
+.callout-alternate-line .callout .callout-content.callout-content,
+.callout.callout[data-callout-metadata~=alt-line] .callout-content.callout-content {
+  border: 0;
+  border-bottom: 1px solid rgba(var(--callout-color), 0.5);
+}
+
 @media print {
   .print.print .markdown-preview-view .callout:is([data-callout*=cards],
 [data-callout*=column]) .callout-content {
@@ -8666,6 +8790,11 @@ iframe {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.textLayer ::selection,
+.xfaLayer .highlight {
+  background-color: var(--highlight);
 }
 
 .dataview-table-auto {
@@ -10514,6 +10643,13 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --folder-open: #e58000;
   --hr: #8b262d;
   --header-border-line-color: var(--dark-accent);
+  --graph-bg: var(--embed-bg);
+  --graph-lines: #65212190;
+  --graph-node: var(--theme-rainbow-1);
+  --graph-tag: var(--theme-rainbow-3);
+  --graph-img: var(--theme-rainbow-2);
+  --graph-line-hover: var(--lines);
+  --graph-node-hover-fill: var(--theme-rainbow-4);
   --theme-rainbow-1: var(--h1-color);
   --theme-rainbow-2: var(--h2-color);
   --theme-rainbow-3: var(--h3-color);
@@ -10563,6 +10699,12 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --lines: #b6a697;
   --outline: rgba(0, 0, 0, 0.4);
   --hr-image-width: contain;
+  --graph-lines: var(--embed-bg);
+  --graph-node: var(--theme-rainbow-1);
+  --graph-tag: var(--theme-rainbow-4);
+  --graph-img: var(--theme-rainbow-2);
+  --graph-line-hover: var(--lines);
+  --graph-node-hover-fill: var(--theme-rainbow-4);
   --theme-rainbow-1: #ca9759;
   --theme-rainbow-2: #3276b5;
   --theme-rainbow-3: #002564;

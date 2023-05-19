@@ -120,11 +120,14 @@
     // --hvr: ;
     // --hvr-active: ;
     
-    // --graph-bg: ;
-    // --graph-lines: ;
-    // --graph-node: ;
-    // --graph-fill: ;
-    // --graph-404: ;
+    --graph-bg: var(--embed-bg);
+    --graph-lines: #65212190;
+    --graph-node: var(--theme-rainbow-1);
+    --graph-tag: var(--theme-rainbow-3);
+    --graph-img: var(--theme-rainbow-2);
+    --graph-line-hover: var(--lines);
+    --graph-node-hover-fill: var(--theme-rainbow-4);
+    
 
     --theme-rainbow-1: var(--h1-color);
     --theme-rainbow-2: var(--h2-color);
@@ -199,11 +202,13 @@
     // --hvr: ;
     // --hvr-active: ;
     
-    // --graph-bg: ;
-    // --graph-lines: ;
-    // --graph-node: ;
-    // --graph-fill: ;
-    // --graph-404: ;
+    // --graph-bg: var(--embed-bg);
+    --graph-lines: var(--embed-bg);
+    --graph-node: var(--theme-rainbow-1);
+    --graph-tag: var(--theme-rainbow-4);
+    --graph-img: var(--theme-rainbow-2);
+    --graph-line-hover: var(--lines);
+    --graph-node-hover-fill: var(--theme-rainbow-4);
 
     --theme-rainbow-1: #ca9759;
     --theme-rainbow-2: #3276b5;

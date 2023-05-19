@@ -17,3 +17,10 @@ iframe {
     width: 100%;
     height: 100%;
 }
+
+
+//PDF
+.textLayer ::selection,
+.xfaLayer .highlight {
+    background-color: var(--highlight);
+}

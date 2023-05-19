@@ -55,7 +55,7 @@
 
     // ITS <i> Attribute Styling
     &[data-callout-metadata~="i-at"] {
-        background: var(--outer-bar);
+        background: var(--outer-bar, var(--background-secondary-alt));
         border: 0;
         text-align: center;
         padding: 0;

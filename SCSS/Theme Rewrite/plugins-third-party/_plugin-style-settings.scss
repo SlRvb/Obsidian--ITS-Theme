@@ -174,3 +174,12 @@ body {
 { content: '\EC06'; }
 .style-settings-heading[data-id="ITS-Alt-Color-Scheme"] .style-settings-collapse-indicator::after 
 { content: '\EC24'; }
+
+
+.style-settings-info-text[data-id^="info-text-SlRvb"] {
+    text-align: center;
+    justify-content: center;
+
+    & .setting-item-control { display: none; }
+    & .link-favicon { display: none !important; vertical-align: unset; }
+}

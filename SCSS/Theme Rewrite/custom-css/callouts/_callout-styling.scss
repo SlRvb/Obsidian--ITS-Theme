@@ -56,3 +56,24 @@
     align-items: center;
     & .callout-title-inner { display: none; }
 }
+
+.callout-alternate-line .callout,
+.callout.callout[data-callout-metadata~="alt-line"] {
+    border: 0;
+    background-color: transparent;
+    --callout-padding: 0;
+    --callout-title-padding: 5px 10px;
+    --callout-content-padding: 0px 10px 10px;
+
+    & .callout-title {
+        background: transparent; 
+        border-bottom: 2px solid var(--table, var(--background-modifier-border));
+        // border-bottom: 2px solid rgb(var(--callout-color), 0.5);
+        // padding: 5px 0;
+    }
+    & .callout-fold { color: rgb(var(--callout-color)); }
+    & .callout-content.callout-content {
+        border: 0;
+        border-bottom: 1px solid rgba(var(--callout-color), 0.5);
+    }
+}

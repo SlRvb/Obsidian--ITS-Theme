@@ -1,38 +1,36 @@
 /*@settings
-name: Alternate Callouts
-id: alternate-callouts
+name: Callout Adjustments
+id: callout-adjustments
 settings:
-    -
-        title: Alternate Callout Styling
-        description: Simplistic callout styling applying the callout color as the background color
-        id: alt-co
-        type: class-toggle
     - 
-        title: Center Callout Titles
-        id: co-ttl-ctr
-        type: class-toggle
+        id: info-text-SlRvb-callouts
+        type: info-text
+        title: Callout Adjustments by SlRvb
+        description: "[Callout Snippet How-To Guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Callout+Adjustments)"
+        markdown: true
     -
-        title: Callout Border Radius
-        description: Adjust how round or not round the callout corners are.
-        id: co-radius
-        type: variable-number-slider
-        default: 7
-        format: px
-        min: 0
-        max: 20
-        step: 1
-    -
-        title: Kanban Callout Border Radius
-        description: Adjust how round or not round the Kanban callout's list items corners are.
-        id: kbn-radius
-        type: variable-number-slider
-        default: 3
-        format: px
-        min: 0
-        max: 20
-        step: 1
+        title: Callout Styling
+        id: callout-style
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: Original Callout Styling
+                value: callout-original
+            -
+                label: Callout Block Styling
+                value: callout-block
+            -
+                label: Callout Alternate Line Styling
+                value: callout-alternate-line
+    #- 
+    #    title: Center Callout Titles
+    #    id: co-ttl-ctr
+    #    type: class-toggle
 */
 
 
 
-@use 'Insiders ITS Theme/Custom CSS/CCSS-SlRvb - Callouts' as CO;
+//@use 'Insiders ITS Theme/Custom CSS/CCSS-SlRvb - Callouts' as CO;
+@use 'Theme Rewrite/custom-css/callouts'

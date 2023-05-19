@@ -35,7 +35,13 @@
     // & .image-embed.is-loaded { height: 0; }
 
     //Center collapse Arrow
-    & > .callout-title { justify-content: center; }
+    & > .callout-title { 
+        justify-content: center;
+        align-items: center;
+        align-self: center; 
+
+        & > .callout-icon { align-self: center; }
+    }
     &:not(.is-collapsed) > .callout-title { padding: 0; }
     & .callout-fold { padding-right: 0; }
 
@@ -94,7 +100,7 @@
         // --callout-content-padding: 0;
         border: 1px solid var(--table, var(--background-modifier-border));
         margin: 0;
-        border-radius: var(--radius, var(--co-radius));
+        border-radius: var(--radius-s);
     }
     //Style Tables
     & table { width: 100%; }
@@ -137,14 +143,15 @@
 
     //Wikipedia Styling
     &[data-callout-metadata~="wikipedia"] table {
-        --table-header-color: var(--text);
+        --table-header-color: var(--text, var(--text-normal));
         --table-header-background: transparent;
-        --table-header-background-hover: var(--td);
+        --table-header-background-hover: var(--td, var(--table-background));
 
-        --table-row-background-hover: var(--td);
+        --table-row-background-hover: var(--td, var(--table-background));
         --table-row-alt-background: transparent;
         --table-column-alt-background: transparent;
-        // --table-border-color: var(--table);
+        --table-border-color: transparent;
+        --table-header-border-color: transparent;
 
         // & tr td { border-top-color: var(--hr); }
         // & tr td { border-top: 1.1px solid var(--hr); }
@@ -161,5 +168,5 @@
 @media print { .callout[data-callout~="infobox"] { max-width: 400px; } }
 
 .theme-light .callout[data-callout~="infobox"][data-callout-metadata~="wikipedia"] {
-    --th-text: var(--th)
+    --th-text: var(--th);
 }

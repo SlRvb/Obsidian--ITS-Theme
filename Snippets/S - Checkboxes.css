@@ -546,12 +546,13 @@ li > p > input[type=checkbox]:checked {
   -webkit-mask-image: unset;
   overflow: unset;
 } 
-  
+
 input[type=checkbox]:checked:after,
 li > input[type=checkbox]:checked:after,
 li > p > input[type=checkbox]:checked:after {
   content: "";
 }
+
 
 /*--Checkbox Type Icons--*/
 body:not(.alt-chkbx-off) {

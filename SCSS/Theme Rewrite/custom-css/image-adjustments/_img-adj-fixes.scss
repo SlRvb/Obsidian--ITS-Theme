@@ -40,9 +40,10 @@ img,
 
 //Clears
 .clear-hr { --hr-width: 100%; }
-.clear-heading-1 h1 { clear: both; }
-.clear-heading-2 h2 { clear: both; }
-.clear-heading-3 h3 { clear: both; }
-.clear-heading-4 h4 { clear: both; }
-.clear-heading-5 h5 { clear: both; }
+.clear-headings :is(h1, h2, h3, h4, h5, h6),
+.clear-heading-1 h1,
+.clear-heading-2 h2,
+.clear-heading-3 h3,
+.clear-heading-4 h4,
+.clear-heading-5 h5,
 .clear-heading-6 h6 { clear: both; }

@@ -1,7 +1,13 @@
 /* @settings
-name: In The Shadows Settings
+name: ITS Theme Settings
 id: ITS
 settings:
+    - 
+        id: info-text-SlRvb-ITS-Theme
+        type: info-text
+        title: "ITS Theme by SlRvb"
+        description: "ℹ [Guide / Docs](https://publish.obsidian.md/slrvb-docs/ITS+Theme/ITS+Theme) | ⚙ [Github](https://github.com/SlRvb/Obsidian--ITS-Theme) | ☕ [Support](https://ko-fi.com/slrvb)"
+        markdown: true
     #-
     #    title: Class Test toggle
     #    id: minimalist-workspace
@@ -575,16 +581,59 @@ settings:
     -
         title: Live Preview Image Float
         id: lp-img-float
-        type: class-toggle   
-    -
-        title: Clear Images with Horizontal Lines
-        description: Force images to stay above horizontal lines
-        id: lp-img-float
         type: class-toggle
     -
         title: Center Images
         description: Center ALL images.
         id: img-adj-center
+        type: class-toggle
+    -
+        title: Clear Images
+        description: Push image under/over headings or horizontal lines
+        id: img-adj-clears
+        type: heading
+        level: 3
+        collapsed: false
+    -
+        title: Horizontal Lines
+        description: Push image under/over any horizontal lines
+        id: clear-hr
+        type: class-toggle
+    -
+        title: Headings
+        description: Push image under/over all headings 1-6
+        id: clear-headings
+        type: class-toggle
+    -
+        title: Heading Specific
+        description: Push image under/over some headings and not others
+        id: img-adj-clears-headings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        title: Header 1
+        id: clear-heading-1
+        type: class-toggle
+    -
+        title: Header 2
+        id: clear-heading-2
+        type: class-toggle
+    -
+        title: Header 3
+        id: clear-heading-3
+        type: class-toggle
+    -
+        title: Header 4
+        id: clear-heading-4
+        type: class-toggle
+    -
+        title: Header 5
+        id: clear-heading-5
+        type: class-toggle
+    -
+        title: Header 6
+        id: clear-heading-6
         type: class-toggle
     -
         title: Note Title

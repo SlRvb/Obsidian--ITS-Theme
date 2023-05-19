@@ -6,7 +6,7 @@
     --callout-icon: layout-dashboard;
     --callout-padding: 0;
 
-    --item-outline: 0 0 0 2px var(--outline, var(--background-modifier-border));
+    --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
 
     --lane-width: 250px;
     
@@ -20,7 +20,7 @@
         justify-content: center;
         background: var(--background-primary-alt);
         padding: 5px;
-        border-radius: var(--radius, var(--co-radius));
+        border-radius: var(--radius-s);
     }
     & .callout-title-inner { flex: unset; }
     & .callout-content { padding: 0; }
@@ -57,7 +57,7 @@
             padding-top: 4px;
             
             background: var(--note, var(--background-primary-alt));
-            border-radius: var(--radius, var(--kbn-radius));
+            border-radius: var(--radius-s);
             box-shadow: var(--item-outline), var(--shadow-s);
         }
     }

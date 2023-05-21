@@ -1,13 +1,29 @@
-@use 'Theme Rewrite/custom-css/file-explorer/file-explorer-style-flat-root'
-
 /*@settings
 name: Folder Styles
 id: folder-styles
 settings:
     - 
-        id: info-text-callouts
+        id: info-text-SlRvb-folder-styles
         type: info-text
         title: Folder Styles by SlRvb
         description: "[Folder Styles How-To Guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Callout+Adjustments)"
         markdown: true
+    - 
+        title: Folder Styles
+        id: file-explorer-flat
+        type: class-toggle
+        default: true
 */
+
+@use 'Theme Rewrite/custom-css/file-explorer/file-explorer-style-flat-root';
+
+body.file-explorer-flat {
+    --explorer-root-folder-background: var(--color-accent-2);
+    --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
+    --explorer-root-border-color: var(--color-accent-2);
+    --explorer-folder-open-background: var(--background-modifier-cover);
+}
+
+.file-explorer-flat .tree-item-icon.nav-folder-collapse-indicator {
+    position: relative;
+}

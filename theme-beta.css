@@ -4305,10 +4305,11 @@ del,
 .tag-pane-tag:not(.mod-collapsible) > div > .tree-item-inner-text::before,
 .tag-pane-tag-text:before {
   content: "#";
-  padding-right: 4px;
+  padding-right: 7px;
   margin-left: 0;
   position: relative;
   color: var(--tag-text);
+  width: var(--size-4-4);
 }
 
 .tag-pane-tag.tag-pane-tag:hover .tree-item-inner-text::before,

@@ -73,14 +73,15 @@
     // }
     & .tree-item-icon.collapse-icon {
         visibility: hidden;
+        display: none;
     }
 
 
     //File Icons
     & .tree-item-self[data-path$=".md"] .tree-item-inner::before,
     & .tree-item-self:not([data-path$=".md"]) .tree-item-inner::before {
-        margin-left: -15px;
-        padding-right: 5px;
+        margin-left: 3px;
+        padding-right: 4px;
         font-weight: 100;
     }
     & .tree-item-self:hover .tree-item-inner.tree-item-inner::before { color: var(--nav-item-color-hover); }
@@ -89,14 +90,11 @@
         content: var(--folder-icon);
         font-family: var(--folder-font);
         color: var(--folder);
-        margin-left: 0;
     }
     & .tree-item-self[data-path$=".md"] .tree-item-inner::before {
         content: var(--file-icon);
         font-family: var(--file-font);
         color: var(--file-icon-color);
-        margin-left: 3px;
-        padding-right: 4px;
     }
 } 
     

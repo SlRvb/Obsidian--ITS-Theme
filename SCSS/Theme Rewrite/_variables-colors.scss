@@ -165,7 +165,7 @@ body,
     
     //Graph
     --graph-bg: var(--outer-bar);
-    --graph-lines: rgba(var(--selected-rgb), .6);
+    --graph-lines: var(--dark-accent);//rgba(var(--selected-rgb), .6);
     --graph-node: var(--text);
     --graph-fill: var(--headers);
     --graph-404: #727e93;

@@ -2590,7 +2590,7 @@ body,
   --progress: var(--accent);
   --progress-bg: var(--bg);
   --graph-bg: var(--outer-bar);
-  --graph-lines: rgba(var(--selected-rgb), .6);
+  --graph-lines: var(--dark-accent);
   --graph-node: var(--text);
   --graph-fill: var(--headers);
   --graph-404: #727e93;
@@ -4305,14 +4305,10 @@ del,
 .tag-pane-tag:not(.mod-collapsible) > div > .tree-item-inner-text::before,
 .tag-pane-tag-text:before {
   content: "#";
-  padding-right: 7px;
+  padding-right: 4px;
   margin-left: 0;
   position: relative;
   color: var(--tag-text);
-}
-
-.tree-item-children > .tree-item-self {
-  padding-left: 10px;
 }
 
 .tag-pane-tag.tag-pane-tag:hover .tree-item-inner-text::before,
@@ -4626,6 +4622,9 @@ body {
 
 .bookmark + .tree-item-children {
   --nav-item-children-margin-left: 12px;
+}
+.bookmark.tree-item-self {
+  gap: 4px;
 }
 
 body {
@@ -5831,7 +5830,7 @@ body {
   --explorer-root-folder-indentation-width: 0;
   --explorer-root-folder-background: rgb(var(--accent-color), 0.3);
   --explorer-root-background: rgb(var(--accent-color), 0.1);
-  --explorer-root-border-color: var(--accent);
+  --explorer-root-border-color: rgb(var(--accent-color));
   --explorer-root-folder-color: var(--text);
   --explorer-root-folder-open-color: var(--folder);
   --explorer-root-collapsed-background: transparent;
@@ -5861,10 +5860,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.25em;
   padding: 3px 0;
+  width: 100%;
 }
 .file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content::before {
   float: left;
-  margin-right: 0px;
 }
 .file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-folder-open-background);

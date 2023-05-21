@@ -1,3 +1,5 @@
-.bookmark + .tree-item-children {
-    --nav-item-children-margin-left: 12px;
+.bookmark {
+    & + .tree-item-children { --nav-item-children-margin-left: 12px; }
+
+    &.tree-item-self { gap: 4px; }
 }

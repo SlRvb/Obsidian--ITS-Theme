@@ -2351,6 +2351,98 @@ settings:
         default-dark: '#c14343'
         default-light: '#000000'
     -
+        title: Code Blocks    
+        id: code-blocks
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        title: Code Background
+        id: code-bg
+        type: variable-themed-color
+        format: hex
+        default-dark: '#232831'
+        default-light: '#eef6ff'
+    - 
+        title: Code Text
+        id: code-text
+        type: variable-themed-color
+        format: hex
+        default-dark: '#fa4545'
+        default-light: '#ea4262'
+    - 
+        title: "Syntax: comments"
+        id: code-comment
+        description: Syntax highlighting for comments
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        title: "Syntax: functions"
+        id: code-function
+        description: Syntax highlighting for functions
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        title: "Syntax: keywords"
+        id: code-keyword
+        description: Syntax highlighting for keywords
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        title: "Syntax: important"
+        id: code-important
+        description: Syntax highlighting for important text
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        title: "Syntax: properties"
+        id: code-property
+        description: Syntax highlighting for properties
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        title: "Syntax: punctuation"
+        id: code-punctuation
+        description: Syntax highlighting for punctuation
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        title: "Syntax: strings"
+        id: code-string
+        description: Syntax highlighting for strings
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        title: "Syntax: tags"
+        id: code-tag
+        description: Syntax highlighting for tags
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        title: "Syntax: values"
+        id: code-value
+        description: Syntax highlighting for values
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'     
+    -
         title: Plugins
         id: Plugins
         type: heading
@@ -13143,6 +13235,10 @@ body .obsidian-statblock-plugin :is(.property-text, .line) {
 
 .style-settings-heading[data-id="Other Colors"] .style-settings-collapse-indicator::after {
   content: "\ec10";
+}
+
+.style-settings-heading[data-id=code-blocks] .style-settings-collapse-indicator::after {
+  content: "\2770\2008\2771";
 }
 
 .style-settings-heading[data-id=Plugins] .style-settings-collapse-indicator::after {

@@ -139,6 +139,8 @@
     position: relative;
     margin-left: -3px;
 }
+//Fix Spacing
+.tree-item-self { gap: 4px; }
 
 // .tree-item-self.is-clickable {
 //     margin-left: 0 !important;

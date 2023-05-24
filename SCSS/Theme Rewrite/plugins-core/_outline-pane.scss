@@ -1,17 +1,19 @@
 body {
     --outline-symbol: "H";
-    --outline-symbol-padding-right: 5px;
+    --outline-symbol-padding-right: 4px;
 
     --outline-arrow-visibility: hidden;
     --outline-arrow-display: none;
-    --outline-arrow-margin: -15.5px;
+    --outline-arrow-margin: -20px;
 }
 
 //Outline Icon
 body .outline {
-    & .tree-item-self { align-items: flex-start; }
+    // & .tree-item-self { align-items: flex-start; }
     & .tree-item-children { transition: all 0.3s ease-in-out; }
     --nav-item-children-margin-left: 12px;
+    
+    padding: var(--size-4-3) var(--size-4-2);
 
 
     //Arrow

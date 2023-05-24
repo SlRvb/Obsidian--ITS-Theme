@@ -3035,6 +3035,10 @@ button.mod-cta:hover {
   margin-left: -3px;
 }
 
+.tree-item-self {
+  gap: 4px;
+}
+
 body {
   --search-border: var(--box-border);
   --search-box-shadow: var(--shadow-s);
@@ -4325,17 +4329,15 @@ del,
 
 body {
   --outline-symbol: "H";
-  --outline-symbol-padding-right: 5px;
+  --outline-symbol-padding-right: 4px;
   --outline-arrow-visibility: hidden;
   --outline-arrow-display: none;
-  --outline-arrow-margin: -15.5px;
+  --outline-arrow-margin: -20px;
 }
 
 body .outline {
   --nav-item-children-margin-left: 12px;
-}
-body .outline .tree-item-self {
-  align-items: flex-start;
+  padding: var(--size-4-3) var(--size-4-2);
 }
 body .outline .tree-item-children {
   transition: all 0.3s ease-in-out;
@@ -4623,9 +4625,14 @@ body {
 
 .bookmark + .tree-item-children {
   --nav-item-children-margin-left: 12px;
+  --nav-item-children-padding-left: 4px;
 }
-.bookmark.tree-item-self {
-  gap: 4px;
+.bookmark.tree-item-self.mod-collapsible {
+  --nav-item-weight: 900;
+}
+
+.workspace-leaf-content[data-type=bookmarks] .view-content {
+  padding: 0 var(--size-4-2);
 }
 
 body {

@@ -1,0 +1,72 @@
+.file-explorer-flat {
+  --explorer-root-folder-margin: 0;
+  --explorer-root-folder-padding: 0;
+  --explorer-root-folder-indentation-width: 0;
+  --explorer-root-folder-background: rgb(var(--accent-color), 0.3);
+  --explorer-root-background: rgb(var(--accent-color), 0.1);
+  --explorer-root-border-color: rgb(var(--accent-color));
+  --explorer-root-folder-color: var(--text);
+  --explorer-root-folder-open-color: var(--folder);
+  --explorer-root-collapsed-background: transparent;
+  --explorer-folder-open-background: var(--td);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
+  margin: var(--explorer-root-folder-margin);
+  padding-left: var(--explorer-root-folder-padding);
+  border-width: var(--explorer-root-folder-indentation-width);
+  border-color: var(--explorer-root-folder-indentation-color);
+  border-bottom: 2px solid var(--explorer-root-border-color);
+  background-color: var(--explorer-root-background);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title:not(:hover) {
+  background-color: var(--explorer-root-collapsed-background);
+  color: var(--explorer-root-folder-color);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+  background-color: var(--explorer-root-folder-background);
+  border-bottom-color: var(--explorer-root-border-color);
+  color: var(--explorer-root-folder-open-color);
+  justify-content: center;
+}
+.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
+  text-align: center;
+  transition: cubic-bezier(1, 0, 0, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  padding: 3px 0;
+  width: 100%;
+}
+.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content::before {
+  float: left;
+}
+.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+  background-color: var(--explorer-folder-open-background);
+  border-bottom-color: var(--explorer-root-border-color);
+}
+
+/*@settings
+name: Folder Styles
+id: folder-styles
+settings:
+    - 
+        id: info-text-SlRvb-folder-styles
+        type: info-text
+        title: Folder Styles by SlRvb
+        description: "[Folder Styles How-To Guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Folder+Styles)"
+        markdown: true
+    - 
+        title: Folder Styles
+        id: file-explorer-flat
+        type: class-toggle
+        default: true
+*/
+body.file-explorer-flat {
+  --explorer-root-folder-background: var(--color-accent-2);
+  --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
+  --explorer-root-border-color: var(--color-accent-2);
+  --explorer-folder-open-background: var(--background-modifier-cover);
+}
+
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+  justify-content: unset;
+}

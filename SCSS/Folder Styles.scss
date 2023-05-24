@@ -6,7 +6,7 @@ settings:
         id: info-text-SlRvb-folder-styles
         type: info-text
         title: Folder Styles by SlRvb
-        description: "[Folder Styles How-To Guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Callout+Adjustments)"
+        description: "[Folder Styles How-To Guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Folder+Styles)"
         markdown: true
     - 
         title: Folder Styles
@@ -24,6 +24,6 @@ body.file-explorer-flat {
     --explorer-folder-open-background: var(--background-modifier-cover);
 }
 
-.file-explorer-flat .tree-item-icon.nav-folder-collapse-indicator {
-    position: relative;
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+    justify-content: unset;
 }

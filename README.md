@@ -11,12 +11,6 @@
 
 Check out the [ITS Theme Documentation](https://publish.obsidian.md/slrvb-docs/ITS+Theme/ITS+Theme) hosted on Obsidian Publish!
 
-> **Important** Looking for more ITS Version 1 Beta theme testers!
-> Using the [BRAT plugin](https://github.com/TfTHacker/obsidian42-brat), paste the url to this theme repo into the Beta Themes List section in the BRAT Settings. To pull updates, open the command palette and search for `Update Beta Themes` and the changes should be applied, if not, give it a few minutes then try again.
->  
-> Do feel free to ping me or file an issue on anything that's broken or a feature you want added, thank you! 🙏💖
-> Every tester that mentions anything missing or broken helps push out the ITS Theme version 1 faster.
-
 <!--
 - [Image Positions/Adjustments](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Image-Positions.md)
 - [Alternate Checkboxes](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Checkboxes.md)
@@ -38,7 +32,7 @@ Download these for a better experience
 
 - **[Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings)** <br> Allows you to customize the ITS Theme to your liking
 
-- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Encoded%20Icons.css)** <br> Other icon fonts that are used in the [Alternate Themes Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Themes.md)
+- **[Encoded Icons Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Encoded%20Icons.css)** and **[Encoded Fonts Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Encoded%20Fonts.css)** <br> Other icon fonts that are used in the [Alternate Themes Snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Alternate-Themes.md)
 
 ###### Snippets Already Included
 No need to download these snippets to your vault if you're using the ITS Theme, they work out of the box the moment you install ITS
@@ -49,6 +43,7 @@ No need to download these snippets to your vault if you're using the ITS Theme, 
 - S - Aside
 - S - Embed Adjustments
 - S - Kanban
+- All Alternate Themes
 
 ---
 # Features

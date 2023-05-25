@@ -526,18 +526,18 @@ settings:
         level: 3
         collapsed: true
     -
-        title: Text
+        title: Text Font
         description: Changes text font for preview and edit mode. 
         id: default-font
         type: variable-text
         default: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif"
     -
-        title: Monospace
+        title: Monospace Font
         id: font-monospace
         type: variable-text
         default: "'Fira Code Medium', 'Source Code Pro', monospace"
     -
-        title: Comments
+        title: Comments Font
         id: comment-font
         type: variable-text
         default: "'Fira Code Medium'"
@@ -2385,6 +2385,11 @@ settings:
         type: heading
         level: 1
         collapsed: true
+    -
+        title: ITS Styled Statblocks
+        id: its-statblock
+        type: class-toggle
+        default: true
     -
         title: Breadcrumbs Box Style
         id: breadcrumbs-block
@@ -5271,7 +5276,7 @@ button[class^=BC] {
 }
 
 /*--Plugin: 5e Statblock--*/
-body {
+body.its-statblock {
   --statblock-primary-color: var(--text);
   --statblock-background-color: var(--note);
   --statblock-bar-color: var(--accent);
@@ -5310,7 +5315,7 @@ body {
   --statblock-traits-font-style: normal;
 }
 
-.obsidian-statblock-plugin {
+.its-statblock .obsidian-statblock-plugin {
   --header-border-line-width: 0;
   --h1-border-line-width: var(--header-border-line-width);
   --h2-border-line-width: var(--header-border-line-width);
@@ -5319,41 +5324,42 @@ body {
   --h5-border-line-width: var(--header-border-line-width);
   --h6-border-line-width: var(--header-border-line-width);
 }
-.obsidian-statblock-plugin .statblock-content {
+.its-statblock .obsidian-statblock-plugin .statblock-content {
   padding: 0.45em;
 }
-.obsidian-statblock-plugin .statblock-content .statblock-item-container {
+.its-statblock .obsidian-statblock-plugin .statblock-content .statblock-item-container {
   margin-bottom: 0.2rem;
 }
-.obsidian-statblock-plugin .statblock-content > div > .statblock-item-container:not(.group-container):not(.inline-container):not(.rule-container) {
+.its-statblock .obsidian-statblock-plugin .statblock-content > div > .statblock-item-container:not(.group-container):not(.inline-container):not(.rule-container) {
   padding: var(--statblock-alt-padding);
 }
-.obsidian-statblock-plugin .statblock-inline-item {
+.its-statblock .obsidian-statblock-plugin .statblock-inline-item {
   padding: var(--statblock-alt-padding);
 }
-.obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)::before, .obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)::after {
-  display: none;
-}
-.obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header) > :not(.collapse-indicator) {
-  margin: 0;
-}
-.obsidian-statblock-plugin .column > .statblock-item-container:nth-child(odd):not(.rule-container,
+.its-statblock .obsidian-statblock-plugin .column > .statblock-item-container:nth-child(odd):not(.rule-container,
 .table-container,
 .traits-container,
 .heading-container) {
   background: var(--statblock-alt);
 }
-.obsidian-statblock-plugin .spell-list .spell-level .property-text, .obsidian-statblock-plugin .property-name {
+.its-statblock .obsidian-statblock-plugin .spell-list .spell-level .property-text, .its-statblock .obsidian-statblock-plugin .property-name {
   color: var(--statblock-property-name-font-color);
 }
-.obsidian-statblock-plugin .spell-list .spell-level .property-text {
+.its-statblock .obsidian-statblock-plugin .spell-list .spell-level .property-text {
   font-weight: 600;
 }
-.obsidian-statblock-plugin .spell-list .spells .property-text {
+.its-statblock .obsidian-statblock-plugin .spell-list .spells .property-text {
   font-style: normal;
 }
-.obsidian-statblock-plugin li::marker {
+.its-statblock .obsidian-statblock-plugin li::marker {
   --list-marker-color: transparent;
+}
+
+.obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)::before, .obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)::after {
+  display: none;
+}
+.obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header) > :not(.collapse-indicator) {
+  margin: 0;
 }
 
 .excalidraw.excalidraw.excalidraw {
@@ -6504,6 +6510,8 @@ body.embed-mini-headers .markdown-embed {
 .internal-embed[alt*=clean] > .markdown-embed,
 .internal-embed[alt*=clean].is-loaded:not(.image-embed) {
   --embed-padding: 0;
+  border: none;
+  box-shadow: none;
 }
 .embed-clean .internal-embed > .markdown-embed:not(:hover), .embed-clean .internal-embed.is-loaded:not(.image-embed):not(:hover),
 .internal-embed[alt*=clean] > .markdown-embed:not(:hover),
@@ -8697,9 +8705,9 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 [data-callout-metadata~=co-block]) .callout-title {
   background-color: rgba(var(--callout-title-background, var(--callout-color)), 0.2);
 }
-.callout-block .callout.is-collapsible:not(.is-collapsed),
+.callout-block .callout.is-collapsible:not(.is-collapsed) > .callout-content,
 .callout:is([data-callout-metadata~=callout-block],
-[data-callout-metadata~=co-block]).is-collapsible:not(.is-collapsed) {
+[data-callout-metadata~=co-block]).is-collapsible:not(.is-collapsed) > .callout-content {
   border-bottom: 1px solid rgba(var(--callout-color), var(--callout-border-opacity));
 }
 

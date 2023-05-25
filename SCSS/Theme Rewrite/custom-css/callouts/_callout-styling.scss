@@ -37,7 +37,7 @@
     }
     // & .callout-title-inner { color: var(--text-dl); }
 
-    &.is-collapsible:not(.is-collapsed)  {
+    &.is-collapsible:not(.is-collapsed) > .callout-content {
         border-bottom: 1px solid rgba(var(--callout-color), var(--callout-border-opacity));
     }
 }

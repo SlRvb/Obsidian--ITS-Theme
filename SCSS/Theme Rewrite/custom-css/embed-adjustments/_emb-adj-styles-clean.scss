@@ -4,6 +4,8 @@
     & > .markdown-embed,
     &.is-loaded:not(.image-embed) {
         --embed-padding: 0;
+        border: none;
+        box-shadow: none;
 
         &:not(:hover) {
             --embed-border-color: transparent;

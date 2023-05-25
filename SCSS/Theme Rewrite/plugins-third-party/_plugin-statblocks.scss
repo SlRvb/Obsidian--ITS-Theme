@@ -1,5 +1,5 @@
 /*--Plugin: 5e Statblock--*/
-body {
+body.its-statblock {
     --statblock-primary-color: var(--text);
     --statblock-background-color: var(--note);
     --statblock-bar-color: var(--accent);
@@ -50,7 +50,7 @@ body {
 }
 
 
-.obsidian-statblock-plugin {
+.its-statblock .obsidian-statblock-plugin {
     --header-border-line-width: 0;
     --h1-border-line-width: var(--header-border-line-width);
     --h2-border-line-width: var(--header-border-line-width);
@@ -68,15 +68,6 @@ body {
         }
     }
     & .statblock-inline-item { padding: var(--statblock-alt-padding); }
-
-    //Fix HCL Styling
-    & :is(.statblock-heading.heading, .section-header)
-    {
-        &::before,
-        &::after { display: none; }
-
-        & > :not(.collapse-indicator) { margin: 0; }
-    }
 
     //Alt Coloring
     & .column > .statblock-item-container:nth-child(odd):not(
@@ -102,3 +93,11 @@ body {
     & li::marker { --list-marker-color: transparent; }
 }
 
+//Fix HCL Styling
+.obsidian-statblock-plugin :is(.statblock-heading.heading, .section-header)
+{
+    &::before,
+    &::after { display: none; }
+
+    & > :not(.collapse-indicator) { margin: 0; }
+}

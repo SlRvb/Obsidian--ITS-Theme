@@ -5102,10 +5102,6 @@ body {
   display: block;
 }
 
-.kanban-plugin__markdown-preview-view * {
-  overflow-y: hidden;
-}
-
 .kanban-plugin__item-button-wrapper.kanban-plugin__item-button-wrapper {
   border: 0;
   background-color: var(--kanban-button-background);

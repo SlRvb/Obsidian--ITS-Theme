@@ -2386,10 +2386,9 @@ settings:
         level: 1
         collapsed: true
     -
-        title: ITS Styled Statblocks
-        id: its-statblock
+        title: Disable ITS Styled Statblocks
+        id: default-statblock
         type: class-toggle
-        default: true
     -
         title: Breadcrumbs Box Style
         id: breadcrumbs-block
@@ -5276,7 +5275,7 @@ button[class^=BC] {
 }
 
 /*--Plugin: 5e Statblock--*/
-body.its-statblock {
+body:not(.default-statblock) {
   --statblock-primary-color: var(--text);
   --statblock-background-color: var(--note);
   --statblock-bar-color: var(--accent);
@@ -5315,7 +5314,7 @@ body.its-statblock {
   --statblock-traits-font-style: normal;
 }
 
-.its-statblock .obsidian-statblock-plugin {
+body:not(.default-statblock) .obsidian-statblock-plugin {
   --header-border-line-width: 0;
   --h1-border-line-width: var(--header-border-line-width);
   --h2-border-line-width: var(--header-border-line-width);
@@ -5324,34 +5323,34 @@ body.its-statblock {
   --h5-border-line-width: var(--header-border-line-width);
   --h6-border-line-width: var(--header-border-line-width);
 }
-.its-statblock .obsidian-statblock-plugin .statblock-content {
+body:not(.default-statblock) .obsidian-statblock-plugin .statblock-content {
   padding: 0.45em;
 }
-.its-statblock .obsidian-statblock-plugin .statblock-content .statblock-item-container {
+body:not(.default-statblock) .obsidian-statblock-plugin .statblock-content .statblock-item-container {
   margin-bottom: 0.2rem;
 }
-.its-statblock .obsidian-statblock-plugin .statblock-content > div > .statblock-item-container:not(.group-container):not(.inline-container):not(.rule-container) {
+body:not(.default-statblock) .obsidian-statblock-plugin .statblock-content > div > .statblock-item-container:not(.group-container):not(.inline-container):not(.rule-container) {
   padding: var(--statblock-alt-padding);
 }
-.its-statblock .obsidian-statblock-plugin .statblock-inline-item {
+body:not(.default-statblock) .obsidian-statblock-plugin .statblock-inline-item {
   padding: var(--statblock-alt-padding);
 }
-.its-statblock .obsidian-statblock-plugin .column > .statblock-item-container:nth-child(odd):not(.rule-container,
+body:not(.default-statblock) .obsidian-statblock-plugin .column > .statblock-item-container:nth-child(odd):not(.rule-container,
 .table-container,
 .traits-container,
 .heading-container) {
   background: var(--statblock-alt);
 }
-.its-statblock .obsidian-statblock-plugin .spell-list .spell-level .property-text, .its-statblock .obsidian-statblock-plugin .property-name {
+body:not(.default-statblock) .obsidian-statblock-plugin .spell-list .spell-level .property-text, body:not(.default-statblock) .obsidian-statblock-plugin .property-name {
   color: var(--statblock-property-name-font-color);
 }
-.its-statblock .obsidian-statblock-plugin .spell-list .spell-level .property-text {
+body:not(.default-statblock) .obsidian-statblock-plugin .spell-list .spell-level .property-text {
   font-weight: 600;
 }
-.its-statblock .obsidian-statblock-plugin .spell-list .spells .property-text {
+body:not(.default-statblock) .obsidian-statblock-plugin .spell-list .spells .property-text {
   font-style: normal;
 }
-.its-statblock .obsidian-statblock-plugin li::marker {
+body:not(.default-statblock) .obsidian-statblock-plugin li::marker {
   --list-marker-color: transparent;
 }
 

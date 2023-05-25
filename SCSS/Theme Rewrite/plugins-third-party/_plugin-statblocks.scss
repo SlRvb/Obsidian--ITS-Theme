@@ -1,5 +1,5 @@
 /*--Plugin: 5e Statblock--*/
-body.its-statblock {
+body:not(.default-statblock) {
     --statblock-primary-color: var(--text);
     --statblock-background-color: var(--note);
     --statblock-bar-color: var(--accent);
@@ -50,7 +50,7 @@ body.its-statblock {
 }
 
 
-.its-statblock .obsidian-statblock-plugin {
+body:not(.default-statblock) .obsidian-statblock-plugin {
     --header-border-line-width: 0;
     --h1-border-line-width: var(--header-border-line-width);
     --h2-border-line-width: var(--header-border-line-width);

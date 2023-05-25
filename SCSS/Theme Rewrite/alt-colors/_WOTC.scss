@@ -20,17 +20,22 @@
 
         --embed-h: #c93c3c;
         --h2-color: sandybrown;
-        --h3-color: #642020;
-        --h1-border-right-color: linear-gradient(to right, var(--embed-h), transparent);
-        --h2-border-right-color: linear-gradient(to right, var(--h2-color), transparent);
-        --h3-border-right-color: linear-gradient(to right, var(--h3-color), transparent);
+        --h3-color: #a11111;
+
+        --h1-border-line-color: var(--embed-h);
+        --h2-border-line-color: var(--h2-color);
+        --h3-border-line-color: var(--h3-color);
+
+        --h1-border-right-color: linear-gradient(to right, var(--h1-border-line-color), transparent);
+        --h2-border-right-color: linear-gradient(to right, var(--h2-border-line-color), transparent);
+        --h3-border-right-color: linear-gradient(to right, var(--h3-border-line-color), transparent);
         --h4-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
         --h5-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
         --h6-border-right-color: linear-gradient(to right, var(--header-border-line-color), transparent);
 
-        --h1-border-left-color: linear-gradient(to left, var(--embed-h), transparent);
-        --h2-border-left-color: linear-gradient(to left, var(--h2-color), transparent);
-        --h3-border-left-color: linear-gradient(to left, var(--h3-color), transparent);
+        --h1-border-left-color: linear-gradient(to left, var(--h1-border-line-color), transparent);
+        --h2-border-left-color: linear-gradient(to left, var(--h2-border-line-color), transparent);
+        --h3-border-left-color: linear-gradient(to left, var(--h3-border-line-color), transparent);
         --h4-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);
         --h5-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);
         --h6-border-left-color: linear-gradient(to left, var(--header-border-line-color), transparent);

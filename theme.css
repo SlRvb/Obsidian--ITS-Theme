@@ -191,6 +191,25 @@ settings:
         id: titlebar-bubbles
         type: class-toggle
     -
+        title: Tabs
+        id: ITS-tabs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Tab Widths
+        id: tab-widths
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            -
+                label: Auto
+                value: tab-auto
+            -
+                label: Wide
+                value: tab-wide
+    -
         title: Sidebar
         id: ITS-Sidebar
         type: heading
@@ -2895,6 +2914,11 @@ button.mod-cta:hover {
   border-color: var(--outline);
 }
 
+.community-modal-info-name {
+  font-family: var(--h2-font);
+  font-weight: var(--h2-weight);
+}
+
 .menu {
   border-width: var(--modal-border-width);
   border-color: var(--modal-border-color);
@@ -3123,8 +3147,8 @@ body {
   --tab-font-size: var(--font-size);
   --tab-font-weight: 500;
   --tab-font-weight-active: 900;
-  --tab-width: auto;
-  --tab-max-width: 250px;
+  --tab-width: 200px;
+  --tab-max-width: 320px;
   --tab-outline-width: 0;
   --tab-outline-color: var(--accent);
   --tab-divider-color: var(--hr);
@@ -3181,6 +3205,7 @@ body {
   --nav-item-color-hover: var(--text-dl);
   --nav-item-color-active: var(--text-dl);
   --nav-item-color-highlighted: var(--text-dl);
+  --folder-open-text-color: var(--text);
   --nav-item-background-hover: var(--dark-accent);
   --nav-item-background-active: var(--dark-accent);
   --nav-item-background-selected: var(--hvr);
@@ -3224,7 +3249,7 @@ body {
   color: var(--folder-text-color);
 }
 
-.nav-folder:not(.mod-root) .nav-folder-title:not(.is-being-dragged) {
+.nav-folder:not(.mod-root) > .nav-folder-title:not(.is-being-dragged) {
   color: var(--folder-open-text-color);
 }
 
@@ -5474,9 +5499,10 @@ body .fantasy-calendar-create-calendar details[open] {
 }
 .dice-roller-view .advantage-disadvantage button {
   background: var(--success-bg);
+  color: var(--text-dl);
 }
 .dice-roller-view .advantage-disadvantage button:hover {
-  background-color: var(--interactive-accent-hover);
+  background-color: var(--dark-accent);
 }
 .dice-roller-view .advantage-disadvantage button + button {
   background: var(--failure-bg);
@@ -5736,8 +5762,12 @@ img.emoji.emoji {
   object-fit: cover;
 }
 
-.nav-folder.alx-folder-with-note > .nav-folder-title > .nav-folder-title-content {
+.alx-folder-with-note.nav-folder > .nav-folder-title > .nav-folder-title-content {
   text-decoration-color: var(--lite-accent);
+}
+
+.alx-folder-with-note.nav-folder .nav-folder-title.is-active {
+  color: var(--text-dl);
 }
 
 .settings-search-input {
@@ -5856,7 +5886,6 @@ body {
   background-color: var(--explorer-root-folder-background);
   border-bottom-color: var(--explorer-root-border-color);
   color: var(--explorer-root-folder-open-color);
-  justify-content: center;
 }
 .file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
   text-align: center;
@@ -9197,6 +9226,25 @@ iframe {
   color: var(--text-on-accent);
 }
 
+.tab-auto {
+  --tab-width: auto;
+  --tab-max-width: 100%;
+}
+.tab-auto .workspace .mod-root .workspace-tab-header {
+  flex: unset;
+}
+
+.tab-wide {
+  --tab-width: auto;
+  --tab-max-width: 100%;
+}
+.tab-wide .workspace .mod-root .workspace-tab-header, .tab-wide .workspace-tab-header-container-inner {
+  flex: auto;
+}
+.tab-wide .workspace-tab-header-spacer {
+  display: none;
+}
+
 .tag-notion.tag-notion {
   --tag-radius: 5px;
   --tag-border-radius: 5px;
@@ -10689,7 +10737,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --code-text: #5C1C16;
   --i-at: #5C1C16;
   --footnote: #676767;
-  --inactive: #b7b5b4;
+  --inactive: #b98f7a;
   --folder: #a22b30;
   --folder-open: var(--headers);
   --file-icon-color: #676767;
@@ -10703,7 +10751,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --table: #00000060;
   --hr: #5c1c16;
   --lines: #b6a697;
-  --outline: rgba(0, 0, 0, 0.4);
+  --outline: rgba(124, 49, 3, 0.4);
   --hr-image-width: contain;
   --graph-lines: var(--embed-bg);
   --graph-node: var(--theme-rainbow-1);

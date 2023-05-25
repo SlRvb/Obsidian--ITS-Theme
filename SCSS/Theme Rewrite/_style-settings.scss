@@ -190,6 +190,25 @@ settings:
         id: titlebar-bubbles
         type: class-toggle
     -
+        title: Tabs
+        id: ITS-tabs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Tab Widths
+        id: tab-widths
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            -
+                label: Auto
+                value: tab-auto
+            -
+                label: Wide
+                value: tab-wide
+    -
         title: Sidebar
         id: ITS-Sidebar
         type: heading

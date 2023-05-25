@@ -122,7 +122,12 @@ button.mod-cta:hover {
     background-color: var(--modal-nav-item-background-hover);
     border-color: var(--outline);
 }
-
+//Fix Plugin Font
+.community-modal-info-name {
+    font-family: var(--h2-font);
+    font-weight: var(--h2-weight);
+}
+// .modal-setting-nav-bar { border-bottom: ;}
 
 
 //Fix Dropdown Menu Styling

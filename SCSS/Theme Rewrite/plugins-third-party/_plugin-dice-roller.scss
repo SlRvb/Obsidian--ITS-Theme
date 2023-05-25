@@ -34,8 +34,9 @@
     //Advantage/Disadvantage Button
     & .advantage-disadvantage button { 
         background: var(--success-bg); 
+        color: var(--text-dl);
         
-        &:hover { background-color: var(--interactive-accent-hover); }
+        &:hover { background-color: var(--dark-accent); }
         
         & + button { background: var(--failure-bg); }
     }

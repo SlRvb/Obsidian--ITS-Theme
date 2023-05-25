@@ -1,0 +1,20 @@
+.tab-auto {
+    --tab-width: auto;
+    --tab-max-width: 100%;
+
+    & .workspace .mod-root .workspace-tab-header {
+        flex: unset;
+    }
+}
+.tab-wide {
+    --tab-width: auto;
+    --tab-max-width: 100%;
+
+    & .workspace .mod-root .workspace-tab-header,
+    & .workspace-tab-header-container-inner {
+        flex: auto;
+    }
+    // & .workspace .mod-root .workspace-tab-header { flex: 1 1 auto; }
+
+    & .workspace-tab-header-spacer { display: none; }
+}

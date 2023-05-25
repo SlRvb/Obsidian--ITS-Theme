@@ -11,6 +11,7 @@ body {
     --nav-item-color-hover: var(--text-dl);
     --nav-item-color-active: var(--text-dl);
     --nav-item-color-highlighted: var(--text-dl); //Dragged item
+    --folder-open-text-color: var(--text);
 
     --nav-item-background-hover: var(--dark-accent);
     --nav-item-background-active: var(--dark-accent);
@@ -57,7 +58,7 @@ body {
 .nav-folder.is-collapsed .nav-folder-title:not(.is-being-dragged) { 
     color: var(--folder-text-color); 
 }
-.nav-folder:not(.mod-root) .nav-folder-title:not(.is-being-dragged) {
+.nav-folder:not(.mod-root) > .nav-folder-title:not(.is-being-dragged) {
     color: var(--folder-open-text-color);
 }
 .nav-file-title { color: var(--file-text-color); }

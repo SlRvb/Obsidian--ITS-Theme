@@ -61,6 +61,11 @@ body {
 .nav-folder:not(.mod-root) > .nav-folder-title:not(.is-being-dragged) {
     color: var(--folder-open-text-color);
 }
+.nav-folder-title.nav-folder-title.is-active.is-active {
+    color: var(--text-dl);
+    
+    & .nav-folder-title-content::before { color: var(--text-dl); }
+}
 .nav-file-title { color: var(--file-text-color); }
 
 

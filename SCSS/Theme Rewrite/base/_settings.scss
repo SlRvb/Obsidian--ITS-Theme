@@ -127,7 +127,9 @@ button.mod-cta:hover {
     font-family: var(--h2-font);
     font-weight: var(--h2-weight);
 }
-// .modal-setting-nav-bar { border-bottom: ;}
+.mod-community-modal .modal-sidebar button.clickable-icon:hover {
+    color: var(--text-dl);
+}
 
 
 //Fix Dropdown Menu Styling

@@ -2919,6 +2919,10 @@ button.mod-cta:hover {
   font-weight: var(--h2-weight);
 }
 
+.mod-community-modal .modal-sidebar button.clickable-icon:hover {
+  color: var(--text-dl);
+}
+
 .menu {
   border-width: var(--modal-border-width);
   border-color: var(--modal-border-color);
@@ -3251,6 +3255,13 @@ body {
 
 .nav-folder:not(.mod-root) > .nav-folder-title:not(.is-being-dragged) {
   color: var(--folder-open-text-color);
+}
+
+.nav-folder-title.nav-folder-title.is-active.is-active {
+  color: var(--text-dl);
+}
+.nav-folder-title.nav-folder-title.is-active.is-active .nav-folder-title-content::before {
+  color: var(--text-dl);
 }
 
 .nav-file-title {
@@ -5762,12 +5773,19 @@ img.emoji.emoji {
   object-fit: cover;
 }
 
+.folder-note-underline .has-folder-note .nav-folder-title-content,
 .alx-folder-with-note.nav-folder > .nav-folder-title > .nav-folder-title-content {
   text-decoration-color: var(--lite-accent);
 }
 
+.folder-note-underline .has-folder-note .nav-folder-title-content.nav-folder-title.is-active,
 .alx-folder-with-note.nav-folder .nav-folder-title.is-active {
   color: var(--text-dl);
+}
+
+.fn-whitespace-stop-collapsing .nav-folder-title-content {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .settings-search-input {
@@ -10737,7 +10755,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --code-text: #5C1C16;
   --i-at: #5C1C16;
   --footnote: #676767;
-  --inactive: #b98f7a;
+  --inactive: #cdab9a;
   --folder: #a22b30;
   --folder-open: var(--headers);
   --file-icon-color: #676767;

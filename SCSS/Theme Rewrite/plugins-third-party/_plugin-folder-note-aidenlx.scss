@@ -5,9 +5,17 @@
 //     box-shadow: 0 2px 0 var(--inactive);
 // }
 
-
+.folder-note-underline .has-folder-note .nav-folder-title-content,
 .alx-folder-with-note.nav-folder > .nav-folder-title > .nav-folder-title-content {
     text-decoration-color: var(--lite-accent);
 }
 
+.folder-note-underline .has-folder-note .nav-folder-title-content.nav-folder-title.is-active,
 .alx-folder-with-note.nav-folder .nav-folder-title.is-active { color: var(--text-dl); }
+
+
+//Paul
+.fn-whitespace-stop-collapsing .nav-folder-title-content {
+    padding-top: 0;
+    padding-bottom: 0;
+}

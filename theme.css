@@ -3414,6 +3414,9 @@ body {
 .is-mobile.is-mobile.is-phone .setting-item-heading {
   margin: 0;
 }
+.is-mobile.is-mobile.is-phone .mod-sync-log {
+  --modal-top: 0;
+}
 .is-mobile.is-mobile .view-header-title {
   padding: 0 var(--size-4-1);
 }
@@ -5108,6 +5111,14 @@ body {
 .kanban-plugin__item-title .markdown-preview-view a.internal-link {
   color: var(--kanban-link-color);
   font-weight: var(--kanban-link-font-weight);
+}
+.kanban-plugin__item.kanban-plugin__item .markdown-preview-view a.internal-link.is-unresolved,
+.kanban-plugin__item-title .markdown-preview-view a.internal-link.is-unresolved {
+  color: var(--link-unresolved-color);
+  opacity: var(--link-unresolved-opacity);
+  filter: var(--link-unresolved-filter);
+  text-decoration-style: var(--link-unresolved-decoration-style);
+  text-decoration-color: var(--link-unresolved-decoration-color);
 }
 .kanban-plugin__item.kanban-plugin__item .markdown-preview-view a.tag,
 .kanban-plugin__item-title .markdown-preview-view a.tag {
@@ -9113,6 +9124,11 @@ iframe {
   text-align: justify;
 }
 
+.poem p,
+.poem-lp .cm-line {
+  text-align: center;
+}
+
 .writing-document:not(.is-mobile) {
   /* Fix embeds */
   /* Embed */
@@ -9162,6 +9178,13 @@ iframe {
 .note-width-readable {
   --file-line-width: 700px;
   --page-width: 700px;
+}
+.readable.markdown-source-view.mod-cm6 .cm-sizer, .readable .markdown-source-view.mod-cm6 .cm-scroller .cm-sizer, .readable .markdown-preview-sizer,
+.note-width-readable.markdown-source-view.mod-cm6 .cm-sizer,
+.note-width-readable .markdown-source-view.mod-cm6 .cm-scroller .cm-sizer,
+.note-width-readable .markdown-preview-sizer {
+  max-width: var(--file-line-width);
+  margin: auto;
 }
 
 .hide-outline-symbol {

@@ -72,6 +72,14 @@ body {
         & a.internal-link {
             color: var(--kanban-link-color);
             font-weight: var(--kanban-link-font-weight);
+
+            &.is-unresolved {
+                color: var(--link-unresolved-color);
+                opacity: var(--link-unresolved-opacity);
+                filter: var(--link-unresolved-filter);
+                text-decoration-style: var(--link-unresolved-decoration-style);
+                text-decoration-color: var(--link-unresolved-decoration-color);
+            }
         }
 
         & a.tag {

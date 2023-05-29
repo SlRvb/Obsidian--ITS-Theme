@@ -3862,6 +3862,8 @@ body {
   --link-weight: inherit;
   --link-border: none;
   --link-transform: none;
+  --link-background: transparent;
+  --link-background-hover: var(--link-background);
 }
 
 .is-live-preview .cm-hmd-internal-link,
@@ -3881,6 +3883,13 @@ a[href^=https],
   font-weight: var(--link-weight);
   border-bottom: var(--link-border);
   text-transform: var(--link-transform);
+  background-color: var(--link-background);
+}
+a[href^=https]:hover,
+.internal-link:hover,
+.external-link:hover,
+.cm-underline:hover {
+  background-color: var(--link-background-hover);
 }
 
 .cm-s-obsidian:not(.is-live-preview) .cm-link, .cm-s-obsidian .cm-line.cm-active .cm-formatting-link + .cm-link.cm-link, .cm-s-obsidian .cm-image-alt-text.cm-link:not(.cm-formatting), .cm-s-obsidian .cm-formatting-link-string.cm-string {
@@ -9127,6 +9136,68 @@ iframe {
 .poem p,
 .poem-lp .cm-line {
   text-align: center;
+}
+
+.writing.writing {
+  --file-line-width: 550px;
+  --link-color: var(--text);
+  --link-color-hover: var(--soft-text);
+  --link-background-hover: var(--highlight);
+  --link-external-color: var(--text);
+  --link-external-color-hover: var(--soft-text);
+  --highlight: var(--background-modifier-form-field-highlighted) !important;
+  --text-highlight-bg: var(--highlight);
+  --hr-icon-symbol: !important;
+  --header-text-align: center;
+  --h1-text-align: var(--header-text-align);
+  --h2-text-align: var(--header-text-align);
+  --h3-text-align: var(--header-text-align);
+  --h4-text-align: var(--header-text-align);
+  --h5-text-align: var(--header-text-align);
+  --h6-text-align: var(--header-text-align);
+  --blockquote-background-color: transparent;
+  --blockquote-border-thickness: 3px;
+  --blockquote-border-color: var(--accent);
+  --code-normal: var(--text);
+  --code-background: var(--td);
+}
+.writing.writing :is(.internal-link, .cm-hmd-internal-link)::after, .writing.writing .external-link::after {
+  font-family: var(--its);
+  font-size: calc(var(--font-text-size) - 2px);
+  font-style: normal !important;
+  font-weight: 100 !important;
+  vertical-align: 2px;
+  color: var(--accent);
+  opacity: unset;
+}
+.writing.writing :is(.internal-link, .cm-hmd-internal-link)::after {
+  content: "\e819";
+}
+.writing.writing .external-link::after {
+  content: "\e818";
+}
+.writing.writing, .writing.writing.hcl, .writing.writing .hcl {
+  --header-border-line-height: 0;
+  --h1-border-line-height: var(--header-border-line-height);
+  --h2-border-line-height: var(--header-border-line-height);
+  --h3-border-line-height: var(--header-border-line-height);
+  --h4-border-line-height: var(--header-border-line-height);
+  --h5-border-line-height: var(--header-border-line-height);
+  --h6-border-line-height: var(--header-border-line-height);
+}
+.writing.writing .markdown-preview-section, .writing.writing .cm-s-obsidian, .writing.writing.markdown-preview-view, .writing.writing.cm-s-obsidian {
+  text-align: justify;
+}
+.writing.writing .markdown-preview-view pre, .writing.writing.markdown-preview-view pre, .writing.writing .HyperMD-codeblock:not(.cm-formatting-code-block) {
+  border-left: 5px solid var(--code-bg);
+  border-right: 5px solid var(--code-text);
+  filter: saturate(70%);
+}
+.writing.writing .footnote-link, .writing.writing .cm-inline-footnote, .writing.writing .cm-inline-footnote-end, .writing.writing .cm-inline-footnote-end + .cm-link {
+  color: var(--inactive);
+}
+.writing.writing .footnote-link:hover, .writing.writing .cm-inline-footnote:hover, .writing.writing .cm-inline-footnote-end:hover, .writing.writing .cm-inline-footnote-end + .cm-link:hover {
+  background-color: var(--link-background-hover);
 }
 
 .writing-document:not(.is-mobile) {

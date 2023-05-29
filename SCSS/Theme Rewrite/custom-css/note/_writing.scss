@@ -1,0 +1,85 @@
+.writing.writing {
+
+    --file-line-width: 550px;
+
+    //Links
+    --link-color: var(--text);
+    --link-color-hover: var(--soft-text);
+    --link-background-hover: var(--highlight);
+    --link-external-color: var(--text);
+    --link-external-color-hover: var(--soft-text);
+    
+    & :is(.internal-link, .cm-hmd-internal-link)::after,
+    & .external-link::after {
+        font-family: var(--its);
+        font-size: calc(var(--font-text-size) - 2px);
+        font-style: normal !important;
+        font-weight: 100 !important;
+        vertical-align: 2px;
+        color: var(--accent);
+        opacity: unset;
+    }
+    & :is(.internal-link, .cm-hmd-internal-link)::after { content: "\e819"; }
+    & .external-link::after { content: "\e818"; }
+
+    --highlight: var(--background-modifier-form-field-highlighted) !important;
+    --text-highlight-bg: var(--highlight);
+
+    --hr-icon-symbol: !important;
+
+    //Center Headings
+    --header-text-align: center;
+    --h1-text-align: var(--header-text-align);
+    --h2-text-align: var(--header-text-align);
+    --h3-text-align: var(--header-text-align);
+    --h4-text-align: var(--header-text-align);
+    --h5-text-align: var(--header-text-align);
+    --h6-text-align: var(--header-text-align);
+
+    //Underlines
+    &,
+    &.hcl, & .hcl
+    {
+        --header-border-line-height: 0;
+        --h1-border-line-height: var(--header-border-line-height);
+        --h2-border-line-height: var(--header-border-line-height);
+        --h3-border-line-height: var(--header-border-line-height);
+        --h4-border-line-height: var(--header-border-line-height);
+        --h5-border-line-height: var(--header-border-line-height);
+        --h6-border-line-height: var(--header-border-line-height);
+    }
+
+    //Justify body text
+    & .markdown-preview-section,
+    & .cm-s-obsidian,
+    &.markdown-preview-view,
+    &.cm-s-obsidian 
+    { text-align: justify; }
+
+    //Blockquote
+    --blockquote-background-color: transparent;
+    --blockquote-border-thickness: 3px;
+    --blockquote-border-color: var(--accent);
+    
+    //Code
+    --code-normal: var(--text);
+    --code-background: var(--td);
+    & .markdown-preview-view pre,
+    &.markdown-preview-view pre,
+    & .HyperMD-codeblock:not(.cm-formatting-code-block) 
+    {
+        border-left: 5px solid var(--code-bg);
+        border-right: 5px solid var(--code-text);
+        filter: saturate(70%);
+    }
+
+    //Footnotes
+    & .footnote-link,
+    & .cm-inline-footnote,
+    & .cm-inline-footnote-end, 
+    & .cm-inline-footnote-end + .cm-link
+    { 
+        color: var(--inactive); 
+        &:hover {background-color: var(--link-background-hover); }
+    }
+}

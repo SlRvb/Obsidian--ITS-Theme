@@ -16,6 +16,8 @@ body
     --link-border: none;
     
     --link-transform: none;
+    --link-background: transparent;
+    --link-background-hover: var(--link-background);
 }
 
 
@@ -33,6 +35,11 @@ a[href^='https'],
     font-weight: var(--link-weight);
     border-bottom: var(--link-border);
     text-transform: var(--link-transform);
+    background-color: var(--link-background);
+
+    &:hover {
+        background-color: var(--link-background-hover);
+    }
 }
 
 

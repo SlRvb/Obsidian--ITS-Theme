@@ -604,7 +604,7 @@ settings:
         type: class-toggle
     -
         title: Center Images
-        description: Center ALL images.
+        description: Center ALL images, excluding those with |left or |right in them.
         id: img-adj-center
         type: class-toggle
     -
@@ -6108,7 +6108,7 @@ img[alt][alt][alt*=wfull],
 
 /*Image Locations*/
 /*Center Image*/
-.img-adj-center img,
+.img-adj-center.img-adj-center img,
 img:is([alt*=ctr], [alt*=center]) {
   display: block;
   margin-left: auto;
@@ -9409,6 +9409,7 @@ iframe {
 }
 
 /*Spaced Lists*/
+.spaced-lists li,
 .s-li li {
   margin-top: 10px;
 }

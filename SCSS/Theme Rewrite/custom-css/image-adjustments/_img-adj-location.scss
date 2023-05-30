@@ -3,9 +3,9 @@
 
 /*Center Image*/
 // .image-embed:is([src*="#ctr"], [src*="#center"])
-.img-adj-center img,
+.img-adj-center.img-adj-center img,
 img:is([alt*="ctr"], [alt*="center"]) {
-    display:block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }

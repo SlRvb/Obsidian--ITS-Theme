@@ -603,7 +603,7 @@ settings:
         type: class-toggle
     -
         title: Center Images
-        description: Center ALL images.
+        description: Center ALL images, excluding those with |left or |right in them.
         id: img-adj-center
         type: class-toggle
     -

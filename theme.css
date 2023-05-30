@@ -1680,6 +1680,12 @@ settings:
         description: Hide the horizontal Line Symbol entirely
         id: hr-no-icon
         type: class-toggle
+    -
+        title: Horizontal Line Symbol 
+        id: ITS-HR-Line-Symbol
+        type: heading
+        level: 3
+        collapsed: true        
     - 
         title: Horizontal Line Symbol
         description: Add quotations around symbol ("⚡"). Use the codepoint for symbols from supported font icons ("\e800").
@@ -6102,7 +6108,7 @@ img[alt][alt][alt*=wfull],
 
 /*Image Locations*/
 /*Center Image*/
-.img-adj-center,
+.img-adj-center img,
 img:is([alt*=ctr], [alt*=center]) {
   display: block;
   margin-left: auto;
@@ -8990,7 +8996,9 @@ iframe {
 }
 
 /*Dataview*/
-.dvl .block-language-dataviewjs .dataview-result-list-li, .dvl .list-view-ul li {
+.dataview-list .block-language-dataviewjs .dataview-result-list-li, .dataview-list .list-view-ul li,
+.dvl .block-language-dataviewjs .dataview-result-list-li,
+.dvl .list-view-ul li {
   background-color: var(--note);
   border: var(--box-border-m);
   box-shadow: var(--shadow-m);
@@ -8998,22 +9006,31 @@ iframe {
   padding: 10px;
   margin-left: -25px;
 }
-.dvl .block-language-dataviewjs .dataview-result-list-li::before, .dvl .list-view-ul li::before {
+.dataview-list .block-language-dataviewjs .dataview-result-list-li::before, .dataview-list .list-view-ul li::before,
+.dvl .block-language-dataviewjs .dataview-result-list-li::before,
+.dvl .list-view-ul li::before {
   margin-left: -27px;
   display: none;
 }
-.dvl .block-language-dataviewjs .dataview-result-list-li:nth-child(even), .dvl .list-view-ul li:nth-child(even) {
+.dataview-list .block-language-dataviewjs .dataview-result-list-li:nth-child(even), .dataview-list .list-view-ul li:nth-child(even),
+.dvl .block-language-dataviewjs .dataview-result-list-li:nth-child(even),
+.dvl .list-view-ul li:nth-child(even) {
   border: var(--box-border-m);
 }
-.dvl.kanban .block-language-dataviewjs .dataview-result-list-li, .dvl.kanban .list-view-ul li {
+.dataview-list.kanban .block-language-dataviewjs .dataview-result-list-li, .dataview-list.kanban .list-view-ul li,
+.dvl.kanban .block-language-dataviewjs .dataview-result-list-li,
+.dvl.kanban .list-view-ul li {
   background-color: var(--aside-bg);
 }
-.dvl.kanban .block-language-dataviewjs .dataview-result-list-li, .dvl.kanban .list-view-ul li {
+.dataview-list.kanban .block-language-dataviewjs .dataview-result-list-li, .dataview-list.kanban .list-view-ul li,
+.dvl.kanban .block-language-dataviewjs .dataview-result-list-li,
+.dvl.kanban .list-view-ul li {
   flex: 1 1 200px;
   box-shadow: 4px 4px 0 var(--outline);
   border: 1px solid var(--outline);
   margin-bottom: 10px;
 }
+.dataview-list.kanban table td > .dataview-ul,
 .dvl.kanban table td > .dataview-ul {
   display: block;
   padding-inline-start: 1em;
@@ -9076,13 +9093,13 @@ iframe {
   --table-row-alt-background: transparent;
 }
 
-.tables-alt-original .markdown-rendered tbody tr > td:nth-child(2n+2), .tables-alt-original .markdown-rendered tbody tr:nth-child(odd) {
+:is(.table-alto, .tables-alt-original) .markdown-rendered tbody tr > td:nth-child(2n+2), :is(.table-alto, .tables-alt-original) .markdown-rendered tbody tr:nth-child(odd) {
   background-color: transparent;
 }
-.tables-alt-original .markdown-rendered tbody tr > td:nth-child(odd) {
+:is(.table-alto, .tables-alt-original) .markdown-rendered tbody tr > td:nth-child(odd) {
   background-color: var(--table-column-alt-background);
 }
-.tables-alt-original .markdown-rendered tbody tr:nth-child(even) {
+:is(.table-alto, .tables-alt-original) .markdown-rendered tbody tr:nth-child(even) {
   background-color: var(--table-row-alt-background);
 }
 
@@ -10042,7 +10059,8 @@ h6):after {
 }
 
 .h-line.h-line,
-.hide-header-underline.hide-header-underline {
+.hide-header-underline.hide-header-underline,
+:is(.h-line, .hide-header-underline) div {
   --header-border-line-height: 0;
   --h1-border-line-height: var(--header-border-line-height);
   --h2-border-line-height: var(--header-border-line-height);
@@ -10052,27 +10070,27 @@ h6):after {
   --h6-border-line-height: var(--header-border-line-height);
 }
 
-.hide-header-underline-1 {
+.hide-header-underline-1 div {
   --h1-border-line-height: 0;
 }
 
-.hide-header-underline-2 {
+.hide-header-underline-2 div {
   --h2-border-line-height: 0;
 }
 
-.hide-header-underline-3 {
+.hide-header-underline-3 div {
   --h3-border-line-height: 0;
 }
 
-.hide-header-underline-4 {
+.hide-header-underline-4 div {
   --h4-border-line-height: 0;
 }
 
-.hide-header-underline-5 {
+.hide-header-underline-5 div {
   --h5-border-line-height: 0;
 }
 
-.hide-header-underline-6 {
+.hide-header-underline-6 div {
   --h6-border-line-height: 0;
 }
 
@@ -10095,9 +10113,10 @@ h6):after {
   --link-external-color: var(--soft-text);
 }
 
-.hr-no-icon.hr-no-icon,
-.hr-tog.hr-tog {
+.hr-no-icon.hr-no-icon div,
+.hr-tog.hr-tog div {
   --hr-icon-symbol: ;
+  --hr-image: ;
 }
 
 .inline-title-style-heading {

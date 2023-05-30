@@ -1,5 +1,7 @@
 .h-line.h-line,
-.hide-header-underline.hide-header-underline { 
+.hide-header-underline.hide-header-underline,
+:is(.h-line, .hide-header-underline) div //Override CSSClass
+{ 
     --header-border-line-height: 0;
     --h1-border-line-height: var(--header-border-line-height);
     --h2-border-line-height: var(--header-border-line-height);
@@ -9,9 +11,9 @@
     --h6-border-line-height: var(--header-border-line-height);
 }
 
-.hide-header-underline-1 { --h1-border-line-height: 0; }
-.hide-header-underline-2 { --h2-border-line-height: 0; }
-.hide-header-underline-3 { --h3-border-line-height: 0; }
-.hide-header-underline-4 { --h4-border-line-height: 0; }
-.hide-header-underline-5 { --h5-border-line-height: 0; }
-.hide-header-underline-6 { --h6-border-line-height: 0; }
+.hide-header-underline-1 div { --h1-border-line-height: 0; }
+.hide-header-underline-2 div { --h2-border-line-height: 0; }
+.hide-header-underline-3 div { --h3-border-line-height: 0; }
+.hide-header-underline-4 div { --h4-border-line-height: 0; }
+.hide-header-underline-5 div { --h5-border-line-height: 0; }
+.hide-header-underline-6 div { --h6-border-line-height: 0; }

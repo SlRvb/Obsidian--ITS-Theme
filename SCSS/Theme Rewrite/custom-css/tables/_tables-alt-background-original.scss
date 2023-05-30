@@ -1,5 +1,5 @@
 //Odd Table Alt Background
-.tables-alt-original .markdown-rendered tbody tr {
+:is(.table-alto, .tables-alt-original) .markdown-rendered tbody tr {
     & > td:nth-child(2n+2),
     &:nth-child(odd)
     { background-color: transparent; }

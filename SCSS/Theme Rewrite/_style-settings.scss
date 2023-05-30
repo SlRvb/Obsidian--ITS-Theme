@@ -1679,6 +1679,12 @@ settings:
         description: Hide the horizontal Line Symbol entirely
         id: hr-no-icon
         type: class-toggle
+    -
+        title: Horizontal Line Symbol 
+        id: ITS-HR-Line-Symbol
+        type: heading
+        level: 3
+        collapsed: true        
     - 
         title: Horizontal Line Symbol
         description: Add quotations around symbol ("⚡"). Use the codepoint for symbols from supported font icons ("\e800").

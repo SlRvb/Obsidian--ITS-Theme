@@ -9200,6 +9200,7 @@ iframe {
   vertical-align: 2px;
   color: var(--accent);
   opacity: unset;
+  margin-right: -8px;
 }
 .writing.writing .internal-link::after, .writing.writing .cm-underline::after {
   content: "\e819";

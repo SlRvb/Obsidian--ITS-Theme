@@ -1,7 +1,7 @@
 .writing.writing {
 
     --file-line-width: 600px;
-    
+
     &.markdown-source-view.mod-cm6 .cm-sizer,
     & .markdown-source-view.mod-cm6 .cm-scroller .cm-sizer,
     & .markdown-preview-sizer 
@@ -28,6 +28,7 @@
         vertical-align: 2px;
         color: var(--accent);
         opacity: unset;
+        margin-right: -8px;
     }
     & .internal-link::after, .cm-underline::after { content: "\e819"; }
     & .external-link::after { content: "\e818"; }

@@ -9,6 +9,8 @@ body {
 .obsidian-initiative-tracker.obsidian-initiative-tracker.obsidian-initiative-tracker {
     margin: 0;
 
+    & .initiative-tracker-table { width: auto; border-spacing: 0; }
+
     //
     & .initiative-tracker-creature:hover td {
         &:first-child {
@@ -19,7 +21,7 @@ body {
     }
     
     & .initiative-container {
-        & .tree-item-flair-outer { margin: 0; }
+        & .tree-item-flair-outer { margin: 0; padding-left: 0; }
         
         border-top-left-radius: var(--radius-s);
         border-bottom-left-radius: var(--radius-s);
@@ -31,7 +33,7 @@ body {
     }
 
 
-    & .editable.initiative.tree-item-flair { background: var(--hr); }
+    & .editable.initiative.tree-item-flair { background: var(--td); }
 }
 
 //Encounters

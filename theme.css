@@ -5585,6 +5585,10 @@ body {
 .obsidian-initiative-tracker.obsidian-initiative-tracker.obsidian-initiative-tracker {
   margin: 0;
 }
+.obsidian-initiative-tracker.obsidian-initiative-tracker.obsidian-initiative-tracker .initiative-tracker-table {
+  width: auto;
+  border-spacing: 0;
+}
 .obsidian-initiative-tracker.obsidian-initiative-tracker.obsidian-initiative-tracker .initiative-tracker-creature:hover td {
   border-top: 1px solid var(--initiative-tracker-border);
   border-bottom: 1px solid var(--initiative-tracker-border);
@@ -5598,13 +5602,14 @@ body {
 }
 .obsidian-initiative-tracker.obsidian-initiative-tracker.obsidian-initiative-tracker .initiative-container .tree-item-flair-outer {
   margin: 0;
+  padding-left: 0;
 }
 .obsidian-initiative-tracker.obsidian-initiative-tracker.obsidian-initiative-tracker .controls-container {
   border-top-right-radius: var(--radius-s);
   border-bottom-right-radius: var(--radius-s);
 }
 .obsidian-initiative-tracker.obsidian-initiative-tracker.obsidian-initiative-tracker .editable.initiative.tree-item-flair {
-  background: var(--hr);
+  background: var(--td);
 }
 
 .encounter-container > .encounter-instance {

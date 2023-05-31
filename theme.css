@@ -9166,7 +9166,7 @@ iframe {
 }
 
 .writing.writing {
-  --file-line-width: 550px;
+  --file-line-width: 600px;
   --link-color: var(--text);
   --link-color-hover: var(--soft-text);
   --link-background-hover: var(--highlight);
@@ -9187,6 +9187,10 @@ iframe {
   --blockquote-border-color: var(--accent);
   --code-normal: var(--text);
   --code-background: var(--td);
+}
+.writing.writing.markdown-source-view.mod-cm6 .cm-sizer, .writing.writing .markdown-source-view.mod-cm6 .cm-scroller .cm-sizer, .writing.writing .markdown-preview-sizer {
+  max-width: var(--file-line-width);
+  margin: auto;
 }
 .writing.writing .internal-link::after, .writing.writing .cm-underline::after, .writing.writing .external-link::after {
   font-family: var(--its);

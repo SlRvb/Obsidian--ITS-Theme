@@ -494,6 +494,11 @@ settings:
         id: paper
         type: class-toggle
     -
+        title: Writing
+        description: Minimalistic/distraction free layout design for notes.
+        id: writing
+        type: class-toggle
+    -
         title: Text
         id: ITS-Text
         type: heading
@@ -9183,7 +9188,7 @@ iframe {
   --code-normal: var(--text);
   --code-background: var(--td);
 }
-.writing.writing :is(.internal-link, .cm-hmd-internal-link)::after, .writing.writing .external-link::after {
+.writing.writing .internal-link::after, .writing.writing .cm-underline::after, .writing.writing .external-link::after {
   font-family: var(--its);
   font-size: calc(var(--font-text-size) - 2px);
   font-style: normal !important;
@@ -9192,7 +9197,7 @@ iframe {
   color: var(--accent);
   opacity: unset;
 }
-.writing.writing :is(.internal-link, .cm-hmd-internal-link)::after {
+.writing.writing .internal-link::after, .writing.writing .cm-underline::after {
   content: "\e819";
 }
 .writing.writing .external-link::after {

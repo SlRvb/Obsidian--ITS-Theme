@@ -9,8 +9,10 @@
     --link-external-color: var(--text);
     --link-external-color-hover: var(--soft-text);
     
-    & :is(.internal-link, .cm-hmd-internal-link)::after,
-    & .external-link::after {
+    & .internal-link::after,
+    & .cm-underline::after,
+    & .external-link::after 
+    {
         font-family: var(--its);
         font-size: calc(var(--font-text-size) - 2px);
         font-style: normal !important;
@@ -19,7 +21,7 @@
         color: var(--accent);
         opacity: unset;
     }
-    & :is(.internal-link, .cm-hmd-internal-link)::after { content: "\e819"; }
+    & .internal-link::after, .cm-underline::after { content: "\e819"; }
     & .external-link::after { content: "\e818"; }
 
     --highlight: var(--background-modifier-form-field-highlighted) !important;

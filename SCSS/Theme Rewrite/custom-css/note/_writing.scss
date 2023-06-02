@@ -30,7 +30,8 @@
         opacity: unset;
         margin-right: -8px;
     }
-    & .internal-link::after, .cm-underline::after { content: "\e819"; }
+    & .internal-link::after, 
+    & span:not(.cm-link) .cm-underline::after { content: "\e819"; }
     & .external-link::after { content: "\e818"; }
 
     --highlight: var(--background-modifier-form-field-highlighted) !important;

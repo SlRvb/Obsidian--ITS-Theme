@@ -1,23 +1,26 @@
+.internal-embed {
+    //Height Adjustment
+    &[alt*="htiny"]     .markdown-embed-content { height: var(--tiny); }
+    &[alt*="hsmall"]    .markdown-embed-content { height: var(--small); }
+    &[alt*="hs-med"]    .markdown-embed-content { height: var(--small-med); }
+    &[alt*="hm-sm"]     .markdown-embed-content { height: var(--med-small); }
+    &[alt*="hmed"]      .markdown-embed-content { height: var(--medium); }
+    &[alt*="hm-tl"]     .markdown-embed-content { height: var(--med-tall); }
+    &[alt*="htall"]     .markdown-embed-content { height: var(--tall); }
 
-/*Height Adjustment*/
-.internal-embed[alt*="htiny"]   .markdown-embed-content { height: var(--tiny); }
-.internal-embed[alt*="hsmall"]  .markdown-embed-content { height: var(--small); }
-.internal-embed[alt*="hs-med"]  .markdown-embed-content { height: var(--small-med); }
-.internal-embed[alt*="hm-sm"]   .markdown-embed-content { height: var(--med-small); }
-.internal-embed[alt*="hmed"]    .markdown-embed-content { height: var(--medium); }
-.internal-embed[alt*="hm-tl"]   .markdown-embed-content { height: var(--med-tall); }
-.internal-embed[alt*="htall"]   .markdown-embed-content { height: var(--tall); }
-
-.internal-embed[alt*="full"] .markdown-embed-content,
-.internal-embed[alt*="full"] .markdown-embed-content > .markdown-preview-view 
-{ max-height: unset; }
+    &[alt*="full"] {
+        & .markdown-embed-content,
+        & .markdown-embed-content > .markdown-preview-view 
+        { max-height: unset; }
+    } 
 
 
-/*Width Adjustment*/
-.internal-embed[alt*="wtiny"]   { width: 20%; }
-.internal-embed[alt*="wsmall"]  { width: 30%; }
-.internal-embed[alt*="ws-med"]  { width: 40%; }
-.internal-embed[alt*="wm-small"]{ width: 50%; }
-.internal-embed[alt*="wmed"]    { width: 60%; }
-.internal-embed[alt*="wm-tl"]   { width: 80%; }
-.internal-embed[alt*="wtall"]   { width: 95%; }
+    //Width Adjustment
+    &[alt*="wtiny"]     { width: 20%; }
+    &[alt*="wsmall"]    { width: 30%; }
+    &[alt*="ws-med"]    { width: 40%; }
+    &[alt*="wm-small"]  { width: 50%; }
+    &[alt*="wmed"]      { width: 60%; }
+    &[alt*="wm-tl"]     { width: 80%; }
+    &[alt*="wtall"]     { width: 95%; }
+}

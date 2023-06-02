@@ -11,7 +11,12 @@
     margin-top: -10px;
     max-width: 30vh;
     
-    & > .callout-content { overflow: hidden; }
+    & > .callout-content { 
+        overflow: hidden; 
+        
+        & > p .image-embed + br { display: none; }
+        & img { display: block; margin: auto; }
+    }
     
     & > .callout-title { display: none; }
     & p {

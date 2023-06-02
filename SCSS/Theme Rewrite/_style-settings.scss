@@ -150,7 +150,31 @@ settings:
         format: px
         min: 10
         max: 50
-        step: 1
+        step: 1    
+    -
+        title: Popover
+        id: ITS-Sizing-Popover
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Popover Width
+        id: popover-width
+        type: variable-number-slider
+        default: 450
+        format: px
+        min: 300
+        max: 1000
+        step: 100
+    -
+        title: Popover Height
+        id: popover-height
+        type: variable-number-slider
+        default: 400
+        format: px
+        min: 300
+        max: 1000
+        step: 100
     -
         title: Settings
         id: ITS-Settings
@@ -1887,6 +1911,13 @@ settings:
         opacity: true
         default-dark: '#001c4a15'
         default-light: '#001c4a15'
+    -
+        title: Popover Background Color
+        id: popover-background
+        type: variable-themed-color
+        format: rgb
+        default-dark: '#1a1e24'
+        default-light: '#f8fbff'
     -
         title: Note Elements
         id: Note-Element-Colors

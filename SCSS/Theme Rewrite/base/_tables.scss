@@ -39,6 +39,10 @@ body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row {
 .markdown-rendered table td {
     word-break: normal;
 }
+.is-live-preview .cm-table-widget table {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
 
 //Fix Missing Font Size Variable
 .cm-s-obsidian .HyperMD-table-row {

@@ -1,6 +1,14 @@
 
 .popover.hover-popover {
     min-height: auto; //Fix for mod-empty
+    background-color: var(--popover-background);
 
-    & > .markdown-embed > .markdown-embed-content { padding: 0; }
+
+    & > .markdown-embed > .markdown-embed-content { 
+        padding: 0; 
+    }
+
+    & .markdown-preview-view {
+        background-color: var(--popover-background);
+    }
 }

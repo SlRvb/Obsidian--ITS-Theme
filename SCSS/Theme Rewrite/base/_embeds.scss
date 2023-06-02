@@ -61,6 +61,10 @@ body {
     // & .markdown-preview-view { padding: var(--embed-padding);}
     & .markdown-embed-content { padding: var(--embed-padding); }
 }
+.markdown-embed-content > .markdown-preview-view > .markdown-preview-sizer {
+    min-height: unset!important;
+}
+
 .markdown-embed.markdown-embed hr {
     margin: 1.5em 0;
 }
@@ -74,3 +78,5 @@ body {
 
 //File Embeds
 .file-embed { background-color: var(--outer-bar); }
+
+

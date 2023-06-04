@@ -34,7 +34,7 @@
     & span:not(.cm-link) .cm-underline::after { content: "\e819"; }
     & .external-link::after { content: "\e818"; }
 
-    --highlight: var(--background-modifier-form-field-highlighted) !important;
+    --highlight: var(--td) !important;
     --text-highlight-bg: var(--highlight);
 
     --hr-icon-symbol: !important;

@@ -6115,63 +6115,92 @@ img[alt][alt][alt*=wfull] {
   width: 100%;
 }
 
-img[alt][alt*=relative] {
-  --micro: 20%;
-  --tiny: 30%;
-  --small: 40%;
-  --small-med: 50%;
-  --med-small: 60%;
-  --medium: 70%;
-  --med-tall: 80%;
-  --tall: 95%;
+.image-embed[alt][alt*=relative],
+div:not(.image-embed) > img[alt][alt*=relative] {
+  --micro: 10%;
+  --tiny: 20%;
+  --small: 30%;
+  --small-med: 40%;
+  --med-small: 50%;
+  --medium: 60%;
+  --med-tall: 70%;
+  --tall: 85%;
 }
-img[alt][alt*=relative][alt*=wmicro] {
+.image-embed[alt][alt*=relative][alt*=wmicro],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wmicro] {
   width: var(--micro);
 }
-img[alt][alt*=relative][alt*=wtiny] {
+.image-embed[alt][alt*=relative][alt*=wtiny],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wtiny] {
   width: var(--tiny);
 }
-img[alt][alt*=relative][alt*=wsmall] {
+.image-embed[alt][alt*=relative][alt*=wsmall],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wsmall] {
   width: var(--small);
 }
-img[alt][alt*=relative][alt*=ws-med] {
+.image-embed[alt][alt*=relative][alt*=ws-med],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=ws-med] {
   width: var(--small-med);
 }
-img[alt][alt*=relative][alt*=wm-sm] {
+.image-embed[alt][alt*=relative][alt*=wm-sm],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wm-sm] {
   width: var(--med-small);
 }
-img[alt][alt*=relative][alt*=wmed] {
+.image-embed[alt][alt*=relative][alt*=wmed],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wmed] {
   width: var(--medium);
 }
-img[alt][alt*=relative][alt*=wm-tl] {
+.image-embed[alt][alt*=relative][alt*=wm-tl],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wm-tl] {
   width: var(--med-tall);
 }
-img[alt][alt*=relative][alt*=wtall] {
+.image-embed[alt][alt*=relative][alt*=wtall],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wtall] {
   width: var(--tall);
 }
-img[alt][alt*=relative][alt*=hmicro] {
-  height: var(--micro);
+.image-embed[alt][alt*=relative][alt*=hmicro],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hmicro] {
+  width: var(--micro);
 }
-img[alt][alt*=relative][alt*=htiny] {
-  height: var(--tiny);
+.image-embed[alt][alt*=relative][alt*=htiny],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=htiny] {
+  width: var(--tiny);
 }
-img[alt][alt*=relative][alt*=hsmall] {
-  height: var(--small);
+.image-embed[alt][alt*=relative][alt*=hsmall],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hsmall] {
+  width: var(--small);
 }
-img[alt][alt*=relative][alt*=hs-med] {
-  height: var(--small-med);
+.image-embed[alt][alt*=relative][alt*=hs-med],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hs-med] {
+  width: var(--small-med);
 }
-img[alt][alt*=relative][alt*=hm-sm] {
-  height: var(--med-small);
+.image-embed[alt][alt*=relative][alt*=hm-sm],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hm-sm] {
+  width: var(--med-small);
 }
-img[alt][alt*=relative][alt*=hmed] {
-  height: var(--medium);
+.image-embed[alt][alt*=relative][alt*=hmed],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hmed] {
+  width: var(--medium);
 }
-img[alt][alt*=relative][alt*=hm-tl] {
-  height: var(--med-tall);
+.image-embed[alt][alt*=relative][alt*=hm-tl],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hm-tl] {
+  width: var(--med-tall);
 }
-img[alt][alt*=relative][alt*=htall] {
-  height: var(--tall);
+.image-embed[alt][alt*=relative][alt*=htall],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=htall] {
+  width: var(--tall);
+}
+.image-embed[alt][alt*=relative][alt*=hfull],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hfull] {
+  width: 100%;
+}
+
+.image-embed[alt][alt*=relative],
+div:not(.image-embed) > img[alt][alt*=relative] {
+  display: block;
+  margin: auto;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 /*Height*/
@@ -9221,7 +9250,7 @@ iframe {
   --link-background-hover: var(--highlight);
   --link-external-color: var(--text);
   --link-external-color-hover: var(--soft-text);
-  --highlight: var(--background-modifier-form-field-highlighted) !important;
+  --highlight: var(--td) !important;
   --text-highlight-bg: var(--highlight);
   --hr-icon-symbol: !important;
   --header-text-align: center;

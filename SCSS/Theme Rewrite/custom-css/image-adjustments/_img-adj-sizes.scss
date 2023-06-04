@@ -70,15 +70,17 @@ img[alt][alt] {
 }
 
 //Relative Sizing
-img[alt][alt*="relative"] {
-    --micro: 20%;
-    --tiny: 30%;
-    --small: 40%;
-    --small-med: 50%;
-    --med-small: 60%;
-    --medium: 70%;
-    --med-tall: 80%;
-    --tall: 95%;
+.image-embed[alt][alt*="relative"],
+div:not(.image-embed) > img[alt][alt*="relative"] 
+{
+    --micro: 10%;
+    --tiny: 20%;
+    --small: 30%;
+    --small-med: 40%;
+    --med-small: 50%;
+    --medium: 60%;
+    --med-tall: 70%;
+    --tall: 85%;
 
     &[alt*="wmicro"]    { width: var(--micro); }
     &[alt*="wtiny"]     { width: var(--tiny); }
@@ -90,17 +92,24 @@ img[alt][alt*="relative"] {
     &[alt*="wtall"]     { width: var(--tall); }
 
     
-    &[alt*="hmicro"]    { height: var(--micro); }
-    &[alt*="htiny"]     { height: var(--tiny); }
-    &[alt*="hsmall"]    { height: var(--small); }
-    &[alt*="hs-med"]    { height: var(--small-med); }
-    &[alt*="hm-sm"]     { height: var(--med-small); }
-    &[alt*="hmed"]      { height: var(--medium); }
-    &[alt*="hm-tl"]     { height: var(--med-tall); }
-    &[alt*="htall"]     { height: var(--tall); }
+    &[alt*="hmicro"]    { width: var(--micro); }
+    &[alt*="htiny"]     { width: var(--tiny); }
+    &[alt*="hsmall"]    { width: var(--small); }
+    &[alt*="hs-med"]    { width: var(--small-med); }
+    &[alt*="hm-sm"]     { width: var(--med-small); }
+    &[alt*="hmed"]      { width: var(--medium); }
+    &[alt*="hm-tl"]     { width: var(--med-tall); }
+    &[alt*="htall"]     { width: var(--tall); }
+
+    &[alt*="hfull"]     { width: 100%; }
 }
-
-
+.image-embed[alt][alt*="relative"],
+div:not(.image-embed) > img[alt][alt*="relative"] {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    object-fit: cover;
+}
 
 
 

@@ -25,7 +25,7 @@
     --text-highlight-bg: rgba(87, 113, 156, 0.4);
     --text-highlight-bg-active: rgba(134, 168, 197, 0.4);
 
-    --text-normal: var(--text); 
+    --text-normal: var(--text);
     --text-muted: var(--soft-text);
     --text-accent: var(--accent2-lite);
     --text-accent-hover: var(--accent2);
@@ -57,19 +57,19 @@
     
     --tag: #353d52;
     
-    --hr: #414a5f;          
-    --embed-bg: #0E0F15;    
-    --aside-bg: #12151d;    
+    --hr: #414a5f;
+    --embed-bg: #0E0F15;
+    --aside-bg: #12151d;
     
-    --accent: #515b71;              
-    --lite-accent: #8e9ab4;         
-    --accent2: #889FC3;             
-    --accent2-lite: #9DB2CF;        
-    --dark-accent: #333A49;         
-    --deep-dark-accent: #222731;    
-    --table: #242b3d;               
+    --accent: #515b71;
+    --lite-accent: #8e9ab4;
+    --accent2: #889FC3;
+    --accent2-lite: #9DB2CF;
+    --dark-accent: #333A49;
+    --deep-dark-accent: #222731;
+    --table: #242b3d;
 
-    --graph-lines: #323946;   
+    --graph-lines: #323946;
 
     --sphd-pre-1: var(--lite-accent);
     --sphd-pre-2: var(--code-text);
@@ -99,7 +99,7 @@
     --text-highlight-bg: rgba(129,155,199,0.25);
     --text-highlight-bg-active: rgba(172,210,255,0.25);
 
-    --text-normal: var(--text); 
+    --text-normal: var(--text);
     --text-muted: var(--soft-text);
     --text-accent: var(--accent2-lite);
     --text-accent-hover: var(--accent2);
@@ -115,25 +115,25 @@
     //
     --outer-bar:#eef3fd;
     --side-bar: var(--note);
-    --dark-sidebar: #F1F7FF;    
-    --f-icon: #A6B4CC;          
-    --folder: #99accf;          
+    --dark-sidebar: #F1F7FF;
+    --f-icon: #A6B4CC;
+    --folder: #99accf;
     --note: #f8fbff;
     --note-rgb: 248, 251, 255;
     
-    --headers: #6e7a92;     
-    --text: #76859c;        
-    --soft-text: #90a0c3;   
-    --code-text: #8193b5;   
+    --headers: #6e7a92;
+    --text: #76859c;
+    --soft-text: #90a0c3;
+    --code-text: #8193b5;
     --i-at: #8FAABE;
     
-    --accent: #aebdd4;              
-    --lite-accent: #a6aec7;         
+    --accent: #aebdd4;
+    --lite-accent: #a6aec7;
     --accent2: #404c62;
-    --accent2-lite: #000000;        
-    --dark-accent: #EBF2F9;         
-    --deep-dark-accent: #171C22;    
-    --inactive: #C0C8D6;            
+    --accent2-lite: #000000;
+    --dark-accent: #EBF2F9;
+    --deep-dark-accent: #171C22;
+    --inactive: #C0C8D6;
     --table: #ccd6eb;
     
     --fg: var(--headers);

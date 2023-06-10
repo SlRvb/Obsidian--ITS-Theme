@@ -8265,7 +8265,6 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   padding: 0;
   margin: 0;
   --callout-content-padding: 0;
-  margin-top: -10px;
   max-width: 30vh;
 }
 .callout.callout[data-callout~=caption] > .callout-content {

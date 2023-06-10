@@ -8270,7 +8270,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout.callout[data-callout~=caption] > .callout-content {
   overflow: hidden;
 }
-.callout.callout[data-callout~=caption] > .callout-content > p .image-embed + br {
+.callout.callout[data-callout~=caption] > .callout-content > p :is(.image-embed, img) + br {
   display: none;
 }
 .callout.callout[data-callout~=caption] > .callout-content img {

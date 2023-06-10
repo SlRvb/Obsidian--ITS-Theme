@@ -14,7 +14,7 @@
     & > .callout-content { 
         overflow: hidden; 
         
-        & > p .image-embed + br { display: none; }
+        & > p :is(.image-embed, img) + br { display: none; }
         & img { display: block; margin: auto; }
     }
     

@@ -43,7 +43,8 @@
     --scrollbar-height: 8px;
 }
 
-.sizing-large.sizing-large {
+.sizing-large.sizing-large,
+.sizing-large.sizing-large div {
     --font-ui-smaller: 16px;
     --font-ui-small: 18px;
     --font-ui-medium: 20px;
@@ -53,7 +54,10 @@
     --font-smaller: 1.2em;
     --font-small: 1.5em;
 
-    --font-text-size: 16px;
+    --font-text-size: 18px;
+    --font-size: var(--font-smallest);
+    --table-row-edit-font-size: 18px;
+    --font-frontmatter: var(--font-text-size);
 
     --icon-xs: 16px;
     --icon-s: 18px;

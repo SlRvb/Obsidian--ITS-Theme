@@ -1,5 +1,8 @@
+body {
+    --font-frontmatter: var(--font-small);
+}
 //Fix front-matter font size
-.cm-hmd-frontmatter { font-size: var(--font-small); }
+.cm-hmd-frontmatter { font-size: var(--font-frontmatter); }
 
 .frontmatter-container:not(.is-collapsed) {
     border-bottom: 2px solid var(--hr);

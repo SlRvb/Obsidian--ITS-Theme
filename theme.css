@@ -1597,6 +1597,10 @@ settings:
         title: Wide Table
         description: Tables widened to touch ends of the page
         id: tables-wide
+        type: class-toggle    
+    - 
+        title: Disable Row Hover Highlight
+        id: tables-no-hover
         type: class-toggle
     -
         title: Table Header Adjustments
@@ -9188,6 +9192,16 @@ iframe {
 }
 :is(.table-alto, .tables-alt-original) .markdown-rendered tbody tr:nth-child(even) {
   background-color: var(--table-row-alt-background);
+}
+
+.tables-no-hover {
+  --table-header-background-hover: var(--table-header-background);
+}
+.tables-no-hover tbody tr:nth-child(odd):hover {
+  --table-row-background-hover: var(--table-row-alt-background);
+}
+.tables-no-hover tbody tr:nth-child(even):hover {
+  --table-row-background-hover: var(--table-row-background);
 }
 
 .tables-borders {

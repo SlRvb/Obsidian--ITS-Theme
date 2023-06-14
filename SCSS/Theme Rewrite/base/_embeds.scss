@@ -75,6 +75,10 @@ body {
     right: var(--scrollbar-width);
 }
 
+.markdown-embed .markdown-rendered ol {
+    &:has(li:nth-child(10)) { --list-indent: 30px; }
+    &:has(li:nth-child(100)) { --list-indent: 40px; }
+}
 
 //File Embeds
 .file-embed { background-color: var(--outer-bar); }

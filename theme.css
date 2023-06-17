@@ -10122,7 +10122,7 @@ h6):after {
   margin-left: 0.3em;
 }
 
-.illusion.illusion {
+.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading], .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header), .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading], .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) {
   --h1-background: var(--theme-rainbow-1);
   --h2-background: var(--theme-rainbow-2);
   --h3-background: var(--theme-rainbow-3);
@@ -10136,8 +10136,6 @@ h6):after {
   --h4-border-line-height: var(--header-border-line-height);
   --h5-border-line-height: var(--header-border-line-height);
   --h6-border-line-height: var(--header-border-line-height);
-}
-.illusion.illusion :is(.markdown-preview-view, .is-live-preview), .illusion.illusion:is(.markdown-preview-view, .is-live-preview) {
   --headers: var(--text-dl);
   --h1-color: var(--headers);
   --h2-color: var(--headers);
@@ -10153,16 +10151,17 @@ h6):after {
   --h4-padding: var(--header-padding);
   --h5-padding: var(--header-padding);
   --h6-padding: var(--header-padding);
-}
-.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header), .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) {
   --collapse-icon-color: var(--headers);
   --collapse-icon-color-collapsed: var(--accent-text);
   box-shadow: var(--shadow-l);
 }
-.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) .collapse-indicator, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) .collapse-indicator {
+.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] [class*=cm-formatting], .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .cm-foldPlaceholder, .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) [class*=cm-formatting], .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .cm-foldPlaceholder, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] [class*=cm-formatting], .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .cm-foldPlaceholder, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) [class*=cm-formatting], .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .cm-foldPlaceholder {
+  color: var(--headers);
+}
+.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .collapse-indicator, .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .collapse-indicator, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .collapse-indicator, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .collapse-indicator {
   width: 18px;
 }
-.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) .collapse-indicator svg, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6, .is-live-preview .HyperMD-header) .collapse-indicator svg {
+.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .collapse-indicator svg, .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .collapse-indicator svg, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .collapse-indicator svg, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .collapse-indicator svg {
   width: 12px;
   height: 12px;
 }

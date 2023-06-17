@@ -39,4 +39,7 @@ body {
     --blockquote-border-color: var(--accent);
 }
 
-
+.markdown-rendered blockquote {
+    border-top-right-radius: var(--radius-s);
+    border-bottom-right-radius: var(--radius-s);
+}

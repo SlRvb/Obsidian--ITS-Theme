@@ -27,7 +27,7 @@
     --font-smaller: .88em;
     --font-small: .95em;
 
-    --font-text-size: 14px;
+    // --font-text-size: 14px;
 
     --icon-xs: 12px;
     --icon-s: 13px;
@@ -54,10 +54,11 @@
     --font-smaller: 1.2em;
     --font-small: 1.5em;
 
-    --font-text-size: 18px;
-    --font-size: var(--font-smallest);
-    --table-row-edit-font-size: 18px;
+    // --font-text-size: 18px;
+    // --font-size: var(--font-smallest);
+    --table-row-edit-font-size: var(--font-text-size);
     --font-frontmatter: var(--font-text-size);
+    --code-size: var(--font-text-size);
 
     --icon-xs: 16px;
     --icon-s: 18px;

@@ -31,6 +31,7 @@
     width: auto;
     max-width: 300px;
     float: right;
+    border-radius: var(--radius-s);
 
     // & .image-embed.is-loaded { height: 0; }
 
@@ -48,11 +49,13 @@
     &.is-collapsed .callout-fold {
         border: 1px solid var(--hr, var(--background-modifier-border));
         // padding: 5px 10px;
+        border-radius: var(--radius-m);
     }
     
     //Display title collapse arrow on hover only
-    & > .callout-title .callout-title-inner 
+    & > .callout-title .callout-title-inner
     { display: none; }
+    & > .callout-title .callout-icon { height: 0; }
     
     // Fixed for export: DO NOT display: none; ON CALLOUT ICON
     &:not(

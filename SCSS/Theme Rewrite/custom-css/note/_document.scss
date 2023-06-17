@@ -1,4 +1,6 @@
-.writing-document:not(.is-mobile) {
+.writing-document:not(.is-mobile),
+.writing-document.is-tablet.is-tablet
+{
     .markdown-source-view.mod-cm6 .cm-scroller {
         padding: 0;
     }
@@ -19,9 +21,10 @@
         
         background: var(--note, var(--background-primary));
         box-shadow: 0 0 20px var(--outline, var(--background-box-shadow));
-        max-width: calc(var(--note-width) + var(--padding));
+        max-width: calc(var(--file-line-width) + var(--padding));
         height: auto;
         padding: 0 var(--padding);
+        border-radius: var(--radius-l);
     } 
 
 

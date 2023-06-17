@@ -327,6 +327,7 @@ settings:
         default: 'its'
     -
         title: Vault Title
+        description: Desktop only
         id: ITS-Vault-Title
         type: heading
         level: 2
@@ -527,16 +528,16 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    -
-        title: Note Text Size
-        description: Adjust size for text in notes.
-        id: font-text-size
-        type: variable-number-slider
-        default: 16
-        format: px
-        min: 10
-        max: 20
-        step: 1
+#   -
+#        title: Note Text Size
+#        description: Adjust size for text in notes.
+#        id: font-text-size
+#        type: variable-number-slider
+#        default: 16
+#        format: px
+#        min: 10
+#        max: 20
+#        step: 1
     -
         title: Justify Text
         description: Justify preview and editor text

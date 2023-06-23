@@ -5913,6 +5913,25 @@ img.emoji.emoji {
   border: 0;
 }
 
+/* MAKE.md */
+.mk-sidebar .mk-tree-text::before {
+  display: none;
+}
+.mk-sidebar .mk-tree-item {
+  --vertical-padding: unset;
+  height: unset;
+}
+.mk-sidebar .mk-tree-item:hover {
+  --folder-open-text-color: var(--text-dl);
+}
+.mk-sidebar .mk-tree-item:hover button svg {
+  --icon-color: var(--text-dl);
+  color: var(--text-dl);
+}
+.mk-sidebar .mk-tree-item.tree-item-self {
+  gap: 1px;
+}
+
 /* Vault Icon */
 body {
   --vault-icon-image: "";
@@ -8266,7 +8285,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   grid-template-columns: repeat(5, 1fr);
 }
 
-.callout[data-callout~=cards][data-callout-metadata~=dataview] img {
+.callout[data-callout~=cards][data-callout-metadata~=dataview] img:not(.link-favicon) {
   width: 100%;
   object-fit: cover;
 }

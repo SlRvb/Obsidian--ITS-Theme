@@ -144,7 +144,7 @@
 
 //Image Sizing
 .callout[data-callout~="cards"][data-callout-metadata~="dataview"] {
-    & img { 
+    & img:not(.link-favicon) { 
         width: 100%; 
         object-fit: cover 
     }

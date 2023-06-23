@@ -1,16 +1,22 @@
 /* MAKE.md */
 .mk-sidebar {
+    //Spaces
+    & .mk-main-menu-button:hover { color: var(--text-dl); }
+    //Hide ITS Icon
     & .mk-tree-text::before { display: none; }
-
+    
+    --nav-item-background-selected: var(--nav-item-background-active);
+    --file-header-color-active: var(--text-dl);
+    --nav-item-color-selected: var(--text-dl);
     & .mk-tree-item { 
         --vertical-padding: unset; 
-        height: unset; 
-        
-        //Fix Theme Hover Colors
+        // height: unset; 
+
+        &.is-selected,
         &:hover { 
-            --folder-open-text-color: var(--text-dl); 
-            
-            & button svg {
+            --folder-open-text-color: var(--text-dl);
+
+            & svg {
                 --icon-color: var(--text-dl);
                 color: var(--text-dl);
             }

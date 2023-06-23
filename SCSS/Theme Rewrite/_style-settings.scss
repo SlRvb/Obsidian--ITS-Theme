@@ -1062,6 +1062,36 @@ settings:
             - center
             - right
     -
+        title: Illusion Headings Specifics
+        id: ITS-illusion-headers
+		type: heading
+		level: 4
+		collapsed: true
+    -
+        title: Illusion Heading 1
+        id: illusion-h1
+        type: class-toggle
+    -
+        title: Illusion Heading 2
+        id: illusion-h2
+        type: class-toggle
+    -
+        title: Illusion Heading 3
+        id: illusion-h3
+        type: class-toggle
+    -
+        title: Illusion Heading 4
+        id: illusion-h4
+        type: class-toggle
+    -
+        title: Illusion Heading 5
+        id: illusion-h5
+        type: class-toggle
+    -
+        title: Illusion Heading 6
+        id: illusion-h6
+        type: class-toggle
+    -
 		title: Advanced Heading Underlines
 		description: Specific adjustments to heading underlines.
 		id: ITS-Advanced-Header-Underlines

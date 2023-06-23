@@ -9,7 +9,8 @@ $headings: (
         border-line-width: var(--h1-border-line-width),
         border-line-left-color: var(--h1-border-left-color),
         border-line-right-color: var(--h1-border-right-color),
-        border-line-height: var(--h1-border-line-height)
+        border-line-height: var(--h1-border-line-height),
+        box-shadow: var(--h1-shadow)
     ),
     "2": (
         size: var(--h2-size),
@@ -21,7 +22,8 @@ $headings: (
         border-line-width: var(--h2-border-line-width),
         border-line-left-color: var(--h2-border-left-color),
         border-line-right-color: var(--h2-border-right-color),
-        border-line-height: var(--h2-border-line-height)
+        border-line-height: var(--h2-border-line-height),
+        box-shadow: var(--h2-shadow)
     ),
     "3": (
         size: var(--h3-size),
@@ -33,7 +35,8 @@ $headings: (
         border-line-width: var(--h3-border-line-width),
         border-line-left-color: var(--h3-border-left-color),
         border-line-right-color: var(--h3-border-right-color),
-        border-line-height: var(--h3-border-line-height)
+        border-line-height: var(--h3-border-line-height),
+        box-shadow: var(--h3-shadow)
     ),
     "4": (
         size: var(--h4-size),
@@ -45,7 +48,8 @@ $headings: (
         border-line-width: var(--h4-border-line-width),
         border-line-left-color: var(--h4-border-left-color),
         border-line-right-color: var(--h4-border-right-color),
-        border-line-height: var(--h4-border-line-height)
+        border-line-height: var(--h4-border-line-height),
+        box-shadow: var(--h4-shadow)
     ),
     "5": (
         size: var(--h5-size),
@@ -57,7 +61,8 @@ $headings: (
         border-line-width: var(--h5-border-line-width),
         border-line-left-color: var(--h5-border-left-color),
         border-line-right-color: var(--h5-border-right-color),
-        border-line-height: var(--h5-border-line-height)
+        border-line-height: var(--h5-border-line-height),
+        box-shadow: var(--h5-shadow)
     ),
     "6": (
         size: var(--h6-size),
@@ -69,7 +74,8 @@ $headings: (
         border-line-width: var(--h6-border-line-width),
         border-line-left-color: var(--h6-border-left-color),
         border-line-right-color: var(--h6-border-right-color),
-        border-line-height: var(--h6-border-line-height)
+        border-line-height: var(--h6-border-line-height),
+        box-shadow: var(--h6-shadow)
     )
 );
 
@@ -170,7 +176,14 @@ body {
     --h4-border-right-color: var(--h4-border-line-color);
     --h5-border-right-color: var(--h5-border-line-color);
     --h6-border-right-color: var(--h6-border-line-color);
-
+    
+    --header-shadow: transparent;
+    --h1-shadow: var(--header-shadow);
+    --h2-shadow: var(--header-shadow);
+    --h3-shadow: var(--header-shadow);
+    --h4-shadow: var(--header-shadow);
+    --h5-shadow: var(--header-shadow);
+    --h6-shadow: var(--header-shadow);
 
     --header-border-line-width: 100%;
     --h1-border-line-width: 100%;
@@ -190,6 +203,10 @@ body {
     --h5-border-line-height: var(--header-border-line-height);
     --h6-border-line-height: var(--header-border-line-height);
     --header-border-line-align: none;
+
+    --header-arrow-icon-size: 10px;
+    // --header-arrow-width: 14px;
+    --header-arrow-icon-color: var(--collapse-icon-color);
 }
 
 //Header Under Lines
@@ -208,10 +225,12 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
         display: var(--header-border-line-left); 
         background: map-get($set, border-line-left-color);
     }
+    box-shadow: map-get($set, box-shadow);
     
     //Align Header Arrow
     & .heading-collapse-indicator,
     & .cm-fold-indicator.cm-fold-indicator { position: absolute; }
+    
 }}
 
 
@@ -219,6 +238,20 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
 .HyperMD-header.HyperMD-header .cm-fold-indicator .collapse-indicator {
     padding-right: 5px;
 }
+//Arrow
+.HyperMD-header.HyperMD-header,
+.view-content :is(h1,h2,h3,h4,h5,h6) {
+    & .collapse-indicator.collapse-indicator {
+        // width: var(--header-arrow-width); 
+
+        & svg { 
+            width: var(--header-arrow-icon-size);
+            height: var(--header-arrow-icon-size);
+            color: var(--header-arrow-icon-color);
+        }
+    }
+}
+
 
 //Headings
 @each $num, $set in $headings {

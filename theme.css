@@ -1063,6 +1063,36 @@ settings:
             - center
             - right
     -
+        title: Illusion Headings Specifics
+        id: ITS-illusion-headers
+		type: heading
+		level: 4
+		collapsed: true
+    -
+        title: Illusion Heading 1
+        id: illusion-h1
+        type: class-toggle
+    -
+        title: Illusion Heading 2
+        id: illusion-h2
+        type: class-toggle
+    -
+        title: Illusion Heading 3
+        id: illusion-h3
+        type: class-toggle
+    -
+        title: Illusion Heading 4
+        id: illusion-h4
+        type: class-toggle
+    -
+        title: Illusion Heading 5
+        id: illusion-h5
+        type: class-toggle
+    -
+        title: Illusion Heading 6
+        id: illusion-h6
+        type: class-toggle
+    -
 		title: Advanced Heading Underlines
 		description: Specific adjustments to heading underlines.
 		id: ITS-Advanced-Header-Underlines
@@ -3660,6 +3690,13 @@ body {
   --h4-border-right-color: var(--h4-border-line-color);
   --h5-border-right-color: var(--h5-border-line-color);
   --h6-border-right-color: var(--h6-border-line-color);
+  --header-shadow: transparent;
+  --h1-shadow: var(--header-shadow);
+  --h2-shadow: var(--header-shadow);
+  --h3-shadow: var(--header-shadow);
+  --h4-shadow: var(--header-shadow);
+  --h5-shadow: var(--header-shadow);
+  --h6-shadow: var(--header-shadow);
   --header-border-line-width: 100%;
   --h1-border-line-width: 100%;
   --h2-border-line-width: 85%;
@@ -3676,8 +3713,13 @@ body {
   --h5-border-line-height: var(--header-border-line-height);
   --h6-border-line-height: var(--header-border-line-height);
   --header-border-line-align: none;
+  --header-arrow-icon-size: 10px;
+  --header-arrow-icon-color: var(--collapse-icon-color);
 }
 
+h1, .is-live-preview .HyperMD-header-1 {
+  box-shadow: var(--h1-shadow);
+}
 h1::before, h1::after, .is-live-preview .HyperMD-header-1::before, .is-live-preview .HyperMD-header-1::after {
   content: "";
   display: block;
@@ -3694,6 +3736,9 @@ h1 .heading-collapse-indicator, h1 .cm-fold-indicator.cm-fold-indicator, .is-liv
   position: absolute;
 }
 
+h2, .is-live-preview .HyperMD-header-2 {
+  box-shadow: var(--h2-shadow);
+}
 h2::before, h2::after, .is-live-preview .HyperMD-header-2::before, .is-live-preview .HyperMD-header-2::after {
   content: "";
   display: block;
@@ -3710,6 +3755,9 @@ h2 .heading-collapse-indicator, h2 .cm-fold-indicator.cm-fold-indicator, .is-liv
   position: absolute;
 }
 
+h3, .is-live-preview .HyperMD-header-3 {
+  box-shadow: var(--h3-shadow);
+}
 h3::before, h3::after, .is-live-preview .HyperMD-header-3::before, .is-live-preview .HyperMD-header-3::after {
   content: "";
   display: block;
@@ -3726,6 +3774,9 @@ h3 .heading-collapse-indicator, h3 .cm-fold-indicator.cm-fold-indicator, .is-liv
   position: absolute;
 }
 
+h4, .is-live-preview .HyperMD-header-4 {
+  box-shadow: var(--h4-shadow);
+}
 h4::before, h4::after, .is-live-preview .HyperMD-header-4::before, .is-live-preview .HyperMD-header-4::after {
   content: "";
   display: block;
@@ -3742,6 +3793,9 @@ h4 .heading-collapse-indicator, h4 .cm-fold-indicator.cm-fold-indicator, .is-liv
   position: absolute;
 }
 
+h5, .is-live-preview .HyperMD-header-5 {
+  box-shadow: var(--h5-shadow);
+}
 h5::before, h5::after, .is-live-preview .HyperMD-header-5::before, .is-live-preview .HyperMD-header-5::after {
   content: "";
   display: block;
@@ -3758,6 +3812,9 @@ h5 .heading-collapse-indicator, h5 .cm-fold-indicator.cm-fold-indicator, .is-liv
   position: absolute;
 }
 
+h6, .is-live-preview .HyperMD-header-6 {
+  box-shadow: var(--h6-shadow);
+}
 h6::before, h6::after, .is-live-preview .HyperMD-header-6::before, .is-live-preview .HyperMD-header-6::after {
   content: "";
   display: block;
@@ -3776,6 +3833,13 @@ h6 .heading-collapse-indicator, h6 .cm-fold-indicator.cm-fold-indicator, .is-liv
 
 .HyperMD-header.HyperMD-header .cm-fold-indicator .collapse-indicator {
   padding-right: 5px;
+}
+
+.HyperMD-header.HyperMD-header .collapse-indicator.collapse-indicator svg,
+.view-content :is(h1, h2, h3, h4, h5, h6) .collapse-indicator.collapse-indicator svg {
+  width: var(--header-arrow-icon-size);
+  height: var(--header-arrow-icon-size);
+  color: var(--header-arrow-icon-color);
 }
 
 h1,
@@ -3896,6 +3960,7 @@ body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
   --h4-size: var(--font-text);
   --h5-size: var(--font-text);
   --h6-size: var(--font-text);
+  --p-spacing: 0.25em;
   --list-marker-color-collapsed: var(--list-marker-color);
   --tag-radius: 0;
   --tag-border-radius: 0;
@@ -5914,17 +5979,24 @@ img.emoji.emoji {
 }
 
 /* MAKE.md */
+.mk-sidebar {
+  --nav-item-background-selected: var(--nav-item-background-active);
+  --file-header-color-active: var(--text-dl);
+  --nav-item-color-selected: var(--text-dl);
+}
+.mk-sidebar .mk-main-menu-button:hover {
+  color: var(--text-dl);
+}
 .mk-sidebar .mk-tree-text::before {
   display: none;
 }
 .mk-sidebar .mk-tree-item {
   --vertical-padding: unset;
-  height: unset;
 }
-.mk-sidebar .mk-tree-item:hover {
+.mk-sidebar .mk-tree-item.is-selected, .mk-sidebar .mk-tree-item:hover {
   --folder-open-text-color: var(--text-dl);
 }
-.mk-sidebar .mk-tree-item:hover button svg {
+.mk-sidebar .mk-tree-item.is-selected svg, .mk-sidebar .mk-tree-item:hover svg {
   --icon-color: var(--text-dl);
   color: var(--text-dl);
 }
@@ -10141,48 +10213,130 @@ h6):after {
   margin-left: 0.3em;
 }
 
+body {
+  --illusion-header-text: var(--text-dl);
+  --illusion-h1-background: var(--theme-rainbow-1);
+  --illusion-h2-background: var(--theme-rainbow-2);
+  --illusion-h3-background: var(--theme-rainbow-3);
+  --illusion-h4-background: var(--theme-rainbow-4);
+  --illusion-h5-background: var(--theme-rainbow-5);
+  --illusion-h6-background: var(--theme-rainbow-6);
+  --illusion-border-line-height: 0;
+  --illusion-box-shadow: var(--shadow-l);
+  --illusion-header-padding: 5px 25px;
+  --illusion-header-arrow-icon-size: 13px;
+  --illusion-header-arrow-color: var(--illusion-header-text);
+}
+
 .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading], .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header), .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading], .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) {
-  --h1-background: var(--theme-rainbow-1);
-  --h2-background: var(--theme-rainbow-2);
-  --h3-background: var(--theme-rainbow-3);
-  --h4-background: var(--theme-rainbow-4);
-  --h5-background: var(--theme-rainbow-5);
-  --h6-background: var(--theme-rainbow-6);
-  --header-border-line-height: 0;
-  --h1-border-line-height: var(--header-border-line-height);
-  --h2-border-line-height: var(--header-border-line-height);
-  --h3-border-line-height: var(--header-border-line-height);
-  --h4-border-line-height: var(--header-border-line-height);
-  --h5-border-line-height: var(--header-border-line-height);
-  --h6-border-line-height: var(--header-border-line-height);
-  --headers: var(--text-dl);
-  --h1-color: var(--headers);
-  --h2-color: var(--headers);
-  --h3-color: var(--headers);
-  --h4-color: var(--headers);
-  --h5-color: var(--headers);
-  --h6-color: var(--headers);
-  --heading-formatting: var(--headers);
-  --header-padding: 5px 25px;
-  --h1-padding: var(--header-padding);
-  --h2-padding: var(--header-padding);
-  --h3-padding: var(--header-padding);
-  --h4-padding: var(--header-padding);
-  --h5-padding: var(--header-padding);
-  --h6-padding: var(--header-padding);
+  --h1-background: var(--illusion-h1-background);
+  --h2-background: var(--illusion-h2-background);
+  --h3-background: var(--illusion-h3-background);
+  --h4-background: var(--illusion-h4-background);
+  --h5-background: var(--illusion-h5-background);
+  --h6-background: var(--illusion-h6-background);
+  --header-border-line-height: var(--illusion-border-line-height);
+  --h1-border-line-height: var(--illusion-border-line-height);
+  --h2-border-line-height: var(--illusion-border-line-height);
+  --h3-border-line-height: var(--illusion-border-line-height);
+  --h4-border-line-height: var(--illusion-border-line-height);
+  --h5-border-line-height: var(--illusion-border-line-height);
+  --h6-border-line-height: var(--illusion-border-line-height);
+  --headers: var(--illusion-header-text);
+  --h1-color: var(--illusion-header-text);
+  --h2-color: var(--illusion-header-text);
+  --h3-color: var(--illusion-header-text);
+  --h4-color: var(--illusion-header-text);
+  --h5-color: var(--illusion-header-text);
+  --h6-color: var(--illusion-header-text);
+  --heading-formatting: var(--illusion-header-text);
+  --header-shadow: var(--illusion-box-shadow);
+  --h1-shadow: var(--illusion-box-shadow);
+  --h2-shadow: var(--illusion-box-shadow);
+  --h3-shadow: var(--illusion-box-shadow);
+  --h4-shadow: var(--illusion-box-shadow);
+  --h5-shadow: var(--illusion-box-shadow);
+  --h6-shadow: var(--illusion-box-shadow);
+  --header-padding: var(--illusion-header-padding);
+  --h1-padding: var(--illusion-header-padding);
+  --h2-padding: var(--illusion-header-padding);
+  --h3-padding: var(--illusion-header-padding);
+  --h4-padding: var(--illusion-header-padding);
+  --h5-padding: var(--illusion-header-padding);
+  --h6-padding: var(--illusion-header-padding);
   --collapse-icon-color: var(--headers);
   --collapse-icon-color-collapsed: var(--accent-text);
-  box-shadow: var(--shadow-l);
+  --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+  --header-arrow-color: var(--illusion-header-text);
 }
 .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] [class*=cm-formatting], .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .cm-foldPlaceholder, .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) [class*=cm-formatting], .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .cm-foldPlaceholder, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] [class*=cm-formatting], .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .cm-foldPlaceholder, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) [class*=cm-formatting], .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .cm-foldPlaceholder {
-  color: var(--headers);
+  color: var(--illusion-header-text);
 }
-.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .collapse-indicator, .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .collapse-indicator, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .collapse-indicator, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .collapse-indicator {
-  width: 18px;
+
+.illusion-h1 :is(.markdown-preview-view, .is-live-preview) h1[data-heading], .illusion-h1 :is(.markdown-preview-view, .is-live-preview) .HyperMD-header-1, .illusion-h1:is(.markdown-preview-view, .is-live-preview) h1[data-heading], .illusion-h1:is(.markdown-preview-view, .is-live-preview) .HyperMD-header-1 {
+  --h1-background: var(--illusion-h1-background);
+  --h1-color: var(--illusion-header-text);
+  --h1-padding: var(--illusion-header-padding);
+  --h1-border-line-height: var(--illusion-border-line-height);
+  --h1-shadow: var(--illusion-box-shadow);
+  --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+  --header-arrow-icon-color: var(--illusion-header-text);
+  --collapse-icon-color-collapsed: var(--accent-text);
 }
-.illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .collapse-indicator svg, .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .collapse-indicator svg, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .collapse-indicator svg, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .collapse-indicator svg {
-  width: 12px;
-  height: 12px;
+
+.illusion-h2 :is(.markdown-preview-view, .is-live-preview) h2[data-heading], .illusion-h2 :is(.markdown-preview-view, .is-live-preview) .HyperMD-header-2, .illusion-h2:is(.markdown-preview-view, .is-live-preview) h2[data-heading], .illusion-h2:is(.markdown-preview-view, .is-live-preview) .HyperMD-header-2 {
+  --h2-background: var(--illusion-h2-background);
+  --h2-color: var(--illusion-header-text);
+  --h2-padding: var(--illusion-header-padding);
+  --h2-border-line-height: var(--illusion-border-line-height);
+  --h2-shadow: var(--illusion-box-shadow);
+  --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+  --header-arrow-icon-color: var(--illusion-header-text);
+  --collapse-icon-color-collapsed: var(--accent-text);
+}
+
+.illusion-h3 :is(.markdown-preview-view, .is-live-preview) h3[data-heading], .illusion-h3 :is(.markdown-preview-view, .is-live-preview) .HyperMD-header-3, .illusion-h3:is(.markdown-preview-view, .is-live-preview) h3[data-heading], .illusion-h3:is(.markdown-preview-view, .is-live-preview) .HyperMD-header-3 {
+  --h3-background: var(--illusion-h3-background);
+  --h3-color: var(--illusion-header-text);
+  --h3-padding: var(--illusion-header-padding);
+  --h3-border-line-height: var(--illusion-border-line-height);
+  --h3-shadow: var(--illusion-box-shadow);
+  --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+  --header-arrow-icon-color: var(--illusion-header-text);
+  --collapse-icon-color-collapsed: var(--accent-text);
+}
+
+.illusion-h4 :is(.markdown-preview-view, .is-live-preview) h4[data-heading], .illusion-h4 :is(.markdown-preview-view, .is-live-preview) .HyperMD-header-4, .illusion-h4:is(.markdown-preview-view, .is-live-preview) h4[data-heading], .illusion-h4:is(.markdown-preview-view, .is-live-preview) .HyperMD-header-4 {
+  --h4-background: var(--illusion-h4-background);
+  --h4-color: var(--illusion-header-text);
+  --h4-padding: var(--illusion-header-padding);
+  --h4-border-line-height: var(--illusion-border-line-height);
+  --h4-shadow: var(--illusion-box-shadow);
+  --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+  --header-arrow-icon-color: var(--illusion-header-text);
+  --collapse-icon-color-collapsed: var(--accent-text);
+}
+
+.illusion-h5 :is(.markdown-preview-view, .is-live-preview) h5[data-heading], .illusion-h5 :is(.markdown-preview-view, .is-live-preview) .HyperMD-header-5, .illusion-h5:is(.markdown-preview-view, .is-live-preview) h5[data-heading], .illusion-h5:is(.markdown-preview-view, .is-live-preview) .HyperMD-header-5 {
+  --h5-background: var(--illusion-h5-background);
+  --h5-color: var(--illusion-header-text);
+  --h5-padding: var(--illusion-header-padding);
+  --h5-border-line-height: var(--illusion-border-line-height);
+  --h6-shadow: var(--illusion-box-shadow);
+  --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+  --header-arrow-icon-color: var(--illusion-header-text);
+  --collapse-icon-color-collapsed: var(--accent-text);
+}
+
+.illusion-h6 :is(.markdown-preview-view, .is-live-preview) h6[data-heading], .illusion-h6 :is(.markdown-preview-view, .is-live-preview) .HyperMD-header-6, .illusion-h6:is(.markdown-preview-view, .is-live-preview) h6[data-heading], .illusion-h6:is(.markdown-preview-view, .is-live-preview) .HyperMD-header-6 {
+  --h6-background: var(--illusion-h6-background);
+  --h6-color: var(--illusion-header-text);
+  --h6-padding: var(--illusion-header-padding);
+  --h6-border-line-height: var(--illusion-border-line-height);
+  --h6-shadow: var(--illusion-box-shadow);
+  --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+  --header-arrow-icon-color: var(--illusion-header-text);
+  --collapse-icon-color-collapsed: var(--accent-text);
 }
 
 .heading-indicator .is-live-preview .HyperMD-header.HyperMD-header.HyperMD-header:hover .cm-header.cm-header:not(.cm-header-6)::before {

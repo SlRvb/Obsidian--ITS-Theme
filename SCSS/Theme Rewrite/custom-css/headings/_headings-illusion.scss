@@ -1,3 +1,22 @@
+body  {
+    --illusion-header-text: var(--text-dl);
+
+    --illusion-h1-background: var(--theme-rainbow-1);
+    --illusion-h2-background: var(--theme-rainbow-2);
+    --illusion-h3-background: var(--theme-rainbow-3);
+    --illusion-h4-background: var(--theme-rainbow-4);
+    --illusion-h5-background: var(--theme-rainbow-5);
+    --illusion-h6-background: var(--theme-rainbow-6);
+
+    --illusion-border-line-height: 0;
+
+    --illusion-box-shadow: var(--shadow-l);
+    --illusion-header-padding: 5px 25px;
+
+    --illusion-header-arrow-icon-size: 13px;
+    --illusion-header-arrow-color: var(--illusion-header-text);
+}
+
 .illusion.illusion
 {
     & :is(.markdown-preview-view, .is-live-preview),
@@ -5,56 +24,161 @@
         & :is(h1,h2,h3,h4,h5,h6)[data-heading],
         & :is(.is-live-preview .HyperMD-header) 
         {
-            --h1-background: var(--theme-rainbow-1);
-            --h2-background: var(--theme-rainbow-2);
-            --h3-background: var(--theme-rainbow-3);
-            --h4-background: var(--theme-rainbow-4);
-            --h5-background: var(--theme-rainbow-5);
-            --h6-background: var(--theme-rainbow-6);
+            --h1-background: var(--illusion-h1-background);
+            --h2-background: var(--illusion-h2-background);
+            --h3-background: var(--illusion-h3-background);
+            --h4-background: var(--illusion-h4-background);
+            --h5-background: var(--illusion-h5-background);
+            --h6-background: var(--illusion-h6-background);
         
-            --header-border-line-height: 0;
-            --h1-border-line-height: var(--header-border-line-height);
-            --h2-border-line-height: var(--header-border-line-height);
-            --h3-border-line-height: var(--header-border-line-height);
-            --h4-border-line-height: var(--header-border-line-height);
-            --h5-border-line-height: var(--header-border-line-height);
-            --h6-border-line-height: var(--header-border-line-height);
+            --header-border-line-height: var(--illusion-border-line-height);
+            --h1-border-line-height: var(--illusion-border-line-height);
+            --h2-border-line-height: var(--illusion-border-line-height);
+            --h3-border-line-height: var(--illusion-border-line-height);
+            --h4-border-line-height: var(--illusion-border-line-height);
+            --h5-border-line-height: var(--illusion-border-line-height);
+            --h6-border-line-height: var(--illusion-border-line-height);
     
     
-            --headers: var(--text-dl);
-            --h1-color: var(--headers);
-            --h2-color: var(--headers);
-            --h3-color: var(--headers);
-            --h4-color: var(--headers);
-            --h5-color: var(--headers);
-            --h6-color: var(--headers);
-            --heading-formatting: var(--headers);
+            --headers: var(--illusion-header-text);
+            --h1-color: var(--illusion-header-text);
+            --h2-color: var(--illusion-header-text);
+            --h3-color: var(--illusion-header-text);
+            --h4-color: var(--illusion-header-text);
+            --h5-color: var(--illusion-header-text);
+            --h6-color: var(--illusion-header-text);
+            --heading-formatting: var(--illusion-header-text);
+
+            --header-shadow: var(--illusion-box-shadow);
+            --h1-shadow: var(--illusion-box-shadow);
+            --h2-shadow: var(--illusion-box-shadow);
+            --h3-shadow: var(--illusion-box-shadow);
+            --h4-shadow: var(--illusion-box-shadow);
+            --h5-shadow: var(--illusion-box-shadow);
+            --h6-shadow: var(--illusion-box-shadow);
     
-            --header-padding: 5px 25px;
-            --h1-padding: var(--header-padding);
-            --h2-padding: var(--header-padding);
-            --h3-padding: var(--header-padding);
-            --h4-padding: var(--header-padding);
-            --h5-padding: var(--header-padding);
-            --h6-padding: var(--header-padding);
+            --header-padding: var(--illusion-header-padding);
+            --h1-padding: var(--illusion-header-padding);
+            --h2-padding: var(--illusion-header-padding);
+            --h3-padding: var(--illusion-header-padding);
+            --h4-padding: var(--illusion-header-padding);
+            --h5-padding: var(--illusion-header-padding);
+            --h6-padding: var(--illusion-header-padding);
     
             --collapse-icon-color: var(--headers);
             --collapse-icon-color-collapsed: var(--accent-text);
-            box-shadow: var(--shadow-l);
+            
+            --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+            --header-arrow-color: var(--illusion-header-text);
     
             //Fix Formatting
             & [class*="cm-formatting"],
-            & .cm-foldPlaceholder { color: var(--headers); }
+            & .cm-foldPlaceholder { color: var(--illusion-header-text); }
+        }
+    }
+}
 
-            //Arrow
-            & .collapse-indicator {
-                width: 18px;
-        
-                & svg { 
-                    width: 12px;
-                    height: 12px;
-                }
-            }
+
+.illusion-h1 {
+    & :is(.markdown-preview-view, .is-live-preview),
+    &:is(.markdown-preview-view, .is-live-preview) {
+        & h1[data-heading],
+        & .HyperMD-header-1 {
+            --h1-background: var(--illusion-h1-background);
+            --h1-color: var(--illusion-header-text);
+            --h1-padding: var(--illusion-header-padding);
+            --h1-border-line-height: var(--illusion-border-line-height);
+            --h1-shadow: var(--illusion-box-shadow);
+            
+            
+            --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+            --header-arrow-icon-color: var(--illusion-header-text);
+            --collapse-icon-color-collapsed: var(--accent-text);
+        }
+    }
+}
+.illusion-h2 {
+    & :is(.markdown-preview-view, .is-live-preview),
+    &:is(.markdown-preview-view, .is-live-preview) {
+        & h2[data-heading],
+        & .HyperMD-header-2 {
+            --h2-background: var(--illusion-h2-background);
+            --h2-color: var(--illusion-header-text);
+            --h2-padding: var(--illusion-header-padding);
+            --h2-border-line-height: var(--illusion-border-line-height);
+            --h2-shadow: var(--illusion-box-shadow);
+            
+            --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+            --header-arrow-icon-color: var(--illusion-header-text);
+            --collapse-icon-color-collapsed: var(--accent-text);
+        }
+    }
+}  
+.illusion-h3 {
+    & :is(.markdown-preview-view, .is-live-preview),
+    &:is(.markdown-preview-view, .is-live-preview) {
+        & h3[data-heading],
+        & .HyperMD-header-3 {
+            --h3-background: var(--illusion-h3-background);
+            --h3-color: var(--illusion-header-text);
+            --h3-padding: var(--illusion-header-padding);
+            --h3-border-line-height: var(--illusion-border-line-height);
+            --h3-shadow: var(--illusion-box-shadow);
+            
+            --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+            --header-arrow-icon-color: var(--illusion-header-text);
+            --collapse-icon-color-collapsed: var(--accent-text);
+        }
+    }
+}
+.illusion-h4 {
+    & :is(.markdown-preview-view, .is-live-preview),
+    &:is(.markdown-preview-view, .is-live-preview) {
+        & h4[data-heading],
+        & .HyperMD-header-4 {
+            --h4-background: var(--illusion-h4-background);
+            --h4-color: var(--illusion-header-text);
+            --h4-padding: var(--illusion-header-padding);
+            --h4-border-line-height: var(--illusion-border-line-height);
+            --h4-shadow: var(--illusion-box-shadow);
+            
+            --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+            --header-arrow-icon-color: var(--illusion-header-text);
+            --collapse-icon-color-collapsed: var(--accent-text);
+        }
+    }
+}
+.illusion-h5 {
+    & :is(.markdown-preview-view, .is-live-preview),
+    &:is(.markdown-preview-view, .is-live-preview) {
+        & h5[data-heading],
+        & .HyperMD-header-5 {
+            --h5-background: var(--illusion-h5-background);
+            --h5-color: var(--illusion-header-text);
+            --h5-padding: var(--illusion-header-padding);
+            --h5-border-line-height: var(--illusion-border-line-height);
+            --h6-shadow: var(--illusion-box-shadow);
+            
+            --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+            --header-arrow-icon-color: var(--illusion-header-text);
+            --collapse-icon-color-collapsed: var(--accent-text);
+        }
+    }
+}
+.illusion-h6 {
+    & :is(.markdown-preview-view, .is-live-preview),
+    &:is(.markdown-preview-view, .is-live-preview) {
+        & h6[data-heading],
+        & .HyperMD-header-6 {
+            --h6-background: var(--illusion-h6-background);
+            --h6-color: var(--illusion-header-text);
+            --h6-padding: var(--illusion-header-padding);
+            --h6-border-line-height: var(--illusion-border-line-height);
+            --h6-shadow: var(--illusion-box-shadow);
+            
+            --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
+            --header-arrow-icon-color: var(--illusion-header-text);
+            --collapse-icon-color-collapsed: var(--accent-text);
         }
     }
 }

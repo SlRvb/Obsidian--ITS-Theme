@@ -3,7 +3,11 @@
     //Burnt Paper Edges
     & ,
     & .markdown-source-view,
-    & .markdown-preview-view:not(.internal-embed .markdown-preview-view):not(.community-plugin-readme):not(.kanban-plugin__markdown-preview-view),
+    & .markdown-preview-view:not(
+        .internal-embed .markdown-preview-view,
+        .community-plugin-readme, 
+        [class*="plugin"]
+    ),
     & .workspace-leaf:not(.mod-active) .view-header,
     & .modal.mod-settings .vertical-tab-content-container,
     & .workspace-leaf-content[data-type="graph"] > canvas,

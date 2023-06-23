@@ -5993,10 +5993,10 @@ img.emoji.emoji {
 .mk-sidebar .mk-tree-item {
   --vertical-padding: unset;
 }
-.mk-sidebar .mk-tree-item.is-selected, .mk-sidebar .mk-tree-item:hover {
+.mk-sidebar .mk-tree-item.is-selected, .mk-sidebar .mk-tree-item.is-active, .mk-sidebar .mk-tree-item:hover {
   --folder-open-text-color: var(--text-dl);
 }
-.mk-sidebar .mk-tree-item.is-selected svg, .mk-sidebar .mk-tree-item:hover svg {
+.mk-sidebar .mk-tree-item.is-selected svg, .mk-sidebar .mk-tree-item.is-active svg, .mk-sidebar .mk-tree-item:hover svg {
   --icon-color: var(--text-dl);
   color: var(--text-dl);
 }

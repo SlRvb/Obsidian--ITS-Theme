@@ -13,6 +13,7 @@
         // height: unset; 
 
         &.is-selected,
+        &.is-active,
         &:hover { 
             --folder-open-text-color: var(--text-dl);
 

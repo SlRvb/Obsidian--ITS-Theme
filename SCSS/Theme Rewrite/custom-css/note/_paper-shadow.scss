@@ -1,29 +1,35 @@
 .paper
 {
+    --paper-edges-note: 0 0 60px var(--outline) inset;
+    --paper-edges-ui: 0 0 25px var(--outline) inset;
+    --file-header-background: transparent;
+    --pane-background: transparent;
+
     //Burnt Paper Edges
     & ,
-    & .markdown-source-view,
-    & .markdown-preview-view:not(
-        .internal-embed .markdown-preview-view,
-        .community-plugin-readme, 
-        [class*="plugin"]
-    ),
-    & .workspace-leaf:not(.mod-active) .view-header,
+    // & .markdown-source-view,
+    // & .markdown-preview-view:not(
+    //     .internal-embed .markdown-preview-view,
+    //     .community-plugin-readme, 
+    //     [class*="plugin"]
+    // ),
     & .modal.mod-settings .vertical-tab-content-container,
+    & .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf-content[data-type=markdown],
     & .workspace-leaf-content[data-type="graph"] > canvas,
     & .workspace-drawer-inner,
     & .modal,
     & .community-plugin-search,
     & .prompt,
     & .kanban-plugin__lane.kanban-plugin__lane
-    { box-shadow: 0 0 60px var(--outline) inset; }
+    { box-shadow: var(--paper-edges-note); }
     
     & .workspace-tabs,
     & .modal.mod-settings .vertical-tab-header 
-    { box-shadow: 0 0 25px var(--outline) inset; }
+    { box-shadow: var(--paper-edges-ui); }
 
 
     //Transparent BGs
+    // & .workspace-leaf:not(.mod-active) .view-header,
     & .CodeMirror-gutter.CodeMirror-linenumbers, 
     & .CodeMirror-gutter.CodeMirror-foldgutter,
     & .markdown-source-view.mod-cm6 .cm-gutters,

@@ -3526,6 +3526,11 @@ body {
   color: var(--text-dl);
 }
 
+.is-mobile .markdown-rendered .list-collapse-indicator {
+  margin-left: -2.3em;
+  padding-right: 0em;
+}
+
 body {
   --scrollbar-thumb-bg: var(--accent);
   --scrollbar-active-thumb-bg: var(--lite-accent);
@@ -6185,58 +6190,58 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
   object-fit: cover;
 }
 
-img[alt][alt][alt*=hmicro] {
+img[alt][alt]:not([alt*=relative])[alt*=hmicro] {
   height: var(--micro);
 }
-img[alt][alt][alt*=htiny] {
+img[alt][alt]:not([alt*=relative])[alt*=htiny] {
   height: var(--tiny);
 }
-img[alt][alt][alt*=hsmall] {
+img[alt][alt]:not([alt*=relative])[alt*=hsmall] {
   height: var(--small);
 }
-img[alt][alt][alt*=hs-med] {
+img[alt][alt]:not([alt*=relative])[alt*=hs-med] {
   height: var(--small-med);
 }
-img[alt][alt][alt*=hm-sm] {
+img[alt][alt]:not([alt*=relative])[alt*=hm-sm] {
   height: var(--med-small);
 }
-img[alt][alt][alt*=hmed] {
+img[alt][alt]:not([alt*=relative])[alt*=hmed] {
   height: var(--medium);
 }
-img[alt][alt][alt*=hm-tl] {
+img[alt][alt]:not([alt*=relative])[alt*=hm-tl] {
   height: var(--med-tall);
 }
-img[alt][alt][alt*=htall] {
+img[alt][alt]:not([alt*=relative])[alt*=htall] {
   height: var(--tall);
 }
-img[alt][alt][alt*=hfull] {
+img[alt][alt]:not([alt*=relative])[alt*=hfull] {
   height: 100%;
 }
-img[alt][alt][alt*=wmicro] {
+img[alt][alt]:not([alt*=relative])[alt*=wmicro] {
   width: var(--micro);
 }
-img[alt][alt][alt*=wtiny] {
+img[alt][alt]:not([alt*=relative])[alt*=wtiny] {
   width: var(--tiny);
 }
-img[alt][alt][alt*=wsmall] {
+img[alt][alt]:not([alt*=relative])[alt*=wsmall] {
   width: var(--small);
 }
-img[alt][alt][alt*=ws-med] {
+img[alt][alt]:not([alt*=relative])[alt*=ws-med] {
   width: var(--small-med);
 }
-img[alt][alt][alt*=wm-sm] {
+img[alt][alt]:not([alt*=relative])[alt*=wm-sm] {
   width: var(--med-small);
 }
-img[alt][alt][alt*=wmed] {
+img[alt][alt]:not([alt*=relative])[alt*=wmed] {
   width: var(--medium);
 }
-img[alt][alt][alt*=wm-tl] {
+img[alt][alt]:not([alt*=relative])[alt*=wm-tl] {
   width: var(--med-tall);
 }
-img[alt][alt][alt*=wtall] {
+img[alt][alt]:not([alt*=relative])[alt*=wtall] {
   width: var(--tall);
 }
-img[alt][alt][alt*=wfull] {
+img[alt][alt]:not([alt*=relative])[alt*=wfull] {
   width: 100%;
 }
 
@@ -9489,13 +9494,17 @@ iframe {
   box-shadow: unset;
 }
 
-.paper, .paper .markdown-source-view, .paper .markdown-preview-view:not(.internal-embed .markdown-preview-view,
-.community-plugin-readme,
-[class*=plugin]), .paper .workspace-leaf:not(.mod-active) .view-header, .paper .modal.mod-settings .vertical-tab-content-container, .paper .workspace-leaf-content[data-type=graph] > canvas, .paper .workspace-drawer-inner, .paper .modal, .paper .community-plugin-search, .paper .prompt, .paper .kanban-plugin__lane.kanban-plugin__lane {
-  box-shadow: 0 0 60px var(--outline) inset;
+.paper {
+  --paper-edges-note: 0 0 60px var(--outline) inset;
+  --paper-edges-ui: 0 0 25px var(--outline) inset;
+  --file-header-background: transparent;
+  --pane-background: transparent;
+}
+.paper, .paper .modal.mod-settings .vertical-tab-content-container, .paper .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf-content[data-type=markdown], .paper .workspace-leaf-content[data-type=graph] > canvas, .paper .workspace-drawer-inner, .paper .modal, .paper .community-plugin-search, .paper .prompt, .paper .kanban-plugin__lane.kanban-plugin__lane {
+  box-shadow: var(--paper-edges-note);
 }
 .paper .workspace-tabs, .paper .modal.mod-settings .vertical-tab-header {
-  box-shadow: 0 0 25px var(--outline) inset;
+  box-shadow: var(--paper-edges-ui);
 }
 .paper .CodeMirror-gutter.CodeMirror-linenumbers, .paper .CodeMirror-gutter.CodeMirror-foldgutter, .paper .markdown-source-view.mod-cm6 .cm-gutters, .paper .workspace-leaf:not(.mod-active) .workspace-tab-header-container, .paper .workspace-tabs .workspace-leaf, .paper .workspace-tab-header-container, .paper .horizontal-tab-content, .paper .vertical-tab-content, .paper .horizontal-tab-nav-item:not(.is-active), .paper .vertical-tab-nav-item:not(.is-active) {
   background: transparent;

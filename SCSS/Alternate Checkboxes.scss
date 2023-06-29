@@ -66,77 +66,82 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    
     -
         title: "[x] Regular"
-        id: chst-reg
+        id: checkbox-strike-regular
         type: class-toggle
     -
         title: "[X] Checked"
-        id: chst-chk
+        id: checkbox-strike-checked
         type: class-toggle
     -
         title: "[-] Dropped"
-        id: chst-drop
+        id: checkbox-strike-dropped
         type: class-toggle
     -
         title: "[>] Forward"
-        id: chst-frwd
+        id: checkbox-strike-frwd
         type: class-toggle
     -
-        title: "[D] Defer"
-        id: chst-defr
+        title: "[D] Defer / Date"
+        id: checkbox-strike-date
         type: class-toggle
     -
         title: "[?] Question"
-        id: chst-q
+        id: checkbox-strike-q
         type: class-toggle
     -
         title: "[/] Half"
-        id: chst-half
+        id: checkbox-strike-half
         type: class-toggle
     -
         title: "[+] Add"
-        id: chst-add
+        id: checkbox-strike-add
         type: class-toggle
     -
         title: "[R] Research"
-        id: chst-rsrch
+        id: checkbox-strike-rsrch
         type: class-toggle
     -
         title: "[!] Important"
-        id: chst-imp
+        id: checkbox-strike-imp
         type: class-toggle
     -
         title: "[i] Idea"
-        id: chst-idea
+        id: checkbox-strike-idea
         type: class-toggle
     -
         title: "[B] Brainstorm"
-        id: chst-brn
+        id: checkbox-strike-brn
         type: class-toggle
     -
         title: "[P] Pro"
-        id: chst-pro
+        id: checkbox-strike-pro
         type: class-toggle
     -
         title: "[C] Con"
-        id: chst-con
+        id: checkbox-strike-con
         type: class-toggle
     -
         title: "[Q] Quote"
-        id: chst-quot
+        id: checkbox-strike-quot
         type: class-toggle
     -
         title: "[N] Note"
-        id: chst-brn
+        id: checkbox-strike-brn
         type: class-toggle
     -
         title: "[b] Bookmark"
-        id: chst-book
+        id: checkbox-strike-book
         type: class-toggle
     -
-        title: "[I] info"
-        id: chst-info
+        title: "[I] Info"
+        id: checkbox-strike-info
+        type: class-toggle
+    -
+        title: "[p] Paraphrase"
+        id: checkbox-strike-para
         type: class-toggle
 */
 

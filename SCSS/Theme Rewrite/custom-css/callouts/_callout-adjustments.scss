@@ -117,3 +117,6 @@
 
 //Clear
 .callout[data-callout-metadata~="clear"] { clear: both; }
+
+//Fix iframe Code
+.callout #vid { text-align: left; }

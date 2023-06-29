@@ -7853,6 +7853,10 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   clear: both;
 }
 
+.callout #vid {
+  text-align: left;
+}
+
 /*--Callout Coloring--*/
 .callout.callout.callout {
   --callout-blue: 82, 139, 212;

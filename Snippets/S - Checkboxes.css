@@ -275,7 +275,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task="&"],
 [data-task=s],
 [data-task=H]) input:is([type=checkbox], [type=checkbox i]):checked::after {
-  top: -5px;
+  top: -4px;
   left: 0px;
   -webkit-mask-image: unset;
 }
@@ -955,6 +955,10 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=s] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=s].task-list-item.is-checked {
   color: rgb(var(--chbx-d));
+}
+
+input[type=checkbox]:checked:after {
+  display: block;
 }
 
 /* @settings

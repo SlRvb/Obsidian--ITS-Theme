@@ -87,3 +87,14 @@ body {
         & .more-options-icon svg { fill: var var(--sidebar-tab-background-color-hover); }
     }
 }
+
+.document-search-container.document-search-container {
+    padding: var(--size-4-2);
+    background-color: transparent;
+    
+    & .document-search, 
+    & .document-replace { 
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+}

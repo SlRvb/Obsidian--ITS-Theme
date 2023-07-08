@@ -1,7 +1,16 @@
 .notion.notion {
     --font: var(--font-default);
     --header-font-weight: 900;
+
     --vault-name-font-weight: 900;
+
+    --header-border-line-height: 0;
+    --h1-border-line-height: var(--header-border-line-height);
+    --h2-border-line-height: var(--header-border-line-height);
+    --h3-border-line-height: var(--header-border-line-height);
+    --h4-border-line-height: var(--header-border-line-height);
+    --h5-border-line-height: var(--header-border-line-height);
+    --h6-border-line-height: var(--header-border-line-height);
     
     --hr-icon-symbol: "";
 

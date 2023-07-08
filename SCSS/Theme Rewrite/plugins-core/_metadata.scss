@@ -1,0 +1,34 @@
+body {
+    --metadata-property-radius: var(--radius-s);
+    --metadata-title-align: center;
+    --metadata-title-size: var(--font-text-size);
+    --metadata-title-color: var(--text-muted);
+    --metadata-title-weight: 900;
+
+    --metadata-remove-color: var(--accent-text);
+}
+
+.metadata-properties-title {
+    font-size: var(--metadata-title-size);
+    color: var(--metadata-title-color);
+    text-align: var(--metadata-title-align);
+    font-weight: var(--metadata-title-weight);
+    margin-bottom: 0;
+}
+
+
+
+//Multi Select
+.multi-select-pill {
+    padding: var(--tag-padding-y) var(--tag-padding-x);
+    gap: 0;
+}
+.multi-select-pill-content { margin-left: 0; }
+
+.multi-select-pill-remove-button {
+    color: var(--metadata-remove-color);
+    margin-right: 0;
+}
+.multi-select-pill:not(:hover) .multi-select-pill-remove-button {
+    display: none;
+}

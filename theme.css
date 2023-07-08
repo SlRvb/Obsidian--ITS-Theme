@@ -3222,6 +3222,15 @@ body {
   fill: var var(--sidebar-tab-background-color-hover);
 }
 
+.document-search-container.document-search-container {
+  padding: var(--size-4-2);
+  background-color: transparent;
+}
+.document-search-container.document-search-container .document-search, .document-search-container.document-search-container .document-replace {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 body {
   --tab-curve: var(--radius-s);
   --tab-radius: var(--radius-s);
@@ -3529,6 +3538,12 @@ body {
 .is-mobile .markdown-rendered .list-collapse-indicator {
   margin-left: -2.3em;
   padding-right: 0em;
+}
+.is-mobile .document-search-container {
+  padding: var(--size-4-2);
+}
+.is-mobile .document-search-container .document-search, .is-mobile .document-search-container .document-replace {
+  flex-wrap: wrap;
 }
 
 body {
@@ -6717,6 +6732,12 @@ img[alt~=border],
 }
 
 /*Hide Headings*/
+.internal-embed[alt~=no-h] .markdown-embed :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6),
 .internal-embed[alt~=no-h].markdown-embed :is(h1,
 h2,
 h3,
@@ -6727,6 +6748,12 @@ h6) {
 }
 
 /*Hide Specific Headings*/
+.internal-embed[alt~=no-h1] .markdown-embed h1,
+.internal-embed[alt~=no-h2] .markdown-embed h2,
+.internal-embed[alt~=no-h3] .markdown-embed h3,
+.internal-embed[alt~=no-h4] .markdown-embed h4,
+.internal-embed[alt~=no-h5] .markdown-embed h5,
+.internal-embed[alt~=no-h6] .markdown-embed h6,
 .internal-embed[alt~=no-h1].markdown-embed h1,
 .internal-embed[alt~=no-h2].markdown-embed h2,
 .internal-embed[alt~=no-h3].markdown-embed h3,
@@ -7056,7 +7083,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task="&"],
 [data-task=s],
 [data-task=H]) input:is([type=checkbox], [type=checkbox i]):checked::after {
-  top: -5px;
+  top: -4px;
   left: 0px;
   -webkit-mask-image: unset;
 }
@@ -10482,7 +10509,7 @@ body {
   --inline-title-color: var(--h1-color);
 }
 
-.inline-title-style-text.inline-title-style-text {
+.inline-title-style-text.inline-title-style-text .inline-title {
   --inline-title-font: var(--font-default);
   --inline-title-size: var(--font-text-size);
   --inline-title-weight: var(--font-bold);
@@ -11557,6 +11584,13 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --font: var(--font-default);
   --header-font-weight: 900;
   --vault-name-font-weight: 900;
+  --header-border-line-height: 0;
+  --h1-border-line-height: var(--header-border-line-height);
+  --h2-border-line-height: var(--header-border-line-height);
+  --h3-border-line-height: var(--header-border-line-height);
+  --h4-border-line-height: var(--header-border-line-height);
+  --h5-border-line-height: var(--header-border-line-height);
+  --h6-border-line-height: var(--header-border-line-height);
   --hr-icon-symbol: "";
   background: var(--note);
   --text-dl: white;
@@ -11819,6 +11853,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 .t-d {
   --hr-sym: "";
   --hr-f: var(--mdi);
+  --header-weight: 500;
   background: var(--note);
 }
 
@@ -12277,6 +12312,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 .wotc-beyond,
 .dnd,
 .pathfinder,
+.notion,
 .drwn,
 .its-d,
 .mini,

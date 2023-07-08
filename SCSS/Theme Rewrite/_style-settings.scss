@@ -1905,6 +1905,13 @@ settings:
         format: hex
         default-dark: '#7c2929'
         default-light: '#c24747'
+    -
+        title: Sidebar Active Icon Color
+        id: sidebar-icon-color-active
+        type: variable-themed-color
+        format: hex
+        default-dark: '#e5ebee'
+        default-light: '#e5ebee'
     - 
         title: File Icon
         description: File icon color.

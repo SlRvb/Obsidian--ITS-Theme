@@ -105,6 +105,10 @@
         color: var(--text-dl);
     }
     // &.theme-light { --mobile-toolbar-background: var(--accent); }
+
+    & .view-header-title-container {
+        padding-left: 0;
+    }
 }
 
 //Notes

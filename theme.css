@@ -1906,6 +1906,13 @@ settings:
         format: hex
         default-dark: '#7c2929'
         default-light: '#c24747'
+    -
+        title: Sidebar Active Icon Color
+        id: sidebar-icon-color-active
+        type: variable-themed-color
+        format: hex
+        default-dark: '#e5ebee'
+        default-light: '#e5ebee'
     - 
         title: File Icon
         description: File icon color.
@@ -3534,16 +3541,13 @@ body {
 .is-mobile .mobile-toolbar-option {
   color: var(--text-dl);
 }
+.is-mobile .view-header-title-container {
+  padding-left: 0;
+}
 
 .is-mobile .markdown-rendered .list-collapse-indicator {
   margin-left: -2.3em;
   padding-right: 0em;
-}
-.is-mobile .document-search-container {
-  padding: var(--size-4-2);
-}
-.is-mobile .document-search-container .document-search, .is-mobile .document-search-container .document-replace {
-  flex-wrap: wrap;
 }
 
 body {

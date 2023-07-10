@@ -4,3 +4,12 @@
     --hr-icon-symbol: ; 
     --hr-image: ; 
 }
+
+.hr-center-vertically {
+    .hr { --hr-thickness: 0; }
+
+    & hr { 
+        --hr-color: var(--hr); 
+        --hr-thickness: 2px; 
+    }
+}

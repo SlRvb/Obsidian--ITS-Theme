@@ -1722,6 +1722,10 @@ settings:
         level: 2 
         collapsed: true
     -
+        title: Horizontal Line Centered Vertically
+        id: hr-center-vertically
+        type: class-toggle
+    -
         title: Horizontal Line Height
         id: hr-thickness
         type: variable-number-slider
@@ -6767,6 +6771,23 @@ h6) {
   display: none;
 }
 
+.internal-embed:is([alt~=no-margin], [alt~=nmg]) {
+  --embed-padding: 0;
+  --embed-title-padding: 0;
+}
+
+.internal-embed[alt~=collapse] {
+  --embed-padding:0;
+  --embed-title-padding: 0;
+  --p-spacing: 0;
+}
+.internal-embed[alt~=collapse] *:not(.tag, .callout) {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
+}
+
 body.embed-mini-headers .markdown-embed {
   --h1-size: var(--embed-header-size);
   --h2-size: var(--embed-header-size);
@@ -10505,6 +10526,14 @@ body {
 .hr-tog.hr-tog div {
   --hr-icon-symbol: ;
   --hr-image: ;
+}
+
+.hr-center-vertically .hr {
+  --hr-thickness: 0;
+}
+.hr-center-vertically hr {
+  --hr-color: var(--hr);
+  --hr-thickness: 2px;
 }
 
 .inline-title-style-heading {

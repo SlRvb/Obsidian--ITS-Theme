@@ -1,0 +1,19 @@
+.internal-embed:is([alt~="no-margin"], [alt~="nmg"]) {
+    --embed-padding: 0;
+    --embed-title-padding: 0;
+}
+
+.internal-embed[alt~="collapse"] {
+    --embed-padding:0;
+    --embed-title-padding: 0;
+    --p-spacing: 0;
+
+    //temp
+    & *:not(.tag, .callout) { 
+        margin: 0;
+        margin-block-start: 0; 
+        margin-block-end: 0;
+        padding: 0;
+    }
+
+}

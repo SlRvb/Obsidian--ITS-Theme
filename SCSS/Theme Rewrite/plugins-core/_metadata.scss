@@ -6,6 +6,7 @@ body {
     --metadata-title-weight: 900;
 
     --metadata-remove-color: var(--accent-text);
+    --metadata-remove-color-hover: var(--td);
 }
 
 .metadata-properties-title {
@@ -13,7 +14,14 @@ body {
     color: var(--metadata-title-color);
     text-align: var(--metadata-title-align);
     font-weight: var(--metadata-title-weight);
-    margin-bottom: 0;
+    margin-bottom: 5px;
+
+    &::before {
+        content: "\E805";
+        font-family: var(--its);
+        margin-right: 5px;
+        font-weight: 100;
+    }
 }
 
 
@@ -28,7 +36,8 @@ body {
 .multi-select-pill-remove-button {
     color: var(--metadata-remove-color);
     margin-right: 0;
+
+    &:hover { color: var(--metadata-remove-color-hover); }
 }
-.multi-select-pill:not(:hover) .multi-select-pill-remove-button {
-    display: none;
-}
+.multi-select-pill:not(:hover) .multi-select-pill-remove-button 
+{ display: none; }

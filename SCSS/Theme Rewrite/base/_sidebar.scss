@@ -99,7 +99,7 @@
     --tab-text-color-active: var(--text-dl);
     --tab-text-color-focused: var(--text);
     --tab-text-color-focused-active: var(--text-dl);
-    --tab-text-color-focused-active-current: var(--text-dl);
+    --tab-text-color-focused-active-current: var(--sidebar-icon-color-active);
     
     // --icon-color-focused: var(--sidebar-icon-color-active);
     & .workspace-tab-header-inner-icon { --icon-color-focused: var(--sidebar-icon-color-active); }

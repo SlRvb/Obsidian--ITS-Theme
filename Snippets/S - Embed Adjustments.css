@@ -139,10 +139,8 @@ h6) {
   --p-spacing: 0;
 }
 .internal-embed[alt~=collapse] *:not(.tag, .callout) {
-  margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-  padding: 0;
 }
 
 body.embed-mini-headers .markdown-embed {

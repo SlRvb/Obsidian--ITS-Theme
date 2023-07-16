@@ -4545,8 +4545,8 @@ del,
 .tag-pane-tag:not(.mod-collapsible) > div > .tree-item-inner-text::before,
 .tag-pane-tag-text:before {
   content: "#";
-  padding-right: 7px;
-  margin-left: 0;
+  padding-right: 5px;
+  margin-left: 1px;
   position: relative;
   color: var(--tag-text);
   width: var(--size-4-4);
@@ -4906,6 +4906,51 @@ body.theme-light {
 
 .canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
   padding: var(--canvas-node-padding);
+}
+
+body {
+  --metadata-property-radius: var(--radius-s);
+  --metadata-title-align: center;
+  --metadata-title-size: var(--font-text-size);
+  --metadata-title-color: var(--text-muted);
+  --metadata-title-weight: 900;
+  --metadata-remove-color: var(--accent-text);
+  --metadata-remove-color-hover: var(--td);
+}
+
+.metadata-properties-title {
+  font-size: var(--metadata-title-size);
+  color: var(--metadata-title-color);
+  text-align: var(--metadata-title-align);
+  font-weight: var(--metadata-title-weight);
+  margin-bottom: 5px;
+}
+.metadata-properties-title::before {
+  content: "\e805";
+  font-family: var(--its);
+  margin-right: 5px;
+  font-weight: 100;
+}
+
+.multi-select-pill {
+  padding: var(--tag-padding-y) var(--tag-padding-x);
+  gap: 0;
+}
+
+.multi-select-pill-content {
+  margin-left: 0;
+}
+
+.multi-select-pill-remove-button {
+  color: var(--metadata-remove-color);
+  margin-right: 0;
+}
+.multi-select-pill-remove-button:hover {
+  color: var(--metadata-remove-color-hover);
+}
+
+.multi-select-pill:not(:hover) .multi-select-pill-remove-button {
+  display: none;
 }
 
 body {
@@ -8988,6 +9033,41 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 
 .is-live-preview.is-live-preview .callout.callout[data-callout~=aside] {
   margin: 5px;
+}
+
+.callout.callout[data-callout=quote] {
+  --callout-icon: "";
+  --callout-color: var(--color-accent);
+  --callout-padding: 20px 30px;
+  --callout-border-width: 0 0 0 4px;
+  --callout-border-opacity: .7;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: var(--shadow-l);
+}
+.callout.callout[data-callout=quote] .callout-content {
+  padding: 0;
+  overflow: hidden;
+}
+.callout.callout[data-callout=quote] .callout-content p:first-child {
+  margin-block-start: 0;
+}
+.callout.callout[data-callout=quote] .callout-content p:last-child {
+  margin-block-end: 0;
+}
+.callout.callout[data-callout=quote] .callout-icon {
+  height: 0;
+  width: 0;
+}
+.callout.callout[data-callout=quote] .callout-title {
+  background: transparent;
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 0;
+  display: block;
+}
+.callout.callout[data-callout=quote] .callout-title-inner::before {
+  content: "~ ";
 }
 
 .callout-original .callout,

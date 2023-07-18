@@ -72,9 +72,13 @@
     }
 
 
-    &[data-callout-metadata~="list"] .callout-content > ul {
-        columns: var(--columns);
-        
-        & > li { break-inside: avoid; }
+    &[data-callout-metadata~="list"] > .callout-content {
+        grid-template-columns: unset; 
+
+        & > ul {
+            columns: var(--columns);
+            
+            & > li { break-inside: avoid; }
+        }
     }
 }

@@ -44,6 +44,8 @@
         background-color: var(--note, var(--background-primary));
         transform: scale(1.2);
         border-radius: 20px;
+        height: var(--icon-size);
+        width: var(--icon-size);
     }
 
     & .callout-content {

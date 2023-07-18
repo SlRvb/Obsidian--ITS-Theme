@@ -46,6 +46,11 @@ body.theme-dark {
         padding-left: 35px;
         margin-left: -15px;
     }
+    & .callout[data-callout=kanban] ul ul {
+        border-left: unset;
+        padding-left: 0;
+        margin-left: 0;
+    }
     
     
     // readable line length fixed

@@ -1,0 +1,14 @@
+@media screen and (max-width: 750px) {
+
+    .published-container.has-navigation .site-body-left-column {
+        top: var(--size-4-2)
+    }
+
+    .site-body-left-column-site-logo {
+        width: 20%;
+    }
+    
+    .nav-view-outer.nav-view-outer .tree-item-children .tree-item-children .tree-item-children {
+        padding-left: 26px;
+    }
+}

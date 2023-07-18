@@ -8,6 +8,7 @@ body {
     --hr-color: var(--hr);
     --hr-thickness: 2px;
     --hr-width: auto;
+    --hr-alignment: -50%, -50%;
 }
 
 
@@ -27,7 +28,7 @@ body {
         position: absolute;
         
         left: 50%;
-        transform: translate(-50%, -50%) rotate(0deg);
+        transform: translate(var(--hr-alignment)) rotate(0deg);
         transform-origin: 50% 50%;
         
         color: transparent;

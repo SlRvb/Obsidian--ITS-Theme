@@ -2369,13 +2369,30 @@ settings:
         collapsed: true
     -
         title: Text Highlight
-        description: Markdown highlight color.
+        description: Markdown mark highlight color.
+        id: text-highlight-bg
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#7a141466'
+        default-light: 'rgba(229, 149, 149, 0.37)'
+    -
+        title: Text Selection
+        description: Cursor selection highlight color.
         id: highlight
         type: variable-themed-color
         format: rgb
         opacity: true
         default-dark: '#7a141466'
         default-light: 'rgba(229, 149, 149, 0.37)'
+    -
+        title: Search Highlight
+        id: text-highlight-bg-active
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#fd737340'
+        default-light: '#fd737340'
     -
         title: Hover Color
         id: hvr
@@ -2392,14 +2409,6 @@ settings:
         opacity: true
         default-dark: 'rgba(212, 47, 47, 0.4)'
         default-light: 'rgba(253, 115, 115, 0.4)'
-    -
-        title: Search Highlight
-        id: text-highlight-bg-active
-        type: variable-themed-color
-        format: rgb
-        opacity: true
-        default-dark: '#fd737340'
-        default-light: '#fd737340'
     #-
     #    title: Search 2
     #    description: Search match highlight and background transparent color for settings.
@@ -4408,6 +4417,7 @@ body {
   --hr-color: var(--hr);
   --hr-thickness: 2px;
   --hr-width: auto;
+  --hr-alignment: -50%, -50%;
 }
 
 /*Stylized HR/Horizontal Line*/
@@ -4425,7 +4435,7 @@ body {
   display: inline-block;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(var(--hr-alignment)) rotate(0deg);
   transform-origin: 50% 50%;
   color: transparent;
   text-shadow: 0 0 0 var(--hr-icon-color);
@@ -8615,7 +8625,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   flex: unset;
   color: rgb(var(--callout-color));
 }
-.callout.callout[data-callout~=Metadata i]:not([callout-metadata~=no-strong], [callout-metadata~=no-str]) .callout-content strong {
+.callout.callout[data-callout~=Metadata i]:not([data-callout-metadata~=no-strong], [data-callout-metadata~=no-str]) .callout-content strong {
   color: rgb(var(--callout-color));
 }
 .callout.callout[data-callout~=Metadata i] .dataview.inline-field-key {
@@ -8730,10 +8740,13 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content .dataview li {
   break-inside: avoid;
 }
-.callout[data-callout*=column][data-callout-metadata~=list] .callout-content > ul {
+.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content {
+  grid-template-columns: unset;
+}
+.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul {
   columns: var(--columns);
 }
-.callout[data-callout*=column][data-callout-metadata~=list] .callout-content > ul > li {
+.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
   break-inside: avoid;
 }
 
@@ -8844,6 +8857,8 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   background-color: var(--note, var(--background-primary));
   transform: scale(1.2);
   border-radius: 20px;
+  height: var(--icon-size);
+  width: var(--icon-size);
 }
 .callout.callout[data-callout~=timeline] .callout-content {
   background-color: rgb(var(--callout-color), 0.1);
@@ -10606,6 +10621,9 @@ body {
   --hr-image: ;
 }
 
+.hr-center-vertically {
+  --hr-alignment: -50%;
+}
 .hr-center-vertically .hr {
   --hr-thickness: 0;
 }

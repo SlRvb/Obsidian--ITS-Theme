@@ -2368,13 +2368,30 @@ settings:
         collapsed: true
     -
         title: Text Highlight
-        description: Markdown highlight color.
+        description: Markdown mark highlight color.
+        id: text-highlight-bg
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#7a141466'
+        default-light: 'rgba(229, 149, 149, 0.37)'
+    -
+        title: Text Selection
+        description: Cursor selection highlight color.
         id: highlight
         type: variable-themed-color
         format: rgb
         opacity: true
         default-dark: '#7a141466'
         default-light: 'rgba(229, 149, 149, 0.37)'
+    -
+        title: Search Highlight
+        id: text-highlight-bg-active
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-dark: '#fd737340'
+        default-light: '#fd737340'
     -
         title: Hover Color
         id: hvr
@@ -2391,14 +2408,6 @@ settings:
         opacity: true
         default-dark: 'rgba(212, 47, 47, 0.4)'
         default-light: 'rgba(253, 115, 115, 0.4)'
-    -
-        title: Search Highlight
-        id: text-highlight-bg-active
-        type: variable-themed-color
-        format: rgb
-        opacity: true
-        default-dark: '#fd737340'
-        default-light: '#fd737340'
     #-
     #    title: Search 2
     #    description: Search match highlight and background transparent color for settings.

@@ -4925,7 +4925,7 @@ body {
   --metadata-title-color: var(--text-muted);
   --metadata-title-weight: 900;
   --metadata-remove-color: var(--accent-text);
-  --metadata-remove-color-hover: var(--td);
+  --metadata-remove-color-hover: var(--text-dl);
 }
 
 .metadata-properties-title {
@@ -4942,25 +4942,44 @@ body {
   font-weight: 100;
 }
 
-.multi-select-pill {
+.metadata-property[data-property-key=tags] .multi-select-pill {
   padding: var(--tag-padding-y) var(--tag-padding-x);
   gap: 0;
+}
+
+.metadata-property[data-property-key=tags] .multi-select-pill-remove-button {
+  color: var(--metadata-remove-color);
+  margin-right: 0;
+}
+.metadata-property[data-property-key=tags] .multi-select-pill-remove-button:hover {
+  color: var(--metadata-remove-color-hover);
 }
 
 .multi-select-pill-content {
   margin-left: 0;
 }
 
-.multi-select-pill-remove-button {
-  color: var(--metadata-remove-color);
-  margin-right: 0;
-}
-.multi-select-pill-remove-button:hover {
-  color: var(--metadata-remove-color-hover);
+.metadata-property:not([data-property-key=tags]) .multi-select-pill:not(:last-of-type)::after {
+  content: ",";
 }
 
-.multi-select-pill:not(:hover) .multi-select-pill-remove-button {
-  display: none;
+.multi-select-container {
+  vertical-align: unset;
+}
+
+@container (width < 380px) {
+  .metadata-property[data-property-type=multitext] {
+    flex-wrap: unset;
+  }
+}
+@container (width < 280px) {
+  .metadata-property[data-property-type] {
+    flex-wrap: wrap;
+    border-bottom: var(--metadata-border-width) solid var(--metadata-border-color);
+  }
+}
+.workspace-split:not(.mod-root) .metadata-container {
+  --metadata-divider-width: 0;
 }
 
 body {
@@ -10621,13 +10640,11 @@ body {
   --hr-image: ;
 }
 
-.hr-center-vertically {
-  --hr-alignment: -50%;
-}
 .hr-center-vertically .hr {
   --hr-thickness: 0;
+  --hr-alignment: -50%;
 }
-.hr-center-vertically hr {
+.hr-center-vertically .hr hr {
   --hr-color: var(--hr);
   --hr-thickness: 2px;
 }
@@ -10734,12 +10751,14 @@ body {
 
 .minimalist-workspace .status-bar:not(:hover),
 .hide-status-bar .status-bar:not(:hover) {
-  min-height: 10px;
+  min-width: 100px;
   padding: 0;
   position: absolute;
   --icon-s: 0;
   --status-bar-font-size: 0;
   --status-bar-background: transparent;
+  --status-bar-border-color: transparent;
+  --status-bar-text-color: transparent;
 }
 
 .minimalist-workspace .workspace-tab-header-container:not(:hover),

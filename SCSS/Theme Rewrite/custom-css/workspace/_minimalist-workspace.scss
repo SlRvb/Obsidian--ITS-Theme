@@ -85,13 +85,15 @@
 .minimalist-workspace,
 .hide-status-bar
 { & .status-bar:not(:hover) { 
-    min-height: 10px; 
+    min-width: 100px;
     padding: 0;
     position: absolute;
     
     --icon-s: 0;
     --status-bar-font-size: 0;
     --status-bar-background: transparent;
+    --status-bar-border-color: transparent;
+    --status-bar-text-color: transparent;
 } }
 
 .minimalist-workspace,

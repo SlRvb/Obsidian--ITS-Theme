@@ -10753,7 +10753,8 @@ body {
 .hide-status-bar .status-bar:not(:hover) {
   min-width: 100px;
   padding: 0;
-  position: absolute;
+  opacity: 0;
+  --status-bar-position: absolute;
   --icon-s: 0;
   --status-bar-font-size: 0;
   --status-bar-background: transparent;

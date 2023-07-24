@@ -18,6 +18,7 @@
     
     --list-indent: 25px;
     --list-spacing: 1px; //keep at 1 or popover bullet alignment breaks(??)
+    --root-list-spacing: 10px;
     
     --list-marker-color: var(--accent);
     --list-marker-color-other: var(--accent2);
@@ -44,6 +45,20 @@
 
 ul, ol { display: flow-root; }
 
+//Fix List Spacing Issues
+.markdown-rendered {
+    & ul,
+    & ol {
+        margin-block-start: var(--root-list-spacing);
+        margin-block-end: var(--root-list-spacing);
+        
+        & ul, 
+        & ol {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
+}
 
 
 //Bullet List

@@ -33,11 +33,14 @@
     &.is-collapsed {
         background-color: transparent;
         box-shadow: none;
+
+        --callout-border-width: 0;
+        --callout-padding: 0px 4px;
         
         & .callout-title-inner { display: none; }
         & .callout-title {
             justify-content: space-between;
-            padding: 0;
+            --callout-title-padding: 0px;
         }
         & .callout-fold { 
             margin: 0;

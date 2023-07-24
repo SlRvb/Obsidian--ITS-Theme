@@ -780,7 +780,7 @@
   flex: unset;
   color: rgb(var(--callout-color));
 }
-.callout.callout[data-callout~=Metadata i]:not([callout-metadata~=no-strong], [callout-metadata~=no-str]) .callout-content strong {
+.callout.callout[data-callout~=Metadata i]:not([data-callout-metadata~=no-strong], [data-callout-metadata~=no-str]) .callout-content strong {
   color: rgb(var(--callout-color));
 }
 .callout.callout[data-callout~=Metadata i] .dataview.inline-field-key {
@@ -895,10 +895,13 @@
 .callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content .dataview li {
   break-inside: avoid;
 }
-.callout[data-callout*=column][data-callout-metadata~=list] .callout-content > ul {
+.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content {
+  grid-template-columns: unset;
+}
+.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul {
   columns: var(--columns);
 }
-.callout[data-callout*=column][data-callout-metadata~=list] .callout-content > ul > li {
+.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
   break-inside: avoid;
 }
 
@@ -1009,6 +1012,8 @@
   background-color: var(--note, var(--background-primary));
   transform: scale(1.2);
   border-radius: 20px;
+  height: var(--icon-size);
+  width: var(--icon-size);
 }
 .callout.callout[data-callout~=timeline] .callout-content {
   background-color: rgb(var(--callout-color), 0.1);
@@ -1137,13 +1142,15 @@
 .callout[data-callout~=aside].is-collapsed {
   background-color: transparent;
   box-shadow: none;
+  --callout-border-width: 0;
+  --callout-padding: 0px 4px;
 }
 .callout[data-callout~=aside].is-collapsed .callout-title-inner {
   display: none;
 }
 .callout[data-callout~=aside].is-collapsed .callout-title {
   justify-content: space-between;
-  padding: 0;
+  --callout-title-padding: 0px;
 }
 .callout[data-callout~=aside].is-collapsed .callout-fold {
   margin: 0;
@@ -1243,7 +1250,7 @@
   --callout-content-padding: 5px 15px;
   --callout-border-opacity: 1;
   --callout-margin: 5px 5px 5px 0;
-  border-left-width: 3px;
+  --callout-border-width: 0 0 0 3px;
   background-color: var(--note, var(--background-primary));
   box-shadow: var(--shadow-m);
   margin: var(--callout-margin);

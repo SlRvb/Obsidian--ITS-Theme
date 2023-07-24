@@ -961,6 +961,15 @@ input[type=checkbox]:checked:after {
   display: block;
 }
 
+input[type][type=checkbox]:checked,
+input[type][type=checkbox]:checked:after {
+  background-color: unset;
+  background-size: 0;
+  background-image: none;
+  transform: unset;
+  -webkit-mask-image: unset;
+}
+
 /* @settings
 name: Alternate Checkboxes
 id: checkbox

@@ -4965,7 +4965,7 @@ body {
   margin-left: 0;
 }
 
-.metadata-property:not([data-property-key=tags]) .multi-select-pill:not(:last-of-type)::after {
+.metadata-property:not([data-property-key=tags]) .multi-select-container > .multi-select-pill:not(:last-of-type)::after {
   content: ",";
 }
 
@@ -6448,6 +6448,11 @@ img:is([alt*=ctr], [alt*=center]) {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.img-adj-center.img-adj-center .is-live-preview img {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /*Left & Right*/

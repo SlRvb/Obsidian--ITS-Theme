@@ -41,7 +41,7 @@ body {
 //Multi Select
 .multi-select-pill-content { margin-left: 0; }
 
-.metadata-property:not([data-property-key="tags"]) .multi-select-pill:not(:last-of-type)::after 
+.metadata-property:not([data-property-key="tags"]) .multi-select-container > .multi-select-pill:not(:last-of-type)::after 
 { content: ","; }
 
 // .multi-select-pill:not(:hover) .multi-select-pill-remove-button 

@@ -10,6 +10,12 @@ img:is([alt*="ctr"], [alt*="center"]) {
     margin-right: auto;
 }
 
+//Live Preview
+.img-adj-center.img-adj-center .is-live-preview img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 
 /*Left & Right*/
 :not(.is-live-preview) {

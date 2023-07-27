@@ -1,5 +1,5 @@
 body {
-    --canvas-node-padding: 0 5px;
+    --canvas-node-padding: 0 7px;
 }
 
 body.theme-dark {
@@ -23,8 +23,8 @@ body.theme-light {
 }
 
 //Canvas Embed Sizing
-.canvas .canvas-node-content .markdown-embed-content 
-{ --embed-padding: 0; }
-.canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
-    padding: var(--canvas-node-padding)
-}
+// .canvas .canvas-node-content .markdown-embed-content 
+// { --embed-padding: 0; height: auto; }
+// .canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
+//     padding: var(--canvas-node-padding)
+// }

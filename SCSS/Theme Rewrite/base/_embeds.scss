@@ -56,7 +56,7 @@ body {
     text-overflow: var(--embed-title-overflow);
 }
 
-.markdown-embed {
+.markdown-embed:not(.canvas-node-content) {
     padding: 0; 
     // & .markdown-preview-view { padding: var(--embed-padding);}
     & .markdown-embed-content { padding: var(--embed-padding); }

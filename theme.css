@@ -4353,10 +4353,10 @@ body {
   text-overflow: var(--embed-title-overflow);
 }
 
-.markdown-embed {
+.markdown-embed:not(.canvas-node-content) {
   padding: 0;
 }
-.markdown-embed .markdown-embed-content {
+.markdown-embed:not(.canvas-node-content) .markdown-embed-content {
   padding: var(--embed-padding);
 }
 
@@ -4891,7 +4891,7 @@ body {
 }
 
 body {
-  --canvas-node-padding: 0 5px;
+  --canvas-node-padding: 0 7px;
 }
 
 body.theme-dark {
@@ -4914,14 +4914,6 @@ body.theme-light {
 
 .canvas-card-menu {
   border: var(--box-border);
-}
-
-.canvas .canvas-node-content .markdown-embed-content {
-  --embed-padding: 0;
-}
-
-.canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
-  padding: var(--canvas-node-padding);
 }
 
 body {

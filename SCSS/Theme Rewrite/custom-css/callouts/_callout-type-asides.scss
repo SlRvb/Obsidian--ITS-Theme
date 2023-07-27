@@ -76,8 +76,6 @@
     }
     &.is-collapsed .callout-content{ display: none; }
 }
-// Aside Fixes
-.is-live-preview .callout[data-callout~="aside"] { float: unset; }
 
 .callout.callout.callout[data-callout~="aside"] {
     
@@ -98,5 +96,12 @@
         }
     }
 }
+
+
+//Fixes
+.is-mobile.is-mobile .callout[data-callout~="aside"]:is([data-callout-metadata~="left"],[data-callout-metadata~="p+l"]) 
+{ margin-left: 0; }
+
 // LP Fix
+.is-live-preview .callout[data-callout~="aside"] { float: unset; }
 .is-live-preview.is-live-preview .callout.callout[data-callout~=aside] { margin: 5px; }

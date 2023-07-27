@@ -163,7 +163,13 @@ li.is-collapsed .list-bullet:after,
 // }
 
 
-// /*List Arrows*/
+/*List Arrows*/
+.markdown-rendered .list-collapse-indicator {
+    margin-inline-start: -2.2em;
+    padding-inline-end: 0;
+}
+
+
 // .markdown-preview-view ul .list-collapse-indicator {
 //     padding-left: 1em;
 //     color: var(--soft-text);

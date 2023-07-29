@@ -3337,6 +3337,7 @@ body {
   --nav-item-white-space: wrap;
   --nav-indentation-guide-width: 2px;
   --nav-indentation-guide-color: var(--lines);
+  --folder-weight: 700;
 }
 
 .nav-folder-collapse-indicator,
@@ -3345,7 +3346,7 @@ body {
 }
 
 .nav-folder-title {
-  --nav-item-weight: 700;
+  --nav-item-weight: var(--folder-weight);
 }
 
 .nav-folder.mod-root > .nav-folder-title:hover {
@@ -6041,6 +6042,14 @@ ul.auto-class-settings__match-group-list {
 }
 .auto-class-manage-match__class-list-item .auto-class-manage-match__class-list-control {
   margin-bottom: -4px;
+}
+
+.qe-popup-menu .menu-item {
+  --interactive-accent-hover: var(--dark-accent);
+}
+
+.menu-item.is-qe-folder {
+  font-weight: var(--folder-weight);
 }
 
 object.link-favicon {
@@ -9084,7 +9093,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   margin: 5px;
 }
 
-.callout.callout[data-callout=quote] {
+.callout.callout[data-callout=quote][data-callout-metadata~=author] {
   --callout-icon: "";
   --callout-color: var(--color-accent);
   --callout-padding: 20px 30px;
@@ -9094,29 +9103,43 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   flex-direction: column-reverse;
   box-shadow: var(--shadow-l);
 }
-.callout.callout[data-callout=quote] .callout-content {
+.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content {
   padding: 0;
   overflow: hidden;
 }
-.callout.callout[data-callout=quote] .callout-content p:first-child {
+.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content p:first-child {
   margin-block-start: 0;
 }
-.callout.callout[data-callout=quote] .callout-content p:last-child {
+.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content p:last-child {
   margin-block-end: 0;
 }
-.callout.callout[data-callout=quote] .callout-icon {
+.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-icon {
   height: 0;
   width: 0;
 }
-.callout.callout[data-callout=quote] .callout-title {
+.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-title {
   background: transparent;
   text-align: right;
   padding-top: 5px;
   padding-right: 0;
   display: block;
 }
-.callout.callout[data-callout=quote] .callout-title-inner::before {
+.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-title-inner::before {
   content: "~ ";
+}
+.callout.callout[data-callout=quote][data-callout-metadata~=mark] {
+  --callout-padding: 20px 40px 20px 30px;
+}
+.callout.callout[data-callout=quote][data-callout-metadata~=mark] .callout-content::before {
+  display: block;
+  float: right;
+  content: "”";
+  font-family: var(--font);
+  color: var(--headers);
+  transform: scale(4);
+  position: absolute;
+  right: 50px;
+  margin-top: 20px;
 }
 
 .callout-original .callout,

@@ -1,0 +1,9 @@
+
+.qe-popup-menu .menu-item { 
+    // padding: 3px var(--size-4-2); 
+    
+    --interactive-accent-hover: var(--dark-accent);
+}
+
+.menu-item.is-qe-folder { font-weight: var(--folder-weight); }
+// .menu-item:is(.is-qe-folder, .is-qe-file) .menu-item-title { padding-left: 10px; }

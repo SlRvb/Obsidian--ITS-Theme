@@ -1,48 +1,70 @@
 .callout.callout[data-callout="quote"] {
-    --callout-icon: "";
-    --callout-color: var(--color-accent);
-    --callout-padding: 20px 30px;
-    --callout-border-width: 0 0 0 4px;
-    --callout-border-opacity: .7;
-
-    display: flex;
-    flex-direction: column-reverse;
     
-    // background-color: hsla(var(--callout-color), 0.1);
-    box-shadow: var(--shadow-l);
-    
-    & .callout-content {
-        padding: 0;
+    //Author Bottom Right Styling
+    &[data-callout-metadata~="author"] {
+        --callout-icon: "";
+        --callout-color: var(--color-accent);
+        --callout-padding: 20px 30px;
+        --callout-border-width: 0 0 0 4px;
+        --callout-border-opacity: .7;
 
-        overflow: hidden;
+        display: flex;
+        flex-direction: column-reverse;
         
-        // //Quote
-        // &::before {
-        //     content: "\ec13";
-        //     font-family: var(--its);
-        //     transform: scale(1.5);
-            
-        //     float: right;
-        //     padding-top: 15px;
-        //     margin-right: 10px;
-        // }
+        // background-color: hsla(var(--callout-color), 0.1);
+        box-shadow: var(--shadow-l);
+        
+        & .callout-content {
+            padding: 0;
 
-        & p {            
-            &:first-child { margin-block-start: 0; }
-            &:last-child { margin-block-end: 0; }
+            overflow: hidden;
+            
+            // //Quote
+            // &::before {
+            //     content: "\ec13";
+            //     font-family: var(--its);
+            //     transform: scale(1.5);
+                
+            //     float: right;
+            //     padding-top: 15px;
+            //     margin-right: 10px;
+            // }
+
+            & p {            
+                &:first-child { margin-block-start: 0; }
+                &:last-child { margin-block-end: 0; }
+            }
+        }
+
+        
+        //Author
+        & .callout-icon { height: 0; width: 0; }
+        & .callout-title {
+            background: transparent;
+            text-align: right;
+            padding-top: 5px;
+            padding-right: 0;
+
+            display: block;
+        }
+        & .callout-title-inner::before { content: "~ "; }
+    }
+
+    &[data-callout-metadata~="mark"] {
+        --callout-padding: 20px 40px 20px 30px;
+
+        & .callout-content::before {
+            display: block;
+            float: right;
+            
+            content: '\201D';
+            font-family: var(--font);
+            color: var(--headers);
+            transform: scale(4);
+
+            position: absolute;
+            right: 50px;
+            margin-top: 20px;
         }
     }
-
-    
-    //Author
-    & .callout-icon { height: 0; width: 0; }
-    & .callout-title {
-        background: transparent;
-        text-align: right;
-        padding-top: 5px;
-        padding-right: 0;
-
-        display: block;
-    }
-    & .callout-title-inner::before { content: "~ "; }
 }

@@ -1,0 +1,14 @@
+.metadata-label-text-color div {
+    --metadata-label-text-color: var(--headers);
+    --metadata-icon-color: var(--headers);
+}
+
+.metadata-label-background div {
+    --metadata-label-background: var(--tag);
+    --metadata-label-text-color: var(--text-dl);
+    --metadata-icon-color: var(--text-dl);
+}
+
+.metadata-value-background div {
+    --metadata-input-background: var(--td);
+}

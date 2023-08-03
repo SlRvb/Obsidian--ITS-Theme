@@ -1811,6 +1811,40 @@ settings:
         id: canvas-cards
         type: class-toggle
     -
+        title: Metadata
+        id: ITS-Metadata
+        type: heading
+        level: 2 
+        collapsed: true
+    - 
+        title: Metadata Colorful Label Styling
+        id: select
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: Text Color
+                value: metadata-label-text-color
+            - 
+                label: Label Background
+                value: metadata-label-background
+    - 
+        title: Metadata Value Background
+        id: metadata-value-background
+        type: class-toggle
+
+    -
+        title: Metadata Title Positions
+        id: metadata-title-align
+        type: variable-select
+        allowEmpty: true
+        default: center
+        options:
+            - left
+            - center
+            - right
+    -
         title: Colors
         id: ITS-Colors
         type: heading

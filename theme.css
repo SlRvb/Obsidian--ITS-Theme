@@ -1812,6 +1812,40 @@ settings:
         id: canvas-cards
         type: class-toggle
     -
+        title: Metadata
+        id: ITS-Metadata
+        type: heading
+        level: 2 
+        collapsed: true
+    - 
+        title: Metadata Colorful Label Styling
+        id: select
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: Text Color
+                value: metadata-label-text-color
+            - 
+                label: Label Background
+                value: metadata-label-background
+    - 
+        title: Metadata Value Background
+        id: metadata-value-background
+        type: class-toggle
+
+    -
+        title: Metadata Title Positions
+        id: metadata-title-align
+        type: variable-select
+        allowEmpty: true
+        default: center
+        options:
+            - left
+            - center
+            - right
+    -
         title: Colors
         id: ITS-Colors
         type: heading
@@ -4595,8 +4629,8 @@ body {
 }
 
 body .outline {
-  --nav-item-children-margin-left: 12px;
   padding: var(--size-4-3) var(--size-4-2);
+  --nav-item-children-margin-left: 12px;
 }
 body .outline .tree-item-children {
   transition: all 0.3s ease-in-out;
@@ -4622,6 +4656,11 @@ body .outline .tree-item.is-collapsed .collapse-icon svg {
 }
 body .outline .tree-item.is-collapsed .tree-item-self::before {
   display: none;
+}
+
+.is-mobile .outline {
+  --nav-item-children-margin-left: 28px;
+  --nav-item-children-padding-left: 0;
 }
 
 body {
@@ -4931,6 +4970,9 @@ body {
   --metadata-title-weight: 900;
   --metadata-remove-color: var(--accent-text);
   --metadata-remove-color-hover: var(--text-dl);
+  --metadata-icon-color: var(--icon-color);
+  --metadata-button-text-color: var(--inactive);
+  --metadata-input-background: transparent;
 }
 
 .metadata-properties-title {
@@ -4945,6 +4987,17 @@ body {
   font-family: var(--its);
   margin-right: 5px;
   font-weight: 100;
+}
+
+.metadata-property-icon {
+  color: var(--metadata-icon-color);
+}
+
+.metadata-add-button:not(:hover) {
+  color: var(--metadata-button-text-color);
+}
+.metadata-add-button.metadata-add-button {
+  margin-top: 0;
 }
 
 .metadata-property[data-property-key=tags] .multi-select-pill {
@@ -4964,7 +5017,7 @@ body {
   margin-left: 0;
 }
 
-.metadata-property:not([data-property-key=tags]) .multi-select-container > .multi-select-pill:not(:last-of-type)::after {
+.metadata-property:not([data-property-key=tags]) .multi-select-container .multi-select-pill:not(:nth-last-child(2))::after {
   content: ",";
 }
 
@@ -4980,7 +5033,13 @@ body {
 @container (width < 280px) {
   .metadata-property[data-property-type] {
     flex-wrap: wrap;
-    border-bottom: var(--metadata-border-width) solid var(--metadata-border-color);
+  }
+
+  .metadata-property {
+    border-bottom: var(--metadata-divider-width) solid var(--metadata-divider-color);
+  }
+  .metadata-property > * {
+    --metadata-divider-width: 0;
   }
 }
 .workspace-split:not(.mod-root) .metadata-container {
@@ -5835,6 +5894,10 @@ body .button-default.button-default:hover {
   --button-background: var(--button-background-hover);
   --button-border: var(--button-background-hover);
   box-shadow: var(--shadow-l);
+}
+
+.modal-content.button-maker {
+  width: auto;
 }
 
 body {
@@ -9514,6 +9577,21 @@ iframe {
   --kanban-button-shadow: transparent;
 }
 
+.metadata-label-text-color div {
+  --metadata-label-text-color: var(--headers);
+  --metadata-icon-color: var(--headers);
+}
+
+.metadata-label-background div {
+  --metadata-label-background: var(--tag);
+  --metadata-label-text-color: var(--text-dl);
+  --metadata-icon-color: var(--text-dl);
+}
+
+.metadata-value-background div {
+  --metadata-input-background: var(--td);
+}
+
 /*Table Centered*/
 .tables-center table,
 .t-c table {
@@ -12550,6 +12628,9 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --h4-border-right-color: var(--h4-border-line-color);
   --h5-border-right-color: var(--h5-border-line-color);
   --h6-border-right-color: var(--h6-border-line-color);
+  --icon-color: var(--soft-text);
+  --metadata-icon-color: var(--icon-color);
+  --metadata-button-text-color: var(--inactive);
   --inline-title-color: var(--headers);
   --inline-title-font: var(--h1-font);
   --inline-title-weight: var(--h1-weight);

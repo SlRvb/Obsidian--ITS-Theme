@@ -23,7 +23,7 @@ settings:
         id: ITS-Sizes
         type: class-select
         allowEmpty: true
-        default: Readable
+        default: sizing-readable
         options:
             -
                 label: Readable
@@ -283,7 +283,7 @@ settings:
         title: Floating Sidebar Ribbon
         id: ITS-Sidebar-Ribbon-Float-Position
         type: class-select
-        default: Bottom
+        default: sidebar-float-bottom
         options: 
             -
                 label: Bottom

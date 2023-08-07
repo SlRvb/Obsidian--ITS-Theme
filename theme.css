@@ -9220,6 +9220,10 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   margin-top: 20px;
 }
 
+.published-container .callout.callout[data-callout=quote][data-callout-metadata~=mark] .callout-content::before {
+  right: 65px;
+}
+
 .callout-original .callout,
 .callout:is([data-callout-metadata~=callout-original],
 [data-callout-metadata~=co-o]) {

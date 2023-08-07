@@ -68,3 +68,7 @@
         }
     }
 }
+
+.published-container .callout.callout[data-callout="quote"][data-callout-metadata~="mark"] .callout-content::before {
+    right: 65px;
+}

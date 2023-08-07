@@ -1811,11 +1811,20 @@ settings:
         id: canvas-cards
         type: class-toggle
     -
-        title: Metadata
+        title: Properties / Metadata
         id: ITS-Metadata
         type: heading
         level: 2 
         collapsed: true
+    -
+        title: Metadata Key Width
+        id: metadata-label-width
+        type: variable-number-slider
+        default: 9
+        format: em
+        min: 8
+        max: 15
+        step: 1
     - 
         title: Metadata Colorful Label Styling
         id: select
@@ -1833,7 +1842,6 @@ settings:
         title: Metadata Value Background
         id: metadata-value-background
         type: class-toggle
-
     -
         title: Metadata Title Positions
         id: metadata-title-align
@@ -1844,6 +1852,10 @@ settings:
             - left
             - center
             - right
+    - 
+        title: Metadata Title No Icon
+        id: metadata-title-no-icon
+        type: class-toggle
     -
         title: Colors
         id: ITS-Colors

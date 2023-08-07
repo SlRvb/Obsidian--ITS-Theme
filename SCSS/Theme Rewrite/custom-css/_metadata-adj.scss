@@ -1,14 +1,20 @@
-.metadata-label-text-color div {
+.metadata-label-text-color .metadata-property {
+    --metadata-label-background: transparent;
     --metadata-label-text-color: var(--headers);
     --metadata-icon-color: var(--headers);
 }
 
-.metadata-label-background div {
+.metadata-label-background .metadata-property {
     --metadata-label-background: var(--tag);
     --metadata-label-text-color: var(--text-dl);
     --metadata-icon-color: var(--text-dl);
 }
 
-.metadata-value-background div {
+.metadata-value-background .metadata-property {
     --metadata-input-background: var(--td);
+}
+
+.metadata-title-no-icon {
+    --metadata-title-icon: '';
+    --metadata-title-icon-padding: 0;
 }

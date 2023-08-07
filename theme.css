@@ -1812,11 +1812,20 @@ settings:
         id: canvas-cards
         type: class-toggle
     -
-        title: Metadata
+        title: Properties / Metadata
         id: ITS-Metadata
         type: heading
         level: 2 
         collapsed: true
+    -
+        title: Metadata Key Width
+        id: metadata-label-width
+        type: variable-number-slider
+        default: 9
+        format: em
+        min: 8
+        max: 15
+        step: 1
     - 
         title: Metadata Colorful Label Styling
         id: select
@@ -1834,7 +1843,6 @@ settings:
         title: Metadata Value Background
         id: metadata-value-background
         type: class-toggle
-
     -
         title: Metadata Title Positions
         id: metadata-title-align
@@ -1845,6 +1853,10 @@ settings:
             - left
             - center
             - right
+    - 
+        title: Metadata Title No Icon
+        id: metadata-title-no-icon
+        type: class-toggle
     -
         title: Colors
         id: ITS-Colors
@@ -4968,6 +4980,9 @@ body {
   --metadata-title-size: var(--font-text-size);
   --metadata-title-color: var(--text-muted);
   --metadata-title-weight: 900;
+  --metadata-title-icon: "";
+  --metadata-title-icon-font: var(--its);
+  --metadata-title-icon-padding: 5px;
   --metadata-remove-color: var(--accent-text);
   --metadata-remove-color-hover: var(--text-dl);
   --metadata-icon-color: var(--icon-color);
@@ -4983,9 +4998,9 @@ body {
   margin-bottom: 5px;
 }
 .metadata-properties-title::before {
-  content: "\e805";
-  font-family: var(--its);
-  margin-right: 5px;
+  content: var(--metadata-title-icon);
+  font-family: var(--metadata-title-icon-font);
+  margin-right: var(--metadata-title-icon-padding);
   font-weight: 100;
 }
 
@@ -9577,19 +9592,25 @@ iframe {
   --kanban-button-shadow: transparent;
 }
 
-.metadata-label-text-color div {
+.metadata-label-text-color .metadata-property {
+  --metadata-label-background: transparent;
   --metadata-label-text-color: var(--headers);
   --metadata-icon-color: var(--headers);
 }
 
-.metadata-label-background div {
+.metadata-label-background .metadata-property {
   --metadata-label-background: var(--tag);
   --metadata-label-text-color: var(--text-dl);
   --metadata-icon-color: var(--text-dl);
 }
 
-.metadata-value-background div {
+.metadata-value-background .metadata-property {
   --metadata-input-background: var(--td);
+}
+
+.metadata-title-no-icon {
+  --metadata-title-icon: "";
+  --metadata-title-icon-padding: 0;
 }
 
 /*Table Centered*/

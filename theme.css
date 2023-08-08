@@ -4327,6 +4327,9 @@ body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row {
 .markdown-rendered td {
   padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
 }
+.markdown-rendered table th {
+  --latex-color: var(--table-header-color);
+}
 
 .markdown-rendered table thead tr > th:first-child {
   border-top-left-radius: var(--radius-s);

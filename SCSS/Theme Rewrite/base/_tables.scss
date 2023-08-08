@@ -54,6 +54,8 @@ body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row {
 .markdown-rendered {
     & th { padding: var(--table-header-padding-y) var(--table-header-padding-x); }
     & td { padding: var(--table-cell-padding-y) var(--table-cell-padding-x); }
+    
+    & table th { --latex-color: var(--table-header-color); } //Fix Coloring
 } 
 
 .markdown-rendered table {
@@ -61,6 +63,4 @@ body:not(.table-unwrap) .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row {
     & thead tr > th:last-child { border-top-right-radius: var(--radius-s); }
     & tbody tr:last-child > td:last-child { border-bottom-right-radius: var(--radius-s); }
     & tbody tr:last-child > td:first-child { border-bottom-left-radius: var(--radius-s); }
-    
-    
 }

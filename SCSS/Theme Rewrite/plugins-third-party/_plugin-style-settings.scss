@@ -43,6 +43,12 @@ body {
         }
     }
 
+    & .style-settings-filter-result-count { 
+        color: var(--text-dl);
+        opacity: .5;
+        font-weight: 500;
+    }
+
 }
 .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
     flex-direction: row;

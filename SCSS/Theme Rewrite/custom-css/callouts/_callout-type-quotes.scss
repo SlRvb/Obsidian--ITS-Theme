@@ -1,3 +1,38 @@
+body:not(.default-callout-quote) .callout.callout[data-callout="quote"] {
+
+    --callout-icon: "";
+    --callout-color: var(--color-accent);
+    --callout-padding: 20px 30px;
+    --callout-border-width: 0 0 0 4px;
+    --callout-border-opacity: .7;
+
+    display: flex;
+    flex-direction: column-reverse;
+    
+    // background-color: hsla(var(--callout-color), 0.1);
+    box-shadow: var(--shadow-l);
+    
+    & .callout-content {
+        padding: 0;
+        overflow: hidden;
+
+        & p {            
+            &:first-child { margin-block-start: 0; }
+            &:last-child { margin-block-end: 0; }
+        }
+    }
+    & .callout-icon { height: 0; width: 0; }
+    & .callout-title {
+        background: transparent;
+        text-align: right;
+        padding-top: 5px;
+        padding-right: 0;
+
+        display: block;
+    }
+    & .callout-title-inner::before { content: "~ "; }
+}
+
 .callout.callout[data-callout="quote"] {
     
     //Author Bottom Right Styling

@@ -4259,13 +4259,8 @@ ol > li::marker,
   --indentation-guide-color: var(--list-color-6);
 }
 
-:is(ul, ol) li.task-list-item > p,
-:is(ul, ol) li > p {
-  margin-block-end: unset;
-}
-
-.markdown-rendered ul.has-list-bullet li p:first-of-type {
-  margin-block-start: 1em;
+:is(ul, ol) li:not(:first-of-type) p:first-of-type {
+  margin-block-start: var(--p-spacing);
 }
 
 :is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li {

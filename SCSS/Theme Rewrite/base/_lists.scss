@@ -138,9 +138,8 @@ ol > li::marker,
 
 
 // Spaced Lists: Fix breaking when Space in between Lists
-:is(ul, ol) li.task-list-item > p,
-:is(ul, ol) li > p { margin-block-end: unset; }
-.markdown-rendered ul.has-list-bullet li p:first-of-type { margin-block-start: 1em; }
+:is(ul, ol) li:not(:first-of-type) p:first-of-type 
+{ margin-block-start: var(--p-spacing); }
 
 :is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li 
 { padding-top: unset; padding-bottom: 0.1em; }
@@ -149,9 +148,8 @@ ol > li::marker,
 
 //List Collapse Outline
 li.is-collapsed .list-bullet:after,
-.is-collapsed ~ .cm-formatting-list .list-bullet:after {
-    box-shadow: 0 0 0 4px var(--list-bullet-box-shadow-color)
-}
+.is-collapsed ~ .cm-formatting-list .list-bullet:after 
+{ box-shadow: 0 0 0 4px var(--list-bullet-box-shadow-color); }
 
 
 

@@ -10595,37 +10595,35 @@ h6) {
   width: 100%;
   align-items: center;
 }
-.hcl .HyperMD-header.cm-line:not(.HyperMD-header) > :not(.collapse-indicator),
+.hcl .HyperMD-header.cm-line:not(.HyperMD-header) > :not(.collapse-indicator), .hcl .HyperMD-header.cm-line > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child),
 .hcl :is(h1,
 h2,
 h3,
 h4,
 h5,
 h6):not(.HyperMD-header) > :not(.collapse-indicator),
-.headings-center-lines .HyperMD-header.cm-line:not(.HyperMD-header) > :not(.collapse-indicator),
-.headings-center-lines :is(h1,
-h2,
-h3,
-h4,
-h5,
-h6):not(.HyperMD-header) > :not(.collapse-indicator) {
-  margin: 0 10px;
-}
-.hcl .HyperMD-header.cm-line > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child),
 .hcl :is(h1,
 h2,
 h3,
 h4,
 h5,
 h6) > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child),
+.headings-center-lines .HyperMD-header.cm-line:not(.HyperMD-header) > :not(.collapse-indicator),
 .headings-center-lines .HyperMD-header.cm-line > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child),
 .headings-center-lines :is(h1,
 h2,
 h3,
 h4,
 h5,
+h6):not(.HyperMD-header) > :not(.collapse-indicator),
+.headings-center-lines :is(h1,
+h2,
+h3,
+h4,
+h5,
 h6) > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) {
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .hcl .HyperMD-header.cm-line:before, .hcl .HyperMD-header.cm-line:after,
 .hcl :is(h1,
@@ -10687,6 +10685,38 @@ h4,
 h5,
 h6):after {
   margin-left: 0.3em;
+}
+.hcl .HyperMD-header.cm-line sup,
+.hcl :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) sup,
+.headings-center-lines .HyperMD-header.cm-line sup,
+.headings-center-lines :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) sup {
+  margin-top: -10.5px;
+}
+.hcl .HyperMD-header.cm-line sub,
+.hcl :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) sub,
+.headings-center-lines .HyperMD-header.cm-line sub,
+.headings-center-lines :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) sub {
+  margin-top: 10.5px;
 }
 
 body {

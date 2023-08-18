@@ -34,12 +34,20 @@
         
         
         //Padding for Other Elements In Heading
-        &:not(.HyperMD-header) > :not(.collapse-indicator) { margin: 0 10px; }
-        & > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) { margin: 0 10px; }
+        &:not(.HyperMD-header) > :not(.collapse-indicator),
+        & > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child) 
+        { 
+            margin-left: 10px; 
+            margin-right: 10px;
+        }
 
         //Lines Padding
         &:before, &:after { flex: 1; }
         &:before { margin-right: .3em; }
         &:after  { margin-left: .3em; }
+
+        & sup { margin-top: calc(15px * -.7); }
+        & sub { margin-top: calc(15px * .7); }
     }
+
 }

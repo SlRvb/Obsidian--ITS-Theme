@@ -39,8 +39,6 @@ body {
         }
     }
 
-    //Fix List in Table
-    & ul { padding-inline-start: 0; }
 }
     
 //Dataview List Count   
@@ -50,9 +48,9 @@ body {
 }
 
 //List
-.dataview.list-view-ul {
-    & li::marker { color: transparent; }
-}
+// .dataview.list-view-ul {
+//     & li::marker { color: transparent; }
+// }
 
 //dvjs
 .dataview.result-group { padding-left: 0; }
@@ -102,12 +100,17 @@ body {
 
 
 //Fix Embed Task & List Alignment
-.dataview.dataview {
-    & ul > li {
-        &:not(.task-list-item)::before,
-        & .task-list-item-checkbox { margin-left: 0; }
+body:not(.list-default-bullet) {
+    & .dataview.dataview {
+        & ul > li {
+            &:not(.task-list-item)::before,
+            & .task-list-item-checkbox { margin-left: 0; }
+            
+            & ul::before { left: .4em; } //List Line
+        }
+        & div div > ul { padding-inline-start: 0; }
         
-        & ul::before { left: .4em; } //List Line
+        //Fix List in Table
+        &.table-view-table ul { padding-inline-start: 0; }
     }
-    & div div > ul { padding-inline-start: 0; }
 }

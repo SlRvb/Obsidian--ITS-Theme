@@ -63,28 +63,30 @@ ul, ol { display: flow-root; }
 
 //Bullet List
 //Remove Obsidian Bullet
-.list-bullet {
-    &::after,
-    &::before { display: none; }
-}
-ul > li:not(.task-list-item)::marker { margin-right: -10px; }
-.is-live-preview .cm-formatting-list-ul::before,
-ul > li:not(.task-list-item)::before {
-    content: var(--bullet);
-    font-family: var(--bullet-font);
-    font-size: var(--font-text-size);
-    font-weight: 100;
-
-    color: var(--list-marker-color);
-    background-color: transparent;
+body:not(.list-default-bullet) {
+    & .list-bullet {
+        &::after,
+        &::before { display: none; }
+    }
+    & ul > li:not(.task-list-item)::marker { margin-right: -10px; }
+    & .is-live-preview .cm-formatting-list-ul::before,
+    & ul > li:not(.task-list-item)::before {
+        content: var(--bullet);
+        font-family: var(--bullet-font);
+        font-size: var(--font-text-size);
+        font-weight: 100;
     
-    transform: unset;
-    position: unset;
-    
-    height: unset;
+        color: var(--list-marker-color);
+        background-color: transparent;
+        
+        transform: unset;
+        position: unset;
+        
+        height: unset;
+    }
+    & ul > li:not(.task-list-item)::marker,
+    & .is-live-preview .cm-formatting-list { color: transparent; }
 }
-ul > li:not(.task-list-item)::marker,
-.is-live-preview .cm-formatting-list { color: transparent; }
 
 //Alignment
 ul > li:not(.task-list-item)::before { 

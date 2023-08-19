@@ -1,5 +1,6 @@
 body {
     --canvas-node-padding: 0 7px;
+    --canvas-color-opacity: 0.07;
 }
 
 body.theme-dark {
@@ -20,6 +21,9 @@ body.theme-light {
 
 .canvas-card-menu {
     border: var(--box-border);
+}
+.canvas-node.is-themed .canvas-node-content {
+    background-color: rgba(var(--canvas-color), var(--canvas-color-opacity));
 }
 
 //Canvas Embed Sizing

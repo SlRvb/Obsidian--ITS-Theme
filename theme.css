@@ -1816,6 +1816,15 @@ settings:
         id: canvas-cards
         type: class-toggle
     -
+        title: Canvas Card Background Color Brightness
+        id: canvas-color-opacity
+        type: variable-number-slider
+        default: 0.07
+        format: ''
+        min: 0.04
+        max: 0.18
+        step: .02
+    -
         title: Properties / Metadata
         id: ITS-Metadata
         type: heading
@@ -4944,6 +4953,7 @@ body {
 
 body {
   --canvas-node-padding: 0 7px;
+  --canvas-color-opacity: 0.07;
 }
 
 body.theme-dark {
@@ -4966,6 +4976,10 @@ body.theme-light {
 
 .canvas-card-menu {
   border: var(--box-border);
+}
+
+.canvas-node.is-themed .canvas-node-content {
+  background-color: rgba(var(--canvas-color), var(--canvas-color-opacity));
 }
 
 body {
@@ -8962,7 +8976,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 
 /*Kanban*/
 .callout.callout[data-callout~=kanban] {
-  --callout-color: var(--text-normal);
+  --callout-color: unset;
   --callout-icon: layout-dashboard;
   --callout-padding: 0;
   --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
@@ -8974,7 +8988,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout.callout[data-callout~=kanban] .callout-title {
   justify-content: center;
-  background: var(--background-primary-alt);
+  background: var(--code-bg, var(--background-primary));
   padding: 5px;
   border-radius: var(--radius-s);
 }

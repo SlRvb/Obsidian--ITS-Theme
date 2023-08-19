@@ -1815,6 +1815,15 @@ settings:
         id: canvas-cards
         type: class-toggle
     -
+        title: Canvas Card Background Color Brightness
+        id: canvas-color-opacity
+        type: variable-number-slider
+        default: 0.07
+        format: ''
+        min: 0.04
+        max: 0.18
+        step: .02
+    -
         title: Properties / Metadata
         id: ITS-Metadata
         type: heading

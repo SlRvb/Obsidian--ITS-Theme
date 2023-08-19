@@ -2,7 +2,7 @@
 
 /*Kanban*/
 .callout.callout[data-callout~="kanban"] {
-    --callout-color: var(--text-normal);
+    --callout-color: unset;
     --callout-icon: layout-dashboard;
     --callout-padding: 0;
 
@@ -18,7 +18,7 @@
 
     & .callout-title {
         justify-content: center;
-        background: var(--background-primary-alt);
+        background: var(--code-bg, var(--background-primary));
         padding: 5px;
         border-radius: var(--radius-s);
     }

@@ -2,7 +2,7 @@
 .mermaid {
     //Mermaid Class
     // g.classGroup rect,
-    rect {
+    rect:not([style]) {
         fill: var(--embed-bg) !important;
         stroke: var(--inactive)  !important;
         stroke-width: 1px;

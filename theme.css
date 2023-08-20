@@ -4783,7 +4783,7 @@ body {
   margin-top: 0;
 }
 
-.mermaid rect {
+.mermaid rect:not([style]) {
   fill: var(--embed-bg) !important;
   stroke: var(--inactive) !important;
   stroke-width: 1px;
@@ -4996,6 +4996,10 @@ body {
   --metadata-icon-color: var(--icon-color);
   --metadata-button-text-color: var(--inactive);
   --metadata-input-background: transparent;
+}
+
+.metadata-properties-heading {
+  display: block;
 }
 
 .metadata-properties-title {

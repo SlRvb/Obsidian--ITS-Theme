@@ -257,9 +257,9 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
 
 //Headings
 @each $num, $set in $headings {
-h#{$num},
-.markdown-rendered h#{$num},
-.is-live-preview .HyperMD-header-#{$num}.cm-line
+    h#{$num},
+    .markdown-rendered h#{$num},
+    .is-live-preview .HyperMD-header-#{$num}.cm-line
     {
     display: block;
     background: map-get($set, background);
@@ -267,6 +267,8 @@ h#{$num},
     padding: map-get($set, padding);
     border: map-get($set, border-width) solid map-get($set, border);
     border-radius: var(--radius-m);
+    margin-block-start: var(--heading-spacing);
+    margin-block-end: var(--heading-spacing);
 
     word-wrap: normal;
     word-break: keep-all;

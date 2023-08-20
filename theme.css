@@ -550,6 +550,16 @@ settings:
         id: lig
         type: class-toggle
     -
+        title: Paragraph Spacing
+        description: Adjust spacing size for "paragraphs". Search "spacing" for more fine tuned adjustments.
+        id: p-spacing
+        type: variable-number-slider
+        default: 1
+        format: rem
+        min: 0
+        max: 2
+        step: 0.1
+    -
         title: Fonts
         id: ITS-Fonts
         type: heading
@@ -800,6 +810,16 @@ settings:
         min: 0
         max: 8
         step: 1
+    -
+        title: Heading Spacing
+        description: Adjust header spacing
+        id: heading-spacing
+        type: variable-number-slider
+        default: 10
+        format: px
+        min: 0
+        max: 50
+        step: 10
     -
         title: Header Positions
         id: ITS-Header-positions
@@ -1388,7 +1408,7 @@ settings:
         title: Bullet Shape Font
         id: bullet-font
         type: variable-text
-        default: '"ITS"'    
+        default: '"ITS"'
 	-
 		title: List Line Width
 		id: indentation-guide-width
@@ -1397,6 +1417,26 @@ settings:
         format: px
         min: 0
         max: 3
+        step: 1
+	-
+		title: List Root Spacing
+		id: root-list-spacing
+        description: Adjust list margins (ul, ol)
+		type: variable-number-slider
+        default: 10
+        format: px
+        min: 1
+        max: 16
+        step: 1
+	-
+		title: List Spacing
+        description: Adjust list item spacing (li)
+		id: list-spacing
+		type: variable-number-slider
+        default: 1
+        format: px
+        min: 1
+        max: 16
         step: 1
     - 
         title: Original Bullet Lines
@@ -3949,6 +3989,8 @@ h1,
   padding: var(--h1-padding);
   border: var(--h1-border-width) solid;
   border-radius: var(--radius-m);
+  margin-block-start: var(--heading-spacing);
+  margin-block-end: var(--heading-spacing);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -3962,6 +4004,8 @@ h2,
   padding: var(--h2-padding);
   border: var(--h2-border-width) solid;
   border-radius: var(--radius-m);
+  margin-block-start: var(--heading-spacing);
+  margin-block-end: var(--heading-spacing);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -3975,6 +4019,8 @@ h3,
   padding: var(--h3-padding);
   border: var(--h3-border-width) solid;
   border-radius: var(--radius-m);
+  margin-block-start: var(--heading-spacing);
+  margin-block-end: var(--heading-spacing);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -3988,6 +4034,8 @@ h4,
   padding: var(--h4-padding);
   border: var(--h4-border-width) solid;
   border-radius: var(--radius-m);
+  margin-block-start: var(--heading-spacing);
+  margin-block-end: var(--heading-spacing);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -4001,6 +4049,8 @@ h5,
   padding: var(--h5-padding);
   border: var(--h5-border-width) solid;
   border-radius: var(--radius-m);
+  margin-block-start: var(--heading-spacing);
+  margin-block-end: var(--heading-spacing);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -4014,6 +4064,8 @@ h6,
   padding: var(--h6-padding);
   border: var(--h6-border-width) solid;
   border-radius: var(--radius-m);
+  margin-block-start: var(--heading-spacing);
+  margin-block-end: var(--heading-spacing);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -4269,7 +4321,8 @@ ol > li::marker,
 
 :is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li {
   padding-top: unset;
-  padding-bottom: 0.1em;
+  padding-bottom: var(--list-spacing);
+  margin-block-start: var(--list-spacing);
 }
 
 li.is-collapsed .list-bullet:after,

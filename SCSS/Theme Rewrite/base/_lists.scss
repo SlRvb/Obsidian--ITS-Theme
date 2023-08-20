@@ -144,7 +144,11 @@ ol > li::marker,
 { margin-block-start: var(--p-spacing); }
 
 :is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li 
-{ padding-top: unset; padding-bottom: 0.1em; }
+{ 
+    padding-top: unset; 
+    padding-bottom: var(--list-spacing); 
+    margin-block-start: var(--list-spacing);
+}
 
 
 

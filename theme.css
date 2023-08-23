@@ -6274,6 +6274,10 @@ img.emoji.emoji {
   gap: 1px;
 }
 
+.cm-s-obsidian .templater-inline .cm-templater-command {
+  background-color: var(--code-bg);
+}
+
 /* Vault Icon */
 body {
   --vault-icon-image: "";
@@ -12874,6 +12878,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --h4-border-right-color: var(--h4-border-line-color);
   --h5-border-right-color: var(--h5-border-line-color);
   --h6-border-right-color: var(--h6-border-line-color);
+  --font-print-override: var(--font-default);
   --icon-color: var(--soft-text);
   --metadata-icon-color: var(--icon-color);
   --metadata-button-text-color: var(--inactive);

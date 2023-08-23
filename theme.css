@@ -3320,6 +3320,13 @@ body {
   border-bottom: 2px solid var(--text-on-accent);
 }
 
+.search-result-hover-button:not(:hover) {
+  color: var(--text);
+}
+.search-result-hover-button:hover {
+  background-color: var(--bttn);
+}
+
 .cm-s-obsidian span.obsidian-search-match-highlight {
   box-shadow: 0 0 0 2px var(--accent);
   border-radius: var(--radius-s);
@@ -9094,8 +9101,8 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout.callout[data-callout~=kanban] ul ul li :is(img, .internal-embed) {
   margin-bottom: -6px;
 }
-.callout.callout[data-callout~=kanban] ul.contains-task-list {
-  padding-inline-start: 20px;
+.callout.callout[data-callout~=kanban] ul.contains-task-list .task-list-item-checkbox {
+  margin-inline-start: 0;
 }
 .callout.callout[data-callout~=kanban] .task-list-item-checkbox {
   cursor: default;

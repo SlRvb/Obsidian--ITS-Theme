@@ -79,6 +79,12 @@
         }
     }
     //Fix checkboxes
-    & ul.contains-task-list { padding-inline-start: 20px; }
+    & ul.contains-task-list { 
+        // padding-inline-start: 20px; 
+        
+        & .task-list-item-checkbox {
+            margin-inline-start: 0;
+        }
+    }
     & .task-list-item-checkbox { cursor: default; }
 }

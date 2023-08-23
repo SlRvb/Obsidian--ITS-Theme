@@ -54,6 +54,11 @@ body {
     color: var(--text-on-accent);
     border-bottom: 2px solid var(--text-on-accent);
 }
+.search-result-hover-button { 
+    &:not(:hover) { color: var(--text); }
+    
+    &:hover { background-color: var(--bttn); }
+}
 
 //.search-result-file-title .tree-item-flair-outer { margin-left: var(--size-4-1); }
 

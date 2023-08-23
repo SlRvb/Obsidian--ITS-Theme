@@ -4257,7 +4257,7 @@ body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul::before, 
   position: unset;
   height: unset;
 }
-body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker, body:not(.list-default-bullet) .is-live-preview .cm-formatting-list {
+body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker, body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul {
   color: transparent;
 }
 

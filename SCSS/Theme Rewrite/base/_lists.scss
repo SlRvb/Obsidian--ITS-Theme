@@ -85,7 +85,7 @@ body:not(.list-default-bullet) {
         height: unset;
     }
     & ul > li:not(.task-list-item)::marker,
-    & .is-live-preview .cm-formatting-list { color: transparent; }
+    & .is-live-preview .cm-formatting-list-ul { color: transparent; }
 }
 
 //Alignment

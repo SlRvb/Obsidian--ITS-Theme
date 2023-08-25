@@ -6274,8 +6274,9 @@ img.emoji.emoji {
   gap: 1px;
 }
 
-.cm-s-obsidian .templater-inline .cm-templater-command {
+.cm-s-obsidian .templater-command-bg, .cm-s-obsidian .templater-inline .cm-templater-command {
   background-color: var(--code-bg);
+  box-shadow: var(--code-shadow);
 }
 
 /* Vault Icon */

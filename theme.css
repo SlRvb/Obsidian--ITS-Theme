@@ -4665,6 +4665,14 @@ del,
   font-family: var(--font-monospace);
 }
 
+:is(.markdown-preview-view,
+.markdown-rendered,
+.markdown-source-view.is-live-preview.is-live-preview) progress::-webkit-progress-bar {
+  background-color: var(--bg);
+  box-shadow: none;
+  border-radius: var(--radius-s);
+}
+
 /* Tag Pane */
 .tag-container {
   padding: 0;
@@ -5040,6 +5048,13 @@ body.theme-light {
 
 .canvas-node.is-themed .canvas-node-content {
   background-color: rgba(var(--canvas-color), var(--canvas-color-opacity));
+}
+
+.theme-dark .canvas-minimap rect.is-themed, .theme-dark .canvas-minimap rect {
+  fill-opacity: var(--canvas-color-opacity);
+}
+.theme-dark .canvas-minimap path, .theme-dark .canvas-minimap path.is-themed {
+  stroke: rgba(var(--canvas-color), calc(var(--canvas-color-opacity) + 0.5));
 }
 
 body {

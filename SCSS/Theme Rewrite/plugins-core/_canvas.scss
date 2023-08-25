@@ -26,6 +26,18 @@ body.theme-light {
     background-color: rgba(var(--canvas-color), var(--canvas-color-opacity));
 }
 
+//Embeded Canvas
+.theme-dark .canvas-minimap {
+    & rect.is-themed,
+    & rect 
+    { fill-opacity: var(--canvas-color-opacity); }
+    
+    & path,
+    & path.is-themed 
+    { stroke: rgba(var(--canvas-color), calc(var(--canvas-color-opacity) + .5)); }
+} 
+
+
 //Canvas Embed Sizing
 // .canvas .canvas-node-content .markdown-embed-content 
 // { --embed-padding: 0; height: auto; }

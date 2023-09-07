@@ -99,7 +99,7 @@ settings:
         default: 14
         format: px
         min: 10
-        max: 15
+        max: 20
         step: 1
     -
         title: Sidebar Tab Icon Sizing
@@ -1870,6 +1870,24 @@ settings:
         type: heading
         level: 2 
         collapsed: true
+    -
+        title: Metadata Key Font Size
+        id: metadata-label-font-size
+        type: variable-number-slider
+        default: .9
+        format: em
+        min: .4
+        max: 1.5
+        step: .1
+    -
+        title: Metadata Value Font Size
+        id: metadata-input-font-size
+        type: variable-number-slider
+        default: .9
+        format: em
+        min: .4
+        max: 1.5
+        step: .1
     -
         title: Metadata Key Width
         id: metadata-label-width
@@ -5071,6 +5089,8 @@ body {
   --metadata-icon-color: var(--icon-color);
   --metadata-button-text-color: var(--inactive);
   --metadata-input-background: transparent;
+  --metadata-label-background-active: var(--td);
+  --metadata-input-background-active: var(--td);
 }
 
 .metadata-properties-heading {
@@ -5100,6 +5120,10 @@ body {
 }
 .metadata-add-button.metadata-add-button {
   margin-top: 0;
+}
+
+.metadata-property:focus-within {
+  --metadata-property-background-hover: var(--td);
 }
 
 .metadata-property[data-property-key=tags] .multi-select-pill {

@@ -16,6 +16,9 @@ body {
     --metadata-button-text-color: var(--inactive);
 
     --metadata-input-background: transparent;
+    
+    --metadata-label-background-active: var(--td);
+    --metadata-input-background-active: var(--td);
 }
 
 //Styling
@@ -43,7 +46,9 @@ body {
     &.metadata-add-button 
     { margin-top: 0;}
 }
-
+.metadata-property:focus-within {
+    --metadata-property-background-hover: var(--td);
+}
 
 
 

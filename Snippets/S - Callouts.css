@@ -1005,10 +1005,13 @@
 .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
   break-inside: avoid;
 }
+.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul .list-bullet::after {
+  position: relative;
+}
 
 /*Kanban*/
 .callout.callout[data-callout~=kanban] {
-  --callout-color: var(--text-normal);
+  --callout-color: unset;
   --callout-icon: layout-dashboard;
   --callout-padding: 0;
   --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
@@ -1020,7 +1023,7 @@
 }
 .callout.callout[data-callout~=kanban] .callout-title {
   justify-content: center;
-  background: var(--background-primary-alt);
+  background: var(--code-bg, var(--background-primary));
   padding: 5px;
   border-radius: var(--radius-s);
 }
@@ -1069,8 +1072,8 @@
 .callout.callout[data-callout~=kanban] ul ul li :is(img, .internal-embed) {
   margin-bottom: -6px;
 }
-.callout.callout[data-callout~=kanban] ul.contains-task-list {
-  padding-inline-start: 20px;
+.callout.callout[data-callout~=kanban] ul.contains-task-list .task-list-item-checkbox {
+  margin-inline-start: 0;
 }
 .callout.callout[data-callout~=kanban] .task-list-item-checkbox {
   cursor: default;
@@ -1310,6 +1313,41 @@
 
 .is-live-preview.is-live-preview .callout.callout[data-callout~=aside] {
   margin: 5px;
+}
+
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] {
+  --callout-icon: "";
+  --callout-color: var(--color-accent);
+  --callout-padding: 20px 30px;
+  --callout-border-width: 0 0 0 4px;
+  --callout-border-opacity: .7;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: var(--shadow-l);
+}
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content {
+  padding: 0;
+  overflow: hidden;
+}
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content p:first-child {
+  margin-block-start: 0;
+}
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content p:last-child {
+  margin-block-end: 0;
+}
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-icon {
+  height: 0;
+  width: 0;
+}
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-title {
+  background: transparent;
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 0;
+  display: block;
+}
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-title-inner::before {
+  content: "~ ";
 }
 
 .callout.callout[data-callout=quote][data-callout-metadata~=author] {

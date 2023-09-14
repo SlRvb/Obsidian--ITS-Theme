@@ -79,6 +79,7 @@
             columns: var(--columns);
             
             & > li { break-inside: avoid; }
+            & .list-bullet::after { position: relative; }
         }
     }
 }

@@ -3,7 +3,7 @@
 .callout.callout:is(
     [data-callout-metadata~="txt-l"],
     [data-callout-metadata~="text-left"]
-) > .callout-content {
+) > .callout-content > * {
     text-align: left;
 }
 .callout.callout:is(
@@ -38,8 +38,10 @@
 .callout.callout:is(
     [data-callout-metadata~='text-small'],
     [data-callout-metadata~='txt-s']
-) {
+) > .callout-content > * {
     --font-text-size: var(--font-smallest);
     --tag-size: var(--font-smallest);
     --table-text-size: var(--font-smallest);
+    
+    font-size: var(--font-text-size);
 }

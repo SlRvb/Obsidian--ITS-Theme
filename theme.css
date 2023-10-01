@@ -8459,7 +8459,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 
 .callout.callout:is([data-callout-metadata~=txt-l],
-[data-callout-metadata~=text-left]) > .callout-content {
+[data-callout-metadata~=text-left]) > .callout-content > * {
   text-align: left;
 }
 
@@ -8484,10 +8484,11 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 
 .callout.callout:is([data-callout-metadata~=text-small],
-[data-callout-metadata~=txt-s]) {
+[data-callout-metadata~=txt-s]) > .callout-content > * {
   --font-text-size: var(--font-smallest);
   --tag-size: var(--font-smallest);
   --table-text-size: var(--font-smallest);
+  font-size: var(--font-text-size);
 }
 
 /*Infobox*/
@@ -8729,11 +8730,37 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout~=cards][data-callout-metadata~="2"] :is(.dataview.table-view-table tbody, .callout-content) {
   grid-template-columns: repeat(2, 1fr);
 }
+.callout[data-callout~=cards][data-callout-metadata~="3"] :is(.dataview.table-view-table tbody, .callout-content) {
+  grid-template-columns: repeat(3, 1fr);
+}
 .callout[data-callout~=cards][data-callout-metadata~="4"] :is(.dataview.table-view-table tbody, .callout-content) {
   grid-template-columns: repeat(4, 1fr);
 }
 .callout[data-callout~=cards][data-callout-metadata~="5"] :is(.dataview.table-view-table tbody, .callout-content) {
   grid-template-columns: repeat(5, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="6"] :is(.dataview.table-view-table tbody, .callout-content) {
+  grid-template-columns: repeat(6, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="7"] :is(.dataview.table-view-table tbody, .callout-content) {
+  grid-template-columns: repeat(7, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="8"] :is(.dataview.table-view-table tbody, .callout-content) {
+  grid-template-columns: repeat(8, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="9"] :is(.dataview.table-view-table tbody, .callout-content) {
+  grid-template-columns: repeat(9, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~=flex] > .callout-content {
+  gap: unset;
+  grid-template-columns: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.callout[data-callout~=cards][data-callout-metadata~=flex] > .callout-content .callout {
+  flex: 1 1 250px;
+  margin: 5px;
 }
 
 /* Dataview Cards */
@@ -9048,6 +9075,21 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout*=column][data-callout-metadata~="4"] .callout-content {
   --columns: 4;
 }
+.callout[data-callout*=column][data-callout-metadata~="5"] .callout-content {
+  --columns: 5;
+}
+.callout[data-callout*=column][data-callout-metadata~="6"] .callout-content {
+  --columns: 6;
+}
+.callout[data-callout*=column][data-callout-metadata~="7"] .callout-content {
+  --columns: 7;
+}
+.callout[data-callout*=column][data-callout-metadata~="8"] .callout-content {
+  --columns: 8;
+}
+.callout[data-callout*=column][data-callout-metadata~="9"] .callout-content {
+  --columns: 9;
+}
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content {
   gap: unset;
   grid-template-columns: none;
@@ -9080,6 +9122,9 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
   break-inside: avoid;
+}
+.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul .list-bullet::after {
+  position: relative;
 }
 
 /*Kanban*/
@@ -9118,7 +9163,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   text-align: center;
   overflow: auto;
 }
-.callout.callout[data-callout~=kanban] ul.dataview-ul {
+.callout.callout[data-callout~=kanban] ul.list-view-ul {
   margin-inline-start: unset;
 }
 .callout.callout[data-callout~=kanban] ul li {

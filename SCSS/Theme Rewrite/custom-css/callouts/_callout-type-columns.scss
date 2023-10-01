@@ -23,11 +23,10 @@
         border: 0;
         padding: 0;
     }
-    &[data-callout-metadata~="3"] .callout-content {
-        --columns: 3;
-    }
-    &[data-callout-metadata~="4"] .callout-content {
-        --columns: 4;
+    @for $i from 3 through 9 {
+        &[data-callout-metadata~="#{$i}"] .callout-content {
+            --columns: #{$i};
+        }
     }
 
 

@@ -35,45 +35,6 @@
     }
     & br { display: none; }
 
-
-    
-    // Columns
-    @for $i from 1 through  9 {
-        &[data-callout-metadata~="#{$i}"] :is(.dataview.table-view-table tbody, .callout-content) {
-            grid-template-columns: repeat($i, 1fr);
-        }
-    }
-    // &[data-callout-metadata~="2"] :is(.dataview.table-view-table tbody, .callout-content) {
-    //     grid-template-columns: repeat(2, 1fr);
-    // }
-    // &[data-callout-metadata~="4"] :is(.dataview.table-view-table tbody, .callout-content) {
-    //     grid-template-columns: repeat(4, 1fr);
-    // }
-    // &[data-callout-metadata~="5"] :is(.dataview.table-view-table tbody, .callout-content) {
-    //     grid-template-columns: repeat(5, 1fr);
-    // }
-    // &[data-callout-metadata~="3"] .callout-content {
-    //     --columns: 3;
-    // }
-    // &[data-callout-metadata~="4"] .callout-content {
-    //     --columns: 4;
-    // }
-    // &[data-callout-metadata~="5"] .callout-content {
-    //     --columns: 5;
-    // }
-    // &[data-callout-metadata~="6"] .callout-content {
-    //     --columns: 6;
-    // }
-    // &[data-callout-metadata~="7"] .callout-content {
-    //     --columns: 7;
-    // }
-    // &[data-callout-metadata~="8"] .callout-content {
-    //     --columns: 8;
-    // }
-    // &[data-callout-metadata~="9"] .callout-content {
-    //     --columns: 9;
-    // }
-
     
     // Flex
     &[data-callout-metadata~="flex"] > .callout-content {
@@ -169,17 +130,12 @@
 
 // Columns
 .callout[data-callout~="cards"]{
-    &[data-callout-metadata~="1"] :is(.dataview.table-view-table tbody, .callout-content) {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    &[data-callout-metadata~="2"] :is(.dataview.table-view-table tbody, .callout-content) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    &[data-callout-metadata~="4"] :is(.dataview.table-view-table tbody, .callout-content) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    &[data-callout-metadata~="5"] :is(.dataview.table-view-table tbody, .callout-content) {
-        grid-template-columns: repeat(5, 1fr);
+    // Columns
+    @for $i from 1 through  9 {
+        &[data-callout-metadata~="#{$i}"] :is(
+            .dataview.table-view-table tbody, 
+            .callout-content
+        ) { grid-template-columns: repeat($i, 1fr); }
     }
 }
 

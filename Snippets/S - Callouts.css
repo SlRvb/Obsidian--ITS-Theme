@@ -648,33 +648,6 @@
 .callout[data-callout~=cards] br {
   display: none;
 }
-.callout[data-callout~=cards][data-callout-metadata~="1"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(1, 1fr);
-}
-.callout[data-callout~=cards][data-callout-metadata~="2"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(2, 1fr);
-}
-.callout[data-callout~=cards][data-callout-metadata~="3"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(3, 1fr);
-}
-.callout[data-callout~=cards][data-callout-metadata~="4"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(4, 1fr);
-}
-.callout[data-callout~=cards][data-callout-metadata~="5"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(5, 1fr);
-}
-.callout[data-callout~=cards][data-callout-metadata~="6"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(6, 1fr);
-}
-.callout[data-callout~=cards][data-callout-metadata~="7"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(7, 1fr);
-}
-.callout[data-callout~=cards][data-callout-metadata~="8"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(8, 1fr);
-}
-.callout[data-callout~=cards][data-callout-metadata~="9"] :is(.dataview.table-view-table tbody, .callout-content) {
-  grid-template-columns: repeat(9, 1fr);
-}
 .callout[data-callout~=cards][data-callout-metadata~=flex] > .callout-content {
   gap: unset;
   grid-template-columns: none;
@@ -752,17 +725,41 @@
   padding-inline-start: unset;
 }
 
-.callout[data-callout~=cards][data-callout-metadata~="1"] :is(.dataview.table-view-table tbody, .callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="1"] :is(.dataview.table-view-table tbody,
+.callout-content) {
   grid-template-columns: repeat(1, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="2"] :is(.dataview.table-view-table tbody, .callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="2"] :is(.dataview.table-view-table tbody,
+.callout-content) {
   grid-template-columns: repeat(2, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="4"] :is(.dataview.table-view-table tbody, .callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="3"] :is(.dataview.table-view-table tbody,
+.callout-content) {
+  grid-template-columns: repeat(3, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="4"] :is(.dataview.table-view-table tbody,
+.callout-content) {
   grid-template-columns: repeat(4, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="5"] :is(.dataview.table-view-table tbody, .callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="5"] :is(.dataview.table-view-table tbody,
+.callout-content) {
   grid-template-columns: repeat(5, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="6"] :is(.dataview.table-view-table tbody,
+.callout-content) {
+  grid-template-columns: repeat(6, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="7"] :is(.dataview.table-view-table tbody,
+.callout-content) {
+  grid-template-columns: repeat(7, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="8"] :is(.dataview.table-view-table tbody,
+.callout-content) {
+  grid-template-columns: repeat(8, 1fr);
+}
+.callout[data-callout~=cards][data-callout-metadata~="9"] :is(.dataview.table-view-table tbody,
+.callout-content) {
+  grid-template-columns: repeat(9, 1fr);
 }
 
 .callout[data-callout~=cards][data-callout-metadata~=dataview] img:not(.link-favicon) {

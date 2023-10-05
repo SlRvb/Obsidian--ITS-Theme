@@ -1,4 +1,4 @@
-.internal-embed {
+.internal-embed:not(.image-embed) {
     //Height Adjustment
     &[alt*="htiny"]     .markdown-embed-content { height: var(--tiny); }
     &[alt*="hsmall"]    .markdown-embed-content { height: var(--small); }

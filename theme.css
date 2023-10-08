@@ -9092,14 +9092,12 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --columns: 9;
 }
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content {
-  gap: unset;
   grid-template-columns: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content .callout {
-  margin: 5px;
   flex: 1 1 calc(var(--file-line-width) / 2.5);
 }
 .callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~="3"] > .callout-content .callout {

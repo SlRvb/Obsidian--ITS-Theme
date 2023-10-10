@@ -8696,7 +8696,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout~=cards] {
   --callout-color: transparent;
   --callout-icon: layout-dashboard;
-  --callout-padding: 2px;
+  --callout-padding: 0;
   --callout-content-padding: 0px;
   --callout-blend-mode: normal;
   box-shadow: none;
@@ -9092,6 +9092,8 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --columns: 9;
 }
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content {
+  margin-top: 5px;
+  margin-bottom: 5px;
   grid-template-columns: none;
   display: flex;
   flex-direction: row;
@@ -9169,7 +9171,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   min-width: var(--lane-width);
   border: 0;
   padding: 5px;
-  margin: 5px 3px;
+  margin: 5px 1px;
   padding-top: 4px;
   background: var(--note, var(--background-primary-alt));
   border-radius: var(--radius-s);

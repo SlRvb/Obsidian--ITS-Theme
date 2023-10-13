@@ -1,6 +1,6 @@
 
 // No Title
-.callout:is(
+.callout.callout.callout.callout:is(
     [data-callout-metadata~="no-t"], 
     [data-callout-metadata~="no-title"]
 ) > .callout-title { display: none; }

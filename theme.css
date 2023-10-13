@@ -3269,7 +3269,6 @@ button.mod-cta:hover {
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
 .side-dock-ribbon .clickable-icon:hover,
 .workspace-tab-header:hover .workspace-tab-header-inner .workspace-tab-header-inner-icon {
-  background-color: var(--sidebar-tab-background-color-hover);
   color: var(--sidebar-tab-color-hover);
 }
 
@@ -8101,7 +8100,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   float: unset;
 }
 
-.callout:is([data-callout-metadata~=no-t],
+.callout.callout.callout.callout:is([data-callout-metadata~=no-t],
 [data-callout-metadata~=no-title]) > .callout-title {
   display: none;
 }
@@ -11116,7 +11115,7 @@ body {
 }
 
 .inline-title-small {
-  --inline-title-size: var(--font-size);
+  --inline-title-size: var(--font-ui-small);
 }
 
 .inline-title-medium {

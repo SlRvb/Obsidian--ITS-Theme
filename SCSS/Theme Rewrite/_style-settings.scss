@@ -2265,6 +2265,13 @@ settings:
         default-dark: '#06080c60'
 		default-light: '#d0ddef62'
     -
+        title: Table Border Line Colors
+        id: table-border-color
+        type: variable-themed-color
+		format: hex
+        default-dark: '#3c5274'
+        default-light: '#d6deea'
+    -
         title: Other Elements
         id: ITS-Colors-Others
         type: heading

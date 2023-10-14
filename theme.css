@@ -2266,6 +2266,13 @@ settings:
         default-dark: '#06080c60'
 		default-light: '#d0ddef62'
     -
+        title: Table Border Line Colors
+        id: table-border-color
+        type: variable-themed-color
+		format: hex
+        default-dark: '#3c5274'
+        default-light: '#d6deea'
+    -
         title: Other Elements
         id: ITS-Colors-Others
         type: heading
@@ -9443,28 +9450,28 @@ body:not(.default-callout-quote) .callout.callout[data-callout=quote] {
   flex-direction: column-reverse;
   box-shadow: var(--shadow-l);
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-content {
   padding: 0;
   overflow: hidden;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content p:first-child {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-content p:first-child {
   margin-block-start: 0;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content p:last-child {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-content p:last-child {
   margin-block-end: 0;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-icon {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-icon {
   height: 0;
   width: 0;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-title {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-title {
   background: transparent;
   text-align: right;
   padding-top: 5px;
   padding-right: 0;
   display: block;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-title-inner::before {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-title-inner::before {
   content: "~ ";
 }
 

@@ -1,0 +1,10 @@
+.oit li::before {
+    --bullet: "";
+    --list-marker-color: transparent;
+}
+.oit .oit-img-toolbar li::before {
+    margin-left: 0;
+}
+.oit-normal .oit-img-footer .oit-img-toolbar > li[class]::before {
+    margin-inline: revert;
+}

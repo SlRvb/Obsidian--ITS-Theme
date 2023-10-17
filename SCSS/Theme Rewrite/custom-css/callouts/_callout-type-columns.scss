@@ -44,14 +44,20 @@
             flex-wrap: wrap;
             
             // Sub Callout Sizing
-            & .callout {
-                flex: 1 1 calc(var(--file-line-width) / 2.5);
-                // flex: 1 1 250px;
-                //background: transparent;
-            }
+            & .callout { flex: 1 1 calc(var(--file-line-width) / 2.5); }
         }
-        &[data-callout-metadata~="3"] > .callout-content .callout {
-            flex: 1 1 calc(var(--file-line-width) / 3.5);
+        &[data-callout-metadata~="3"] > .callout-content .callout 
+        { flex: 1 1 calc(var(--file-line-width) / 3.5); }
+
+        &[data-callout-metadata~="resize"] .callout { 
+            flex: 1 1 auto; 
+            
+            
+            &[data-callout-metadata~="wmicro"] { width: 5%; }
+            &[data-callout-metadata~="wtiny"]  { width: 10%; }
+            &[data-callout-metadata~="wsmall"] { width: 20%; }
+            &[data-callout-metadata~="ws-med"] { width: 30%; }
+            &[data-callout-metadata~="wmed"]   { width: 40%; }
         }
     }
 

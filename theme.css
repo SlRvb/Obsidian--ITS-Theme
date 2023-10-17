@@ -9131,6 +9131,24 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~="3"] > .callout-content .callout {
   flex: 1 1 calc(var(--file-line-width) / 3.5);
 }
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout {
+  flex: 1 1 auto;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=wmicro] {
+  width: 5%;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=wtiny] {
+  width: 10%;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=wsmall] {
+  width: 20%;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=ws-med] {
+  width: 30%;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=wmed] {
+  width: 40%;
+}
 .callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content {
   grid-template-columns: unset;
   gap: unset;

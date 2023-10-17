@@ -4742,37 +4742,45 @@ body {
   --outline-arrow-margin: -16px;
 }
 
-body .outline {
-  padding: var(--size-4-3) var(--size-4-2);
+body .outline,
+body [data-type=outline] {
   --nav-item-children-margin-left: 12px;
 }
-body .outline .tree-item-children {
+body .outline .tree-item-children,
+body [data-type=outline] .tree-item-children {
   transition: all 0.3s ease-in-out;
 }
-body .outline .collapse-icon svg {
+body .outline .collapse-icon svg,
+body [data-type=outline] .collapse-icon svg {
   visibility: var(--outline-arrow-visibility);
 }
-body .outline .tree-item:not(.is-collapsed) > .mod-collapsible .tree-item-icon.collapse-icon {
+body .outline .tree-item:not(.is-collapsed) > .mod-collapsible .tree-item-icon.collapse-icon,
+body [data-type=outline] .tree-item:not(.is-collapsed) > .mod-collapsible .tree-item-icon.collapse-icon {
   margin-left: var(--outline-arrow-margin);
 }
-body .outline .tree-item-self::before {
+body .outline .tree-item-self::before,
+body [data-type=outline] .tree-item-self::before {
   content: var(--outline-symbol);
   font-family: var(--font-default);
   font-weight: 900;
   color: var(--headers);
   padding-right: var(--outline-symbol-padding-right);
 }
-body .outline .tree-item-self:hover::before {
+body .outline .tree-item-self:hover::before,
+body [data-type=outline] .tree-item-self:hover::before {
   color: var(--text-dl);
 }
-body .outline .tree-item.is-collapsed .collapse-icon svg {
+body .outline .tree-item.is-collapsed .collapse-icon svg,
+body [data-type=outline] .tree-item.is-collapsed .collapse-icon svg {
   visibility: visible;
 }
-body .outline .tree-item.is-collapsed .tree-item-self::before {
+body .outline .tree-item.is-collapsed .tree-item-self::before,
+body [data-type=outline] .tree-item.is-collapsed .tree-item-self::before {
   display: none;
 }
 
-.is-mobile .outline {
+.is-mobile .outline,
+.is-mobile [data-type=outline] {
   --nav-item-children-margin-left: 28px;
   --nav-item-children-padding-left: 0;
 }
@@ -9111,8 +9119,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --columns: 9;
 }
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  gap: 5px;
   grid-template-columns: none;
   display: flex;
   flex-direction: row;

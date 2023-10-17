@@ -33,8 +33,9 @@
     // Flex
     &[data-callout-metadata~="flex"] {
         & > .callout-content {
-            margin-top: 5px;
-            margin-bottom: 5px;
+            // margin-top: 5px;
+            // margin-bottom: 5px;
+            gap: 5px;
             
             grid-template-columns: none;
 

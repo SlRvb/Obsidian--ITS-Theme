@@ -8,8 +8,9 @@ body {
 }
 
 //Outline Icon
-body .outline {
-    padding: var(--size-4-3) var(--size-4-2);
+body .outline,
+body [data-type="outline"] {
+    // padding: var(--size-4-3) var(--size-4-2);
     
     & .tree-item-children { transition: all 0.3s ease-in-out; }
     --nav-item-children-margin-left: 12px;
@@ -39,7 +40,8 @@ body .outline {
     } 
 } 
 //Mobile Panel Alignment Fix
-.is-mobile .outline {
+.is-mobile .outline,
+.is-mobile [data-type="outline"] {
     --nav-item-children-margin-left: 28px;
     --nav-item-children-padding-left: 0;
 }

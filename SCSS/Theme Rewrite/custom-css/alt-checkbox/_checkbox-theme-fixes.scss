@@ -2,7 +2,7 @@ input[type=checkbox]:checked:after
 { display: block; }
 
 //Minimal Theme Fixes
-input[type][type=checkbox]:checked:is(
+li:is(
     [data-task="X"],
     [data-task=">"],
     [data-task="-"],
@@ -42,7 +42,7 @@ input[type][type=checkbox]:checked:is(
     [data-task="&"],
     [data-task="s"],
     [data-task="H"]
-) {
+) > input[type][type][type=checkbox]:checked {
     &,
     &:after {
         background-color: unset;

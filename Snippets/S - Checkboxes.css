@@ -961,7 +961,7 @@ input[type=checkbox]:checked:after {
   display: block;
 }
 
-input[type][type=checkbox]:checked:is([data-task=X],
+li:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -998,7 +998,7 @@ input[type][type=checkbox]:checked:is([data-task=X],
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]), input[type][type=checkbox]:checked:is([data-task=X],
+[data-task=H]) > input[type][type][type=checkbox]:checked, li:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
 [data-task=">"],
@@ -1035,7 +1035,7 @@ input[type][type=checkbox]:checked:is([data-task=X],
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]):after {
+[data-task=H]) > input[type][type][type=checkbox]:checked:after {
   background-color: unset;
   background-size: 0;
   background-image: none;

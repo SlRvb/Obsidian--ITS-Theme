@@ -483,6 +483,10 @@ settings:
         id: hide-status-bar
         type: class-toggle
     -
+        title: Hide Outline Plugin Heading Icons
+        id: hide-outline-heading
+        type: class-toggle
+    -
         title: Hide Tabs
         id: hide-titlebar-tab
         type: class-toggle
@@ -4696,9 +4700,14 @@ del,
 :is(.markdown-preview-view,
 .markdown-rendered,
 .markdown-source-view.is-live-preview.is-live-preview) progress::-webkit-progress-bar {
-  background-color: var(--bg);
+  background-color: var(--progress-bg);
   box-shadow: none;
   border-radius: var(--radius-s);
+}
+:is(.markdown-preview-view,
+.markdown-rendered,
+.markdown-source-view.is-live-preview.is-live-preview) progress::-webkit-progress-value {
+  background-color: var(--progress);
 }
 
 /* Tag Pane */
@@ -4783,6 +4792,13 @@ body [data-type=outline] .tree-item.is-collapsed .tree-item-self::before {
 .is-mobile [data-type=outline] {
   --nav-item-children-margin-left: 28px;
   --nav-item-children-padding-left: 0;
+}
+
+.hide-outline-heading [data-type=outline] {
+  --outline-symbol: "";
+  --outline-arrow-visibility: visible;
+  --outline-arrow-margin: -3px;
+  --outline-symbol-padding-right: 0;
 }
 
 body {

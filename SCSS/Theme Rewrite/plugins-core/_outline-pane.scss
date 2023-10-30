@@ -45,3 +45,10 @@ body [data-type="outline"] {
     --nav-item-children-margin-left: 28px;
     --nav-item-children-padding-left: 0;
 }
+
+.hide-outline-heading [data-type="outline"] {
+    --outline-symbol: '';
+    --outline-arrow-visibility: visible;
+    --outline-arrow-margin: -3px;
+    --outline-symbol-padding-right: 0;
+}

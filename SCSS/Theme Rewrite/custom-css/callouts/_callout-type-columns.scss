@@ -78,7 +78,7 @@
         }
     }
 
-
+    &[data-callout-metadata~="list-global"] .callout-content,
     &[data-callout-metadata~="list"] > .callout-content {
         grid-template-columns: unset; 
 

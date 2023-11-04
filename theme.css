@@ -2977,7 +2977,7 @@ body.theme-light {
   --icon-s: 16px;
   --icon-m: 17px;
   --icon-l: 18px;
-  --line-height-tight: 1.3em;
+  --line-height-tight: normal;
   --scroll-size: 7px;
   --divider-width: 2px;
   --divider-width-hover: 5px;

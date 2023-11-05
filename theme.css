@@ -475,6 +475,10 @@ settings:
         id: hide-nav-header
         type: class-toggle
     -
+        title: Hide File Explorer Icons
+        id: hide-file-explorer-icons
+        type: class-toggle
+    -
         title: Hide App Title Bar
         id: hide-titlebar
         type: class-toggle
@@ -4264,6 +4268,7 @@ a[href^=https]:hover,
   --list-indent: 25px;
   --list-spacing: 1px;
   --root-list-spacing: 10px;
+  --list-marker-min-width: 0;
   --list-marker-color: var(--accent);
   --list-marker-color-other: var(--accent2);
   --list-marker-color-collapsed: var(--inactive);
@@ -4417,6 +4422,7 @@ li.is-collapsed .list-bullet:after,
   --table-cell-padding-y: var(--size-2-2);
   --table-header-padding-x: var(--size-4-2);
   --table-header-padding-y: var(--size-2-2);
+  --table-column-min-width: 3ch;
   --table-selection-border-radius: var(--radius-s);
 }
 
@@ -11331,6 +11337,27 @@ body {
 .minimalist-workspace .frontmatter-container:not(:hover) > *,
 .hide-frontmatter .frontmatter-container:not(:hover) > * {
   display: none;
+}
+
+.minimalist-workspace .nav-folder .nav-folder-title,
+.hide-file-explorer-icons .nav-folder .nav-folder-title {
+  --folder-icon: "";
+  --file-icon-margin: 0;
+}
+.minimalist-workspace .nav-folder .nav-folder-title .nav-folder-title-content::before,
+.hide-file-explorer-icons .nav-folder .nav-folder-title .nav-folder-title-content::before {
+  content: "";
+  width: 0;
+}
+.minimalist-workspace .nav-file .nav-file-title,
+.hide-file-explorer-icons .nav-file .nav-file-title {
+  --file-icon: "";
+  --file-icon-margin: 0;
+}
+.minimalist-workspace .nav-file .nav-file-title .nav-file-title-content::before,
+.hide-file-explorer-icons .nav-file .nav-file-title .nav-file-title-content::before {
+  content: "";
+  width: 0;
 }
 
 .background-image {

@@ -20,6 +20,7 @@
     --list-spacing: 1px; //keep at 1 or popover bullet alignment breaks(??)
     --root-list-spacing: 10px;
     
+    --list-marker-min-width: 0;
     --list-marker-color: var(--accent);
     --list-marker-color-other: var(--accent2);
     --list-marker-color-collapsed: var(--inactive);

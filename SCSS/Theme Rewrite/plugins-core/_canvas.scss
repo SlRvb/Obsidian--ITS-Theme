@@ -15,13 +15,9 @@ body.theme-light {
     border-width: 2px;
     border-color: var(--outline);
 }
-.canvas-control-item {
-    background-color: var(--note);
-}
+.canvas-control-item { background-color: var(--note); }
+.canvas-card-menu { border: var(--box-border); }
 
-.canvas-card-menu {
-    border: var(--box-border);
-}
 .canvas-node.is-themed .canvas-node-content {
     background-color: rgba(var(--canvas-color), var(--canvas-color-opacity));
 }
@@ -36,6 +32,8 @@ body.theme-light {
     & path.is-themed 
     { stroke: rgba(var(--canvas-color), calc(var(--canvas-color-opacity) + .5)); }
 } 
+
+.canvas-node-placeholder { line-height: var(--line-height-tight); }
 
 
 //Canvas Embed Sizing

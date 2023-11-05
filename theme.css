@@ -2737,6 +2737,9 @@ settings:
 body,
 .theme-dark,
 .theme-light {
+  --accent-h: 0;
+  --accent-s: 42%;
+  --accent-l: 37%;
   --background-primary: var(--note);
   --background-primary-alt: var(--outer-bar);
   --background-secondary: var(--side-bar);
@@ -4392,6 +4395,7 @@ li.is-collapsed .list-bullet:after,
   --table-cell-padding-y: var(--size-2-2);
   --table-header-padding-x: var(--size-4-2);
   --table-header-padding-y: var(--size-2-2);
+  --table-selection-border-radius: var(--radius-s);
 }
 
 .cm-s-obsidian .HyperMD-table-row-0 {
@@ -5107,6 +5111,10 @@ body.theme-light {
 }
 .theme-dark .canvas-minimap path, .theme-dark .canvas-minimap path.is-themed {
   stroke: rgba(var(--canvas-color), calc(var(--canvas-color-opacity) + 0.5));
+}
+
+.canvas-node-placeholder {
+  line-height: var(--line-height-tight);
 }
 
 body {

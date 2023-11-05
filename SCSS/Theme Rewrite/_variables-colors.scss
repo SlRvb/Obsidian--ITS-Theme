@@ -2,6 +2,10 @@ body,
 .theme-dark,
 .theme-light
 {
+    --accent-h: 0;
+    --accent-s: 42%;
+    --accent-l: 37%;
+
     //Workspace    
     --background-primary: var(--note);
     --background-primary-alt: var(--outer-bar);

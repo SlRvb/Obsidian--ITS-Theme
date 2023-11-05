@@ -6977,6 +6977,14 @@ img[alt~=border],
   background: var(--image-border-background);
 }
 
+.image-captions .image-embed::after,
+.image-embed[src*="#cap"]::after {
+  content: attr(alt);
+  color: var(--inactive, var(--faint-text));
+  display: block;
+  text-align: center;
+}
+
 .mobile-image-viewer img[alt][alt][alt] {
   height: 100%;
   width: 100%;

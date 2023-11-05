@@ -1,0 +1,7 @@
+.image-captions .image-embed::after,
+.image-embed[src*="#cap"]::after {
+    content: attr(alt);
+    color: var(--inactive, var(--faint-text));
+    display: block;
+    text-align: center;
+}

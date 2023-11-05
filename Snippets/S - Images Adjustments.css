@@ -51,114 +51,162 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
   object-fit: cover;
 }
 
-/*Height*/
-img[alt][alt][alt*=hmicro],
-.image-embed[src*="#hmicro"] img {
+img[alt][alt]:not([alt*=relative])[alt*=hmicro] {
   height: var(--micro);
 }
-
-img[alt][alt][alt*=htiny],
-.image-embed[src*="#htiny"] img {
+img[alt][alt]:not([alt*=relative])[alt*=htiny] {
   height: var(--tiny);
 }
-
-img[alt][alt][alt*=hsmall],
-.image-embed[src*="#hsmall"] img {
+img[alt][alt]:not([alt*=relative])[alt*=hsmall] {
   height: var(--small);
 }
-
-img[alt][alt][alt*=hs-med],
-.image-embed[src*="#hs-med"] img {
+img[alt][alt]:not([alt*=relative])[alt*=hs-med] {
   height: var(--small-med);
 }
-
-img[alt][alt][alt*=hm-sm],
-.image-embed[src*="#hs-sm"] img {
+img[alt][alt]:not([alt*=relative])[alt*=hm-sm] {
   height: var(--med-small);
 }
-
-img[alt][alt][alt*=hmed],
-.image-embed[src*="#hmed"] img {
+img[alt][alt]:not([alt*=relative])[alt*=hmed] {
   height: var(--medium);
 }
-
-img[alt][alt][alt*=hm-tl],
-.image-embed[src*="#hm-tl"],
-.image-embed[src*="#hm-tl"] img {
+img[alt][alt]:not([alt*=relative])[alt*=hm-tl] {
   height: var(--med-tall);
 }
-
-img[alt][alt][alt*=htall],
-.image-embed[src*="#htall"] img {
+img[alt][alt]:not([alt*=relative])[alt*=htall] {
   height: var(--tall);
 }
-
-img[alt][alt][alt*=hfull],
-.internal-embed[src*="#hfull"] img {
+img[alt][alt]:not([alt*=relative])[alt*=hfull] {
   height: 100%;
 }
-
-/*Width*/
-img[alt][alt][alt*=wmicro],
-.image-embed[src*="#wmicro"] img,
-.image-embed[alt*="#wmicro"]::after {
+img[alt][alt]:not([alt*=relative])[alt*=wmicro] {
   width: var(--micro);
 }
-
-img[alt][alt][alt*=wtiny],
-.image-embed[src*="#wtiny"] img,
-.image-embed[src*="#wtiny"]::after {
+img[alt][alt]:not([alt*=relative])[alt*=wtiny] {
   width: var(--tiny);
 }
-
-img[alt][alt][alt*=wsmall],
-.image-embed[src*="#wsmall"] img,
-.image-embed[src*="#wsmall"]::after {
+img[alt][alt]:not([alt*=relative])[alt*=wsmall] {
   width: var(--small);
 }
-
-img[alt][alt][alt*=ws-med],
-.image-embed[src*="#ws-med"] img,
-.image-embed[src*="#ws-med"]::after {
+img[alt][alt]:not([alt*=relative])[alt*=ws-med] {
   width: var(--small-med);
 }
-
-img[alt][alt][alt*=wm-sm],
-.image-embed[src*="#wm-sm"] img,
-.image-embed[src*="#wm-sm"]::after {
+img[alt][alt]:not([alt*=relative])[alt*=wm-sm] {
   width: var(--med-small);
 }
-
-img[alt][alt][alt*=wmed],
-.image-embed[src*="#wmed"] img,
-.image-embed[src*="#wmed"]::after {
+img[alt][alt]:not([alt*=relative])[alt*=wmed] {
   width: var(--medium);
 }
-
-img[alt][alt][alt*=wm-tl],
-.image-embed[src*="#wm-tl"] img,
-.image-embed[src*="#wm-tl"]::after {
+img[alt][alt]:not([alt*=relative])[alt*=wm-tl] {
   width: var(--med-tall);
 }
-
-img[alt][alt][alt*=wtall],
-.image-embed[src*="#wtall"] img,
-.image-embed[src*="#wtall"]::after {
+img[alt][alt]:not([alt*=relative])[alt*=wtall] {
   width: var(--tall);
 }
-
-img[alt][alt][alt*=wfull],
-.internal-embed[src*="#wfull"] img {
+img[alt][alt]:not([alt*=relative])[alt*=wfull] {
   width: 100%;
 }
 
+.image-embed[alt][alt*=relative],
+div:not(.image-embed) > img[alt][alt*=relative] {
+  --micro: 10%;
+  --tiny: 20%;
+  --small: 30%;
+  --small-med: 40%;
+  --med-small: 50%;
+  --medium: 60%;
+  --med-tall: 70%;
+  --tall: 85%;
+}
+.image-embed[alt][alt*=relative][alt*=wmicro],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wmicro] {
+  width: var(--micro);
+}
+.image-embed[alt][alt*=relative][alt*=wtiny],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wtiny] {
+  width: var(--tiny);
+}
+.image-embed[alt][alt*=relative][alt*=wsmall],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wsmall] {
+  width: var(--small);
+}
+.image-embed[alt][alt*=relative][alt*=ws-med],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=ws-med] {
+  width: var(--small-med);
+}
+.image-embed[alt][alt*=relative][alt*=wm-sm],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wm-sm] {
+  width: var(--med-small);
+}
+.image-embed[alt][alt*=relative][alt*=wmed],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wmed] {
+  width: var(--medium);
+}
+.image-embed[alt][alt*=relative][alt*=wm-tl],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wm-tl] {
+  width: var(--med-tall);
+}
+.image-embed[alt][alt*=relative][alt*=wtall],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=wtall] {
+  width: var(--tall);
+}
+.image-embed[alt][alt*=relative][alt*=hmicro],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hmicro] {
+  width: var(--micro);
+}
+.image-embed[alt][alt*=relative][alt*=htiny],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=htiny] {
+  width: var(--tiny);
+}
+.image-embed[alt][alt*=relative][alt*=hsmall],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hsmall] {
+  width: var(--small);
+}
+.image-embed[alt][alt*=relative][alt*=hs-med],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hs-med] {
+  width: var(--small-med);
+}
+.image-embed[alt][alt*=relative][alt*=hm-sm],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hm-sm] {
+  width: var(--med-small);
+}
+.image-embed[alt][alt*=relative][alt*=hmed],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hmed] {
+  width: var(--medium);
+}
+.image-embed[alt][alt*=relative][alt*=hm-tl],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hm-tl] {
+  width: var(--med-tall);
+}
+.image-embed[alt][alt*=relative][alt*=htall],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=htall] {
+  width: var(--tall);
+}
+.image-embed[alt][alt*=relative][alt*=hfull],
+div:not(.image-embed) > img[alt][alt*=relative][alt*=hfull] {
+  width: 100%;
+}
+
+.image-embed[alt][alt*=relative],
+div:not(.image-embed) > img[alt][alt*=relative] {
+  display: block;
+  margin: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/*Height*/
 /*Image Locations*/
 /*Center Image*/
-.img-adj-center,
+.img-adj-center.img-adj-center img,
 img:is([alt*=ctr], [alt*=center]) {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.img-adj-center.img-adj-center .is-live-preview img {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /*Left & Right*/
@@ -424,6 +472,14 @@ img[alt~=border],
   border: var(--image-border-width) solid var(--image-border-color);
   padding: var(--image-border-padding);
   background: var(--image-border-background);
+}
+
+.image-captions .image-embed::after,
+.image-embed[src*="#cap"]::after {
+  content: attr(alt);
+  color: var(--inactive, var(--faint-text));
+  display: block;
+  text-align: center;
 }
 
 .mobile-image-viewer img[alt][alt][alt] {

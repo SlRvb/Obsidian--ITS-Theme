@@ -877,6 +877,26 @@ settings:
 		level: 3
 		collapsed: true
     -
+        title: Heading Top Spacing
+        description: Adjust header spacing above the header
+        id: heading-spacing-top
+        type: variable-number-slider
+        default: 10
+        format: px
+        min: 0
+        max: 50
+        step: 10
+    -
+        title: Heading Bottom Spacing
+        description: Adjust header spacing below the header
+        id: heading-spacing-bottom
+        type: variable-number-slider
+        default: 10
+        format: px
+        min: 0
+        max: 50
+        step: 10
+    -
 		title: Header Font
 		id: ITS-Header-Fonts
 		type: heading
@@ -3832,6 +3852,8 @@ body {
   --h5-padding: var(--header-padding);
   --h6-padding: var(--header-padding);
   --heading-spacing: 10px;
+  --heading-spacing-top: var(--heading-spacing);
+  --heading-spacing-bottom: var(--heading-spacing);
   --header-background: transparent;
   --h1-background: var(--header-background);
   --h2-background: var(--header-background);
@@ -4031,8 +4053,8 @@ h1,
   padding: var(--h1-padding);
   border: var(--h1-border-width) solid;
   border-radius: var(--radius-m);
-  margin-block-start: var(--heading-spacing);
-  margin-block-end: var(--heading-spacing);
+  margin-block-start: var(--heading-spacing-top);
+  margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -4046,8 +4068,8 @@ h2,
   padding: var(--h2-padding);
   border: var(--h2-border-width) solid;
   border-radius: var(--radius-m);
-  margin-block-start: var(--heading-spacing);
-  margin-block-end: var(--heading-spacing);
+  margin-block-start: var(--heading-spacing-top);
+  margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -4061,8 +4083,8 @@ h3,
   padding: var(--h3-padding);
   border: var(--h3-border-width) solid;
   border-radius: var(--radius-m);
-  margin-block-start: var(--heading-spacing);
-  margin-block-end: var(--heading-spacing);
+  margin-block-start: var(--heading-spacing-top);
+  margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -4076,8 +4098,8 @@ h4,
   padding: var(--h4-padding);
   border: var(--h4-border-width) solid;
   border-radius: var(--radius-m);
-  margin-block-start: var(--heading-spacing);
-  margin-block-end: var(--heading-spacing);
+  margin-block-start: var(--heading-spacing-top);
+  margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -4091,8 +4113,8 @@ h5,
   padding: var(--h5-padding);
   border: var(--h5-border-width) solid;
   border-radius: var(--radius-m);
-  margin-block-start: var(--heading-spacing);
-  margin-block-end: var(--heading-spacing);
+  margin-block-start: var(--heading-spacing-top);
+  margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
   word-break: keep-all;
 }
@@ -4106,8 +4128,8 @@ h6,
   padding: var(--h6-padding);
   border: var(--h6-border-width) solid;
   border-radius: var(--radius-m);
-  margin-block-start: var(--heading-spacing);
-  margin-block-end: var(--heading-spacing);
+  margin-block-start: var(--heading-spacing-top);
+  margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
   word-break: keep-all;
 }

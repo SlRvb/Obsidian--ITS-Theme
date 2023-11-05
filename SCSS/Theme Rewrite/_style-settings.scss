@@ -876,6 +876,26 @@ settings:
 		level: 3
 		collapsed: true
     -
+        title: Heading Top Spacing
+        description: Adjust header spacing above the header
+        id: heading-spacing-top
+        type: variable-number-slider
+        default: 10
+        format: px
+        min: 0
+        max: 50
+        step: 10
+    -
+        title: Heading Bottom Spacing
+        description: Adjust header spacing below the header
+        id: heading-spacing-bottom
+        type: variable-number-slider
+        default: 10
+        format: px
+        min: 0
+        max: 50
+        step: 10
+    -
 		title: Header Font
 		id: ITS-Header-Fonts
 		type: heading

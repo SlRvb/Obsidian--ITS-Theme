@@ -131,6 +131,8 @@ body {
     --h6-padding: var(--header-padding);
 
     --heading-spacing: 10px;
+    --heading-spacing-top: var(--heading-spacing);
+    --heading-spacing-bottom: var(--heading-spacing);
 
     //Header Background Color
     --header-background: transparent;
@@ -267,8 +269,8 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
     padding: map-get($set, padding);
     border: map-get($set, border-width) solid map-get($set, border);
     border-radius: var(--radius-m);
-    margin-block-start: var(--heading-spacing);
-    margin-block-end: var(--heading-spacing);
+    margin-block-start: var(--heading-spacing-top);
+    margin-block-end: var(--heading-spacing-bottom);
 
     word-wrap: normal;
     word-break: keep-all;

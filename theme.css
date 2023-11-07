@@ -5575,6 +5575,7 @@ body:is(.theme-dark, .theme-light) {
 .obsidian-icon-folder-icon svg,
 .iconize-icon.iconize-icon.iconize-icon svg {
   width: var(--nav-item-size);
+  color: var(--folder-open);
 }
 .obsidian-icon-folder-icon + .nav-folder-title-content, .obsidian-icon-folder-icon + .nav-file-title-content,
 .iconize-icon.iconize-icon.iconize-icon + .nav-folder-title-content,

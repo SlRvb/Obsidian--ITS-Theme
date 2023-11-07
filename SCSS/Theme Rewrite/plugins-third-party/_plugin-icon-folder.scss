@@ -1,6 +1,7 @@
-.obsidian-icon-folder-icon {
+.obsidian-icon-folder-icon,
+.iconize-icon.iconize-icon.iconize-icon {
     // margin-left: -1px;
-    margin-right: var(--file-icon-margin);
+    margin-right: var(--file-icon-margin) !important;
     border: 0;
     padding: 0 !important;
     
@@ -13,6 +14,11 @@
     { 
         --folder-icon: ; 
         --file-icon: ;
-        &::before { content: ""; }
+        
+        &::before { 
+            content: ""; 
+            width: unset;
+            margin-right: unset;
+        }
     }
 }

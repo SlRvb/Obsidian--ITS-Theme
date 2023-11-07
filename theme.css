@@ -5565,21 +5565,29 @@ body:is(.theme-dark, .theme-light) {
   --file-margins: var(--size-4-3);
 }
 
-.obsidian-icon-folder-icon {
-  margin-right: var(--file-icon-margin);
+.obsidian-icon-folder-icon,
+.iconize-icon.iconize-icon.iconize-icon {
+  margin-right: var(--file-icon-margin) !important;
   border: 0;
   padding: 0 !important;
   width: var(--nav-item-size);
 }
-.obsidian-icon-folder-icon svg {
+.obsidian-icon-folder-icon svg,
+.iconize-icon.iconize-icon.iconize-icon svg {
   width: var(--nav-item-size);
 }
-.obsidian-icon-folder-icon + .nav-folder-title-content, .obsidian-icon-folder-icon + .nav-file-title-content {
+.obsidian-icon-folder-icon + .nav-folder-title-content, .obsidian-icon-folder-icon + .nav-file-title-content,
+.iconize-icon.iconize-icon.iconize-icon + .nav-folder-title-content,
+.iconize-icon.iconize-icon.iconize-icon + .nav-file-title-content {
   --folder-icon: ;
   --file-icon: ;
 }
-.obsidian-icon-folder-icon + .nav-folder-title-content::before, .obsidian-icon-folder-icon + .nav-file-title-content::before {
+.obsidian-icon-folder-icon + .nav-folder-title-content::before, .obsidian-icon-folder-icon + .nav-file-title-content::before,
+.iconize-icon.iconize-icon.iconize-icon + .nav-folder-title-content::before,
+.iconize-icon.iconize-icon.iconize-icon + .nav-file-title-content::before {
   content: "";
+  width: unset;
+  margin-right: unset;
 }
 
 body {

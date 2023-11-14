@@ -5,7 +5,7 @@
     .is-mobile:not(.is-tablet), 
     .is-mobile:not(.is-tablet) .is-live-preview, 
     .is-live-preview
-) .callout[data-callout~="infobox"]:not([data-callout-metadata~="mobile"]) { 
+) .callout[data-callout~="infobox"]:not([data-callout-metadata~="mobile"]) > .callout-content { 
     float: unset !important; 
     max-width: 100%; 
     margin: 0 !important;
@@ -15,10 +15,10 @@
     // --callout-color: var(--interactive-accent-rgb);
     --callout-color: var(--note, var(--background-primary));
     --callout-padding: 0;
-    --callout-content-padding: 0;
+    --callout-content-padding: 5px;
     --callout-margin: 0 0 0 5px;
     background: var(--note, var(--background-primary));
-
+    
     --h1-border-line-height: 0;
     --h2-border-line-height: 0;
     --h3-border-line-height: 0;
@@ -142,8 +142,29 @@
         --callout-margin: 0 5px 0 0;
     }
 
-    
+    //Sub Infobox callout
+    & .callout-content > .callout[data-callout~="infobox"] {
+        max-width: unset;
+        float: unset;
+        --callout-margin: 5px 0 0 0;
 
+
+        & > .callout-title {
+            color: var(--text-normal);
+            background: var(--outer-bar, var(--background-secondary)); 
+            border: 1px solid var(--table, var(--background-modifier-border));
+            border-bottom: none;
+        }
+
+        & > .callout-content {
+            border-top: none;
+        }
+    }
+}
+
+
+    
+.callout.callout[data-callout~="infobox"] {
     //Wikipedia Styling
     &[data-callout-metadata~="wikipedia"] table {
         --table-header-color: var(--text, var(--text-normal));
@@ -160,16 +181,33 @@
         // & tr td { border-top: 1.1px solid var(--hr); }
         & tr:last-child { margin-bottom: 2px; }
     }
-
-
-    //Sub Infobox callout
-    & .callout-content > .callout[data-callout~="infobox"] {
-        max-width: unset;
-        float: unset;
-    }
+    //Wikiwand Styling
+    // &[data-callout-metadata~="colors"] :is(h1, h2, h3, h4, h5, h6) {
+    //     background-color: var(--accent);
+    // }
 }
+
 @media print { .callout[data-callout~="infobox"] { max-width: 400px; } }
 
 .theme-light .callout[data-callout~="infobox"][data-callout-metadata~="wikipedia"] {
     --th-text: var(--th);
+}
+
+.illusion.illusion .callout[data-callout~="infobox"] 
+{
+    &.is-collapsed.is-collapsed {
+        &[data-callout-metadata~=left] { margin-left: -30px; }
+        &[data-callout-metadata~=right] { margin-right: -30px; }   
+    }
+    
+    & [data-heading] {
+        --illusion-box-shadow: none;
+        --header-shadow: var(--illusion-box-shadow);
+        --h1-shadow: var(--header-shadow);
+        --h2-shadow: var(--header-shadow);
+        --h3-shadow: var(--header-shadow);
+        --h4-shadow: var(--header-shadow);
+        --h5-shadow: var(--header-shadow);
+        --h6-shadow: var(--header-shadow);
+    }
 }

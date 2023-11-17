@@ -12506,14 +12506,14 @@ body.mtb.AT-multirow .mobile-toolbar-options-container {
   overflow-y: auto;
 }
 
-/*Plugin: Obsidian Icon Folder*/
-.obsidian-icon-folder-icon + .nav-file-title-content,
-.obsidian-icon-folder-icon + .nav-folder-title-content {
+/*Plugin: Obsidian Iconize*/
+.iconize-icon + .nav-file-title-content,
+.iconize-icon + .nav-folder-title-content {
   padding: unset;
 }
 
-.obsidian-icon-folder-icon + div.nav-file-title-content::before,
-.obsidian-icon-folder-icon + div.nav-folder-title-content::before {
+.iconize-icon + div.nav-file-title-content::before,
+.iconize-icon + div.nav-folder-title-content::before {
   display: none;
 }
 

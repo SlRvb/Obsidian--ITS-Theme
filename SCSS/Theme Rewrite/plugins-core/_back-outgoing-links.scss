@@ -15,6 +15,9 @@
         // & .tree-item-flair-outer { margin-top: -2px; }
     }
 }
+//In-Document
+.embedded-backlinks { clear: both; }
+
 
 .outgoing-link-item {
     align-items: center; // Center Icon
@@ -26,3 +29,4 @@
     //Alternate BG Colors
     &:nth-child(odd):not(:hover) { background-color: var(--td); }
 }
+

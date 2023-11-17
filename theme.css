@@ -4859,6 +4859,10 @@ body {
   box-shadow: 0 4px 0 var(--outline);
 }
 
+.embedded-backlinks {
+  clear: both;
+}
+
 .outgoing-link-item {
   align-items: center;
 }

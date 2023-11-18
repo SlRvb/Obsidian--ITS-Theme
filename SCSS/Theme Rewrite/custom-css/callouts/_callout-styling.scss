@@ -77,3 +77,13 @@
         border-bottom: 1px solid rgba(var(--callout-color), 0.5);
     }
 }
+
+// .callout-outline .callout,
+// .callout.callout:is([data-callout-metadata~="callout-outline"], [data-callout-metadata~="c-out"])
+// {
+//     background-color: transparent;
+//     --callout-border-opacity: .7;
+//     --callout-border-width: 1px;
+
+//     & .callout-content { }
+// }

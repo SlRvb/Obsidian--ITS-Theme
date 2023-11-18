@@ -8487,27 +8487,35 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --callout-tall: 95%;
 }
 .callout.callout.callout[data-callout-metadata~=wmicro] {
+  max-width: unset;
   width: var(--callout-micro);
 }
 .callout.callout.callout[data-callout-metadata~=wtiny] {
+  max-width: unset;
   width: var(--callout-tiny);
 }
 .callout.callout.callout[data-callout-metadata~=wsmall] {
+  max-width: unset;
   width: var(--callout-small);
 }
 .callout.callout.callout[data-callout-metadata~=ws-med] {
+  max-width: unset;
   width: var(--callout-small-med);
 }
 .callout.callout.callout[data-callout-metadata~=wm-sm] {
+  max-width: unset;
   width: var(--callout-med-small);
 }
 .callout.callout.callout[data-callout-metadata~=wmed] {
+  max-width: unset;
   width: var(--callout-medium);
 }
 .callout.callout.callout[data-callout-metadata~=wm-tl] {
+  max-width: unset;
   width: var(--callout-med-tall);
 }
 .callout.callout.callout[data-callout-metadata~=wtall] {
+  max-width: unset;
   width: var(--callout-tall);
 }
 .callout.callout.callout[data-callout-metadata~=sban], .callout.callout.callout[data-callout-metadata~=wfull] {
@@ -8535,6 +8543,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout.callout.callout[data-callout-metadata~=wfit] {
   width: fit-content;
+  max-width: min-content;
 }
 
 .callout.callout[data-callout-metadata~=static] {

@@ -9,14 +9,14 @@
     --callout-med-tall: 80%;
     --callout-tall: 95%;
 
-    &[data-callout-metadata~="wmicro"]   { width: var(--callout-micro); }
-    &[data-callout-metadata~="wtiny"]    { width: var(--callout-tiny); }
-    &[data-callout-metadata~="wsmall"]   { width: var(--callout-small); }
-    &[data-callout-metadata~="ws-med"]   { width: var(--callout-small-med); }
-    &[data-callout-metadata~="wm-sm"]    { width: var(--callout-med-small); }
-    &[data-callout-metadata~="wmed"]     { width: var(--callout-medium); }
-    &[data-callout-metadata~="wm-tl"]    { width: var(--callout-med-tall); }
-    &[data-callout-metadata~="wtall"]    { width: var(--callout-tall); }
+    &[data-callout-metadata~="wmicro"]   { max-width: unset; width: var(--callout-micro); }
+    &[data-callout-metadata~="wtiny"]    { max-width: unset; width: var(--callout-tiny); }
+    &[data-callout-metadata~="wsmall"]   { max-width: unset; width: var(--callout-small); }
+    &[data-callout-metadata~="ws-med"]   { max-width: unset; width: var(--callout-small-med); }
+    &[data-callout-metadata~="wm-sm"]    { max-width: unset; width: var(--callout-med-small); }
+    &[data-callout-metadata~="wmed"]     { max-width: unset; width: var(--callout-medium); }
+    &[data-callout-metadata~="wm-tl"]    { max-width: unset; width: var(--callout-med-tall); }
+    &[data-callout-metadata~="wtall"]    { max-width: unset; width: var(--callout-tall); }
     &[data-callout-metadata~="sban"],
     &[data-callout-metadata~="wfull"]    { width: 100%; float: unset; max-width: 100%; }
 

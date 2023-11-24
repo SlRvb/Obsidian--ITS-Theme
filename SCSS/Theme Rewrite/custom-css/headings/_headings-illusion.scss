@@ -66,10 +66,13 @@ body  {
             --h6-padding: var(--illusion-header-padding);
     
             --collapse-icon-color: var(--headers);
-            --collapse-icon-color-collapsed: var(--accent-text);
+            --collapse-icon-color-collapsed: var(--text-dl);
+            --header-arrow-icon-color: var(--text-dl);
             
             --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
             --header-arrow-color: var(--illusion-header-text);
+
+            display: flow-root;
     
             //Fix Formatting
             & [class*="cm-formatting"],

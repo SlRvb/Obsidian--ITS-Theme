@@ -1888,6 +1888,11 @@ settings:
         id: canvas-cards
         type: class-toggle
     -
+        title: Canvas Arrow Coloful Text
+        id: canvas-arrow-text-color
+        description: Make text on canvas arrows match the color of the arrows
+        type: class-toggle
+    -
         title: Canvas Card Background Color Brightness
         id: canvas-color-opacity
         type: variable-number-slider
@@ -5148,6 +5153,10 @@ body.theme-light {
 
 .canvas-node-placeholder {
   line-height: var(--line-height-tight);
+}
+
+.canvas-node-connection-point::after {
+  border-color: rgb(var(--canvas-color));
 }
 
 body {
@@ -9776,8 +9785,8 @@ body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout
   background-color: rgba(var(--canvas-color), 0.2);
 }
 
-.canvas-node-connection-point::after {
-  border-color: rgb(var(--canvas-color));
+.canvas-arrow-text-color .canvas-path-label {
+  color: rgb(var(--canvas-color));
 }
 
 .sizing-readable.sizing-readable {
@@ -11069,9 +11078,11 @@ body {
   --h5-padding: var(--illusion-header-padding);
   --h6-padding: var(--illusion-header-padding);
   --collapse-icon-color: var(--headers);
-  --collapse-icon-color-collapsed: var(--accent-text);
+  --collapse-icon-color-collapsed: var(--text-dl);
+  --header-arrow-icon-color: var(--text-dl);
   --header-arrow-icon-size: var(--illusion-header-arrow-icon-size);
   --header-arrow-color: var(--illusion-header-text);
+  display: flow-root;
 }
 .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] [class*=cm-formatting], .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .cm-foldPlaceholder, .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) [class*=cm-formatting], .illusion.illusion :is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .cm-foldPlaceholder, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] [class*=cm-formatting], .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(h1, h2, h3, h4, h5, h6)[data-heading] .cm-foldPlaceholder, .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) [class*=cm-formatting], .illusion.illusion:is(.markdown-preview-view, .is-live-preview) :is(.is-live-preview .HyperMD-header) .cm-foldPlaceholder {
   color: var(--illusion-header-text);

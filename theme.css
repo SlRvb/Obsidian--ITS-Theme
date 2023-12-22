@@ -4631,24 +4631,27 @@ body {
 body {
   --hr-icon-symbol: "";
   --hr-icon-font: var(--its);
-  --hr-icon-background: var(--note);
+  --hr-icon-background: transparent;
   --hr-icon-padding-x: 4px;
   --hr-icon-color: var(--headers);
   --hr-color: var(--hr);
   --hr-thickness: 2px;
   --hr-width: auto;
   --hr-alignment: -50%, -50%;
+  --hr-text-offset: 12px;
 }
 
 /*Stylized HR/Horizontal Line*/
 .hr.cm-line:not(.cm-active),
-.markdown-preview-view hr {
+.markdown-rendered hr {
   margin-left: auto;
   margin-right: auto;
   width: var(--hr-width);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, var(--hr-color), var(--hr-color) calc(50% - var(--hr-text-offset)), transparent calc(50% - var(--hr-text-offset)), transparent calc(50% + var(--hr-text-offset)), var(--hr-color) calc(50% + var(--hr-text-offset)), var(--hr-color));
 }
 .hr.cm-line:not(.cm-active)::after,
-.markdown-preview-view hr::after {
+.markdown-rendered hr::after {
   content: var(--hr-icon-symbol);
   font-family: var(--hr-icon-font);
   font-size: var(--font-text-size);
@@ -6908,6 +6911,19 @@ img[alt*="p+bcc"], .image-embed[src*="#p+bcc"] img {
 }
 .theme-light img[alt*=invertwc], .theme-light .image-embed[src*="#invertwc"] {
   filter: invert(1) hue-rotate(180deg) contrast(1.45);
+}
+
+img:is([alt*=flip-x],
+[alt*=flip-horizontal]) {
+  transform: scale(-1, 1);
+}
+img:is([alt*=flip-y],
+[alt*=flip-vertical]) {
+  transform: scale(1, -1);
+}
+img:is([alt*=flip-xy],
+[alt*=flip-vertical-horizontal]) {
+  transform: scale(-1, -1);
 }
 
 /*Fit image within bounds WITHOUT stretching*/

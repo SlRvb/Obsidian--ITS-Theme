@@ -316,6 +316,19 @@ img[alt*="p+bcc"], .image-embed[src*="#p+bcc"] img {
   filter: invert(1) hue-rotate(180deg) contrast(1.45);
 }
 
+img:is([alt*=flip-x],
+[alt*=flip-horizontal]) {
+  transform: scale(-1, 1);
+}
+img:is([alt*=flip-y],
+[alt*=flip-vertical]) {
+  transform: scale(1, -1);
+}
+img:is([alt*=flip-xy],
+[alt*=flip-vertical-horizontal]) {
+  transform: scale(-1, -1);
+}
+
 /*Fit image within bounds WITHOUT stretching*/
 img[alt*=cover],
 img:is([alt*=cover], [alt*=cvr]),

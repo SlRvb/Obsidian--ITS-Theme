@@ -24,4 +24,20 @@
     }
 } 
 
+//Flip / Rotations
+img {
+    &:is(
+        [alt*="flip-x"],
+        [alt*="flip-horizontal"]
+    ) { transform: scale(-1, 1); }
+    
+    &:is(
+        [alt*="flip-y"],
+        [alt*="flip-vertical"]
+    ) { transform: scale(1, -1); }
 
+    &:is(
+        [alt*="flip-xy"],
+        [alt*="flip-vertical-horizontal"]
+    ) { transform: scale(-1, -1); }
+}

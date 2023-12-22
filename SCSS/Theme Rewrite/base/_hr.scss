@@ -1,7 +1,7 @@
 body {
     --hr-icon-symbol: "\e817";
     --hr-icon-font: var(--its);
-    --hr-icon-background: var(--note);
+    --hr-icon-background: transparent;
     --hr-icon-padding-x: 4px;
     
     --hr-icon-color: var(--headers);
@@ -9,15 +9,30 @@ body {
     --hr-thickness: 2px;
     --hr-width: auto;
     --hr-alignment: -50%, -50%;
+    --hr-text-offset: 12px;
 }
 
 
 /*Stylized HR/Horizontal Line*/
 .hr.cm-line:not(.cm-active),
-.markdown-preview-view hr {
+.markdown-rendered hr {
     margin-left: auto;
     margin-right: auto;
     width: var(--hr-width);
+
+    //From @FireIsGood
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+        to right,
+        var(--hr-color),
+        var(--hr-color) calc(50% - var(--hr-text-offset)),
+
+        transparent calc(50% - var(--hr-text-offset)),
+        transparent calc(50% + var(--hr-text-offset)),
+
+        var(--hr-color) calc(50% + var(--hr-text-offset)),
+        var(--hr-color)
+    );
 
     &::after {
         content: var(--hr-icon-symbol);

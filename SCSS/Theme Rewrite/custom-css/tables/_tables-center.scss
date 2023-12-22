@@ -1,6 +1,7 @@
 /*Table Centered*/
 .tables-center,
 .t-c {
+    & .cm-table-widget.cm-table-widget .table-wrapper,
     & table {
         margin-left: auto;
         margin-right: auto

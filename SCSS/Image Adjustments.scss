@@ -9,6 +9,12 @@ settings:
         description: "[Image Adjustments Snippet How-To Guide](https://publish.obsidian.md/slrvb-docs/ITS+Theme/Image+Adjustments)"
         markdown: true
     -
+        title: List Overlap Fix
+        description: Fix list bullets overlapping with images
+        id: img-adj-list
+        type: class-toggle
+        default: true
+    -
         title: Clear Images
         description: Push image under/over headings or horizontal lines
         id: img-adj-clears
@@ -58,4 +64,8 @@ settings:
         type: class-toggle
 */
 
-@use 'Theme Rewrite/custom-css/image-adjustments'
+@use 'Theme Rewrite/custom-css/image-adjustments';
+
+
+/*Theme fixes*/
+.img-adj-list :is(ul, ol) { display: flow-root; }

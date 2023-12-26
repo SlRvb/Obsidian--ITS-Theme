@@ -1,0 +1,128 @@
+.theme-dark.accent-color,
+.theme-dark .accent-color {
+    --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --lite-accent: hsl(var(--accent-h), var(--accent-s), 70%);
+    --dark-accent: hsl(var(--accent-h), var(--accent-s), 30%);
+    --deep-dark-accent: hsl(var(--accent-h), 20%, 10%);
+    --accent2: hsl(var(--accent-h), var(--accent-s), 50%);
+    --accent2-lite: hsl(var(--accent-h), 50%, 70%);
+    
+    --headers: hsl(var(--accent-h), var(--accent-s), 50%);
+    --soft-text: hsl(var(--accent-h), 20%, 55%);
+    --faint-text: hsl(var(--accent-h), 20%, 45%);
+    --code-text: hsl(var(--accent-h), var(--accent-s), 60%);
+    // --i-at: ;
+    // --footnote: ;
+    --inactive: hsla(var(--accent-h), var(--accent-s), 75%, 40%);
+    --tag-text: var(--headers);
+    
+    --folder: var(--accent);
+    --folder-open: var(--lite-accent);
+    // --file: ;
+    --file-icon-color: hsl(var(--accent-h), 20%, 30%);
+	
+    // --fg: ;
+    --bg: hsl(var(--accent-h), 0%, 17%);
+    --code-bg: hsl(var(--accent-h), 20%, 15%);
+    // --embed-bg: ;
+    // --aside-bg: ;
+    // --tag: ;
+    // --bttn: ;
+    --dark-sidebar: hsl(var(--accent-h), 20%, 7%);
+    --outer-bar: hsl(var(--accent-h), 10%, 5%);
+    --note: hsl(var(--accent-h), 0%, 10%);
+    
+    // --th: ;
+    // --table-header-text: ;
+    // --td: ;
+    
+    --table: hsl(var(--accent-h), 20%, 24%);
+    --hr: hsl(var(--accent-h), 20%, 25%);
+    --hr-icon-color: var(--accent2);
+    --lines: hsl(var(--accent-h), 20%, 25%);
+    // --outline: ;
+	
+	// --hr-image: ;
+	
+	--highlight: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 30%);
+	--hvr: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 40%);
+	--hvr-active: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 30%);
+    
+    // --graph-bg: ;
+    // --graph-lines: ;
+    // --graph-node: ;
+    // --graph-fill: ;
+    // --graph-404: ;
+
+	--theme-rainbow-1: hsl(var(--accent-h), var(--accent-s), 60%);
+    --theme-rainbow-2: hsl(var(--accent-h), var(--accent-s), 50%);
+    --theme-rainbow-3: hsl(var(--accent-h), var(--accent-s), 30%);
+    --theme-rainbow-4: hsl(var(--accent-h), var(--accent-s), 20%);
+    --theme-rainbow-5: hsl(var(--accent-h), var(--accent-s), 10%);
+    --theme-rainbow-6: hsl(var(--accent-h), var(--accent-s), 5%);
+}
+
+
+.theme-light.accent-color,
+.theme-light .accent-color {
+    --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --lite-accent: hsl(var(--accent-h), var(--accent-s), 50%);
+    --dark-accent: hsl(var(--accent-h), var(--accent-s), 40%);
+    --deep-dark-accent: hsl(var(--accent-h), 20%, 10%);
+    --accent2: hsl(var(--accent-h), var(--accent-s), 50%);
+    --accent2-lite: hsl(var(--accent-h), var(--accent-s), 70%);
+    
+    --headers: hsl(var(--accent-h), var(--accent-s), 50%);
+    --soft-text: hsl(var(--accent-h), 20%, 55%);
+    --faint-text: hsl(var(--accent-h), 20%, 45%);
+    --code-text: hsl(var(--accent-h), var(--accent-s), 50%);
+    // --i-at: ;
+    // --footnote: ;
+    --inactive: hsla(var(--accent-h), var(--accent-s), 80%);
+    --tag-text: var(--headers);
+    
+    --folder: var(--accent);
+    --folder-open: var(--lite-accent);
+    // --file: ;
+    --file-icon-color: hsl(var(--accent-h), 20%, 30%);
+	
+    // --fg: ;
+    --bg: hsl(var(--accent-h), var(--accent-s), 85%);
+    --code-bg: hsl(var(--accent-h), var(--accent-s), 90%);
+    // --embed-bg: ;
+    // --aside-bg: ;
+    // --tag: ;
+    // --bttn: ;
+    --dark-sidebar: hsl(var(--accent-h), 10%, 90%);
+    --outer-bar: hsl(var(--accent-h), 10%, 92%);
+    --note: hsl(var(--accent-h), 0%, 94%);
+    
+    // --th: ;
+    // --table-header-text: ;
+    --td: hsla(var(--accent-h), var(--accent-s), 50%, 10%);
+    
+    --table: hsl(var(--accent-h), 20%, 80%);
+    --hr: hsl(var(--accent-h), 20%, 85%);
+    --hr-icon-color: var(--accent2);
+    --lines: hsl(var(--accent-h), 20%, 80%);
+    --outline: hsla(var(--accent-h), var(--accent-s), 80%);
+	
+	// --hr-image: ;
+	
+	--highlight: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 20%);
+	--hvr: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 30%);
+	--hvr-active: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 50%);
+    
+    // --graph-bg: ;
+    // --graph-lines: ;
+    // --graph-node: ;
+    // --graph-fill: ;
+    // --graph-404: ;
+
+	--theme-rainbow-1: hsl(var(--accent-h), var(--accent-s), 60%);
+    --theme-rainbow-2: hsl(var(--accent-h), var(--accent-s), 50%);
+    --theme-rainbow-3: hsl(var(--accent-h), var(--accent-s), 30%);
+    --theme-rainbow-4: hsl(var(--accent-h), var(--accent-s), 20%);
+    --theme-rainbow-5: hsl(var(--accent-h), var(--accent-s), 10%);
+    --theme-rainbow-6: hsl(var(--accent-h), var(--accent-s), 0%);
+}

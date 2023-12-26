@@ -21,7 +21,7 @@
   float: unset;
 }
 
-.callout:is([data-callout-metadata~=no-t],
+.callout.callout.callout.callout:is([data-callout-metadata~=no-t],
 [data-callout-metadata~=no-title]) > .callout-title {
   display: none;
 }
@@ -306,27 +306,35 @@
   --callout-tall: 95%;
 }
 .callout.callout.callout[data-callout-metadata~=wmicro] {
+  max-width: unset;
   width: var(--callout-micro);
 }
 .callout.callout.callout[data-callout-metadata~=wtiny] {
+  max-width: unset;
   width: var(--callout-tiny);
 }
 .callout.callout.callout[data-callout-metadata~=wsmall] {
+  max-width: unset;
   width: var(--callout-small);
 }
 .callout.callout.callout[data-callout-metadata~=ws-med] {
+  max-width: unset;
   width: var(--callout-small-med);
 }
 .callout.callout.callout[data-callout-metadata~=wm-sm] {
+  max-width: unset;
   width: var(--callout-med-small);
 }
 .callout.callout.callout[data-callout-metadata~=wmed] {
+  max-width: unset;
   width: var(--callout-medium);
 }
 .callout.callout.callout[data-callout-metadata~=wm-tl] {
+  max-width: unset;
   width: var(--callout-med-tall);
 }
 .callout.callout.callout[data-callout-metadata~=wtall] {
+  max-width: unset;
   width: var(--callout-tall);
 }
 .callout.callout.callout[data-callout-metadata~=sban], .callout.callout.callout[data-callout-metadata~=wfull] {
@@ -354,6 +362,7 @@
 }
 .callout.callout.callout[data-callout-metadata~=wfit] {
   width: fit-content;
+  max-width: min-content;
 }
 
 .callout.callout[data-callout-metadata~=static] {
@@ -418,7 +427,7 @@
 /*Infobox*/
 :is(.is-mobile:not(.is-tablet),
 .is-mobile:not(.is-tablet) .is-live-preview,
-.is-live-preview) .callout[data-callout~=infobox]:not([data-callout-metadata~=mobile]) {
+.is-live-preview) .callout[data-callout~=infobox]:not([data-callout-metadata~=mobile]) > .callout-content {
   float: unset !important;
   max-width: 100%;
   margin: 0 !important;
@@ -428,7 +437,7 @@
 .callout.callout[data-callout~=infobox] {
   --callout-color: var(--note, var(--background-primary));
   --callout-padding: 0;
-  --callout-content-padding: 0;
+  --callout-content-padding: 5px;
   --callout-margin: 0 0 0 5px;
   background: var(--note, var(--background-primary));
   --h1-border-line-height: 0;
@@ -536,6 +545,21 @@
 .callout.callout[data-callout~=infobox][data-callout-metadata][data-callout-metadata][data-callout-metadata~=left] {
   --callout-margin: 0 5px 0 0;
 }
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] {
+  max-width: unset;
+  float: unset;
+  --callout-margin: 5px 0 0 0;
+}
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] > .callout-title {
+  color: var(--text-normal);
+  background: var(--outer-bar, var(--background-secondary));
+  border: 1px solid var(--table, var(--background-modifier-border));
+  border-bottom: none;
+}
+.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] > .callout-content {
+  border-top: none;
+}
+
 .callout.callout[data-callout~=infobox][data-callout-metadata~=wikipedia] table {
   --table-header-color: var(--text, var(--text-normal));
   --table-header-background: transparent;
@@ -549,10 +573,6 @@
 .callout.callout[data-callout~=infobox][data-callout-metadata~=wikipedia] table tr:last-child {
   margin-bottom: 2px;
 }
-.callout.callout[data-callout~=infobox] .callout-content > .callout[data-callout~=infobox] {
-  max-width: unset;
-  float: unset;
-}
 
 @media print {
   .callout[data-callout~=infobox] {
@@ -561,6 +581,23 @@
 }
 .theme-light .callout[data-callout~=infobox][data-callout-metadata~=wikipedia] {
   --th-text: var(--th);
+}
+
+.illusion.illusion .callout[data-callout~=infobox].is-collapsed.is-collapsed[data-callout-metadata~=left] {
+  margin-left: -30px;
+}
+.illusion.illusion .callout[data-callout~=infobox].is-collapsed.is-collapsed[data-callout-metadata~=right] {
+  margin-right: -30px;
+}
+.illusion.illusion .callout[data-callout~=infobox] [data-heading] {
+  --illusion-box-shadow: none;
+  --header-shadow: var(--illusion-box-shadow);
+  --h1-shadow: var(--header-shadow);
+  --h2-shadow: var(--header-shadow);
+  --h3-shadow: var(--header-shadow);
+  --h4-shadow: var(--header-shadow);
+  --h5-shadow: var(--header-shadow);
+  --h6-shadow: var(--header-shadow);
 }
 
 /*Image Grid*/
@@ -616,7 +653,7 @@
 .callout[data-callout~=cards] {
   --callout-color: transparent;
   --callout-icon: layout-dashboard;
-  --callout-padding: 2px;
+  --callout-padding: 0;
   --callout-content-padding: 0px;
   --callout-blend-mode: normal;
   box-shadow: none;
@@ -1012,18 +1049,35 @@
   --columns: 9;
 }
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content {
-  gap: unset;
+  gap: 5px;
   grid-template-columns: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content .callout {
-  margin: 5px;
   flex: 1 1 calc(var(--file-line-width) / 2.5);
 }
 .callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~="3"] > .callout-content .callout {
   flex: 1 1 calc(var(--file-line-width) / 3.5);
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout {
+  flex: 1 1 auto;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=wmicro] {
+  width: 5%;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=wtiny] {
+  width: 10%;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=wsmall] {
+  width: 20%;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=ws-med] {
+  width: 30%;
+}
+.callout[data-callout*=column][data-callout-metadata~=flex][data-callout-metadata~=resize] .callout[data-callout-metadata~=wmed] {
+  width: 40%;
 }
 .callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content {
   grid-template-columns: unset;
@@ -1035,16 +1089,16 @@
 .callout[data-callout*=column][data-callout-metadata~=dataview] > .callout-content .dataview li {
   break-inside: avoid;
 }
-.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content {
   grid-template-columns: unset;
 }
-.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul {
   columns: var(--columns);
 }
-.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul > li, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
   break-inside: avoid;
 }
-.callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul .list-bullet::after {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul .list-bullet::after {
   position: relative;
 }
 
@@ -1091,7 +1145,7 @@
   min-width: var(--lane-width);
   border: 0;
   padding: 5px;
-  margin: 5px 3px;
+  margin: 5px 1px;
   padding-top: 4px;
   background: var(--note, var(--background-primary-alt));
   border-radius: var(--radius-s);
@@ -1364,28 +1418,28 @@ body:not(.default-callout-quote) .callout.callout[data-callout=quote] {
   flex-direction: column-reverse;
   box-shadow: var(--shadow-l);
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-content {
   padding: 0;
   overflow: hidden;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content p:first-child {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-content p:first-child {
   margin-block-start: 0;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-content p:last-child {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-content p:last-child {
   margin-block-end: 0;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-icon {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-icon {
   height: 0;
   width: 0;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-title {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-title {
   background: transparent;
   text-align: right;
   padding-top: 5px;
   padding-right: 0;
   display: block;
 }
-body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-title-inner::before {
+body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout-title-inner::before {
   content: "~ ";
 }
 
@@ -1529,6 +1583,10 @@ body:not(.default-callout-quote) .callout.callout[data-callout=quote] .callout-t
     display: flex !important;
   }
 }
+.markdown-rendered table tr {
+  height: unset;
+}
+
 /*@settings
 name: Callout Adjustments
 id: callout-adjustments

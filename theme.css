@@ -2690,6 +2690,11 @@ settings:
         level: 1
         collapsed: true
     -
+        title: Accent Color
+        description: Use the Obsidian accent color picker in the Appearance tab as theme color
+        id: accent-color
+        type: class-toggle
+    -
         title: SlRvb Blue
         id: slrvb-b
         type: class-toggle
@@ -2767,8 +2772,8 @@ body,
 .theme-dark,
 .theme-light {
   --accent-h: 0;
-  --accent-s: 42%;
-  --accent-l: 37%;
+  --accent-s: 50%;
+  --accent-l: 00%;
   --background-primary: var(--note);
   --background-primary-alt: var(--outer-bar);
   --background-secondary: var(--side-bar);
@@ -4647,8 +4652,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: var(--hr-width);
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, var(--hr-color), var(--hr-color) calc(50% - var(--hr-text-offset)), transparent calc(50% - var(--hr-text-offset)), transparent calc(50% + var(--hr-text-offset)), var(--hr-color) calc(50% + var(--hr-text-offset)), var(--hr-color));
 }
 .hr.cm-line:not(.cm-active)::after,
 .markdown-rendered hr::after {
@@ -9830,6 +9833,10 @@ body:not(.default-callout-quote) .callout.callout[data-callout=quote] > .callout
     display: flex !important;
   }
 }
+.markdown-rendered table tr {
+  height: unset;
+}
+
 .canvas-cards .canvas-node.is-themed {
   --shadow-border-themed-inset: none;
   --shadow-border-themed: none;
@@ -13010,6 +13017,66 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --ch-string: var(--headers);
 }
 
+.theme-dark.accent-color,
+.theme-dark .accent-color {
+  --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --lite-accent: hsl(var(--accent-h), var(--accent-s), 70%);
+  --dark-accent: hsl(var(--accent-h), var(--accent-s), 30%);
+  --deep-dark-accent: hsl(var(--accent-h), 20%, 10%);
+  --accent2: hsl(var(--accent-h), var(--accent-s), 50%);
+  --accent2-lite: hsl(var(--accent-h), 50%, 70%);
+  --headers: hsl(var(--accent-h), var(--accent-s), 50%);
+  --soft-text: hsl(var(--accent-h), 20%, 55%);
+  --faint-text: hsl(var(--accent-h), 20%, 45%);
+  --code-text: hsl(var(--accent-h), var(--accent-s), 60%);
+  --inactive: hsla(var(--accent-h), var(--accent-s), 75%, 40%);
+  --tag-text: var(--headers);
+  --folder: var(--accent);
+  --folder-open: var(--lite-accent);
+  --file-icon-color: hsl(var(--accent-h), 20%, 30%);
+  --code-bg: hsl(var(--accent-h), 20%, 21%);
+  --hr-icon-color: var(--accent2);
+  --highlight: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 30%);
+  --hvr: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 40%);
+  --hvr-active: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 30%);
+  --theme-rainbow-1: hsl(var(--accent-h), var(--accent-s), 60%);
+  --theme-rainbow-2: hsl(var(--accent-h), var(--accent-s), 50%);
+  --theme-rainbow-3: hsl(var(--accent-h), var(--accent-s), 30%);
+  --theme-rainbow-4: hsl(var(--accent-h), var(--accent-s), 20%);
+  --theme-rainbow-5: hsl(var(--accent-h), var(--accent-s), 10%);
+  --theme-rainbow-6: hsl(var(--accent-h), var(--accent-s), 5%);
+}
+
+.theme-dark.accent-color,
+.theme-dark .accent-color {
+  --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --lite-accent: hsl(var(--accent-h), var(--accent-s), 70%);
+  --dark-accent: hsl(var(--accent-h), var(--accent-s), 30%);
+  --deep-dark-accent: hsl(var(--accent-h), 20%, 10%);
+  --accent2: hsl(var(--accent-h), var(--accent-s), 50%);
+  --accent2-lite: hsl(var(--accent-h), 50%, 70%);
+  --headers: hsl(var(--accent-h), var(--accent-s), 50%);
+  --soft-text: hsl(var(--accent-h), 20%, 55%);
+  --faint-text: hsl(var(--accent-h), 20%, 45%);
+  --code-text: hsl(var(--accent-h), var(--accent-s), 60%);
+  --inactive: hsla(var(--accent-h), var(--accent-s), 75%, 40%);
+  --tag-text: var(--headers);
+  --folder: var(--accent);
+  --folder-open: var(--lite-accent);
+  --file-icon-color: hsl(var(--accent-h), 20%, 30%);
+  --code-bg: hsl(var(--accent-h), 20%, 21%);
+  --hr-icon-color: var(--accent2);
+  --highlight: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 30%);
+  --hvr: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 40%);
+  --hvr-active: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 30%);
+  --theme-rainbow-1: hsl(var(--accent-h), var(--accent-s), 60%);
+  --theme-rainbow-2: hsl(var(--accent-h), var(--accent-s), 50%);
+  --theme-rainbow-3: hsl(var(--accent-h), var(--accent-s), 30%);
+  --theme-rainbow-4: hsl(var(--accent-h), var(--accent-s), 20%);
+  --theme-rainbow-5: hsl(var(--accent-h), var(--accent-s), 10%);
+  --theme-rainbow-6: hsl(var(--accent-h), var(--accent-s), 5%);
+}
+
 .its.its {
   --font-default: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --font-monospace: "Fira Code", "Fira Code Medium", "Source Code Pro", monospace;
@@ -13166,6 +13233,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 .s-d,
 .t-d,
 .nord,
+.accent-color,
 .its {
   --h1-font: var(--font);
   --h2-font: var(--font);

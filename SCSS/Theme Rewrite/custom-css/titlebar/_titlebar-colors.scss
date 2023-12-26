@@ -11,6 +11,9 @@
     // --tab-text-color-focused: var(--text);
     --tab-text-color: var(--text-dl);
     --tab-text-color-focused: var(--text-dl);
+    
+    // --tab-text-color-active: var(--text-dl);
+    --tab-container-background: var(--dark-accent);
 
     --tab-font-weight: 500;
     --tab-font-weight-active: 900;
@@ -28,8 +31,9 @@
     }
 
     & .sidebar-toggle-button, 
-    & .workspace-tabs.mod-top .workspace-tab-header-container {
-        background-color: var(--titlebar-background);
+    & .workspace-tabs.mod-top .workspace-tab-header-container,
+    & .workspace-tab-header-container .workspace-tab-header-inner-icon {
+        // background-color: var(--titlebar-background);
         // padding: 0;
 
         --sidebar-icon-color: var(--text-on-accent);

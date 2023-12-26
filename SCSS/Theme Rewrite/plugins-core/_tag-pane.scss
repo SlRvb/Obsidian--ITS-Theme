@@ -15,7 +15,9 @@
 
 // Add Hash Tag
 // .tree-item .tree-item-self .collapse-icon::before,
-.tag-pane-tag:not(.mod-collapsible) > div > .tree-item-inner-text::before,
+// .tag-pane-tag:not(.mod-collapsible) > div > .tree-item-inner-text::before,
+.tag-pane-tag .tree-item-inner > .tree-item-inner-text::before,
+// .tag-pane-tag .tree-item-inner .tree-item-inner-text::before,
 .tag-pane-tag-text:before {
     // padding-left: 0;
     // margin-left: -3px;
@@ -35,7 +37,7 @@
 .tag-container .tree-item-self:hover .tag-pane-tag-text:before {
     color: var(--text-dl);
 }
-.collapse-icon + .tree-item-inner > .tag-pane-tag-text:before { 
+.tag-pane-tag .collapse-icon + .tree-item-inner > .tree-item-inner-text:before { 
     content: none;
     padding-left: 2px;
     color: var(--tag-text);

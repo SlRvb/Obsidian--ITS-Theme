@@ -6,7 +6,11 @@
     &.tree-item-self.mod-collapsible {
         --nav-item-weight: 900;
     }
-    &.tree-item-self { gap: 4px; }
+    &.tree-item-self { 
+        gap: 4px; 
+        
+        & > .tree-item-icon { margin-left: -7px; }
+    }
 }
 .workspace-leaf-content[data-type=bookmarks] .view-content {
     padding: 0 var(--size-4-2);

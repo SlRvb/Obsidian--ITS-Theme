@@ -14,6 +14,7 @@
 @use 'Tangerine-Dunes';
 @use 'Nord';
 @use 'Adventure';
+@use 'Accent-Color';
 @use 'In-The-Shadows';
 
 
@@ -32,6 +33,7 @@
 .s-d,
 .t-d,
 .nord,
+.accent-color,
 .its
 {
     --h1-font: var(--font);

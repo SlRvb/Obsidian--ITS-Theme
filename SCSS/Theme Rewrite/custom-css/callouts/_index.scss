@@ -39,3 +39,6 @@
         ) .callout-content { display: flex !important; }
     }
 }
+
+//Fix Table Editor Issues for Cards
+.markdown-rendered table tr { height: unset; }

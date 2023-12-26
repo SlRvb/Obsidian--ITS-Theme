@@ -20,19 +20,19 @@ body {
     margin-right: auto;
     width: var(--hr-width);
 
-    //From @FireIsGood
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
-        to right,
-        var(--hr-color),
-        var(--hr-color) calc(50% - var(--hr-text-offset)),
+    // //From @FireIsGood
+    // border-image-slice: 1;
+    // border-image-source: linear-gradient(
+    //     to right,
+    //     var(--hr-color),
+    //     var(--hr-color) calc(50% - var(--hr-text-offset)),
 
-        transparent calc(50% - var(--hr-text-offset)),
-        transparent calc(50% + var(--hr-text-offset)),
+    //     transparent calc(50% - var(--hr-text-offset)),
+    //     transparent calc(50% + var(--hr-text-offset)),
 
-        var(--hr-color) calc(50% + var(--hr-text-offset)),
-        var(--hr-color)
-    );
+    //     var(--hr-color) calc(50% + var(--hr-text-offset)),
+    //     var(--hr-color)
+    // );
 
     &::after {
         content: var(--hr-icon-symbol);

@@ -2689,6 +2689,11 @@ settings:
         level: 1
         collapsed: true
     -
+        title: Accent Color
+        description: Use the Obsidian accent color picker in the Appearance tab as theme color
+        id: accent-color
+        type: class-toggle
+    -
         title: SlRvb Blue
         id: slrvb-b
         type: class-toggle

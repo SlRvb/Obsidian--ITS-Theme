@@ -20,7 +20,7 @@ body {
     
     --tab-background: var(--outer-bar);
     --tab-background-active: var(--note);
-    --tab-container-background: var(--outer-bar); //Horizontal Split Tab background color;
+    --tab-container-background: var(--tab-background); //Horizontal Split Tab background color;
     
     --tab-text-color: var(--inactive); //Inactive tab text
     --tab-text-color-active: var(--text);

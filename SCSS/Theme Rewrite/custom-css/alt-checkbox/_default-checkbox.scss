@@ -42,11 +42,12 @@ body:not(.alt-chkbx-off) {
             [data-task="s"],
             [data-task="H"]
         ) {
-            --checkbox-marker-color: transparent;
-            --checkbox-color: transparent;
+            // --checkbox-marker-color: transparent;
+            // --checkbox-color: transparent;
             
-            & input:is([type=checkbox], [type=checkbox i]):checked {
+            & > input:is([type=checkbox], [type=checkbox i]):checked {
 
+                background-color: transparent;
                 font: var(--its);
                 font-family: var(--its);
                 font-size: inherit;

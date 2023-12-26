@@ -93,15 +93,16 @@ body:not(.list-default-bullet) {
 //Alignment
 ul > li:not(.task-list-item)::before { 
     float: left; //Spaced list bullet fix
-    margin-left: -22px;
+    margin-left: -21px;
     margin-right: 7px;
 }
 .is-live-preview .cm-formatting-list-ul { 
     font-family: var(--font-monospace); 
+    padding-inline-start: 0;
 
     &::before { 
         margin-right: -15px;
-        margin-left: -4px;
+        margin-left: -5px;
     }
 }
 

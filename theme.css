@@ -4283,6 +4283,7 @@ a[href^=https]:hover,
   --list-indent: 25px;
   --list-spacing: 1px;
   --root-list-spacing: 10px;
+  --root-list-bullet-spacing: 0;
   --list-marker-min-width: 0;
   --list-marker-color: var(--accent);
   --list-marker-color-other: var(--accent2);
@@ -4346,7 +4347,7 @@ ul > li:not(.task-list-item)::before {
 }
 
 .cm-formatting-list-ol, .cm-formatting-list-ul {
-  padding-inline-start: 0;
+  padding-inline-start: var(--root-list-bullet-spacing);
 }
 
 .is-live-preview .cm-formatting-list-ul {
@@ -10087,7 +10088,8 @@ iframe {
   margin-right: auto;
 }
 
-.tables-wide table,
+.tables-wide .cm-table-widget.markdown-rendered .table-wrapper, .tables-wide table,
+.t-w .cm-table-widget.markdown-rendered .table-wrapper,
 .t-w table {
   width: 100%;
 }

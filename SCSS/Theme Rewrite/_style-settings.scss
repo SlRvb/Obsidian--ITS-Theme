@@ -2075,6 +2075,13 @@ settings:
         format: hex
         default-dark: '#e5ebee'
         default-light: '#e5ebee'
+    -
+        title: Sidebar Hover Background Color
+        id: nav-item-background-hover
+        type: variable-themed-color
+        format: hex
+        default-dark: '#7c2929'
+        default-light: '#c24747'
     - 
         title: File Icon
         description: File icon color.

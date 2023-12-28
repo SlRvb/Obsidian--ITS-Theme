@@ -1,3 +1,6 @@
 .tables-wide,
 .t-w
-{ & table { width: 100%; } }
+{ 
+    & .cm-table-widget.markdown-rendered .table-wrapper,
+    & table { width: 100%; } 
+}

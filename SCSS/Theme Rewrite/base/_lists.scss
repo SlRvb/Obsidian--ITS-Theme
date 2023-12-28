@@ -19,6 +19,7 @@
     --list-indent: 25px;
     --list-spacing: 1px; //keep at 1 or popover bullet alignment breaks(??)
     --root-list-spacing: 10px;
+    --root-list-bullet-spacing: 0;
     
     --list-marker-min-width: 0;
     --list-marker-color: var(--accent);
@@ -96,9 +97,10 @@ ul > li:not(.task-list-item)::before {
     margin-left: -21px;
     margin-right: 7px;
 }
+.cm-formatting-list-ol, .cm-formatting-list-ul { padding-inline-start: var(--root-list-bullet-spacing); }
+
 .is-live-preview .cm-formatting-list-ul { 
     font-family: var(--font-monospace); 
-    padding-inline-start: 0;
 
     &::before { 
         margin-right: -15px;

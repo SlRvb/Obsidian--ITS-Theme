@@ -663,6 +663,11 @@ settings:
         level: 3
         collapsed: false
     -
+        title: Image Captions with Alt Text
+        description: Make any alt text in image display as an image caption
+        id: image-caption
+        type: class-toggle
+    -
         title: Horizontal Lines
         description: Push image under/over any horizontal lines
         id: clear-hr
@@ -4340,9 +4345,12 @@ ul > li:not(.task-list-item)::before {
   margin-right: 7px;
 }
 
+.cm-formatting-list-ol, .cm-formatting-list-ul {
+  padding-inline-start: 0;
+}
+
 .is-live-preview .cm-formatting-list-ul {
   font-family: var(--font-monospace);
-  padding-inline-start: 0;
 }
 .is-live-preview .cm-formatting-list-ul::before {
   margin-right: -15px;

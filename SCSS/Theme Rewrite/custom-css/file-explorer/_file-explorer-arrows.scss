@@ -1,0 +1,11 @@
+body:not(.folder-arrows) .nav-files-container {
+    & .nav-folder-title:hover .nav-folder-collapse-indicator,
+    & .nav-folder-title:hover .tree-item-icon.nav-folder-collapse-indicator 
+    {  display: flex; margin-left: -2px; }
+
+    & .tree-item-self.is-active .collapse-icon svg 
+    { color: var(--text-dl); }
+
+    & .nav-folder-children .nav-folder-title:hover .nav-folder-title-content::before
+    { margin-left: var(--file-icon-margin); }
+}

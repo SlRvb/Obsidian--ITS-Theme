@@ -44,9 +44,10 @@ body:not(.alt-chkbx-off) {
         ) {
             // --checkbox-marker-color: transparent;
             // --checkbox-color: transparent;
-            
-            & > input:is([type=checkbox], [type=checkbox i]):checked {
 
+            & :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked,
+            & > input:is([type=checkbox], [type=checkbox i]):checked
+            {
                 background-color: transparent;
                 font: var(--its);
                 font-family: var(--its);

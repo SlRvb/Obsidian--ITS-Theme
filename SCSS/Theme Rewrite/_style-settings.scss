@@ -321,6 +321,10 @@ settings:
         type: variable-text
         default: '"\e800"'
     -
+        title: Display Folder Arrow On Hover
+        id: folder-arrow
+        type: class-toggle
+    -
         title: File Font Family
         id: file-f
         type: variable-text

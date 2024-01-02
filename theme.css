@@ -3018,7 +3018,9 @@ body.theme-light {
   --status-bar-radius: var(--radius-m) 0 0 0;
   --checkbox-radius: var(--radius-m);
   --toggle-radius: var(--radius-h);
+  --toggle-thumb-radius: var(--radius-h);
   --clickable-icon-radius: var(--radius-s);
+  --pill-radius: var(--radius-m);
   --bold-weight: 900;
   --font-ui-smaller: 13.5px;
   --font-ui-small: 14px;
@@ -7674,6 +7676,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task="&"],
 [data-task=s],
 [data-task=H]) > input:is([type=checkbox], [type=checkbox i]):checked::after {
+  background-color: transparent;
   top: -4px;
   left: 0px;
   -webkit-mask-image: unset;

@@ -325,6 +325,7 @@ settings:
         title: Display Folder Arrow On Hover
         id: folder-arrow
         type: class-toggle
+        default: true
     -
         title: File Font Family
         id: file-f
@@ -6623,14 +6624,14 @@ body {
   border-bottom-color: var(--explorer-root-border-color);
 }
 
-body:not(.folder-arrows) .nav-files-container .nav-folder-title:hover .nav-folder-collapse-indicator, body:not(.folder-arrows) .nav-files-container .nav-folder-title:hover .tree-item-icon.nav-folder-collapse-indicator {
+body.folder-arrow .nav-files-container .nav-folder-title:hover .nav-folder-collapse-indicator, body.folder-arrow .nav-files-container .nav-folder-title:hover .tree-item-icon.nav-folder-collapse-indicator {
   display: flex;
   margin-left: -2px;
 }
-body:not(.folder-arrows) .nav-files-container .tree-item-self.is-active .collapse-icon svg {
+body.folder-arrow .nav-files-container .tree-item-self.is-active .collapse-icon svg {
   color: var(--text-dl);
 }
-body:not(.folder-arrows) .nav-files-container .nav-folder-children .nav-folder-title:hover .nav-folder-title-content::before {
+body.folder-arrow .nav-files-container .nav-folder-children .nav-folder-title:hover .nav-folder-title-content::before {
   margin-left: var(--file-icon-margin);
 }
 

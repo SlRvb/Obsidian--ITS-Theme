@@ -5163,6 +5163,7 @@ body {
 }
 .bookmark.tree-item-self {
   gap: 4px;
+  padding: var(--explorer-item-padding);
 }
 .bookmark.tree-item-self > .tree-item-icon {
   margin-left: -7px;
@@ -5172,6 +5173,7 @@ body {
   padding: 0 var(--size-4-2);
 }
 
+/* .bookmark.tree-item-self { padding: var(--explorer-item-padding); } */
 body {
   --canvas-node-padding: 0 7px;
   --canvas-color-opacity: 0.07;

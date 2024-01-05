@@ -8,6 +8,7 @@
     }
     &.tree-item-self { 
         gap: 4px; 
+        padding: var(--explorer-item-padding);
         
         & > .tree-item-icon { margin-left: -7px; }
     }

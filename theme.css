@@ -4440,6 +4440,11 @@ li.is-collapsed .list-bullet:after,
   padding-inline-end: 0;
 }
 
+.markdown-source-view.mod-cm6 .cm-line.cm-line:not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
+  right: 0.5rem;
+  padding-right: 0;
+}
+
 .theme-dark,
 .theme-light {
   --table-header-weight: var(--font-bold);

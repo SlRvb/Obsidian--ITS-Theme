@@ -60,6 +60,7 @@
 .callout[data-callout~="cards"][data-callout-metadata~="dataview"] {
     // Undo General Cards Grid Styling
     --callout-content-padding: 0;
+    // --callout-margin: 0;
     // --callout-cards-outline: ;
 
     & .callout-content {
@@ -72,6 +73,7 @@
     & .block-language-dataview { padding: 5px; }
     & .dataview.table-view-table {
         display: grid;
+        margin-block-start: 0;
 
         // Undo Table Cell Styling
         & :is(td, tr) {

@@ -21,6 +21,9 @@
 
 .outgoing-link-item {
     align-items: center; // Center Icon
+    gap: 4px;
+    
+    & .tree-item-inner-subtext { margin-top: 2px; }
     
     //Fix Text Sizing
     & .tree-item-inner { font-size: var(--font-ui-medium); }

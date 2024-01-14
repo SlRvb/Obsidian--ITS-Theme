@@ -52,10 +52,11 @@
 .callout:is(
     [data-callout-metadata~="n-th"], 
     [data-callout-metadata~="no-table-header"]
-) .callout-content > {
+) > .callout-content {
     & table { 
         margin-bottom: 5px; 
-
+        
+        & thead,
         & th { display: none; }
     }
 }
@@ -70,10 +71,17 @@
         & td { width: calc(var(--tbl-w) / 2); }
     }
 } 
-
+//Table Text Alignment
 .callout[data-callout-metadata~="table-cell-top"] table td 
 { vertical-align: top; }
-
+//Table Margins
+.callout.callout:is(
+    [data-callout-metadata~=t-nmg],
+    [data-callout-metadata~=table-no-margin]
+) table {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
 
 
 

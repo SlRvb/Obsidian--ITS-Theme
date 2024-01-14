@@ -74,9 +74,6 @@ body {
         border-radius: 0;
         font-family: inherit;
         background-color: transparent;
-        
-        //Remove Duplicate Tag in (field)
-        & span > a.tag:nth-of-type(odd) { display: none; }
     }
     
     &.inline-field-key,
@@ -96,7 +93,9 @@ body {
     &.inline-field-value a.tag:first-child { display: none; }
 } 
 
-
+//Remove Duplicate Tag in (field)
+.dataview .inline-field-standalone-value span > a.tag:nth-of-type(odd) { display: none; }
+.is-live-preview .dataview .inline-field-standalone-value span > a.tag:nth-of-type(odd) { display: none; }
 
 
 //Fix Embed Task & List Alignment

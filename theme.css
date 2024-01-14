@@ -3213,6 +3213,10 @@ button.mod-cta:hover {
   color: var(--text-dl);
 }
 
+.community-modal-info {
+  padding: var(--file-margins);
+}
+
 .menu {
   border-width: var(--modal-border-width);
   border-color: var(--modal-border-color);
@@ -4311,7 +4315,8 @@ a[href^=https]:hover,
   --indentation-guide-color: var(--lines);
   --indentation-guide-width: 2px;
   --indentation-guide-color-active: var(--accent);
-  --indentation-guide-editing-indent: 1px;
+  --indentation-guide-editing-indent: 2px;
+  --indentation-guide-lp-indent: calc(var(--checkbox-size) / 3);
   --list-color-1: var(--indentation-guide-color);
   --list-color-2: var(--indentation-guide-color);
   --list-color-3: var(--indentation-guide-color);
@@ -4360,28 +4365,36 @@ ul > li:not(.task-list-item)::before {
   margin-right: 7px;
 }
 
-.cm-formatting-list-ol, .cm-formatting-list-ul {
-  padding-inline-start: var(--root-list-bullet-spacing);
-}
-
-.is-live-preview .cm-formatting-list-ul {
-  font-family: var(--font-monospace);
-}
-.is-live-preview .cm-formatting-list-ul::before {
-  margin-right: -15px;
-  margin-left: -5px;
-}
-
-.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
-  margin: 0;
-}
-
 .markdown-preview-view .task-list-item-checkbox {
   margin-right: 8px;
 }
 
 ul > li.task-list-item.task-list-item .task-list-item-checkbox {
   margin-inline-start: calc(var(--checkbox-size) * -1.4);
+}
+
+.cm-formatting-list-ol, .cm-formatting-list-ul {
+  padding-inline-start: var(--root-list-bullet-spacing);
+}
+
+.is-live-preview.markdown-source-view.mod-cm6 .cm-formatting-list-ul {
+  font-family: var(--font-monospace);
+}
+.is-live-preview.markdown-source-view.mod-cm6 .cm-formatting-list-ul::before {
+  margin-right: -16px;
+}
+.is-live-preview.markdown-source-view.mod-cm6 .cm-hmd-list-indent .cm-indent::before {
+  transform: translateX(var(--indentation-guide-lp-indent));
+}
+.is-live-preview.markdown-source-view.mod-cm6 .task-list-label {
+  margin-inline-start: 0;
+}
+.is-live-preview.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
+  margin: 0;
+}
+
+.markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
+  left: calc(var(--checkbox-size) * -1 + 1px);
 }
 
 ol > li::marker,
@@ -4440,8 +4453,10 @@ li.is-collapsed .list-bullet:after,
   padding-inline-end: 0;
 }
 
-.markdown-source-view.mod-cm6 .cm-line.cm-line:not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
-  right: 0.5rem;
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line.HyperMD-list-line .cm-fold-indicator .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-line.cm-line:not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator,
+.markdown-source-view.mod-cm6 .HyperMD-list-line .collapse-indicator {
+  right: 0.2rem;
   padding-right: 0;
 }
 
@@ -4741,6 +4756,10 @@ body {
   padding: var(--blockquote-padding);
 }
 
+.is-live-preview .cm-line.cm-line.HyperMD-header + .HyperMD-quote.HyperMD-quote.HyperMD-quote {
+  padding: var(--blockquote-padding-lp);
+}
+
 .markdown-rendered blockquote blockquote {
   padding: 0 0 0 var(--size-4-3);
 }
@@ -4926,6 +4945,10 @@ body {
 
 .outgoing-link-item {
   align-items: center;
+  gap: 4px;
+}
+.outgoing-link-item .tree-item-inner-subtext {
+  margin-top: 2px;
 }
 .outgoing-link-item .tree-item-inner {
   font-size: var(--font-ui-medium);
@@ -5173,7 +5196,6 @@ body {
   padding: 0 var(--size-4-2);
 }
 
-/* .bookmark.tree-item-self { padding: var(--explorer-item-padding); } */
 body {
   --canvas-node-padding: 0 7px;
   --canvas-color-opacity: 0.07;
@@ -5604,9 +5626,6 @@ body {
   font-family: inherit;
   background-color: transparent;
 }
-.dataview.dataview.inline-field-standalone-value span > a.tag:nth-of-type(odd) {
-  display: none;
-}
 .dataview.dataview.inline-field-key, .dataview.dataview.inline-field-value {
   border-radius: var(--radius);
   font-family: inherit;
@@ -5621,6 +5640,10 @@ body {
   background-color: var(--td);
 }
 .dataview.dataview.inline-field-value a.tag:first-child {
+  display: none;
+}
+
+.is-live-preview .dataview .inline-field-standalone-value span > a.tag:nth-of-type(odd) {
   display: none;
 }
 
@@ -6451,9 +6474,11 @@ img.emoji.emoji {
   color: var(--text-dl);
 }
 
+.fn-whitespace-stop-collapsing .nav-folder-title, .fn-whitespace-stop-collapsing .nav-folder-title-content {
+  padding: var(--explorer-item-padding) !important;
+}
 .fn-whitespace-stop-collapsing .nav-folder-title-content {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-left: 0 !important;
 }
 
 .settings-search-input {
@@ -8428,11 +8453,12 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 
 .callout:is([data-callout-metadata~=n-th],
-[data-callout-metadata~=no-table-header]) .callout-content > table {
+[data-callout-metadata~=no-table-header]) > .callout-content table {
   margin-bottom: 5px;
 }
 .callout:is([data-callout-metadata~=n-th],
-[data-callout-metadata~=no-table-header]) .callout-content > table th {
+[data-callout-metadata~=no-table-header]) > .callout-content table thead, .callout:is([data-callout-metadata~=n-th],
+[data-callout-metadata~=no-table-header]) > .callout-content table th {
   display: none;
 }
 
@@ -8447,6 +8473,12 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 
 .callout[data-callout-metadata~=table-cell-top] table td {
   vertical-align: top;
+}
+
+.callout.callout:is([data-callout-metadata~=t-nmg],
+[data-callout-metadata~=table-no-margin]) table {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .callout[data-callout-metadata~=embed] .callout-content, .callout[data-callout-metadata~=embed] > .callout-content > p {
@@ -9080,6 +9112,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table {
   display: grid;
+  margin-block-start: 0;
 }
 .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table :is(td, tr) {
   border: 0;

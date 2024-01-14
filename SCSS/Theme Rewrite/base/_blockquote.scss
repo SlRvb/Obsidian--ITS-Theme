@@ -23,10 +23,17 @@ body {
     & + .HyperMD-quote { padding-top: 0; }
 }
 
+
 //Fix Blockquote Padding
 .markdown-rendered blockquote,
 .markdown-rendered div div > blockquote
 { padding: var(--blockquote-padding); }
+
+//Header Above Blockquote Fix
+.is-live-preview .cm-line.cm-line.HyperMD-header + .HyperMD-quote.HyperMD-quote.HyperMD-quote 
+{ padding: var(--blockquote-padding-lp); }
+
+
 
 //Nested
 .markdown-rendered blockquote blockquote 

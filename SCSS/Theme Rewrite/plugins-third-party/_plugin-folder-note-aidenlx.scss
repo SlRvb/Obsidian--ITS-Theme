@@ -15,7 +15,9 @@
 
 
 //Paul
-.fn-whitespace-stop-collapsing .nav-folder-title-content {
-    padding-top: 0;
-    padding-bottom: 0;
-}
+.fn-whitespace-stop-collapsing {
+    & .nav-folder-title,
+    & .nav-folder-title-content
+    { padding: var(--explorer-item-padding) !important; }
+    & .nav-folder-title-content { padding-left: 0 !important; }
+} 

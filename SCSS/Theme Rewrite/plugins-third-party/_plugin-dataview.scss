@@ -94,8 +94,7 @@ body {
 } 
 
 //Remove Duplicate Tag in (field)
-.dataview .inline-field-standalone-value span > a.tag:nth-of-type(odd) { display: none; }
-.is-live-preview .dataview .inline-field-standalone-value span > a.tag:nth-of-type(odd) { display: none; }
+.dataview .inline-field-standalone-value span > a.tag:empty { display: none; }
 
 
 //Fix Embed Task & List Alignment

@@ -5643,7 +5643,7 @@ body {
   display: none;
 }
 
-.is-live-preview .dataview .inline-field-standalone-value span > a.tag:nth-of-type(odd) {
+.dataview .inline-field-standalone-value span > a.tag:empty {
   display: none;
 }
 

@@ -263,12 +263,13 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
     .markdown-rendered h#{$num},
     .is-live-preview .HyperMD-header-#{$num}.cm-line
     {
-    display: block;
+    display: flow-root;
     background: map-get($set, background);
     text-align: map-get($set, text-alignment);
     padding: map-get($set, padding);
     border: map-get($set, border-width) solid map-get($set, border);
     border-radius: var(--radius-m);
+    margin-top: var(--heading-spacing-top) !important;
     margin-block-start: var(--heading-spacing-top);
     margin-block-end: var(--heading-spacing-bottom);
 

@@ -12,6 +12,9 @@ body {
     
     --dataview-table-width: 100%;
 }
+.dataview.dataview {
+    --root-list-spacing: 0;
+}
 
 .table-view-table {
     width: var(--dataview-table-width);
@@ -54,11 +57,11 @@ body {
 
 //dvjs
 .dataview.result-group { padding-left: 0; }
-.dataview.result-group > .contains-task-list {
-    padding-inline-start: 0;
+// .dataview.result-group > .contains-task-list {
+//     padding-inline-start: 0;
 
-    & .task-list-item.is-checked .task-list-item-checkbox { margin-left: 0; }
-}
+//     & .task-list-item.is-checked .task-list-item-checkbox { margin-left: 0; }
+// }
 .is-live-preview .block-language-dataviewjs > :is(p, span) {
     line-height: var(--lh);
 }
@@ -90,7 +93,7 @@ body {
     }
 
     &.inline-field-value { background-color: var(--td); }
-    &.inline-field-value a.tag:first-child { display: none; }
+    &.inline-field-value a.tag:first-child:empty { display: none; }
 } 
 
 //Remove Duplicate Tag in (field)
@@ -101,10 +104,10 @@ body {
 body:not(.list-default-bullet) {
     & .dataview.dataview {
         & ul > li {
-            &:not(.task-list-item)::before,
-            & .task-list-item-checkbox { margin-left: 0; }
+            // &:not(.task-list-item)::before,
+            // & .task-list-item-checkbox { margin-left: 0; }
             
-            & ul::before { left: .4em; } //List Line
+            // & ul::before { left: .4em; } //List Line
         }
         & div div > ul { padding-inline-start: 0; }
         

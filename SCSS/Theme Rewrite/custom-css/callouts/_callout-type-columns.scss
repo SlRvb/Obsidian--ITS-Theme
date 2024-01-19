@@ -89,4 +89,12 @@
             & .list-bullet::after { position: relative; }
         }
     }
+    &[data-callout-metadata~="list-x"] > .callout-content {
+        grid-template-columns: unset; 
+
+        & > ul {
+            display: grid;
+            grid-template-columns: repeat(var(--columns), 1fr);
+        }
+    }
 }

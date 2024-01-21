@@ -1,7 +1,7 @@
 body {
     --hr-icon-symbol: "\e817";
     --hr-icon-font: var(--its);
-    --hr-icon-background: transparent;
+    --hr-icon-background: var(--note);
     --hr-icon-padding-x: 4px;
     
     --hr-icon-color: var(--headers);

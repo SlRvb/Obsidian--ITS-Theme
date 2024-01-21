@@ -40,6 +40,7 @@ body {
     --nav-indentation-guide-color: var(--lines);
 
     --folder-weight: 700;
+    --folder-weight-hover: var(--folder-weight);
 }
 
 // Hide Collapse Indicator
@@ -48,6 +49,8 @@ body {
 
 //Thick Folder Text
 .nav-folder-title { --nav-item-weight: var(--folder-weight); }
+.nav-folder-title:hover 
+{ --nav-item-weight-hover: var(--folder-weight-hover); }
 
 //Fix File Explorer
 .nav-folder.mod-root > .nav-folder-title:hover 

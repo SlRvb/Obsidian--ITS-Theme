@@ -306,6 +306,21 @@ settings:
         id: file-explorer-flat
         type: class-toggle
     -
+        title: Display Folder Arrow On Hover
+        id: folder-arrow
+        type: class-toggle
+        default: false
+    - 
+        title: Disable Bold Folder & Hover
+        description: Remove bold styling from folders & hovering on items
+        id: file-explorer-boldless
+        type: class-toggle
+    - 
+        title: Disable Bold on Hover
+        description: Remove bold styling from hovering on items
+        id: file-explorer-boldless-hover
+        type: class-toggle
+    -
         title: Folder Icon
         id: folder-icon
         type: variable-text
@@ -320,11 +335,6 @@ settings:
         id: file-icon
         type: variable-text
         default: '"\e800"'
-    -
-        title: Display Folder Arrow On Hover
-        id: folder-arrow
-        type: class-toggle
-        default: true
     -
         title: File Font Family
         id: file-f

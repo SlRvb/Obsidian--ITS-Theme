@@ -312,9 +312,14 @@ settings:
         type: class-toggle
         default: false
     - 
-        title: Disable Bold File Explorer
+        title: Disable Bold Folder & Hover 
         description: Remove bold styling from folders & hovering on items
         id: file-explorer-boldless
+        type: class-toggle
+    - 
+        title: Disable Bold on Hover
+        description: Remove bold styling from hovering on items
+        id: file-explorer-boldless-hover
         type: class-toggle
     -
         title: Folder Icon
@@ -331,7 +336,7 @@ settings:
         id: file-icon
         type: variable-text
         default: '"\e800"'
-        -
+    -
         title: File Font Family
         id: file-f
         type: variable-text
@@ -3541,6 +3546,7 @@ body {
   --nav-indentation-guide-width: 2px;
   --nav-indentation-guide-color: var(--lines);
   --folder-weight: 700;
+  --folder-weight-hover: var(--folder-weight);
 }
 
 .nav-folder-collapse-indicator,
@@ -3550,6 +3556,10 @@ body {
 
 .nav-folder-title {
   --nav-item-weight: var(--folder-weight);
+}
+
+.nav-folder-title:hover {
+  --nav-item-weight-hover: var(--folder-weight-hover);
 }
 
 .nav-folder.mod-root > .nav-folder-title:hover {
@@ -6669,6 +6679,15 @@ body.folder-arrow .nav-files-container .tree-item-self.is-active .collapse-icon 
 }
 body.folder-arrow .nav-files-container .nav-folder-children .nav-folder-title:hover .nav-folder-title-content::before {
   margin-left: var(--file-icon-margin);
+}
+
+.file-explorer-boldless {
+  --folder-weight: 500;
+  --nav-item-weight-hover: 500;
+}
+
+.file-explorer-boldless-hover {
+  --nav-item-weight-hover: inherit;
 }
 
 body {

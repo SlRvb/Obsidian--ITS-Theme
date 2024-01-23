@@ -61,11 +61,12 @@
 }
 
 .callout:is([data-callout-metadata~=n-th],
-[data-callout-metadata~=no-table-header]) .callout-content > table {
+[data-callout-metadata~=no-table-header]) > .callout-content table {
   margin-bottom: 5px;
 }
 .callout:is([data-callout-metadata~=n-th],
-[data-callout-metadata~=no-table-header]) .callout-content > table th {
+[data-callout-metadata~=no-table-header]) > .callout-content table thead, .callout:is([data-callout-metadata~=n-th],
+[data-callout-metadata~=no-table-header]) > .callout-content table th {
   display: none;
 }
 
@@ -80,6 +81,12 @@
 
 .callout[data-callout-metadata~=table-cell-top] table td {
   vertical-align: top;
+}
+
+.callout.callout:is([data-callout-metadata~=t-nmg],
+[data-callout-metadata~=table-no-margin]) table {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .callout[data-callout-metadata~=embed] .callout-content, .callout[data-callout-metadata~=embed] > .callout-content > p {
@@ -713,6 +720,7 @@
 }
 .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table {
   display: grid;
+  margin-block-start: 0;
 }
 .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table :is(td, tr) {
   border: 0;
@@ -1100,6 +1108,13 @@
 }
 .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul .list-bullet::after {
   position: relative;
+}
+.callout[data-callout*=column][data-callout-metadata~=list-x] > .callout-content {
+  grid-template-columns: unset;
+}
+.callout[data-callout*=column][data-callout-metadata~=list-x] > .callout-content > ul {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
 }
 
 /*Kanban*/

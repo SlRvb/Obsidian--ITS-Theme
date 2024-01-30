@@ -1,8 +1,15 @@
 /*Bolded Right Side Table*/
 .table.table {
-    & td:nth-child(1) { font-weight: 900; }
+    --table-style-column-header-background: var(--outer-bar);
+    --table-style-column-header-bold-weight: var(--bold-weight);
+    --table-style-column-header-bold-color: var(--bold-color);
+
+    & td:nth-child(1) { 
+        font-weight: var(--table-style-column-header-bold-weight); 
+        color: var(--table-style-column-header-bold-color);
+    }
     & tr:not(:hover) td:nth-child(1) {
-        background-color: var(--outer-bar);
+        background-color: var(--table-style-column-header-background);
     }
 } 
 

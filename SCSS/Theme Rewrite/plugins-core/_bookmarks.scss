@@ -7,12 +7,24 @@
         --nav-item-weight: 900;
     }
     &.tree-item-self { 
-        gap: 4px; 
+        gap: 2px; 
         padding: var(--explorer-item-padding);
         
-        & > .tree-item-icon { margin-left: -7px; }
     }
+    & .tree-item-icon { margin-left: -5px; }
 }
 .workspace-leaf-content[data-type=bookmarks] .view-content {
     padding: 0 var(--size-4-2);
+    --bookmark-group-weight: 900;
+
+    & .collapse-icon + .tree-item-inner {
+        font-weight: var(--bookmark-group-weight);
+    }
+}
+
+.is-mobile .bookmark {
+    & + .tree-item-children { 
+        --nav-item-children-margin-left: 8px; 
+        --nav-item-children-padding-left: 10px;
+    }
 }

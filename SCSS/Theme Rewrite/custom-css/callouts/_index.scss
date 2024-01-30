@@ -5,12 +5,14 @@
 @use 'callout-text-adj';
 
 @use 'callout-type-infobox';
+@use 'callout-type-statblocks';
 
 @use 'callout-type-img-grids';
 @use 'callout-type-cards';
 @use 'callout-type-captions';
 @use 'callout-type-recite';
 @use 'callout-type-table';
+@use 'callout-type-blank';
 
 @use 'callout-type-metadata';
 @use 'callout-type-columns';
@@ -18,6 +20,7 @@
 @use 'callout-type-timeline';
 
 @use 'callout-type-kith';
+@use 'callout-type-checks';
 
 
 @use 'callout-type-asides';
@@ -42,3 +45,9 @@
 
 //Fix Table Editor Issues for Cards
 .markdown-rendered table tr { height: unset; }
+
+.callout.callout.callout {
+    --callout-blend-mode: normal;
+    
+    margin: var(--callout-margin);
+}

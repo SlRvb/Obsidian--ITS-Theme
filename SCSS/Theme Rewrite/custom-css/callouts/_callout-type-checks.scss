@@ -1,0 +1,30 @@
+
+.callout[data-callout="checks"] { 
+    --callout-color: unset;
+    --callout-icon: "check-square"; 
+    --callout-padding: 0px;
+    
+    --root-list-spacing: 0;
+    
+    & ul.contains-task-list {
+        display: flex;
+        flex-direction: row;
+        padding-inline-start: 0;
+        
+        & li.task-list-item { margin-right: 10px; }
+        & li p { margin-block-start: 0; }
+    }
+    & > .callout-content > ul:not(.contains-task-list) 
+    { padding-inline-start: 0; }
+    
+    & ul:not(.contains-task-list) li {
+        & > .list-bullet { display: none; }
+        
+        --bullet: 0;
+        --indentation-guide-color: transparent;
+        margin-right: 10px;
+    }
+    & ul > li .task-list-item-checkbox { margin-inline-start: 0; }
+}
+
+// .callout[data-callout*="checks"] ul > li > input { margin-right: 0; }

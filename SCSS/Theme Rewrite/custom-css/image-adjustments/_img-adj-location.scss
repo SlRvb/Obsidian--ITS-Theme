@@ -18,7 +18,7 @@ img:is([alt*="ctr"], [alt*="center"]) {
 
 
 /*Left & Right*/
-:not(.is-live-preview) {
+:not(.markdown-rendered) {
     img,
     .image-embed {
         &:is([alt*="left"], [alt*="locl"]),

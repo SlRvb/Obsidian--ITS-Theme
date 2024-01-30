@@ -210,17 +210,17 @@ img:is([alt*=ctr], [alt*=center]) {
 }
 
 /*Left & Right*/
-:not(.is-live-preview) img:is([alt*=left], [alt*=locl]), :not(.is-live-preview) img[src*="#locl"] img,
-:not(.is-live-preview) .image-embed:is([alt*=left], [alt*=locl]),
-:not(.is-live-preview) .image-embed[src*="#locl"] img {
+:not(.markdown-rendered) img:is([alt*=left], [alt*=locl]), :not(.markdown-rendered) img[src*="#locl"] img,
+:not(.markdown-rendered) .image-embed:is([alt*=left], [alt*=locl]),
+:not(.markdown-rendered) .image-embed[src*="#locl"] img {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-:not(.is-live-preview) img:is([alt*=right], [alt*=locr]), :not(.is-live-preview) img[src*="#locr"] img,
-:not(.is-live-preview) .image-embed:is([alt*=right], [alt*=locr]),
-:not(.is-live-preview) .image-embed[src*="#locr"] img {
+:not(.markdown-rendered) img:is([alt*=right], [alt*=locr]), :not(.markdown-rendered) img[src*="#locr"] img,
+:not(.markdown-rendered) .image-embed:is([alt*=right], [alt*=locr]),
+:not(.markdown-rendered) .image-embed[src*="#locr"] img {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
@@ -471,7 +471,7 @@ img[alt~=sprf] {
 }
 
 /*Image Shapes*/
-img[alt*=circle] {
+img[alt][alt*=circle] {
   border-radius: 50%;
 }
 

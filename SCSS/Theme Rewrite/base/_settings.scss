@@ -130,6 +130,9 @@ button.mod-cta:hover {
 .mod-community-modal .modal-sidebar button.clickable-icon:hover 
 { color: var(--text-dl); }
 .community-modal-info { padding: var(--file-margins); }
+.community-modal-search-results-wrapper {
+    overflow-x: hidden;
+}
 
 
 //Fix Dropdown Menu Styling

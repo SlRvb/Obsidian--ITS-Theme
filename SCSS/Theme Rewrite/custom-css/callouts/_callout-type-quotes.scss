@@ -21,14 +21,15 @@ body:not(.default-callout-quote) .callout.callout[data-callout="quote"] {
             &:last-child { margin-block-end: 0; }
         }
     }
-    & > .callout-icon { height: 0; width: 0; }
     & > .callout-title {
         background: transparent;
         text-align: right;
         padding-top: 5px;
         padding-right: 0;
-
+        
         display: block;
+        
+        & > .callout-icon { height: 0; width: 0; }
     }
     & > .callout-title-inner::before { content: "~ "; }
 }

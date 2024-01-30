@@ -1,6 +1,6 @@
 
 /*Image Shapes*/
-img[alt*="circle"] {
+img[alt][alt*="circle"] {
     border-radius: 50%;
 }
 

@@ -2213,6 +2213,9 @@ body.theme-dark {
   padding-left: 35px;
   margin-left: -15px;
 }
+.published-container .callout ul ul.has-list-bullet {
+  margin-left: unset;
+}
 .published-container .callout[data-callout=kanban] ul ul {
   border-left: unset;
   padding-left: 0;

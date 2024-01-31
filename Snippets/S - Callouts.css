@@ -1447,7 +1447,7 @@
   padding-inline-start: 0;
 }
 .callout[data-callout=checks] ul.contains-task-list li.task-list-item {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .callout[data-callout=checks] ul.contains-task-list li p {
   margin-block-start: 0;
@@ -1464,7 +1464,7 @@
   display: none;
 }
 .callout[data-callout=checks] ul > li .task-list-item-checkbox {
-  margin-inline-start: 0;
+  margin-inline-start: 0 !important;
 }
 
 /* Asides */

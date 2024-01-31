@@ -11,7 +11,7 @@
         flex-direction: row;
         padding-inline-start: 0;
         
-        & li.task-list-item { margin-right: 10px; }
+        & li.task-list-item { margin-right: 5px; }
         & li p { margin-block-start: 0; }
     }
     & > .callout-content > ul:not(.contains-task-list) 
@@ -24,7 +24,8 @@
         --indentation-guide-color: transparent;
         margin-right: 10px;
     }
-    & ul > li .task-list-item-checkbox { margin-inline-start: 0; }
+    & ul > li .task-list-item-checkbox { margin-inline-start: 0 !important; }
+    //Tasks plugin override
 }
 
 // .callout[data-callout*="checks"] ul > li > input { margin-right: 0; }

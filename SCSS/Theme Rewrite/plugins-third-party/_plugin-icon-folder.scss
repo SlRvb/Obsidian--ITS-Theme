@@ -11,7 +11,7 @@
         width: var(--nav-item-size); 
         color: var(--folder-open);
     }
-
+        
     & + .nav-folder-title-content,
     & + .nav-file-title-content 
     { 
@@ -25,3 +25,4 @@
         }
     }
 }
+.is-collapsed + div.iconize-icon.iconize-icon > svg { color: var(--folder); }

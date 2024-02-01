@@ -901,7 +901,7 @@ settings:
 		collapsed: true
     -
         title: Heading Top Spacing
-        description: Adjust header spacing above the header
+        description: Adjust header spacing above the header. (Will not apply in LP)
         id: heading-spacing-top
         type: variable-number-slider
         default: 10
@@ -911,7 +911,7 @@ settings:
         step: 10
     -
         title: Heading Bottom Spacing
-        description: Adjust header spacing below the header
+        description: Adjust header spacing below the header. (Will not apply in LP)
         id: heading-spacing-bottom
         type: variable-number-slider
         default: 10

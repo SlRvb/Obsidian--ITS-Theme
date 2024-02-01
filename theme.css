@@ -902,7 +902,7 @@ settings:
 		collapsed: true
     -
         title: Heading Top Spacing
-        description: Adjust header spacing above the header
+        description: Adjust header spacing above the header. (Will not apply in LP)
         id: heading-spacing-top
         type: variable-number-slider
         default: 10
@@ -912,7 +912,7 @@ settings:
         step: 10
     -
         title: Heading Bottom Spacing
-        description: Adjust header spacing below the header
+        description: Adjust header spacing below the header. (Will not apply in LP)
         id: heading-spacing-bottom
         type: variable-number-slider
         default: 10
@@ -4109,7 +4109,7 @@ h1,
   padding: var(--h1-padding);
   border: var(--h1-border-width) solid;
   border-radius: var(--radius-m);
-  margin-top: var(--heading-spacing-top) !important;
+  margin-top: var(--heading-spacing-top);
   margin-block-start: var(--heading-spacing-top);
   margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
@@ -4125,7 +4125,7 @@ h2,
   padding: var(--h2-padding);
   border: var(--h2-border-width) solid;
   border-radius: var(--radius-m);
-  margin-top: var(--heading-spacing-top) !important;
+  margin-top: var(--heading-spacing-top);
   margin-block-start: var(--heading-spacing-top);
   margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
@@ -4141,7 +4141,7 @@ h3,
   padding: var(--h3-padding);
   border: var(--h3-border-width) solid;
   border-radius: var(--radius-m);
-  margin-top: var(--heading-spacing-top) !important;
+  margin-top: var(--heading-spacing-top);
   margin-block-start: var(--heading-spacing-top);
   margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
@@ -4157,7 +4157,7 @@ h4,
   padding: var(--h4-padding);
   border: var(--h4-border-width) solid;
   border-radius: var(--radius-m);
-  margin-top: var(--heading-spacing-top) !important;
+  margin-top: var(--heading-spacing-top);
   margin-block-start: var(--heading-spacing-top);
   margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
@@ -4173,7 +4173,7 @@ h5,
   padding: var(--h5-padding);
   border: var(--h5-border-width) solid;
   border-radius: var(--radius-m);
-  margin-top: var(--heading-spacing-top) !important;
+  margin-top: var(--heading-spacing-top);
   margin-block-start: var(--heading-spacing-top);
   margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
@@ -4189,7 +4189,7 @@ h6,
   padding: var(--h6-padding);
   border: var(--h6-border-width) solid;
   border-radius: var(--radius-m);
-  margin-top: var(--heading-spacing-top) !important;
+  margin-top: var(--heading-spacing-top);
   margin-block-start: var(--heading-spacing-top);
   margin-block-end: var(--heading-spacing-bottom);
   word-wrap: normal;
@@ -5732,6 +5732,10 @@ body:is(.theme-dark, .theme-light) {
   content: "";
   width: unset;
   margin-right: unset;
+}
+
+.is-collapsed + div.iconize-icon.iconize-icon > svg {
+  color: var(--folder);
 }
 
 body {

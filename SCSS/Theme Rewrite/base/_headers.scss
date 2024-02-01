@@ -269,7 +269,8 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
     padding: map-get($set, padding);
     border: map-get($set, border-width) solid map-get($set, border);
     border-radius: var(--radius-m);
-    margin-top: var(--heading-spacing-top) !important;
+    //margin-top: var(--heading-spacing-top) !important;
+    margin-top: var(--heading-spacing-top);
     margin-block-start: var(--heading-spacing-top);
     margin-block-end: var(--heading-spacing-bottom);
 

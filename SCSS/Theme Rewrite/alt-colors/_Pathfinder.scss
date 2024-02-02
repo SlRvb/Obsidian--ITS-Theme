@@ -1,4 +1,6 @@
-.pathfinder.pathfinder {
+.pathfinder.pathfinder,
+.pathfinder-remaster.pathfinder-remaster 
+{
 	--font: "Taroca";
 	--header-weight: 100;
 
@@ -60,7 +62,10 @@
 }
 .theme-dark {
     & .pathfinder,
-    &.pathfinder {
+    &.pathfinder,
+    & .pathfinder-remaster,
+    &.pathfinder-remaster
+    {
     // --outer-bar: ;
     // --dark-sidebar: ;
     // --side-bar: ;
@@ -140,7 +145,10 @@
 
 .theme-light {
     & .pathfinder,
-    &.pathfinder {
+    &.pathfinder
+    & .pathfinder-remaster,
+    &.pathfinder-remaster
+    {
     /*Colors*/
     --outer-bar: #e2ded8;
     --dark-sidebar: #e2ded8;
@@ -152,7 +160,7 @@
     --accent-color: 94, 0, 0;
     --accent: #800008;
     --lite-accent: #e58000;
-    --dark-accent: #800008;
+    --dark-accent: var(--accent);
     --deep-dark-accent: #5e0000;
     --accent2: #461413;
     --accent2-lite: #0f5cbc;
@@ -167,8 +175,8 @@
 
     --text: #393636;
     --soft-text: #5C1C16;
-    --code-text: #5C1C16;
-    --i-at: #5C1C16;
+    --code-text: var(--soft-text);
+    --i-at: var(--soft-text);
     --footnote: #676767;
     --inactive: #cdab9a;
     // --tag-text: ;
@@ -183,16 +191,16 @@
     // --code-bg: ;
     --embed-bg: #E0DACB;
     --aside-bg: #E0DACB;
-    --tag: #5e0000;
+    --tag: var(--deep-dark-accent);
     // --bttn: ;
     
-    --th: #5e0000;
+    --th: var(--deep-dark-accent);
     // --table-header-text: ;
     --td: #E0DACB99;
     
     --header-border-line-color: black;
     --table: #00000060;
-    --hr: #5c1c16;
+    --hr: var(--soft-text);
     --lines: #b6a697;
     --outline: rgba(124, 49, 3, 0.4);
     
@@ -229,3 +237,46 @@
     }
     & .cm-line:not(.cm-active) hr { margin-top: -25px; }
 }
+
+
+
+
+
+/* Pathfinder Remaster */
+// .theme-dark {
+//     & .pathfinder-remaster,
+//     &.pathfinder-remaster {
+//         --headers: #2f8b62;
+//         --accent: #3b7b5b;
+//         --dark-accent: #253f32;
+//         --deep-dark-accent: var(--headers);
+        
+//         --th: var(--deep-dark-accent);
+//         --lines: #304c40;
+
+//         --theme-rainbow-1: var(--headers);
+//         --theme-rainbow-2: var(--h2-color);
+//         --theme-rainbow-3: var(--h3-color);
+//         --theme-rainbow-4: var(--h4-color);
+//     }
+// }
+
+// .theme-light {
+//     & .pathfinder-remaster,
+//     &.pathfinder-remaster {
+//         --headers: #002a17;
+
+//         --h2-color: #4e1b0e;
+//         --h3-color: #025d4e;
+//         --h4-color: #000000;
+//         --deep-dark-accent: var(--headers);
+//         --accent2-lite: #15a38b;
+        
+//         --th: var(--deep-dark-accent);
+
+//         --theme-rainbow-1: var(--headers);
+//         --theme-rainbow-2: var(--h2-color);
+//         --theme-rainbow-3: var(--h3-color);
+//         --theme-rainbow-4: var(--h4-color);
+//     }
+// }

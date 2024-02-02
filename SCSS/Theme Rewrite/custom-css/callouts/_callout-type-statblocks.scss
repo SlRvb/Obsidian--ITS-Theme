@@ -1,6 +1,6 @@
 
 
-.callout.callout[data-callout=statblock] {
+.callout.callout[data-callout=statblocks] {
     --callout-color: unset;
     --callout-icon: swords;
 
@@ -29,7 +29,7 @@
     
     //Element Styling
     & h1 { width: auto; }
-    & img { 
+    & img:not([class]) { 
         box-shadow: 0 0 0 4px var(--headers, var(--background-modifier-border)); 
         margin-right: 4px;
     }

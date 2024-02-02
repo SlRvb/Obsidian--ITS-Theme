@@ -4815,6 +4815,7 @@ body {
 
 .callout .callout {
   --callout-margin: 0;
+  --callout-padding: var(--size-4-3) var(--size-4-4);
 }
 
 .callout-icon {
@@ -9576,6 +9577,10 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   box-shadow: none;
   border: 0;
   padding: 0;
+}
+.callout[data-callout*=column]:is([data-callout-metadata~=slim-margins],
+[data-callout-metadata~=s-mg]) > .callout-content {
+  gap: 2px;
 }
 .callout[data-callout*=column][data-callout-metadata~="3"] .callout-content {
   --columns: 3;

@@ -8,7 +8,10 @@ body {
     
     margin: var(--callout-margin);
 }
-.callout .callout { --callout-margin: 0; }
+.callout .callout { 
+    --callout-margin: 0; 
+    --callout-padding: var(--size-4-3) var(--size-4-4);
+}
 
 //Fix Callout icon Alignment
 .callout-icon { align-self: center;}

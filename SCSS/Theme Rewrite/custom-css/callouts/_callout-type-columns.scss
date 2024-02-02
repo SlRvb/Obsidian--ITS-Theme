@@ -23,6 +23,12 @@
         border: 0;
         padding: 0;
     }
+    &:is(
+        [data-callout-metadata~="slim-margins"],
+        [data-callout-metadata~="s-mg"]
+    ) > .callout-content 
+    { gap: 2px; }
+
     @for $i from 3 through 9 {
         &[data-callout-metadata~="#{$i}"] .callout-content {
             --columns: #{$i};

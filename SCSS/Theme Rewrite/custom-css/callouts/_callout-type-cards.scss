@@ -7,6 +7,8 @@
     --callout-content-padding: 0px;
     --callout-blend-mode: normal;
 
+    --callout-cards-columns: 3;
+
     box-shadow: none;
     border: 0;
     width: auto;
@@ -37,7 +39,9 @@
 
     
     // Flex
-    &[data-callout-metadata~="flex"] > .callout-content {
+    &[data-callout-metadata~="flex"] > .callout-content, 
+    &[data-callout-metadata~="flex"] .dataview.table-view-table tbody
+    {
         gap: unset;
         grid-template-columns: none;
 
@@ -52,86 +56,99 @@
             //background: transparent;
         }
     }
-}
 
-/* Dataview Cards */
+    // Dataview
+    //Table
+    &[data-callout-metadata~="dataview"] {
+        // Undo General Cards Grid Styling
+        --callout-content-padding: 0;
+        // --callout-margin: 0;
+        // --callout-cards-outline: ;
 
-//Table
-.callout[data-callout~="cards"][data-callout-metadata~="dataview"] {
-    // Undo General Cards Grid Styling
-    --callout-content-padding: 0;
-    // --callout-margin: 0;
-    // --callout-cards-outline: ;
-
-    & .callout-content {
-        display: unset;
-        grid-template-columns: unset;
-    }
-    & br { display: block; }
-
-
-    & .block-language-dataview { padding: 5px; }
-    & .dataview.table-view-table {
-        display: grid;
-        margin-block-start: 0;
-
-        // Undo Table Cell Styling
-        & :is(td, tr) {
-            border: 0;
-            background: transparent;
-            padding: 0;
+        & .callout-content {
+            display: unset;
+            grid-template-columns: unset;
         }
-        // Hide Background in dv Table
-        & strong { background: transparent; }
-    }
-    // Restyle Table Headers
-    & .table-view-thead {
-        & th {
-            border: 0;
-            background-color: transparent;
-        }
-        & tr { display: none; }
-    }
+        & br { display: block; }
+        
 
-    // Display cells as grid
-    & .dataview.table-view-table tbody {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-
-        & tr { 
+        & .block-language-dataview { padding: 5px; }
+        & .dataview.table-view-table {
             display: grid;
-            align-content: flex-start;
-            margin: 0;
-            padding: 10px;
-            // flex-direction: column;
+            margin-block-start: 0;
 
-            // background-color: var(--aside-bg);
-            border: 2px solid var(--outline, var(--background-modifier-box-shadow));
-            box-shadow: var(--shadow-ml, var(--input-shadow));
+            // Undo Table Cell Styling
+            & :is(td, tr) {
+                border: 0;
+                background: transparent;
+                padding: 0;
+            }
+            // Hide Background in dv Table
+            & strong { background: transparent; }
         }
+        // Restyle Table Headers
+        & .table-view-thead {
+            & th {
+                border: 0;
+                background-color: transparent;
+            }
+            & tr { display: none; }
+        }
+
+        // Display cells as grid
+        & .dataview.table-view-table tbody {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+
+            & tr { 
+                display: grid;
+                align-content: flex-start;
+                margin: 0;
+                padding: 10px;
+                // flex-direction: column;
+
+                // background-color: var(--aside-bg);
+                border: 2px solid var(--outline, var(--background-modifier-box-shadow));
+                box-shadow: var(--shadow-ml, var(--input-shadow));
+            }
+        }
+
+
+        //Image Sizing
+        & img:not(.link-favicon) { 
+            width: 100%; 
+            object-fit: cover 
+        }
+
+        &[data-callout-metadata~="img-micro"]       img { height: var(--micro);     }
+        &[data-callout-metadata~="img-tiny"]        img { height: var(--tiny);      }
+        &[data-callout-metadata~="img-small"]       img { height: var(--small);     }
+        &[data-callout-metadata~="img-small-med"]   img { height: var(--small-med); }
+        &[data-callout-metadata~="img-med-small"]   img { height: var(--med-small); }
+        &[data-callout-metadata~="img-medium"]      img { height: var(--medium);    }
+        &[data-callout-metadata~="img-med-tall"]    img { height: var(--med-tall);  }
+        &[data-callout-metadata~="img-tall"]        img { height: var(--tall);      }
     }
-}
 
 
-//List
-.callout[data-callout~="cards"][data-callout-metadata~="dvl"] {
-    & .callout-content { display: block; }
-    & br { display: unset; }
+    //List
+    &[data-callout-metadata~="dvl"] {
+        & .callout-content { display: block; }
+        & br { display: unset; }
 
-    & .block-language-dataviewjs .dataview-result-list-li,
-    & .list-view-ul li {
-        padding: 10px;
-        background-color: var(--outer-bar, var(--background-secondary));
-        box-shadow: var(--shadow-s, var(--input-shadow));
-        margin-bottom: 5px;
-    }
-    & .dataview.list-view-ul li::before { margin-left: -27px; }
-    & ul { padding-inline-start: unset; }
-} 
+        & .block-language-dataviewjs .dataview-result-list-li,
+        & .list-view-ul li {
+            padding: 10px;
+            background-color: var(--outer-bar, var(--background-secondary));
+            box-shadow: var(--shadow-s, var(--input-shadow));
+            margin-bottom: 5px;
+        }
+        & .dataview.list-view-ul li::before { margin-left: -27px; }
+        & ul { padding-inline-start: unset; }
+    } 
 
-// Columns
-.callout[data-callout~="cards"]{
+
     // Columns
     @for $i from 1 through  9 {
         &[data-callout-metadata~="#{$i}"] :is(
@@ -141,19 +158,16 @@
     }
 }
 
-//Image Sizing
-.callout[data-callout~="cards"][data-callout-metadata~="dataview"] {
-    & img:not(.link-favicon) { 
-        width: 100%; 
-        object-fit: cover 
-    }
 
-    &[data-callout-metadata~="img-micro"]       img { height: var(--micro);     }
-    &[data-callout-metadata~="img-tiny"]        img { height: var(--tiny);      }
-    &[data-callout-metadata~="img-small"]       img { height: var(--small);     }
-    &[data-callout-metadata~="img-small-med"]   img { height: var(--small-med); }
-    &[data-callout-metadata~="img-med-small"]   img { height: var(--med-small); }
-    &[data-callout-metadata~="img-medium"]      img { height: var(--medium);    }
-    &[data-callout-metadata~="img-med-tall"]    img { height: var(--med-tall);  }
-    &[data-callout-metadata~="img-tall"]        img { height: var(--tall);      }
+// Sizing Fixes for Note/Device sizes
+.view-content > div:is(.markdown-source-view, .markdown-reading-view) > div 
+{ container: note / inline-size; }
+
+@container note (max-width: 700px) {
+    .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody 
+    { grid-template-columns: repeat(2, 1fr); }
+}
+@container note (max-width: 400px) {
+    .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody 
+    { grid-template-columns: repeat(1, 1fr); }
 }

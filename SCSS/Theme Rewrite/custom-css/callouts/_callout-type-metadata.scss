@@ -1,6 +1,6 @@
 
 /* Metadata */
-.callout.callout[data-callout~="Metadata" i] {
+body:not(.callout-no-metadata) .callout.callout[data-callout~="Metadata" i] {
     --callout-icon: layers;
     --callout-color: 82, 139, 212;
     --callout-border-width: 2px;

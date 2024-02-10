@@ -276,5 +276,12 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
 
     word-wrap: normal;
     word-break: keep-all;
+
+    //Embed In Header Fix
+    & > .markdown-embed .markdown-rendered {
+        font-weight: 400;
+        font-family: var(--font-text);
+    }
     }
 }
+

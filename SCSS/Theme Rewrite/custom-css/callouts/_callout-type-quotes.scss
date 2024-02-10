@@ -1,4 +1,4 @@
-body:not(.default-callout-quote) .callout.callout[data-callout="quote"] {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout="quote"] {
 
     --callout-icon: "";
     --callout-color: var(--color-accent);

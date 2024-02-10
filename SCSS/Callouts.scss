@@ -24,6 +24,21 @@ settings:
             -
                 label: Callout Alternate Line Styling
                 value: callout-alternate-line
+    -
+        title: Remove Callout Styling
+        description: Remove certain callouts to use your own styling
+        id: remove-callout-style
+        type: heading
+        level: 1
+        collapsed: true           
+    - 
+        title: Remove Metadata Callout Styling
+        id: callout-no-metadata
+        type: class-toggle
+    - 
+        title: Remove Quote Callout Styling
+        id: callout-no-quote
+        type: class-toggle
     #- 
     #    title: Center Callout Titles
     #    id: co-ttl-ctr
@@ -33,4 +48,5 @@ settings:
 
 
 //@use 'Insiders ITS Theme/Custom CSS/CCSS-SlRvb - Callouts' as CO;
-@use 'Theme Rewrite/custom-css/callouts'
+@use 'Theme Rewrite/custom-css/callouts';
+@use 'Theme Rewrite/custom-css/callouts/callout-theme-fixes';

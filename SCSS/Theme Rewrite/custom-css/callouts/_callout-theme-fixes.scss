@@ -1,0 +1,23 @@
+.callout {
+    --callout-margin: 1em 0;
+}
+
+
+//Minimal Outline Fixes
+.callouts-outlined {
+    & .callout.callout:is(
+        [data-callout="Metadata" i],
+        [data-callout="Timeline" i],
+        [data-callout="Recite" i],
+        [data-callout="Columns" i],
+        [data-callout="Infobox" i],
+        [data-callout="Quote" i]
+    ) > .callout-title { 
+        display: flex;
+        margin: unset;
+        padding: var(--callout-title-padding);
+        width: unset;
+        
+        & > .callout-icon { position: relative; }
+    }
+}

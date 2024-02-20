@@ -75,7 +75,6 @@
     // Alt Styling
     &[data-callout-metadata~="full"] { max-width: 100%; }
     
-    
     &[data-callout-metadata~="columns"] {
         max-width: 100%;
         
@@ -93,5 +92,18 @@
             // & > .callout .callout-content { overflow-x: hidden; }
         }
     }
+
+
+
+
+    // Game Styling
+    //Dungeons & Dragons
+    // &:is(
+    //     [data-callout-metadata~=style-dungeonsanddragons],
+    //     [data-callout-metadata~=style-dnd]
+    // ) {
+
+    // }
+
 }
 

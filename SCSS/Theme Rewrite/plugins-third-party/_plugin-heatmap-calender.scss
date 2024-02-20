@@ -1,13 +1,22 @@
 /* Heatmap Calendar Fix */
 .heatmap-calendar-graph {
-  & ul li {
+  --heatmap-background: var(--outer-bar);
+  --heatmap-today-border-color: var(--accent);
+  --heatmap-today-border-width: 1px;
+  
+  
+  --root-list-spacing: 0;
+  --list-indent: 0;
+  & ul li { 
     border: 0;
-
     &::before { display: none; }
   }
 
-  --list-indent: 0;
-}
-.theme-dark .heatmap-calendar-boxes .isEmpty {
-  background-color: var(--inactive);
+  & .heatmap-calendar-boxes {
+    & .isEmpty { background-color: var(--heatmap-background); }
+    & .today { 
+      border-color: var(--heatmap-today-border-color);
+      border-width: var(--heatmap-today-border-width);
+    }
+  }
 }

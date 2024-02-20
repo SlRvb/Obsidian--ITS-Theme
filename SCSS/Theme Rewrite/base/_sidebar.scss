@@ -126,6 +126,10 @@
     color: var(--sidebar-tab-color-hover);
 }
 
+.nav-header .nav-action-button {
+    color: var(--soft-text);
+}
+
 //Fix Icon Height
 .side-dock-actions { margin-top: var(--header-height); }
 

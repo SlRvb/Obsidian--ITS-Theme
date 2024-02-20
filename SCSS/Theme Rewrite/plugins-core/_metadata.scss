@@ -21,8 +21,13 @@ body {
     --metadata-input-background-active: var(--td);
 }
 
+.metadata-container { transform: unset; }
+
 //Styling
-.metadata-properties-heading { display: block; }
+.metadata-properties-heading { 
+    display: block; 
+    margin-bottom: 0;
+}
 .metadata-properties-title {
     font-size: var(--metadata-title-size);
     color: var(--metadata-title-color);

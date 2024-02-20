@@ -545,6 +545,11 @@ settings:
         description: Minimalistic/distraction free layout design for notes.
         id: writing
         type: class-toggle
+    - 
+        title: Disable Source View Styling
+        description: Undo sizing/style fixes to make source view look more like plain text
+        id: disable-source-styling
+        type: class-toggle
     -
         title: Text
         id: ITS-Text

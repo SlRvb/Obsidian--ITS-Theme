@@ -2,8 +2,10 @@
     --tab-outline-width: 0;
     --titlebar-bubble-colors: #0b0f13;
     --titlebar-bubble-colors-inactive: #0b0f1350;
+    --titlebar-bubble-colors-inactive: var(--td);
     
     --tab-text-color-focused-active: var(--text);
+    --sidebar-tab-color-hover: var(--tab-text-color-focused-active);
     --tab-divider-color: transparent;
 }
 

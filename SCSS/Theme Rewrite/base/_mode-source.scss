@@ -1,4 +1,4 @@
-body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
+body:not(.disable-source-styling) .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
 
     //Tag Fixes
     --tag-background: transparent;

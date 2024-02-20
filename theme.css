@@ -546,6 +546,11 @@ settings:
         description: Minimalistic/distraction free layout design for notes.
         id: writing
         type: class-toggle
+    - 
+        title: Disable Source View Styling
+        description: Undo sizing/style fixes to make source view look more like plain text
+        id: disable-source-styling
+        type: class-toggle
     -
         title: Text
         id: ITS-Text
@@ -3360,6 +3365,10 @@ button.mod-cta:hover {
   color: var(--sidebar-tab-color-hover);
 }
 
+.nav-header .nav-action-button {
+  color: var(--soft-text);
+}
+
 .side-dock-actions {
   margin-top: var(--header-height);
 }
@@ -4251,7 +4260,7 @@ body {
   background-color: var(--pane-background);
 }
 
-body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
+body:not(.disable-source-styling) .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
   --tag-background: transparent;
   --tag-color: var(--tag-text);
   --tag-padding-x: 0;
@@ -4281,7 +4290,7 @@ body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
   --tag-border-radius: 0;
   --tag-border-width: 0;
 }
-body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) .cm-line.HyperMD-codeblock {
+body:not(.disable-source-styling) .cm-s-obsidian.markdown-source-view:not(.is-live-preview) .cm-line.HyperMD-codeblock {
   padding-left: 5px;
 }
 
@@ -4378,9 +4387,11 @@ a[href^=https]:hover,
   --collapse-icon-color-collapsed: var(--inactive);
   --indentation-guide-color: var(--lines);
   --indentation-guide-width: 2px;
+  --indentation-guide-width-active: var(--indentation-guide-width);
   --indentation-guide-color-active: var(--accent);
-  --indentation-guide-editing-indent: 2px;
-  --indentation-guide-lp-indent: calc(var(--checkbox-size) / 3);
+  --indentation-guide-source-indent: calc(var(--checkbox-size) / 3 * -1 + (var(--checkbox-size) / 2.5));
+  --indentation-guide-editing-indent: calc(var(--checkbox-size) / 3);
+  --indentation-guide-reading-indent: calc(var(--checkbox-size) / 3 * -1 - 2px);
   --list-color-1: var(--indentation-guide-color);
   --list-color-2: var(--indentation-guide-color);
   --list-color-3: var(--indentation-guide-color);
@@ -4448,7 +4459,7 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox {
   margin-right: -16px;
 }
 .is-live-preview.markdown-source-view.mod-cm6 .cm-hmd-list-indent .cm-indent::before {
-  transform: translateX(var(--indentation-guide-lp-indent));
+  transform: translateX(var(--indentation-guide-editing-indent));
 }
 .is-live-preview.markdown-source-view.mod-cm6 .task-list-label {
   margin-inline-start: 0;
@@ -4458,7 +4469,7 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox {
 }
 
 .markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
-  left: calc(var(--checkbox-size) * -1 + 1px);
+  transform: translateX(var(--indentation-guide-reading-indent));
 }
 
 ol > li::marker,
@@ -5327,8 +5338,13 @@ body {
   --metadata-input-background-active: var(--td);
 }
 
+.metadata-container {
+  transform: unset;
+}
+
 .metadata-properties-heading {
   display: block;
+  margin-bottom: 0;
 }
 
 .metadata-properties-title {
@@ -6508,6 +6524,10 @@ object.link-favicon {
 
 /* Heatmap Calendar Fix */
 .heatmap-calendar-graph {
+  --heatmap-background: var(--outer-bar);
+  --heatmap-today-border-color: var(--accent);
+  --heatmap-today-border-width: 1px;
+  --root-list-spacing: 0;
   --list-indent: 0;
 }
 .heatmap-calendar-graph ul li {
@@ -6516,9 +6536,12 @@ object.link-favicon {
 .heatmap-calendar-graph ul li::before {
   display: none;
 }
-
-.theme-dark .heatmap-calendar-boxes .isEmpty {
-  background-color: var(--inactive);
+.heatmap-calendar-graph .heatmap-calendar-boxes .isEmpty {
+  background-color: var(--heatmap-background);
+}
+.heatmap-calendar-graph .heatmap-calendar-boxes .today {
+  border-color: var(--heatmap-today-border-color);
+  border-width: var(--heatmap-today-border-width);
 }
 
 /*Emoji Toolbar*/
@@ -10818,7 +10841,9 @@ iframe {
   --tab-outline-width: 0;
   --titlebar-bubble-colors: #0b0f13;
   --titlebar-bubble-colors-inactive: #0b0f1350;
+  --titlebar-bubble-colors-inactive: var(--td);
   --tab-text-color-focused-active: var(--text);
+  --sidebar-tab-color-hover: var(--tab-text-color-focused-active);
   --tab-divider-color: transparent;
 }
 

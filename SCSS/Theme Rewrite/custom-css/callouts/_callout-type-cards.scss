@@ -152,15 +152,15 @@
     // Columns
     @for $i from 1 through  9 {
         &[data-callout-metadata~="#{$i}"] :is(
-            .dataview.table-view-table tbody, 
-            .callout-content
+            .dataview.dataview.table-view-table tbody, 
+            .callout-content.callout-content
         ) { grid-template-columns: repeat($i, 1fr); }
     }
 }
 
 
 // Sizing Fixes for Note/Device sizes
-.view-content > div:is(.markdown-source-view, .markdown-reading-view) > div 
+.view-content > div:is(.markdown-source-view, .markdown-reading-view) > div
 { container: note / inline-size; }
 
 @container note (max-width: 700px) {

@@ -4,6 +4,7 @@
 .callout[data-callout~="aside"] {
     --callout-icon: message-square;
     --callout-color: '';
+    --callout-margin: 0 -1.2em 0 5px;
 
     background-color: var(--aside-bg, var(--background-secondary));
     box-shadow: 
@@ -12,9 +13,6 @@
     
     float: right;
     position: relative;
-    margin: 0;
-    margin-right: -1.2em;
-    margin-left: 5px;
     
     max-width: 400px;
 

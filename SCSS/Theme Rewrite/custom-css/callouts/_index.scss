@@ -51,4 +51,6 @@
     --callout-blend-mode: normal;
     
     margin: var(--callout-margin);
+    z-index: 100;
+    position: relative;
 }

@@ -10244,7 +10244,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
 .callout.callout.callout {
   --callout-blend-mode: normal;
   margin: var(--callout-margin);
-  z-index: 100;
+  z-index: 1;
   position: relative;
 }
 
@@ -12507,7 +12507,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --theme-rainbow-5: var(--h5-color);
 }
 
-.theme-light .pathfinder, .theme-light.pathfinder .theme-light .pathfinder-remaster, .theme-light.pathfinder-remaster {
+.theme-light .pathfinder, .theme-light.pathfinder, .theme-light .pathfinder-remaster, .theme-light.pathfinder-remaster {
   /*Colors*/
   --outer-bar: #e2ded8;
   --dark-sidebar: #e2ded8;

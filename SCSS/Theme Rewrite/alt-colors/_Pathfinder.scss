@@ -243,40 +243,42 @@
 
 
 /* Pathfinder Remaster */
-// .theme-dark {
-//     & .pathfinder-remaster,
-//     &.pathfinder-remaster {
-//         --headers: #2f8b62;
-//         --accent: #3b7b5b;
-//         --dark-accent: #253f32;
-//         --deep-dark-accent: var(--headers);
+.theme-dark {
+    & .pathfinder-remaster,
+    &.pathfinder-remaster {
+        --headers: #2f8b62;
+        --accent: #3b7b5b;
+        --dark-accent: #253f32;
+        --deep-dark-accent: var(--headers);
         
-//         --th: var(--deep-dark-accent);
-//         --lines: #304c40;
+        --th: var(--deep-dark-accent);
+        --lines: #304c40;
 
-//         --theme-rainbow-1: var(--headers);
-//         --theme-rainbow-2: var(--h2-color);
-//         --theme-rainbow-3: var(--h3-color);
-//         --theme-rainbow-4: var(--h4-color);
-//     }
-// }
+        --theme-rainbow-1: var(--headers);
+        --theme-rainbow-2: var(--h2-color);
+        --theme-rainbow-3: var(--h3-color);
+        --theme-rainbow-4: var(--h4-color);
+    }
+}
 
-// .theme-light {
-//     & .pathfinder-remaster,
-//     &.pathfinder-remaster {
-//         --headers: #002a17;
+.theme-light {
+    & .pathfinder-remaster,
+    &.pathfinder-remaster {
+        --headers: #002a17; //rgb(0, 42, 23)
 
-//         --h2-color: #4e1b0e;
-//         --h3-color: #025d4e;
-//         --h4-color: #000000;
-//         --deep-dark-accent: var(--headers);
-//         --accent2-lite: #15a38b;
+        --h2-color: #4e1b0e;
+        --h3-color: #025d4e;
+        --h4-color: #000000;
+        --deep-dark-accent: var(--headers);
+        --accent2-lite: #15a38b;
         
-//         --th: var(--deep-dark-accent);
+        --th: var(--deep-dark-accent);
 
-//         --theme-rainbow-1: var(--headers);
-//         --theme-rainbow-2: var(--h2-color);
-//         --theme-rainbow-3: var(--h3-color);
-//         --theme-rainbow-4: var(--h4-color);
-//     }
-// }
+        --theme-rainbow-1: var(--headers);
+        --theme-rainbow-2: var(--h2-color);
+        --theme-rainbow-3: var(--h3-color);
+        --theme-rainbow-4: var(--h4-color);
+
+        --hr-image: "https://content.demiplane.com/compendium/pathfinder-2e/gm-core/css/Box-Decoration.png";
+    }
+}

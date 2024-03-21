@@ -3405,7 +3405,6 @@ body {
   background: var(--code-bg);
   box-shadow: 0 2px 0 var(--td);
   padding: 5px 10px;
-  line-height: var(--lh);
   margin-bottom: 0;
 }
 
@@ -4294,7 +4293,9 @@ body:not(.disable-source-styling) .cm-s-obsidian.markdown-source-view:not(.is-li
   padding-left: 5px;
 }
 
-body {
+body,
+.theme-dark,
+.theme-light {
   --link-decoration: none;
   --link-decoration-hover: none;
   --link-external-decoration: none;
@@ -4799,7 +4800,7 @@ body {
   --blockquote-border-color: var(--bg);
   --blockquote-style: normal;
   --blockquote-padding: var(--size-4-3) var(--size-4-6);
-  --blockquote-padding-lp: 7px 20px;
+  --blockquote-padding-lp: 7px 0;
   --blockquote-background-color: var(--embed-bg);
 }
 
@@ -4853,9 +4854,8 @@ body {
   margin: var(--callout-margin);
 }
 
-.callout .callout {
+.callout > .callout-content > .callout {
   --callout-margin: 0;
-  --callout-padding: var(--size-4-3) var(--size-4-4);
 }
 
 .callout-icon {
@@ -5965,6 +5965,17 @@ button[class^=BC] {
   padding-left: 10px;
 }
 
+.markdown-rendered.BC-matrix-view .BC-matrix-view-dir {
+  padding: var(--size-4-1) var(--size-4-3);
+  border: 2px solid var(--outline);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-m);
+}
+.markdown-rendered.BC-matrix-view .BC-matrix-view-dir .text-lg {
+  font-family: var(--h1-font);
+  color: var(--h1-color);
+}
+
 /* .BC-Matrix .BC-Matrix-square li::before {
     content: var(--bullet);
     font-family: var(--its);
@@ -6975,17 +6986,13 @@ img:is([alt*=ctr], [alt*=center]) {
 }
 
 /*Left & Right*/
-:not(.markdown-rendered) img:is([alt*=left], [alt*=locl]), :not(.markdown-rendered) img[src*="#locl"] img,
-:not(.markdown-rendered) .image-embed:is([alt*=left], [alt*=locl]),
-:not(.markdown-rendered) .image-embed[src*="#locl"] img {
+.markdown-rendered img:is([alt*=left], [alt*=locl]), .markdown-rendered img[src*="#locl"] img, .markdown-rendered .image-embed:is([alt*=left], [alt*=locl]), .markdown-rendered .image-embed[src*="#locl"] img {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-:not(.markdown-rendered) img:is([alt*=right], [alt*=locr]), :not(.markdown-rendered) img[src*="#locr"] img,
-:not(.markdown-rendered) .image-embed:is([alt*=right], [alt*=locr]),
-:not(.markdown-rendered) .image-embed[src*="#locr"] img {
+.markdown-rendered img:is([alt*=right], [alt*=locr]), .markdown-rendered img[src*="#locr"] img, .markdown-rendered .image-embed:is([alt*=right], [alt*=locr]), .markdown-rendered .image-embed[src*="#locr"] img {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
@@ -7111,10 +7118,6 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
 img[alt*=unclr],
 .image-embed[src*="#unclr"] {
   clear: none !important;
-}
-
-:not(.lp-img-float) .is-live-preview img:is([alt*=right], [alt*=locr]), :not(.lp-img-float) .is-live-preview img:is([alt*=left], [alt*=locl]), :not(.lp-img-float) .is-live-preview .image-embed:is([alt*=right], [alt*=locr]), :not(.lp-img-float) .is-live-preview .image-embed:is([alt*=left], [alt*=locl]) {
-  float: unset;
 }
 
 img:is([alt~=lp], [alt~=live-preview]):is([alt*=right], [alt*=locr]),
@@ -8919,8 +8922,8 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 
 /*Infobox*/
 :is(.is-mobile:not(.is-tablet),
-.is-mobile:not(.is-tablet) .is-live-preview,
-.is-live-preview) .callout[data-callout~=infobox]:not([data-callout-metadata~=mobile]) > .callout-content {
+.is-mobile .is-live-preview,
+.is-live-preview :not(.markdown-rendered)) .callout[data-callout~=infobox]:not([data-callout-metadata~=mobile]) {
   float: unset !important;
   max-width: 100%;
   margin: 0 !important;
@@ -12572,6 +12575,34 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 }
 
 /* Pathfinder Remaster */
+.theme-dark .pathfinder-remaster, .theme-dark.pathfinder-remaster {
+  --headers: #2f8b62;
+  --accent: #3b7b5b;
+  --dark-accent: #253f32;
+  --deep-dark-accent: var(--headers);
+  --th: var(--deep-dark-accent);
+  --lines: #304c40;
+  --theme-rainbow-1: var(--headers);
+  --theme-rainbow-2: var(--h2-color);
+  --theme-rainbow-3: var(--h3-color);
+  --theme-rainbow-4: var(--h4-color);
+}
+
+.theme-light .pathfinder-remaster, .theme-light.pathfinder-remaster {
+  --headers: #002a17;
+  --h2-color: #4e1b0e;
+  --h3-color: #025d4e;
+  --h4-color: #000000;
+  --deep-dark-accent: var(--headers);
+  --accent2-lite: #15a38b;
+  --th: var(--deep-dark-accent);
+  --theme-rainbow-1: var(--headers);
+  --theme-rainbow-2: var(--h2-color);
+  --theme-rainbow-3: var(--h3-color);
+  --theme-rainbow-4: var(--h4-color);
+  --hr-image: "https://content.demiplane.com/compendium/pathfinder-2e/gm-core/css/Box-Decoration.png";
+}
+
 .mini {
   --font: var(--font-default);
   --background-modifier-hover: var(--td);

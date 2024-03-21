@@ -4,7 +4,7 @@ body {
     --blockquote-border-color: var(--bg);
     --blockquote-style: normal;
     --blockquote-padding: var(--size-4-3) var(--size-4-6); //Personal
-    --blockquote-padding-lp: 7px 20px;
+    --blockquote-padding-lp: 7px 0; //x should be 0 for alignment
 
     --blockquote-background-color: var(--embed-bg);
 }

@@ -3,9 +3,10 @@
 /*Infobox*/
 :is(
     .is-mobile:not(.is-tablet), 
-    .is-mobile:not(.is-tablet) .is-live-preview, 
-    .is-live-preview
-) .callout[data-callout~="infobox"]:not([data-callout-metadata~="mobile"]) > .callout-content { 
+    .is-mobile .is-live-preview, 
+    .is-live-preview :not(.markdown-rendered)
+) .callout[data-callout~="infobox"]:not([data-callout-metadata~="mobile"])
+{ 
     float: unset !important; 
     max-width: 100%; 
     margin: 0 !important;

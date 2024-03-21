@@ -59,6 +59,19 @@ button[class^="BC"]
         padding-left: 10px;
     }
 }
+.markdown-rendered.BC-matrix-view {
+    & .BC-matrix-view-dir { 
+        padding: var(--size-4-1) var(--size-4-3);
+        border: 2px solid var(--outline);
+        border-radius: var(--radius-s);
+        box-shadow: var(--shadow-m);
+
+        & .text-lg {
+            font-family: var(--h1-font);
+            color: var(--h1-color);
+        }
+    }
+}
 
 
 

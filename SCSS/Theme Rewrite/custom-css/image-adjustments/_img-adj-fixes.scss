@@ -18,16 +18,6 @@ img[alt*="unclr"],
 
 
 
-//Live Preview Location Override
-:not(.lp-img-float) .is-live-preview  {
-& img,
-& .image-embed {
-    &:is([alt*="right"], [alt*="locr"]),
-    &:is([alt*="left"], [alt*="locl"]) {
-        float: unset;
-    }
-}
-}
 
 img,
 .image-embed {

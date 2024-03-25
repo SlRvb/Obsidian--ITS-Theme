@@ -8,6 +8,11 @@ settings:
         title: "ITS Theme by SlRvb"
         description: "ℹ [Guide / Docs](https://publish.obsidian.md/slrvb-docs/ITS+Theme/ITS+Theme) | ⚙ [Github](https://github.com/SlRvb/Obsidian--ITS-Theme) | ☕ [Support](https://ko-fi.com/slrvb)"
         markdown: true
+    -
+        id: its-theme
+        title: ITS Theme Class
+        type: class-toggle
+        default: true
     #-
     #    title: Class Test toggle
     #    id: minimalist-workspace
@@ -1498,6 +1503,11 @@ settings:
     - 
         title: Alternate Indentation Style
         id: alternate-indent
+        type: class-toggle
+    - 
+        title: Removed Spaced List Styling
+        description: Remove spacing of all bullets if bullets are separated by a new line
+        id: disable-spaced-lists
         type: class-toggle
     -
         title: Checkboxes

@@ -9,6 +9,11 @@ settings:
         title: "ITS Theme by SlRvb"
         description: "ℹ [Guide / Docs](https://publish.obsidian.md/slrvb-docs/ITS+Theme/ITS+Theme) | ⚙ [Github](https://github.com/SlRvb/Obsidian--ITS-Theme) | ☕ [Support](https://ko-fi.com/slrvb)"
         markdown: true
+    -
+        id: its-theme
+        title: ITS Theme Class
+        type: class-toggle
+        default: true
     #-
     #    title: Class Test toggle
     #    id: minimalist-workspace
@@ -1499,6 +1504,11 @@ settings:
     - 
         title: Alternate Indentation Style
         id: alternate-indent
+        type: class-toggle
+    - 
+        title: Removed Spaced List Styling
+        description: Remove spacing of all bullets if bullets are separated by a new line
+        id: disable-spaced-lists
         type: class-toggle
     -
         title: Checkboxes
@@ -4508,7 +4518,7 @@ ol > li::marker,
   --indentation-guide-color: var(--list-color-6);
 }
 
-:is(ul, ol) li:not(:first-of-type) p:first-of-type {
+body:not(.disable-spaced-lists) :is(ul, ol) li:not(:first-of-type) p:first-of-type {
   margin-block-start: var(--p-spacing);
 }
 
@@ -5407,10 +5417,6 @@ body {
   }
 }
 @container (width < 280px) {
-  .metadata-property[data-property-type] {
-    flex-wrap: wrap;
-  }
-
   .metadata-property {
     border-bottom: var(--metadata-divider-width) solid var(--metadata-divider-color);
   }
@@ -5643,6 +5649,10 @@ body {
 .style-settings-info-text[data-id^=info-text-SlRvb] .link-favicon {
   display: none !important;
   vertical-align: unset;
+}
+
+.setting-item[data-id=its-theme] {
+  display: none;
 }
 
 body {

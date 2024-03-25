@@ -165,7 +165,7 @@ ol > li::marker,
 
 
 // Spaced Lists: Fix breaking when Space in between Lists
-:is(ul, ol) li:not(:first-of-type) p:first-of-type 
+body:not(.disable-spaced-lists) :is(ul, ol) li:not(:first-of-type) p:first-of-type 
 { margin-block-start: var(--p-spacing); }
 
 :is(.markdown-source-view, .markdown-rendered) :is(ul, ol) li 

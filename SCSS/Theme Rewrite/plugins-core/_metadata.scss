@@ -89,10 +89,10 @@ body {
 }
 @container (width < 280px) {
     
-    .metadata-property[data-property-type] { 
-        flex-wrap: wrap; 
-        // flex-direction: column;
-    }
+    // .metadata-property[data-property-type] { 
+    //     flex-wrap: wrap; 
+    //     // flex-direction: column;
+    // }
     .metadata-property {
         border-bottom: var(--metadata-divider-width) solid var(--metadata-divider-color);
 

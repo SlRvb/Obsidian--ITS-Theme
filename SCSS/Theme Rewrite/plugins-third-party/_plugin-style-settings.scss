@@ -206,3 +206,5 @@ body {
     & .setting-item-control { display: none; }
     & .link-favicon { display: none !important; vertical-align: unset; }
 }
+
+.setting-item[data-id="its-theme"] { display: none; }

@@ -87,3 +87,8 @@ body.is-focused :is(.mod-left-split, .mod-right-split) .workspace-tab-header:not
 //    }
 // }
 
+.empty-state {
+    & .empty-state-title {
+        font-family: var(--h2-font);
+    }
+}

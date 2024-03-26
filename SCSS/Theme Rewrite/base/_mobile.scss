@@ -96,19 +96,17 @@
         padding: var(--size-4-2) max(var(--size-4-2), var(--safe-area-inset-right)) 100px max(var(--size-4-2), var(--safe-area-inset-left))
     }
     
-    //
-    & .mobile-toolbar { 
-        background-color: var(--mobile-toolbar-background); 
-
-    }
-    & .mobile-toolbar-option {
-        color: var(--text-dl);
-    }
+    //toolbar
+    & .mobile-toolbar { background-color: var(--mobile-toolbar-background); }
+    & .mobile-toolbar-option { color: var(--text-dl); }
     // &.theme-light { --mobile-toolbar-background: var(--accent); }
 
-    & .view-header-title-container {
-        padding-left: 0;
+    & .view-header-title-container { padding-left: 0; }
+    & .empty-state-action:not(:hover) { 
+        color: var(--text-dl); 
+        background-color: var(--bttn);
     }
+    & .empty-state-action:hover { background-color: var(--outer-bar); }
 }
 
 //Notes

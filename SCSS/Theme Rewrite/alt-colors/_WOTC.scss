@@ -87,11 +87,14 @@
     &.wotc-beyond,
     & .wotc-beyond {
 
+        --hvr-active: rgba(182, 28, 28, 0.50);
+        --highlight: #c20a0a35;
+
         --outer-bar: #fbe2c5;
         --dark-sidebar: #f6e3cd;
         --side-bar: #fff6e4;
         
-        --note: #fffcf0; //#fffcf0
+        --note: #fff9f0; //#fffcf0
         --note-rgb: 255, 252, 240;
 
         --accent-color: 199, 89, 89;

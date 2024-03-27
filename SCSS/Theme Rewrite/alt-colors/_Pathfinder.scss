@@ -246,11 +246,26 @@
 .theme-dark {
     & .pathfinder-remaster,
     &.pathfinder-remaster {
+        --tab-outline-color: #a18f61;
+
         --headers: #2f8b62;
         --accent: #3b7b5b;
         --dark-accent: #253f32;
         --deep-dark-accent: var(--headers);
+        // --outer-bar: #110402;
+
+        --lite-accent: #4dbb84;
+        --code-text: var(--lite-accent);
+        --tag-text: var(--lite-accent);
+        --th-text: var(--lite-accent);
         
+        --folder: var(--accent);
+        --folder-open: #c0a14a;
+        --file-icon-color: #887440;
+        --hvr: #4dbb8450;
+
+        --hr: #2d4d3d;
+
         --th: var(--deep-dark-accent);
         --lines: #304c40;
 
@@ -264,15 +279,33 @@
 .theme-light {
     & .pathfinder-remaster,
     &.pathfinder-remaster {
+        --tab-outline-color: #cdac5a;
+        --hvr-active: #002a1790;
+        --hvr: #ddc4868a;
+        --highlight: #002a1730;
+        
         --headers: #002a17; //rgb(0, 42, 23)
 
         --h2-color: #4e1b0e;
         --h3-color: #025d4e;
         --h4-color: #000000;
-        --deep-dark-accent: var(--headers);
+
+        --dark-accent: #00280a;
+        --accent: #025D4E;
+        --deep-dark-accent: #260d09;
         --accent2-lite: #15a38b;
+        --lite-accent: #188655;
         
-        --th: var(--deep-dark-accent);
+        --code-text: var(--lite-accent);
+        --tag-text: var(--lite-accent);
+        
+        --folder: #2b5b42;
+        --folder-open: #cba137;
+        --file-icon-color: #cab47c;
+
+        --th: var(--dark-accent);
+        --soft-text: #025d4e;
+        --hr: #002915;
 
         --theme-rainbow-1: var(--headers);
         --theme-rainbow-2: var(--h2-color);

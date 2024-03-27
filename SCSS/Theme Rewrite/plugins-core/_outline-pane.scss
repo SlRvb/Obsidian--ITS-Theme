@@ -30,6 +30,7 @@ body [data-type="outline"] {
         color: var(--headers);
         padding-right: var(--outline-symbol-padding-right);
     }
+    & .tree-item-self.is-active::before,
     & .tree-item-self:hover::before { color: var(--text-dl); }
     
     //Collapsed Fixes

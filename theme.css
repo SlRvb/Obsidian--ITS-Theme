@@ -2764,9 +2764,9 @@ settings:
             -
                 label: Pathfinder
                 value: pathfinder
-#            -
-#                label: Pathfinder Remaster
-#                value: pathfinder-remaster
+            -
+                label: Pathfinder Remaster
+                value: pathfinder-remaster
     -
         title: Tangerine Dunes
         id: t-d
@@ -3373,10 +3373,6 @@ button.mod-cta:hover {
 .side-dock-ribbon .clickable-icon:hover,
 .workspace-tab-header:hover .workspace-tab-header-inner .workspace-tab-header-inner-icon {
   color: var(--sidebar-tab-color-hover);
-}
-
-.nav-header .nav-action-button {
-  color: var(--soft-text);
 }
 
 .side-dock-actions {
@@ -4978,7 +4974,8 @@ body [data-type=outline] .tree-item-self::before {
   color: var(--headers);
   padding-right: var(--outline-symbol-padding-right);
 }
-body .outline .tree-item-self:hover::before,
+body .outline .tree-item-self.is-active::before, body .outline .tree-item-self:hover::before,
+body [data-type=outline] .tree-item-self.is-active::before,
 body [data-type=outline] .tree-item-self:hover::before {
   color: var(--text-dl);
 }
@@ -12281,10 +12278,12 @@ body.background-image .markdown-embed-content .markdown-preview-section:not(.kan
 }
 
 .theme-light.wotc-beyond, .theme-light .wotc-beyond {
+  --hvr-active: rgba(182, 28, 28, 0.50);
+  --highlight: #c20a0a35;
   --outer-bar: #fbe2c5;
   --dark-sidebar: #f6e3cd;
   --side-bar: #fff6e4;
-  --note: #fffcf0;
+  --note: #fff9f0;
   --note-rgb: 255, 252, 240;
   --accent-color: 199, 89, 89;
   --accent: #c75959;
@@ -12598,10 +12597,20 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 
 /* Pathfinder Remaster */
 .theme-dark .pathfinder-remaster, .theme-dark.pathfinder-remaster {
+  --tab-outline-color: #a18f61;
   --headers: #2f8b62;
   --accent: #3b7b5b;
   --dark-accent: #253f32;
   --deep-dark-accent: var(--headers);
+  --lite-accent: #4dbb84;
+  --code-text: var(--lite-accent);
+  --tag-text: var(--lite-accent);
+  --th-text: var(--lite-accent);
+  --folder: var(--accent);
+  --folder-open: #c0a14a;
+  --file-icon-color: #887440;
+  --hvr: #4dbb8450;
+  --hr: #2d4d3d;
   --th: var(--deep-dark-accent);
   --lines: #304c40;
   --theme-rainbow-1: var(--headers);
@@ -12611,13 +12620,27 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 }
 
 .theme-light .pathfinder-remaster, .theme-light.pathfinder-remaster {
+  --tab-outline-color: #cdac5a;
+  --hvr-active: #002a1790;
+  --hvr: #ddc4868a;
+  --highlight: #002a1730;
   --headers: #002a17;
   --h2-color: #4e1b0e;
   --h3-color: #025d4e;
   --h4-color: #000000;
-  --deep-dark-accent: var(--headers);
+  --dark-accent: #00280a;
+  --accent: #025D4E;
+  --deep-dark-accent: #260d09;
   --accent2-lite: #15a38b;
-  --th: var(--deep-dark-accent);
+  --lite-accent: #188655;
+  --code-text: var(--lite-accent);
+  --tag-text: var(--lite-accent);
+  --folder: #2b5b42;
+  --folder-open: #cba137;
+  --file-icon-color: #cab47c;
+  --th: var(--dark-accent);
+  --soft-text: #025d4e;
+  --hr: #002915;
   --theme-rainbow-1: var(--headers);
   --theme-rainbow-2: var(--h2-color);
   --theme-rainbow-3: var(--h3-color);

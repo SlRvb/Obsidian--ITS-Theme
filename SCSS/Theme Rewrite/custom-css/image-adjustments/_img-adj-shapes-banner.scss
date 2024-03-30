@@ -1,7 +1,7 @@
 
 /*Banners*/
-img[alt*="banner"],
-.image-embed[alt*="banner"] img {
+img[alt*="banner"]:not([width]),
+.image-embed[alt*="banner"]:not([width]) img {
     display: block;
     object-fit: cover;
     width: 100%;

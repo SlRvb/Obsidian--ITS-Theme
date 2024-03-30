@@ -8562,10 +8562,11 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   display: inline-block;
 }
 
-.callout:is([data-callout-metadata~=no-i],
-[data-callout-metadata~=no-icon]) > .callout-title .callout-icon {
+.callout.callout:is([data-callout-metadata~=no-i],
+[data-callout-metadata~=no-icon]) > .callout-title > .callout-icon {
   width: 0;
   height: 0;
+  --icon-size: 0;
 }
 
 .callout:is([data-callout-metadata~=n-th],
@@ -9821,7 +9822,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
 /* Timeline */
 .callout.callout[data-callout~=timeline] {
   --callout-icon: "clock-12";
-  --callout-padding: 0px;
+  --callout-padding: 0;
   --callout-title-padding: 10px;
   --callout-content-padding: 10px;
   --timeline-shadow: var(--outline, var(--background-modifier-box-shadow));
@@ -9838,6 +9839,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
   margin: 0;
   border: 0;
   clear: both;
+  position: unset !important;
 }
 .callout.callout[data-callout~=timeline] .callout-title {
   background: rgba(var(--callout-color), 0.35);

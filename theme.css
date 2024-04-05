@@ -6086,7 +6086,7 @@ body:not(.default-statblock) {
   --statblock-section-heading-font-size: var(--h3-size);
   --statblock-section-heading-font-variant: normal;
   --statblock-section-heading-font-weight: var(--header-weight);
-  --statblock-traits-font-weight: bold;
+  --statblock-section-heading-font: var(--h3-font);
   --statblock-traits-font-style: normal;
 }
 

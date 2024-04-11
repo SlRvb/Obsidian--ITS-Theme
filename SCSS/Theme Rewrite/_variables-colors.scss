@@ -53,7 +53,7 @@ body,
     --interactive-hover: var(--embed-bg);
     --interactive-accent: var(--bttn);
     --interactive-accent-hover: var(--bg);
-    --interactive-accent-hsl: var(--selected-rgb);
+    --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(accent-l);
 
     --background-modifier-hover: var(--hvr-active);
     --background-modifier-success: var(--success-bg);
@@ -122,7 +122,6 @@ body,
     
 
     --input-bg: rgba(0, 0, 0, 0.3);
-    --selected-rgb: 168, 60, 60;
     --hvr: rgba(168, 60, 60, 0.4);
     --hvr2: var(--highlight);
     --hvr-active: rgba(212, 47, 47, 0.4);
@@ -173,7 +172,7 @@ body,
     
     //Graph
     --graph-bg: var(--outer-bar);
-    --graph-lines: var(--dark-accent);//rgba(var(--selected-rgb), .6);
+    --graph-lines: var(--dark-accent);
     --graph-node: var(--text);
     --graph-fill: var(--headers);
     --graph-404: #727e93;
@@ -215,7 +214,6 @@ body,
     
     
     --input-bg: var(--td);
-    --selected-rgb: 52, 123, 237;
     --hvr: rgba(255, 0, 0, 0.212);
     --hvr2: var(--highlight);
     --hvr-active:rgba(253, 115, 115, 0.4);

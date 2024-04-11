@@ -293,12 +293,12 @@ $checkboxes: (
     ),
     "O": (
         icon: "\E805",
-        color: rgb(var(--selected-rgb)),
-        text-color: rgb(var(--selected-rgb)),
+        color: hsl(var(--interactive-accent-hsl)),
+        text-color: hsl(var(--interactive-accent-hsl)),
         norm-text: var(--text),
 		font-weight: inherit,
-        background: rgba(var(--selected-rgb), 20%),
-        border: 2px solid rgb(var(--selected-rgb)),
+        background: hsla(var(--interactive-accent-hsl), 20%),
+        border: 2px solid hsl(var(--interactive-accent-hsl)),
         strike: checkbox-strike-plot
     ),
     "F": (

@@ -28,7 +28,6 @@
         
     
         --input-bg: rgba(0, 0, 0, 0.3);
-        --selected-rgb: 168, 60, 60;
         --hvr: rgba(168, 60, 60, 0.4);
         --hvr2: var(--highlight);
         --hvr-active: rgba(212, 47, 47, 0.4);
@@ -79,7 +78,7 @@
         
         //Graph
         --graph-bg: var(--outer-bar);
-        --graph-lines: rgba(var(--selected-rgb), .2);
+        --graph-lines: hsla(var(--interactive-accent-hsl), .2);
         --graph-node: var(--text);
         --graph-fill: var(--headers);
         --graph-404: #727e93;
@@ -123,7 +122,6 @@
     
     
     --input-bg: var(--td);
-    --selected-rgb: 52, 123, 237;
     --hvr: rgba(255, 0, 0, 0.212);
     --hvr2: var(--highlight);
     --hvr-active:rgba(253, 115, 115, 0.4);

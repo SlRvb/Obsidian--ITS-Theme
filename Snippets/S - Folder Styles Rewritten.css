@@ -89,11 +89,11 @@ body.file-explorer-flat {
 /*With Explanation/Recommendations*/
 .nav-folder-title[data-path="Folder name here"],
 .nav-folder-title[data-path="Folder name here"] + .nav-folder-children {
-	--explorer-folder-icon: "\f23c"; /*Encoded Icon Font Code*/
-	--explorer-folder-font: var(--rmx); /*Encoded Icon Font Name*/
+  --explorer-folder-icon: "\f23c"; /*Encoded Icon Font Code*/
+  --explorer-folder-font: var(--rmx); /*Encoded Icon Font Name*/
 
   --explorer-root-folder-background: #a882ff; /*Root Folder Color (Text & Background)*/
-	--explorer-root-background: #a882ff20; /*Root Folder's Inner Background Color (copy root background and add 20 after for best/easier styling & legibility)*/
+  --explorer-root-background: #a882ff20; /*Root Folder's Inner Background Color (copy root background and add 20 after for best/easier styling & legibility)*/
   --explorer-root-folder-color: var(--explorer-root-folder-background); /*Root folder text color when closed/collapsed*/
-	--explorer-folder-icon-color: var(--explorer-root-folder-background); /*Explorer Icon Color*/
+  --explorer-folder-icon-color: var(--explorer-root-folder-background); /*Explorer Icon Color*/
 }

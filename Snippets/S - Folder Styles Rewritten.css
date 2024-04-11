@@ -1,32 +1,40 @@
 .file-explorer-flat {
-  --explorer-root-folder-margin: 0;
+  --explorer-root-folder-margin: 0 0 7px 0;
   --explorer-root-folder-padding: 0;
   --explorer-root-folder-indentation-width: 0;
-  --explorer-root-folder-background: rgb(var(--accent-color), 0.3);
-  --explorer-root-background: rgb(var(--accent-color), 0.1);
-  --explorer-root-border-color: rgb(var(--accent-color));
-  --explorer-root-folder-color: var(--text);
-  --explorer-root-folder-open-color: var(--folder);
+  --explorer-root-folder-background: var(--color-accent-2);
+  --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
+  --explorer-root-folder-color: var(--text, var(--nav-item-color));
+  --explorer-root-folder-open-color: var(--folder, var(--text-on-accent));
+  --explorer-folder-open-background: var(--td, var(--background-modifier-cover));
+  --explorer-folder-icon-color: var(--explorer-root-folder-background);
   --explorer-root-collapsed-background: transparent;
-  --explorer-folder-open-background: var(--td);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
   margin: var(--explorer-root-folder-margin);
   padding-left: var(--explorer-root-folder-padding);
   border-width: var(--explorer-root-folder-indentation-width);
   border-color: var(--explorer-root-folder-indentation-color);
-  border-bottom: 2px solid var(--explorer-root-border-color);
+  border-bottom: 2px solid var(--explorer-root-folder-background);
   background-color: var(--explorer-root-background);
 }
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title:not(:hover) {
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-root-collapsed-background);
   color: var(--explorer-root-folder-color);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-root-folder-background);
-  border-bottom-color: var(--explorer-root-border-color);
+  border-bottom-color: var(--explorer-root-folder-background);
   color: var(--explorer-root-folder-open-color);
-  justify-content: center;
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) .collapse-icon {
+  --nav-collapse-icon-color: var(--explorer-root-folder-open-color);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+  align-items: center;
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-collapse-indicator {
+  --nav-collapse-icon-color: var(--nav-item-color);
 }
 .file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
   text-align: center;
@@ -41,7 +49,7 @@
 }
 .file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-folder-open-background);
-  border-bottom-color: var(--explorer-root-border-color);
+  border-bottom-color: var(--explorer-root-folder-background);
 }
 
 /*@settings
@@ -61,12 +69,31 @@ settings:
         default: true
 */
 body.file-explorer-flat {
-  --explorer-root-folder-background: var(--color-accent-2);
-  --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
-  --explorer-root-border-color: var(--color-accent-2);
-  --explorer-folder-open-background: var(--background-modifier-cover);
+  --explorer-folder-icon-content: var(--folder-icon);
+  --explorer-folder-icon-font: var(--folder-font);
 }
 
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
-  justify-content: unset;
+.file-explorer-flat .nav-folder-children .nav-folder-title-content::before {
+  content: var(--explorer-folder-icon);
+  font-family: var(--explorer-folder-font);
+  text-align: center;
+  margin-right: 5px;
+  vertical-align: -2px;
+}
+
+.file-explorer-flat .nav-folder-children > .nav-folder.is-collapsed > .nav-folder-title .nav-folder-title-content::before {
+  color: var(--explorer-folder-icon-color);
+}
+
+/* --- Insert your folder CSS under here --- */
+/*With Explanation/Recommendations*/
+.nav-folder-title[data-path="Folder name here"],
+.nav-folder-title[data-path="Folder name here"] + .nav-folder-children {
+	--explorer-folder-icon: "\f23c"; /*Encoded Icon Font Code*/
+	--explorer-folder-font: var(--rmx); /*Encoded Icon Font Name*/
+
+  --explorer-root-folder-background: #a882ff; /*Root Folder Color (Text & Background)*/
+	--explorer-root-background: #a882ff20; /*Root Folder's Inner Background Color (copy root background and add 20 after for best/easier styling & legibility)*/
+  --explorer-root-folder-color: var(--explorer-root-folder-background); /*Root folder text color when closed/collapsed*/
+	--explorer-folder-icon-color: var(--explorer-root-folder-background); /*Explorer Icon Color*/
 }

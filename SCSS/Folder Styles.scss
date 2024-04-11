@@ -18,12 +18,36 @@ settings:
 @use 'Theme Rewrite/custom-css/file-explorer/file-explorer-style-flat-root';
 
 body.file-explorer-flat {
-    --explorer-root-folder-background: var(--color-accent-2);
-    --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
-    --explorer-root-border-color: var(--color-accent-2);
-    --explorer-folder-open-background: var(--background-modifier-cover);
+    --explorer-folder-icon-content: var(--folder-icon);
+    --explorer-folder-icon-font: var(--folder-font);
 }
 
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
-    justify-content: unset;
+// .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) 
+// { justify-content: unset; }
+
+.file-explorer-flat .nav-folder-children .nav-folder-title-content::before {
+    content: var(--explorer-folder-icon);
+    font-family: var(--explorer-folder-font);
+    text-align: center;
+    margin-right: 5px;
+    vertical-align: -2px;
+}
+.file-explorer-flat .nav-folder-children > .nav-folder.is-collapsed > .nav-folder-title .nav-folder-title-content::before {
+    color: var(--explorer-folder-icon-color);
+}
+
+
+
+
+/* --- Insert your folder CSS under here --- */
+/*With Explanation/Recommendations*/
+.nav-folder-title[data-path="Folder name here"],
+.nav-folder-title[data-path="Folder name here"] + .nav-folder-children {
+  --explorer-folder-icon: "\f23c"; /*Encoded Icon Font Code*/
+  --explorer-folder-font: var(--rmx); /*Encoded Icon Font Name*/
+
+  --explorer-root-folder-background: #a882ff; /*Root Folder Color (Text & Background)*/
+  --explorer-root-background: #a882ff20; /*Root Folder's Inner Background Color (copy root background and add 20 after for best/easier styling & legibility)*/
+  --explorer-root-folder-color: var(--explorer-root-folder-background); /*Root folder text color when closed/collapsed*/
+  --explorer-folder-icon-color: var(--explorer-root-folder-background); /*Explorer Icon Color*/
 }

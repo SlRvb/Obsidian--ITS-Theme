@@ -6728,33 +6728,46 @@ body {
 }
 
 .file-explorer-flat {
-  --explorer-root-folder-margin: 0;
+  --explorer-root-folder-margin: 0 0 7px 0;
   --explorer-root-folder-padding: 0;
   --explorer-root-folder-indentation-width: 0;
-  --explorer-root-folder-background: rgb(var(--accent-color), 0.3);
-  --explorer-root-background: rgb(var(--accent-color), 0.1);
-  --explorer-root-border-color: rgb(var(--accent-color));
-  --explorer-root-folder-color: var(--text);
-  --explorer-root-folder-open-color: var(--folder);
+  --explorer-root-folder-background: var(--folder);
+  --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
+  --explorer-root-folder-color: var(--text, var(--nav-item-color));
+  --explorer-root-folder-open-color: var(--text-on-accent);
+  --explorer-folder-open-background: var(--td, var(--background-modifier-cover));
+  --explorer-folder-icon-color: var(--explorer-root-folder-background);
   --explorer-root-collapsed-background: transparent;
-  --explorer-folder-open-background: var(--td);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
   margin: var(--explorer-root-folder-margin);
   padding-left: var(--explorer-root-folder-padding);
   border-width: var(--explorer-root-folder-indentation-width);
   border-color: var(--explorer-root-folder-indentation-color);
-  border-bottom: 2px solid var(--explorer-root-border-color);
+  border-bottom: 2px solid var(--explorer-root-folder-background);
   background-color: var(--explorer-root-background);
 }
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title:not(:hover) {
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title-content::before {
+  --folder: var(--explorer-folder-icon-color);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-root-collapsed-background);
   color: var(--explorer-root-folder-color);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-root-folder-background);
-  border-bottom-color: var(--explorer-root-border-color);
+  border-bottom-color: var(--explorer-root-folder-background);
   color: var(--explorer-root-folder-open-color);
+  --folder-open: var(--explorer-root-folder-open-color);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) .collapse-icon {
+  --nav-collapse-icon-color: var(--explorer-root-folder-open-color);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+  align-items: center;
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-collapse-indicator {
+  --nav-collapse-icon-color: var(--nav-item-color);
 }
 .file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
   text-align: center;
@@ -6769,7 +6782,7 @@ body {
 }
 .file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-folder-open-background);
-  border-bottom-color: var(--explorer-root-border-color);
+  border-bottom-color: var(--explorer-root-folder-background);
 }
 
 body.folder-arrow .nav-files-container .nav-folder-title:hover .nav-folder-collapse-indicator, body.folder-arrow .nav-files-container .nav-folder-title:hover .tree-item-icon.nav-folder-collapse-indicator {

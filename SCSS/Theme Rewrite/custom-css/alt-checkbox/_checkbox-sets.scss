@@ -30,6 +30,17 @@ $checkboxes: (
         border: 2px double rgb(var(--chbx-h)),
         strike: checkbox-strike-frwd
     ),
+    "<": (
+        icon: "\EC03",
+        color: var(--text-faint),
+        text-color: var(--text-faint),
+        norm-text: var(--text-faint),
+		font-weight: bold,
+        background: rgba(var(--chbx-h), 20%),
+        border: 2px double rgb(var(--chbx-h)),
+        strike: checkbox-strike-bkwd,
+        transform: scale(-1, 1)
+    ),
     "D": (
         icon: "\EC04",
         color: rgb(var(--chbx-h)),

@@ -10,6 +10,7 @@ body:not(.alt-chkbx-off) {
         &::after {
             content: map-get($set, icon);
             color: map-get($set, color);
+            transform: map-get($set, transform);
         }
     }
 }

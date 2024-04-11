@@ -5,7 +5,6 @@ body:not(.alt-chkbx-off) {
             [data-task="X"],
             [data-task=">"],
             [data-task="-"],
-            [data-task=">"],
             [data-task="D"],
             [data-task="?"],
             [data-task="/"],
@@ -40,7 +39,8 @@ body:not(.alt-chkbx-off) {
             [data-task="a"],
             [data-task="&"],
             [data-task="s"],
-            [data-task="H"]
+            [data-task="H"],
+            [data-task="<"]
         ) {
             // --checkbox-marker-color: transparent;
             // --checkbox-color: transparent;

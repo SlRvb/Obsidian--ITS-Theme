@@ -6753,6 +6753,7 @@ body {
   --explorer-folder-open-background: var(--td, var(--background-modifier-cover));
   --explorer-folder-icon-color: var(--explorer-root-folder-background);
   --explorer-root-collapsed-background: transparent;
+  --explorer-root-folder-indentation-color: var(--explorer-root-folder-background);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
   margin: var(--explorer-root-folder-margin);
@@ -6761,6 +6762,7 @@ body {
   border-color: var(--explorer-root-folder-indentation-color);
   border-bottom: 2px solid var(--explorer-root-folder-background);
   background-color: var(--explorer-root-background);
+  --nav-indentation-guide-color: var(--explorer-root-folder-indentation-color);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title-content::before {
   --folder: var(--explorer-folder-icon-color);

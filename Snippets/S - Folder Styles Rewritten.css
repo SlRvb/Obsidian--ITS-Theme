@@ -1,14 +1,16 @@
+@charset "UTF-8";
 .file-explorer-flat {
   --explorer-root-folder-margin: 0 0 7px 0;
   --explorer-root-folder-padding: 0;
   --explorer-root-folder-indentation-width: 0;
-  --explorer-root-folder-background: var(--color-accent-2);
+  --explorer-root-folder-background: var(--folder);
   --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
   --explorer-root-folder-color: var(--text, var(--nav-item-color));
-  --explorer-root-folder-open-color: var(--folder, var(--text-on-accent));
+  --explorer-root-folder-open-color: var(--text-on-accent);
   --explorer-folder-open-background: var(--td, var(--background-modifier-cover));
   --explorer-folder-icon-color: var(--explorer-root-folder-background);
   --explorer-root-collapsed-background: transparent;
+  --explorer-root-folder-indentation-color: var(--explorer-root-folder-background);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
   margin: var(--explorer-root-folder-margin);
@@ -17,6 +19,10 @@
   border-color: var(--explorer-root-folder-indentation-color);
   border-bottom: 2px solid var(--explorer-root-folder-background);
   background-color: var(--explorer-root-background);
+  --nav-indentation-guide-color: var(--explorer-root-folder-indentation-color);
+}
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title-content::before {
+  --folder: var(--explorer-folder-icon-color);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-root-collapsed-background);
@@ -26,6 +32,7 @@
   background-color: var(--explorer-root-folder-background);
   border-bottom-color: var(--explorer-root-folder-background);
   color: var(--explorer-root-folder-open-color);
+  --folder-open: var(--explorer-root-folder-open-color);
 }
 .file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) .collapse-icon {
   --nav-collapse-icon-color: var(--explorer-root-folder-open-color);
@@ -89,11 +96,18 @@ body.file-explorer-flat {
 /*With Explanation/Recommendations*/
 .nav-folder-title[data-path="Folder name here"],
 .nav-folder-title[data-path="Folder name here"] + .nav-folder-children {
-  --explorer-folder-icon: "\f23c"; /*Encoded Icon Font Code*/
-  --explorer-folder-font: var(--rmx); /*Encoded Icon Font Name*/
-
-  --explorer-root-folder-background: #a882ff; /*Root Folder Color (Text & Background)*/
-  --explorer-root-background: #a882ff20; /*Root Folder's Inner Background Color (copy root background and add 20 after for best/easier styling & legibility)*/
-  --explorer-root-folder-color: var(--explorer-root-folder-background); /*Root folder text color when closed/collapsed*/
-  --explorer-folder-icon-color: var(--explorer-root-folder-background); /*Explorer Icon Color*/
+  --explorer-folder-icon: "";
+  /*Encoded Icon Font Code*/
+  --explorer-folder-font: var(--rmx);
+  /*Encoded Icon Font Name*/
+  --explorer-root-folder-background: #a882ff;
+  /*Root Folder Color (Text & Background)*/
+  --explorer-root-background: #a882ff20;
+  /*Root Folder's Inner Background Color (copy root background and add 20 after for best/easier styling & legibility)*/
+  --explorer-root-folder-color: var(--explorer-root-folder-background);
+  /*Root folder text color when closed/collapsed*/
+  --explorer-folder-icon-color: var(--explorer-root-folder-background);
+  /*Explorer Icon Color*/
+  --explorer-root-folder-indentation-color: var(--explorer-root-folder-background);
+  /*Folder Line Color*/
 }

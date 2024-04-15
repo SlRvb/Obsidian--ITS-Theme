@@ -28,7 +28,7 @@ settings:
         id: ITS-Sizes
         type: class-select
         allowEmpty: true
-        default: sizing-readable
+        default: none
         options:
             -
                 label: Readable
@@ -120,9 +120,18 @@ settings:
         type: variable-number-slider
         default: 40
         format: px
-        min: 20
+        min: 30
         max: 50
         step: 5
+    -
+        title: Sidebar Ribbon Icon Sizing
+        id: ribbon-icon-size
+        type: variable-number-slider
+        default: 18
+        format: px
+        min: 10
+        max: 20
+        step: 1
     -
         title: Notes
         id: ITS-Note-Sizing

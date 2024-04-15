@@ -14,6 +14,7 @@
     --ribbon-border-color: var(--outer-bar);
     --ribbon-icon-size: var(--icon-l);
     --ribbon-icon-stroke: var(--icon-l-stroke-width);
+    --ribbon-icon-gap: 15px;
 
     --sidebar-icon-color: var(--text);
     --sidebar-icon-color-active: var(--text-dl);
@@ -73,9 +74,13 @@
 }
 
 
-//Fix Left Sidebar Tab Icons
-.clickable-icon.side-dock-ribbon-action {
-    padding: 10px;
+//Fix Left Sidebar Tab Icons Spacing
+// .clickable-icon.side-dock-ribbon-action { padding: 10px; }
+.side-dock-settings,
+.side-dock-actions { 
+    padding-top: calc(var(--ribbon-icon-gap) / 1.5); 
+    padding-bottom: calc(var(--ribbon-icon-gap) / 1.5); 
+    gap: var(--ribbon-icon-gap); 
 }
 
 //Ribbon

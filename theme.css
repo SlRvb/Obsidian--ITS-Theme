@@ -29,7 +29,7 @@ settings:
         id: ITS-Sizes
         type: class-select
         allowEmpty: true
-        default: sizing-readable
+        default: none
         options:
             -
                 label: Readable
@@ -121,9 +121,18 @@ settings:
         type: variable-number-slider
         default: 40
         format: px
-        min: 20
+        min: 30
         max: 50
         step: 5
+    -
+        title: Sidebar Ribbon Icon Sizing
+        id: ribbon-icon-size
+        type: variable-number-slider
+        default: 18
+        format: px
+        min: 10
+        max: 20
+        step: 1
     -
         title: Notes
         id: ITS-Note-Sizing
@@ -3287,6 +3296,7 @@ button.mod-cta:hover {
   --ribbon-border-color: var(--outer-bar);
   --ribbon-icon-size: var(--icon-l);
   --ribbon-icon-stroke: var(--icon-l-stroke-width);
+  --ribbon-icon-gap: 15px;
   --sidebar-icon-color: var(--text);
   --sidebar-icon-color-active: var(--text-dl);
   --sidebar-tab-icon-size: var(--icon-l);
@@ -3340,8 +3350,11 @@ button.mod-cta:hover {
   border-color: var(--sidebar-tab-border-color-active);
 }
 
-.clickable-icon.side-dock-ribbon-action {
-  padding: 10px;
+.side-dock-settings,
+.side-dock-actions {
+  padding-top: calc(var(--ribbon-icon-gap) / 1.5);
+  padding-bottom: calc(var(--ribbon-icon-gap) / 1.5);
+  gap: var(--ribbon-icon-gap);
 }
 
 .workspace-ribbon {

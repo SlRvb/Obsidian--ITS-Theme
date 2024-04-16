@@ -1765,6 +1765,10 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
   position: relative;
 }
 
+.markdown-preview-view .callout {
+  --callout-margin: 1em 0;
+}
+
 .callouts-outlined .callout.callout:is([data-callout=Metadata i],
 [data-callout=Timeline i],
 [data-callout=Recite i],

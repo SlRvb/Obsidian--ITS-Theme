@@ -45,7 +45,7 @@ body,
   --interactive-hover: var(--embed-bg);
   --interactive-accent: var(--bttn);
   --interactive-accent-hover: var(--bg);
-  --interactive-accent-hsl: var(--selected-rgb);
+  --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(accent-l);
   --background-modifier-hover: var(--hvr-active);
   --background-modifier-success: var(--success-bg);
   --background-modifier-error: var(--failure-bg);
@@ -85,7 +85,6 @@ body,
   --dark-sidebar: #0d1014;
   --bttn: var(--dark-accent);
   --input-bg: rgba(0, 0, 0, 0.3);
-  --selected-rgb: 168, 60, 60;
   --hvr: rgba(168, 60, 60, 0.4);
   --hvr2: var(--highlight);
   --hvr-active: rgba(212, 47, 47, 0.4);
@@ -158,7 +157,6 @@ body,
   --dark-sidebar: #f1f5ff;
   --bttn: var(--headers);
   --input-bg: var(--td);
-  --selected-rgb: 52, 123, 237;
   --hvr: rgba(255, 0, 0, 0.212);
   --hvr2: var(--highlight);
   --hvr-active:rgba(253, 115, 115, 0.4);
@@ -448,6 +446,7 @@ button.mod-cta:hover {
   --ribbon-border-color: var(--outer-bar);
   --ribbon-icon-size: var(--icon-l);
   --ribbon-icon-stroke: var(--icon-l-stroke-width);
+  --ribbon-icon-gap: 15px;
   --sidebar-icon-color: var(--text);
   --sidebar-icon-color-active: var(--text-dl);
   --sidebar-tab-icon-size: var(--icon-l);
@@ -501,8 +500,11 @@ button.mod-cta:hover {
   border-color: var(--sidebar-tab-border-color-active);
 }
 
-.clickable-icon.side-dock-ribbon-action {
-  padding: 10px;
+.side-dock-settings,
+.side-dock-actions {
+  padding-top: calc(var(--ribbon-icon-gap) / 1.5);
+  padding-bottom: calc(var(--ribbon-icon-gap) / 1.5);
+  gap: var(--ribbon-icon-gap);
 }
 
 .workspace-ribbon {
@@ -536,10 +538,6 @@ button.mod-cta:hover {
 .side-dock-ribbon .clickable-icon:hover,
 .workspace-tab-header:hover .workspace-tab-header-inner .workspace-tab-header-inner-icon {
   color: var(--sidebar-tab-color-hover);
-}
-
-.nav-header .nav-action-button {
-  color: var(--soft-text);
 }
 
 .side-dock-actions {
@@ -578,7 +576,6 @@ body {
   background: var(--code-bg);
   box-shadow: 0 2px 0 var(--td);
   padding: 5px 10px;
-  line-height: var(--lh);
   margin-bottom: 0;
 }
 
@@ -702,6 +699,10 @@ body.is-focused :is(.mod-left-split, .mod-right-split) .workspace-tab-header:not
 
 .mod-root .mod-stacked .workspace-tab-header:hover .workspace-tab-header-inner {
   color: var(--tab-text-color-hover);
+}
+
+.empty-state .empty-state-title {
+  font-family: var(--h2-font);
 }
 
 body {
@@ -959,6 +960,13 @@ body {
 }
 .is-mobile .view-header-title-container {
   padding-left: 0;
+}
+.is-mobile .empty-state-action:not(:hover) {
+  color: var(--text-dl);
+  background-color: var(--bttn);
+}
+.is-mobile .empty-state-action:hover {
+  background-color: var(--outer-bar);
 }
 
 .is-mobile .markdown-rendered .list-collapse-indicator {
@@ -1433,7 +1441,7 @@ body {
   background-color: var(--pane-background);
 }
 
-body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
+body:not(.disable-source-styling) .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
   --tag-background: transparent;
   --tag-color: var(--tag-text);
   --tag-padding-x: 0;
@@ -1463,11 +1471,13 @@ body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) {
   --tag-border-radius: 0;
   --tag-border-width: 0;
 }
-body .cm-s-obsidian.markdown-source-view:not(.is-live-preview) .cm-line.HyperMD-codeblock {
+body:not(.disable-source-styling) .cm-s-obsidian.markdown-source-view:not(.is-live-preview) .cm-line.HyperMD-codeblock {
   padding-left: 5px;
 }
 
-body {
+body,
+.theme-dark,
+.theme-light {
   --link-decoration: none;
   --link-decoration-hover: none;
   --link-external-decoration: none;
@@ -1680,7 +1690,7 @@ ol > li::marker,
   --indentation-guide-color: var(--list-color-6);
 }
 
-:is(ul, ol) li:not(:first-of-type) p:first-of-type {
+body:not(.disable-spaced-lists) :is(ul, ol) li:not(:first-of-type) p:first-of-type {
   margin-block-start: var(--p-spacing);
 }
 
@@ -1972,7 +1982,7 @@ body {
   --blockquote-border-color: var(--bg);
   --blockquote-style: normal;
   --blockquote-padding: var(--size-4-3) var(--size-4-6);
-  --blockquote-padding-lp: 7px 20px;
+  --blockquote-padding-lp: 7px 0;
   --blockquote-background-color: var(--embed-bg);
 }
 
@@ -2026,9 +2036,8 @@ body {
   margin: var(--callout-margin);
 }
 
-.callout .callout {
+.callout > .callout-content > .callout {
   --callout-margin: 0;
-  --callout-padding: var(--size-4-3) var(--size-4-4);
 }
 
 .callout-icon {
@@ -2474,7 +2483,6 @@ body {
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
-[data-task=">"],
 [data-task=D],
 [data-task="?"],
 [data-task="/"],
@@ -2508,10 +2516,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]) :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=H],
+[data-task="<"]) :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
-[data-task=">"],
 [data-task=D],
 [data-task="?"],
 [data-task="/"],
@@ -2545,10 +2553,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]) > input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=H],
+[data-task="<"]) > input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
-[data-task=">"],
 [data-task=D],
 [data-task="?"],
 [data-task="/"],
@@ -2582,10 +2590,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]) :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=H],
+[data-task="<"]) :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
-[data-task=">"],
 [data-task=D],
 [data-task="?"],
 [data-task="/"],
@@ -2619,7 +2627,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]) > input:is([type=checkbox], [type=checkbox i]):checked {
+[data-task=H],
+[data-task="<"]) > input:is([type=checkbox], [type=checkbox i]):checked {
   background-color: transparent;
   font: var(--its);
   font-family: var(--its);
@@ -2632,7 +2641,6 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
-[data-task=">"],
 [data-task=D],
 [data-task="?"],
 [data-task="/"],
@@ -2666,10 +2674,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]) :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked::after, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
+[data-task=H],
+[data-task="<"]) :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked::after, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
-[data-task=">"],
 [data-task=D],
 [data-task="?"],
 [data-task="/"],
@@ -2703,10 +2711,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]) > input:is([type=checkbox], [type=checkbox i]):checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=H],
+[data-task="<"]) > input:is([type=checkbox], [type=checkbox i]):checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
-[data-task=">"],
 [data-task=D],
 [data-task="?"],
 [data-task="/"],
@@ -2740,10 +2748,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]) :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
+[data-task=H],
+[data-task="<"]) :is(.task-list-label, p) > input:is([type=checkbox], [type=checkbox i]):checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked:is([data-task=X],
 [data-task=">"],
 [data-task="-"],
-[data-task=">"],
 [data-task=D],
 [data-task="?"],
 [data-task="/"],
@@ -2777,7 +2785,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
 [data-task=a],
 [data-task="&"],
 [data-task=s],
-[data-task=H]) > input:is([type=checkbox], [type=checkbox i]):checked::after {
+[data-task=H],
+[data-task="<"]) > input:is([type=checkbox], [type=checkbox i]):checked::after {
   background-color: transparent;
   top: -4px;
   left: 0px;
@@ -2796,6 +2805,11 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] > input[type=checkbox]:checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] p > input[type=checkbox]:checked::after {
   content: "\ec03";
   color: var(--text-normal);
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="<"]::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="<"] > input[type=checkbox]:checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="<"] p > input[type=checkbox]:checked::after {
+  content: "\ec03";
+  color: var(--text-faint);
+  transform: scale(-1, 1);
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=D]::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] > input[type=checkbox]:checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] p > input[type=checkbox]:checked::after {
   content: "\ec04";
@@ -2899,7 +2913,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=O]::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=O] > input[type=checkbox]:checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=O] p > input[type=checkbox]:checked::after {
   content: "\e805";
-  color: rgb(var(--selected-rgb));
+  color: hsl(var(--interactive-accent-hsl));
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=F]::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=F] > input[type=checkbox]:checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=F] p > input[type=checkbox]:checked::after {
   content: "\ec28";
@@ -2936,7 +2950,8 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 
 /*Restore Strike Throughs*/
 .check-strike .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]), .check-strike .markdown-preview-view ul > li.task-list-item.is-checked, .check-strike .markdown-preview-view ol > li.task-list-item.is-checked {
-  text-decoration: line-through 2px;
+  --checklist-done-decoration: line-through 2px;
+  text-decoration: var(--checklist-done-decoration);
 }
 
 .checkbox-strike-regular .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x], .checkbox-strike-regular ul li[data-task=x].task-list-item.is-checked {
@@ -2948,6 +2963,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 }
 
 .checkbox-strike-frwd .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"], .checkbox-strike-frwd ul li[data-task=">"].task-list-item.is-checked {
+  text-decoration: line-through 2px;
+}
+
+.checkbox-strike-bkwd .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="<"], .checkbox-strike-bkwd ul li[data-task="<"].task-list-item.is-checked {
   text-decoration: line-through 2px;
 }
 
@@ -3096,6 +3115,10 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 .check-bg :is(ul, ol) > li[data-task=">"].task-list-item.is-checked {
   background: rgba(var(--chbx-h), 20%);
 }
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="<"],
+.check-bg :is(ul, ol) > li[data-task="<"].task-list-item.is-checked {
+  background: rgba(var(--chbx-h), 20%);
+}
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=D],
 .check-bg :is(ul, ol) > li[data-task=D].task-list-item.is-checked {
   background: rgba(var(--chbx-h), 20%);
@@ -3198,7 +3221,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=O],
 .check-bg :is(ul, ol) > li[data-task=O].task-list-item.is-checked {
-  background: rgba(var(--selected-rgb), 20%);
+  background: hsla(var(--interactive-accent-hsl), 20%);
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=F],
 .check-bg :is(ul, ol) > li[data-task=F].task-list-item.is-checked {
@@ -3245,6 +3268,9 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   opacity: 70%;
 }
 body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=">"] > span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=">"] span:not([class^=cm-list]) {
+  opacity: 70%;
+}
+body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task="<"] > span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task="<"] span:not([class^=cm-list]) {
   opacity: 70%;
 }
 body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=D] > span > *, body:not(.check-color, .check-text) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=D] span:not([class^=cm-list]) {
@@ -3358,6 +3384,9 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=">"].task-list-item.is-checked {
   color: var(--text-normal);
 }
+.check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="<"] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task="<"].task-list-item.is-checked {
+  color: var(--text-faint);
+}
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=D].task-list-item.is-checked {
   color: rgb(var(--chbx-h));
 }
@@ -3434,7 +3463,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   color: rgb(var(--chbx-R));
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=O] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=O].task-list-item.is-checked {
-  color: rgb(var(--selected-rgb));
+  color: hsl(var(--interactive-accent-hsl));
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=F] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=F].task-list-item.is-checked {
   color: rgb(var(--chbx-h));
@@ -3516,10 +3545,11 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   display: inline-block;
 }
 
-.callout:is([data-callout-metadata~=no-i],
-[data-callout-metadata~=no-icon]) > .callout-title .callout-icon {
+.callout.callout:is([data-callout-metadata~=no-i],
+[data-callout-metadata~=no-icon]) > .callout-title > .callout-icon {
   width: 0;
   height: 0;
+  --icon-size: 0;
 }
 
 .callout:is([data-callout-metadata~=n-th],
@@ -3895,8 +3925,8 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 
 /*Infobox*/
 :is(.is-mobile:not(.is-tablet),
-.is-mobile:not(.is-tablet) .is-live-preview,
-.is-live-preview) .callout[data-callout~=infobox]:not([data-callout-metadata~=mobile]) > .callout-content {
+.is-mobile .is-live-preview,
+.is-live-preview :not(.markdown-rendered)) .callout[data-callout~=infobox]:not([data-callout-metadata~=mobile]) {
   float: unset !important;
   max-width: 100%;
   margin: 0 !important;
@@ -4355,40 +4385,40 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout~=cards][data-callout-metadata~=dvl] ul {
   padding-inline-start: unset;
 }
-.callout[data-callout~=cards][data-callout-metadata~="1"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="1"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(1, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="2"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="2"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(2, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="3"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="3"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(3, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="4"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="4"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(4, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="5"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="5"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(5, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="6"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="6"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(6, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="7"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="7"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(7, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="8"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="8"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(8, 1fr);
 }
-.callout[data-callout~=cards][data-callout-metadata~="9"] :is(.dataview.table-view-table tbody,
-.callout-content) {
+.callout[data-callout~=cards][data-callout-metadata~="9"] :is(.dataview.dataview.table-view-table tbody,
+.callout-content.callout-content) {
   grid-template-columns: repeat(9, 1fr);
 }
 
@@ -4775,9 +4805,10 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
 /* Timeline */
 .callout.callout[data-callout~=timeline] {
   --callout-icon: "clock-12";
-  --callout-padding: 0px;
+  --callout-padding: 0;
   --callout-title-padding: 10px;
   --callout-content-padding: 10px;
+  --callout-margin: 0;
   --timeline-shadow: var(--outline, var(--background-modifier-box-shadow));
   --micro: 50px;
   --tiny: 100px;
@@ -4792,6 +4823,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
   margin: 0;
   border: 0;
   clear: both;
+  position: unset !important;
 }
 .callout.callout[data-callout~=timeline] .callout-title {
   background: rgba(var(--callout-color), 0.35);
@@ -4947,13 +4979,11 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
 .callout[data-callout~=aside] {
   --callout-icon: message-square;
   --callout-color: "";
+  --callout-margin: 0 -1.2em 0 5px;
   background-color: var(--aside-bg, var(--background-secondary));
   box-shadow: 0.3em 0.3em 0 var(--accent, var(--background-modifier-box-shadow)), 0 0 0 1px var(--accent, var(--background-modifier-box-shadow));
   float: right;
   position: relative;
-  margin: 0;
-  margin-right: -1.2em;
-  margin-left: 5px;
   max-width: 400px;
 }
 .callout[data-callout~=aside]:not([data-callout-metadata~=no-t]) .callout-content {
@@ -5222,6 +5252,8 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
 .callout.callout.callout {
   --callout-blend-mode: normal;
   margin: var(--callout-margin);
+  z-index: 1;
+  position: relative;
 }
 
 .internal-embed:not(.image-embed)[alt*=htiny] .markdown-embed-content {
@@ -5629,17 +5661,13 @@ img:is([alt*=ctr], [alt*=center]) {
 }
 
 /*Left & Right*/
-:not(.markdown-rendered) img:is([alt*=left], [alt*=locl]), :not(.markdown-rendered) img[src*="#locl"] img,
-:not(.markdown-rendered) .image-embed:is([alt*=left], [alt*=locl]),
-:not(.markdown-rendered) .image-embed[src*="#locl"] img {
+.markdown-rendered img:is([alt*=left], [alt*=locl]), .markdown-rendered img[src*="#locl"] img, .markdown-rendered .image-embed:is([alt*=left], [alt*=locl]), .markdown-rendered .image-embed[src*="#locl"] img {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-:not(.markdown-rendered) img:is([alt*=right], [alt*=locr]), :not(.markdown-rendered) img[src*="#locr"] img,
-:not(.markdown-rendered) .image-embed:is([alt*=right], [alt*=locr]),
-:not(.markdown-rendered) .image-embed[src*="#locr"] img {
+.markdown-rendered img:is([alt*=right], [alt*=locr]), .markdown-rendered img[src*="#locr"] img, .markdown-rendered .image-embed:is([alt*=right], [alt*=locr]), .markdown-rendered .image-embed[src*="#locr"] img {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
@@ -5767,10 +5795,6 @@ img[alt*=unclr],
   clear: none !important;
 }
 
-:not(.lp-img-float) .is-live-preview img:is([alt*=right], [alt*=locr]), :not(.lp-img-float) .is-live-preview img:is([alt*=left], [alt*=locl]), :not(.lp-img-float) .is-live-preview .image-embed:is([alt*=right], [alt*=locr]), :not(.lp-img-float) .is-live-preview .image-embed:is([alt*=left], [alt*=locl]) {
-  float: unset;
-}
-
 img:is([alt~=lp], [alt~=live-preview]):is([alt*=right], [alt*=locr]),
 .image-embed:is([alt~=lp], [alt~=live-preview]):is([alt*=right], [alt*=locr]) {
   float: right !important;
@@ -5795,8 +5819,8 @@ img:is([alt~=lp], [alt~=live-preview]):is([alt*=left], [alt*=locl]),
 }
 
 /*Banners*/
-img[alt*=banner],
-.image-embed[alt*=banner] img {
+img[alt*=banner]:not([width]),
+.image-embed[alt*=banner]:not([width]) img {
   display: block;
   object-fit: cover;
   width: 100%;
@@ -7141,10 +7165,12 @@ iframe {
 }
 
 .theme-light.wotc-beyond, .theme-light .wotc-beyond {
+  --hvr-active: rgba(182, 28, 28, 0.50);
+  --highlight: #c20a0a35;
   --outer-bar: #fbe2c5;
   --dark-sidebar: #f6e3cd;
   --side-bar: #fff6e4;
-  --note: #fffcf0;
+  --note: #fff9f0;
   --note-rgb: 255, 252, 240;
   --accent-color: 199, 89, 89;
   --accent: #c75959;
@@ -7173,6 +7199,9 @@ iframe {
 
 body.wotc-beyond .workspace-leaf-content, body.wotc-beyond .workspace-tabs, body.wotc-beyond .vertical-tab-content, body.wotc-beyond .modal.modal, body.wotc-beyond .community-modal-sidebar, body.wotc-beyond .canvas-wrapper {
   box-shadow: var(--paper-edges);
+}
+body.wotc-beyond .site-body-left-column, body.wotc-beyond .site-body-right-column, body.wotc-beyond .publish-renderer, body.wotc-beyond .graph-view-container {
+  box-shadow: var(--paper-edges-m);
 }
 
 body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
@@ -7392,7 +7421,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --theme-rainbow-5: var(--h5-color);
 }
 
-.theme-light .pathfinder, .theme-light.pathfinder .theme-light .pathfinder-remaster, .theme-light.pathfinder-remaster {
+.theme-light .pathfinder, .theme-light.pathfinder, .theme-light .pathfinder-remaster, .theme-light.pathfinder-remaster {
   /*Colors*/
   --outer-bar: #e2ded8;
   --dark-sidebar: #e2ded8;
@@ -7457,6 +7486,58 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 }
 
 /* Pathfinder Remaster */
+.theme-dark .pathfinder-remaster, .theme-dark.pathfinder-remaster {
+  --tab-outline-color: #a18f61;
+  --headers: #2f8b62;
+  --accent: #3b7b5b;
+  --dark-accent: #253f32;
+  --deep-dark-accent: var(--headers);
+  --lite-accent: #4dbb84;
+  --code-text: var(--lite-accent);
+  --tag-text: var(--lite-accent);
+  --th-text: var(--lite-accent);
+  --folder: var(--accent);
+  --folder-open: #c0a14a;
+  --file-icon-color: #887440;
+  --hvr: #4dbb8450;
+  --hr: #2d4d3d;
+  --th: var(--deep-dark-accent);
+  --lines: #304c40;
+  --theme-rainbow-1: var(--headers);
+  --theme-rainbow-2: var(--h2-color);
+  --theme-rainbow-3: var(--h3-color);
+  --theme-rainbow-4: var(--h4-color);
+}
+
+.theme-light .pathfinder-remaster, .theme-light.pathfinder-remaster {
+  --tab-outline-color: #cdac5a;
+  --hvr-active: #002a1790;
+  --hvr: #ddc4868a;
+  --highlight: #002a1730;
+  --headers: #002a17;
+  --h2-color: #4e1b0e;
+  --h3-color: #025d4e;
+  --h4-color: #000000;
+  --dark-accent: #00280a;
+  --accent: #025D4E;
+  --deep-dark-accent: #260d09;
+  --accent2-lite: #15a38b;
+  --lite-accent: #188655;
+  --code-text: var(--lite-accent);
+  --tag-text: var(--lite-accent);
+  --folder: #2b5b42;
+  --folder-open: #cba137;
+  --file-icon-color: #cab47c;
+  --th: var(--dark-accent);
+  --soft-text: #025d4e;
+  --hr: #002915;
+  --theme-rainbow-1: var(--headers);
+  --theme-rainbow-2: var(--h2-color);
+  --theme-rainbow-3: var(--h3-color);
+  --theme-rainbow-4: var(--h4-color);
+  --hr-image: "https://content.demiplane.com/compendium/pathfinder-2e/gm-core/css/Box-Decoration.png";
+}
+
 .mini {
   --font: var(--font-default);
   --background-modifier-hover: var(--td);
@@ -8421,7 +8502,6 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --dark-sidebar: #0d1014;
   --bttn: var(--dark-accent);
   --input-bg: rgba(0, 0, 0, 0.3);
-  --selected-rgb: 168, 60, 60;
   --hvr: rgba(168, 60, 60, 0.4);
   --hvr2: var(--highlight);
   --hvr-active: rgba(212, 47, 47, 0.4);
@@ -8460,7 +8540,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --progress: var(--accent);
   --progress-bg: var(--bg);
   --graph-bg: var(--outer-bar);
-  --graph-lines: rgba(var(--selected-rgb), .2);
+  --graph-lines: hsla(var(--interactive-accent-hsl), .2);
   --graph-node: var(--text);
   --graph-fill: var(--headers);
   --graph-404: #727e93;
@@ -8488,7 +8568,6 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --dark-sidebar: #f1f5ff;
   --bttn: var(--headers);
   --input-bg: var(--td);
-  --selected-rgb: 52, 123, 237;
   --hvr: rgba(255, 0, 0, 0.212);
   --hvr2: var(--highlight);
   --hvr-active:rgba(253, 115, 115, 0.4);

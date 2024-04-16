@@ -12365,6 +12365,9 @@ body.background-image .markdown-embed-content .markdown-preview-section:not(.kan
 body.wotc-beyond .workspace-leaf-content, body.wotc-beyond .workspace-tabs, body.wotc-beyond .vertical-tab-content, body.wotc-beyond .modal.modal, body.wotc-beyond .community-modal-sidebar, body.wotc-beyond .canvas-wrapper {
   box-shadow: var(--paper-edges);
 }
+body.wotc-beyond .site-body-left-column, body.wotc-beyond .site-body-right-column, body.wotc-beyond .publish-renderer, body.wotc-beyond .graph-view-container {
+  box-shadow: var(--paper-edges-m);
+}
 
 body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 .markdown-preview-view) {
@@ -13132,7 +13135,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --inline-title-weight: 500;
   --hr-icon-symbol: "", "✏";
   --hr-icon-font: var(--mdi);
-  --bullet: "";
+  --bullet: "", "✏";
   --bullet-font: var(--mdi);
   background: var(--note);
 }

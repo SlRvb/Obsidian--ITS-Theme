@@ -141,6 +141,13 @@ body.wotc-beyond {
     & .community-modal-sidebar,
     & .canvas-wrapper
     { box-shadow: var(--paper-edges); }
+
+    //Publish Site Paper Edges
+    & .site-body-left-column, 
+    & .site-body-right-column,
+    & .publish-renderer,
+    & .graph-view-container
+    { box-shadow: var(--paper-edges-m); }
 }
 
 //Note CSSClass 

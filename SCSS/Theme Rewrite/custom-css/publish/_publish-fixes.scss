@@ -67,4 +67,9 @@ body.theme-dark {
             margin: var(--page-margins);
         }
     }
+
+    //Fix File Explorer Hover Color
+    .nav-view-outer .nav-view > .tree-item > .tree-item-children > .tree-item > .tree-item-self.mod-active:hover {
+        --nav-parent-item-color-active: var(--text-on-accent);
+    }
 } 

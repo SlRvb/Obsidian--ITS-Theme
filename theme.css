@@ -134,6 +134,15 @@ settings:
         max: 20
         step: 1
     -
+        title: Sidebar Ribbon Icon Spacing
+        id: ribbon-icon-gap
+        type: variable-number-slider
+        default: 15
+        format: px
+        min: 1
+        max: 20
+        step: 1
+    -
         title: Notes
         id: ITS-Note-Sizing
         type: heading

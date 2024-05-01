@@ -848,6 +848,9 @@
   border: 2px solid var(--outline, var(--background-modifier-box-shadow));
   box-shadow: var(--shadow-ml, var(--input-shadow));
 }
+.callout[data-callout~=cards][data-callout-metadata~=dataview][data-callout-metadata~=txt-c] .dataview td {
+  text-align: center;
+}
 .callout[data-callout~=cards][data-callout-metadata~=dataview] img:not(.link-favicon) {
   width: 100%;
   object-fit: cover;

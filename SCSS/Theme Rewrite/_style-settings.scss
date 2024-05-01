@@ -91,6 +91,24 @@ settings:
         max: 4
         step: 1
     -
+        title: Status Bar Padding
+        id: status-bar-padding
+        type: variable-number-slider
+        default: 4
+        format: px
+        min: 0
+        max: 10
+        step: 1
+    -
+        title: Status Bar Spacing
+        id: status-bar-gap
+        type: variable-number-slider
+        default: 4
+        format: px
+        min: 0
+        max: 10
+        step: 1
+    -
         title: Sidebar
         id: ITS-Sizing-Sidebar
         type: heading

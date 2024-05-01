@@ -92,6 +92,24 @@ settings:
         max: 4
         step: 1
     -
+        title: Status Bar Padding
+        id: status-bar-padding
+        type: variable-number-slider
+        default: 4
+        format: px
+        min: 0
+        max: 10
+        step: 1
+    -
+        title: Status Bar Spacing
+        id: status-bar-gap
+        type: variable-number-slider
+        default: 4
+        format: px
+        min: 0
+        max: 10
+        step: 1
+    -
         title: Sidebar
         id: ITS-Sizing-Sidebar
         type: heading
@@ -3070,6 +3088,7 @@ body.theme-light {
   --clickable-icon-radius: var(--radius-s);
   --pill-radius: var(--radius-m);
   --bold-weight: 900;
+  --bold-modifier: 500;
   --font-ui-smaller: 13.5px;
   --font-ui-small: 14px;
   --font-ui-medium: 15px;
@@ -3291,6 +3310,13 @@ button.mod-cta:hover {
   --status-bar-text-color: var(--text-muted);
   --status-bar-background: var(--outer-bar);
   --status-bar-border-color: var(--accent);
+  --status-bar-gap: var(--size-4-1);
+  --status-bar-padding: var(--size-4-1);
+}
+
+.status-bar {
+  gap: var(--status-bar-gap);
+  padding: var(--status-bar-padding);
 }
 
 .theme-dark,

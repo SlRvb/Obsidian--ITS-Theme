@@ -4,5 +4,10 @@
     --status-bar-background: var(--outer-bar);
     --status-bar-border-color: var(--accent);
 
-    
+    --status-bar-gap: var(--size-4-1);
+    --status-bar-padding: var(--size-4-1);
+}
+.status-bar {
+    gap: var(--status-bar-gap);
+    padding: var(--status-bar-padding);
 }

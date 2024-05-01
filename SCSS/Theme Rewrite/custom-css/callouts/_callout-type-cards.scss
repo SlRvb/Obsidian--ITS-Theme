@@ -113,6 +113,7 @@
                 box-shadow: var(--shadow-ml, var(--input-shadow));
             }
         }
+        &[data-callout-metadata~="txt-c"] .dataview td { text-align: center; }
 
 
         //Image Sizing

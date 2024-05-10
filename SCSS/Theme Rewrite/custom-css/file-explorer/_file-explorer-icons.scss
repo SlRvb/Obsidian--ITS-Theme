@@ -7,28 +7,33 @@ body {
     --file-icon-margin: 6px;
     
     --nav-item-children-padding-left: 2px;
+    --folder-icon-open-color: var(--folder-open);
+    --folder-icon-color: var(--folder);
 }
 
 
 /*Nav Folder/File Icons*/
 .nav-folder-children .nav-folder-title .nav-folder-title-content::before,
+.nav-folder-title .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
     margin-right: var(--file-icon-margin);
     font-size: var(--nav-item-size);
     font-weight: 10;
     width: var(--nav-item-size);
+    height: var(--nav-item-size);
 }
 
 //Folder
-.nav-folder-children .nav-folder-title-content::before {
+.nav-folder-children .nav-folder-title-content::before,
+.nav-folder-title-content::before {
     content: var(--folder-icon);
     font-family: var(--folder-font);
-    color: var(--folder);
+    color: var(--folder-icon-color);
     text-align: center;
 }
-
-.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content {
-    &::before { color: var(--folder-open); } 
+.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content,
+.nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content {
+    &::before { color: var(--folder-icon-open-color); } 
     &:hover::before { color: var(--nav-item-color-active); }
 }
 

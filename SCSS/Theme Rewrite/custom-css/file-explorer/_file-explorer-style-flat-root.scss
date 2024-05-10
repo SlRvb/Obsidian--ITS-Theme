@@ -8,6 +8,7 @@
     --explorer-root-folder-background: var(--folder);
     --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
     --explorer-root-folder-color: var(--text, var(--nav-item-color));
+    --explorer-root-folder-open-background: var(--folder);
     --explorer-root-folder-open-color: var(--text-on-accent);
     --explorer-folder-open-background: var(--td, var(--background-modifier-cover));
     --explorer-folder-icon-color: var(--explorer-root-folder-background);
@@ -17,7 +18,8 @@
     --explorer-root-folder-indentation-color: var(--explorer-root-folder-background);
     
     //Root folder
-    & .nav-folder.mod-root > .nav-folder-children > .nav-folder {
+    & .nav-folder.mod-root > .nav-folder-children > .nav-folder,
+    & .nav-files-container > div > .nav-folder {
         //Opened Folder
         & > .nav-folder-children {
             //Alignment
@@ -30,22 +32,21 @@
             background-color: var(--explorer-root-background);
             --nav-indentation-guide-color: var(--explorer-root-folder-indentation-color);
         }
-        & .nav-folder-title-content::before {
-            --folder: var(--explorer-folder-icon-color);
-        }
+        // & .nav-folder-title-content::before { --folder: var(--explorer-folder-icon-color); }
 
+        //Closed Folder
         &.is-collapsed > .nav-folder-title:not(:hover) {
             background-color: var(--explorer-root-collapsed-background);
             color: var(--explorer-root-folder-color);
         }
 
-        //Root Folder Color
+        //Root Open Folder Color
         &:not(.is-collapsed) > .nav-folder-title:not(:hover) {
-            background-color: var(--explorer-root-folder-background);
+            background-color: var(--explorer-root-folder-open-background);
             border-bottom-color: var(--explorer-root-folder-background);
             color: var(--explorer-root-folder-open-color);
-            --folder-open: var(--explorer-root-folder-open-color);
-
+            --folder-icon-open-color: var(--explorer-root-folder-open-color); 
+            
             //Fix Root Arrow Coloring
             & .collapse-icon {
                 --nav-collapse-icon-color: var(--explorer-root-folder-open-color);
@@ -60,8 +61,9 @@
 
     }
     
-    // Opened Folder 
-    & .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
+    // Opened Folder     
+    & .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content,
+    & .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
         text-align: center;
         transition:cubic-bezier(1, 0, 0, 1);
         text-transform: uppercase;
@@ -76,9 +78,15 @@
             // margin-right: 0px;
         }
     }
+
     //Sub Folder Styling
-    & .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+    & .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover),
+    & .nav-folder .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
         background-color: var(--explorer-folder-open-background);
         border-bottom-color: var(--explorer-root-folder-background);
+
+        & > .nav-folder-title-content::before {
+            color: var(--folder-open-text-color);
+        }
     }
 }

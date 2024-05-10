@@ -100,6 +100,10 @@
     & .mobile-toolbar { background-color: var(--mobile-toolbar-background); }
     & .mobile-toolbar-option { color: var(--text-dl); }
     // &.theme-light { --mobile-toolbar-background: var(--accent); }
+    & .mobile-toolbar-options-container {
+        &::before, &::after { display: none; }
+    }
+
 
     & .view-header-title-container { padding-left: 0; }
     & .empty-state-action:not(:hover) { 

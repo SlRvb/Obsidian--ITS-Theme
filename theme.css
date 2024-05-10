@@ -3843,6 +3843,9 @@ body {
 .is-mobile .mobile-toolbar-option {
   color: var(--text-dl);
 }
+.is-mobile .mobile-toolbar-options-container::before, .is-mobile .mobile-toolbar-options-container::after {
+  display: none;
+}
 .is-mobile .view-header-title-container {
   padding-left: 0;
 }
@@ -6739,28 +6742,35 @@ body {
   --file-font: var(--its);
   --file-icon-margin: 6px;
   --nav-item-children-padding-left: 2px;
+  --folder-icon-open-color: var(--folder-open);
+  --folder-icon-color: var(--folder);
 }
 
 /*Nav Folder/File Icons*/
 .nav-folder-children .nav-folder-title .nav-folder-title-content::before,
+.nav-folder-title .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
   margin-right: var(--file-icon-margin);
   font-size: var(--nav-item-size);
   font-weight: 10;
   width: var(--nav-item-size);
+  height: var(--nav-item-size);
 }
 
-.nav-folder-children .nav-folder-title-content::before {
+.nav-folder-children .nav-folder-title-content::before,
+.nav-folder-title-content::before {
   content: var(--folder-icon);
   font-family: var(--folder-font);
-  color: var(--folder);
+  color: var(--folder-icon-color);
   text-align: center;
 }
 
-.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content::before {
-  color: var(--folder-open);
+.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content::before,
+.nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content::before {
+  color: var(--folder-icon-open-color);
 }
-.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content:hover::before {
+.nav-folder-children .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content:hover::before,
+.nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content:hover::before {
   color: var(--nav-item-color-active);
 }
 
@@ -6784,13 +6794,14 @@ body {
   --explorer-root-folder-background: var(--folder);
   --explorer-root-background: hsla(var(--color-accent-hsl), 0.3);
   --explorer-root-folder-color: var(--text, var(--nav-item-color));
+  --explorer-root-folder-open-background: var(--folder);
   --explorer-root-folder-open-color: var(--text-on-accent);
   --explorer-folder-open-background: var(--td, var(--background-modifier-cover));
   --explorer-folder-icon-color: var(--explorer-root-folder-background);
   --explorer-root-collapsed-background: transparent;
   --explorer-root-folder-indentation-color: var(--explorer-root-folder-background);
 }
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children, .file-explorer-flat .nav-files-container > div > .nav-folder > .nav-folder-children {
   margin: var(--explorer-root-folder-margin);
   padding-left: var(--explorer-root-folder-padding);
   border-width: var(--explorer-root-folder-indentation-width);
@@ -6799,29 +6810,26 @@ body {
   background-color: var(--explorer-root-background);
   --nav-indentation-guide-color: var(--explorer-root-folder-indentation-color);
 }
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title-content::before {
-  --folder: var(--explorer-folder-icon-color);
-}
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed > .nav-folder-title:not(:hover) {
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed > .nav-folder-title:not(:hover), .file-explorer-flat .nav-files-container > div > .nav-folder.is-collapsed > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-root-collapsed-background);
   color: var(--explorer-root-folder-color);
 }
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
-  background-color: var(--explorer-root-folder-background);
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover), .file-explorer-flat .nav-files-container > div > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+  background-color: var(--explorer-root-folder-open-background);
   border-bottom-color: var(--explorer-root-folder-background);
   color: var(--explorer-root-folder-open-color);
-  --folder-open: var(--explorer-root-folder-open-color);
+  --folder-icon-open-color: var(--explorer-root-folder-open-color);
 }
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) .collapse-icon {
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) .collapse-icon, .file-explorer-flat .nav-files-container > div > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) .collapse-icon {
   --nav-collapse-icon-color: var(--explorer-root-folder-open-color);
 }
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title, .file-explorer-flat .nav-files-container > div > .nav-folder .nav-folder-title {
   align-items: center;
 }
-.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-collapse-indicator {
+.file-explorer-flat .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-collapse-indicator, .file-explorer-flat .nav-files-container > div > .nav-folder .nav-folder-collapse-indicator {
   --nav-collapse-icon-color: var(--nav-item-color);
 }
-.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
+.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content, .file-explorer-flat .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
   text-align: center;
   transition: cubic-bezier(1, 0, 0, 1);
   text-transform: uppercase;
@@ -6829,12 +6837,15 @@ body {
   padding: 3px 0;
   width: 100%;
 }
-.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content::before {
+.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content::before, .file-explorer-flat .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content::before {
   float: left;
 }
-.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
+.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover), .file-explorer-flat .nav-folder .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) {
   background-color: var(--explorer-folder-open-background);
   border-bottom-color: var(--explorer-root-folder-background);
+}
+.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) > .nav-folder-title-content::before, .file-explorer-flat .nav-folder .nav-folder:not(.is-collapsed) > .nav-folder-title:not(:hover) > .nav-folder-title-content::before {
+  color: var(--folder-open-text-color);
 }
 
 body.folder-arrow .nav-files-container .nav-folder-title:hover .nav-folder-collapse-indicator, body.folder-arrow .nav-files-container .nav-folder-title:hover .tree-item-icon.nav-folder-collapse-indicator {

@@ -1779,7 +1779,12 @@ settings:
         title: Wide Table
         description: Tables widened to touch ends of the page
         id: tables-wide
-        type: class-toggle    
+        type: class-toggle
+    -
+        title: Unwrap Table
+        description: Unwrap tables in source mode
+        id: table-unwrap
+        type: class-toggle
     - 
         title: Disable Row Hover Highlight
         id: tables-no-hover
@@ -6036,15 +6041,18 @@ button[class^=BC] {
   padding-left: 10px;
 }
 
-.markdown-rendered.BC-matrix-view .BC-matrix-view-dir {
-  padding: var(--size-4-1) var(--size-4-3);
+.markdown-rendered.BC-matrix-view .BC-matrix-view-field {
+  padding: var(--size-4-1) var(--size-4-1) var(--size-4-3) var(--size-4-1);
   border: 2px solid var(--outline);
   border-radius: var(--radius-s);
   box-shadow: var(--shadow-m);
 }
-.markdown-rendered.BC-matrix-view .BC-matrix-view-dir .text-lg {
+.markdown-rendered.BC-matrix-view .BC-matrix-view-field .text-lg {
   font-family: var(--h1-font);
   color: var(--h1-color);
+}
+.markdown-rendered.BC-matrix-view .font-mono {
+  font-family: var(--font-monospace);
 }
 
 /* .BC-Matrix .BC-Matrix-square li::before {

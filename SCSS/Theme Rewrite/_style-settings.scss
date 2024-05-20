@@ -1778,7 +1778,12 @@ settings:
         title: Wide Table
         description: Tables widened to touch ends of the page
         id: tables-wide
-        type: class-toggle    
+        type: class-toggle
+    -
+        title: Unwrap Table
+        description: Unwrap tables in source mode
+        id: table-unwrap
+        type: class-toggle
     - 
         title: Disable Row Hover Highlight
         id: tables-no-hover

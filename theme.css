@@ -9924,6 +9924,9 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
 .callout.callout[data-callout~=kanban] .task-list-item-checkbox {
   cursor: default;
 }
+.callout.callout[data-callout~=kanban] :is(ul, ol) > li p:first-of-type {
+  margin-block-start: 0;
+}
 
 /* Timeline */
 .callout.callout[data-callout~=timeline] {

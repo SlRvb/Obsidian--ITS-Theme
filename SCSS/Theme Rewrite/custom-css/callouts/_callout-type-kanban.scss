@@ -87,4 +87,7 @@
         }
     }
     & .task-list-item-checkbox { cursor: default; }
+
+    //Fix Spaced Lists
+    & :is(ul, ol) > li p:first-of-type { margin-block-start: 0; }
 }

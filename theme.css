@@ -1968,6 +1968,10 @@ settings:
         id: canvas-cards
         type: class-toggle
     -
+        title: Milanote Styling
+        id: canvas-milanote
+        type: class-toggle
+    -
         title: Canvas Arrow Coloful Text
         id: canvas-arrow-text-color
         description: Make text on canvas arrows match the color of the arrows
@@ -5394,6 +5398,10 @@ body.theme-light {
 
 .canvas-node-connection-point::after {
   border-color: rgb(var(--canvas-color));
+}
+
+.canvas-path-label {
+  background-color: var(--canvas-background);
 }
 
 body {
@@ -10392,6 +10400,32 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
 }
 .canvas-cards .canvas-node.is-themed .canvas-node-container:hover .canvas-node-content {
   background-color: rgba(var(--canvas-color), 0.2);
+}
+
+body.canvas-milanote.canvas-milanote {
+  --canvas-background: var(--outer-bar);
+  --canvas-dot-pattern: var(--inactive);
+  --canvas-color-opacity: 0;
+  --canvas-card-shadow-size: 2px 3px 0;
+  --canvas-card-shadow-color: var(--outline);
+}
+
+.canvas-milanote .canvas-node.canvas-node-group .canvas-node-content {
+  --canvas-color-opacity: 15%;
+}
+.canvas-milanote .canvas-node .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view {
+  padding: 0 calc(var(--canvas-node-height) * 0.2);
+}
+.canvas-milanote .canvas-node.canvas-node:not(.canvas-node-group) > .canvas-node-container {
+  border-color: transparent;
+  box-shadow: var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
+}
+.canvas-milanote .canvas-node.is-focused:not(.canvas-node-group) > .canvas-node-container {
+  border-color: rgb(var(--canvas-color));
+}
+.canvas-milanote .canvas-node.is-themed:not(.canvas-node-group) > .canvas-node-container {
+  border-color: transparent;
+  box-shadow: 0 -4px 0 -0.2px rgb(var(--canvas-color)), var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
 }
 
 .canvas-arrow-text-color .canvas-path-label {

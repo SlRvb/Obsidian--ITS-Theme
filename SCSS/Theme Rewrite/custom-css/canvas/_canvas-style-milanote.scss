@@ -1,0 +1,36 @@
+body.canvas-milanote.canvas-milanote {
+    --canvas-background: var(--outer-bar);
+    --canvas-dot-pattern: var(--inactive);
+    --canvas-color-opacity: 0;
+    
+    --canvas-card-shadow-size: 2px 3px 0;
+    --canvas-card-shadow-color: var(--outline);
+}
+.canvas-milanote .canvas-node {
+    //Group
+    &.canvas-node-group .canvas-node-content { --canvas-color-opacity: 15%; }
+    // &.canvas-node-group > .canvas-node-container {
+    //     border: 3px solid rgb(var(--canvas-color));
+    //     box-shadow: none;
+    // } 
+
+
+    & .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view 
+    { padding: 0 calc(var(--canvas-node-height) * 0.2); }
+
+    //Cards
+    &.canvas-node:not(.canvas-node-group) > .canvas-node-container { 
+        border-color: transparent; 
+        box-shadow: var(--canvas-card-shadow-size) var(--canvas-card-shadow-color); 
+    }
+    &.is-focused:not(.canvas-node-group) > .canvas-node-container 
+    { border-color: rgb(var(--canvas-color)); }
+    
+    &.is-themed:not(.canvas-node-group) > .canvas-node-container 
+    { 
+        border-color: transparent;
+        box-shadow: 
+        0 -4px 0 -.2px rgb(var(--canvas-color)),
+        var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
+    }
+} 

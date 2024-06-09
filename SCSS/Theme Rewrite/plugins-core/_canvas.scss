@@ -35,7 +35,7 @@ body.theme-light {
 
 .canvas-node-placeholder { line-height: var(--line-height-tight); }
 .canvas-node-connection-point::after { border-color: rgb(var(--canvas-color)); }
-
+.canvas-path-label { background-color: var(--canvas-background); }
 
 
 //Canvas Embed Sizing

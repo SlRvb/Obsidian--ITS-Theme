@@ -10469,9 +10469,6 @@ body.canvas-milanote.canvas-milanote {
 .canvas-milanote .canvas-node.canvas-node-group .canvas-node-content {
   --canvas-color-opacity: 15%;
 }
-.canvas-milanote .canvas-node .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view {
-  padding: 0 calc(var(--canvas-node-height) * 0.2);
-}
 .canvas-milanote .canvas-node.canvas-node:not(.canvas-node-group) > .canvas-node-container {
   border-color: transparent;
   box-shadow: var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);

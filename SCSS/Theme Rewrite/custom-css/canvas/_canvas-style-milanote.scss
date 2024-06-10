@@ -15,8 +15,8 @@ body.canvas-milanote.canvas-milanote {
     // } 
 
 
-    & .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view 
-    { padding: 0 calc(var(--canvas-node-height) * 0.2); }
+    // & .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view 
+    // { padding: 0 calc(var(--canvas-node-height) * 0.2); }
 
     //Cards
     &.canvas-node:not(.canvas-node-group) > .canvas-node-container { 

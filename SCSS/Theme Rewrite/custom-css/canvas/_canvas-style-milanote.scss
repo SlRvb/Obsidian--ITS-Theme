@@ -15,22 +15,22 @@ body.canvas-milanote.canvas-milanote {
     // } 
 
 
-    // & .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view 
-    // { padding: 0 calc(var(--canvas-node-height) * 0.2); }
+    & .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view 
+    { padding: 0 var(--size-4-4); }
 
     //Cards
-    &.canvas-node:not(.canvas-node-group) > .canvas-node-container { 
+    &.canvas-node:not(.canvas-node-group, .is-focused) > .canvas-node-container { 
         border-color: transparent; 
         box-shadow: var(--canvas-card-shadow-size) var(--canvas-card-shadow-color); 
     }
-    &.is-focused:not(.canvas-node-group) > .canvas-node-container 
-    { border-color: rgb(var(--canvas-color)); }
+    // &.is-focused:not(.canvas-node-group) > .canvas-node-container 
+    // { border-color: rgb(var(--canvas-color)); }
     
     &.is-themed:not(.canvas-node-group) > .canvas-node-container 
     { 
         border-color: transparent;
         box-shadow: 
-        0 -4px 0 -.2px rgb(var(--canvas-color)),
+        0 -4px 0 -.4px rgb(var(--canvas-color)),
         var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
     }
 } 

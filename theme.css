@@ -10469,16 +10469,16 @@ body.canvas-milanote.canvas-milanote {
 .canvas-milanote .canvas-node.canvas-node-group .canvas-node-content {
   --canvas-color-opacity: 15%;
 }
-.canvas-milanote .canvas-node.canvas-node:not(.canvas-node-group) > .canvas-node-container {
+.canvas-milanote .canvas-node .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view {
+  padding: 0 var(--size-4-4);
+}
+.canvas-milanote .canvas-node.canvas-node:not(.canvas-node-group, .is-focused) > .canvas-node-container {
   border-color: transparent;
   box-shadow: var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
 }
-.canvas-milanote .canvas-node.is-focused:not(.canvas-node-group) > .canvas-node-container {
-  border-color: rgb(var(--canvas-color));
-}
 .canvas-milanote .canvas-node.is-themed:not(.canvas-node-group) > .canvas-node-container {
   border-color: transparent;
-  box-shadow: 0 -4px 0 -0.2px rgb(var(--canvas-color)), var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
+  box-shadow: 0 -4px 0 -0.4px rgb(var(--canvas-color)), var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
 }
 
 .canvas-arrow-text-color .canvas-path-label {

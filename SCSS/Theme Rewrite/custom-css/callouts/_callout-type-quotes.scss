@@ -13,7 +13,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
     box-shadow: var(--shadow-l);
     
     & > .callout-content {
-        padding: 0;
+        // padding: 0;
         overflow: hidden;
 
         & p {            
@@ -32,9 +32,8 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
         & > .callout-icon { height: 0; width: 0; }
     }
     & > .callout-title-inner::before { content: "~ "; }
-}
 
-.callout.callout[data-callout="quote"] {
+
     
     //Author Bottom Right Styling
     &[data-callout-metadata~="author"] {
@@ -51,7 +50,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
         box-shadow: var(--shadow-l);
         
         & .callout-content {
-            padding: 0;
+            // padding: 0;
 
             overflow: hidden;
             
@@ -87,7 +86,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
     }
 
     &[data-callout-metadata~="mark"] {
-        --callout-padding: 20px 40px 20px 30px;
+        --callout-content-padding: 0 30px 0 0;
 
         & .callout-content::before {
             display: block;
@@ -99,7 +98,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
             transform: scale(4);
 
             position: absolute;
-            right: 50px;
+            right: 40px;
             margin-top: 20px;
         }
     }

@@ -4,4 +4,32 @@
     color: var(--inactive, var(--faint-text));
     display: block;
     text-align: center;
+    // display: flex;
+}
+
+.image-embed[src*="#cap"] {
+    // width: attr(width px, inherit);
+    & img { float: unset !important; object-fit: cover; }
+    
+
+    &[src*="hmicro"] img    { height: var(--micro); }
+    &[src*="htiny"]  img    { height: var(--tiny); }
+    &[src*="hsmall"] img    { height: var(--small); }
+    &[src*="hs-med"] img    { height: var(--small-med); }
+    &[src*="hm-sm"]  img    { height: var(--med-small); }
+    &[src*="hmed"]   img    { height: var(--medium); }
+    &[src*="hm-tl"]  img    { height: var(--med-tall); }
+    &[src*="htall"]  img    { height: var(--tall); }
+    &[src*="hfull"]  img    { height: 100%; }
+
+
+    &[src*="wmicro"],   &[src*="wmicro"]    img { width: var(--micro); }
+    &[src*="wtiny"],    &[src*="wtiny"]     img { width: var(--tiny); }
+    &[src*="wsmall"],   &[src*="wsmall"]    img { width: var(--small); }
+    &[src*="ws-med"],   &[src*="ws-med"]    img { width: var(--small-med); }
+    &[src*="wm-sm"],    &[src*="wm-sm"]     img { width: var(--med-small); }
+    &[src*="wmed"],     &[src*="wmed"]      img { width: var(--medium); }
+    &[src*="wm-tl"],    &[src*="wm-tl"]     img { width: var(--med-tall); }
+    &[src*="wtall"],    &[src*="wtall"]     img { width: var(--tall); }
+    &[src*="wfull"],    &[src*="wfull"]     img { width: 100%; }
 }

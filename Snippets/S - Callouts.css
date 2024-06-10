@@ -1313,6 +1313,9 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
 .callout.callout[data-callout~=kanban] .task-list-item-checkbox {
   cursor: default;
 }
+.callout.callout[data-callout~=kanban] :is(ul, ol) > li p:first-of-type {
+  margin-block-start: 0;
+}
 
 /* Timeline */
 .callout.callout[data-callout~=timeline] {
@@ -1593,7 +1596,6 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
   box-shadow: var(--shadow-l);
 }
 body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote] > .callout-content {
-  padding: 0;
   overflow: hidden;
 }
 body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote] > .callout-content p:first-child {
@@ -1616,8 +1618,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
 body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote] > .callout-title-inner::before {
   content: "~ ";
 }
-
-.callout.callout[data-callout=quote][data-callout-metadata~=author] {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] {
   --callout-icon: "";
   --callout-color: var(--color-accent);
   --callout-padding: 20px 30px;
@@ -1627,34 +1628,33 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
   flex-direction: column-reverse;
   box-shadow: var(--shadow-l);
 }
-.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content {
-  padding: 0;
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content {
   overflow: hidden;
 }
-.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content p:first-child {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content p:first-child {
   margin-block-start: 0;
 }
-.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content p:last-child {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-content p:last-child {
   margin-block-end: 0;
 }
-.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-icon {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-icon {
   height: 0;
   width: 0;
 }
-.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-title {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-title {
   background: transparent;
   text-align: right;
   padding-top: 5px;
   padding-right: 0;
   display: block;
 }
-.callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-title-inner::before {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] .callout-title-inner::before {
   content: "~ ";
 }
-.callout.callout[data-callout=quote][data-callout-metadata~=mark] {
-  --callout-padding: 20px 40px 20px 30px;
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=mark] {
+  --callout-content-padding: 0 30px 0 0;
 }
-.callout.callout[data-callout=quote][data-callout-metadata~=mark] .callout-content::before {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=mark] .callout-content::before {
   display: block;
   float: right;
   content: "”";
@@ -1662,7 +1662,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
   color: var(--headers);
   transform: scale(4);
   position: absolute;
-  right: 50px;
+  right: 40px;
   margin-top: 20px;
 }
 

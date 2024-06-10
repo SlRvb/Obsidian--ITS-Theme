@@ -210,17 +210,13 @@ img:is([alt*=ctr], [alt*=center]) {
 }
 
 /*Left & Right*/
-:not(.markdown-rendered) img:is([alt*=left], [alt*=locl]), :not(.markdown-rendered) img[src*="#locl"] img,
-:not(.markdown-rendered) .image-embed:is([alt*=left], [alt*=locl]),
-:not(.markdown-rendered) .image-embed[src*="#locl"] img {
+.markdown-rendered img:is([alt*=left], [alt*=locl]), .markdown-rendered img:is([src*="#left"], [src*="#locl"]), .markdown-rendered .image-embed:is([alt*=left], [alt*=locl]), .markdown-rendered .image-embed:is([src*="#left"], [src*="#locl"]) {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-:not(.markdown-rendered) img:is([alt*=right], [alt*=locr]), :not(.markdown-rendered) img[src*="#locr"] img,
-:not(.markdown-rendered) .image-embed:is([alt*=right], [alt*=locr]),
-:not(.markdown-rendered) .image-embed[src*="#locr"] img {
+.markdown-rendered img:is([alt*=right], [alt*=locr]), .markdown-rendered img:is([src*="#right"], [src*="#locr"]), .markdown-rendered .image-embed:is([alt*=right], [alt*=locr]), .markdown-rendered .image-embed:is([src*="#right"], [src*="#locr"]) {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
@@ -348,10 +344,6 @@ img[alt*=unclr],
   clear: none !important;
 }
 
-:not(.lp-img-float) .is-live-preview img:is([alt*=right], [alt*=locr]), :not(.lp-img-float) .is-live-preview img:is([alt*=left], [alt*=locl]), :not(.lp-img-float) .is-live-preview .image-embed:is([alt*=right], [alt*=locr]), :not(.lp-img-float) .is-live-preview .image-embed:is([alt*=left], [alt*=locl]) {
-  float: unset;
-}
-
 img:is([alt~=lp], [alt~=live-preview]):is([alt*=right], [alt*=locr]),
 .image-embed:is([alt~=lp], [alt~=live-preview]):is([alt*=right], [alt*=locr]) {
   float: right !important;
@@ -376,8 +368,8 @@ img:is([alt~=lp], [alt~=live-preview]):is([alt*=left], [alt*=locl]),
 }
 
 /*Banners*/
-img[alt*=banner],
-.image-embed[alt*=banner] img {
+img[alt*=banner]:not([width]),
+.image-embed[alt*=banner]:not([width]) img {
   display: block;
   object-fit: cover;
   width: 100%;
@@ -493,6 +485,65 @@ img[alt~=border],
   color: var(--inactive, var(--faint-text));
   display: block;
   text-align: center;
+}
+
+.image-embed[src*="#cap"] img {
+  float: unset !important;
+  object-fit: cover;
+}
+.image-embed[src*="#cap"][src*=hmicro] img {
+  height: var(--micro);
+}
+.image-embed[src*="#cap"][src*=htiny] img {
+  height: var(--tiny);
+}
+.image-embed[src*="#cap"][src*=hsmall] img {
+  height: var(--small);
+}
+.image-embed[src*="#cap"][src*=hs-med] img {
+  height: var(--small-med);
+}
+.image-embed[src*="#cap"][src*=hm-sm] img {
+  height: var(--med-small);
+}
+.image-embed[src*="#cap"][src*=hmed] img {
+  height: var(--medium);
+}
+.image-embed[src*="#cap"][src*=hm-tl] img {
+  height: var(--med-tall);
+}
+.image-embed[src*="#cap"][src*=htall] img {
+  height: var(--tall);
+}
+.image-embed[src*="#cap"][src*=hfull] img {
+  height: 100%;
+}
+.image-embed[src*="#cap"][src*=wmicro], .image-embed[src*="#cap"][src*=wmicro] img {
+  width: var(--micro);
+}
+.image-embed[src*="#cap"][src*=wtiny], .image-embed[src*="#cap"][src*=wtiny] img {
+  width: var(--tiny);
+}
+.image-embed[src*="#cap"][src*=wsmall], .image-embed[src*="#cap"][src*=wsmall] img {
+  width: var(--small);
+}
+.image-embed[src*="#cap"][src*=ws-med], .image-embed[src*="#cap"][src*=ws-med] img {
+  width: var(--small-med);
+}
+.image-embed[src*="#cap"][src*=wm-sm], .image-embed[src*="#cap"][src*=wm-sm] img {
+  width: var(--med-small);
+}
+.image-embed[src*="#cap"][src*=wmed], .image-embed[src*="#cap"][src*=wmed] img {
+  width: var(--medium);
+}
+.image-embed[src*="#cap"][src*=wm-tl], .image-embed[src*="#cap"][src*=wm-tl] img {
+  width: var(--med-tall);
+}
+.image-embed[src*="#cap"][src*=wtall], .image-embed[src*="#cap"][src*=wtall] img {
+  width: var(--tall);
+}
+.image-embed[src*="#cap"][src*=wfull], .image-embed[src*="#cap"][src*=wfull] img {
+  width: 100%;
 }
 
 .mobile-image-viewer img[alt][alt][alt] {

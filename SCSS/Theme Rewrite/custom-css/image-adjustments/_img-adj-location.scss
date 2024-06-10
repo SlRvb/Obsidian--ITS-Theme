@@ -22,7 +22,7 @@ img:is([alt*="ctr"], [alt*="center"]) {
     & img,
     & .image-embed {
         &:is([alt*="left"], [alt*="locl"]),
-        &[src*="#locl"] img 
+        &:is([src*="#left"], [src*="#locl"])
         {
             float:left;
             margin-right: 2%;
@@ -31,7 +31,7 @@ img:is([alt*="ctr"], [alt*="center"]) {
         }
     
         &:is([alt*="right"], [alt*="locr"]),
-        &[src*="#locr"] img 
+        &:is([src*="#right"], [src*="#locr"])
         {
             float:right;
             margin-left: 2%;

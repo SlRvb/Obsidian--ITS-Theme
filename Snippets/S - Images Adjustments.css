@@ -487,6 +487,9 @@ img[alt~=border],
   text-align: center;
 }
 
+.image-embed[src*="#cap"] {
+  display: inline-block;
+}
 .image-embed[src*="#cap"] img {
   float: unset !important;
   object-fit: cover;

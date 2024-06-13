@@ -8,10 +8,11 @@
 }
 
 .image-embed[src*="#cap"] {
-    // width: attr(width px, inherit);
+    display: inline-block;
     & img { float: unset !important; object-fit: cover; }
     
-
+    // width: attr(width px, inherit);
+    
     &[src*="#hmicro"] img    { height: var(--micro); }
     &[src*="#htiny"]  img    { height: var(--tiny); }
     &[src*="#hsmall"] img    { height: var(--small); }

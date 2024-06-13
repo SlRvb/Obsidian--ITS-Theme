@@ -4330,6 +4330,10 @@ h6 > .markdown-embed .markdown-rendered,
   font-family: var(--font-text);
 }
 
+.markdown-preview-view .heading-collapse-indicator {
+  z-index: 2;
+}
+
 body {
   --pane-background: var(--note);
   --font-ligatures: none;

@@ -285,3 +285,6 @@ h#{$num}, .is-live-preview .HyperMD-header-#{$num} {
     }
 }
 
+.markdown-preview-view .heading-collapse-indicator {
+    z-index: 2;
+}

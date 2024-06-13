@@ -2098,6 +2098,14 @@ settings:
         default-dark: '#bf5e5e'
         default-light: '#c14343'
     -
+        title: "Math Text Color"
+        description: "Mathjax/Latex color change"
+        id: latex-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#e06c75'
+        default-light: '#a35158'
+    -
         title: Workspace
         description: Recolor some UI colors
         id: Workspace-Colors

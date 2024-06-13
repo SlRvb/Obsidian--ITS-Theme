@@ -2099,6 +2099,14 @@ settings:
         default-dark: '#bf5e5e'
         default-light: '#c14343'
     -
+        title: "Math Text Color"
+        description: "Mathjax/Latex color change"
+        id: latex-color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#e06c75'
+        default-light: '#a35158'
+    -
         title: Workspace
         description: Recolor some UI colors
         id: Workspace-Colors
@@ -7373,62 +7381,65 @@ img[alt~=border],
   text-align: center;
 }
 
+.image-embed[src*="#cap"] {
+  display: inline-block;
+}
 .image-embed[src*="#cap"] img {
   float: unset !important;
   object-fit: cover;
 }
-.image-embed[src*="#cap"][src*=hmicro] img {
+.image-embed[src*="#cap"][src*="#hmicro"] img {
   height: var(--micro);
 }
-.image-embed[src*="#cap"][src*=htiny] img {
+.image-embed[src*="#cap"][src*="#htiny"] img {
   height: var(--tiny);
 }
-.image-embed[src*="#cap"][src*=hsmall] img {
+.image-embed[src*="#cap"][src*="#hsmall"] img {
   height: var(--small);
 }
-.image-embed[src*="#cap"][src*=hs-med] img {
+.image-embed[src*="#cap"][src*="#hs-med"] img {
   height: var(--small-med);
 }
-.image-embed[src*="#cap"][src*=hm-sm] img {
+.image-embed[src*="#cap"][src*="#hm-sm"] img {
   height: var(--med-small);
 }
-.image-embed[src*="#cap"][src*=hmed] img {
+.image-embed[src*="#cap"][src*="#hmed"] img {
   height: var(--medium);
 }
-.image-embed[src*="#cap"][src*=hm-tl] img {
+.image-embed[src*="#cap"][src*="#hm-tl"] img {
   height: var(--med-tall);
 }
-.image-embed[src*="#cap"][src*=htall] img {
+.image-embed[src*="#cap"][src*="#htall"] img {
   height: var(--tall);
 }
-.image-embed[src*="#cap"][src*=hfull] img {
+.image-embed[src*="#cap"][src*="#hfull"] img {
   height: 100%;
 }
-.image-embed[src*="#cap"][src*=wmicro], .image-embed[src*="#cap"][src*=wmicro] img {
+.image-embed[src*="#cap"][src*="#wmicro"], .image-embed[src*="#cap"][src*="#wmicro"] img {
   width: var(--micro);
 }
-.image-embed[src*="#cap"][src*=wtiny], .image-embed[src*="#cap"][src*=wtiny] img {
+.image-embed[src*="#cap"][src*="#wtiny"], .image-embed[src*="#cap"][src*="#wtiny"] img {
   width: var(--tiny);
 }
-.image-embed[src*="#cap"][src*=wsmall], .image-embed[src*="#cap"][src*=wsmall] img {
+.image-embed[src*="#cap"][src*="#wsmall"], .image-embed[src*="#cap"][src*="#wsmall"] img {
   width: var(--small);
 }
-.image-embed[src*="#cap"][src*=ws-med], .image-embed[src*="#cap"][src*=ws-med] img {
+.image-embed[src*="#cap"][src*="#ws-med"], .image-embed[src*="#cap"][src*="#ws-med"] img {
   width: var(--small-med);
 }
-.image-embed[src*="#cap"][src*=wm-sm], .image-embed[src*="#cap"][src*=wm-sm] img {
+.image-embed[src*="#cap"][src*="#wm-sm"], .image-embed[src*="#cap"][src*="#wm-sm"] img {
   width: var(--med-small);
 }
-.image-embed[src*="#cap"][src*=wmed], .image-embed[src*="#cap"][src*=wmed] img {
+.image-embed[src*="#cap"][src*="#wmed"], .image-embed[src*="#cap"][src*="#wmed"] img {
   width: var(--medium);
 }
-.image-embed[src*="#cap"][src*=wm-tl], .image-embed[src*="#cap"][src*=wm-tl] img {
+.image-embed[src*="#cap"][src*="#wm-tl"], .image-embed[src*="#cap"][src*="#wm-tl"] img {
   width: var(--med-tall);
 }
-.image-embed[src*="#cap"][src*=wtall], .image-embed[src*="#cap"][src*=wtall] img {
+.image-embed[src*="#cap"][src*="#wtall"], .image-embed[src*="#cap"][src*="#wtall"] img {
   width: var(--tall);
 }
-.image-embed[src*="#cap"][src*=wfull], .image-embed[src*="#cap"][src*=wfull] img {
+.image-embed[src*="#cap"][src*="#wfull"], .image-embed[src*="#cap"][src*="#wfull"] img {
   width: 100%;
 }
 

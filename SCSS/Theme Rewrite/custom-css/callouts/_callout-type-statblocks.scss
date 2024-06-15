@@ -1,6 +1,5 @@
-
-
-.callout.callout[data-callout=statblocks] {
+@use "utils";
+@include utils.select-by-data-callout(2, "statblocks") {
     --callout-color: unset;
     --callout-icon: swords;
 
@@ -12,33 +11,36 @@
         --heading-spacing-top: 0;
         --heading-spacing-bottom: 0;
         --p-spacing: 7px;
-    
+
         --bold-color: var(--headers, var(--h1-color));
-        --hr-icon-symbol: '';
+        --hr-icon-symbol: "";
     }
-        
+
     margin: var(--callout-margin);
     min-width: 10ch;
     max-width: 42ch;
     border-top: 5px solid var(--hr, var(--hr-color));
     border-bottom: 5px solid var(--hr, var(--hr-color));
-    box-shadow: 
-        var(--shadow-l), 
+    box-shadow:
+        var(--shadow-l),
         0 0 20px var(--outline, var(--hr-color));
-    
-    
+
     //Element Styling
-    & h1 { width: auto; }
-    & img:not([class]) { 
-        box-shadow: 0 0 0 4px var(--headers, var(--background-modifier-border)); 
+    & h1 {
+        width: auto;
+    }
+    & img:not([class]) {
+        box-shadow: 0 0 0 4px var(--headers, var(--background-modifier-border));
         margin-right: 4px;
     }
 
     & h1::after,
     & h1::before,
-    & > .callout-title { display: none; }
+    & > .callout-title {
+        display: none;
+    }
 
-    & blockquote {         
+    & blockquote {
         --blockquote-border-thickness: 0;
         --blockquote-padding: 5px 0px 2px 0;
         --blockquote-color: var(--soft-text, var(--text-faint));
@@ -48,13 +50,15 @@
         margin-block-end: 0;
     }
 
-    & hr { margin: 12px auto; }
-    
+    & hr {
+        margin: 12px auto;
+    }
+
     & table {
         --table-header-background: transparent;
         --table-header-color: var(--headers, var(--text-faint));
         --table-header-border-color: transparent;
-    
+
         --table-row-alt-background: transparent;
         --table-column-alt-background: transparent;
         --table-border-color: transparent;
@@ -62,29 +66,31 @@
         --table-cell-padding-x: 4px;
         --table-header-padding-y: 1px;
         --table-header-padding-x: 4px;
-    
+
         --table-style-column-header-background: transparent;
         --table-style-column-header-bold-weight: var(--text-weight);
         --table-style-column-header-bold-color: var(--text, var(--text-normal));
-    
+
         margin: 12px auto;
         width: unset;
     }
 
-
     // Alt Styling
-    &[data-callout-metadata~="full"] { max-width: 100%; }
-    
+    &[data-callout-metadata~="full"] {
+        max-width: 100%;
+    }
+
     &[data-callout-metadata~="columns"] {
         max-width: 100%;
-        
+
         --columns: 2;
         @for $i from 1 through 9 {
-            &[data-callout-metadata~="#{$i}"] { --columns: #{$i}; }
+            &[data-callout-metadata~="#{$i}"] {
+                --columns: #{$i};
+            }
         }
 
         & > .callout-content {
-    
             display: grid;
             grid-template-columns: repeat(var(--columns), 1fr);
             gap: 15px;
@@ -92,9 +98,6 @@
             // & > .callout .callout-content { overflow-x: hidden; }
         }
     }
-
-
-
 
     // Game Styling
     //Dungeons & Dragons
@@ -104,6 +107,4 @@
     // ) {
 
     // }
-
 }
-

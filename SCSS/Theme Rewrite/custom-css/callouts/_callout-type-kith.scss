@@ -1,8 +1,8 @@
 .callout[data-callout="kith"] {
     --callout-icon: user;
     --callout-color: 115, 167, 202;
-    
-    border-color: rgba(var(--callout-color), .7);
+
+    border-color: rgba(var(--callout-color), 0.7);
 
     & .callout-title-inner {
         font-weight: unset;
@@ -24,21 +24,42 @@
         }
     }
 
-
     //Types
     &[data-callout-metadata="family"] {
         --callout-icon: users;
     }
-    &[data-callout-metadata="friend"] {
-        --callout-icon: user-check;
-        --callout-color: 115, 202, 144;
+
+    $callout-type-to-color: (
+        "friend": (
+            "color": (
+                115,
+                202,
+                144
+            ),
+            "icon": user-check
+        ),
+        "romantic": (
+            "color": (
+                202,
+                115,
+                180
+            ),
+            "icon": user-plus
+        ),
+        "antagonist": (
+            "color": (
+                241,
+                74,
+                74
+            ),
+            "icon": user-x
+        )
+    );
+
+    @each $type, $props in $callout-type-to-color {
+        &[data-callout-metadata="#{$type}"] {
+            --callout-icon: #{map-get($props, "icon")};
+            --callout-color: #{map-get($props, "color")};
+        }
     }
-    &[data-callout-metadata="romantic"] {
-        --callout-icon: user-plus;
-        --callout-color: 202, 115, 180;
-    }
-    &[data-callout-metadata="antagonist"] {
-        --callout-icon: user-x;
-        --callout-color: 241, 74, 74;
-    } 
 }

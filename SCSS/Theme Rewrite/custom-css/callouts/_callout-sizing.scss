@@ -1,5 +1,6 @@
+@use "utils";
 
-.callout.callout.callout {
+@include utils.repeat-selector(".callout", 3) {
     --callout-micro: 10%;
     --callout-tiny: 20%;
     --callout-small: 30%;
@@ -8,27 +9,52 @@
     --callout-medium: 60%;
     --callout-med-tall: 80%;
     --callout-tall: 95%;
-
-    &[data-callout-metadata~="wmicro"]   { max-width: unset; width: var(--callout-micro); }
-    &[data-callout-metadata~="wtiny"]    { max-width: unset; width: var(--callout-tiny); }
-    &[data-callout-metadata~="wsmall"]   { max-width: unset; width: var(--callout-small); }
-    &[data-callout-metadata~="ws-med"]   { max-width: unset; width: var(--callout-small-med); }
-    &[data-callout-metadata~="wm-sm"]    { max-width: unset; width: var(--callout-med-small); }
-    &[data-callout-metadata~="wmed"]     { max-width: unset; width: var(--callout-medium); }
-    &[data-callout-metadata~="wm-tl"]    { max-width: unset; width: var(--callout-med-tall); }
-    &[data-callout-metadata~="wtall"]    { max-width: unset; width: var(--callout-tall); }
-    &[data-callout-metadata~="sban"],
-    &[data-callout-metadata~="wfull"]    { width: 100%; float: unset; max-width: 100%; }
-
-    &[data-callout-metadata~="wtiny-c"]    { width: 19%; }
-    &[data-callout-metadata~="wsmall-c"]   { width: 32.4%; }
-    &[data-callout-metadata~="ws-med-c"]   { width: 39%; }
-    &[data-callout-metadata~="wm-sm-c"]    { width: 49%; }
-    &[data-callout-metadata~="wmed-c"]     { width: 59%; }
-    &[data-callout-metadata~="wm-tl-c"]    { width: 79%; }
-    &[data-callout-metadata~="wfit"]       { width: fit-content; max-width: min-content; }
 }
-.callout.callout[data-callout-metadata~="static"] {
+
+$callout-type-to-width: (
+    wmicro: --callout-micro,
+    wtiny: --callout-tiny,
+    wsmall: --callout-small,
+    ws-med: --callout-small-med,
+    wm-sm: --callout-med-small,
+    wmed: --callout-medium,
+    wm-tl: --callout-med-tall,
+    wtall: --callout-tall
+);
+
+@each $type, $width in $callout-type-to-width {
+    @include utils.select-by-callout-metadata(3, #{$type}) {
+        max-width: unset;
+        width: var(#{$width});
+    }
+}
+
+@include utils.select-by-callout-metadata(3, "sban", "wfull") {
+    width: 100%;
+    float: unset;
+    max-width: 100%;
+}
+
+$callout-type-to-width-c: (
+    wtiny-c: 19%,
+    wsmall-c: 32.4%,
+    ws-med-c: 39%,
+    wm-sm-c: 49%,
+    wmed-c: 59%,
+    wm-tl-c: 79%
+);
+
+@each $type, $width in $callout-type-to-width-c {
+    @include utils.select-by-callout-metadata(3, #{$type}) {
+        width: #{$width};
+    }
+}
+
+@include utils.select-by-callout-metadata(3, "wfit") {
+    width: fit-content;
+    max-width: min-content;
+}
+@include utils.select-by-callout-metadata(2, "static") {
     --callout-micro: 50px;
     --callout-tiny: 100px;
     --callout-small: 200px;
@@ -39,20 +65,14 @@
     --callout-tall: 700px;
 }
 
+$padding-type-to-value: (
+    (content-padding-small, c-p-sm): 6px,
+    (content-padding-medium, c-p-med): 12px,
+    (content-padding-large, c-p-lg): 24px
+);
 
-//Padding Sizing
-.callout.callout:is(
-    [data-callout-metadata~="content-padding-small"],
-    [data-callout-metadata~="c-p-sm"]
-) { --callout-content-padding: 6px; }
-
-.callout.callout:is(
-    [data-callout-metadata~="content-padding-medium"],
-    [data-callout-metadata~="c-p-med"]
-) { --callout-content-padding: 12px; }
-
-.callout.callout:is(
-    [data-callout-metadata~="content-padding-large"],
-    [data-callout-metadata~="c-p-lg"]
-) { --callout-content-padding: 24px; }
-
+@each $padding-type, $padding-value in $padding-type-to-value {
+    @include utils.select-by-callout-metadata(2, $padding-type...) {
+        padding: $padding-value;
+    }
+}

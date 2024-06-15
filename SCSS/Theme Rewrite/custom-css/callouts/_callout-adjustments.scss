@@ -1,28 +1,26 @@
+@use "utils";
 
-// No Title
-.callout.callout.callout.callout:is(
-    [data-callout-metadata~="no-t"], 
-    [data-callout-metadata~="no-title"]
-) > .callout-title { display: none; }
+@include utils.select-by-callout-metadata(4, "no-t", "no-title") {
+    & > .callout-title {
+        display: none;
+    }
+}
 
-// Show Title
-.callout.callout.callout.callout:is(
-    [data-callout-metadata~="s-t"], 
-    [data-callout-metadata~="show-title"]
-) {
-    & > .callout-title { display: flex; }
-    
-    & > .callout-content > p { margin-top: 0; }
-} 
-// Subtitle
-.callout.callout.callout.callout:is(
-    [data-callout-metadata~="subtitle"], 
-    [data-callout-metadata~="subt"]
-) {
+@include utils.select-by-callout-metadata(4, "s-t", "show-title") {
+    & > .callout-title {
+        display: flex;
+    }
+
+    & > .callout-content > p {
+        margin-top: 0;
+    }
+}
+
+@include utils.select-by-callout-metadata(4, "subtitle", "subt") {
     & .callout-title {
         align-content: center;
         align-items: center;
-        
+
         & em {
             display: block;
             font-style: normal;
@@ -38,58 +36,57 @@
     }
 }
 
-
-
 // No Icon
-.callout.callout:is(
-    [data-callout-metadata~="no-i"], 
-    [data-callout-metadata~="no-icon"]
-) > .callout-title > .callout-icon { 
-    width: 0; height: 0; 
-    --icon-size: 0;
+@include utils.select-by-callout-metadata(2, "no-i", "no-icon") {
+    & > .callout-title > .callout-icon {
+        width: 0;
+        height: 0;
+        --icon-size: 0;
+    }
 } // For Export
 
-
-
 //No Table Header
-.callout:is(
-    [data-callout-metadata~="n-th"], 
-    [data-callout-metadata~="no-table-header"]
-) > .callout-content {
-    & table { 
-        margin-bottom: 5px; 
-        
+
+@include utils.select-by-callout-metadata(1, "n-th", "no-table-header") {
+    & .callout-content table {
+        margin-bottom: 5px;
+
         & thead,
-        & th { display: none; }
+        & th {
+            display: none;
+        }
     }
 }
+
 //Wide Table
-.callout:is(
-    [data-callout-metadata~="t-w"], 
-    [data-callout-metadata~="table-wide"]
-) {
-    & table { 
-        width: 100%; 
-        
-        & td { width: calc(var(--tbl-w) / 2); }
+@include utils.select-by-callout-metadata(1, "t-w", "table-wide") {
+    & table {
+        width: 100%;
+
+        & td {
+            width: calc(var(--tbl-w) / 2);
+        }
     }
-} 
-//Table Text Alignment
-.callout[data-callout-metadata~="table-cell-top"] table td 
-{ vertical-align: top; }
-//Table Margins
-.callout.callout:is(
-    [data-callout-metadata~=t-nmg],
-    [data-callout-metadata~=table-no-margin]
-) table {
-    margin-block-start: 0;
-    margin-block-end: 0;
 }
+//Table Text Alignment
 
+@include utils.select-by-callout-metadata(1, "table-cell-top") {
+    & table td {
+        vertical-align: top;
+    }
+}
+//Table Margins
 
+@include utils.select-by-callout-metadata(2, "t-nmg", "table-no-margin") {
+    & table {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+}
 
 //Expand for Embed
-.callout[data-callout-metadata~="embed"] {
+
+@include utils.select-by-callout-metadata(1, "embed") {
     & .callout-content,
     & > .callout-content > p {
         margin: 0;
@@ -97,25 +94,22 @@
     }
 }
 
-
-
-
 //Collapse
-.callout[data-callout-metadata~="collapse"] * {
-    margin: 0 !important;
-    padding: 0 !important;
-    grid-gap: 0 !important;
+@include utils.select-by-callout-metadata(1, "collapse") {
+    & * {
+        margin: 0 !important;
+        padding: 0 !important;
+        grid-gap: 0 !important;
+    }
 }
 
 //Borderless
-.callout.callout.callout:is(
-    [data-callout-metadata~="nbrd"], 
-    [data-callout-metadata~="no-border"]
-) { border: 0; }
+@include utils.select-by-callout-metadata(3, "nbrd", "no-border") {
+    border: 0;
+}
 
 //Clean
-.callout.callout.callout[data-callout-metadata~="clean"],
-.callout.callout.callout[data-callout-metadata~="clean"] > .callout-content {
+@include utils.select-by-callout-metadata(3, "clean") {
     border: 0;
     box-shadow: none;
     --callout-color: transparent;
@@ -127,7 +121,11 @@
 }
 
 //Clear
-.callout[data-callout-metadata~="clear"] { clear: both; }
+@include utils.select-by-callout-metadata(1, "clear") {
+    clear: both;
+}
 
 //Fix iframe Code
-.callout #vid { text-align: left; }
+.callout #vid {
+    text-align: left;
+}

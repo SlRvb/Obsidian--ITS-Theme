@@ -1,14 +1,14 @@
-
+@use "utils";
 /* Timeline */
-.callout.callout[data-callout~="timeline"] {
-    --callout-icon: 'clock-12';
+@include utils.select-by-data-callout(2, "timeline") {
+    --callout-icon: "clock-12";
     // --callout-color: 209, 220, 226;
     --callout-padding: 0;
     --callout-title-padding: 10px;
     --callout-content-padding: 10px;
     --callout-margin: 0;
     --timeline-shadow: var(--outline, var(--background-modifier-box-shadow));
-    
+
     --micro: 50px;
     --tiny: 100px;
     --small: 200px;
@@ -25,12 +25,12 @@
     border: 0;
     clear: both;
     position: unset !important;
-    
+
     & .callout-title {
         background: rgba(var(--callout-color), 0.35);
         align-content: center;
         align-items: center;
-        
+
         & em {
             font-style: normal;
             display: block;
@@ -39,7 +39,7 @@
             color: rgb(var(--callout-color));
         }
     }
-    
+
     & .callout-icon {
         background-color: var(--note, var(--background-primary));
         transform: scale(1.2);
@@ -51,52 +51,76 @@
     & .callout-content {
         background-color: rgb(var(--callout-color), 0.1);
     }
-    
-    //Side Alignment
-    &[data-callout-metadata~="t-l"] {
-        border-right: 4px solid rgb(var(--callout-color));
-        margin-right: var(--c-timeline);
-        z-index: 0;
 
-        & > .callout-title,
-        & > .callout-content { box-shadow: -4px 4px 0 var(--timeline-shadow); }
+    &[data-callout-metadata~="t-l"] {
+        //Side Alignment
+        & {
+            border-right: 4px solid rgb(var(--callout-color));
+            margin-right: var(--c-timeline);
+            z-index: 0;
+
+            & > .callout-title,
+            & > .callout-content {
+                box-shadow: -4px 4px 0 var(--timeline-shadow);
+            }
+        }
+        //Title/Icon Alignment
+        & > .callout-title {
+            flex-direction: row-reverse;
+            text-align: right;
+            .callout-icon {
+                float: right;
+                position: absolute;
+                margin-right: -20px;
+            }
+        }
     }
     &[data-callout-metadata~="t-r"] {
-        border-left: 4px solid rgb(var(--callout-color));
-        margin-left: var(--c-timeline);
-        
-        & > .callout-title,
-        & > .callout-content 
-        { box-shadow: 4px 4px 0 var(--timeline-shadow); }
+        //Side Alignment
+        & {
+            border-left: 4px solid rgb(var(--callout-color));
+            margin-left: var(--c-timeline);
+            z-index: 0;
+
+            & > .callout-title,
+            & > .callout-content {
+                box-shadow: 4px 4px 0 var(--timeline-shadow);
+            }
+        }
+        //Title/Icon Alignment
+        & > .callout-title .callout-icon {
+            float: left;
+            position: absolute;
+            margin-left: -20px;
+        }
     }
-    
+
     //Title/Icon Alignment
-    &[data-callout-metadata~="t-l"] > .callout-title {
-        flex-direction: row-reverse;
-        text-align: right;
+    &[data-callout-metadata~="t-l"]
+        &[data-callout-metadata~="t-l"]
+        > .callout-title
+        &[data-callout-metadata~="t-r"]
+        > &[data-callout-metadata~="t-1"]
+        .callout-title {
+        margin-top: var(--micro);
     }
-    &[data-callout-metadata~="t-l"] > .callout-title .callout-icon {
-        float: right;
-        position: absolute;
-        margin-right: -20px;
-    }
-    &[data-callout-metadata~="t-r"] > .callout-title .callout-icon {
-        float: left;
-        position: absolute;
-        margin-left: -20px;
-    }
+    $timeline-type-to-margin: (
+        2: --tiny,
+        3: --small,
+        4: --small-med,
+        5: --med-small,
+        6: --medium,
+        7: 350px,
+        8: --med-tall,
+        9: --tall,
+        10: 750px
+    );
 
-    &[data-callout-metadata~="t-1"]  .callout-title {  margin-top: var(--micro); }
-    &[data-callout-metadata~="t-2"]  .callout-title {  margin-top: var(--tiny); }
-    &[data-callout-metadata~="t-3"]  .callout-title {  margin-top: var(--small); }
-    &[data-callout-metadata~="t-4"]  .callout-title {  margin-top: var(--small-med); }
-    &[data-callout-metadata~="t-5"]  .callout-title {  margin-top: var(--med-small); }
-    &[data-callout-metadata~="t-6"]  .callout-title {  margin-top: var(--medium); }
-    &[data-callout-metadata~="t-7"]  .callout-title {  margin-top: 350px; }
-    &[data-callout-metadata~="t-8"]  .callout-title {  margin-top: var(--med-tall); }
-    &[data-callout-metadata~="t-9"]  .callout-title {  margin-top: var(--tall); }
-    &[data-callout-metadata~="t-10"] .callout-title {  margin-top: 750px; }
-
+    @each $type, $margin in $timeline-type-to-margin {
+        &[data-callout-metadata~="t-#{$type}"] .callout-title {
+            margin-top: var($margin);
+        }
+    }
 
     // &[data-callout-metadata~="b-1"] {   padding-bottom: var(--micro); }
     // &[data-callout-metadata~="b-2"] {   padding-bottom: var(--tiny); }

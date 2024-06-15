@@ -1,47 +1,40 @@
+@use "utils";
 
-// Align Callout Content Text
-.callout.callout:is(
-    [data-callout-metadata~="txt-l"],
-    [data-callout-metadata~="text-left"]
-) > .callout-content > * {
-    text-align: left;
-}
-.callout.callout:is(
-    [data-callout-metadata~="txt-r"],
-    [data-callout-metadata~="text-right"]
-) > .callout-content {
-    text-align: right;
-}
-.callout.callout:is(
-    [data-callout-metadata~="txt-c"],
-    [data-callout-metadata~="text-center"]
-) > .callout-content {
-    text-align: center;
+@include utils.select-by-callout-metadata(2, "txt-l", "text-left") {
+    & > .callout-content > * {
+        text-align: left;
+    }
 }
 
+@include utils.select-by-callout-metadata(2, "txt-r", "text-right") {
+    & > .callout-content {
+        text-align: right;
+    }
+}
 
-// Align Callout Title Text
-.callout.callout:is(
-    [data-callout-metadata~="ttl-c"], 
-    [data-callout-metadata~="title-center"]
-) {
-    & .callout-title { justify-content: center; }
-    
+@include utils.select-by-callout-metadata(2, "txt-c", "text-center") {
+    & > .callout-content {
+        text-align: center;
+    }
+}
+
+@include utils.select-by-callout-metadata(2, "ttl-c", "title-center") {
+    & .callout-title {
+        justify-content: center;
+    }
+
     & .callout-title-inner {
         display: block;
         flex: unset;
     }
 }
 
+@include utils.select-by-callout-metadata(2, "text-small", "txt-s") {
+    & > .callout-content > * {
+        --font-text-size: var(--font-smallest);
+        --tag-size: var(--font-smallest);
+        --table-text-size: var(--font-smallest);
 
-// Text Sizing
-.callout.callout:is(
-    [data-callout-metadata~='text-small'],
-    [data-callout-metadata~='txt-s']
-) > .callout-content > * {
-    --font-text-size: var(--font-smallest);
-    --tag-size: var(--font-smallest);
-    --table-text-size: var(--font-smallest);
-    
-    font-size: var(--font-text-size);
+        font-size: var(--font-text-size);
+    }
 }

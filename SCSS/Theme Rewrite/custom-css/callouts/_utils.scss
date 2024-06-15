@@ -1,0 +1,65 @@
+/**
+    * @file
+    * Utility mixins for callouts.
+*/
+
+/**
+    * Repeats a selector a given number of times.
+    *
+    * @param {String} $selector - The selector to repeat.
+    * @param {Number} $times - The number of times to repeat the selector.
+    * @return {String} - The repeated selector.
+*/
+@function repeat-selector($selector, $times) {
+    $result: "";
+    @for $i from 1 through $times {
+        $result: #{$result}#{$selector};
+    }
+    @return $result;
+}
+/**
+    * Applies styling to a selector repeated a number of times.
+    *
+    * @param {String} $selector - The selector to repeat.
+    * @param {Number} $times - The number of times to repeat the selector.
+    * @content - The styling to apply to the repeated selector.
+*/
+@mixin repeat-selector($selector, $times) {
+    #{repeat-selector($selector, $times)} {
+        @content;
+    }
+}
+/**
+    * Styles callouts by using a repeated .callout selector and an attribute selector.
+    *
+    * @param {Number} $callout-repeat - The number of times to repeat the callout selector.
+    * @param {String} $attr - The attribute to select by.
+    * @param {String} $values - The value to select. 
+    * @content - The styling to apply to the callouts.
+
+*/
+@mixin style-callouts-by-attr($callout-repeat, $attr, $values...) {
+    $selectors: ();
+    $callout-seq: repeat-selector(".callout", $callout-repeat);
+
+    @each $v in $values {
+        $cur-selector: '[#{$attr}~="#{$v}"]';
+        $selectors: append($selectors, $cur-selector, comma);
+    }
+    $result: "#{$callout-seq}:is(#{$selectors})";
+    #{$result} {
+        @content;
+    }
+}
+
+@mixin select-by-callout-metadata($callout-repeat, $attr-values...) {
+    @include style-callouts-by-attr($callout-repeat, "data-callout-metadata", $attr-values...) {
+        @content;
+    }
+}
+
+@mixin select-by-data-callout($callout-repeat, $callout-types...) {
+    @include style-callouts-by-attr($callout-repeat, "data-callout", $callout-types...) {
+        @content;
+    }
+}

@@ -1,26 +1,20 @@
-/*Callout Positioning*/
-:not(.is-live-preview) .callout.callout.callout:is(
-    [data-callout-metadata~="p+l"], 
-    [data-callout-metadata~="left"]
-) { 
-    float: left; 
-    margin: unset;
-    margin-right: 8px;
+@use "utils";
+
+:not(.is-live-preview) {
+    @include utils.select-by-callout-metadata(3, "p+l", "left") {
+        float: left;
+        margin: unset;
+        margin-right: 8px;
+    }
+    @include utils.select-by-callout-metadata(2, "p+r", "right") {
+        float: right;
+        margin: unset;
+        margin-left: 8px;
+    }
 }
-:not(.is-live-preview) .callout.callout:is(
-    [data-callout-metadata~="p+r"], 
-    [data-callout-metadata~="right"]
-) { 
-    float: right;
-    margin: unset;
-    margin-left: 8px;
-}
-.callout.callout.callout:is(
-    [data-callout-metadata~="ctr"], 
-    [data-callout-metadata~="center"]
-) {
+
+@include utils.select-by-callout-metadata(3, "ctr", "center") {
     display: block;
     margin: auto;
     float: unset;
 }
-

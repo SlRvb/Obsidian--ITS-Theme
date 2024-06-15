@@ -1,7 +1,7 @@
-
+@use "utils";
 
 /*Kanban*/
-.callout.callout[data-callout~="kanban"] {
+@include utils.select-by-data-callout(2, "kanban") {
     --callout-color: unset;
     --callout-icon: layout-dashboard;
     --callout-padding: 0;
@@ -9,7 +9,7 @@
     --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
 
     --lane-width: 250px;
-    
+
     //Undo Styling
     background: transparent;
     box-shadow: none;
@@ -22,16 +22,19 @@
         padding: 5px;
         border-radius: var(--radius-s);
     }
-    & .callout-title-inner { flex: unset; }
-    & .callout-content { padding: 0; }
-    
+    & .callout-title-inner {
+        flex: unset;
+    }
+    & .callout-content {
+        padding: 0;
+    }
+
     //Hide List Bullet
     & ul li::marker,
-    & ul li::before, 
+    & ul li::before,
     & .list-bullet,
-    & ul::before, 
-    & :is(ul, ul ul) .list-collapse-indicator
-    {
+    & ul::before,
+    & :is(ul, ul ul) .list-collapse-indicator {
         list-style-type: none;
         color: transparent;
         display: none !important;
@@ -44,18 +47,20 @@
         padding-inline-start: 0;
         text-align: center;
         overflow: auto;
-        
-        &.list-view-ul { margin-inline-start: unset; }
-        
+
+        &.list-view-ul {
+            margin-inline-start: unset;
+        }
+
         //Lane
         & li {
             min-width: var(--lane-width);
             border: 0;
             padding: 5px;
-            
+
             margin: 5px 1px;
             padding-top: 4px;
-            
+
             background: var(--note, var(--background-primary-alt));
             border-radius: var(--radius-s);
             box-shadow: var(--item-outline), var(--shadow-s);
@@ -66,28 +71,34 @@
         flex-direction: column;
         text-align: left;
         overflow: unset;
-        
+
         //List Items
         & li {
             min-width: calc(var(--lane-width) / 2);
             padding: 5px;
-        
+
             box-shadow: var(--item-outline), var(--shadow-s);
             background: var(--code-bg, var(--background-primary));
-            
-            & :is(img, .internal-embed) { margin-bottom: -6px; }
+
+            & :is(img, .internal-embed) {
+                margin-bottom: -6px;
+            }
         }
     }
     //Fix checkboxes
-    & ul.contains-task-list { 
-        // padding-inline-start: 20px; 
-        
+    & ul.contains-task-list {
+        // padding-inline-start: 20px;
+
         & .task-list-item-checkbox {
             margin-inline-start: 0;
         }
     }
-    & .task-list-item-checkbox { cursor: default; }
+    & .task-list-item-checkbox {
+        cursor: default;
+    }
 
     //Fix Spaced Lists
-    & :is(ul, ol) > li p:first-of-type { margin-block-start: 0; }
+    & :is(ul, ol) > li p:first-of-type {
+        margin-block-start: 0;
+    }
 }

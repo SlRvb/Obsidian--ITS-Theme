@@ -1,6 +1,6 @@
-
+@use "utils";
 /* Cards */
-.callout[data-callout~="cards"] {
+@include utils.select-by-callout-metadata(1, "cards") {
     --callout-color: transparent;
     --callout-icon: layout-dashboard;
     --callout-padding: 0;
@@ -12,13 +12,15 @@
     box-shadow: none;
     border: 0;
     width: auto;
-    
-    & > .callout-title { display: none; }
+
+    & > .callout-title {
+        display: none;
+    }
     & > .callout-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5px;
-        
+
         border-radius: 0;
         padding-inline-start: 0px;
         padding: 0;
@@ -28,32 +30,34 @@
         margin-block-end: 0;
         padding: 0;
     }
-    
-    &:not([data-callout-metadata~='nstr'], [data-callout-metadata~='no-strong']) strong {
+
+    &:not([data-callout-metadata~="nstr"], [data-callout-metadata~="no-strong"]) strong {
         display: block;
         text-align: center;
         margin: auto;
         background-color: var(--outer-bar, var(--background-secondary));
     }
-    & br { display: none; }
+    & br {
+        display: none;
+    }
 
-    
     // Flex
-    &[data-callout-metadata~="flex"] > .callout-content, 
-    &[data-callout-metadata~="flex"] .dataview.table-view-table tbody
-    {
-        gap: unset;
-        grid-template-columns: none;
+    &[data-callout-metadata~="flex"] {
+        &,
+        & .dataview.table-view-table tbody {
+            gap: unset;
+            grid-template-columns: none;
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
 
-        // Sub Callout Sizing
-        & .callout {
-            flex: 1 1 250px;
-            margin: 5px;
-            //background: transparent;
+            // Sub Callout Sizing
+            & .callout {
+                flex: 1 1 250px;
+                margin: 5px;
+                //background: transparent;
+            }
         }
     }
 
@@ -69,10 +73,13 @@
             display: unset;
             grid-template-columns: unset;
         }
-        & br { display: block; }
-        
+        & br {
+            display: block;
+        }
 
-        & .block-language-dataview { padding: 5px; }
+        & .block-language-dataview {
+            padding: 5px;
+        }
         & .dataview.table-view-table {
             display: grid;
             margin-block-start: 0;
@@ -84,7 +91,9 @@
                 padding: 0;
             }
             // Hide Background in dv Table
-            & strong { background: transparent; }
+            & strong {
+                background: transparent;
+            }
         }
         // Restyle Table Headers
         & .table-view-thead {
@@ -92,7 +101,9 @@
                 border: 0;
                 background-color: transparent;
             }
-            & tr { display: none; }
+            & tr {
+                display: none;
+            }
         }
 
         // Display cells as grid
@@ -101,7 +112,7 @@
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 10px;
 
-            & tr { 
+            & tr {
                 display: grid;
                 align-content: flex-start;
                 margin: 0;
@@ -113,30 +124,42 @@
                 box-shadow: var(--shadow-ml, var(--input-shadow));
             }
         }
-        &[data-callout-metadata~="txt-c"] .dataview td { text-align: center; }
-
-
-        //Image Sizing
-        & img:not(.link-favicon) { 
-            width: 100%; 
-            object-fit: cover 
+        &[data-callout-metadata~="txt-c"] .dataview td {
+            text-align: center;
         }
 
-        &[data-callout-metadata~="img-micro"]       img { height: var(--micro);     }
-        &[data-callout-metadata~="img-tiny"]        img { height: var(--tiny);      }
-        &[data-callout-metadata~="img-small"]       img { height: var(--small);     }
-        &[data-callout-metadata~="img-small-med"]   img { height: var(--small-med); }
-        &[data-callout-metadata~="img-med-small"]   img { height: var(--med-small); }
-        &[data-callout-metadata~="img-medium"]      img { height: var(--medium);    }
-        &[data-callout-metadata~="img-med-tall"]    img { height: var(--med-tall);  }
-        &[data-callout-metadata~="img-tall"]        img { height: var(--tall);      }
-    }
+        //Image Sizing
+        & img:not(.link-favicon) {
+            width: 100%;
+            object-fit: cover;
+        }
 
+        $sizes: (
+            micro: --micro,
+            tiny: --tiny,
+            small: --small,
+            small-med: --small-med,
+            med-small: --med-small,
+            medium: --medium,
+            med-tall: --med-tall,
+            tall: --tall
+        );
+
+        @each $size, $var in $sizes {
+            &[data-callout-metadata~="img-#{$size}"] img {
+                height: var($var);
+            }
+        }
+    }
 
     //List
     &[data-callout-metadata~="dvl"] {
-        & .callout-content { display: block; }
-        & br { display: unset; }
+        & .callout-content {
+            display: block;
+        }
+        & br {
+            display: unset;
+        }
 
         & .block-language-dataviewjs .dataview-result-list-li,
         & .list-view-ul li {
@@ -145,30 +168,35 @@
             box-shadow: var(--shadow-s, var(--input-shadow));
             margin-bottom: 5px;
         }
-        & .dataview.list-view-ul li::before { margin-left: -27px; }
-        & ul { padding-inline-start: unset; }
-    } 
-
+        & .dataview.list-view-ul li::before {
+            margin-left: -27px;
+        }
+        & ul {
+            padding-inline-start: unset;
+        }
+    }
 
     // Columns
-    @for $i from 1 through  9 {
-        &[data-callout-metadata~="#{$i}"] :is(
-            .dataview.dataview.table-view-table tbody, 
-            .callout-content.callout-content
-        ) { grid-template-columns: repeat($i, 1fr); }
+    @for $i from 1 through 9 {
+        &[data-callout-metadata~="#{$i}"]
+            :is(.dataview.dataview.table-view-table tbody, .callout-content.callout-content) {
+            grid-template-columns: repeat($i, 1fr);
+        }
     }
 }
 
-
 // Sizing Fixes for Note/Device sizes
-.view-content > div:is(.markdown-source-view, .markdown-reading-view) > div
-{ container: note / inline-size; }
+.view-content > div:is(.markdown-source-view, .markdown-reading-view) > div {
+    container: note / inline-size;
+}
 
 @container note (max-width: 700px) {
-    .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody 
-    { grid-template-columns: repeat(2, 1fr); }
+    .callout[data-callout~="cards"][data-callout-metadata~="dataview"] .dataview.table-view-table tbody {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @container note (max-width: 400px) {
-    .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody 
-    { grid-template-columns: repeat(1, 1fr); }
+    .callout[data-callout~="cards"][data-callout-metadata~="dataview"] .dataview.table-view-table tbody {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

@@ -1,30 +1,33 @@
-
+@use "utils";
 /* Unwrapped Table */
-.callout.callout[data-callout-metadata~="table"],
-.callout.callout[data-callout~="table"] {
-    border: 0;
-    background-color: transparent;
-    --callout-padding: 0;
 
-    & .callout-content {
-        padding: 0;
+@include utils.repeat-selector(".callout", 2) {
+    &[data-callout-metadata~="table"],
+    &[data-callout~="table"] {
         border: 0;
         background-color: transparent;
-        box-shadow: none;
-    }
-    &:not(
-        [data-callout-metadata~="show-title"], 
-        [data-callout-metadata~="s-t"]
-    ) .callout-title { display: none; }
-    
-    & table { 
-        white-space: nowrap; 
-        margin: 0; 
-        margin: auto;
-        overflow-x: scroll;
-        
-        & th,
-        & td
-        { white-space: nowrap; }
+        --callout-padding: 0;
+
+        & .callout-content {
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        &:not([data-callout-metadata~="show-title"], [data-callout-metadata~="s-t"]) .callout-title {
+            display: none;
+        }
+
+        & table {
+            white-space: nowrap;
+            margin: 0;
+            margin: auto;
+            overflow-x: scroll;
+
+            & th,
+            & td {
+                white-space: nowrap;
+            }
+        }
     }
 }

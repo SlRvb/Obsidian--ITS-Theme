@@ -1,5 +1,8 @@
 body {
     --metadata-property-radius: var(--radius-s);
+    --metadata-property-radius-hover: var(--radius-s);
+    --metadata-property-radius-focus: var(--radius-s);
+
     --metadata-title-align: center;
     --metadata-title-size: var(--font-text-size);
     --metadata-title-color: var(--text-muted);

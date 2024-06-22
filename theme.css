@@ -5418,6 +5418,8 @@ body.theme-light {
 
 body {
   --metadata-property-radius: var(--radius-s);
+  --metadata-property-radius-hover: var(--radius-s);
+  --metadata-property-radius-focus: var(--radius-s);
   --metadata-title-align: center;
   --metadata-title-size: var(--font-text-size);
   --metadata-title-color: var(--text-muted);
@@ -8813,6 +8815,17 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 
 .callout[data-callout-metadata~=clear] {
   clear: both;
+}
+
+.callout.callout.callout[data-callout-metadata~=block] {
+  display: block;
+  float: unset;
+}
+.callout.callout.callout[data-callout-metadata~=block][data-callout-metadata~=right] {
+  margin-left: auto;
+}
+.callout.callout.callout[data-callout-metadata~=block][data-callout-metadata~=left] {
+  margin-right: auto;
 }
 
 .callout #vid {

@@ -129,5 +129,16 @@
 //Clear
 .callout[data-callout-metadata~="clear"] { clear: both; }
 
+.callout.callout.callout[data-callout-metadata~="block"] { 
+    display: block; 
+    float: unset;
+    
+    &[data-callout-metadata~="right"] { margin-left: auto; }
+    &[data-callout-metadata~="left"] { margin-right: auto; }
+}
+
+
+
+
 //Fix iframe Code
 .callout #vid { text-align: left; }

@@ -122,6 +122,17 @@
   clear: both;
 }
 
+.callout.callout.callout[data-callout-metadata~=block] {
+  display: block;
+  float: unset;
+}
+.callout.callout.callout[data-callout-metadata~=block][data-callout-metadata~=right] {
+  margin-left: auto;
+}
+.callout.callout.callout[data-callout-metadata~=block][data-callout-metadata~=left] {
+  margin-right: auto;
+}
+
 .callout #vid {
   text-align: left;
 }

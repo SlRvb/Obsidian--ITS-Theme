@@ -23,6 +23,13 @@ Steps to reproduce the behavior:
 ### Screenshots
 If applicable, add screenshots to help explain your problem.
 
+### Mode
+What mode(s) does the bug occur? Select all that apply.
+
+- [ ] Source Mode
+- [ ] Live Preview
+- [ ] Reading Mode
+
 ### OS
 Where does the bug occur?
 
@@ -31,7 +38,8 @@ Where does the bug occur?
 
 ### Versions
 - Obsidian Version: 
-- ITS Theme Version: 
+- ITS Theme Version:
+- [ ] Using ITS Snippet: 
 
 ### Additional context
 Add any other context about the problem here.

@@ -3124,7 +3124,6 @@ body.theme-light {
   --tag-padding-x: 7px;
   --tag-padding-y: 3px;
   --prompt-border-width: 3px;
-  --tab-outline-width: 2px;
   --shadow-s: 2px 2px 0 var(--outline);
   --shadow-m: 3px 3px 0 var(--outline);
   --shadow-ml: 4px 4px 0 var(--outline);
@@ -3556,7 +3555,8 @@ body {
   --tab-font-weight-active: 900;
   --tab-width: 200px;
   --tab-max-width: 320px;
-  --tab-outline-width: 0;
+  --tab-outline-width: 2px;
+  --tab-top-outline-width: 0;
   --tab-outline-color: var(--accent);
   --tab-divider-color: var(--hr);
   --tab-background: var(--outer-bar);
@@ -3601,6 +3601,10 @@ body.is-focused :is(.mod-left-split, .mod-right-split) .workspace-tab-header:not
 
 .mod-root .mod-stacked .workspace-tab-header:hover .workspace-tab-header-inner {
   color: var(--tab-text-color-hover);
+}
+
+.workspace-tab-header-container {
+  border-top: var(--tab-top-outline-width) solid var(--tab-outline-color);
 }
 
 .empty-state .empty-state-title {
@@ -11024,10 +11028,10 @@ iframe {
 .paper, .paper .modal.mod-settings .vertical-tab-content-container, .paper .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-leaf-content[data-type=markdown], .paper .workspace-leaf-content[data-type=graph] > canvas, .paper .workspace-drawer-inner, .paper .modal, .paper .community-plugin-search, .paper .prompt, .paper .kanban-plugin__lane.kanban-plugin__lane {
   box-shadow: var(--paper-edges-note);
 }
-.paper .workspace-tabs, .paper .modal.mod-settings .vertical-tab-header {
+.paper .workspace-tabs, .paper .modal.mod-settings .vertical-tab-header, .paper .workspace-tabs .workspace-leaf {
   box-shadow: var(--paper-edges-ui);
 }
-.paper .CodeMirror-gutter.CodeMirror-linenumbers, .paper .CodeMirror-gutter.CodeMirror-foldgutter, .paper .markdown-source-view.mod-cm6 .cm-gutters, .paper .workspace-leaf:not(.mod-active) .workspace-tab-header-container, .paper .workspace-tabs .workspace-leaf, .paper .workspace-tab-header-container, .paper .horizontal-tab-content, .paper .vertical-tab-content, .paper .horizontal-tab-nav-item:not(.is-active), .paper .vertical-tab-nav-item:not(.is-active) {
+.paper .CodeMirror-gutter.CodeMirror-linenumbers, .paper .CodeMirror-gutter.CodeMirror-foldgutter, .paper .markdown-source-view.mod-cm6 .cm-gutters, .paper .workspace-leaf:not(.mod-active) .workspace-tab-header-container, .paper .workspace-tab-header-container, .paper .horizontal-tab-content, .paper .vertical-tab-content, .paper .horizontal-tab-nav-item:not(.is-active), .paper .vertical-tab-nav-item:not(.is-active) {
   background: transparent;
 }
 

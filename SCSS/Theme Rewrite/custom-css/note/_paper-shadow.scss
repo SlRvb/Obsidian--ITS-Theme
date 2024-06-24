@@ -24,7 +24,8 @@
     { box-shadow: var(--paper-edges-note); }
     
     & .workspace-tabs,
-    & .modal.mod-settings .vertical-tab-header 
+    & .modal.mod-settings .vertical-tab-header,
+    & .workspace-tabs .workspace-leaf
     { box-shadow: var(--paper-edges-ui); }
 
 
@@ -34,7 +35,7 @@
     & .CodeMirror-gutter.CodeMirror-foldgutter,
     & .markdown-source-view.mod-cm6 .cm-gutters,
     & .workspace-leaf:not(.mod-active) .workspace-tab-header-container,
-    & .workspace-tabs .workspace-leaf,
+    // & .workspace-tabs .workspace-leaf,
     & .workspace-tab-header-container,
     & .horizontal-tab-content,
     & .vertical-tab-content,

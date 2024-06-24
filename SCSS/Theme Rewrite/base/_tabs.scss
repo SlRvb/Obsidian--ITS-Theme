@@ -14,7 +14,8 @@ body {
     --tab-max-width: 320px;
 
     //Color
-    --tab-outline-width: 0;
+    --tab-outline-width: 2px;
+    --tab-top-outline-width: 0;
     --tab-outline-color: var(--accent);
     --tab-divider-color: var(--hr);
     
@@ -70,6 +71,9 @@ body.is-focused :is(.mod-left-split, .mod-right-split) .workspace-tab-header:not
     color: var(--tab-text-color-hover);
 }
 
+.workspace-tab-header-container {
+    border-top: var(--tab-top-outline-width) solid var(--tab-outline-color);
+}
 
 
 //----

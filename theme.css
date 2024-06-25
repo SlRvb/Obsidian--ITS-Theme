@@ -13310,9 +13310,9 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --inline-title-font: var(--vault-font);
   --inline-title-color: var(--accent2);
   --inline-title-weight: 500;
-  --hr-icon-symbol: "", "✏";
+  --hr-icon-symbol: "";
   --hr-icon-font: var(--mdi);
-  --bullet: "", "✏";
+  --bullet: "";
   --bullet-font: var(--mdi);
   background: var(--note);
 }
@@ -14080,6 +14080,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --tag-border-color: var(--tag);
   --tag-border-color-hover: var(--accent);
   --embed-border-left: 2px solid var(--headers);
+  --embed-border-start: 2px solid var(--interactive-accent);
   --hr-color: var(--hr);
   --hr-icon-color: var(--headers);
   --hr-icon-background: var(--note);

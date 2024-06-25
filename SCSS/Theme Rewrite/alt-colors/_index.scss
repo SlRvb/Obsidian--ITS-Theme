@@ -163,6 +163,7 @@
     --tag-border-color-hover: var(--accent);
 
     --embed-border-left: 2px solid var(--headers);
+    --embed-border-start: 2px solid var(--interactive-accent);
 
     --hr-color: var(--hr);
     --hr-icon-color: var(--headers);
@@ -213,6 +214,7 @@
 
     --scrollbar-bg: var(--bg);
     --scrollbar-thumb-bg: var(--tag);
+
 
     --graph-bg: var(--note);
     --graph-lines: var(--highlight);

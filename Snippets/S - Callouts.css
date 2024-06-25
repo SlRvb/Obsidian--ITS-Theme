@@ -1474,6 +1474,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
   --callout-icon: "check-square";
   --callout-padding: 0px;
   --root-list-spacing: 0;
+  --list-indent: 0;
 }
 .callout[data-callout=checks] ul.contains-task-list {
   display: flex;

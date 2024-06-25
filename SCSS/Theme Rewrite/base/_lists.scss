@@ -122,8 +122,8 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox
         }
     }
     // Indent Line
-    & .cm-hmd-list-indent .cm-indent::before 
-    { transform: translateX(var(--indentation-guide-editing-indent)); }
+    // & .cm-hmd-list-indent .cm-indent::before 
+    // { transform: translateX(var(--indentation-guide-editing-indent)); }
 
     //Checkboxes
     & .task-list-label { 

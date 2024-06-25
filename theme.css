@@ -4554,9 +4554,6 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox {
 .is-live-preview.markdown-source-view.mod-cm6 .cm-formatting-list-ul::before {
   margin-right: -16px;
 }
-.is-live-preview.markdown-source-view.mod-cm6 .cm-hmd-list-indent .cm-indent::before {
-  transform: translateX(var(--indentation-guide-editing-indent));
-}
 .is-live-preview.markdown-source-view.mod-cm6 .task-list-label {
   margin-inline-start: 0;
 }
@@ -10173,6 +10170,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
   --callout-icon: "check-square";
   --callout-padding: 0px;
   --root-list-spacing: 0;
+  --list-indent: 0;
 }
 .callout[data-callout=checks] ul.contains-task-list {
   display: flex;
@@ -11031,7 +11029,7 @@ iframe {
 .paper .workspace-tabs, .paper .modal.mod-settings .vertical-tab-header, .paper .workspace-tabs .workspace-leaf {
   box-shadow: var(--paper-edges-ui);
 }
-.paper .CodeMirror-gutter.CodeMirror-linenumbers, .paper .CodeMirror-gutter.CodeMirror-foldgutter, .paper .markdown-source-view.mod-cm6 .cm-gutters, .paper .workspace-leaf:not(.mod-active) .workspace-tab-header-container, .paper .workspace-tab-header-container, .paper .horizontal-tab-content, .paper .vertical-tab-content, .paper .horizontal-tab-nav-item:not(.is-active), .paper .vertical-tab-nav-item:not(.is-active) {
+.paper .CodeMirror-gutter.CodeMirror-linenumbers, .paper .CodeMirror-gutter.CodeMirror-foldgutter, .paper .markdown-source-view.mod-cm6 .cm-gutters, .paper .workspace-leaf:not(.mod-active) .workspace-tab-header-container, .paper .horizontal-tab-content, .paper .vertical-tab-content, .paper .horizontal-tab-nav-item:not(.is-active), .paper .vertical-tab-nav-item:not(.is-active) {
   background: transparent;
 }
 

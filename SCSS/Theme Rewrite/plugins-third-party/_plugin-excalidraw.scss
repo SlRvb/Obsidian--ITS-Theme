@@ -54,3 +54,12 @@
     color: var(--text-dl);
     --icon-fill-color: var(--text-dl); 
 }}
+
+.excalidraw .context-menu {
+    max-height: var(--popover-max-height);
+    overflow-y: auto;
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-m);
+    
+    & li::before { display: none; }
+}

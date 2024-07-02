@@ -2,8 +2,16 @@
 .justify,
 .justified {
     & .markdown-preview-section,
-    & .cm-s-obsidian,
-    &.markdown-preview-view,
-    &.cm-s-obsidian 
-    { text-align: justify; }
+    &.markdown-preview-view > *,
+    
+    & .cm-line:not(.HyperMD-header, .HyperMD-list-line),
+    & .cm-line:not(.HyperMD-header) [class*="cm-list"] //Lists TEXT (not embeds)
+    {
+        text-align: justify;
+        // hyphens: auto;
+        // -webkit-hyphens: auto;
+        word-spacing: -.05em;
+        text-justify: distribute;
+        // text-align-last: left; 
+    }
 }

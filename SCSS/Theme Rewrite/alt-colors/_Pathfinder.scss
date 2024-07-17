@@ -267,12 +267,21 @@
         --hr: #2d4d3d;
 
         --th: var(--deep-dark-accent);
+        --th-text: var(--text-dl);
         --lines: #304c40;
 
         --theme-rainbow-1: var(--headers);
         --theme-rainbow-2: var(--h2-color);
         --theme-rainbow-3: var(--h3-color);
         --theme-rainbow-4: var(--h4-color);
+
+        
+        --graph-lines: var(--dark-accent);
+        --graph-node: var(--theme-rainbow-1);
+        --graph-tag: var(--theme-rainbow-4);
+        --graph-img: var(--theme-rainbow-2);
+        --graph-line-hover: var(--lines);
+        --graph-node-hover-fill: var(--theme-rainbow-4);
     }
 }
 

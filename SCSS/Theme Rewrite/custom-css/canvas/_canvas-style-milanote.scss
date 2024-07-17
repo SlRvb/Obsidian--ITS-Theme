@@ -5,6 +5,7 @@ body.canvas-milanote.canvas-milanote {
     
     --canvas-card-shadow-size: 2px 3px 0;
     --canvas-card-shadow-color: var(--outline);
+
 }
 .canvas-milanote .canvas-node {
     //Group
@@ -13,7 +14,39 @@ body.canvas-milanote.canvas-milanote {
     //     border: 3px solid rgb(var(--canvas-color));
     //     box-shadow: none;
     // } 
+    & .canvas-node-content.markdown-embed:not(.is-loaded) {
+        --milanote-serif-font: 'Harding', 'Ranille Normal', "Georgia", "Calibri";
+    
+        --h1-size: calc(var(--font-text-size) * 1.55);
+        --h2-size: calc(var(--font-text-size) * 1.45);
+        --h3-size: calc(var(--font-text-size) * 1.35);
+        --h4-size: calc(var(--font-text-size) * 1.2);
+        --h5-size: calc(var(--font-text-size) * 1.1);
+        --h6-size: calc(var(--font-text-size));
+    
+        --h1-color: var(--text);
+        --h2-color: var(--text);
+        --h3-color: var(--text);
+        --h4-color: var(--text);
+        --h5-color: var(--text);
+        --h6-color: var(--text);
 
+        & :is(h1, h2, h3, h4, h5, h6)::after { display: none; }
+        & :is(h1, h2, h3, h4, h5, h6) { 
+            font-family: var(--milanote-serif-font);
+            margin-block-end: 0; 
+            font-weight: var(--header-weight);
+            // & em { 
+            //     // font-family: var(--milanote-serif-font);
+            //     font-weight: 500; 
+            //     letter-spacing: -.2px; 
+            // }
+        }
+    
+        & p { margin-block-start: 5px; }
+    
+        // & ul { margin-inline-start: -10px; }
+    }
 
     & .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view 
     { padding: 0 var(--size-4-4); }

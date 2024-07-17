@@ -136,11 +136,16 @@
 body.wotc-beyond {
     & .workspace-leaf-content,
     & .workspace-tabs,
+    & .workspace-sidedock-vault-profile,
     & .vertical-tab-content,
     & .modal.modal,
     & .community-modal-sidebar,
     & .canvas-wrapper
     { box-shadow: var(--paper-edges); }
+
+    & .workspace .mod-root .workspace-tab-header {
+        box-shadow: 0 0 0 var(--tab-outline-width) var(--tab-outline-color), var(--paper-edges);
+    }
 
     //Publish Site Paper Edges
     & .site-body-left-column, 

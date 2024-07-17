@@ -9976,13 +9976,13 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
 .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content {
   grid-template-columns: unset;
 }
-.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content ul, .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content ul, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul {
   columns: var(--columns);
 }
-.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul > li, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content ul > li, .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul > li, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content ul > li, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
   break-inside: avoid;
 }
-.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul .list-bullet::after {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul .list-bullet::after {
   position: relative;
 }
 .callout[data-callout*=column][data-callout-metadata~=list-x] > .callout-content {
@@ -10540,6 +10540,32 @@ body.canvas-milanote.canvas-milanote {
 
 .canvas-milanote .canvas-node.canvas-node-group .canvas-node-content {
   --canvas-color-opacity: 15%;
+}
+.canvas-milanote .canvas-node .canvas-node-content.markdown-embed:not(.is-loaded) {
+  --milanote-serif-font: "Harding", "Ranille Normal", "Georgia", "Calibri";
+  --h1-size: calc(var(--font-text-size) * 1.55);
+  --h2-size: calc(var(--font-text-size) * 1.45);
+  --h3-size: calc(var(--font-text-size) * 1.35);
+  --h4-size: calc(var(--font-text-size) * 1.2);
+  --h5-size: calc(var(--font-text-size) * 1.1);
+  --h6-size: calc(var(--font-text-size));
+  --h1-color: var(--text);
+  --h2-color: var(--text);
+  --h3-color: var(--text);
+  --h4-color: var(--text);
+  --h5-color: var(--text);
+  --h6-color: var(--text);
+}
+.canvas-milanote .canvas-node .canvas-node-content.markdown-embed:not(.is-loaded) :is(h1, h2, h3, h4, h5, h6)::after {
+  display: none;
+}
+.canvas-milanote .canvas-node .canvas-node-content.markdown-embed:not(.is-loaded) :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--milanote-serif-font);
+  margin-block-end: 0;
+  font-weight: var(--header-weight);
+}
+.canvas-milanote .canvas-node .canvas-node-content.markdown-embed:not(.is-loaded) p {
+  margin-block-start: 5px;
 }
 .canvas-milanote .canvas-node .canvas-node-content.markdown-embed:not(.is-loaded) .markdown-preview-view {
   padding: 0 var(--size-4-4);
@@ -12583,8 +12609,11 @@ body.background-image .markdown-embed-content .markdown-preview-section:not(.kan
   --hr-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Crect id='Artboard1' x='0' y='0' width='100' height='7' style='fill:none;'/%3E%3Cpath d='M50,2.5L100,3.5L50,4L0,3.5L50,2.5Z' style='fill:rgb(200, 57, 57);'/%3E%3C/svg%3E") no-repeat center center;
 }
 
-body.wotc-beyond .workspace-leaf-content, body.wotc-beyond .workspace-tabs, body.wotc-beyond .vertical-tab-content, body.wotc-beyond .modal.modal, body.wotc-beyond .community-modal-sidebar, body.wotc-beyond .canvas-wrapper {
+body.wotc-beyond .workspace-leaf-content, body.wotc-beyond .workspace-tabs, body.wotc-beyond .workspace-sidedock-vault-profile, body.wotc-beyond .vertical-tab-content, body.wotc-beyond .modal.modal, body.wotc-beyond .community-modal-sidebar, body.wotc-beyond .canvas-wrapper {
   box-shadow: var(--paper-edges);
+}
+body.wotc-beyond .workspace .mod-root .workspace-tab-header {
+  box-shadow: 0 0 0 var(--tab-outline-width) var(--tab-outline-color), var(--paper-edges);
 }
 body.wotc-beyond .site-body-left-column, body.wotc-beyond .site-body-right-column, body.wotc-beyond .publish-renderer, body.wotc-beyond .graph-view-container {
   box-shadow: var(--paper-edges-m);
@@ -12888,11 +12917,18 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --hvr: #4dbb8450;
   --hr: #2d4d3d;
   --th: var(--deep-dark-accent);
+  --th-text: var(--text-dl);
   --lines: #304c40;
   --theme-rainbow-1: var(--headers);
   --theme-rainbow-2: var(--h2-color);
   --theme-rainbow-3: var(--h3-color);
   --theme-rainbow-4: var(--h4-color);
+  --graph-lines: var(--dark-accent);
+  --graph-node: var(--theme-rainbow-1);
+  --graph-tag: var(--theme-rainbow-4);
+  --graph-img: var(--theme-rainbow-2);
+  --graph-line-hover: var(--lines);
+  --graph-node-hover-fill: var(--theme-rainbow-4);
 }
 
 .theme-light .pathfinder-remaster, .theme-light.pathfinder-remaster {
@@ -14013,6 +14049,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 .wotc-beyond,
 .dnd,
 .pathfinder,
+.pathfinder-remaster,
 .notion,
 .drwn,
 .its-d,

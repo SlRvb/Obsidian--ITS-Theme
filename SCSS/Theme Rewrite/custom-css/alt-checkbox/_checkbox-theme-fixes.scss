@@ -45,6 +45,7 @@ li:is(
 ) > input[type][type][type=checkbox]:checked {
     &,
     &:after {
+        display: inline-block; //LYT Fix
         background-color: unset;
         background-size: 0;
         background-image: none;

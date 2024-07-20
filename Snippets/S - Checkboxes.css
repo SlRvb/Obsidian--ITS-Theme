@@ -196,6 +196,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
   text-align: center;
   border: 0;
   cursor: pointer;
+  -webkit-mask-image: unset;
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
@@ -472,7 +473,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=O]::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=O] > input[type=checkbox]:checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=O] p > input[type=checkbox]:checked::after {
   content: "\e805";
-  color: rgb(var(--selected-rgb));
+  color: hsl(var(--interactive-accent-hsl));
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=F]::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=F] > input[type=checkbox]:checked::after, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=F] p > input[type=checkbox]:checked::after {
   content: "\ec28";
@@ -780,7 +781,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=O],
 .check-bg :is(ul, ol) > li[data-task=O].task-list-item.is-checked {
-  background: rgba(var(--selected-rgb), 20%);
+  background: hsla(var(--interactive-accent-hsl), 20%);
 }
 .check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task][data-task=F],
 .check-bg :is(ul, ol) > li[data-task=F].task-list-item.is-checked {
@@ -1022,7 +1023,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   color: rgb(var(--chbx-R));
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=O] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=O].task-list-item.is-checked {
-  color: rgb(var(--selected-rgb));
+  color: hsl(var(--interactive-accent-hsl));
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=F] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=F].task-list-item.is-checked {
   color: rgb(var(--chbx-h));
@@ -1128,6 +1129,7 @@ li:is([data-task=X],
 [data-task="&"],
 [data-task=s],
 [data-task=H]) > input[type][type][type=checkbox]:checked:after {
+  display: inline-block;
   background-color: unset;
   background-size: 0;
   background-image: none;

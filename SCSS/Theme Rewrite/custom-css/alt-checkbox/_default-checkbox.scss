@@ -57,7 +57,8 @@ body:not(.alt-chkbx-off) {
                 
                 border: 0;
                 cursor: pointer;
-
+                -webkit-mask-image: unset;//Border Theme Fix
+                
                 &::after { 
                     background-color: transparent;
                     top: -4px; 

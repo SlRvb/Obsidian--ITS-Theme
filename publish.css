@@ -6696,7 +6696,7 @@ body {
   --table-header-background-hover: var(--table-header-background);
 }
 .tables-no-hover tbody tr:nth-child(odd):hover {
-  --table-row-background-hover: var(--table-row-alt-background);
+  --table-row-alt-background-hover: var(--table-row-alt-background);
 }
 .tables-no-hover tbody tr:nth-child(even):hover {
   --table-row-background-hover: var(--table-row-background);

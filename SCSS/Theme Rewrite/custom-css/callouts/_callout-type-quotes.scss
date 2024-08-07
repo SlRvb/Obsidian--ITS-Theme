@@ -27,11 +27,12 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
         padding-top: 5px;
         padding-right: 0;
         
-        display: block;
+        justify-content: flex-end;
         
+        & > .callout-fold { padding-inline-end: 0; }
         & > .callout-icon { height: 0; width: 0; }
+        & > .callout-title-inner::before { content: "~ "; }
     }
-    & > .callout-title-inner::before { content: "~ "; }
 
 
     

@@ -47,9 +47,8 @@
             margin-left: -18px;
             margin-top: calc(var(--indicator-heading-size) / 2.5);
         }
-
-        &:hover .cm-fold-indicator::before { margin-top: -5px; }
+        & .is-collapsed.cm-fold-indicator::before,
+        &:hover .cm-fold-indicator::before { margin-top: calc(var(--indicator-heading-size) / 15 ); }
         
-    } 
-    
+    }     
 }

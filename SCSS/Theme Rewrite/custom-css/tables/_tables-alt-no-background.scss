@@ -3,11 +3,15 @@
 { 
     --table-column-alt-background: transparent; 
     --table-row-alt-background: transparent;
+    --table-row-background-hover: transparent;
+    --table-column-background-hover: transparent;
 }
 
 .tables-no-alt-column-background.tables-no-alt-column-background {
     --table-column-alt-background: transparent;
+    --table-column-background-hover: transparent;
 }
 .tables-no-alt-row-background.tables-no-alt-row-background {
     --table-row-alt-background: transparent;
+    --table-row-background-hover: transparent;
 }

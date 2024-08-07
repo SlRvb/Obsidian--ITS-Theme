@@ -3572,6 +3572,9 @@ body {
   --tab-stacked-font-size: 15px;
   --tab-stacked-shadow: -10px 0 10px var(--tab-stacked-shadow-color);
   --tab-stacked-shadow-color: var(--drop-shadow);
+  --tab-switcher-preview-background-shadow: var(--shadow-m);
+  --tab-switcher-preview-shadow: var(--shadow-s);
+  --tab-switcher-preview-shadow-active: 0 0 0 2px var(--lite-accent), var(--shadow-l);
 }
 
 .view-header-title-container:not(.mod-at-end):after {
@@ -7852,6 +7855,7 @@ body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-t
   text-align: center;
   border: 0;
   cursor: pointer;
+  -webkit-mask-image: unset;
 }
 body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task=X],
 [data-task=">"],
@@ -9762,35 +9766,28 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 
 /* Unwrapped Table */
-.callout.callout[data-callout-metadata~=table],
-.callout.callout[data-callout~=table] {
+.callout.callout[data-callout-metadata~=table] {
   border: 0;
   background-color: transparent;
   --callout-padding: 0;
 }
-.callout.callout[data-callout-metadata~=table] .callout-content,
-.callout.callout[data-callout~=table] .callout-content {
+.callout.callout[data-callout-metadata~=table] .callout-content {
   padding: 0;
   border: 0;
   background-color: transparent;
   box-shadow: none;
 }
 .callout.callout[data-callout-metadata~=table]:not([data-callout-metadata~=show-title],
-[data-callout-metadata~=s-t]) .callout-title,
-.callout.callout[data-callout~=table]:not([data-callout-metadata~=show-title],
 [data-callout-metadata~=s-t]) .callout-title {
   display: none;
 }
-.callout.callout[data-callout-metadata~=table] table,
-.callout.callout[data-callout~=table] table {
+.callout.callout[data-callout-metadata~=table] table {
   white-space: nowrap;
   margin: 0;
   margin: auto;
   overflow-x: scroll;
 }
-.callout.callout[data-callout-metadata~=table] table th, .callout.callout[data-callout-metadata~=table] table td,
-.callout.callout[data-callout~=table] table th,
-.callout.callout[data-callout~=table] table td {
+.callout.callout[data-callout-metadata~=table] table th, .callout.callout[data-callout-metadata~=table] table td {
   white-space: nowrap;
 }
 
@@ -10359,13 +10356,16 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
   text-align: right;
   padding-top: 5px;
   padding-right: 0;
-  display: block;
+  justify-content: flex-end;
+}
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote] > .callout-title > .callout-fold {
+  padding-inline-end: 0;
 }
 body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote] > .callout-title > .callout-icon {
   height: 0;
   width: 0;
 }
-body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote] > .callout-title-inner::before {
+body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote] > .callout-title > .callout-title-inner::before {
   content: "~ ";
 }
 body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] {
@@ -10892,14 +10892,18 @@ iframe {
 .table-nalt.table-nalt {
   --table-column-alt-background: transparent;
   --table-row-alt-background: transparent;
+  --table-row-background-hover: transparent;
+  --table-column-background-hover: transparent;
 }
 
 .tables-no-alt-column-background.tables-no-alt-column-background {
   --table-column-alt-background: transparent;
+  --table-column-background-hover: transparent;
 }
 
 .tables-no-alt-row-background.tables-no-alt-row-background {
   --table-row-alt-background: transparent;
+  --table-row-background-hover: transparent;
 }
 
 :is(.table-alto, .tables-alt-original) .markdown-rendered tbody tr > td:nth-child(2n+2), :is(.table-alto, .tables-alt-original) .markdown-rendered tbody tr:nth-child(odd) {
@@ -10916,7 +10920,7 @@ iframe {
   --table-header-background-hover: var(--table-header-background);
 }
 .tables-no-hover tbody tr:nth-child(odd):hover {
-  --table-row-background-hover: var(--table-row-alt-background);
+  --table-row-alt-background-hover: var(--table-row-alt-background);
 }
 .tables-no-hover tbody tr:nth-child(even):hover {
   --table-row-background-hover: var(--table-row-background);
@@ -11449,26 +11453,6 @@ iframe {
 
 /*--Kanban--*/
 /*Credit: https://github.com/Braweria/Spectrum*/
-.kanban {
-  --list-indent: -15px;
-}
-
-/*Hide Bullet*/
-.kanban ul {
-  list-style: none;
-}
-
-.kanban ul li::before {
-  content: "";
-  margin: 0px;
-  padding: 0;
-  float: unset;
-}
-
-.kanban.kanban li > ul::before {
-  left: 0;
-}
-
 .kanban :is(ul, ol) {
   display: flex;
   flex-direction: row;
@@ -11476,51 +11460,27 @@ iframe {
   flex-wrap: wrap;
 }
 .kanban :is(ul, ol) li {
-  flex: 1 1 25%;
-  margin-left: 0px;
-  margin-right: 10px;
-  border: 0;
+  flex: 1 1 10%;
 }
-
-.kanban ol li {
-  margin-left: 15px;
-}
-
-.kanban ul ul,
-.kanban ol ol {
+.kanban :is(ul ul, ol ol) {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-right: 20px;
-  background: var(--td);
 }
-.kanban ul ul > li,
-.kanban ol ol > li {
+.kanban :is(ul ul, ol ol) > li {
+  min-width: 15ch;
   margin-left: 20px;
   margin-right: 0;
   width: 100%;
 }
-
-.kanban.markdown-rendered .list-collapse-indicator {
-  margin-left: -15px;
-  padding-right: 0px;
+.kanban :is(ul ul, ol ol) > li:nth-child(odd) {
+  background: var(--td);
+}
+.kanban li p:first-of-type {
+  --p-spacing: 0;
 }
 
-.kanban.markdown-rendered ol .list-collapse-indicator {
-  margin-left: -30px;
-}
-
-.kanban ul > li.task-list-item.task-list-item .task-list-item-checkbox {
-  margin-inline-start: calc(var(--checkbox-size) * -0.45);
-}
-.kanban ul > li.task-list-item.task-list-item .list-collapse-indicator {
-  margin-left: -18px;
-}
-
-.kanban .markdown-rendered ul.has-list-bullet li p:first-of-type {
-  margin-block-start: 0;
-}
-
+/*Hide Bullet*/
 /*Remove Note Titlebar Gradient*/
 .file-header-gradient {
   --file-header-background: linear-gradient(to right, var(--file-header-left-color), var(--file-header-right-color));
@@ -11996,8 +11956,8 @@ body {
   margin-left: -18px;
   margin-top: calc(var(--indicator-heading-size) / 2.5);
 }
-.heading-indicator .is-live-preview .HyperMD-header:hover .cm-fold-indicator::before {
-  margin-top: -5px;
+.heading-indicator .is-live-preview .HyperMD-header .is-collapsed.cm-fold-indicator::before, .heading-indicator .is-live-preview .HyperMD-header:hover .cm-fold-indicator::before {
+  margin-top: calc(var(--indicator-heading-size) / 15);
 }
 
 .heading-color-override h1 > *, .heading-color-override h2 > *, .heading-color-override h3 > *, .heading-color-override h4 > *, .heading-color-override h5 > *, .heading-color-override h6 > *, .heading-color-override .cm-s-obsidian .cm-header > * {
@@ -14180,6 +14140,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --background-secondary: var(--side-bar);
   --background-secondary-alt: var(--outer-bar);
   --background-modifier-border: var(--table);
+  --background-modifier-border-hover: var(--bg);
   --background-modifier-hover: var(--hvr-active);
   --background-modifier-form-field: var(--td);
   --text-highlight-bg: var(--hvr);

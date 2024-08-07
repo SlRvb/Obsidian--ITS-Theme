@@ -35,6 +35,11 @@ body {
     --tab-stacked-font-size: 15px;
     --tab-stacked-shadow: -10px 0 10px var(--tab-stacked-shadow-color);
     --tab-stacked-shadow-color: var(--drop-shadow);
+
+    //Switcher
+    --tab-switcher-preview-background-shadow: var(--shadow-m);
+    --tab-switcher-preview-shadow: var(--shadow-s);
+    --tab-switcher-preview-shadow-active: 0 0 0 2px var(--lite-accent), var(--shadow-l);
 }
 
 

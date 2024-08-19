@@ -3887,6 +3887,7 @@ body {
 }
 
 body {
+  --scrollbar-track-bg: var(--note);
   --scrollbar-thumb-bg: var(--accent);
   --scrollbar-active-thumb-bg: var(--lite-accent);
   --scrollbar-border-width: 0;
@@ -3894,7 +3895,7 @@ body {
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar {
-  background-color: inherit;
+  background-color: var(--scrollbar-track-bg);
   width: var(--scrollbar-width);
   height: calc(var(--scrollbar-width) + 1px);
 }
@@ -5906,6 +5907,7 @@ body {
   --tag-background-color: var(--tag-background);
   --kanban-button-background: var(--code-bg);
   --kanban-button-shadow: var(--input-shadow);
+  --kanban-card-text-color: var(--text-normal);
 }
 
 .kanban-plugin__lane.kanban-plugin__lane {
@@ -6016,6 +6018,11 @@ body {
 
 .kanban-plugin__item hr {
   --hr-icon-background: var(--kanban-card-title-background);
+}
+
+.kanban-plugin__meta-value.kanban-plugin__meta-value .markdown-preview-view,
+.kanban-plugin__markdown-preview-wrapper.kanban-plugin__markdown-preview-wrapper .markdown-preview-view {
+  color: var(--kanban-card-text-color);
 }
 
 .internal-link.BC-Link,
@@ -9362,16 +9369,17 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 
 .callout.callout[data-callout=statblocks] {
-  --callout-color: unset;
+  --callout-color: var(--accent-rgb);
   --callout-icon: swords;
   --callout-padding: 12px 15px;
   --callout-margin: 10px auto;
-  --callout-border-width: 0;
+  --callout-border-color: var(--hr, var(--hr-color));
+  border-width: 5px 0 5px 0;
+  border-style: solid;
   margin: var(--callout-margin);
   min-width: 10ch;
   max-width: 42ch;
-  border-top: 5px solid var(--hr, var(--hr-color));
-  border-bottom: 5px solid var(--hr, var(--hr-color));
+  background: transparent;
   box-shadow: var(--shadow-l), 0 0 20px var(--outline, var(--hr-color));
 }
 .callout.callout[data-callout=statblocks] > .callout-content {
@@ -9516,6 +9524,8 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --callout-content-padding: 0px;
   --callout-blend-mode: normal;
   --callout-cards-columns: 3;
+  --callout-cards-gap: 5px;
+  --callout-cards-notion-padding: 10px;
   box-shadow: none;
   border: 0;
   width: auto;
@@ -9526,7 +9536,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout~=cards] > .callout-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
+  grid-gap: var(--callout-cards-gap);
   border-radius: 0;
   padding-inline-start: 0px;
   padding: 0;
@@ -9554,7 +9564,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout[data-callout~=cards][data-callout-metadata~=flex] > .callout-content .callout, .callout[data-callout~=cards][data-callout-metadata~=flex] .dataview.table-view-table tbody .callout {
   flex: 1 1 250px;
-  margin: 5px;
+  margin: var(--callout-cards-gap);
 }
 .callout[data-callout~=cards][data-callout-metadata~=dataview] {
   --callout-content-padding: 0;
@@ -9591,7 +9601,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: calc(var(--callout-cards-gap) * 2);
 }
 .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody tr {
   display: grid;
@@ -9643,12 +9653,67 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   background-color: var(--outer-bar, var(--background-secondary));
   box-shadow: var(--shadow-s, var(--input-shadow));
   margin-bottom: 5px;
+  --list-indent: 0;
 }
 .callout[data-callout~=cards][data-callout-metadata~=dvl] .dataview.list-view-ul li::before {
-  margin-left: -27px;
+  --bullet: "";
 }
 .callout[data-callout~=cards][data-callout-metadata~=dvl] ul {
   padding-inline-start: unset;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .dataview.table-view-table tbody tr {
+  padding: 0;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .dataview.table-view-table tbody tr td:last-of-type {
+  padding-bottom: 10px;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .dataview.table-view-table tbody tr td > span:not(:has(strong, span)) {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .dataview.table-view-table tbody tr td:first-of-type strong::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--outline);
+  margin-top: 5px;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .dataview.table-view-table tbody strong {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content {
+  padding: calc(var(--callout-cards-notion-padding) / 2);
+  gap: calc(var(--callout-cards-notion-padding) - 3px);
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p {
+  box-shadow: 0 0 5px var(--outline), 0 0 6px var(--outline);
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p strong {
+  background-color: transparent;
+  text-align: unset;
+  padding: 0 var(--callout-cards-notion-padding);
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p > :not(img, .internal-embed, strong, br) {
+  display: inline-block;
+  padding-left: var(--callout-cards-notion-padding);
+  padding-right: var(--callout-cards-notion-padding);
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p, .callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p img {
+  border-radius: var(--radius-s);
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p > img:first-child, .callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p > .internal-embed:first-child img {
+  margin-bottom: 5px;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p:has(> :is(img, .internal-embed):first-child) {
+  padding-bottom: 7px;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p > img:last-child, .callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p > .internal-embed:last-child img {
+  margin-top: 5px;
+}
+.callout[data-callout~=cards][data-callout-metadata~=notion] .callout-content > p:has(> :is(img, .internal-embed):last-child) {
+  padding-top: 7px;
 }
 .callout[data-callout~=cards][data-callout-metadata~="1"] :is(.dataview.dataview.table-view-table tbody,
 .callout-content.callout-content) {
@@ -9790,6 +9855,27 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout.callout[data-callout-metadata~=table] table th, .callout.callout[data-callout-metadata~=table] table td {
   white-space: nowrap;
 }
+.callout.callout:is([data-callout-metadata~=table-unwrap-column-1], [data-callout-metadata~=tbl-u-1]) table tr td:nth-child(1) {
+  --table-white-space: nowrap;
+}
+.callout.callout:is([data-callout-metadata~=table-unwrap-column-2], [data-callout-metadata~=tbl-u-2]) table tr td:nth-child(2) {
+  --table-white-space: nowrap;
+}
+.callout.callout:is([data-callout-metadata~=table-unwrap-column-3], [data-callout-metadata~=tbl-u-3]) table tr td:nth-child(3) {
+  --table-white-space: nowrap;
+}
+.callout.callout:is([data-callout-metadata~=table-unwrap-column-4], [data-callout-metadata~=tbl-u-4]) table tr td:nth-child(4) {
+  --table-white-space: nowrap;
+}
+.callout.callout:is([data-callout-metadata~=table-unwrap-column-5], [data-callout-metadata~=tbl-u-5]) table tr td:nth-child(5) {
+  --table-white-space: nowrap;
+}
+.callout.callout:is([data-callout-metadata~=table-unwrap-column-6], [data-callout-metadata~=tbl-u-6]) table tr td:nth-child(6) {
+  --table-white-space: nowrap;
+}
+.callout.callout:is([data-callout-metadata~=table-unwrap-column-7], [data-callout-metadata~=tbl-u-7]) table tr td:nth-child(7) {
+  --table-white-space: nowrap;
+}
 
 .callout[data-callout=blank] {
   --callout-color: transparent;
@@ -9805,11 +9891,16 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 /* Metadata */
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] {
   --callout-icon: layers;
-  --callout-color: 82, 139, 212;
   --callout-border-width: 2px;
   --callout-title-padding: 5px;
   --callout-content-padding: 0px 10px 10px;
-  box-shadow: 0px 0px 0px 1px var(--outline);
+  --callout-shadow: 0px 0px 0px 1px var(--outline);
+}
+body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:not([data-callout-metadata*=bg-],
+[data-callout-metadata*=bg-c-],
+[data-callout-metadata*=c-],
+[data-callout-metadata*=color-]) {
+  --callout-color: 82, 139, 212;
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] .callout-title {
   background-color: transparent;
@@ -9819,8 +9910,8 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] .callo
   flex: unset;
   color: rgb(var(--callout-color));
 }
-body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:not([data-callout-metadata~=no-strong], [data-callout-metadata~=no-str]) .callout-content strong {
-  color: rgb(var(--callout-color));
+body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:not([data-callout-metadata~=no-strong], [data-callout-metadata~=no-str]) {
+  --bold-color: rgb(var(--callout-color)) ;
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] .dataview.inline-field-key {
   background: rgb(var(--callout-color));
@@ -9855,6 +9946,12 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
   border: 0;
   text-align: center;
   padding: 0;
+}
+body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at]:is([data-callout-metadata*=bg-],
+[data-callout-metadata*=bg-c-],
+[data-callout-metadata*=c-],
+[data-callout-metadata*=color-]) {
+  background: rgba(var(--callout-color), var(--callout-color-opacity));
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at].is-collapsible:not(.is-collapsed) {
   display: flex;
@@ -10940,8 +11037,11 @@ iframe {
   font-weight: var(--table-style-column-header-bold-weight);
   color: var(--table-style-column-header-bold-color);
 }
-.table.table tr:not(:hover) td:nth-child(1) {
+.table.table tr td:nth-child(1) {
   background-color: var(--table-style-column-header-background);
+}
+.table.table tr:hover td:nth-child(1) {
+  background-color: var(--table-row-alt-background-hover);
 }
 
 .table-column-header tr td:nth-child(1) {
@@ -14164,4 +14264,18 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --graph-img: var(--accent2);
   --graph-tag: var(--dark-accent);
   --graph-focused: var(--accent2-lite);
+  --scrollbar-track-bg: var(--note);
+  --shadow-s: 2px 2px 0 var(--outline);
+  --shadow-m: 3px 3px 0 var(--outline);
+  --shadow-ml: 4px 4px 0 var(--outline);
+  --shadow-l: 5px 5px 0 var(--outline);
+  --box-border-s: 1px solid var(--outline);
+  --box-border: 2px solid var(--outline);
+  --box-border-m: 3px solid var(--outline);
+  --input-shadow: var(--shadow-s);
+  --input-shadow-hover: var(--shadow-m);
+  --embed-block-shadow-hover: var(--input-shadow);
+  --kanban-card-border: var(--box-border);
+  --kanban-card-title-border: 0 1px 0 var(--outline);
+  --kanban-card-text-color: var(--text-normal);
 }

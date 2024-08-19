@@ -185,6 +185,7 @@
     
     --i-at: var(--soft-text);
 
+
     //
     background-color: var(--background-primary);
     --background-primary: var(--note);
@@ -226,4 +227,25 @@
     --graph-img: var(--accent2);
     --graph-tag: var(--dark-accent);
     --graph-focused: var(--accent2-lite);
+
+    --scrollbar-track-bg: var(--note);
+
+    --shadow-s: 2px 2px 0 var(--outline);
+    --shadow-m: 3px 3px 0 var(--outline);
+    --shadow-ml: 4px 4px 0 var(--outline);
+    --shadow-l: 5px 5px 0 var(--outline);
+
+    --box-border-s: 1px solid var(--outline);
+    --box-border: 2px solid var(--outline);
+    --box-border-m: 3px solid var(--outline);
+    
+    --input-shadow: var(--shadow-s);
+    --input-shadow-hover: var(--shadow-m);
+    --embed-block-shadow-hover: var(--input-shadow);
+
+
+    // Plugins
+    --kanban-card-border: var(--box-border);
+    --kanban-card-title-border: 0 1px 0 var(--outline);
+    --kanban-card-text-color: var(--text-normal);
 }

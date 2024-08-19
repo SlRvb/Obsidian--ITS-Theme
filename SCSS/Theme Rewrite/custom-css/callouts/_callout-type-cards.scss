@@ -8,6 +8,8 @@
     --callout-blend-mode: normal;
 
     --callout-cards-columns: 3;
+    --callout-cards-gap: 5px;
+    --callout-cards-notion-padding: 10px;
 
     box-shadow: none;
     border: 0;
@@ -17,7 +19,7 @@
     & > .callout-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5px;
+        grid-gap: var(--callout-cards-gap);
         
         border-radius: 0;
         padding-inline-start: 0px;
@@ -52,7 +54,7 @@
         // Sub Callout Sizing
         & .callout {
             flex: 1 1 250px;
-            margin: 5px;
+            margin: var(--callout-cards-gap);
             //background: transparent;
         }
     }
@@ -99,7 +101,7 @@
         & .dataview.table-view-table tbody {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
+            grid-gap: calc(var(--callout-cards-gap) * 2);
 
             & tr { 
                 display: grid;
@@ -144,10 +146,85 @@
             background-color: var(--outer-bar, var(--background-secondary));
             box-shadow: var(--shadow-s, var(--input-shadow));
             margin-bottom: 5px;
+            
+            --list-indent: 0;
         }
-        & .dataview.list-view-ul li::before { margin-left: -27px; }
+        & .dataview.list-view-ul li::before { --bullet: ""; }
         & ul { padding-inline-start: unset; }
     } 
+
+
+    //Notion Styling
+    &[data-callout-metadata~="notion"] {
+        // --callout-card-border: 2px solid var(--outline, var(--background-modifier-box-shadow));
+
+        //Dataview Card Styling
+        & .dataview.table-view-table tbody {
+            & tr {
+                padding: 0;
+
+                & td:last-of-type { padding-bottom: 10px; }
+            }
+
+            //Add Padding if not img element
+            & tr td > span:not(:has(strong, span)) {
+                margin-left: 10px;
+                margin-right: 10px;
+                display: inline-block;
+
+                // &:not(:has(> *)) { display: inline-block; }
+            } 
+
+            & tr td:first-of-type strong::after {
+                content: "";
+                display: block;
+                height: 1px;
+                background-color: var(--outline);
+                margin-top: 5px;
+            }
+
+            & strong { margin-top: 5px; margin-bottom: 5px; }
+        } 
+
+        //Regular Card Styling
+        & .callout-content {
+            padding: calc(var(--callout-cards-notion-padding) / 2);
+            gap: calc(var(--callout-cards-notion-padding) - 3px);
+            
+            & > p {
+                box-shadow: 
+                    0 0 5px var(--outline), 
+                    0 0 6px var(--outline);
+
+                & strong { 
+                    background-color: transparent;
+                    text-align: unset;
+                    padding: 0 var(--callout-cards-notion-padding); 
+                }
+
+                //Not image, add padding
+                & > :not(img, .internal-embed, strong, br)
+                {
+                    display: inline-block; //Fix span not indenting text
+                    padding-left: var(--callout-cards-notion-padding); 
+                    padding-right: var(--callout-cards-notion-padding);
+                }
+                // & #text + .internal-link { padding-left: 0; }
+                
+                &, & img { border-radius: var(--radius-s); }
+                
+                //First line is image
+                & > img:first-child,
+                & > .internal-embed:first-child img { margin-bottom: 5px; }
+                &:has(> :is(img, .internal-embed):first-child) { padding-bottom: 7px; }
+                
+                //Last line is image
+                & > img:last-child,
+                & > .internal-embed:last-child img { margin-top: 5px; }
+                &:has(> :is(img, .internal-embed):last-child) { padding-top: 7px; }
+            }
+        }
+    }
 
 
     // Columns

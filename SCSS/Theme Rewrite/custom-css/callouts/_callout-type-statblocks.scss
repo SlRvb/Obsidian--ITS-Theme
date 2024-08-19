@@ -1,12 +1,16 @@
 
 
 .callout.callout[data-callout=statblocks] {
-    --callout-color: unset;
+    --callout-color: var(--accent-rgb);
     --callout-icon: swords;
 
     --callout-padding: 12px 15px;
     --callout-margin: 10px auto;
-    --callout-border-width: 0;
+    --callout-border-color: var(--hr, var(--hr-color));
+    
+    border-width: 5px 0 5px 0;
+    border-style: solid;
+    
 
     & > .callout-content {
         --heading-spacing-top: 0;
@@ -16,16 +20,14 @@
         --bold-color: var(--headers, var(--h1-color));
         --hr-icon-symbol: '';
     }
-        
+    
     margin: var(--callout-margin);
     min-width: 10ch;
     max-width: 42ch;
-    border-top: 5px solid var(--hr, var(--hr-color));
-    border-bottom: 5px solid var(--hr, var(--hr-color));
+    background: transparent;
     box-shadow: 
-        var(--shadow-l), 
+        var(--shadow-l),
         0 0 20px var(--outline, var(--hr-color));
-    
     
     //Element Styling
     & h1 { width: auto; }

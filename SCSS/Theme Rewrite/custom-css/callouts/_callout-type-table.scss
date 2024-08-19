@@ -30,5 +30,10 @@
             { white-space: nowrap; }
         }
     }
-
+    @for $i from 1 through 7 {
+        &:is([data-callout-metadata~="table-unwrap-column-#{$i}"], [data-callout-metadata~="tbl-u-#{$i}"]) table tr td:nth-child(#{$i}) {
+            // white-space: nowrap;
+            --table-white-space: nowrap;
+        }
+    }
 }

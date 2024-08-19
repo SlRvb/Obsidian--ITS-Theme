@@ -23,6 +23,8 @@ body {
 
     --kanban-button-background: var(--code-bg);
     --kanban-button-shadow: var(--input-shadow);
+
+    --kanban-card-text-color: var(--text-normal);
 }
 
 
@@ -147,3 +149,8 @@ body {
 
 //hr color fix 
 .kanban-plugin__item hr { --hr-icon-background: var(--kanban-card-title-background); }
+
+.kanban-plugin__meta-value.kanban-plugin__meta-value .markdown-preview-view, 
+.kanban-plugin__markdown-preview-wrapper.kanban-plugin__markdown-preview-wrapper .markdown-preview-view {
+    color: var(--kanban-card-text-color);
+}

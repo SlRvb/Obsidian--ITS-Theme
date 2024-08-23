@@ -31,7 +31,7 @@
     
     //Element Styling
     & h1 { width: auto; }
-    & img:not([class]) { 
+    & img:not([class], [width]) { 
         box-shadow: 0 0 0 4px var(--headers, var(--background-modifier-border)); 
         margin-right: 4px;
     }

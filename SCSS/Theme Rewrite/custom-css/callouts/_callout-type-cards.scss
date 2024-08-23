@@ -9,7 +9,17 @@
 
     --callout-cards-columns: 3;
     --callout-cards-gap: 5px;
-    --callout-cards-notion-padding: 10px;
+
+    // Columns
+    @for $i from 1 through  9 {
+        &[data-callout-metadata~="#{$i}"] .callout-content {
+            --callout-cards-columns: #{$i};
+        }
+        // &[data-callout-metadata~="#{$i}"] :is(
+        //     .dataview.dataview.table-view-table tbody, 
+        //     .callout-content.callout-content
+        // ) { grid-template-columns: repeat($i, 1fr); }
+    } //grid-template-columns: repeat($i, 1fr);
 
     box-shadow: none;
     border: 0;
@@ -18,7 +28,7 @@
     & > .callout-title { display: none; }
     & > .callout-content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(var(--callout-cards-columns), 1fr);
         grid-gap: var(--callout-cards-gap);
         
         border-radius: 0;
@@ -100,7 +110,7 @@
         // Display cells as grid
         & .dataview.table-view-table tbody {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(var(--callout-cards-columns), 1fr);
             grid-gap: calc(var(--callout-cards-gap) * 2);
 
             & tr { 
@@ -153,27 +163,63 @@
         & ul { padding-inline-start: unset; }
     } 
 
+    //List Cards
+    &[data-callout-metadata~="list"] {
+        --list-indent: 0;
+        & > .callout-content { display: block; }
+
+        & ul { 
+            display: grid;
+            grid-template-columns: repeat(var(--callout-cards-columns), 1fr);
+            grid-gap: 7px;
+            
+            border-radius: 0;
+            padding-inline-start: 0px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        & li { 
+            padding: 10px;
+            box-shadow: 
+            0 0 0 3px var(--outline) inset, var(--shadow-s, var(--input-shadow));
+        }
+    }
+
 
     //Notion Styling
     &[data-callout-metadata~="notion"] {
         // --callout-card-border: 2px solid var(--outline, var(--background-modifier-box-shadow));
+        --callout-cards-notion-padding: 10px;
+        --callout-cards-notion-shadow: 0 0 5px var(--outline), 0 0 6px var(--outline);
+        --callout-cards-notion-radius: var(--radius-s);
+        --callout-content-padding: 15px;
+
+        &:is([data-callout-metadata~=round], [data-callout-metadata~=rounded]) {
+            --callout-cards-notion-radius: 5px;
+        }
 
         //Dataview Card Styling
         & .dataview.table-view-table tbody {
             & tr {
                 padding: 0;
+                box-shadow: var(--callout-cards-notion-shadow);
+                border: 0;
+                border-radius: var(--callout-cards-notion-radius);
 
-                & td:last-of-type { padding-bottom: 10px; }
+                & td > :last-of-type { padding-bottom: 5px; }
+                & td > :first-child { padding-top: 5px; }
             }
 
             //Add Padding if not img element
+            & tr td > ul,
             & tr td > span:not(:has(strong, span)) {
-                margin-left: 10px;
-                margin-right: 10px;
+                margin-left: var(--callout-cards-notion-padding);
+                margin-right: var(--callout-cards-notion-padding);
                 display: inline-block;
 
                 // &:not(:has(> *)) { display: inline-block; }
             } 
+            
 
             & tr td:first-of-type strong::after {
                 content: "";
@@ -185,16 +231,15 @@
 
             & strong { margin-top: 5px; margin-bottom: 5px; }
         } 
-
+        
         //Regular Card Styling
-        & .callout-content {
+        & .block-language-dataview { margin: -25px 0 -25px 0; } //Fix: weird padding caused issue
+        & > .callout-content {
             padding: calc(var(--callout-cards-notion-padding) / 2);
             gap: calc(var(--callout-cards-notion-padding) - 3px);
             
             & > p {
-                box-shadow: 
-                    0 0 5px var(--outline), 
-                    0 0 6px var(--outline);
+                box-shadow: var(--callout-cards-notion-shadow);
 
                 & strong { 
                     background-color: transparent;
@@ -211,7 +256,7 @@
                 }
                 // & #text + .internal-link { padding-left: 0; }
                 
-                &, & img { border-radius: var(--radius-s); }
+                &, & img { border-radius: var(--callout-cards-notion-radius); }
                 
                 //First line is image
                 & > img:first-child,
@@ -226,14 +271,6 @@
         }
     }
 
-
-    // Columns
-    @for $i from 1 through  9 {
-        &[data-callout-metadata~="#{$i}"] :is(
-            .dataview.dataview.table-view-table tbody, 
-            .callout-content.callout-content
-        ) { grid-template-columns: repeat($i, 1fr); }
-    }
 }
 
 
@@ -241,11 +278,9 @@
 .view-content > div:is(.markdown-source-view, .markdown-reading-view) > div
 { container: note / inline-size; }
 
-@container note (max-width: 700px) {
-    .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody 
-    { grid-template-columns: repeat(2, 1fr); }
+@container note (max-width: 500px) {
+    .callout[data-callout~=cards] .callout-content { --callout-cards-columns: 2; }
 }
-@container note (max-width: 400px) {
-    .callout[data-callout~=cards][data-callout-metadata~=dataview] .dataview.table-view-table tbody 
-    { grid-template-columns: repeat(1, 1fr); }
+@container note (max-width: 300px) {
+    .callout[data-callout~=cards] .callout-content { --callout-cards-columns: 1; }
 }

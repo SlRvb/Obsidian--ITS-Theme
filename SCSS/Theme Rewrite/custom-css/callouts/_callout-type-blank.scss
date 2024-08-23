@@ -1,9 +1,10 @@
 .callout[data-callout="blank"] {
+    
     --callout-color: transparent;
-    --callout-margin: 0;
-    --callout-padding: 0;
+    margin: 0;
+    padding: 0;
     --callout-border-width: 0;
-    --callout-content-padding: 0;
+    .callout-content { padding: 0; }
     
     & > .callout-title { display: none; }
 }

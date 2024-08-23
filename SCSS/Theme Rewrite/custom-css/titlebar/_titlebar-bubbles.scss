@@ -1,12 +1,14 @@
 .titlebar-bubbles.titlebar-bubbles.titlebar-bubbles {
     --tab-outline-width: 0;
     --titlebar-bubble-colors: #0b0f13;
-    --titlebar-bubble-colors-inactive: #0b0f1350;
+    // --titlebar-bubble-colors-inactive: #0b0f1350;
     --titlebar-bubble-colors-inactive: var(--td);
     
     --tab-text-color-focused-active: var(--text);
-    --sidebar-tab-color-hover: var(--tab-text-color-focused-active);
+    --tab-text-color-hover: var(--text);
+    --sidebar-tab-color-hover: var(--text-dl);
     --tab-divider-color: transparent;
+    --vault-profile-color-hover: var(--text-dl);
 }
 
  
@@ -20,10 +22,13 @@
 
     --tab-text-color-focused-active-current: var(--text);
     --tab-curve: 0;
+    --background-modifier-hover: var(--bttn);
     
-
+    
     // & .workspace-tab-header { padding: var(--tab-gap); }
 
+
+    //Tab Spacing/Padding
     & .workspace-tab-header-container-inner,
     & .workspace-tab-header-container {
         align-items: center;
@@ -44,19 +49,10 @@
         padding: var(--tab-text-padding-inner);
         --sidebar-tab-background-color-hover: transparent;
 
-        &:not(.is-active) {
-            --titlebar-bubble-colors: var(--titlebar-bubble-colors-inactive);
-        }
+        &:not(.is-active) { --titlebar-bubble-colors: var(--titlebar-bubble-colors-inactive); }
     }
     //Sliding Tab Fix
     & .mod-stacked .workspace-tab-header { border: none; }
-
-    //Hover Color
-    & .workspace-tab-header:not(.is-active):hover { 
-        background-color: var(--titlebar-bubble-colors-inactive); 
-        
-        & .workspace-tab-header-inner { background-color: unset; }
-    }
 
     //New Tab
     & .workspace-tab-header-new-tab { padding: 0; }
@@ -65,9 +61,20 @@
     // & .workspace-tab-header.is-active::before,
     // & .workspace-tab-header.is-active::after { display: none; }
 
-
-    & .workspace-tab:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        color: var(--text-on-accent);
+    //Hover Color
+    & .workspace-tab-header:not(.is-active):hover { 
+        background-color: var(--bttn); 
+        --titlebar-bubble-colors: unset;
+        
+        // & .workspace-tab-header-inner { background-color: unset; }
+        & .workspace-tab-header-status-container:hover { background: var(--td); }
     }
+    // Fix Breadcumb hover
+    & .view-header-title-parent .view-header-breadcrumb:hover { background-color: var(--td); }
+
+    & .workspace-tab-header-status-icon:hover,
+    & .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover,
+    & .workspace-tab:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner 
+    { color: var(--text-on-accent); }
 }
 

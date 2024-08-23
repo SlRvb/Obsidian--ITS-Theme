@@ -103,3 +103,9 @@ body {
         justify-content: center;
     }
 }
+
+
+// Capitalization button
+.input-right-decorator.clickable-icon.is-active {
+    background-color: var(--sidebar-tab-border-color-active);
+}

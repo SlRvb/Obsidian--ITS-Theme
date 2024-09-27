@@ -11004,10 +11004,14 @@ iframe {
   margin-right: auto;
 }
 
-.tables-wide .cm-table-widget.markdown-rendered .table-wrapper, .tables-wide table,
-.t-w .cm-table-widget.markdown-rendered .table-wrapper,
+.tables-wide table,
 .t-w table {
   width: 100%;
+}
+
+.tables-wide .cm-table-widget.markdown-rendered .table-wrapper
+.t-w .cm-table-widget.markdown-rendered .table-wrapper {
+  min-width: 100%;
 }
 
 .tables-no-alt-background.tables-no-alt-background,

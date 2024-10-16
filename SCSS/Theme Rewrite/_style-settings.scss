@@ -347,10 +347,20 @@ settings:
         id: file-explorer-flat
         type: class-toggle
     -
-        title: Display Folder Arrow On Hover
-        id: folder-arrow
-        type: class-toggle
-        default: false
+        title: Folder Arrows
+        id: ITS-folder-arrows
+        type: class-select
+        default: folder-arrow-hidden
+        options: 
+            -
+                label: Hidden
+                value: folder-arrow-hidden
+            -
+                label: Display
+                value: folder-arrow-display
+            -
+                label: Display On Hover
+                value: folder-arrow
     - 
         title: Disable Bold Folder & Hover 
         description: Remove bold styling from folders & hovering on items

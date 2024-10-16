@@ -44,6 +44,7 @@ body {
 }
 
 // Hide Collapse Indicator
+body:not(.folder-arrow-display) .nav-folder .tree-item-icon.collapse-icon,
 .nav-folder-collapse-indicator,
 .tree-item-icon.nav-folder-collapse-indicator { display: none; }
 
@@ -88,8 +89,9 @@ body {
 // }
 
 //Vault Name
-.nav-folder.mod-root > .nav-folder-title
-{ font-family: var(--vault-font); }
+// .nav-folder.mod-root > .nav-folder-title,
+// .workspace-drawer-vault-name
+// { font-family: var(--vault-font); }
 
 //nav-folder
 .nav-folder.mod-root > .nav-folder-children {

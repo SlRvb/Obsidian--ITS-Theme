@@ -79,6 +79,18 @@ $headings: (
     )
 );
 
+.is-rtl.is-rtl, .rtl 
+{
+    --header-text-align: end;
+    --h1-text-align: var(--header-text-align);
+    --h2-text-align: var(--header-text-align);
+    --h3-text-align: var(--header-text-align);
+    --h4-text-align: var(--header-text-align);
+    --h5-text-align: var(--header-text-align);
+    --h6-text-align: var(--header-text-align);
+    --header-border-line-align: auto 0 auto auto;
+}
+
 body {
     // Headers
     --h1-size: 34px;
@@ -114,7 +126,7 @@ body {
     --h6-color: var(--headers);
 
     //Personal
-    --header-text-align: left;
+    --header-text-align: start;
     --h1-text-align: var(--header-text-align);
     --h2-text-align: var(--header-text-align);
     --h3-text-align: var(--header-text-align);

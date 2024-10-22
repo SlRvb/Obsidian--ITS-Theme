@@ -4916,7 +4916,8 @@ body {
 body {
   --blockquote-border-thickness: 7px;
   --blockquote-border-color: var(--bg);
-  --blockquote-style: normal;
+  --blockquote-font-style: var(--font-default);
+  --blockquote-color: var(--text-normal);
   --blockquote-padding: var(--size-4-3) var(--size-4-6);
   --blockquote-padding-lp: 7px 0;
   --blockquote-background-color: var(--embed-bg);
@@ -5212,6 +5213,9 @@ body {
   margin-top: 0;
 }
 
+.mermaid .nodeLabel {
+  font-size: var(--font-ui-medium);
+}
 .mermaid rect:not([style]) {
   fill: var(--embed-bg) !important;
   stroke: var(--inactive) !important;
@@ -9711,18 +9715,21 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout~=cards][data-callout-metadata~=list] > .callout-content {
   display: block;
 }
+.callout[data-callout~=cards][data-callout-metadata~=list] ul li::before, .callout[data-callout~=cards][data-callout-metadata~=list] .list-collapse-indicator {
+  display: none;
+}
 .callout[data-callout~=cards][data-callout-metadata~=list] ul {
   display: grid;
   grid-template-columns: repeat(var(--callout-cards-columns), 1fr);
-  grid-gap: 7px;
+  grid-gap: 5px;
   border-radius: 0;
   padding-inline-start: 0px;
-  margin-right: 5px;
+  margin-right: 3px;
   margin-bottom: 5px;
 }
-.callout[data-callout~=cards][data-callout-metadata~=list] li {
-  padding: 10px;
-  box-shadow: 0 0 0 3px var(--outline) inset, var(--shadow-s, var(--input-shadow));
+.callout[data-callout~=cards][data-callout-metadata~=list] ul > li {
+  padding: 5px 10px;
+  box-shadow: 0 0 0 2px var(--outline) inset, var(--shadow-s, var(--input-shadow));
 }
 .callout[data-callout~=cards][data-callout-metadata~=notion] {
   --callout-cards-notion-padding: 10px;

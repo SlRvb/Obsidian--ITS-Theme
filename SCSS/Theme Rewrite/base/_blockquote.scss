@@ -2,7 +2,9 @@ body {
     //Blockquotes
     --blockquote-border-thickness: 7px;
     --blockquote-border-color: var(--bg);
-    --blockquote-style: normal;
+    // --blockquote-style: normal;
+    --blockquote-font-style: var(--font-default);
+    --blockquote-color: var(--text-normal);
     --blockquote-padding: var(--size-4-3) var(--size-4-6); //Personal
     --blockquote-padding-lp: 7px 0; //x should be 0 for alignment
 

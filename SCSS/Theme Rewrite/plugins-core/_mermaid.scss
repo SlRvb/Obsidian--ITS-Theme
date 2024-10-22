@@ -1,5 +1,9 @@
 
 .mermaid {
+    .nodeLabel {
+        font-size: var(--font-ui-medium);
+    }
+
     //Mermaid Class
     // g.classGroup rect,
     rect:not([style]) {

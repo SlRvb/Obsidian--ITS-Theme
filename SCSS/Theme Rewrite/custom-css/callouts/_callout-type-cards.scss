@@ -166,22 +166,27 @@
     //List Cards
     &[data-callout-metadata~="list"] {
         --list-indent: 0;
+
         & > .callout-content { display: block; }
+        & ul li::before,
+        & .list-collapse-indicator { display: none; }
 
         & ul { 
             display: grid;
             grid-template-columns: repeat(var(--callout-cards-columns), 1fr);
-            grid-gap: 7px;
+            grid-gap: 5px;
             
             border-radius: 0;
             padding-inline-start: 0px;
-            margin-right: 5px;
+            margin-right: 3px;
             margin-bottom: 5px;
-        }
-        & li { 
-            padding: 10px;
-            box-shadow: 
-            0 0 0 3px var(--outline) inset, var(--shadow-s, var(--input-shadow));
+            
+            & > li { 
+                padding: 5px 10px;
+                box-shadow: 
+                    0 0 0 2px var(--outline) inset, 
+                    var(--shadow-s, var(--input-shadow));
+            }
         }
     }
 

@@ -30,27 +30,32 @@
     --sidebar-tab-padding: 0 var(--size-4-3);
 }
 //Fix Tab Sizing / Padding
-:is(.mod-right-split, .mod-left-split) .workspace-tab-header-container-inner {
-    padding: 0;
-    margin: 0;
-}
-.mod-right-split .workspace-tab-header-container-inner {
-    margin-left: 2px;
-}
-:is(.mod-left-split, .mod-right-split) .workspace-tab-header-inner {
-    padding: var(--sidebar-tab-padding);
+.workspace-split.workspace-split {
+    &:is(
+        .mod-right-split.mod-right-split, 
+        .mod-left-split.mod-left-split
+    ) .workspace-tab-header-container-inner
+    { padding: 0; margin: 0; gap: 0; } //Remove inner sidebar tab icons padding
+
+    // Sidebar tabs padding
+    &.mod-right-split .workspace-tab-header-container { padding-left: 0; } 
+    
+    &.mod-left-split.mod-left-split,
+    &.mod-right-split:not(.mod-top),
+    &.mod-root
+    { .workspace-tab-header-container { padding: 0; } } 
 }
 
+//Fix Inner Icon Sizing
+.mod-right-split .workspace-tab-header-container-inner { margin-left: 2px; }
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header-inner { padding: var(--sidebar-tab-padding); }
 
-// Fix Sidebar Button
-.workspace-ribbon.mod-left { 
-    margin-top: 0; 
-    gap: 0;
-}
+
 .sidebar-toggle-button {
     padding: 0;
     position: relative;
     height: var(--header-height);
+    &.mod-left { right: var(--divider-width); }
 
     // & .clickable-icon { width: 100%; }
     & .clickable-icon {
@@ -62,52 +67,63 @@
     --icon-size: var(--sidebar-tab-icon-size);
     --icon-stroke: var(--sidebar-tab-icon-stroke);
 }
-
-
-//Sidebar Tab Outline
-:is(.mod-left-split, .mod-right-split) .workspace-tab-header-inner {
-    background-color: transparent;
-    border-bottom: var(--sidebar-tab-border-width) solid var(--sidebar-tab-border-color);
-}
-:is(.mod-left-split, .mod-right-split) .is-active .workspace-tab-header-inner {
-    border-color: var(--sidebar-tab-border-color-active);
-}
-
-
-//Fix Left Sidebar Tab Icons Spacing
-// .clickable-icon.side-dock-ribbon-action { padding: 10px; }
-.side-dock-settings,
-.side-dock-actions { 
-    padding-top: calc(var(--ribbon-icon-gap) / 1.5); 
-    padding-bottom: calc(var(--ribbon-icon-gap) / 1.5); 
-    gap: var(--ribbon-icon-gap); 
-}
-
 //Ribbon
 .workspace-ribbon { 
     padding: 0; 
     border-right: var(--ribbon-border-width) solid var(--ribbon-border-color);
+
+    // Fix Sidebar Button
+    &.mod-left { 
+        margin-top: 0; 
+        gap: 0;
+    }
+    
+    //Fix Ribbon Icons Spacing
+    .side-dock-settings,
+    .side-dock-actions { 
+        padding-top: calc(var(--ribbon-icon-gap) / 1.5); 
+        padding-bottom: calc(var(--ribbon-icon-gap) / 1.5); 
+        gap: var(--ribbon-icon-gap); 
+    }
+    & .side-dock-ribbon-action .svg-icon {
+        --icon-size: var(--ribbon-icon-size);
+        --icon-stroke: var(--ribbon-icon-stroke);
+    }
+    
+    //Fix Icon Height
+    & .side-dock-actions { margin-top: var(--header-height); }
 }
-.workspace-ribbon .side-dock-ribbon-action .svg-icon {
-    --icon-size: var(--ribbon-icon-size);
-    --icon-stroke: var(--ribbon-icon-stroke);
-}
+
+
+//Sidebar Tab Outline  ???
+:is(.mod-left-split, .mod-right-split) {
+    & .workspace-tab-header-inner {
+        background-color: transparent;
+        border-bottom: var(--sidebar-tab-border-width) solid var(--sidebar-tab-border-color);
+    }
+    & .is-active .workspace-tab-header-inner { border-color: var(--sidebar-tab-border-color-active); }
+} 
+
+
+
 
 //Fix Active Left Sidebar Tab Icon Color
 //Fix Remove background-modifier-hover
-:is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active,
-:is(.mod-left-split, .mod-right-split) .workspace-tab-header
-{ 
-    --background-modifier-hover: var(--sidebar-tab-background-color); 
-    
-    --tab-text-color: var(--text);
-    --tab-text-color-active: var(--text-dl);
-    --tab-text-color-focused: var(--text);
-    --tab-text-color-focused-active: var(--text-dl);
-    --tab-text-color-focused-active-current: var(--sidebar-icon-color-active);
-    
-    // --icon-color-focused: var(--sidebar-icon-color-active);
-    & .workspace-tab-header-inner-icon { --icon-color-focused: var(--sidebar-icon-color-active); }
+:is(.mod-left-split, .mod-right-split) {
+    & .workspace-tab-header.is-active,
+    & .workspace-tab-header
+    { 
+        --background-modifier-hover: var(--sidebar-tab-background-color); 
+        
+        --tab-text-color: var(--text);
+        --tab-text-color-active: var(--text-dl);
+        --tab-text-color-focused: var(--text);
+        --tab-text-color-focused-active: var(--text-dl);
+        --tab-text-color-focused-active-current: var(--sidebar-icon-color-active);
+        
+        // --icon-color-focused: var(--sidebar-icon-color-active);
+        & .workspace-tab-header-inner-icon { --icon-color-focused: var(--sidebar-icon-color-active); }
+    }
 }
 
 //Fix Active Left Sidebar Tab Icon Color
@@ -133,9 +149,6 @@
 
 // .nav-header .nav-action-button { color: var(--soft-text); }
 
-//Fix Icon Height
-.side-dock-actions { margin-top: var(--header-height); }
-
 //
 .workspace-tab-header-inner .workspace-tab-header-inner-icon {
     color: var(--sidebar-icon-color);
@@ -146,10 +159,3 @@
     position: relative;
     margin-left: -3px;
 }
-//Fix Spacing
-// .tree-item-self { gap: 4px; }
-
-// .tree-item-self.is-clickable {
-//     margin-left: 0 !important;
-//     padding-left: 0 !important;
-// }

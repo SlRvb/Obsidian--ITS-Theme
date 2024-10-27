@@ -10041,11 +10041,15 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
   --callout-color: var(--text-normal);
   --callout-icon: layout-dashboard;
   --columns: 2;
+  --callout-column-gap: 10px;
   background: transparent;
   box-shadow: none;
   border: 0;
   width: auto;
   padding: 0;
+}
+.callout[data-callout*=column] > .callout-content > .callout {
+  margin: 0;
 }
 .callout[data-callout*=column] > .callout-content .callout-content {
   border: 0;
@@ -10053,15 +10057,11 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
 .callout[data-callout*=column] > .callout-content {
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
-  gap: 10px;
+  gap: var(--callout-column-gap);
   background: transparent;
   box-shadow: none;
   border: 0;
   padding: 0;
-}
-.callout[data-callout*=column]:is([data-callout-metadata~=slim-margins],
-[data-callout-metadata~=s-mg]) > .callout-content {
-  gap: 2px;
 }
 .callout[data-callout*=column][data-callout-metadata~="3"] .callout-content {
   --columns: 3;
@@ -10084,8 +10084,12 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:is([da
 .callout[data-callout*=column][data-callout-metadata~="9"] .callout-content {
   --columns: 9;
 }
+.callout[data-callout*=column]:is([data-callout-metadata~=slim-margins],
+[data-callout-metadata~=s-mg]) > .callout-content {
+  --callout-column-gap: 2px;
+}
 .callout[data-callout*=column][data-callout-metadata~=flex] > .callout-content {
-  gap: 5px;
+  gap: var(--callout-column-gap);
   grid-template-columns: none;
   display: flex;
   flex-direction: row;

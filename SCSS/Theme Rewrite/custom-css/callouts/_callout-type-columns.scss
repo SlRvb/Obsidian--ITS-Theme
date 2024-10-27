@@ -4,36 +4,39 @@
     --callout-color: var(--text-normal);
     --callout-icon: layout-dashboard;
     --columns: 2;
+    --callout-column-gap: 10px;
 
     background: transparent;
     box-shadow: none;
     border: 0;
     width: auto;
     padding: 0;
+    
+    & > .callout-content > .callout { margin: 0; } //Fix sub callout margins in LP
 
     & > .callout-content .callout-content { border: 0; }
     
     & > .callout-content {
         display: grid;
         grid-template-columns: repeat(var(--columns), 1fr);
-        gap: 10px;
+        gap: var(--callout-column-gap);
 
         background: transparent;
         box-shadow: none;
         border: 0;
         padding: 0;
     }
-    &:is(
-        [data-callout-metadata~="slim-margins"],
-        [data-callout-metadata~="s-mg"]
-    ) > .callout-content 
-    { gap: 2px; }
-
     @for $i from 3 through 9 {
         &[data-callout-metadata~="#{$i}"] .callout-content {
             --columns: #{$i};
         }
     }
+    &:is(
+        [data-callout-metadata~="slim-margins"],
+        [data-callout-metadata~="s-mg"]
+    ) > .callout-content 
+    { --callout-column-gap: 2px; }
+
 
 
     // Flex
@@ -41,7 +44,7 @@
         & > .callout-content {
             // margin-top: 5px;
             // margin-bottom: 5px;
-            gap: 5px;
+            gap: var(--callout-column-gap);
             
             grid-template-columns: none;
 
@@ -73,7 +76,6 @@
             grid-template-columns: unset; 
             gap: unset; 
         }
-
 
         & > .callout-content .dataview.list-view-ul {
             columns: var(--columns);

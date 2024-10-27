@@ -1,6 +1,7 @@
 .tables-wide,
 .t-w
 { 
-    & .cm-table-widget.markdown-rendered .table-wrapper,
-    & table { width: 100%; } 
+    & table,
+    & .cm-table-widget.markdown-rendered .table-wrapper
+    { min-width: 100%; } //min-width to fix overflow colum button issue
 }

@@ -39,7 +39,7 @@
     --indentation-guide-color-active: var(--accent);
     --indentation-guide-source-indent: calc(var(--checkbox-size) / 3 * -1 + (var(--checkbox-size) / 2.5));
     --indentation-guide-editing-indent: calc(var(--checkbox-size) / 3);
-    --indentation-guide-reading-indent: calc(var(--checkbox-size) / 3 * -1 - 2px);
+    --indentation-guide-reading-indent: calc(var(--checkbox-size) * -1 + 2px);
     
     --list-color-1: var(--indentation-guide-color);
     --list-color-2: var(--indentation-guide-color);
@@ -96,9 +96,9 @@ body:not(.list-default-bullet) {
 
 //Alignment
 ul > li:not(.task-list-item)::before { 
-    float: left; //Spaced list bullet fix
-    margin-left: -21px;
-    margin-right: 7px;
+    float: inline-start; //Spaced list bullet fix
+    margin-inline-start: -21px;
+    margin-inline-end: 7px;
 }
 .markdown-preview-view .task-list-item-checkbox 
 { margin-right: 8px; }
@@ -107,7 +107,8 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox
 
 
 //Both LP & Source
-.cm-formatting-list-ol, .cm-formatting-list-ul { padding-inline-start: var(--root-list-bullet-spacing); }
+.cm-formatting-list-ol, 
+.cm-formatting-list-ul { padding-inline-start: var(--root-list-bullet-spacing); }
 
 
 //Live Preview
@@ -117,13 +118,10 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox
         font-family: var(--font-monospace); 
         
         &::before { 
-            margin-right: -16px;
+            margin-inline-end: -16px;
             // margin-left: -5px;
         }
     }
-    // Indent Line
-    // & .cm-hmd-list-indent .cm-indent::before 
-    // { transform: translateX(var(--indentation-guide-editing-indent)); }
 
     //Checkboxes
     & .task-list-label { 
@@ -135,9 +133,9 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox
 } 
 
 //Indentation Line
-.markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
-    transform: translateX(var(--indentation-guide-reading-indent));
-}
+// .markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
+//     transform: translateX(var(--indentation-guide-reading-indent));
+// }
 
 
 

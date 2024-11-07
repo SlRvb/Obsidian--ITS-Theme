@@ -1,7 +1,7 @@
 // Wide Tabs
 .sidebar-tabs-wide :is(.mod-left-split, .mod-right-split) {
     & .workspace-tab-header-container { padding-right: 0; }
-    & .workspace-tab-header-container-inner { flex: 1 0 auto; }
+    & .workspace-tab-header-container-inner { flex: 1 1 auto; }
     & .workspace-tab-header { width: 100%; }
     & .workspace-tab-header-inner { justify-content: center; }
     & .workspace-tab-header-spacer { display: none; }

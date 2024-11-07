@@ -20,7 +20,7 @@ body [data-type="outline"] {
     & .collapse-icon svg { visibility: var(--outline-arrow-visibility); }
 
     & .tree-item:not(.is-collapsed) > .mod-collapsible .tree-item-icon.collapse-icon 
-    { margin-left: var(--outline-arrow-margin); }
+    { margin-inline-start: var(--outline-arrow-margin); }
 
     //Symbol
     & .tree-item-self::before {
@@ -28,7 +28,7 @@ body [data-type="outline"] {
         font-family: var(--font-default);
         font-weight: 900;
         color: var(--headers);
-        padding-right: var(--outline-symbol-padding-right);
+        padding-inline-end: var(--outline-symbol-padding-right);
     }
     & .tree-item-self.is-active::before,
     & .tree-item-self:hover::before { color: var(--text-dl); }

@@ -16,7 +16,8 @@ body {
 .nav-folder-children .nav-folder-title .nav-folder-title-content::before,
 .nav-folder-title .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
-    margin-right: var(--file-icon-margin);
+    margin-inline-end: var(--file-icon-margin);
+    float: inline-start;
     font-size: var(--nav-item-size);
     font-weight: 10;
     width: var(--nav-item-size);

@@ -3379,7 +3379,7 @@ button.mod-cta:hover {
 .workspace-split.workspace-split.mod-right-split .workspace-tab-header-container {
   padding-left: 0;
 }
-.workspace-split.workspace-split.mod-left-split.mod-left-split .workspace-tab-header-container, .workspace-split.workspace-split.mod-right-split:not(.mod-top) .workspace-tab-header-container, .workspace-split.workspace-split.mod-root .workspace-tab-header-container {
+.workspace-split.workspace-split.mod-left-split.mod-left-split .workspace-tab-header-container, .workspace-split.workspace-split .mod-top .workspace-tab-header-container {
   padding: 0;
 }
 
@@ -3465,7 +3465,7 @@ button.mod-cta:hover {
 
 .tree-item-self .tree-item-icon {
   position: relative;
-  margin-left: -3px;
+  margin-inline-start: -3px;
 }
 
 body {
@@ -3632,7 +3632,8 @@ body.is-focused :is(.mod-left-split, .mod-right-split) .workspace-tab-header:not
   font-family: var(--h2-font);
 }
 
-body {
+body,
+body.mod-rtl {
   --vault-name-font-size: 20px;
   --vault-name-font-weight: var(--font-bold);
   --vault-name-color: var(--headers);
@@ -4517,7 +4518,7 @@ a[href^=https]:hover,
   --indentation-guide-color-active: var(--accent);
   --indentation-guide-source-indent: calc(var(--checkbox-size) / 3 * -1 + (var(--checkbox-size) / 2.5));
   --indentation-guide-editing-indent: calc(var(--checkbox-size) / 3);
-  --indentation-guide-reading-indent: calc(var(--checkbox-size) / 3 * -1 - 2px);
+  --indentation-guide-reading-indent: calc(var(--checkbox-size) * -1 + 2px);
   --list-color-1: var(--indentation-guide-color);
   --list-color-2: var(--indentation-guide-color);
   --list-color-3: var(--indentation-guide-color);
@@ -4561,9 +4562,9 @@ body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker, body:not(.l
 }
 
 ul > li:not(.task-list-item)::before {
-  float: left;
-  margin-left: -21px;
-  margin-right: 7px;
+  float: inline-start;
+  margin-inline-start: -21px;
+  margin-inline-end: 7px;
 }
 
 .markdown-preview-view .task-list-item-checkbox {
@@ -4574,7 +4575,8 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox {
   margin-inline-start: calc(var(--checkbox-size) * -1.4);
 }
 
-.cm-formatting-list-ol, .cm-formatting-list-ul {
+.cm-formatting-list-ol,
+.cm-formatting-list-ul {
   padding-inline-start: var(--root-list-bullet-spacing);
 }
 
@@ -4582,17 +4584,13 @@ ul > li.task-list-item.task-list-item .task-list-item-checkbox {
   font-family: var(--font-monospace);
 }
 .is-live-preview.markdown-source-view.mod-cm6 .cm-formatting-list-ul::before {
-  margin-right: -16px;
+  margin-inline-end: -16px;
 }
 .is-live-preview.markdown-source-view.mod-cm6 .task-list-label {
   margin-inline-start: 0;
 }
 .is-live-preview.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
   margin: 0;
-}
-
-.markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
-  transform: translateX(var(--indentation-guide-reading-indent));
 }
 
 ol > li::marker,
@@ -5030,8 +5028,8 @@ del,
 .tag-pane-tag .tree-item-inner > .tree-item-inner-text::before,
 .tag-pane-tag-text:before {
   content: "#";
-  padding-right: 5px;
-  margin-left: 1px;
+  padding-inline-end: 5px;
+  margin-inline-start: 1px;
   position: relative;
   color: var(--tag-text);
   width: var(--size-4-4);
@@ -5070,7 +5068,7 @@ body [data-type=outline] .collapse-icon svg {
 }
 body .outline .tree-item:not(.is-collapsed) > .mod-collapsible .tree-item-icon.collapse-icon,
 body [data-type=outline] .tree-item:not(.is-collapsed) > .mod-collapsible .tree-item-icon.collapse-icon {
-  margin-left: var(--outline-arrow-margin);
+  margin-inline-start: var(--outline-arrow-margin);
 }
 body .outline .tree-item-self::before,
 body [data-type=outline] .tree-item-self::before {
@@ -5078,7 +5076,7 @@ body [data-type=outline] .tree-item-self::before {
   font-family: var(--font-default);
   font-weight: 900;
   color: var(--headers);
-  padding-right: var(--outline-symbol-padding-right);
+  padding-inline-end: var(--outline-symbol-padding-right);
 }
 body .outline .tree-item-self.is-active::before, body .outline .tree-item-self:hover::before,
 body [data-type=outline] .tree-item-self.is-active::before,
@@ -6823,7 +6821,8 @@ body {
 .nav-folder-children .nav-folder-title .nav-folder-title-content::before,
 .nav-folder-title .nav-folder-title-content::before,
 .nav-file-title .nav-file-title-content::before {
-  margin-right: var(--file-icon-margin);
+  margin-inline-end: var(--file-icon-margin);
+  float: inline-start;
   font-size: var(--nav-item-size);
   font-weight: 10;
   width: var(--nav-item-size);
@@ -11695,7 +11694,7 @@ body {
   padding-right: 0;
 }
 .sidebar-tabs-wide :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 .sidebar-tabs-wide :is(.mod-left-split, .mod-right-split) .workspace-tab-header {
   width: 100%;

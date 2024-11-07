@@ -41,9 +41,10 @@
     &.mod-right-split .workspace-tab-header-container { padding-left: 0; } 
     
     &.mod-left-split.mod-left-split,
-    &.mod-right-split:not(.mod-top),
-    &.mod-root
-    { .workspace-tab-header-container { padding: 0; } } 
+    & .mod-top
+    // &.mod-right-split:not(.mod-top),
+    // &.mod-root
+    { & .workspace-tab-header-container { padding: 0; } } 
 }
 
 //Fix Inner Icon Sizing
@@ -157,5 +158,5 @@
 //Fix Arrow Alignment
 .tree-item-self .tree-item-icon { 
     position: relative;
-    margin-left: -3px;
+    margin-inline-start: -3px;
 }

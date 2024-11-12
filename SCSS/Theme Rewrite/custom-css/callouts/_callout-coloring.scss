@@ -35,7 +35,10 @@ $callout-colors: (
             [data-callout-metadata~="bg-#{$name}"],
             [data-callout-metadata~="background-color-#{$name}"], 
             [data-callout-metadata~="bg-c-#{$name}"]
-        ) { background-color: rgba(var(--callout-#{$name}), var(--callout-color-opacity)); }
+        ) { 
+            --callout-background: rgba(var(--callout-#{$name}), var(--callout-color-opacity)); 
+            background-color: var(--callout-background); 
+        }
         
         //Background & Text
         &:is(

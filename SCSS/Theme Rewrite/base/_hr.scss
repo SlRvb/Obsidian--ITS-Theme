@@ -70,3 +70,6 @@ body {
 :is(.mod-left-split, .mod-right-split) {
     --hr-icon-background: var(--side-bar);
 }
+
+//Fix Community hr issue
+.community-modal-readme hr::after { display: none; }

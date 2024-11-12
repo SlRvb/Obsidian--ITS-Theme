@@ -112,4 +112,9 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~="Metadata" i] {
             border-color: transparent;
         }
     }
+
+    &[data-callout-metadata*="bg-"] {
+        --callout-border-color: var(--callout-background);
+        border-color: var(--callout-border-color);
+    }
 }

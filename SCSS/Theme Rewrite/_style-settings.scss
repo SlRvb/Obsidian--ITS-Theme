@@ -1680,18 +1680,27 @@ settings:
         level: 2
         collapsed: true
     -
-        title: Original Callout Styling
-        description: Pre Obsidian v1 Callout Styling
-        id: callout-original
-        type: class-toggle
-    -
-        title: Block Callout Styling
-        id: callout-block
-        type: class-toggle
-    -
-        title: Outline Callout Styling
-        id: callout-outline
-        type: class-toggle
+        title: Callout Styling
+        id: callout-style
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: Original Callout Styling
+                value: callout-original
+            -
+                label: Callout Block Styling
+                value: callout-block
+            -
+                label: Callout Alternate Line Styling
+                value: callout-alternate-line
+            -
+                label: Callout Bordered Styling
+                value: callout-bordered
+            #-
+            #   label: Callout Outline Styling
+            #   value: callout-outline
     -
         title: Disable ITS Quote Callout Styling
         id: default-callout-quote

@@ -149,7 +149,7 @@
 .callout:is(
     [data-callout-metadata~="dim-hvr"],
     [data-callout-metadata~="dim-hover"],
-    [data-callout-metadata~="dim-closed"].is-collapsed
+    [data-callout-metadata~="dim-closed"].is-collapsed,
     [data-callout-metadata~="dim"]
 ):not(:hover) {
     // opacity: 30%;

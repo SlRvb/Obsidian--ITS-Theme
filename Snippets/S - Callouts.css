@@ -139,7 +139,8 @@
 
 .callout:is([data-callout-metadata~=dim-hvr],
 [data-callout-metadata~=dim-hover],
-[data-callout-metadata~=dim-closed].is-collapsed [data-callout-metadata~=dim]):not(:hover) {
+[data-callout-metadata~=dim-closed].is-collapsed,
+[data-callout-metadata~=dim]):not(:hover) {
   filter: brightness(50%);
   transition: filter 300ms;
 }

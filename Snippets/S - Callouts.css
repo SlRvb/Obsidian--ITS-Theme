@@ -137,6 +137,13 @@
   text-align: left;
 }
 
+.callout:is([data-callout-metadata~=dim-hvr],
+[data-callout-metadata~=dim-hover],
+[data-callout-metadata~=dim-closed].is-collapsed [data-callout-metadata~=dim]):not(:hover) {
+  filter: brightness(50%);
+  transition: filter 300ms;
+}
+
 /*--Callout Coloring--*/
 .callout.callout.callout {
   --callout-color-opacity: 20%;

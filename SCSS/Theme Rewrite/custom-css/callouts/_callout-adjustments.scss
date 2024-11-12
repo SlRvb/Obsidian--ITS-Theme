@@ -142,3 +142,17 @@
 
 //Fix iframe Code
 .callout #vid { text-align: left; }
+
+
+
+//Inspired by Davey
+.callout:is(
+    [data-callout-metadata~="dim-hvr"],
+    [data-callout-metadata~="dim-hover"],
+    [data-callout-metadata~="dim-closed"].is-collapsed
+    [data-callout-metadata~="dim"]
+):not(:hover) {
+    // opacity: 30%;
+    filter: brightness(50%);
+    transition: filter 300ms;
+}

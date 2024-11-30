@@ -68,6 +68,8 @@
         & .setting-item-heading { margin: 0; }
 
         & .mod-sync-log { --modal-top: 0; }
+
+        --metadata-divider-width: 0;
     }
 
     //Fix Breadcrumb Note Title Padding
@@ -79,6 +81,9 @@
     --mobile-toolbar-background: var(--deep-dark-accent);
 
     //Workspace Drawer
+    & .workspace-drawer .nav-buttons-container {
+        --icon-color-active: var(--interactive-accent-hover);
+    }
     & .workspace-drawer-backdrop { opacity: 0.90 !important; }
     & .workspace-drawer:is(.mod-left, .mod-right) {
         border: none;
@@ -111,6 +116,11 @@
         background-color: var(--bttn);
     }
     & .empty-state-action:hover { background-color: var(--outer-bar); }
+
+    & .tree-item .tree-item-self {
+        --nav-item-parent-padding: 4px 10px;
+        padding: var(--nav-item-parent-padding);
+    }
 }
 
 //Notes

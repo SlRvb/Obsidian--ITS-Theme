@@ -1,27 +1,23 @@
 /* Vault Icon */
-body {
+.vault-icon {
     --vault-icon-image: '';
+    --vault-icon-width: 32px;
+    --vault-icon-height: 28px;
+    --vault-icon-padding: 10px;
 }
 
 // Vault Icon
-.workspace-sidedock-vault-profile::before {
-    content: '';
-    background-image: var(--vault-icon-image);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-// Icon Size
-.vault-icon .workspace-sidedock-vault-profile::before {
-    width: 32px;
-    height: 28px;
-    // margin-right: 5px;
-}
+.vault-icon {
+    & .mod-left .workspace-drawer-header::before,
+    & .workspace-sidedock-vault-profile::before {
+        content: '';
+        background-image: var(--vault-icon-image);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: var(--vault-icon-width);
+        height: var(--vault-icon-height);
+    }
+    // Mobile
+    & .mod-left .workspace-drawer-header::before { margin-right: var(--vault-icon-padding); }
+} 
 
-// Mobile
-.vault-icon .workspace-drawer-header-name::before {
-    margin-right: 10px;
-}
-.vault-icon .workspace-drawer-header {
-    padding-left: 10px;
-    padding-right: 10px;
-}

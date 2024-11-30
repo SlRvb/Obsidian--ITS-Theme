@@ -20,9 +20,10 @@
     --tab-text-padding-inner: 1px 3px;
     --tab-gap: 0 10px;
 
+    --tab-text-color-hover: var(--text-on-accent);
     --tab-text-color-focused-active-current: var(--text);
     --tab-curve: 0;
-    --background-modifier-hover: var(--bttn);
+    // --background-modifier-hover: var(--bttn);
     
     
     // & .workspace-tab-header { padding: var(--tab-gap); }
@@ -49,6 +50,7 @@
         padding: var(--tab-text-padding-inner);
         --sidebar-tab-background-color-hover: transparent;
 
+        //Inactive Dropshadow
         &:not(.is-active) { --titlebar-bubble-colors: var(--titlebar-bubble-colors-inactive); }
     }
     //Sliding Tab Fix
@@ -62,7 +64,7 @@
     // & .workspace-tab-header.is-active::after { display: none; }
 
     //Hover Color
-    & .workspace-tab-header:not(.is-active):hover { 
+    & .workspace-tab-header:hover { 
         background-color: var(--bttn); 
         --titlebar-bubble-colors: unset;
         
@@ -72,8 +74,9 @@
     // Fix Breadcumb hover
     & .view-header-title-parent .view-header-breadcrumb:hover { background-color: var(--td); }
 
+    
     & .workspace-tab-header-status-icon:hover,
-    & .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover,
+    & .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
     & .workspace-tab:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner 
     { color: var(--text-on-accent); }
 }

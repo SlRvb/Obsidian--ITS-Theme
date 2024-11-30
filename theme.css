@@ -3388,7 +3388,7 @@ button.mod-cta:hover {
 .workspace-split.workspace-split.mod-right-split .workspace-tab-header-container {
   padding-left: 0;
 }
-.workspace-split.workspace-split.mod-left-split.mod-left-split .workspace-tab-header-container, .workspace-split.workspace-split .mod-top .workspace-tab-header-container {
+.workspace-split.workspace-split .mod-top .workspace-tab-header-container {
   padding: 0;
 }
 
@@ -3459,8 +3459,16 @@ button.mod-cta:hover {
   --icon-color-focused: var(--sidebar-icon-color-active);
 }
 
+.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.workspace-tab-header-inner:hover .workspace-tab-header-inner-icon,
+.mod-top-left-space.mod-active .workspace-tab-header.is-active {
+  --titlebar-text-color-focused: var(--sidebar-icon-color-active);
+  --tab-text-color-hover: var(--sidebar-icon-color-active);
+  --icon-color-hover: var(--sidebar-icon-color-active);
+}
+
 :is(.mod-left-split, .mod-right-split) .is-active:hover .workspace-tab-header-inner,
-:is(.clickable-icon, .workspace-tab-header-inner-icon):hover,
+:is(.workspace-tab-header-inner-icon):hover,
 .workspace-tab-header-container .clickable-icon:hover,
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
 .side-dock-ribbon .clickable-icon:hover,
@@ -3468,8 +3476,16 @@ button.mod-cta:hover {
   color: var(--sidebar-tab-color-hover);
 }
 
+.side-dock-actions {
+  margin-top: var(--header-height);
+}
+
 .workspace-tab-header-inner .workspace-tab-header-inner-icon {
   color: var(--sidebar-icon-color);
+}
+
+.workspace-tab-header:hover .workspace-tab-header-inner-icon {
+  color: var(--sidebar-icon-color-hover);
 }
 
 .tree-item-self .tree-item-icon {
@@ -3853,6 +3869,9 @@ body {
 .is-mobile.is-mobile .notice {
   border-radius: var(--radius-s);
 }
+.is-mobile.is-mobile.is-phone {
+  --metadata-divider-width: 0;
+}
 .is-mobile.is-mobile.is-phone .vertical-tab-header-group-title, .is-mobile.is-mobile.is-phone .setting-item-heading .setting-item-name {
   font-size: var(--font-ui-medium);
 }
@@ -3872,6 +3891,9 @@ body {
 
 .is-mobile {
   --mobile-toolbar-background: var(--deep-dark-accent);
+}
+.is-mobile .workspace-drawer .nav-buttons-container {
+  --icon-color-active: var(--interactive-accent-hover);
 }
 .is-mobile .workspace-drawer-backdrop {
   opacity: 0.9 !important;
@@ -3904,6 +3926,10 @@ body {
 }
 .is-mobile .empty-state-action:hover {
   background-color: var(--outer-bar);
+}
+.is-mobile .tree-item .tree-item-self {
+  --nav-item-parent-padding: 4px 10px;
+  padding: var(--nav-item-parent-padding);
 }
 
 .is-mobile .markdown-rendered .list-collapse-indicator {
@@ -6790,29 +6816,23 @@ img.emoji.emoji {
 }
 
 /* Vault Icon */
-body {
+.vault-icon {
   --vault-icon-image: "";
+  --vault-icon-width: 32px;
+  --vault-icon-height: 28px;
+  --vault-icon-padding: 10px;
 }
 
-.workspace-sidedock-vault-profile::before {
+.vault-icon .mod-left .workspace-drawer-header::before, .vault-icon .workspace-sidedock-vault-profile::before {
   content: "";
   background-image: var(--vault-icon-image);
   background-size: contain;
   background-repeat: no-repeat;
+  width: var(--vault-icon-width);
+  height: var(--vault-icon-height);
 }
-
-.vault-icon .workspace-sidedock-vault-profile::before {
-  width: 32px;
-  height: 28px;
-}
-
-.vault-icon .workspace-drawer-header-name::before {
-  margin-right: 10px;
-}
-
-.vault-icon .workspace-drawer-header {
-  padding-left: 10px;
-  padding-right: 10px;
+.vault-icon .mod-left .workspace-drawer-header::before {
+  margin-right: var(--vault-icon-padding);
 }
 
 .vault-title-none .nav-folder.mod-root > .nav-folder-title {
@@ -9466,6 +9486,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout.callout[data-callout=statblocks] img:not([class], [width]) {
   box-shadow: 0 0 0 4px var(--headers, var(--background-modifier-border));
   margin-right: 4px;
+  margin-bottom: 4px;
 }
 .callout.callout[data-callout=statblocks] h1::after, .callout.callout[data-callout=statblocks] h1::before, .callout.callout[data-callout=statblocks] > .callout-title {
   display: none;
@@ -9483,9 +9504,12 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout.callout[data-callout=statblocks] table {
   --table-header-background: transparent;
+  --table-header-background-hover: var(--table-header-background);
   --table-header-color: var(--headers, var(--text-faint));
   --table-header-border-color: transparent;
   --table-row-alt-background: transparent;
+  --table-row-alt-background-hover: var(--table-row-alt-background);
+  --table-row-background-hover: var(--table-row-alt-background);
   --table-column-alt-background: transparent;
   --table-border-color: transparent;
   --table-cell-padding-y: 1px;
@@ -11421,9 +11445,9 @@ iframe {
   --tab-text-padding: 3px 5px;
   --tab-text-padding-inner: 1px 3px;
   --tab-gap: 0 10px;
+  --tab-text-color-hover: var(--text-on-accent);
   --tab-text-color-focused-active-current: var(--text);
   --tab-curve: 0;
-  --background-modifier-hover: var(--bttn);
 }
 .titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header-container-inner, .titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header-container {
   align-items: center;
@@ -11449,17 +11473,17 @@ iframe {
 .titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header-new-tab {
   padding: 0;
 }
-.titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header:not(.is-active):hover {
+.titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header:hover {
   background-color: var(--bttn);
   --titlebar-bubble-colors: unset;
 }
-.titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-status-container:hover {
+.titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header:hover .workspace-tab-header-status-container:hover {
   background: var(--td);
 }
 .titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .view-header-title-parent .view-header-breadcrumb:hover {
   background-color: var(--td);
 }
-.titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header-status-icon:hover, .titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover, .titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+.titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header-status-icon:hover, .titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .titlebar-bubbles :is(.mod-left-split, .mod-right-split, .mod-root) .workspace-tab:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
   color: var(--text-on-accent);
 }
 

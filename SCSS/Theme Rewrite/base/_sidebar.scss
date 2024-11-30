@@ -40,7 +40,7 @@
     // Sidebar tabs padding
     &.mod-right-split .workspace-tab-header-container { padding-left: 0; } 
     
-    &.mod-left-split.mod-left-split,
+    // &.mod-left-split.mod-left-split,
     & .mod-top
     // &.mod-right-split:not(.mod-top),
     // &.mod-root
@@ -128,17 +128,17 @@
 }
 
 //Fix Active Left Sidebar Tab Icon Color
-// .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-// .workspace-tab-header-inner:hover .workspace-tab-header-inner-icon,
-// .mod-top-left-space.mod-active .workspace-tab-header.is-active {
-//     --titlebar-text-color-focused: var(--sidebar-icon-color-active);
-//     --tab-text-color-hover: var(--sidebar-icon-color-active);
-//     --icon-color-hover: var(--sidebar-icon-color-active);
-// }
+.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.workspace-tab-header-inner:hover .workspace-tab-header-inner-icon,
+.mod-top-left-space.mod-active .workspace-tab-header.is-active {
+    --titlebar-text-color-focused: var(--sidebar-icon-color-active);
+    --tab-text-color-hover: var(--sidebar-icon-color-active);
+    --icon-color-hover: var(--sidebar-icon-color-active);
+}
 
 //Fixed Hover Icon Background Color
 :is(.mod-left-split, .mod-right-split) .is-active:hover .workspace-tab-header-inner,
-:is(.clickable-icon, .workspace-tab-header-inner-icon):hover,
+:is(.workspace-tab-header-inner-icon):hover,
 .workspace-tab-header-container .clickable-icon:hover,
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner,
 .side-dock-ribbon .clickable-icon:hover,
@@ -150,10 +150,14 @@
 
 // .nav-header .nav-action-button { color: var(--soft-text); }
 
-//
-.workspace-tab-header-inner .workspace-tab-header-inner-icon {
-    color: var(--sidebar-icon-color);
-}
+//Fix Icon Height
+.side-dock-actions { margin-top: var(--header-height); }
+
+//Fix Tab Icon Hover Coloring 
+.workspace-tab-header-inner .workspace-tab-header-inner-icon 
+{ color: var(--sidebar-icon-color); }
+.workspace-tab-header:hover .workspace-tab-header-inner-icon
+{ color: var(--sidebar-icon-color-hover); }
 
 //Fix Arrow Alignment
 .tree-item-self .tree-item-icon { 

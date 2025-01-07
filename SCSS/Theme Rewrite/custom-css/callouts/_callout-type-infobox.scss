@@ -54,8 +54,7 @@
     }
     
     //Display title collapse arrow on hover only
-    & > .callout-title .callout-title-inner
-    { display: none; }
+    & > .callout-title .callout-title-inner { display: none; }
     & > .callout-title .callout-icon { height: 0; }
     
     // Fixed for export: DO NOT display: none; ON CALLOUT ICON
@@ -72,13 +71,13 @@
     
 
     //Show title
-    & .callout-content > .callout[data-callout~="infobox"],
+    & > .callout-content > .callout[data-callout~="infobox"]:not([data-callout-metadata~="no-t"]),
     &:is([data-callout-metadata~="show-title"], [data-callout-metadata~="s-t"]) {
-        &:not(:hover):not(.is-collapsed) > .callout-title {
+        &:not(.is-collapsed) > .callout-title {
             display: flex;
             gap: 0;
         }
-        &.is-collapsed .callout-title {
+        &.is-collapsed > .callout-title {
             border: 1px solid var(--hr, var(--background-modifier-border));
             display: flex;
             align-items: center;
@@ -157,7 +156,7 @@
             border-bottom: none;
         }
 
-        & > .callout-content {
+        &:not([data-callout-metadata~="no-t"]) > .callout-content {
             border-top: none;
         }
     }

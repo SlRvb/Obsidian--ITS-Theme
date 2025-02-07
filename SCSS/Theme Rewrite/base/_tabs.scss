@@ -12,6 +12,7 @@ body {
     //Width
     --tab-width: 200px;
     --tab-max-width: 320px;
+    --tab-min-width: 10ch;
 
     //Color
     --tab-outline-width: 2px;
@@ -79,7 +80,10 @@ body.is-focused :is(.mod-left-split, .mod-right-split) .workspace-tab-header:not
 .workspace-tab-header-container {
     border-top: var(--tab-top-outline-width) solid var(--tab-outline-color);
 }
-
+//Fix Min Width
+.workspace .mod-root .workspace-tab-header {
+    min-width: var(--tab-min-width);
+}
 
 //----
 //Hide Active Note Title

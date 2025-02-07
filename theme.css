@@ -3598,6 +3598,7 @@ body {
   --tab-font-weight-active: 900;
   --tab-width: 200px;
   --tab-max-width: 320px;
+  --tab-min-width: 10ch;
   --tab-outline-width: 2px;
   --tab-top-outline-width: 0;
   --tab-outline-color: var(--accent);
@@ -3651,6 +3652,10 @@ body.is-focused :is(.mod-left-split, .mod-right-split) .workspace-tab-header:not
 
 .workspace-tab-header-container {
   border-top: var(--tab-top-outline-width) solid var(--tab-outline-color);
+}
+
+.workspace .mod-root .workspace-tab-header {
+  min-width: var(--tab-min-width);
 }
 
 .empty-state .empty-state-title {
@@ -11488,11 +11493,19 @@ iframe {
 }
 
 .tab-auto {
-  --tab-width: auto;
+  --tab-width: fit-content;
   --tab-max-width: 100%;
+  --tab-min-width: 10ch;
 }
-.tab-auto .workspace .mod-root .workspace-tab-header {
-  flex: unset;
+.tab-auto .mod-root .workspace-tab-header-container {
+  flex: 0 1 auto;
+}
+.tab-auto .mod-root .workspace-tab-header-container-inner {
+  flex: 1 1 min-content;
+  flex-wrap: nowrap;
+}
+.tab-auto .workspace .mod-root .workspace-tab-header-inner-title {
+  flex: 1 1 fit-content;
 }
 
 .tab-wide {

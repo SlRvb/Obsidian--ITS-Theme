@@ -1918,6 +1918,10 @@ settings:
         max: 100
         step: 10
     -
+        title: Horizontal Line Width Auto
+        id: hr-width
+        type: class-toggle
+    -
         title: No Horizontal Line Symbol
         description: Hide the horizontal Line Symbol entirely
         id: hr-no-icon

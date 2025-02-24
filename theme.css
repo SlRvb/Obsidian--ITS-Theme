@@ -1919,6 +1919,10 @@ settings:
         max: 100
         step: 10
     -
+        title: Horizontal Line Width Auto
+        id: hr-width
+        type: class-toggle
+    -
         title: No Horizontal Line Symbol
         description: Hide the horizontal Line Symbol entirely
         id: hr-no-icon
@@ -3598,7 +3602,7 @@ body {
   --tab-font-weight-active: 900;
   --tab-width: 200px;
   --tab-max-width: 320px;
-  --tab-min-width: 10ch;
+  --tab-min-width: min-content;
   --tab-outline-width: 2px;
   --tab-top-outline-width: 0;
   --tab-outline-color: var(--accent);

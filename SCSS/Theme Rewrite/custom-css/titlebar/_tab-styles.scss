@@ -1,24 +1,16 @@
 .tab-auto {
-    --tab-width: fit-content;
-    --tab-max-width: 100%;
-    --tab-min-width: 10ch;
-
-    
-    // // & .workspace .mod-root .workspace-tab-header,
-    // // & .workspace-tab-header-container-inner { flex: auto; }
-    & .mod-root .workspace-tab-header-container {
-        flex: 0 1 auto;
+    & .workspace .mod-root .workspace-tab-header,
+    & .mod-root .workspace-tab-header-inner {
+        container-type: normal;
+        width: min-content;
     }
-    & .mod-root .workspace-tab-header-container-inner {
-        // overflow: unset;
-        flex: 1 1 min-content;
-        flex-wrap: nowrap;
+    & .workspace .mod-root .workspace-tab-header-new-tab {
+        margin-inline-start: 2px;
+        margin-inline-end: 0px;
     }
-    & .workspace .mod-root .workspace-tab-header-inner-title {
-        // text-overflow: unset;
-        flex: 1 1 fit-content;
+    & .workspace .mod-root .workspace-tab-header-container-inner {
+        // padding: 2px;
     }
-    // & .mod-root .workspace-tab-header-spacer { display: none; }
 }
 .tab-wide {
     --tab-width: auto;

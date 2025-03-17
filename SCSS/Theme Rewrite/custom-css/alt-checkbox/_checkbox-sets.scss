@@ -314,7 +314,7 @@ $checkboxes: (
     "W": (
         icon: "\E813",
         color: rgb(var(--chbx-P)),
-        text-color: rgb(var(--chbx-R)),
+        text-color: rgb(var(--chbx-P)),
         norm-text: var(--text),
 		font-weight: inherit,
         background: rgba(var(--chbx-P), 20%),

@@ -3629,8 +3629,8 @@ body {
   display: none;
 }
 
-.workspace-tab-header.workspace-tab-header:hover {
-  color: var(--tab-text-color-hover);
+.workspace-tab-header-container {
+  --background-modifier-hover: var(--sidebar-tab-background-color);
 }
 
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button,
@@ -8775,7 +8775,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   color: rgb(var(--chbx-h));
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=W] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=W].task-list-item.is-checked {
-  color: rgb(var(--chbx-R));
+  color: rgb(var(--chbx-P));
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="~"] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task="~"].task-list-item.is-checked {
   color: rgb(var(--chbx-C));
@@ -11496,22 +11496,14 @@ iframe {
   color: var(--text-on-accent);
 }
 
-.tab-auto {
-  --tab-width: fit-content;
-  --tab-max-width: 100%;
-  --tab-min-width: 10ch;
+.tab-auto .workspace .mod-root .workspace-tab-header, .tab-auto .mod-root .workspace-tab-header-inner {
+  container-type: normal;
+  width: min-content;
 }
-.tab-auto .mod-root .workspace-tab-header-container {
-  flex: 0 1 auto;
+.tab-auto .workspace .mod-root .workspace-tab-header-new-tab {
+  margin-inline-start: 2px;
+  margin-inline-end: 0px;
 }
-.tab-auto .mod-root .workspace-tab-header-container-inner {
-  flex: 1 1 min-content;
-  flex-wrap: nowrap;
-}
-.tab-auto .workspace .mod-root .workspace-tab-header-inner-title {
-  flex: 1 1 fit-content;
-}
-
 .tab-wide {
   --tab-width: auto;
   --tab-max-width: 100%;

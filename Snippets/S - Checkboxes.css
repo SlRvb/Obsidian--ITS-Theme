@@ -1029,7 +1029,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   color: rgb(var(--chbx-h));
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=W] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task=W].task-list-item.is-checked {
-  color: rgb(var(--chbx-R));
+  color: rgb(var(--chbx-P));
 }
 .check-color.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="~"] [class^=cm-list]:not(.cm-formatting-task), .check-color.check-color.check-color ul > li[data-task="~"].task-list-item.is-checked {
   color: rgb(var(--chbx-C));

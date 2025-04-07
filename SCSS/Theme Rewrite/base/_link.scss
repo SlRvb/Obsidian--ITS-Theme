@@ -14,7 +14,7 @@ body,
     
     --link-font: inherit;
     --link-external-font: var(--link-font); //Pesonal
-    --link-weight: inherit;
+    // --link-weight: inherit;
     --link-border: none;
     
     --link-transform: none;
@@ -71,4 +71,12 @@ a[href^='https'],
     opacity: .5;
     font-weight: 100 !important;
     font-style: normal !important;
+}
+
+
+//Fix bold issues
+.cm-s-obsidian .cm-hmd-internal-link.cm-strong, 
+strong a:is(.internal-link, .external-link) {
+    font-weight: calc(var(--link-weight) + var(--bold-modifier));
+    // font-weight: var(--bold-weight);
 }

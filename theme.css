@@ -4475,7 +4475,6 @@ body,
   --link-external-color-hover: var(--text-accent-hover);
   --link-font: inherit;
   --link-external-font: var(--link-font);
-  --link-weight: inherit;
   --link-border: none;
   --link-transform: none;
   --link-background: transparent;
@@ -4528,6 +4527,11 @@ a[href^=https]:hover,
   opacity: 0.5;
   font-weight: 100 !important;
   font-style: normal !important;
+}
+
+.cm-s-obsidian .cm-hmd-internal-link.cm-strong,
+strong a:is(.internal-link, .external-link) {
+  font-weight: calc(var(--link-weight) + var(--bold-modifier));
 }
 
 .theme-dark,

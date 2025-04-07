@@ -1,0 +1,25 @@
+
+//Fix textbox widths to auto size to area
+code.mb-input { 
+    padding: 0; //Remove dot
+    --code-size: var(--font-text-size);
+    // vertical-align: -2px;
+}
+.mb-select-input-element { min-width: 5ch; }
+
+.mb-input {
+    select,
+    & input:is([type='text'], [type='number'], [type='date']) {
+        min-width: 5ch;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+//Fix Sliders
+input.mb-slider-input {
+    padding: 0;
+    min-width: 4ch;
+    max-width: 100%;
+    margin: 0;
+}

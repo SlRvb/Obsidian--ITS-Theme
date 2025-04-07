@@ -4,7 +4,7 @@
 /*Center Image*/
 // .image-embed:is([src*="#ctr"], [src*="#center"])
 .img-adj-center.img-adj-center img,
-img:is([alt*="ctr"], [alt*="center"]) {
+img:is([alt~="ctr"], [alt~="center"]) {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -21,7 +21,7 @@ img:is([alt*="ctr"], [alt*="center"]) {
 .markdown-rendered {
     & img,
     & .image-embed {
-        &:is([alt*="left"], [alt*="locl"]),
+        &:is([alt~="left"], [alt~="locl"]),
         &:is([src*="#left"], [src*="#locl"])
         {
             float:left;
@@ -30,7 +30,7 @@ img:is([alt*="ctr"], [alt*="center"]) {
             margin-bottom: 0px;
         }
     
-        &:is([alt*="right"], [alt*="locr"]),
+        &:is([alt~="right"], [alt~="locr"]),
         &:is([src*="#right"], [src*="#locr"])
         {
             float:right;

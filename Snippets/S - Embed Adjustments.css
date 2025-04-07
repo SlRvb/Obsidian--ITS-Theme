@@ -44,21 +44,21 @@
   width: 95%;
 }
 
-.internal-embed[alt*=right] {
+.internal-embed[alt~=right] {
   float: right;
   margin-left: 0.5em;
 }
 
-.internal-embed[alt*=left] {
+.internal-embed[alt~=left] {
   float: left;
   margin-right: 0.5em;
 }
 
-.internal-embed[alt*=center] {
+.internal-embed[alt~=center] {
   margin: auto;
 }
 
-:not(.lp-embed-float) .is-live-preview .internal-embed:is([alt*=right], [alt*=left]) {
+:not(.lp-embed-float) .is-live-preview .internal-embed:is([alt~=right], [alt~=left]) {
   float: unset;
 }
 

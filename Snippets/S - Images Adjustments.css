@@ -198,7 +198,7 @@ div:not(.image-embed) > img[alt][alt*=relative] {
 /*Image Locations*/
 /*Center Image*/
 .img-adj-center.img-adj-center img,
-img:is([alt*=ctr], [alt*=center]) {
+img:is([alt~=ctr], [alt~=center]) {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -210,13 +210,13 @@ img:is([alt*=ctr], [alt*=center]) {
 }
 
 /*Left & Right*/
-.markdown-rendered img:is([alt*=left], [alt*=locl]), .markdown-rendered img:is([src*="#left"], [src*="#locl"]), .markdown-rendered .image-embed:is([alt*=left], [alt*=locl]), .markdown-rendered .image-embed:is([src*="#left"], [src*="#locl"]) {
+.markdown-rendered img:is([alt~=left], [alt~=locl]), .markdown-rendered img:is([src*="#left"], [src*="#locl"]), .markdown-rendered .image-embed:is([alt~=left], [alt~=locl]), .markdown-rendered .image-embed:is([src*="#left"], [src*="#locl"]) {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.markdown-rendered img:is([alt*=right], [alt*=locr]), .markdown-rendered img:is([src*="#right"], [src*="#locr"]), .markdown-rendered .image-embed:is([alt*=right], [alt*=locr]), .markdown-rendered .image-embed:is([src*="#right"], [src*="#locr"]) {
+.markdown-rendered img:is([alt~=right], [alt~=locr]), .markdown-rendered img:is([src*="#right"], [src*="#locr"]), .markdown-rendered .image-embed:is([alt~=right], [alt~=locr]), .markdown-rendered .image-embed:is([src*="#right"], [src*="#locr"]) {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;

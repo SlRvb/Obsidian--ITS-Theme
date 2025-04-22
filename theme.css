@@ -2774,6 +2774,10 @@ settings:
         id: breadcrumbs-block
         type: class-toggle
     -
+        title: Meta Bind Auto Size Fields
+        id: metabind-auto
+        type: class-toggle
+    -
         title: Dataview
         id: ITS-Plugins-Dataview
         type: heading
@@ -6731,13 +6735,12 @@ code.mb-input {
   min-width: 5ch;
 }
 
-.mb-input select, .mb-input input:is([type=text], [type=number], [type=date]) {
+.metabind-auto .mb-input select, .metabind-auto .mb-input input:is([type=text], [type=number], [type=date]) {
   min-width: 5ch;
   width: 100%;
   max-width: 100%;
 }
-
-input.mb-slider-input {
+.metabind-auto input.mb-slider-input {
   padding: 0;
   min-width: 4ch;
   max-width: 100%;

@@ -57,6 +57,8 @@
     //Side Alignment
     &[data-callout-metadata~="t-l"] {
         border-right: 4px solid var(--timeline-border);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         margin-right: var(--c-timeline);
         z-index: 0;
 
@@ -65,6 +67,8 @@
     }
     &[data-callout-metadata~="t-r"] {
         border-left: 4px solid var(--timeline-border);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         margin-left: var(--c-timeline);
         
         & > .callout-title,

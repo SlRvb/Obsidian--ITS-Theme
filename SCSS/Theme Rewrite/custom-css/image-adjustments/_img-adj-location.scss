@@ -28,6 +28,7 @@ img:is([alt~="ctr"], [alt~="center"]) {
             margin-right: 2%;
             margin-top: 0px;
             margin-bottom: 0px;
+            float: inline-start;
         }
     
         &:is([alt~="right"], [alt~="locr"]),
@@ -36,6 +37,7 @@ img:is([alt~="ctr"], [alt~="center"]) {
             float:right;
             margin-left: 2%;
             margin-bottom: 0px;
+            float: inline-end;
         }
     }
 }

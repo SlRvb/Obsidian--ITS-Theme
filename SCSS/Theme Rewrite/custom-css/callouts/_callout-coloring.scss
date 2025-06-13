@@ -27,7 +27,10 @@ $callout-colors: (
             [data-callout-metadata~="c-#{$name}"],
             [data-callout-metadata~="background-color-#{$name}"], 
             [data-callout-metadata~="bg-c-#{$name}"] 
-        ) > .callout-title { --callout-color: var(--callout-#{$name}); }
+        ) { 
+            --callout-title: var(--callout-#{$name}); 
+            & > .callout-title { --callout-color: var(--callout-title); }
+        }
 
         //Background Colors
         &:is(

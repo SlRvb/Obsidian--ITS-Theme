@@ -47,7 +47,7 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
 }
 
 //Sizing; Height Width
-img[alt][alt]:not([alt*=relative]) {
+.view-content img[alt][alt]:not([alt*=relative]) {
     &[alt*="hmicro"]    { height: var(--micro); }
     &[alt*="htiny"]     { height: var(--tiny); }
     &[alt*="hsmall"]    { height: var(--small); }

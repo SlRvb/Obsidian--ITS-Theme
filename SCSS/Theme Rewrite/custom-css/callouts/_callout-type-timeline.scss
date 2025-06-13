@@ -8,6 +8,8 @@
     --callout-content-padding: 10px;
     --callout-margin: 0;
     --timeline-shadow: var(--outline, var(--background-modifier-box-shadow));
+    --callout-content-background: var(--callout-background, rgb(var(--callout-color), 0.1));
+    --timeline-border: rgb(var(--callout-title, var(--callout-color)));
     
     --micro: 50px;
     --tiny: 100px;
@@ -19,7 +21,7 @@
     --tall: 700px;
     --c-timeline: calc(50% - 2px); // 50% - (border width * 2)
 
-    background-color: transparent;
+    background-color: transparent !important; //😬 Fix bg-c coloring
 
     margin: 0;
     border: 0;
@@ -49,12 +51,12 @@
     }
 
     & .callout-content {
-        background-color: rgb(var(--callout-color), 0.1);
+        // background-color: ;
     }
     
     //Side Alignment
     &[data-callout-metadata~="t-l"] {
-        border-right: 4px solid rgb(var(--callout-color));
+        border-right: 4px solid var(--timeline-border);
         margin-right: var(--c-timeline);
         z-index: 0;
 
@@ -62,7 +64,7 @@
         & > .callout-content { box-shadow: -4px 4px 0 var(--timeline-shadow); }
     }
     &[data-callout-metadata~="t-r"] {
-        border-left: 4px solid rgb(var(--callout-color));
+        border-left: 4px solid var(--timeline-border);
         margin-left: var(--c-timeline);
         
         & > .callout-title,

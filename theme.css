@@ -9451,11 +9451,11 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout.callout[data-callout~=infobox]:not([data-callout-metadata~=show-title],
 [data-callout-metadata~=s-t],
 [data-callout-metadata~=show-icon],
-[data-callout-metadata~=s-i]) .callout-icon svg {
+[data-callout-metadata~=s-i]) > .callout-title > .callout-icon > svg {
   width: 0;
   height: 0;
 }
-.callout.callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) .callout-title {
+.callout.callout[data-callout~=infobox]:not(:hover):not(.is-collapsed) > .callout-title {
   background-color: transparent;
 }
 .callout.callout[data-callout~=infobox] > .callout-content > .callout[data-callout~=infobox]:not([data-callout-metadata~=no-t]):not(.is-collapsed) > .callout-title, .callout.callout[data-callout~=infobox]:is([data-callout-metadata~=show-title], [data-callout-metadata~=s-t]):not(.is-collapsed) > .callout-title {

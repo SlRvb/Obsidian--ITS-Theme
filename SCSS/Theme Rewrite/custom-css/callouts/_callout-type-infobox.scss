@@ -63,10 +63,10 @@
         [data-callout-metadata~="s-t"],
         [data-callout-metadata~="show-icon"],
         [data-callout-metadata~="s-i"]
-    ) .callout-icon svg { width: 0; height: 0; }
+    ) > .callout-icon > svg { width: 0; height: 0; }
 
     //Hide Background Color 
-    &:not(:hover):not(.is-collapsed) .callout-title 
+    &:not(:hover):not(.is-collapsed) > .callout-title 
     { background-color: transparent; }
     
 

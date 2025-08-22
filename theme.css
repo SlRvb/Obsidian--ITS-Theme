@@ -10461,6 +10461,8 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 }
 .callout.callout[data-callout~=timeline][data-callout-metadata~=t-l] {
   border-right: 4px solid var(--timeline-border);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   margin-right: var(--c-timeline);
   z-index: 0;
 }
@@ -10469,6 +10471,8 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 }
 .callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] {
   border-left: 4px solid var(--timeline-border);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   margin-left: var(--c-timeline);
 }
 .callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] > .callout-title, .callout.callout[data-callout~=timeline][data-callout-metadata~=t-r] > .callout-content {

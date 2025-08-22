@@ -11,3 +11,7 @@
     gap: var(--status-bar-gap);
     padding: var(--status-bar-padding);
 }
+
+.static-status-bar {
+    --status-bar-position: relative;
+}

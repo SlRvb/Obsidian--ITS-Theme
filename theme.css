@@ -59,6 +59,10 @@ settings:
         max: 15
         step: 1
     -
+        title: Disable Floating Status Bar
+        id: static-status-bar
+        type: class-toggle
+    -
         title: Sizing
         id: ITS-Sizing
         type: heading
@@ -3360,6 +3364,10 @@ button.mod-cta:hover {
 .status-bar {
   gap: var(--status-bar-gap);
   padding: var(--status-bar-padding);
+}
+
+.static-status-bar {
+  --status-bar-position: relative;
 }
 
 .theme-dark,

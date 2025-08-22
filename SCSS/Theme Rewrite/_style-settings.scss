@@ -58,6 +58,10 @@ settings:
         max: 15
         step: 1
     -
+        title: Disable Floating Status Bar
+        id: static-status-bar
+        type: class-toggle
+    -
         title: Sizing
         id: ITS-Sizing
         type: heading

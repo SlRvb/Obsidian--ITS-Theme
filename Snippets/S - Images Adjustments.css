@@ -51,59 +51,81 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
   object-fit: cover;
 }
 
-img[alt][alt]:not([alt*=relative])[alt*=hmicro] {
-  height: var(--micro);
+.view-content img[alt][alt]:not([alt*=relative]):is([alt*=wmicro],
+[alt*=wtiny],
+[alt*=wsmall],
+[alt*=ws-med],
+[alt*=wm-sm],
+[alt*=wmed],
+[alt*=wm-tl],
+[alt*=wtall],
+[alt*=wfull]) {
+  width: var(--image-adj-size-w);
 }
-img[alt][alt]:not([alt*=relative])[alt*=htiny] {
-  height: var(--tiny);
+.view-content img[alt][alt]:not([alt*=relative]):is([alt*=hmicro],
+[alt*=htiny],
+[alt*=hsmall],
+[alt*=hs-med],
+[alt*=hm-sm],
+[alt*=hmed],
+[alt*=hm-tl],
+[alt*=htall],
+[alt*=hfull]) {
+  height: var(--image-adj-size-h);
 }
-img[alt][alt]:not([alt*=relative])[alt*=hsmall] {
-  height: var(--small);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=hmicro] {
+  --image-adj-size-h: var(--micro);
 }
-img[alt][alt]:not([alt*=relative])[alt*=hs-med] {
-  height: var(--small-med);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=htiny] {
+  --image-adj-size-h: var(--tiny);
 }
-img[alt][alt]:not([alt*=relative])[alt*=hm-sm] {
-  height: var(--med-small);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=hsmall] {
+  --image-adj-size-h: var(--small);
 }
-img[alt][alt]:not([alt*=relative])[alt*=hmed] {
-  height: var(--medium);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=hs-med] {
+  --image-adj-size-h: var(--small-med);
 }
-img[alt][alt]:not([alt*=relative])[alt*=hm-tl] {
-  height: var(--med-tall);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=hm-sm] {
+  --image-adj-size-h: var(--med-small);
 }
-img[alt][alt]:not([alt*=relative])[alt*=htall] {
-  height: var(--tall);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=hmed] {
+  --image-adj-size-h: var(--medium);
 }
-img[alt][alt]:not([alt*=relative])[alt*=hfull] {
-  height: 100%;
+.view-content img[alt][alt]:not([alt*=relative])[alt*=hm-tl] {
+  --image-adj-size-h: var(--med-tall);
 }
-img[alt][alt]:not([alt*=relative])[alt*=wmicro] {
-  width: var(--micro);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=htall] {
+  --image-adj-size-h: var(--tall);
 }
-img[alt][alt]:not([alt*=relative])[alt*=wtiny] {
-  width: var(--tiny);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=hfull] {
+  --image-adj-size-h: 100%;
 }
-img[alt][alt]:not([alt*=relative])[alt*=wsmall] {
-  width: var(--small);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=wmicro] {
+  --image-adj-size-w: var(--micro);
 }
-img[alt][alt]:not([alt*=relative])[alt*=ws-med] {
-  width: var(--small-med);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=wtiny] {
+  --image-adj-size-w: var(--tiny);
 }
-img[alt][alt]:not([alt*=relative])[alt*=wm-sm] {
-  width: var(--med-small);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=wsmall] {
+  --image-adj-size-w: var(--small);
 }
-img[alt][alt]:not([alt*=relative])[alt*=wmed] {
-  width: var(--medium);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=ws-med] {
+  --image-adj-size-w: var(--small-med);
 }
-img[alt][alt]:not([alt*=relative])[alt*=wm-tl] {
-  width: var(--med-tall);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=wm-sm] {
+  --image-adj-size-w: var(--med-small);
 }
-img[alt][alt]:not([alt*=relative])[alt*=wtall] {
-  width: var(--tall);
+.view-content img[alt][alt]:not([alt*=relative])[alt*=wmed] {
+  --image-adj-size-w: var(--medium);
 }
-img[alt][alt]:not([alt*=relative])[alt*=wfull] {
-  width: 100%;
+.view-content img[alt][alt]:not([alt*=relative])[alt*=wm-tl] {
+  --image-adj-size-w: var(--med-tall);
+}
+.view-content img[alt][alt]:not([alt*=relative])[alt*=wtall] {
+  --image-adj-size-w: var(--tall);
+}
+.view-content img[alt][alt]:not([alt*=relative])[alt*=wfull] {
+  --image-adj-size-w: 100%;
 }
 
 .image-embed[alt][alt*=relative],
@@ -215,11 +237,13 @@ img:is([alt~=ctr], [alt~=center]) {
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
+  float: inline-start;
 }
 .markdown-rendered img:is([alt~=right], [alt~=locr]), .markdown-rendered img:is([src*="#right"], [src*="#locr"]), .markdown-rendered .image-embed:is([alt~=right], [alt~=locr]), .markdown-rendered .image-embed:is([src*="#right"], [src*="#locr"]) {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
+  float: inline-end;
 }
 
 /*--Image Position--*/

@@ -48,25 +48,48 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
 
 //Sizing; Height Width
 .view-content img[alt][alt]:not([alt*=relative]) {
-    &[alt*="hmicro"]    { height: var(--micro); }
-    &[alt*="htiny"]     { height: var(--tiny); }
-    &[alt*="hsmall"]    { height: var(--small); }
-    &[alt*="hs-med"]    { height: var(--small-med); }
-    &[alt*="hm-sm"]     { height: var(--med-small); }
-    &[alt*="hmed"]      { height: var(--medium); }
-    &[alt*="hm-tl"]     { height: var(--med-tall); }
-    &[alt*="htall"]     { height: var(--tall); }
-    &[alt*="hfull"]     { height: 100%; }
+    &:is(
+        [alt*="wmicro"],
+        [alt*="wtiny"],
+        [alt*="wsmall"],
+        [alt*="ws-med"],
+        [alt*="wm-sm"],
+        [alt*="wmed"],
+        [alt*="wm-tl"],
+        [alt*="wtall"],
+        [alt*="wfull"]
+    ) { width: var(--image-adj-size-w); }
+    &:is(
+        [alt*="hmicro"],
+        [alt*="htiny"],
+        [alt*="hsmall"],
+        [alt*="hs-med"],
+        [alt*="hm-sm"],
+        [alt*="hmed"],
+        [alt*="hm-tl"],
+        [alt*="htall"],
+        [alt*="hfull"]
+    ) { height: var(--image-adj-size-h); }
 
-    &[alt*="wmicro"]    { width: var(--micro); }
-    &[alt*="wtiny"]     { width: var(--tiny); }
-    &[alt*="wsmall"]    { width: var(--small); }
-    &[alt*="ws-med"]    { width: var(--small-med); }
-    &[alt*="wm-sm"]     { width: var(--med-small); }
-    &[alt*="wmed"]      { width: var(--medium); }
-    &[alt*="wm-tl"]     { width: var(--med-tall); }
-    &[alt*="wtall"]     { width: var(--tall); }
-    &[alt*="wfull"]     { width: 100%; }
+    &[alt*="hmicro"]    { --image-adj-size-h: var(--micro); }
+    &[alt*="htiny"]     { --image-adj-size-h: var(--tiny); }
+    &[alt*="hsmall"]    { --image-adj-size-h: var(--small); }
+    &[alt*="hs-med"]    { --image-adj-size-h: var(--small-med); }
+    &[alt*="hm-sm"]     { --image-adj-size-h: var(--med-small); }
+    &[alt*="hmed"]      { --image-adj-size-h: var(--medium); }
+    &[alt*="hm-tl"]     { --image-adj-size-h: var(--med-tall); }
+    &[alt*="htall"]     { --image-adj-size-h: var(--tall); }
+    &[alt*="hfull"]     { --image-adj-size-h: 100%; }
+
+    &[alt*="wmicro"]    { --image-adj-size-w: var(--micro); }
+    &[alt*="wtiny"]     { --image-adj-size-w: var(--tiny); }
+    &[alt*="wsmall"]    { --image-adj-size-w: var(--small); }
+    &[alt*="ws-med"]    { --image-adj-size-w: var(--small-med); }
+    &[alt*="wm-sm"]     { --image-adj-size-w: var(--med-small); }
+    &[alt*="wmed"]      { --image-adj-size-w: var(--medium); }
+    &[alt*="wm-tl"]     { --image-adj-size-w: var(--med-tall); }
+    &[alt*="wtall"]     { --image-adj-size-w: var(--tall); }
+    &[alt*="wfull"]     { --image-adj-size-w: 100%; }
 }
 
 //Relative Sizing

@@ -1,0 +1,58 @@
+//Credit: @bootzin
+//https://github.com/SlRvb/Obsidian--ITS-Theme/issues/370
+
+.image-embed[alt~="masked"] {
+    display: inline-block; /* Force inline-block for spans */
+    // width: 100px !important;
+    // height: 100px !important;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    --pos-x: 50;
+    --pos-y: 50;
+    
+    & img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform-origin: top left;
+        transform: 
+            scale(var(--img-scale, 1))
+            translate(calc((var(--pos-x, 50) - 100)*1px), calc((var(--pos-y, 50) - 100)*1px));
+    }
+
+    // Scale values from 1 to 10
+    &[alt*="scale2"] img { --img-scale: 2; }
+    &[alt*="scale3"] img { --img-scale: 3; }
+    &[alt*="scale4"] img { --img-scale: 4; }
+    &[alt*="scale5"] img { --img-scale: 5; }
+    &[alt*="scale6"] img { --img-scale: 6; }
+    &[alt*="scale7"] img { --img-scale: 7; }
+    &[alt*="scale8"] img { --img-scale: 8; }
+    &[alt*="scale9"] img { --img-scale: 9; }
+    &[alt*="scale10"] img { --img-scale: 10; }
+
+
+    // Positioning values for X (0 to 90 in increments of 10)
+    &:is([alt~="p+lc"],  [alt~="posX10"]) img { --pos-x: 10; }
+    &:is([alt~="p+lcc"], [alt~="posX20"]) img { --pos-x: 20; }
+    &:is([alt~="p+ccl"], [alt~="posX30"]) img { --pos-x: 30; }
+    &:is([alt~="p+cl"],  [alt~="posX40"]) img { --pos-x: 40; }
+    // &:is([alt~="p+c"],[alt~="posX50"]) img { --pos-x: 50; }
+    &:is([alt~="p+cr"],  [alt~="posX60"]) img { --pos-x: 60; }
+    &:is([alt~="p+ccr"], [alt~="posX70"]) img { --pos-x: 70; }
+    &:is([alt~="p+rc"],  [alt~="posX80"]) img { --pos-x: 80; }
+    &:is([alt~="p+rcc"], [alt~="posX90"]) img { --pos-x: 90; }
+    
+    // Positioning values for Y (0 to 90 in increments of 10)
+    &:is([alt~="p+bc"],     [alt~="posY10"]) img { --pos-y: 10; }
+    &:is([alt~="p+bcc"],    [alt~="posY20"]) img { --pos-y: 20; }
+    &:is([alt~="p+ccb"],    [alt~="posY30"]) img { --pos-y: 30; }
+    &:is([alt~="p+cb"],     [alt~="posY40"]) img { --pos-y: 40; }
+    // &:is([alt~="p+t"],   [alt~="posY50"]) img { --pos-y: 50; }
+    &:is([alt~="p+ct"],     [alt~="posY60"]) img { --pos-y: 60; }
+    &:is([alt~="p+tcc"],    [alt~="posY70"]) img { --pos-y: 70; }
+    &:is([alt~="p+tc"],     [alt~="posY80"]) img { --pos-y: 80; }
+    &:is([alt~="p+t"],      [alt~="posY90"]) img { --pos-y: 90; }
+}

@@ -19,3 +19,10 @@
         & > .callout-icon { position: relative; }
     }
 }
+
+.callout-infobox-table-borders .callout[data-callout~="infobox"] {
+        --table-border-color: var(--background-modifier-border);
+
+        & th:first-child, & tr td:first-child { border-left-color: transparent; }
+        & th:last-child, & tr td:last-child { border-right-color: transparent; }
+}

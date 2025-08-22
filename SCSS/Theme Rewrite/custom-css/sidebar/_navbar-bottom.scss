@@ -36,3 +36,16 @@
     & .mod-global-search { padding-top: 0; }
 }
 
+.navbar-bottom-plain {
+    & .workspace-drawer:is(.mod-left, .mod-right), //mobile
+    & .workspace-split:is(.mod-left-split, .mod-right-split) { 
+        & .workspace-leaf-content,
+        & .view-content {
+            flex-direction: column-reverse; 
+            & > div:not(.nav-header) { margin-top: 10px; }
+
+        }
+    }
+
+
+}

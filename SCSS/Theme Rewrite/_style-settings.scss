@@ -305,7 +305,16 @@ settings:
     -
         title: Bottom Navbar Buttons
         id: navbar-bottom
-        type: class-toggle
+        type: class-select
+        allowEmpty: true
+        default: none
+        options: 
+            -
+                label: Plain Navbar
+                value: navbar-bottom-plain
+            - 
+                label: Floating Styling
+                value: navbar-bottom
     -
         title: Sidebar Ribbon
         id: ITS-Sidebar-Ribbon

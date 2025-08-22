@@ -63,7 +63,7 @@
         [data-callout-metadata~="s-t"],
         [data-callout-metadata~="show-icon"],
         [data-callout-metadata~="s-i"]
-    ) > .callout-icon > svg { width: 0; height: 0; }
+    ) > .callout-title .callout-icon > svg { width: 0; height: 0; }
 
     //Hide Background Color 
     &:not(:hover):not(.is-collapsed) > .callout-title 
@@ -185,6 +185,14 @@
     // &[data-callout-metadata~="colors"] :is(h1, h2, h3, h4, h5, h6) {
     //     background-color: var(--accent);
     // }
+
+    //Show table border lines
+    &[data-callout-metadata~="table-border"] {
+        --table-border-color: var(--background-modifier-border);
+
+        & th:first-child, & tr td:first-child { border-left-color: transparent; }
+        & th:last-child, & tr td:last-child { border-right-color: transparent; }
+    }
 }
 
 @media print { .callout[data-callout~="infobox"] { max-width: 400px; } }

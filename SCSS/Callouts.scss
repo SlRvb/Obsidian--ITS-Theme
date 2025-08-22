@@ -28,6 +28,10 @@ settings:
                 label: Callout Bordered Styling
                 value: callout-bordered
     -
+        title: Infobox Add Table Borders
+        id: callout-infobox-table-borders
+        type: class-toggle
+    -
         title: Remove Callout Styling
         description: Remove certain callouts to use your own styling
         id: remove-callout-style

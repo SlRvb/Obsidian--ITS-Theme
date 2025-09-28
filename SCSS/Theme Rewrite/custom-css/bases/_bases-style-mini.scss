@@ -1,0 +1,10 @@
+//No alt bg: Disable Bases ITS Alt Columns/Rows Styling
+.bases-non-its-colrow-styling .bases-view {
+    --bases-table-column-alt-background: transparent;
+    --bases-table-row-alt-background: transparent;
+}
+
+//Add Border Lines: Bases Border Lines
+.bases-border-lines {
+    --bases-table-border-color: var(--table);
+}

@@ -1994,34 +1994,6 @@ settings:
         id: embed-mini-headers
         type: class-toggle
     -
-        title: Canvas
-        id: ITS-Canvas
-        type: heading
-        level: 2 
-        collapsed: true
-    -
-        title: Canvas Cards Styling
-        id: canvas-cards
-        type: class-toggle
-    -
-        title: Milanote Styling
-        id: canvas-milanote
-        type: class-toggle
-    -
-        title: Canvas Arrow Coloful Text
-        id: canvas-arrow-text-color
-        description: Make text on canvas arrows match the color of the arrows
-        type: class-toggle
-    -
-        title: Canvas Card Background Color Brightness
-        id: canvas-color-opacity
-        type: variable-number-slider
-        default: 0.07
-        format: ''
-        min: 0.04
-        max: 0.18
-        step: .02
-    -
         title: Properties / Metadata
         id: ITS-Metadata
         type: heading
@@ -2779,6 +2751,72 @@ settings:
         level: 1
         collapsed: true
     -
+        title: Core Plugins
+        id: ITS-Core-Plugins
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        title: Canvas
+        id: ITS-Canvas
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Canvas Cards Styling
+        id: canvas-cards
+        type: class-toggle
+    -
+        title: Milanote Styling
+        id: canvas-milanote
+        type: class-toggle
+    -
+        title: Canvas Arrow Colorful Text
+        id: canvas-arrow-text-color
+        description: Make text on canvas arrows match the color of the arrows
+        type: class-toggle
+    -
+        title: Canvas Card Background Color Brightness
+        id: canvas-color-opacity
+        type: variable-number-slider
+        default: 0.07
+        format: ''
+        min: 0.04
+        max: 0.18
+        step: .02
+    -
+        title: Bases
+        id: ITS-Bases
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        title: Disable Bases ITS Styling
+        id: bases-non-its-styling
+        type: class-toggle
+    - 
+        title: Disable Bases ITS Alt Columns/Rows Styling
+        id: bases-non-its-colrow-styling
+        type: class-toggle
+    -
+        title: Bases Border Lines
+        id: bases-border-lines
+        type: class-toggle
+    -
+        title: Notion Style Cards
+        id: bases-notion-cards
+        type: class-toggle
+    #-
+    #    title: Wrap Text in Bases Cells
+    #    id: bases-text-wrap
+    #    type: class-toggle
+    -
+        title: 3rd Party Plugins
+        id: ITS-3P-Plugins
+        type: heading
+        level: 2
+        collapsed: false
+    -
         title: Disable ITS Styled Statblocks
         id: default-statblock
         type: class-toggle
@@ -2794,7 +2832,7 @@ settings:
         title: Dataview
         id: ITS-Plugins-Dataview
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     -
         title: Dataview Regular Styled Tables
@@ -2808,7 +2846,7 @@ settings:
         title: Kanban Adjustments
         id: ITS-Plugins-Kanban
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     -
         title: Boxed Style
@@ -5620,6 +5658,53 @@ body {
 }
 .workspace-split:not(.mod-root) .metadata-container {
   --metadata-divider-width: 0;
+}
+
+.bases-view {
+  --bases-cards-container-background: transparent;
+  --bases-table-header-background: var(--table-header-background);
+  --bases-table-header-color: var(--table-header-color);
+  --bases-table-column-alt-background: var(--table-column-alt-background);
+  --bases-table-row-alt-background: var(--table-column-alt-background);
+}
+.bases-view .bases-table-header-sort {
+  color: var(--text-dl);
+}
+.bases-view .bases-tr > .bases-td:nth-child(2n+2) {
+  background-color: var(--bases-table-column-alt-background);
+}
+.bases-view .bases-tr:nth-child(odd) {
+  background-color: var(--bases-table-row-alt-background);
+}
+
+.bases-toolbar-menu-item.mod-active {
+  background-color: var(--nav-item-background-active);
+  --icon-color: var(--text-dl);
+  color: var(--text-dl);
+  font-weight: 900;
+}
+
+.bases-td {
+  box-shadow: calc(var(--bases-table-column-border-width) * -1) 0 0 var(--bases-table-border-color);
+}
+
+.bases-tr {
+  box-shadow: 0 calc(var(--bases-table-row-border-width) * -1) 0 var(--bases-table-border-color);
+}
+.bases-tr:last-child {
+  border-bottom: var(--bases-table-row-border-width) solid var(--bases-table-border-color);
+}
+
+.bases-query-container .filter-row-component {
+  background-color: var(--background-modifier-form-field);
+}
+.bases-query-container .filter-group .filter-group {
+  background-color: var(--outer-bar);
+  box-shadow: var(--shadow-s);
+}
+
+.bases-embed .bases-view {
+  scrollbar-gutter: auto;
 }
 
 body {
@@ -10365,19 +10450,19 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content {
   grid-template-columns: unset;
 }
-.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content ul, .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content ul, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content :is(ul, ol), .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > :is(ul, ol), .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content :is(ul, ol), .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > :is(ul, ol) {
   columns: var(--columns);
 }
-.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content ul > li, .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul > li, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content ul > li, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul > li {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content :is(ul, ol) > li, .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > :is(ul, ol) > li, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content :is(ul, ol) > li, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > :is(ul, ol) > li {
   break-inside: avoid;
 }
-.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content ul .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > ul .list-bullet::after {
+.callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content :is(ul, ol) .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list-global] .callout > .callout-content > :is(ul, ol) .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content :is(ul, ol) .list-bullet::after, .callout[data-callout*=column][data-callout-metadata~=list] > .callout-content > :is(ul, ol) .list-bullet::after {
   position: relative;
 }
 .callout[data-callout*=column][data-callout-metadata~=list-x] > .callout-content {
   grid-template-columns: unset;
 }
-.callout[data-callout*=column][data-callout-metadata~=list-x] > .callout-content > ul {
+.callout[data-callout*=column][data-callout-metadata~=list-x] > .callout-content > :is(ul, ol) {
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
 }
@@ -11009,6 +11094,56 @@ body.canvas-milanote.canvas-milanote {
   color: rgb(var(--canvas-color));
 }
 
+.bases-non-its-colrow-styling .bases-view {
+  --bases-table-column-alt-background: transparent;
+  --bases-table-row-alt-background: transparent;
+}
+
+.bases-border-lines {
+  --bases-table-border-color: var(--table);
+}
+
+.bases-non-its-styling .bases-view.bases-view {
+  --bases-table-header-background: var(--note);
+  --bases-table-header-color: var(--text-normal);
+  --bases-table-column-alt-background: transparent;
+  --bases-table-row-alt-background: transparent;
+  --bases-table-border-color: var(--table-border-color);
+  --table-border-color: var(--table);
+}
+
+/* Notion-ize Cards */
+.bases-notion-cards .bases-cards-item {
+  gap: 0px;
+  padding: 0 0 var(--size-4-2) 0;
+  box-shadow: 0 0 5px var(--outline), 0 0 6px var(--outline);
+  transition: none;
+}
+.bases-notion-cards .bases-cards-item:hover {
+  background-color: var(--background-modifier-border-hover);
+}
+.bases-notion-cards .bases-cards-property {
+  display: flex;
+  align-items: center;
+  padding-inline-end: calc(var(--size-4-2) * 1.5);
+}
+.bases-notion-cards .bases-cards-property.mod-title {
+  padding-top: calc(var(--size-4-1) + 2px);
+  --link-color: var(--accent2-lite);
+}
+.bases-notion-cards .bases-cards-property.mod-title:hover {
+  --link-color: var(--lite-accent);
+}
+.bases-notion-cards .bases-cards-property:not(.mod-title) *:not(input) {
+  height: calc(var(--bases-cards-line-height) - 4px);
+}
+.bases-notion-cards .bases-cards-property:not(.mod-title) *:not(input) .bases-rendered-value {
+  padding: 0 var(--size-4-2) 0 2px;
+}
+.bases-notion-cards .bases-cards-label {
+  padding: 0 5px 0 var(--size-4-2);
+}
+
 .sizing-readable.sizing-readable {
   --font-ui-smaller: 13.5px;
   --font-ui-small: 14px;
@@ -11357,19 +11492,30 @@ iframe {
 }
 
 /*Bolded Right Side Table*/
-.table.table {
+.table.table,
+.table .bases-table {
   --table-style-column-header-background: var(--outer-bar);
   --table-style-column-header-bold-weight: var(--bold-weight);
   --table-style-column-header-bold-color: var(--bold-color);
 }
-.table.table td:nth-child(1) {
+.table.table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *, .table.table td:nth-child(1) *,
+.table .bases-table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *,
+.table .bases-table td:nth-child(1) * {
   font-weight: var(--table-style-column-header-bold-weight);
+}
+.table.table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *:not(a), .table.table td:nth-child(1) *:not(a),
+.table .bases-table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *:not(a),
+.table .bases-table td:nth-child(1) *:not(a) {
   color: var(--table-style-column-header-bold-color);
 }
-.table.table tr td:nth-child(1) {
+.table.table .bases-tbody .bases-td:nth-child(1), .table.table tr td:nth-child(1),
+.table .bases-table .bases-tbody .bases-td:nth-child(1),
+.table .bases-table tr td:nth-child(1) {
   background-color: var(--table-style-column-header-background);
 }
-.table.table tr:hover td:nth-child(1) {
+.table.table .bases-tr:hover .bases-td:nth-child(1), .table.table tr:hover td:nth-child(1),
+.table .bases-table .bases-tr:hover .bases-td:nth-child(1),
+.table .bases-table tr:hover td:nth-child(1) {
   background-color: var(--table-row-alt-background-hover);
 }
 

@@ -1,17 +1,21 @@
 /*Bolded Right Side Table*/
-.table.table {
+.table.table,
+.table .bases-table {
     --table-style-column-header-background: var(--outer-bar);
     --table-style-column-header-bold-weight: var(--bold-weight);
     --table-style-column-header-bold-color: var(--bold-color);
 
-    & td:nth-child(1) { 
+    & .bases-tbody .bases-td:nth-child(1) .bases-table-cell *,
+    & td:nth-child(1) * { 
         font-weight: var(--table-style-column-header-bold-weight); 
-        color: var(--table-style-column-header-bold-color);
+        &:not(a) { color: var(--table-style-column-header-bold-color); }
     }
     
+    & .bases-tbody .bases-td:nth-child(1),
     & tr td:nth-child(1) {
         background-color: var(--table-style-column-header-background);
     }
+    & .bases-tr:hover .bases-td:nth-child(1),
     & tr:hover td:nth-child(1) { background-color: var(--table-row-alt-background-hover); }
 } 
 

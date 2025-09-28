@@ -1993,34 +1993,6 @@ settings:
         id: embed-mini-headers
         type: class-toggle
     -
-        title: Canvas
-        id: ITS-Canvas
-        type: heading
-        level: 2 
-        collapsed: true
-    -
-        title: Canvas Cards Styling
-        id: canvas-cards
-        type: class-toggle
-    -
-        title: Milanote Styling
-        id: canvas-milanote
-        type: class-toggle
-    -
-        title: Canvas Arrow Coloful Text
-        id: canvas-arrow-text-color
-        description: Make text on canvas arrows match the color of the arrows
-        type: class-toggle
-    -
-        title: Canvas Card Background Color Brightness
-        id: canvas-color-opacity
-        type: variable-number-slider
-        default: 0.07
-        format: ''
-        min: 0.04
-        max: 0.18
-        step: .02
-    -
         title: Properties / Metadata
         id: ITS-Metadata
         type: heading
@@ -2778,6 +2750,72 @@ settings:
         level: 1
         collapsed: true
     -
+        title: Core Plugins
+        id: ITS-Core-Plugins
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        title: Canvas
+        id: ITS-Canvas
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Canvas Cards Styling
+        id: canvas-cards
+        type: class-toggle
+    -
+        title: Milanote Styling
+        id: canvas-milanote
+        type: class-toggle
+    -
+        title: Canvas Arrow Colorful Text
+        id: canvas-arrow-text-color
+        description: Make text on canvas arrows match the color of the arrows
+        type: class-toggle
+    -
+        title: Canvas Card Background Color Brightness
+        id: canvas-color-opacity
+        type: variable-number-slider
+        default: 0.07
+        format: ''
+        min: 0.04
+        max: 0.18
+        step: .02
+    -
+        title: Bases
+        id: ITS-Bases
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        title: Disable Bases ITS Styling
+        id: bases-non-its-styling
+        type: class-toggle
+    - 
+        title: Disable Bases ITS Alt Columns/Rows Styling
+        id: bases-non-its-colrow-styling
+        type: class-toggle
+    -
+        title: Bases Border Lines
+        id: bases-border-lines
+        type: class-toggle
+    -
+        title: Notion Style Cards
+        id: bases-notion-cards
+        type: class-toggle
+    #-
+    #    title: Wrap Text in Bases Cells
+    #    id: bases-text-wrap
+    #    type: class-toggle
+    -
+        title: 3rd Party Plugins
+        id: ITS-3P-Plugins
+        type: heading
+        level: 2
+        collapsed: false
+    -
         title: Disable ITS Styled Statblocks
         id: default-statblock
         type: class-toggle
@@ -2793,7 +2831,7 @@ settings:
         title: Dataview
         id: ITS-Plugins-Dataview
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     -
         title: Dataview Regular Styled Tables
@@ -2807,7 +2845,7 @@ settings:
         title: Kanban Adjustments
         id: ITS-Plugins-Kanban
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     -
         title: Boxed Style

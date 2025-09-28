@@ -1,0 +1,10 @@
+// Remove ITS Styling: Disable Bases ITS Styling
+.bases-non-its-styling .bases-view.bases-view {
+    --bases-table-header-background: var(--note);
+    --bases-table-header-color: var(--text-normal);
+    --bases-table-column-alt-background: transparent;
+    --bases-table-row-alt-background: transparent;
+    
+    --bases-table-border-color: var(--table-border-color);
+    --table-border-color: var(--table);
+}

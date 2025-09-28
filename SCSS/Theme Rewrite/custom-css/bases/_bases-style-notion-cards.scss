@@ -1,0 +1,35 @@
+
+/* Notion-ize Cards */
+.bases-notion-cards {
+    & .bases-cards-item { 
+        gap: 0px;
+        padding: 0 0 var(--size-4-2) 0;
+
+        box-shadow: 0 0 5px var(--outline), 0 0 6px var(--outline);
+        transition: none;
+    
+        &:hover { background-color: var(--background-modifier-border-hover); }
+    }
+    & .bases-cards-property { 
+        display: flex;
+        align-items: center; 
+        padding-inline-end: calc(var(--size-4-2) * 1.5); 
+        
+        &.mod-title {
+            padding-top: calc(var(--size-4-1) + 2px);
+            
+            //Fix title link colors
+            --link-color: var(--accent2-lite);
+            &:hover { --link-color: var(--lite-accent); }
+        }
+        &:not(.mod-title) *:not(input) { 
+            // line-height: var(--bases-cards-line-height);
+            // padding-top: 0;
+            height: calc(var(--bases-cards-line-height) - 4px);
+            
+            & .bases-rendered-value { padding: 0 var(--size-4-2) 0 2px; }
+        }
+    }
+    & .bases-cards-label { padding: 0 5px 0 var(--size-4-2); }
+}
+

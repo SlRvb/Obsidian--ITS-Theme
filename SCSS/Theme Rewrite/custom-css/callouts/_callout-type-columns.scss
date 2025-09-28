@@ -90,8 +90,8 @@
     &[data-callout-metadata~="list"] > .callout-content {
         grid-template-columns: unset; 
 
-        & ul,
-        & > ul {
+        & :is(ul, ol),
+        & > :is(ul, ol) {
             columns: var(--columns);
             
             & > li { break-inside: avoid; }
@@ -101,7 +101,7 @@
     &[data-callout-metadata~="list-x"] > .callout-content {
         grid-template-columns: unset; 
 
-        & > ul {
+        & > :is(ul, ol) {
             display: grid;
             grid-template-columns: repeat(var(--columns), 1fr);
         }

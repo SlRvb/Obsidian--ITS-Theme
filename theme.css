@@ -12253,7 +12253,6 @@ h4,
 h5,
 h6) {
   display: flex;
-  width: 100%;
   align-items: center;
 }
 .hcl .HyperMD-header.cm-line:not(.HyperMD-header) > :not(.collapse-indicator), .hcl .HyperMD-header.cm-line > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child),

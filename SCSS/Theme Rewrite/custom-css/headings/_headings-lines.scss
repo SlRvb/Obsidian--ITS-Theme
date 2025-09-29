@@ -16,8 +16,9 @@
     --h4-border-line-height: 3px;
     --h5-border-line-height: 3px;
     --h6-border-line-height: 3px;
-
-    --header-border-line-left: block;
+    
+    //Fix LP newline issue
+    .HyperMD-header.cm-line:not(.cm-active) { --header-border-line-left: block; }
 
     .HyperMD-header.cm-line,
     :is(
@@ -29,7 +30,7 @@
         h6 
     ) {
         display: flex;
-        width: 100%;
+        // width: 100%;
         align-items: center;
         
         

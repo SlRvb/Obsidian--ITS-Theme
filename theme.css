@@ -12236,7 +12236,6 @@ body {
   --h4-border-line-height: 3px;
   --h5-border-line-height: 3px;
   --h6-border-line-height: 3px;
-  --header-border-line-left: block;
 }
 .hcl .HyperMD-header.cm-line,
 .hcl :is(h1,
@@ -12254,6 +12253,22 @@ h5,
 h6) {
   display: flex;
   align-items: center;
+}
+.hcl .HyperMD-header.cm-line:not(.cm-active),
+.hcl :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6):not(.cm-active),
+.headings-center-lines .HyperMD-header.cm-line:not(.cm-active),
+.headings-center-lines :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6):not(.cm-active) {
+  --header-border-line-left: block;
 }
 .hcl .HyperMD-header.cm-line:not(.HyperMD-header) > :not(.collapse-indicator), .hcl .HyperMD-header.cm-line > :not(.collapse-indicator):nth-child(2):not(:last-child):not(:first-child),
 .hcl :is(h1,

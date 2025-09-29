@@ -18,7 +18,7 @@
     --h6-border-line-height: 3px;
     
     //Fix LP newline issue
-    .HyperMD-header.cm-line:not(.cm-active) { --header-border-line-left: block; }
+    // .HyperMD-header.cm-line
 
     .HyperMD-header.cm-line,
     :is(
@@ -32,7 +32,7 @@
         display: flex;
         // width: 100%;
         align-items: center;
-        
+        &:not(.cm-active) { --header-border-line-left: block; }
         
         //Padding for Other Elements In Heading
         &:not(.HyperMD-header) > :not(.collapse-indicator),

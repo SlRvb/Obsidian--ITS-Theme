@@ -51,7 +51,7 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
   object-fit: cover;
 }
 
-.view-content img[alt][alt]:not([alt*=relative]):is([alt*=wmicro],
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative]):is([alt*=wmicro],
 [alt*=wtiny],
 [alt*=wsmall],
 [alt*=ws-med],
@@ -62,7 +62,7 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
 [alt*=wfull]) {
   width: var(--image-adj-size-w);
 }
-.view-content img[alt][alt]:not([alt*=relative]):is([alt*=hmicro],
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative]):is([alt*=hmicro],
 [alt*=htiny],
 [alt*=hsmall],
 [alt*=hs-med],
@@ -73,58 +73,58 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
 [alt*=hfull]) {
   height: var(--image-adj-size-h);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=hmicro] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=hmicro] {
   --image-adj-size-h: var(--micro);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=htiny] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=htiny] {
   --image-adj-size-h: var(--tiny);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=hsmall] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=hsmall] {
   --image-adj-size-h: var(--small);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=hs-med] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=hs-med] {
   --image-adj-size-h: var(--small-med);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=hm-sm] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=hm-sm] {
   --image-adj-size-h: var(--med-small);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=hmed] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=hmed] {
   --image-adj-size-h: var(--medium);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=hm-tl] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=hm-tl] {
   --image-adj-size-h: var(--med-tall);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=htall] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=htall] {
   --image-adj-size-h: var(--tall);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=hfull] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=hfull] {
   --image-adj-size-h: 100%;
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=wmicro] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=wmicro] {
   --image-adj-size-w: var(--micro);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=wtiny] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=wtiny] {
   --image-adj-size-w: var(--tiny);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=wsmall] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=wsmall] {
   --image-adj-size-w: var(--small);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=ws-med] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=ws-med] {
   --image-adj-size-w: var(--small-med);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=wm-sm] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=wm-sm] {
   --image-adj-size-w: var(--med-small);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=wmed] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=wmed] {
   --image-adj-size-w: var(--medium);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=wm-tl] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=wm-tl] {
   --image-adj-size-w: var(--med-tall);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=wtall] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=wtall] {
   --image-adj-size-w: var(--tall);
 }
-.view-content img[alt][alt]:not([alt*=relative])[alt*=wfull] {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative])[alt*=wfull] {
   --image-adj-size-w: 100%;
 }
 

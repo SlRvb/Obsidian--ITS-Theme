@@ -20,8 +20,7 @@ body {
     --tall: 500px;
 }
 /*----Mobile----*/
-@media (max-width: 500px) {
-    
+@media (max-width: 500px) {    
     .theme-dark, .theme-light {
         /*Mobile Sizes*/
         --radius: 0px;
@@ -47,7 +46,7 @@ span.image-embed:is([src*="#cover"], [src*="#cvr"]) img {
 }
 
 //Sizing; Height Width
-.view-content img[alt][alt]:not([alt*=relative]) {
+:is(.view-content, .popover) img[alt][alt]:not([alt*=relative]) {
     &:is(
         [alt*="wmicro"],
         [alt*="wtiny"],

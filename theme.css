@@ -2215,7 +2215,7 @@ settings:
         title: Tab Stack Shadow
         id: tab-stacked-shadow-color
         type: variable-themed-color
-        format: rgba
+        format: hex
         opacity: true
         default-dark: '#001c4a15'
         default-light: '#001c4a15'
@@ -2223,7 +2223,7 @@ settings:
         title: Popover Background Color
         id: popover-background
         type: variable-themed-color
-        format: rgb
+        format: hex
         default-dark: '#1a1e24'
         default-light: '#f8fbff'
     -

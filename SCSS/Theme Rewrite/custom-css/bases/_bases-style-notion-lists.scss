@@ -1,0 +1,31 @@
+// .bases-notion-cards .bases-list-container,
+//     &
+// }
+// .bases-list-item {
+//     padding-inline-start: var(--size-2-3); 
+//     // padding-inline-end: var(--size-2-3); 
+//     margin-inline-start: 2px;
+//     margin-inline-end: 2px;
+    
+//     width: 98%;
+    
+    
+//     & .bases-list-item-properties {
+//         display: flex;
+//         justify-content: space-between;
+//         gap: 4px;    
+//     }
+
+//     & .bases-list-property:not(:first-child) {
+//         background-color: var(--outer-bar);
+//         padding: 0 var(--size-4-2);
+        
+//     }
+    
+
+//     //Hide bullet
+//     & .bases-list-separator,
+//     & .list-bullet,
+//     & .bases-list-item-properties::before
+//     { display: none; }
+// }

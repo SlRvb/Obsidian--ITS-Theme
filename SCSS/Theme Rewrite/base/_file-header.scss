@@ -17,15 +17,16 @@ body {
 .is-focused .workspace-leaf.mod-active .view-header,
 .workspace-leaf .view-header {
     gap: 0;
-    margin: 0;
+    // margin: 0;
     padding: 0 var(--size-4-3);
     background: var(--file-header-background);
 }
+//Fix BG "note" workspace color to fit header color
+.workspace-leaf.mod-active .workspace-leaf-content { background-color: var(--file-header-background); }
 
 //Fix Parent Breadcrumb
-.view-header-title-parent {
-    font-weight: var(--file-header-parent-font-weight);
-}
+.view-header-title-parent 
+{ font-weight: var(--file-header-parent-font-weight); }
 
 
 //Inactive header text color

@@ -3184,6 +3184,7 @@ body.theme-light {
   --pill-radius: var(--radius-m);
   --bold-weight: 900;
   --bold-modifier: 500;
+  --navbar-radius: 0;
   --font-ui-smaller: 13.5px;
   --font-ui-small: 14px;
   --font-ui-medium: 15px;
@@ -3264,8 +3265,9 @@ input[type=range] {
   --modal-nav-item-background: transparent;
   --modal-nav-item-background-hover: var(--td);
   --setting-item-padding: 10px 15px;
-  --setting-item-background: transparent;
-  --setting-item-alt-background: var(--setting-item-background);
+  --setting-items-background: transparent;
+  --setting-items-alt-background: var(--setting-items-background);
+  --setting-items-alt-background-hover: var(--td);
   --setting-item-alt-background-hover: var(--td);
   --setting-item-heading-background: transparent;
   --setting-item-background-hover: var(--hvr);
@@ -3844,9 +3846,12 @@ body {
 .is-focused .workspace-leaf.mod-active .view-header,
 .workspace-leaf .view-header {
   gap: 0;
-  margin: 0;
   padding: 0 var(--size-4-3);
   background: var(--file-header-background);
+}
+
+.workspace-leaf.mod-active .workspace-leaf-content {
+  background-color: var(--file-header-background);
 }
 
 .view-header-title-parent {
@@ -3902,6 +3907,27 @@ body {
   }
 }
 .is-mobile.is-mobile {
+  --touch-radius-xxs: var(--radius-s);
+  --touch-radius-xs: var(--radius-s);
+  --touch-radius-s: var(--radius-s);
+  --touch-radius-m: var(--radius-m);
+  --touch-radius-l: var(--radius-l);
+  --touch-radius-xl: var(--radius-xl);
+  --bases-embed-width: unset;
+  --bases-embed-border-width: 0;
+  --bases-embed-transform: 0;
+  --blur-s: 0;
+  --blur-m: 0;
+  --blue-l: 0;
+  --raised-blur: none;
+  --raised-shadow: unset;
+  --raised-background: var(--outer-bar);
+  --raised-mask-border-width: 0;
+  --raised-mask-composite: unset;
+  --raised-mask: unset;
+  --raised-mask-background: unset;
+  --blur-brightness: unset;
+  --file-header-background: unset;
   --interactive-accent: var(--lite-accent);
   --caret-color: var(--text-normal);
   --tag-background: var(--tag);
@@ -4647,13 +4673,13 @@ ul, ol {
   margin-block-end: 0;
 }
 
-body:not(.list-default-bullet) .list-bullet::after, body:not(.list-default-bullet) .list-bullet::before {
+body:not(.list-default-bullet) :is(li, .cm-formatting-list-ul) .list-bullet::after, body:not(.list-default-bullet) :is(li, .cm-formatting-list-ul) .list-bullet::before {
   display: none;
 }
 body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker {
   margin-right: -10px;
 }
-body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul::before, body:not(.list-default-bullet) ul > li:not(.task-list-item)::before {
+body:not(.list-default-bullet) .bases-list-container .list-bullet:after, body:not(.list-default-bullet) .is-live-preview .cm-formatting-list-ul::before, body:not(.list-default-bullet) ul > li:not(.task-list-item)::before {
   content: var(--bullet);
   font-family: var(--bullet-font);
   font-size: var(--font-text-size);
@@ -4668,6 +4694,7 @@ body:not(.list-default-bullet) ul > li:not(.task-list-item)::marker, body:not(.l
   color: transparent;
 }
 
+.bases-list-container .list-bullet:after,
 ul > li:not(.task-list-item)::before {
   float: inline-start;
   margin-inline-start: -21px;
@@ -4680,6 +4707,10 @@ ul > li:not(.task-list-item)::before {
 
 ul > li.task-list-item.task-list-item .task-list-item-checkbox {
   margin-inline-start: calc(var(--checkbox-size) * -1.4);
+}
+
+.bases-list-container .list-bullet:after {
+  margin-top: -4px;
 }
 
 .cm-formatting-list-ol,

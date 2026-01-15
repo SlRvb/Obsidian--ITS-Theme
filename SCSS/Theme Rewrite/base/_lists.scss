@@ -70,11 +70,14 @@ ul, ol { display: flow-root; }
 //Bullet List
 //Remove Obsidian Bullet
 body:not(.list-default-bullet) {
-    & .list-bullet {
+    & :is(li, .cm-formatting-list-ul) .list-bullet {
         &::after,
         &::before { display: none; }
     }
+    
     & ul > li:not(.task-list-item)::marker { margin-right: -10px; }
+    
+    & .bases-list-container .list-bullet:after,
     & .is-live-preview .cm-formatting-list-ul::before,
     & ul > li:not(.task-list-item)::before {
         content: var(--bullet);
@@ -90,11 +93,14 @@ body:not(.list-default-bullet) {
         
         height: unset;
     }
+    
     & ul > li:not(.task-list-item)::marker,
     & .is-live-preview .cm-formatting-list-ul { color: transparent; }
 }
 
 //Alignment
+
+.bases-list-container .list-bullet:after,
 ul > li:not(.task-list-item)::before { 
     float: inline-start; //Spaced list bullet fix
     margin-inline-start: -21px;
@@ -104,6 +110,8 @@ ul > li:not(.task-list-item)::before {
 { margin-right: 8px; }
 ul > li.task-list-item.task-list-item .task-list-item-checkbox 
 { margin-inline-start: calc(var(--checkbox-size) * -1.4); }
+
+.bases-list-container .list-bullet:after { margin-top: -4px;}
 
 
 //Both LP & Source

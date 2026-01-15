@@ -16,6 +16,33 @@
 
 //Fixes
 .is-mobile.is-mobile {
+    --touch-radius-xxs: var(--radius-s);
+    --touch-radius-xs: var(--radius-s);
+    --touch-radius-s: var(--radius-s);
+    --touch-radius-m: var(--radius-m);
+    --touch-radius-l: var(--radius-l);
+    --touch-radius-xl: var(--radius-xl);
+
+    --bases-embed-width: unset;
+    --bases-embed-border-width: 0;
+    --bases-embed-transform: 0;
+
+    --blur-s: 0;
+    --blur-m: 0;
+    --blue-l: 0;
+
+    --raised-blur: none;
+    --raised-shadow: unset;
+    --raised-background: var(--outer-bar);
+    --raised-mask-border-width: 0;
+    --raised-mask-composite: unset;
+    --raised-mask: unset;
+    --raised-mask-background: unset;
+    --blur-brightness: unset;
+    --file-header-background: unset;
+
+
+
     --interactive-accent: var(--lite-accent);
     --caret-color: var(--text-normal);
 

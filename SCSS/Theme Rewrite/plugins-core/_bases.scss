@@ -34,6 +34,10 @@
     & .filter-row-component { background-color: var(--background-modifier-form-field); }
     & .filter-group .filter-group { background-color: var(--outer-bar); box-shadow: var(--shadow-s); }
 } 
+.bases-header .is-active { --icon-color-active: var(--accent); }
+.bases-group-heading { color: var(--text-dl); }
+.bases-view .summary-function-name { color: var(--inactive); }
+
 
 
 //Embedded Fixes
@@ -42,7 +46,6 @@
 
     // &[data-view-type="cards"] { --bases-embed-padding: 4px 8px; }
 }
-
 
 
 

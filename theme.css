@@ -4031,6 +4031,14 @@ body {
   padding-right: 0em;
 }
 
+.is-mobile.is-mobile.is-mobile .mobile-toolbar-floating-options, .is-mobile.is-mobile.is-mobile .mobile-toolbar-options-list-container {
+  border-radius: var(--touch-radius-m);
+  background-color: transparent;
+}
+.is-mobile.is-mobile.is-mobile .view-header .view-actions {
+  border-radius: var(--touch-radius-m);
+}
+
 body {
   --scrollbar-track-bg: var(--note);
   --scrollbar-thumb-bg: var(--accent);
@@ -5732,6 +5740,18 @@ body {
 .bases-query-container .filter-group .filter-group {
   background-color: var(--outer-bar);
   box-shadow: var(--shadow-s);
+}
+
+.bases-header .is-active {
+  --icon-color-active: var(--accent);
+}
+
+.bases-group-heading {
+  color: var(--text-dl);
+}
+
+.bases-view .summary-function-name {
+  color: var(--inactive);
 }
 
 .bases-embed .bases-view {

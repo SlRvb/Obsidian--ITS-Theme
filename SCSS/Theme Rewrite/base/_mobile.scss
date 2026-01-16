@@ -157,3 +157,18 @@
         padding-right: 0em;
     }
 }
+
+
+
+
+
+// Fixing Glass Aesthetic Changes
+.is-mobile.is-mobile.is-mobile {
+    
+    // Borked css for obsidian Glass: `.mobile-floating-options` uses touch-size instead of radius for border radius
+    & .mobile-toolbar-floating-options,
+    & .mobile-toolbar-options-list-container { border-radius: var(--touch-radius-m); background-color: transparent; } 
+    & .view-header .view-actions { border-radius: var(--touch-radius-m); }
+
+    
+}

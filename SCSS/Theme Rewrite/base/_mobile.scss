@@ -101,6 +101,10 @@
 
     //Fix Breadcrumb Note Title Padding
     & .view-header-title { padding: 0 var(--size-4-1); }
+
+    //Fix Properties
+    & .metadata-content { background-color: transparent; }
+    
     
 }
 
@@ -108,9 +112,9 @@
     --mobile-toolbar-background: var(--deep-dark-accent);
 
     //Workspace Drawer
-    & .workspace-drawer .nav-buttons-container {
-        --icon-color-active: var(--interactive-accent-hover);
-    }
+    // & .workspace-drawer .nav-buttons-container {
+    //     --icon-color-active: var(--interactive-accent-hover);
+    // }
     & .workspace-drawer-backdrop { opacity: 0.90 !important; }
     & .workspace-drawer:is(.mod-left, .mod-right) {
         border: none;
@@ -119,6 +123,17 @@
             0 0 5px var(--outline),
             0 0 5px var(--outline);
     }
+    & :is(.workspace-drawer-tab-select, .workspace-drawer-tab-options-list) .workspace-tab-header-inner:hover { 
+        background-color: var(--hvr-active); 
+        color: var(--text-normal);
+        --sidebar-tab-color-hover: var(--text-normal);
+    }
+    & .workspace-drawer-tab-options .workspace-tab-header.is-active { 
+        --icon-color: var(--text-dl); 
+        --sidebar-icon-color: var(--text-dl);
+        color: var(--text-dl); 
+    }
+
     //Fullscreen center title
     & .workspace-drawer-active-tab-container.is-fullscreen .workspace-drawer-active-tab-title 
     { text-align: center; }

@@ -3982,12 +3982,12 @@ body {
 .is-mobile.is-mobile .view-header-title {
   padding: 0 var(--size-4-1);
 }
+.is-mobile.is-mobile .metadata-content {
+  background-color: transparent;
+}
 
 .is-mobile {
   --mobile-toolbar-background: var(--deep-dark-accent);
-}
-.is-mobile .workspace-drawer .nav-buttons-container {
-  --icon-color-active: var(--interactive-accent-hover);
 }
 .is-mobile .workspace-drawer-backdrop {
   opacity: 0.9 !important;
@@ -3995,6 +3995,16 @@ body {
 .is-mobile .workspace-drawer:is(.mod-left, .mod-right) {
   border: none;
   box-shadow: 0 0 5px var(--outline), 0 0 5px var(--outline), 0 0 5px var(--outline);
+}
+.is-mobile :is(.workspace-drawer-tab-select, .workspace-drawer-tab-options-list) .workspace-tab-header-inner:hover {
+  background-color: var(--hvr-active);
+  color: var(--text-normal);
+  --sidebar-tab-color-hover: var(--text-normal);
+}
+.is-mobile .workspace-drawer-tab-options .workspace-tab-header.is-active {
+  --icon-color: var(--text-dl);
+  --sidebar-icon-color: var(--text-dl);
+  color: var(--text-dl);
 }
 .is-mobile .workspace-drawer-active-tab-container.is-fullscreen .workspace-drawer-active-tab-title {
   text-align: center;

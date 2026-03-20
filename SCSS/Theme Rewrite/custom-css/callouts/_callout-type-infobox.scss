@@ -17,7 +17,8 @@
     --callout-color: var(--note, var(--background-primary));
     --callout-padding: 0;
     --callout-content-padding: 5px;
-    --callout-margin: 0 0 0 5px;
+    &:not([data-callout-metadata~="wfull"]) { --callout-margin: 0 0 0 5px; }
+    
     background: var(--note, var(--background-primary));
     
     --h1-border-line-height: 0;

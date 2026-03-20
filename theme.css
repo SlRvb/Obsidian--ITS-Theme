@@ -2365,7 +2365,7 @@ settings:
     -
         title: Progress Bar Background Color
         description: HTML <progress> value color
-        id: progress
+        id: progress-bg
         type: variable-themed-color
 		format: hex
 		default-dark: '#252c36'
@@ -6831,13 +6831,23 @@ body {
   width: 100%;
   text-overflow: ellipsis;
 }
+.longform-explorer.longform-explorer #project-picker select > .projectOption {
+  font-size: var(--font-text-size);
+}
+.longform-explorer.longform-explorer .tab-list {
+  display: flex;
+}
 .longform-explorer.longform-explorer .tab-list button {
   color: var(--headers);
+  padding: var(--size-4-1) var(--size-4-3);
 }
 .longform-explorer.longform-explorer .tab-list .selected {
   border-color: var(--accent);
   background-color: var(--outer-bar);
   color: var(--text);
+}
+.longform-explorer.longform-explorer .scene-container.scene-container {
+  padding-left: calc(0 * var(--longform-explorer-indent-size) + 6px) !important;
 }
 .longform-explorer.longform-explorer .draft-container.draft-container {
   white-space: pre-wrap;
@@ -9594,7 +9604,6 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --callout-color: var(--note, var(--background-primary));
   --callout-padding: 0;
   --callout-content-padding: 5px;
-  --callout-margin: 0 0 0 5px;
   background: var(--note, var(--background-primary));
   --h1-border-line-height: 0;
   --h2-border-line-height: 0;
@@ -9608,6 +9617,9 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   max-width: 300px;
   float: right;
   border-radius: var(--radius-s);
+}
+.callout.callout[data-callout~=infobox]:not([data-callout-metadata~=wfull]) {
+  --callout-margin: 0 0 0 5px;
 }
 .callout.callout[data-callout~=infobox] > .callout-title {
   justify-content: center;

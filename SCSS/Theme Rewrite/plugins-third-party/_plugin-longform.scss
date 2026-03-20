@@ -15,15 +15,33 @@
     #project-picker {
         justify-content: space-between;
 
-        & select { width: 100%; text-overflow: ellipsis; }
+        & select { 
+            width: 100%;
+            text-overflow: ellipsis; 
+            
+            & > .projectOption { font-size: var(--font-text-size); }
+        }
     }
 
     //Project Tabs
-    & .tab-list button { color: var(--headers); }
-    & .tab-list .selected {
-        border-color: var(--accent);
-        background-color: var(--outer-bar);
-        color: var(--text);
+    & .tab-list {
+        display: flex;
+        
+        & button {  
+            color: var(--headers); 
+            padding: var(--size-4-1) var(--size-4-3);
+        }
+        & .selected {
+            border-color: var(--accent);
+            background-color: var(--outer-bar);
+            color: var(--text);
+        }
+        
+    }
+
+    //Scene List
+    & .scene-container.scene-container {
+        padding-left: calc((0 * var(--longform-explorer-indent-size)) + 6px) !important;
     }
 
 
@@ -40,6 +58,8 @@
     
     //Compile Tab
     & .longform-compile-container {
+        
+
         & .longform-compile-step
         { 
             background: var(--note);

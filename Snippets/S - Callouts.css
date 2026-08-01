@@ -148,17 +148,17 @@
 /*--Callout Coloring--*/
 .callout.callout.callout {
   --callout-color-opacity: 20%;
-  --callout-blue: 82, 139, 212;
-  --callout-green: 86, 179, 117;
-  --callout-orange: 230, 129, 63;
-  --callout-red: 193, 67, 67;
-  --callout-purple: 153, 97, 218;
-  --callout-gray: 166, 189, 197;
-  --callout-yellow: 208, 181, 48;
-  --callout-pink: 227, 107, 167;
-  --callout-brown: 161, 106, 73;
-  --callout-black: 0, 0, 0;
-  --callout-white: 256, 256, 256;
+  --callout-blue: rgb(82, 139, 212);
+  --callout-green: rgb(86, 179, 117);
+  --callout-orange: rgb(230, 129, 63);
+  --callout-red: rgb(193, 67, 67);
+  --callout-purple: rgb(153, 97, 218);
+  --callout-gray: rgb(166, 189, 197);
+  --callout-yellow: rgb(208, 181, 48);
+  --callout-pink: rgb(227, 107, 167);
+  --callout-brown: rgb(161, 106, 73);
+  --callout-black: rgb(0, 0, 0);
+  --callout-white: rgb(256, 256, 256);
   --callout-plain: transparent;
 }
 .callout.callout.callout:is([data-callout-metadata~=color-blue],
@@ -177,7 +177,7 @@
 [data-callout-metadata~=bg-blue],
 [data-callout-metadata~=background-color-blue],
 [data-callout-metadata~=bg-c-blue]) {
-  --callout-background: rgba(var(--callout-blue), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-blue) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-blue],
@@ -200,7 +200,7 @@
 [data-callout-metadata~=bg-green],
 [data-callout-metadata~=background-color-green],
 [data-callout-metadata~=bg-c-green]) {
-  --callout-background: rgba(var(--callout-green), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-green) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-green],
@@ -223,7 +223,7 @@
 [data-callout-metadata~=bg-orange],
 [data-callout-metadata~=background-color-orange],
 [data-callout-metadata~=bg-c-orange]) {
-  --callout-background: rgba(var(--callout-orange), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-orange) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-orange],
@@ -246,7 +246,7 @@
 [data-callout-metadata~=bg-red],
 [data-callout-metadata~=background-color-red],
 [data-callout-metadata~=bg-c-red]) {
-  --callout-background: rgba(var(--callout-red), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-red) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-red],
@@ -269,7 +269,7 @@
 [data-callout-metadata~=bg-purple],
 [data-callout-metadata~=background-color-purple],
 [data-callout-metadata~=bg-c-purple]) {
-  --callout-background: rgba(var(--callout-purple), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-purple) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-purple],
@@ -292,7 +292,7 @@
 [data-callout-metadata~=bg-gray],
 [data-callout-metadata~=background-color-gray],
 [data-callout-metadata~=bg-c-gray]) {
-  --callout-background: rgba(var(--callout-gray), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-gray) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-gray],
@@ -315,7 +315,7 @@
 [data-callout-metadata~=bg-yellow],
 [data-callout-metadata~=background-color-yellow],
 [data-callout-metadata~=bg-c-yellow]) {
-  --callout-background: rgba(var(--callout-yellow), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-yellow) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-yellow],
@@ -338,7 +338,7 @@
 [data-callout-metadata~=bg-pink],
 [data-callout-metadata~=background-color-pink],
 [data-callout-metadata~=bg-c-pink]) {
-  --callout-background: rgba(var(--callout-pink), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-pink) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-pink],
@@ -361,7 +361,7 @@
 [data-callout-metadata~=bg-brown],
 [data-callout-metadata~=background-color-brown],
 [data-callout-metadata~=bg-c-brown]) {
-  --callout-background: rgba(var(--callout-brown), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-brown) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-brown],
@@ -384,7 +384,7 @@
 [data-callout-metadata~=bg-black],
 [data-callout-metadata~=background-color-black],
 [data-callout-metadata~=bg-c-black]) {
-  --callout-background: rgba(var(--callout-black), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-black) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-black],
@@ -407,7 +407,7 @@
 [data-callout-metadata~=bg-white],
 [data-callout-metadata~=background-color-white],
 [data-callout-metadata~=bg-c-white]) {
-  --callout-background: rgba(var(--callout-white), var(--callout-color-opacity));
+  --callout-background: color-mix(in srgb, var(--callout-white) calc(var(--callout-color-opacity) * 100%), transparent);
   background-color: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-white],
@@ -1219,7 +1219,7 @@
 
 /* Recite */
 .callout.callout[data-callout=recite] {
-  --callout-color: 193, 67, 67;
+  --callout-color: rgb(193, 67, 67);
   --callout-icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path stroke="none" fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>';
   --callout-margin: 10px;
   --callout-padding: 5px 10px 10px 10px;
@@ -1234,7 +1234,7 @@
 .callout.callout[data-callout=recite] .callout-title {
   padding: 0;
   background: transparent;
-  color: rgba(var(--callout-color), 1);
+  color: color-mix(in srgb, var(--callout-color) 100%, transparent);
   justify-content: center;
 }
 .callout.callout[data-callout=recite][data-callout-metadata*=bg-]:not([data-callout-metadata*=bg-c]) .callout-title {
@@ -1320,7 +1320,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:not([d
 [data-callout-metadata*=bg-c-],
 [data-callout-metadata*=c-],
 [data-callout-metadata*=color-]) {
-  --callout-color: 82, 139, 212;
+  --callout-color: rgb(82, 139, 212);
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] .callout-title {
   background-color: transparent;
@@ -1328,13 +1328,13 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] .callo
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] .callout-title-inner {
   flex: unset;
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i]:not([data-callout-metadata~=no-strong], [data-callout-metadata~=no-str]) {
-  --bold-color: rgb(var(--callout-color)) ;
+  --bold-color: var(--callout-color) ;
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] .dataview.inline-field-key {
-  background: rgb(var(--callout-color));
+  background: var(--callout-color);
   color: var(--text-on-accent);
   font-weight: 900;
 }
@@ -1343,7 +1343,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] .datav
   background: transparent;
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] table th {
-  background-color: var(--aside-bg, rgba(var(--callout-color), 0.5));
+  background-color: var(--aside-bg, color-mix(in srgb, var(--callout-color) 50%, transparent));
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i] table {
   --tbl-td-h: 0;
@@ -1371,7 +1371,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 [data-callout-metadata*=bg-c-],
 [data-callout-metadata*=c-],
 [data-callout-metadata*=color-]) {
-  background: rgba(var(--callout-color), var(--callout-color-opacity));
+  background: color-mix(in srgb, var(--callout-color) calc(var(--callout-color-opacity) * 100%), transparent);
 }
 body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-callout-metadata~=i-at].is-collapsible:not(.is-collapsed) {
   display: flex;
@@ -1596,7 +1596,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
   --callout-content-padding: 10px;
   --callout-margin: 0;
   --timeline-shadow: var(--outline, var(--background-modifier-box-shadow));
-  --callout-content-background: var(--callout-background, rgb(var(--callout-color), 0.1));
+  --callout-content-background: var(--callout-background, color-mix(in srgb, var(--callout-color) 10%, transparent));
   --timeline-border: rgb(var(--callout-title, var(--callout-color)));
   --micro: 50px;
   --tiny: 100px;
@@ -1614,7 +1614,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
   position: unset !important;
 }
 .callout.callout[data-callout~=timeline] .callout-title {
-  background: rgba(var(--callout-color), 0.35);
+  background: color-mix(in srgb, var(--callout-color) 35%, transparent);
   align-content: center;
   align-items: center;
 }
@@ -1623,7 +1623,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
   display: block;
   font-size: 14px;
   line-height: 12px;
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
 }
 .callout.callout[data-callout~=timeline] .callout-icon {
   background-color: var(--note, var(--background-primary));
@@ -1698,12 +1698,12 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 
 .callout[data-callout=kith] {
   --callout-icon: user;
-  --callout-color: 115, 167, 202;
-  border-color: rgba(var(--callout-color), 0.7);
+  --callout-color: rgb(115, 167, 202);
+  border-color: color-mix(in srgb, var(--callout-color) 70%, transparent);
 }
 .callout[data-callout=kith] .callout-title-inner {
   font-weight: unset;
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
 }
 .callout[data-callout=kith] .callout-title-inner em {
   display: block;
@@ -1721,15 +1721,15 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 }
 .callout[data-callout=kith][data-callout-metadata=friend] {
   --callout-icon: user-check;
-  --callout-color: 115, 202, 144;
+  --callout-color: rgb(115, 202, 144);
 }
 .callout[data-callout=kith][data-callout-metadata=romantic] {
   --callout-icon: user-plus;
-  --callout-color: 202, 115, 180;
+  --callout-color: rgb(202, 115, 180);
 }
 .callout[data-callout=kith][data-callout-metadata=antagonist] {
   --callout-icon: user-x;
-  --callout-color: 241, 74, 74;
+  --callout-color: rgb(241, 74, 74);
 }
 
 .callout[data-callout=checks] {
@@ -1964,7 +1964,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
 .callout-original .callout .callout-title,
 .callout:is([data-callout-metadata~=callout-original],
 [data-callout-metadata~=co-o]) .callout-title {
-  background: rgba(var(--callout-color), 0.1);
+  background: color-mix(in srgb, var(--callout-color) 10%, transparent);
 }
 
 .callout-block .callout,
@@ -1984,7 +1984,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
 .callout-block .callout.is-collapsible:not(.is-collapsed) > .callout-content,
 .callout:is([data-callout-metadata~=callout-block],
 [data-callout-metadata~=co-block]).is-collapsible:not(.is-collapsed) > .callout-content {
-  border-bottom: 1px solid rgba(var(--callout-color), var(--callout-border-opacity));
+  border-bottom: 1px solid color-mix(in srgb, var(--callout-color) calc(var(--callout-border-opacity) * 100%), transparent);
 }
 
 .callout-alternate-line .callout,
@@ -2002,12 +2002,12 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
 }
 .callout-alternate-line .callout .callout-fold,
 .callout.callout[data-callout-metadata~=alt-line] .callout-fold {
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
 }
 .callout-alternate-line .callout .callout-content.callout-content,
 .callout.callout[data-callout-metadata~=alt-line] .callout-content.callout-content {
   border: 0;
-  border-bottom: 1px solid rgba(var(--callout-color), 0.5);
+  border-bottom: 1px solid color-mix(in srgb, var(--callout-color) 50%, transparent);
 }
 
 .callout-bordered .callout:not([data-callout-metadata~=callout-block],

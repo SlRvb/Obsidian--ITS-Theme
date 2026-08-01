@@ -163,14 +163,14 @@ body .callout.callout.callout:is([data-callout-metadata~="nmg"], [data-callout-m
 
 // Callout Coloring
 .callout.callout.callout {
-    --callout-blue: 82, 139, 212;
-    --callout-green: 86, 179, 117;
-    --callout-orange: 230, 129, 63;
-    --callout-red: 193, 67, 67;
-    --callout-purple: 153, 97, 218;
-    --callout-gray: 166, 189, 197;
-    --callout-yellow: 208, 181, 48;
-    --callout-pink: 227, 107, 167;
+    --callout-blue: rgb(82, 139, 212);
+    --callout-green: rgb(86, 179, 117);
+    --callout-orange: rgb(230, 129, 63);
+    --callout-red: rgb(193, 67, 67);
+    --callout-purple: rgb(153, 97, 218);
+    --callout-gray: rgb(166, 189, 197);
+    --callout-yellow: rgb(208, 181, 48);
+    --callout-pink: rgb(227, 107, 167);
     // --callout: rgb(227, 107, 167);
 
     //Title Text Colors
@@ -210,32 +210,32 @@ body .callout.callout.callout:is([data-callout-metadata~="nmg"], [data-callout-m
     //Background Colors
     &:is(
         [data-callout-metadata~="background-blue"], [data-callout-metadata~="bg-blue"],[data-callout-metadata~="background-color-blue"], [data-callout-metadata~="bg-c-blue"]
-    ) { background-color: rgba(var(--callout-blue), 10%); }
+    ) { background-color: color-mix(in srgb, var(--callout-blue) 10%, transparent); }
     &:is(
         [data-callout-metadata~="background-green"], [data-callout-metadata~="bg-green"],[data-callout-metadata~="background-color-green"], [data-callout-metadata~="bg-c-green"]
-    ) { background-color: rgba(var(--callout-green), 10%); }
+    ) { background-color: color-mix(in srgb, var(--callout-green) 10%, transparent); }
 
     &:is(
         [data-callout-metadata~="background-orange"], [data-callout-metadata~="bg-orange"],[data-callout-metadata~="background-color-orange"], [data-callout-metadata~="bg-c-orange"]
-    ) { background-color: rgba(var(--callout-orange), 10%); }
+    ) { background-color: color-mix(in srgb, var(--callout-orange) 10%, transparent); }
 
     &:is(
         [data-callout-metadata~="background-red"], [data-callout-metadata~="bg-red"],[data-callout-metadata~="background-color-red"], [data-callout-metadata~="bg-c-red"]
-    ) { background-color: rgba(var(--callout-red), 10%); }
+    ) { background-color: color-mix(in srgb, var(--callout-red) 10%, transparent); }
 
     &:is(
         [data-callout-metadata~="background-purple"], [data-callout-metadata~="bg-purple"],[data-callout-metadata~="background-color-purple"], [data-callout-metadata~="bg-c-purple"]
-    ) { background-color: rgba(var(--callout-purple), 10%); }
+    ) { background-color: color-mix(in srgb, var(--callout-purple) 10%, transparent); }
 
     &:is(
         [data-callout-metadata~="background-gray"], [data-callout-metadata~="bg-gray"],[data-callout-metadata~="background-color-gray"], [data-callout-metadata~="bg-c-gray"]
-    ) { background-color: rgba(var(--callout-gray), 10%); }
+    ) { background-color: color-mix(in srgb, var(--callout-gray) 10%, transparent); }
     &:is(
         [data-callout-metadata~="background-yellow"], [data-callout-metadata~="bg-yellow"],[data-callout-metadata~="background-color-yellow"], [data-callout-metadata~="bg-c-yellow"]
-    ) { background-color: rgba(var(--callout-yellow), 10%); }
+    ) { background-color: color-mix(in srgb, var(--callout-yellow) 10%, transparent); }
     &:is(
         [data-callout-metadata~="background-pink"], [data-callout-metadata~="bg-pink"],[data-callout-metadata~="background-color-pink"], [data-callout-metadata~="bg-c-pink"]
-    ) { background-color: rgba(var(--callout-pink), 10%); }
+    ) { background-color: color-mix(in srgb, var(--callout-pink) 10%, transparent); }
 }
 
 
@@ -250,13 +250,13 @@ body {
 /* Minimalist Style */ 
 .alt-co .callout.callout,
 .callout[data-callout-metadata~="alt-co"] {
-    background: rgba(var(--callout-color), 0.1); 
+    background: color-mix(in srgb, var(--callout-color) 10%, transparent); 
     border: 0;
     margin-left: 40px;
     margin-right: 40px;
     border-radius: var(--radius, var(--co-radius));
     box-shadow: 
-        1px 1px 0 rgba(var(--callout-color), 0.2);
+        1px 1px 0 color-mix(in srgb, var(--callout-color) 20%, transparent);
 
     & p:first-child {
         margin-block-start: 5px;
@@ -272,13 +272,13 @@ body {
     & .callout-title {
         background: transparent; 
         border-bottom: 2px solid var(--table, var(--background-modifier-border));
-        // border-bottom: 2px solid rgb(var(--callout-color), 0.5);
+        // border-bottom: 2px solid color-mix(in srgb, var(--callout-color) 50%, transparent);
         padding: 5px 0;
     }
-    & .callout-fold { color: rgb(var(--callout-color)); }
+    & .callout-fold { color: var(--callout-color); }
     & .callout-content.callout-content {
         border: 0;
-        border-bottom: 1px solid rgba(var(--callout-color), 0.5);
+        border-bottom: 1px solid color-mix(in srgb, var(--callout-color) 50%, transparent);
     }
 }
 //Inspired by Davey
@@ -600,7 +600,7 @@ body {
 
 /* Recite */
 .callout.callout[data-callout="recite"] {
-    --callout-color: 193, 67, 67;
+    --callout-color: rgb(193, 67, 67);
     --callout-icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path stroke="none" fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>';
 
     padding: 10px;
@@ -620,7 +620,7 @@ body {
         padding: 0;
         background: transparent;
 
-        color: rgba(var(--callout-color), 1);
+        color: color-mix(in srgb, var(--callout-color) 100%, transparent);
         justify-content: center;
     }
     &[data-callout-metadata*="bg-"]:not([data-callout-metadata*="bg-c"]) .callout-title { color: var(--text-normal); }
@@ -637,7 +637,7 @@ body {
 /* Metadata */
 .callout.callout[data-callout~="Metadata" i] {
     --callout-icon: layers;
-    --callout-color: 82, 139, 212;
+    --callout-color: rgb(82, 139, 212);
 
     // margin: 0;
     border-width: 2px;
@@ -651,10 +651,10 @@ body {
         justify-content: center; 
     }
     // & .callout-icon { padding-bottom: 6px;}
-    & .callout-fold { color: rgb(var(--callout-color)) }
+    & .callout-fold { color: var(--callout-color) }
     & .callout-title-inner { 
         flex: unset;
-        color: rgb(var(--callout-color)); 
+        color: var(--callout-color); 
     }
     // Content
     & .callout-content { 
@@ -662,9 +662,9 @@ body {
         padding-top: 0px; 
     }
     // Fields
-    & .callout-content strong { color: rgb(var(--callout-color)) }
+    & .callout-content strong { color: var(--callout-color) }
     & .dataview.inline-field-key {
-        background: rgb(var(--callout-color));
+        background: var(--callout-color);
         color: var(--text-on-accent);
         font-weight: 900;
     }
@@ -674,7 +674,7 @@ body {
     }
     
     // Table
-    & table th { background-color: var(--aside-bg, rgba(var(--callout-color), 0.5)); }
+    & table th { background-color: var(--aside-bg, color-mix(in srgb, var(--callout-color) 50%, transparent)); }
     & table { 
         --tbl-td-h: 0;
         --tbl-td-w: 5px;
@@ -1067,7 +1067,7 @@ body {
 /* Timeline */
 .callout.callout[data-callout~="timeline"] {
     --callout-icon: 'clock-12';
-    // --callout-color: 209, 220, 226;
+    // --callout-color: rgb(209, 220, 226);
     --callout-padding: 0px;
     --callout-title-padding: 10px;
     --callout-content-padding: 10px;
@@ -1095,7 +1095,7 @@ body {
     
     
     & .callout-title {
-        background: rgb(var(--callout-color), 0.35);
+        background: color-mix(in srgb, var(--callout-color) 35%, transparent);
         align-content: center;
         align-items: center;
         
@@ -1104,7 +1104,7 @@ body {
             display: block;
             font-size: 14px;
             line-height: 12px;
-            color: rgb(var(--callout-color));
+            color: var(--callout-color);
         }
     }
     
@@ -1115,19 +1115,19 @@ body {
     }
 
     & .callout-content {
-        background-color: rgb(var(--callout-color), 0.1);
+        background-color: color-mix(in srgb, var(--callout-color) 10%, transparent);
     }
     
     //Side Alignment
     &[data-callout-metadata~="t-l"] > :is(.callout-title, .callout-content) {
-        border-right: 4px solid rgb(var(--callout-color));
+        border-right: 4px solid var(--callout-color);
         margin-right: var(--c-timeline);
 
         & > .callout-title,
         & > .callout-content { box-shadow: -4px 4px 0 var(--outline, var(--background-modifier-box-shadow)); }
     }
     &[data-callout-metadata~="t-r"] > :is(.callout-title, .callout-content) {
-        border-left: 4px solid rgb(var(--callout-color));
+        border-left: 4px solid var(--callout-color);
         margin-left: var(--c-timeline);
         
         & > .callout-title,

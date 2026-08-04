@@ -11,7 +11,7 @@ body.canvas-milanote.canvas-milanote {
     //Group
     &.canvas-node-group .canvas-node-content { --canvas-color-opacity: 15%; }
     // &.canvas-node-group > .canvas-node-container {
-    //     border: 3px solid rgb(var(--canvas-color));
+    //     border: 3px solid var(--canvas-color);
     //     box-shadow: none;
     // } 
     & .canvas-node-content.markdown-embed:not(.is-loaded) {
@@ -57,13 +57,13 @@ body.canvas-milanote.canvas-milanote {
         box-shadow: var(--canvas-card-shadow-size) var(--canvas-card-shadow-color); 
     }
     // &.is-focused:not(.canvas-node-group) > .canvas-node-container 
-    // { border-color: rgb(var(--canvas-color)); }
+    // { border-color: var(--canvas-color); }
     
     &.is-themed:not(.canvas-node-group) > .canvas-node-container 
     { 
         border-color: transparent;
         box-shadow: 
-        0 -4px 0 -.4px rgb(var(--canvas-color)),
+        0 -4px 0 -.4px var(--canvas-color),
         var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
     }
 } 

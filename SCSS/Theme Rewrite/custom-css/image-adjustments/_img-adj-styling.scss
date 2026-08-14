@@ -1,8 +1,15 @@
-img[alt~="border"],
-.internal-embed[alt~="border"] img
-{
-    border: var(--image-border-width) solid var(--image-border-color);
-    padding: var(--image-border-padding);
+.markdown-rendered {
+    --image-adj-border-color: var(--background-modifier-border);
+    --image-adj-border-width: 1px;
+    --image-adj-border-padding: 8px;
+    --image-adj-border-background: var(--td, var(--background-primary-alt));
+}
 
-    background: var(--image-border-background);
+img[alt~="img-border"],
+.internal-embed[alt~="img-border"] img
+{
+    border: var(--image-adj-border-width) solid var(--image-adj-border-color);
+    padding: var(--image-adj-border-padding);
+
+    background: var(--image-adj-border-background);
 }

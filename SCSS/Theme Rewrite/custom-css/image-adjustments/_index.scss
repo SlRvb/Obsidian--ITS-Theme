@@ -1,4 +1,4 @@
-@use 'img-variables';
+
 @use 'img-adj-sizes';
 @use 'img-adj-location';
 @use 'img-adj-invert';
@@ -13,9 +13,19 @@
 @use 'img-adj-captions';
 // @use 'img-adj-masked';
 
+@use 'img-variables';
+
 //Mobile Viewer Fix
 .mobile-image-viewer img[alt][alt][alt] {
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+
+
+.lightbox .media-wrapper img {
+    --img-adj-size-w: auto;
+    --img-adj-size-h: auto;
+    --img-adj-object-fit: contain;
 }

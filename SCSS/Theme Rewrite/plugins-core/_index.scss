@@ -11,3 +11,9 @@
 @use 'canvas';
 @use 'metadata';
 @use 'bases';
+
+// .cm-line > .image-embed .image-wrapper { width: auto; max-width: 100%; }
+// .cm-content .image-embed { width: 100%; }
+
+.cm-editor.cm-focused .image-embed.is-selected, .cm-editor .image-embed.has-active-menu 
+{ --image-radius: var(--radius-s); }

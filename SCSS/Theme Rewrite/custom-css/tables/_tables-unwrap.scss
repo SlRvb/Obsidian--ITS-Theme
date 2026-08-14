@@ -1,0 +1,10 @@
+
+.table-unwrap-1 table tr :is(td, th):nth-child(1),
+.table-unwrap-2 table tr :is(td, th):nth-child(2),
+.table-unwrap-3 table tr :is(td, th):nth-child(3),
+.table-unwrap-4 table tr :is(td, th):nth-child(4), 
+.table-unwrap-5 table tr :is(td, th):nth-child(5),
+.table-unwrap-6 table tr :is(td, th):nth-child(6),
+.table-unwrap-7 table tr :is(td, th):nth-child(7),
+.table-unwrap-8 table tr :is(td, th):nth-child(8) 
+{ --table-white-space: nowrap; }

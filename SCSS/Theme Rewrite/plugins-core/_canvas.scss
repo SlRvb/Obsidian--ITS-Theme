@@ -4,10 +4,10 @@ body {
 }
 
 body.theme-dark {
-    --canvas-color: 88, 100, 159;
+    --canvas-color: #505e72;
 }
 body.theme-light {
-    --canvas-color: 166, 180, 204;
+    --canvas-color: #a6b4cc;
 }
 
 .canvas-control-group,
@@ -19,7 +19,7 @@ body.theme-light {
 .canvas-card-menu { border: var(--box-border); }
 
 .canvas-node.is-themed .canvas-node-content {
-    background-color: rgba(var(--canvas-color), var(--canvas-color-opacity));
+    background-color: color-mix(in srgb, var(--canvas-color), var(--canvas-color-opacity));
 }
 
 //Embeded Canvas

@@ -1,10 +1,3 @@
-body {
-  --image-border-color: var(--background-modifier-border);
-  --image-border-width: 1px;
-  --image-border-padding: 8px;
-  --image-border-background: var(--td);
-}
-
 /*----Image Positions/Adjustments----*/
 body {
   --micro: 70px;
@@ -216,31 +209,22 @@ div:not(.image-embed) > img[alt][alt*=relative] {
   object-fit: cover;
 }
 
-/*Height*/
 /*Image Locations*/
 /*Center Image*/
-.img-adj-center.img-adj-center img,
-img:is([alt~=ctr], [alt~=center]) {
+img:is([alt~=img-ctr], [alt~=img-center]), img:is([alt~=ctr], [alt~=center]), .image-embed:is([alt~=img-ctr], [alt~=img-center]), .image-embed:is([alt~=ctr], [alt~=center]) {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.img-adj-center.img-adj-center .is-live-preview img {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
 /*Left & Right*/
-.markdown-rendered img:is([alt~=left], [alt~=locl]), .markdown-rendered img:is([src*="#left"], [src*="#locl"]), .markdown-rendered .image-embed:is([alt~=left], [alt~=locl]), .markdown-rendered .image-embed:is([src*="#left"], [src*="#locl"]) {
-  float: left;
-  margin-right: 2%;
-  margin-top: 0px;
+.markdown-rendered img:is([alt~=img-left], [alt~=img-locl]), .markdown-rendered img:is([alt~=left], [alt~=locl]), .markdown-rendered img:is([src*="#left"], [src*="#locl"]), .markdown-rendered .image-embed:is([alt~=img-left], [alt~=img-locl]), .markdown-rendered .image-embed:is([alt~=left], [alt~=locl]), .markdown-rendered .image-embed:is([src*="#left"], [src*="#locl"]) {
+  margin-top: 3px;
   margin-bottom: 0px;
+  margin-right: 2%;
   float: inline-start;
 }
-.markdown-rendered img:is([alt~=right], [alt~=locr]), .markdown-rendered img:is([src*="#right"], [src*="#locr"]), .markdown-rendered .image-embed:is([alt~=right], [alt~=locr]), .markdown-rendered .image-embed:is([src*="#right"], [src*="#locr"]) {
-  float: right;
+.markdown-rendered img:is([alt~=img-right], [alt~=img-locr]), .markdown-rendered img:is([alt~=right], [alt~=locr]), .markdown-rendered img:is([src*="#right"], [src*="#locr"]), .markdown-rendered .image-embed:is([alt~=img-right], [alt~=img-locr]), .markdown-rendered .image-embed:is([alt~=right], [alt~=locr]), .markdown-rendered .image-embed:is([src*="#right"], [src*="#locr"]) {
   margin-left: 2%;
   margin-bottom: 0px;
   float: inline-end;
@@ -248,76 +232,117 @@ img:is([alt~=ctr], [alt~=center]) {
 
 /*--Image Position--*/
 img[alt*="p+"], .image-embed[src*="#p+"] img {
-  object-fit: cover;
+  --img-adj-object-fit: cover;
+  --img-adj-object-position: var(--img-adj-object-position-x) var(--img-adj-object-position-y);
+  --img-adj-object-position-x: 50%;
+  --img-adj-object-position-y: 50%;
+  object-fit: var(--img-adj-object-fit);
+  object-position: var(--img-adj-object-position);
 }
 
 /*Inner Image*/
-img[alt*="p+c"], .image-embed[src*="#p+c"] img {
-  object-position: center;
+img[alt~="p+c"], .image-embed[src*="#p+c"] img {
+  --img-adj-object-position: center;
 }
 
-img[alt*="p+t"], .image-embed[src*="#p+t"] img {
-  object-position: top;
+img[alt~="p+t"], .image-embed[src*="#p+t"] img {
+  --img-adj-object-position: top;
 }
 
-img[alt*="p+b"], .image-embed[src*="#p+b"] img {
-  object-position: bottom;
+img[alt~="p+b"], .image-embed[src*="#p+b"] img {
+  --img-adj-object-position: bottom;
 }
 
-img[alt*="p+l"], .image-embed[src*="#p+l"] img {
-  object-position: left;
+img[alt~="p+l"], .image-embed[src*="#p+l"] img {
+  --img-adj-object-position: left;
 }
 
-img[alt*="p+r"], .image-embed[src*="#p+r"] img {
-  object-position: right;
+img[alt~="p+r"], .image-embed[src*="#p+r"] img {
+  --img-adj-object-position: right;
 }
 
-img[alt*="p+cl"], .image-embed[src*="#p+cl"] img {
-  object-position: 15%;
+img[alt~="p+lc"], .image-embed[src*="#p+lc"] img {
+  --img-adj-object-position-x: 10%;
 }
 
-img[alt*="p+ccl"], .image-embed[src*="#p+ccl"] img {
-  object-position: 25%;
+img[alt~="p+lcc"], .image-embed[src*="#p+lcc"] img {
+  --img-adj-object-position-x: 25%;
 }
 
-img[alt*="p+cr"], .image-embed[src*="#p+cr"] img {
-  object-position: 60%;
+img[alt~="p+ccl"], .image-embed[src*="#p+ccl"] img {
+  --img-adj-object-position-x: 30%;
 }
 
-img[alt*="p+ccr"], .image-embed[src*="#p+ccr"] img {
-  object-position: 75%;
+img[alt~="p+cl"], .image-embed[src*="#p+cl"] img {
+  --img-adj-object-position-x: 40%;
+}
+
+img[alt~="p+cr"], .image-embed[src*="#p+cr"] img {
+  --img-adj-object-position-x: 60%;
+}
+
+img[alt~="p+ccr"], .image-embed[src*="#p+ccr"] img {
+  --img-adj-object-position-x: 75%;
+}
+
+img[alt~="p+rcc"], .image-embed[src*="#p+rcc"] img {
+  --img-adj-object-position-x: 85%;
+}
+
+img[alt~="p+rc"], .image-embed[src*="#p+rc"] img {
+  --img-adj-object-position-x: 95%;
 }
 
 img[alt*="p+tc"], .image-embed[src*="#p+tc"] img {
-  object-position: 50% 10%;
+  --img-adj-object-position-y: 10%;
 }
 
 img[alt*="p+tcc"], .image-embed[src*="#p+tcc"] img {
-  object-position: 50% 20%;
+  --img-adj-object-position-y: 20%;
 }
 
 img[alt*="p+cct"], .image-embed[src*="#p+cct"] img {
-  object-position: 50% 30%;
+  --img-adj-object-position-y: 30%;
 }
 
 img[alt*="p+ct"], .image-embed[src*="#p+ct"] img {
-  object-position: 50% 40%;
+  --img-adj-object-position-y: 40%;
 }
 
 img[alt*="p+cb"], .image-embed[src*="#p+cb"] img {
-  object-position: 50% 60%;
+  --img-adj-object-position-y: 60%;
 }
 
 img[alt*="p+ccb"], .image-embed[src*="#p+ccb"] img {
-  object-position: 50% 70%;
+  --img-adj-object-position-y: 70%;
 }
 
 img[alt*="p+bc"], .image-embed[src*="#p+bc"] img {
-  object-position: 50% 80%;
+  --img-adj-object-position-y: 80%;
 }
 
 img[alt*="p+bcc"], .image-embed[src*="#p+bcc"] img {
-  object-position: 50% 90%;
+  --img-adj-object-position-y: 90%;
+}
+
+img[alt~="p+tr"] {
+  --img-adj-object-position-x: top;
+  --img-adj-object-position-y: right;
+}
+
+img[alt~="p+br"] {
+  --img-adj-object-position-x: bottom;
+  --img-adj-object-position-y: right;
+}
+
+img[alt~="p+tl"] {
+  --img-adj-object-position-x: top;
+  --img-adj-object-position-y: left;
+}
+
+img[alt~="p+bl"] {
+  --img-adj-object-position-x: bottom;
+  --img-adj-object-position-y: left;
 }
 
 /*Invert Colors*/
@@ -391,107 +416,91 @@ img:is([alt~=lp], [alt~=live-preview]):is([alt*=left], [alt*=locl]),
   clear: both;
 }
 
+.markdown-rendered :is(img, .internal-embed)[alt][alt]:is([alt*=img-banner],
+[alt*=banner],
+[alt~=img-sban],
+[alt~=sban]) {
+  --img-adj-size-w: 100%;
+  --img-adj-display: block;
+  --img-adj-object-fit: cover;
+}
+
 /*Banners*/
-img[alt*=banner]:not([width]),
-.image-embed[alt*=banner]:not([width]) img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  margin-bottom: 0px;
-  clear: both;
+:is(img, .internal-embed)[alt][alt][alt*=banner] {
+  object-fit: var(--img-adj-object-fit);
+  width: var(--img-adj-size-w);
+  display: var(--img-adj-display);
+  height: var(--img-adj-size-h);
 }
 
-img[alt~=banner],
-.image-embed[alt~=banner] img,
-.image-embed[src*="#banner"] {
-  height: var(--small);
+.markdown-rendered :is(img, .image-embed)[alt][alt]:is([alt~=img-banner], [alt~=banner]) {
+  --img-adj-size-h: var(--small);
+}
+.markdown-rendered :is(img, .image-embed)[alt][alt]:is([alt~="img-banner+small"], [alt~="banner+small"]) {
+  --img-adj-size-h: var(--tiny);
+}
+.markdown-rendered :is(img, .image-embed)[alt][alt]:is([alt~="img-banner+tall"], [alt~="banner+tall"]) {
+  --img-adj-size-h: var(--medium);
 }
 
-img[alt~="banner+small"],
-.image-embed[alt~="banner+small"] img,
-.image-embed[src*="#banner+small"] {
-  height: var(--tiny);
+.internal-embed[src*="#img-sban"] img,
+:is(img, .internal-embed)[alt][alt]:is([alt~=img-sban], [alt~=sban]) {
+  object-fit: var(--img-adj-object-fit);
+  width: var(--img-adj-size-w);
+  display: var(--img-adj-display);
 }
 
-img[alt~="banner+tall"],
-.image-embed[alt~="banner+tall"] img,
-.image-embed[src*="#banner+tall"] {
-  height: var(--medium);
-}
-
-:is(img, .internal-embed)[alt*=sban],
-:is(img, .internal-embed)[alt~=sban],
-.internal-embed[src*="#sban"] img {
-  object-fit: cover;
-  width: 100%;
+.markdown-rendered :is(img, image-embed):is([alt][alt][alt~=portrait],
+[alt][alt][alt*="portrait+"]) {
+  --img-adj-size-h: var(--med-small);
+  --img-adj-size-w: calc(var(--img-adj-size-h) / 1.7);
+  --img-adj-object-fit: cover;
 }
 
 /*Portait*/
-img[alt*=portrait],
-.image-embed[alt*=portrait] img {
-  object-fit: cover;
+:is(img, image-embed):is([alt][alt][alt~=portrait],
+[alt][alt][alt*="portrait+"]) {
+  object-fit: var(--img-adj-object-fit);
+  height: var(--img-adj-size-h);
+  width: var(--img-adj-size-w);
 }
 
-.image-embed[src~="#portrait"] {
-  height: var(--small-med);
-  width: 40%;
+.markdown-rendered :is(img, image-embed)[alt][alt][alt~="portrait+small"] {
+  --img-adj-size-h: var(--small-med);
+}
+.markdown-rendered :is(img, image-embed)[alt][alt][alt~="portrait+tall"] {
+  --img-adj-size-h: var(--medium);
 }
 
-.image-embed[src~="#portrait+small"] {
-  height: var(--small);
-  width: 25%;
-}
-
-.image-embed[src~="#portrait+tall"] {
-  height: 500px;
-  width: 50%;
-}
-
-img:is([alt~=portrait],
-[alt*="portrait+"]),
-.image-embed:is([alt~=portrait],
-[alt*="portrait+"]) img {
-  --img-adj-portrait-size: var(--med-small);
-  height: var(--img-adj-portrait-size);
-  width: calc(var(--img-adj-portrait-size) / 1.7);
-}
-
-img[alt~="portrait+small"],
-.image-embed[alt~="portrait+small"] img {
-  --img-adj-portrait-size: var(--small-med);
-}
-
-img[alt~="portrait+tall"],
-.image-embed[alt~="portrait+tall"] img {
-  --img-adj-portrait-size: var(--medium);
+.markdown-rendered :is(img, image-embed)[alt][alt][alt*=profile] {
+  --img-adj-size-w: var(--tiny);
+  --img-adj-size-h: var(--img-adj-size-w);
+  --img-adj-object-fit: cover;
+  --img-adj-aspect-ratio: 1 / 1;
+  --img-adj-border-radius: 50%;
 }
 
 /*Profile*/
-img[alt*=profile],
-.image-embed[alt*=profile] img {
-  object-fit: cover;
-  border-radius: 50%;
+img[alt][alt][alt*=profile],
+.image-embed[alt][alt][alt*=profile] img {
+  object-fit: var(--img-adj-object-fit);
+  aspect-ratio: var(--img-adj-aspect-ratio);
+  height: var(--img-adj-size-h);
+  width: var(--img-adj-size-w);
+}
+img[alt][alt][alt*=profile]:not([alt~="profile+square"]),
+.image-embed[alt][alt][alt*=profile] img:not([alt~="profile+square"]) {
+  border-radius: var(--img-adj-border-radius);
 }
 
-img[alt~=profile],
-.image-embed[alt~=profile] img,
-.image-embed[src*="#profile"] {
-  height: var(--tiny);
-  width: var(--tiny);
+.markdown-rendered :is(img, image-embed)[alt][alt][alt~="profile+small"] {
+  --img-adj-size-w: var(--micro);
 }
-
-img[alt~="profile+medium"],
-.image-embed[alt~="profile+medium"] img,
-.image-embed[src*="#profile+medium"] {
-  height: var(--small);
-  width: var(--small);
+.markdown-rendered :is(img, image-embed)[alt][alt][alt~="profile+medium"] {
+  --img-adj-size-w: var(--small);
 }
-
-img[alt~="profile+tall"],
-.image-embed[alt~="profile+tall"] img,
-.image-embed[src*="#profile+tall"] {
-  height: var(--medium);
-  width: var(--medium);
+.markdown-rendered :is(img, image-embed)[alt][alt][alt~="profile+tall"] {
+  --img-adj-size-w: var(--medium);
 }
 
 img[alt~=sprf] {
@@ -501,19 +510,28 @@ img[alt~=sprf] {
 
 /*Image Shapes*/
 img[alt][alt*=circle] {
-  border-radius: 50%;
+  --img-adj-border-radius: 50%;
+  border-radius: var(--img-adj-border-radius);
 }
 
 img[alt~=square],
 .image-embed[alt~=square] img {
-  border-radius: 0;
+  --img-adj-border-radius: 0;
+  border-radius: var(--img-adj-border-radius);
 }
 
-img[alt~=border],
-.internal-embed[alt~=border] img {
-  border: var(--image-border-width) solid var(--image-border-color);
-  padding: var(--image-border-padding);
-  background: var(--image-border-background);
+.markdown-rendered {
+  --image-adj-border-color: var(--background-modifier-border);
+  --image-adj-border-width: 1px;
+  --image-adj-border-padding: 8px;
+  --image-adj-border-background: var(--td, var(--background-primary-alt));
+}
+
+img[alt~=img-border],
+.internal-embed[alt~=img-border] img {
+  border: var(--image-adj-border-width) solid var(--image-adj-border-color);
+  padding: var(--image-adj-border-padding);
+  background: var(--image-adj-border-background);
 }
 
 .image-captions .image-embed::after,
@@ -590,6 +608,12 @@ img[alt~=border],
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+.lightbox .media-wrapper img {
+  --img-adj-size-w: auto;
+  --img-adj-size-h: auto;
+  --img-adj-object-fit: contain;
 }
 
 /*@settings

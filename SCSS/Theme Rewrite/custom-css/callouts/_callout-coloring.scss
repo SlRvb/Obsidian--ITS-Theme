@@ -1,16 +1,16 @@
 
 $callout-colors: (
-    "blue"      "82, 139, 212",     // rgb(82, 139, 212)
-    "green"     "86, 179, 117",     // rgb(86, 179, 117)
-    "orange"    "230, 129, 63",     // rgb(230, 129, 63)
-    "red"       "193, 67, 67",      // rgb(193, 67, 67)
-    "purple"    "153, 97, 218",     // rgb(153, 97, 218)
-    "gray"      "166, 189, 197",    // rgb(166, 189, 197)
-    "yellow"    "208, 181, 48",     // rgb(208, 181, 48)
-    "pink"      "227, 107, 167",    // rgb(227, 107, 167)
-    "brown"     "161, 106, 73",     // rgb(161, 106, 73)
-    "black"     "0, 0, 0",          // rgb(0, 0, 0)
-    "white"     "256, 256, 256",    // rgb(256, 256, 256)
+    "blue"      "#528bd4",
+    "green"     "#56b375",
+    "orange"    "#e6813f",
+    "red"       "#c14343",
+    "purple"    "#9961da",
+    "gray"      "#a6bdc5",
+    "yellow"    "#d0b530",
+    "pink"      "#e36ba7",
+    "brown"     "#a16a49",
+    "black"     "#000000",
+    "white"     "#FFFFFF",
     "plain"     "transparent"
 );
 
@@ -22,11 +22,9 @@ $callout-colors: (
         --callout-#{$name}: #{$color};
     
         //Title Text Colors
-        &:is(
+        &.callout.callout.callout:is(
             [data-callout-metadata~="color-#{$name}"], 
-            [data-callout-metadata~="c-#{$name}"],
-            [data-callout-metadata~="background-color-#{$name}"], 
-            [data-callout-metadata~="bg-c-#{$name}"] 
+            [data-callout-metadata~="c-#{$name}"]
         ) { 
             --callout-title: var(--callout-#{$name}); 
             & > .callout-title { --callout-color: var(--callout-title); }

@@ -2,39 +2,34 @@
 
 
 /*Center Image*/
-// .image-embed:is([src*="#ctr"], [src*="#center"])
-.img-adj-center.img-adj-center img,
-img:is([alt~="ctr"], [alt~="center"]) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+img, .image-embed {
+    &:is([alt~="img-ctr"], [alt~="img-center"]),
+    &:is([alt~="ctr"], [alt~="center"]) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-
-//Live Preview
-.img-adj-center.img-adj-center .is-live-preview img {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
+    
 
 /*Left & Right*/
 .markdown-rendered {
     & img,
     & .image-embed {
+        &:is([alt~="img-left"], [alt~="img-locl"]),
         &:is([alt~="left"], [alt~="locl"]),
         &:is([src*="#left"], [src*="#locl"])
         {
-            float:left;
-            margin-right: 2%;
-            margin-top: 0px;
+            margin-top: 3px;
             margin-bottom: 0px;
+            margin-right: 2%;
             float: inline-start;
         }
     
+        &:is([alt~="img-right"], [alt~="img-locr"]),
         &:is([alt~="right"], [alt~="locr"]),
         &:is([src*="#right"], [src*="#locr"])
         {
-            float:right;
             margin-left: 2%;
             margin-bottom: 0px;
             float: inline-end;
@@ -47,28 +42,45 @@ img:is([alt~="ctr"], [alt~="center"]) {
 //Customizable Version
 
 /*--Image Position--*/
-img[alt*="p+"], .image-embed[src*="#p+"] img { object-fit: cover; }
+img[alt*="p+"], .image-embed[src*="#p+"] img { 
+    --img-adj-object-fit: cover;
+    --img-adj-object-position: var(--img-adj-object-position-x) var(--img-adj-object-position-y); 
+    --img-adj-object-position-x: 50%; 
+    --img-adj-object-position-y: 50%;
+
+    object-fit: var(--img-adj-object-fit); 
+    object-position: var(--img-adj-object-position);
+}
 
 /*Inner Image*/
-img[alt*="p+c"], .image-embed[src*="#p+c"] img { object-position: center;   }
-img[alt*="p+t"], .image-embed[src*="#p+t"] img { object-position: top;      }
-img[alt*="p+b"], .image-embed[src*="#p+b"] img { object-position: bottom;   }
-img[alt*="p+l"], .image-embed[src*="#p+l"] img { object-position: left;     }
-img[alt*="p+r"], .image-embed[src*="#p+r"] img { object-position: right;    }
+img[alt~="p+c"], .image-embed[src*="#p+c"] img { --img-adj-object-position: center;   }
+img[alt~="p+t"], .image-embed[src*="#p+t"] img { --img-adj-object-position: top;      }
+img[alt~="p+b"], .image-embed[src*="#p+b"] img { --img-adj-object-position: bottom;   }
+img[alt~="p+l"], .image-embed[src*="#p+l"] img { --img-adj-object-position: left;     }
+img[alt~="p+r"], .image-embed[src*="#p+r"] img { --img-adj-object-position: right;    }
 
 
-img[alt*="p+cl"],   .image-embed[src*="#p+cl"]  img { object-position: 15%; }
-img[alt*="p+ccl"],  .image-embed[src*="#p+ccl"] img { object-position: 25%; }
-img[alt*="p+cr"],   .image-embed[src*="#p+cr"]  img { object-position: 60%; }
-img[alt*="p+ccr"],  .image-embed[src*="#p+ccr"] img { object-position: 75%; }
+img[alt~="p+lc"],   .image-embed[src*="#p+lc"]  img { --img-adj-object-position-x: 10%; }
+img[alt~="p+lcc"],  .image-embed[src*="#p+lcc"] img { --img-adj-object-position-x: 25%; }
+img[alt~="p+ccl"],  .image-embed[src*="#p+ccl"] img { --img-adj-object-position-x: 30%; }
+img[alt~="p+cl"],   .image-embed[src*="#p+cl"]  img { --img-adj-object-position-x: 40%; }
 
-img[alt*="p+tc"],   .image-embed[src*="#p+tc"]  img { object-position: 50% 10%; }
-img[alt*="p+tcc"],  .image-embed[src*="#p+tcc"] img { object-position: 50% 20%; }
-img[alt*="p+cct"],  .image-embed[src*="#p+cct"] img { object-position: 50% 30%; }
-img[alt*="p+ct"],   .image-embed[src*="#p+ct"]  img { object-position: 50% 40%; }
+img[alt~="p+cr"],   .image-embed[src*="#p+cr"]  img { --img-adj-object-position-x: 60%; }
+img[alt~="p+ccr"],  .image-embed[src*="#p+ccr"] img { --img-adj-object-position-x: 75%; }
+img[alt~="p+rcc"],  .image-embed[src*="#p+rcc"] img { --img-adj-object-position-x: 85%; }
+img[alt~="p+rc"],   .image-embed[src*="#p+rc"]  img { --img-adj-object-position-x: 95%; }
 
-img[alt*="p+cb"],   .image-embed[src*="#p+cb"]  img { object-position: 50% 60%; }
-img[alt*="p+ccb"],  .image-embed[src*="#p+ccb"] img { object-position: 50% 70%; }
-img[alt*="p+bc"],   .image-embed[src*="#p+bc"]  img { object-position: 50% 80%; }
-img[alt*="p+bcc"],  .image-embed[src*="#p+bcc"] img { object-position: 50% 90%; }
+img[alt*="p+tc"],   .image-embed[src*="#p+tc"]  img { --img-adj-object-position-y: 10%; }
+img[alt*="p+tcc"],  .image-embed[src*="#p+tcc"] img { --img-adj-object-position-y: 20%; }
+img[alt*="p+cct"],  .image-embed[src*="#p+cct"] img { --img-adj-object-position-y: 30%; }
+img[alt*="p+ct"],   .image-embed[src*="#p+ct"]  img { --img-adj-object-position-y: 40%; }
 
+img[alt*="p+cb"],   .image-embed[src*="#p+cb"]  img { --img-adj-object-position-y: 60%; }
+img[alt*="p+ccb"],  .image-embed[src*="#p+ccb"] img { --img-adj-object-position-y: 70%; }
+img[alt*="p+bc"],   .image-embed[src*="#p+bc"]  img { --img-adj-object-position-y: 80%; }
+img[alt*="p+bcc"],  .image-embed[src*="#p+bcc"] img { --img-adj-object-position-y: 90%; }
+
+img[alt~="p+tr"] { --img-adj-object-position-x: top;    --img-adj-object-position-y: right; }
+img[alt~="p+br"] { --img-adj-object-position-x: bottom; --img-adj-object-position-y: right; }
+img[alt~="p+tl"] { --img-adj-object-position-x: top;    --img-adj-object-position-y: left; }
+img[alt~="p+bl"] { --img-adj-object-position-x: bottom; --img-adj-object-position-y: left; }

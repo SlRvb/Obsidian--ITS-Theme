@@ -63,7 +63,7 @@ body.canvas-milanote.canvas-milanote {
     { 
         border-color: transparent;
         box-shadow: 
-        0 -4px 0 -.4px rgb(var(--canvas-color)),
+        0 -4px 0 -.4px var(--canvas-color),
         var(--canvas-card-shadow-size) var(--canvas-card-shadow-color);
     }
 } 

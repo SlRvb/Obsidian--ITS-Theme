@@ -1,11 +1,13 @@
 
 /*Image Shapes*/
 img[alt][alt*="circle"] {
-    border-radius: 50%;
+    --img-adj-border-radius: 50%;
+    border-radius: var(--img-adj-border-radius);
 }
 
 //Square
 img[alt~="square"],
 .image-embed[alt~="square"] img {
-    border-radius: 0;
+    --img-adj-border-radius: 0;
+    border-radius: var(--img-adj-border-radius);
 }

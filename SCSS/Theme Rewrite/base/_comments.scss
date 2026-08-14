@@ -3,6 +3,21 @@ body {
     --comment-font: var(--font-monospace);
     --code-comment: var(--text-faint);
 }
-.cm-s-obsidian span.cm-comment {
-    font-family: var(--comment-font);
+
+//Fix source/lp comments
+.cm-s-obsidian span.cm-comment { font-family: var(--comment-font); }
+
+.cm-quote.cm-quote.cm-comment { color: var(--code-comment); } //blockquote coloring fix
+
+//fix link font/color
+.cm-comment + .cm-url:not(.cm-comment) { 
+    font-family: var(--comment-font); 
+    opacity: 70%; 
 }
+
+//Ending ) for link
+.cm-comment + .cm-url + .cm-formatting-link-string { 
+    font-family: var(--comment-font);
+    color: var(--code-comment);
+}
+

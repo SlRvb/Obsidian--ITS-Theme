@@ -12,3 +12,13 @@
         background-color: var(--popover-background);
     }
 }
+
+
+
+.lightbox {
+    --lightbox-padding: var(--safe-area-inset-top) var(--safe-area-inset-right) var(--safe-area-inset-bottom) var(--safe-area-inset-left); 
+    padding: var(--lightbox-padding);
+}
+
+.mod-windows .lightbox { --lightbox-padding: 5px; }
+.lightbox-titlebar, .lightbox .modal-close-button { --lightbox-close-top: var(--size-4-4); }

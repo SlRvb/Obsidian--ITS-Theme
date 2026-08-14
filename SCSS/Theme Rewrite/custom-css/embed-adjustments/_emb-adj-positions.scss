@@ -10,6 +10,4 @@
     margin: auto;
 }
 
-:not(.lp-embed-float) .is-live-preview .internal-embed:is([alt~="right"], [alt~="left"]) {
-    float: unset;
-}
+// :not(.lp-embed-float) .is-live-preview .internal-embed:is([alt~="right"], [alt~="left"]) { float: unset; }

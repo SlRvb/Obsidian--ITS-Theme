@@ -1,31 +1,26 @@
+.markdown-rendered :is(img, image-embed)[alt][alt][alt*="profile"] {
+    --img-adj-size-w: var(--tiny);
+    --img-adj-size-h: var(--img-adj-size-w);
+    --img-adj-object-fit: cover;
+    --img-adj-aspect-ratio: 1 / 1;
+    --img-adj-border-radius: 50%;
+}
 
 /*Profile*/
-img[alt*="profile"],
-.image-embed[alt*="profile"] img {
-    object-fit: cover;
-    border-radius: 50%;
+img[alt][alt][alt*="profile"],
+.image-embed[alt][alt][alt*="profile"] img {
+    object-fit: var(--img-adj-object-fit);    
+    aspect-ratio: var(--img-adj-aspect-ratio);
+    height: var(--img-adj-size-h);
+    width: var(--img-adj-size-w);
+    
+    &:not([alt~="profile+square"]) { border-radius: var(--img-adj-border-radius); }
 }
-
-img[alt~="profile"],
-.image-embed[alt~="profile"] img,
-.image-embed[src*="#profile"] {
-    height: var(--tiny);
-    width: var(--tiny);
+.markdown-rendered :is(img, image-embed)[alt][alt] {
+    &[alt~="profile+small"] { --img-adj-size-w: var(--micro); }
+    &[alt~="profile+medium"] { --img-adj-size-w: var(--small); }
+    &[alt~="profile+tall"] { --img-adj-size-w: var(--medium); }
 }
-
-img[alt~="profile+medium"],
-.image-embed[alt~="profile+medium"] img,
-.image-embed[src*="#profile+medium"] {
-    height: var(--small);
-    width: var(--small);
-}
-img[alt~="profile+tall"],
-.image-embed[alt~="profile+tall"] img,
-.image-embed[src*="#profile+tall"] {
-    height: var(--medium);
-    width: var(--medium);
-}
-
 
 // Customizable
 img[alt~="sprf"]{

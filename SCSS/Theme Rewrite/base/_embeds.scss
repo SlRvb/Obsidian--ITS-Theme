@@ -1,7 +1,8 @@
 body {
     --embed-block-shadow-hover: inset 0 0 0 2px var(--outline); //LP preview
 
-    --embed-padding: 0 10px 0 24px;
+    --embed-padding: 0 15px 15px 24px;
+    --embed-content-padding: 0; //Personal
     --embed-header-size: 18px; //Personal
     
     //Embed Title
@@ -22,8 +23,10 @@ body {
     --embed-border-top-color: var(--embed-border-color);
     --embed-border-bottom-color: var(--embed-border-color);
     
-    --embed-border-left: 2px solid var(--embed-border-left-color);
-    --embed-border-right: 2px solid var(--embed-border-right-color);
+    --embed-border-left: 2px solid var(--embed-border-left-color); //defunct?
+    --embed-border-right: 2px solid var(--embed-border-right-color); //defunct?
+    --embed-border-start: 2px solid var(--embed-border-left-color);
+    --embed-border-end: 2px solid var(--embed-border-right-color);
     --embed-border-top: 2px solid var(--embed-border-top-color);
     --embed-border-bottom: 2px solid var(--embed-border-bottom-color);
 
@@ -39,16 +42,23 @@ body {
 .internal-embed:not(.image-embed) 
 { display: flow-root; }
 
+.cm-embed-block { padding: 0 2px 2px 0; } //Fix padding in lp
+.markdown-source-view.mod-cm6 .edit-block-button { z-index: 2; }
+
 
 .markdown-embed.markdown-embed:hover {
     --embed-border-left: var(--embed-thickness) var(--embed-border-type) var(--embed-border-left-color-hover);
     --embed-border-right: var(--embed-thickness) var(--embed-border-type) var(--embed-border-right-color-hover);
+    
+    --embed-border-start: var(--embed-thickness) var(--embed-border-type) var(--embed-border-left-color-hover);
+    --embed-border-end: var(--embed-thickness) var(--embed-border-type) var(--embed-border-right-color-hover);
     --embed-border-top: var(--embed-thickness) var(--embed-border-type) var(--embed-border-top-color-hover);
     --embed-border-bottom: var(--embed-thickness) var(--embed-border-type) var(--embed-border-bottom-color-hover);
 }
 
 
 //Fix Embed Title Variables
+.inline-embed > .markdown-embed-title,
 .markdown-embed-title {
     padding: var(--embed-title-padding);
     text-align: var(--embed-title-align);
@@ -58,21 +68,18 @@ body {
 
 .markdown-embed:not(.canvas-node-content) {
     padding: 0; 
-    // & .markdown-preview-view { padding: var(--embed-padding);}
-    & .markdown-embed-content { padding: var(--embed-padding); }
+    & .markdown-embed-content { padding: var(--embed-content-padding); }
 }
-.markdown-embed-content > .markdown-preview-view > .markdown-preview-sizer {
-    min-height: unset!important;
-}
+.markdown-embed-content > .markdown-preview-view > .markdown-preview-sizer { min-height: unset!important; }
+.markdown-embed .markdown-preview-view { scrollbar-gutter: unset; } // Apply only when gutter visible
+.markdown-embed.markdown-embed hr { margin: 1.5em auto; }
 
-.markdown-embed.markdown-embed hr {
-    margin: 1.5em 0;
-}
 
 //Embed link
 .markdown-embed-link {
     top: 8px;
     right: var(--scrollbar-width);
+    z-index: 20;
 }
 
 .markdown-embed .markdown-rendered ol {

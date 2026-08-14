@@ -23,7 +23,7 @@ body.mod-rtl {
     --nav-item-background-border-color-hover: var(--dark-accent);
 
     --nav-item-padding: 4px 8px;
-    --explorer-padding: 4px 4px 4px 3px;
+    --explorer-padding: 4px 4px max(var(--safe-area-inset-bottom), 4px) 3px;
     --explorer-item-padding: 2px 8px;
     --nav-item-children-padding-left: 8px;
     --nav-item-children-margin-left: 15px;

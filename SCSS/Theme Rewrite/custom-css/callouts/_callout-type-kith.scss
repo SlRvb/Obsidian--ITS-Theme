@@ -1,12 +1,12 @@
 .callout[data-callout="kith"] {
     --callout-icon: user;
-    --callout-color: 115, 167, 202;
+    --callout-color: #73a7ca;
     
-    border-color: rgba(var(--callout-color), .7);
+    border-color: color-mix(in srgb, var(--callout-color), transparent 70%);
 
     & .callout-title-inner {
         font-weight: unset;
-        color: rgb(var(--callout-color));
+        color: var(--callout-color);
 
         //_Underscored Text_
         & em {
@@ -31,14 +31,14 @@
     }
     &[data-callout-metadata="friend"] {
         --callout-icon: user-check;
-        --callout-color: 115, 202, 144;
+        --callout-color: #73ca90;
     }
     &[data-callout-metadata="romantic"] {
         --callout-icon: user-plus;
-        --callout-color: 202, 115, 180;
+        --callout-color: #ca73b4;
     }
     &[data-callout-metadata="antagonist"] {
         --callout-icon: user-x;
-        --callout-color: 241, 74, 74;
+        --callout-color: #f14a4a;
     } 
 }

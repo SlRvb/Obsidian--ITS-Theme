@@ -1,35 +1,39 @@
-
-/*Banners*/
-img[alt*="banner"]:not([width]),
-.image-embed[alt*="banner"]:not([width]) img {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    margin-bottom: 0px;
-    clear: both;
+.markdown-rendered :is(img, .internal-embed)[alt][alt]:is(
+    [alt*="img-banner"],
+    [alt*="banner"],
+    [alt~="img-sban"],
+    [alt~="sban"]
+) { 
+    --img-adj-size-w: 100%;
+    --img-adj-display: block;
+    --img-adj-object-fit: cover;
 }
 
-img[alt~="banner"],
-.image-embed[alt~="banner"] img,
-.image-embed[src*="#banner"] 
-{ height: var(--small); }
 
+/*Banners*/
+:is(img, .internal-embed)[alt][alt][alt*="banner"] {
+    object-fit: var(--img-adj-object-fit);
+    width: var(--img-adj-size-w);
+    display: var(--img-adj-display);
+    // margin-bottom: 0px;
+    // clear: both;
+    
+    height: var(--img-adj-size-h);
+}
 
-img[alt~="banner+small"],
-.image-embed[alt~="banner+small"] img,
-.image-embed[src*="#banner+small"] 
-{ height: var(--tiny); }
+.markdown-rendered :is(img, .image-embed)[alt][alt] {
+    &:is([alt~="img-banner"], [alt~="banner"]) { --img-adj-size-h: var(--small); }
+    &:is([alt~="img-banner+small"], [alt~="banner+small"]) { --img-adj-size-h: var(--tiny); }
+    &:is([alt~="img-banner+tall"], [alt~="banner+tall"]) { --img-adj-size-h: var(--medium); }
+}
 
-img[alt~="banner+tall"],
-.image-embed[alt~="banner+tall"] img,
-.image-embed[src*="#banner+tall"] 
-{ height: var(--medium); }
 
 
 // Customizable
-:is(img, .internal-embed)[alt*="sban"],
-:is(img, .internal-embed)[alt~="sban"],
-.internal-embed[src*="#sban"] img {
-    object-fit: cover;
-    width: 100%;
+.internal-embed[src*="#img-sban"] img,
+:is(img, .internal-embed)[alt][alt]:is([alt~="img-sban"], [alt~="sban"])
+{
+    object-fit: var(--img-adj-object-fit);
+    width: var(--img-adj-size-w);
+    display: var(--img-adj-display);
 }

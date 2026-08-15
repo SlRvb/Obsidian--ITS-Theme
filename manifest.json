@@ -1,7 +1,8 @@
 {
    "name": "ITS Theme",
-   "version": "1.4.21",
+   "version": "1.4.22",
    "minAppVersion": "0.16.0",
    "author": "SlRvb",
-   "authorUrl": "https://github.com/SlRvb"
+   "authorUrl": "https://github.com/SlRvb",
+   "fundingUrl": "https://ko-fi.com/slrvb"
 }

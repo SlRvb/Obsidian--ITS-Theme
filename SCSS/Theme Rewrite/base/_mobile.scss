@@ -22,6 +22,9 @@
     --touch-radius-m: var(--radius-m);
     --touch-radius-l: var(--radius-l);
     --touch-radius-xl: var(--radius-xl);
+    
+    --navbar-radius: var(--radius-h) !important;
+    --view-header-action-radius: var(--radius-h);
 
     --bases-embed-width: unset;
     --bases-embed-border-width: 0;
@@ -40,7 +43,7 @@
     --raised-mask-background: unset;
     --blur-brightness: unset;
     --file-header-background: unset;
-
+    --search-input-corner-shape: var(--radius-h);
 
 
     --interactive-accent: var(--lite-accent);
@@ -76,7 +79,8 @@
 
     //Prompt Radius Fixes
     & .pull-down-action,
-    & .pull-out-action
+    & .pull-out-action,
+    & .prompt-input
     { border-radius: var(--radius-h); }
     
     //Notice Border Radius
@@ -184,6 +188,8 @@
     & .mobile-toolbar-floating-options,
     & .mobile-toolbar-options-list-container { border-radius: var(--touch-radius-m); background-color: transparent; } 
     & .view-header .view-actions { border-radius: var(--touch-radius-m); }
-
-    
 }
+
+//Fixing search & replace margin issues
+.document-search-container { margin-top: var(--view-top-spacing-markdown); }
+.document-search-input { width: 100%; }

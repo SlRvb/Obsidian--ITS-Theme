@@ -1,7 +1,7 @@
 body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout="quote"] {
 
     --callout-icon: "";
-    --callout-color: var(--color-accent);
+    --callout-color: rgb(var(--color-accent));
     --callout-padding: 20px 30px;
     --callout-border-width: 0 0 0 4px;
     --callout-border-opacity: .7;
@@ -39,7 +39,7 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
     //Author Bottom Right Styling
     &[data-callout-metadata~="author"] {
         --callout-icon: "";
-        --callout-color: var(--color-accent);
+        --callout-color: var(--callout-color);
         --callout-padding: 20px 30px;
         --callout-border-width: 0 0 0 4px;
         --callout-border-opacity: .7;

@@ -8,8 +8,8 @@
     --callout-content-padding: 10px;
     --callout-margin: 0;
     --timeline-shadow: var(--outline, var(--background-modifier-box-shadow));
-    --callout-content-background: var(--callout-background, rgb(var(--callout-color), 0.1));
-    --timeline-border: rgb(var(--callout-title, var(--callout-color)));
+    --callout-content-background: var(--callout-background, color-mix(in srgb, var(--callout-color), transparent 90%));
+    --timeline-border: var(--callout-color);
     
     --micro: 50px;
     --tiny: 100px;
@@ -29,7 +29,7 @@
     position: unset !important;
     
     & .callout-title {
-        background: rgba(var(--callout-color), 0.35);
+        background: color-mix(in srgb, var(--callout-color), transparent 75%);
         align-content: center;
         align-items: center;
         
@@ -38,7 +38,7 @@
             display: block;
             font-size: 14px;
             line-height: 12px;
-            color: rgb(var(--callout-color));
+            color: var(--callout-color);
         }
     }
     
@@ -48,10 +48,6 @@
         border-radius: 20px;
         height: var(--icon-size);
         width: var(--icon-size);
-    }
-
-    & .callout-content {
-        // background-color: ;
     }
     
     //Side Alignment

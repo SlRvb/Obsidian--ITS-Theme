@@ -9,7 +9,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~="Metadata" i] {
         [data-callout-metadata*="c-"],
         [data-callout-metadata*="color-"]
     ) {
-        --callout-color: 82, 139, 212;
+        --callout-color: #528bd4;
     }
 
     --callout-border-width: 2px;
@@ -28,14 +28,14 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~="Metadata" i] {
     // & .callout-fold { color: rgb(var(--callout-color)) }
     & .callout-title-inner { 
         flex: unset;
-        color: rgb(var(--callout-color)); 
+        color: var(--callout-color); 
     }
     // Fields
     &:not(
         [data-callout-metadata~="no-strong"], [data-callout-metadata~="no-str"]
-    ) { --bold-color: rgb(var(--callout-color)) }
+    ) { --bold-color: var(--callout-color) }
     & .dataview.inline-field-key {
-        background: rgb(var(--callout-color));
+        background: var(--callout-color);
         color: var(--text-on-accent);
         font-weight: 900;
     }
@@ -45,7 +45,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~="Metadata" i] {
     }
     
     // Table
-    & table th { background-color: var(--aside-bg, rgba(var(--callout-color), 0.5)); }
+    & table th { background-color: color-mix(in srgb, var(--callout-color) 50%, var(--background-secondary-alt)); } 
     & table { 
         --tbl-td-h: 0;
         --tbl-td-w: 5px;
@@ -76,7 +76,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~="Metadata" i] {
             [data-callout-metadata*="c-"],
             [data-callout-metadata*="color-"]
         ) 
-        { background: rgba(var(--callout-color), var(--callout-color-opacity)); }
+        { background: color-mix(in srgb, var(--callout-color), transparent var(--callout-color-opacity)); }
         
         &.is-collapsible:not(.is-collapsed) {
             display: flex;

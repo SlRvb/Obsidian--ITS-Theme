@@ -37,7 +37,7 @@ $callout-colors: (
             [data-callout-metadata~="background-color-#{$name}"], 
             [data-callout-metadata~="bg-c-#{$name}"]
         ) { 
-            --callout-background: rgba(var(--callout-#{$name}), var(--callout-color-opacity)); 
+            --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
             background-color: var(--callout-background); 
         }
         

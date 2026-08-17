@@ -173,8 +173,9 @@
 [data-callout-metadata~=bg-blue],
 [data-callout-metadata~=background-color-blue],
 [data-callout-metadata~=bg-c-blue]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-blue) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-blue],
 [data-callout-metadata~=bg-c-blue]) {
@@ -192,8 +193,9 @@
 [data-callout-metadata~=bg-green],
 [data-callout-metadata~=background-color-green],
 [data-callout-metadata~=bg-c-green]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-green) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-green],
 [data-callout-metadata~=bg-c-green]) {
@@ -211,8 +213,9 @@
 [data-callout-metadata~=bg-orange],
 [data-callout-metadata~=background-color-orange],
 [data-callout-metadata~=bg-c-orange]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-orange) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-orange],
 [data-callout-metadata~=bg-c-orange]) {
@@ -230,8 +233,9 @@
 [data-callout-metadata~=bg-red],
 [data-callout-metadata~=background-color-red],
 [data-callout-metadata~=bg-c-red]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-red) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-red],
 [data-callout-metadata~=bg-c-red]) {
@@ -249,8 +253,9 @@
 [data-callout-metadata~=bg-purple],
 [data-callout-metadata~=background-color-purple],
 [data-callout-metadata~=bg-c-purple]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-purple) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-purple],
 [data-callout-metadata~=bg-c-purple]) {
@@ -268,8 +273,9 @@
 [data-callout-metadata~=bg-gray],
 [data-callout-metadata~=background-color-gray],
 [data-callout-metadata~=bg-c-gray]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-gray) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-gray],
 [data-callout-metadata~=bg-c-gray]) {
@@ -287,8 +293,9 @@
 [data-callout-metadata~=bg-yellow],
 [data-callout-metadata~=background-color-yellow],
 [data-callout-metadata~=bg-c-yellow]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-yellow) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-yellow],
 [data-callout-metadata~=bg-c-yellow]) {
@@ -306,8 +313,9 @@
 [data-callout-metadata~=bg-pink],
 [data-callout-metadata~=background-color-pink],
 [data-callout-metadata~=bg-c-pink]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-pink) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-pink],
 [data-callout-metadata~=bg-c-pink]) {
@@ -325,8 +333,9 @@
 [data-callout-metadata~=bg-brown],
 [data-callout-metadata~=background-color-brown],
 [data-callout-metadata~=bg-c-brown]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-brown) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-brown],
 [data-callout-metadata~=bg-c-brown]) {
@@ -344,8 +353,9 @@
 [data-callout-metadata~=bg-black],
 [data-callout-metadata~=background-color-black],
 [data-callout-metadata~=bg-c-black]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-black) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-black],
 [data-callout-metadata~=bg-c-black]) {
@@ -363,8 +373,9 @@
 [data-callout-metadata~=bg-white],
 [data-callout-metadata~=background-color-white],
 [data-callout-metadata~=bg-c-white]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-white) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-white],
 [data-callout-metadata~=bg-c-white]) {
@@ -382,8 +393,9 @@
 [data-callout-metadata~=bg-plain],
 [data-callout-metadata~=background-color-plain],
 [data-callout-metadata~=bg-c-plain]) {
-  --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+  --callout-background: color-mix(in oklch, var(--callout-plain) 10%, transparent);
   background-color: var(--callout-background);
+  background: var(--callout-background);
 }
 .callout.callout.callout:is([data-callout-metadata~=background-color-plain],
 [data-callout-metadata~=bg-c-plain]) {
@@ -712,7 +724,7 @@
 }
 
 .callout.callout[data-callout=statblocks] {
-  --callout-color: var(--accent-rgb, var(--accent));
+  --callout-color: var(--accent);
   --callout-icon: swords;
   --callout-padding: 12px 15px;
   --callout-margin: 10px auto;
@@ -1178,7 +1190,7 @@
 
 /* Recite */
 .callout.callout[data-callout=recite] {
-  --callout-color: 193, 67, 67;
+  --callout-color: rgb(193, 67, 67);
   --callout-icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path stroke="none" fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>';
   --callout-margin: 10px;
   --callout-padding: 5px 10px 10px 10px;
@@ -1193,11 +1205,10 @@
 .callout.callout[data-callout=recite] .callout-title {
   padding: 0;
   background: transparent;
-  color: rgba(var(--callout-color), 1);
   justify-content: center;
 }
 .callout.callout[data-callout=recite][data-callout-metadata*=bg-]:not([data-callout-metadata*=bg-c]) .callout-title {
-  color: var(--text-normal);
+  color: var(--callout-color);
 }
 .callout.callout[data-callout=recite] .callout-title-inner {
   flex: unset;
@@ -1857,7 +1868,6 @@ body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callou
 }
 body:not(.default-callout-quote, .callout-no-quote) .callout.callout[data-callout=quote][data-callout-metadata~=author] {
   --callout-icon: "";
-  --callout-color: var(--callout-color);
   --callout-padding: 20px 30px;
   --callout-border-width: 0 0 0 4px;
   --callout-border-opacity: .7;

@@ -37,8 +37,9 @@ $callout-colors: (
             [data-callout-metadata~="background-color-#{$name}"], 
             [data-callout-metadata~="bg-c-#{$name}"]
         ) { 
-            --callout-background: color-mix(in oklch, var(--callout-color) 10%, transparent);
+            --callout-background: color-mix(in oklch, var(--callout-#{$name}) 10%, transparent);
             background-color: var(--callout-background); 
+            background: var(--callout-background); 
         }
         
         //Background & Text

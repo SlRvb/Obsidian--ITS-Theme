@@ -1,7 +1,7 @@
 
 /* Recite */
 .callout.callout[data-callout="recite"] {
-    --callout-color: 193, 67, 67;
+    --callout-color: rgb(193, 67, 67);
     --callout-icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path stroke="none" fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>';
     --callout-margin: 10px; 
 
@@ -22,11 +22,11 @@
         padding: 0;
         background: transparent;
 
-        color: rgba(var(--callout-color), 1);
+        // color: color-mixvar(--callout-color), 1);
         justify-content: center;
     }
     &[data-callout-metadata*="bg-"]:not([data-callout-metadata*="bg-c"]) .callout-title 
-    { color: var(--text-normal); }
+    { color: var(--callout-color); }
     
     & .callout-title-inner { flex: unset; }
     & .callout-content {

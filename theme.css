@@ -2866,6 +2866,11 @@ settings:
         type: heading
         level: 1
         collapsed: true
+    - 
+        id: info-font-icons
+        description: "🔗: Needs the [encoded font icon css snippet](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Encoded%20Icons.css) installed and enabled to display bullet/hr icons correctly."
+        type: info-text
+        markdown: true
     -
         title: Accent Color
         description: Use the Obsidian accent color picker in the Appearance tab as theme color
@@ -2880,7 +2885,7 @@ settings:
         id: slrvb-g
         type: class-toggle
     - 
-        title: School Days
+        title: School Days 🔗
         id: s-d
         type: class-toggle
     -
@@ -2891,7 +2896,7 @@ settings:
         default: none
         options:
             - 
-                label: SlRvb D&D
+                label: SlRvb D&D 🔗
                 value: dnd
             -
                 label: WOTC/Beyond
@@ -2903,15 +2908,15 @@ settings:
                 label: Pathfinder Remaster
                 value: pathfinder-remaster
     -
-        title: Tangerine Dunes
+        title: Tangerine Dunes 🔗
         id: t-d
         type: class-toggle
     -
-        title: Drowned
+        title: Drowned 🔗
         id: drwn
         type: class-toggle
     -
-        title: Nord
+        title: Nord 🔗
         id: nord
         type: class-toggle
     -   
@@ -13971,9 +13976,12 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --h4-border-line-height: var(--header-border-line-height);
   --h5-border-line-height: var(--header-border-line-height);
   --h6-border-line-height: var(--header-border-line-height);
-  --hr-icon-symbol: "";
   background: var(--note);
   --text-dl: white;
+}
+
+.notion {
+  --hr-icon-symbol: "";
 }
 
 .theme-dark .notion, .theme-dark.notion {
@@ -14110,7 +14118,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --hr-icon-symbol: "";
   --hr-icon-font: var(--mdi);
   --bullet: "";
-  --bullet-font: var(--mdi);
+  --bullet-font: var(--mdi, var(--its));
   background: var(--note);
 }
 
@@ -14231,10 +14239,9 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 
 /*----Theme: Tangerine Dunes----*/
 .t-d {
-  --hr-sym: "";
-  --hr-f: var(--mdi);
+  --hr-icon-symbol: "";
+  --hr-icon-font: var(--mdi);
   --header-weight: 500;
-  background: var(--note);
 }
 
 .theme-dark.t-d, .theme-dark .t-d {

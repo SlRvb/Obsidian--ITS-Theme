@@ -1,12 +1,12 @@
 
 /*----Theme: Tangerine Dunes----*/
 .t-d {
-    --hr-sym: "\e564";
-    --hr-f: var(--mdi);
+    --hr-icon-symbol: "\e564";
+    --hr-icon-font: var(--mdi);
 
     --header-weight: 500;
 
-    background: var(--note);
+    // background: var(--note);
 }
 
 .theme-dark {

@@ -114,17 +114,18 @@
 ) { border: 0; }
 
 //Clean
-.callout.callout.callout[data-callout-metadata~="clean"],
-.callout.callout.callout[data-callout-metadata~="clean"] > .callout-content {
+.callout.callout.callout[data-callout-metadata~="clean"] {
     border: 0;
     box-shadow: none;
-    --callout-color: transparent;
-    --callout-padding: 0;
 
-    & .callout-content {
-        padding: 0;
+    --callout-padding: 0;
+    --callout-color: ''; //Ensure title/colors still appear
+
+    & > .callout-content {
+        & .callout-content { padding: 0; }
     }
 }
+
 
 //Clear
 .callout[data-callout-metadata~="clear"] { clear: both; }

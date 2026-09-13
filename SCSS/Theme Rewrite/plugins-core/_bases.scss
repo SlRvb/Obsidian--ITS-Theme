@@ -1,17 +1,48 @@
 
-.bases-view {
+.bases-view.bases-view {    
+    //Grouping
+    --bases-table-group-background: var(--outer-bar);
+    --bases-group-heading-value-color: var(--soft-text);
+    
+    .bases-group-value { color: var(--bases-group-heading-value-color); }
+    
+    .bases-view .summary-function-name { color: var(--inactive); }
+    
+    
+    //Cards
     --bases-cards-container-background: transparent;
+    
+    
+    
+    //Tables
     --bases-table-header-background: var(--table-header-background);
     --bases-table-header-color: var(--table-header-color);
     .bases-table-header-sort { color: var(--text-dl); }
-
-    //Table alt row styling
+    
+    //Tables: alt row styling
     --bases-table-column-alt-background: var(--table-column-alt-background);
     --bases-table-row-alt-background: var(--table-column-alt-background);
     .bases-tr > .bases-td:nth-child(2n+2) { background-color: var(--bases-table-column-alt-background) }
     .bases-tr:nth-child(odd) { background-color: var(--bases-table-row-alt-background); }
-} 
-//Recolor table header  
+    
+    //Tables: Fix border styling
+    .bases-td { box-shadow: calc(var(--bases-table-column-border-width)* -1) 0 0 var(--bases-table-border-color); }
+    .bases-tr {
+        box-shadow: 0 calc(var(--bases-table-row-border-width)* -1) 0 var(--bases-table-border-color);
+        
+        &:last-child { border-bottom: var(--bases-table-row-border-width) solid var(--bases-table-border-color); }
+        
+        
+    } 
+
+    //Kanban
+    --bases-kanban-column-background: var(--outer-bar);
+    .bases-kanban-column-header { padding: 2px var(--size-4-1) 0 var(--size-4-3); }
+    .bases-kanban-column-footer { padding: 0px var(--size-4-1); }
+}
+
+
+//Menu: Recolor Active Menu Selection  
 .bases-toolbar-menu-item.mod-active {
     background-color: var(--nav-item-background-active);
     --icon-color: var(--text-dl);
@@ -19,25 +50,13 @@
     font-weight: 900;
 }
 
-//Fix border styling
-.bases-td {
-    box-shadow: calc(var(--bases-table-column-border-width)* -1) 0 0 var(--bases-table-border-color);
-}
-.bases-tr {
-    box-shadow: 0 calc(var(--bases-table-row-border-width)* -1) 0 var(--bases-table-border-color);
-    
-    &:last-child { border-bottom: var(--bases-table-row-border-width) solid var(--bases-table-border-color); }
-}
 
-// Filter Group BG Fix
+//Menu: Filter Group BG Fix
 .bases-query-container {
     & .filter-row-component { background-color: var(--background-modifier-form-field); }
     & .filter-group .filter-group { background-color: var(--outer-bar); box-shadow: var(--shadow-s); }
 } 
-.bases-header .is-active { --icon-color-active: var(--accent); }
-.bases-group-heading { color: var(--text-dl); }
-.bases-view .summary-function-name { color: var(--inactive); }
-
+.bases-header .is-active:not(:hover) { --icon-color-active: var(--accent); }
 
 
 //Embedded Fixes

@@ -28,7 +28,7 @@
     & > .callout-title { display: none; }
     & > .callout-content {
         display: grid;
-        grid-template-columns: repeat(var(--callout-cards-columns), 1fr);
+        grid-template-columns: repeat(var(--callout-cards-columns), minmax(0, 1fr));
         grid-gap: var(--callout-cards-gap);
         
         border-radius: 0;

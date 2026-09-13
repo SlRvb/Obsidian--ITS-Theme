@@ -4057,6 +4057,9 @@ body {
   margin-left: -2.3em;
   padding-right: 0em;
 }
+.is-mobile .is-live-preview.markdown-source-view.mod-cm6 .cm-formatting-list-ul::before {
+  margin-inline-end: -10px;
+}
 
 .is-mobile.is-mobile.is-mobile .mobile-toolbar-floating-options, .is-mobile.is-mobile.is-mobile .mobile-toolbar-options-list-container {
   border-radius: var(--touch-radius-m);
@@ -5767,21 +5770,45 @@ body {
   --metadata-divider-width: 0;
 }
 
-.bases-view {
+.bases-view.bases-view {
+  --bases-table-group-background: var(--outer-bar);
+  --bases-group-heading-value-color: var(--soft-text);
   --bases-cards-container-background: transparent;
   --bases-table-header-background: var(--table-header-background);
   --bases-table-header-color: var(--table-header-color);
   --bases-table-column-alt-background: var(--table-column-alt-background);
   --bases-table-row-alt-background: var(--table-column-alt-background);
+  --bases-kanban-column-background: var(--outer-bar);
 }
-.bases-view .bases-table-header-sort {
+.bases-view.bases-view .bases-group-value {
+  color: var(--bases-group-heading-value-color);
+}
+.bases-view.bases-view .bases-view .summary-function-name {
+  color: var(--inactive);
+}
+.bases-view.bases-view .bases-table-header-sort {
   color: var(--text-dl);
 }
-.bases-view .bases-tr > .bases-td:nth-child(2n+2) {
+.bases-view.bases-view .bases-tr > .bases-td:nth-child(2n+2) {
   background-color: var(--bases-table-column-alt-background);
 }
-.bases-view .bases-tr:nth-child(odd) {
+.bases-view.bases-view .bases-tr:nth-child(odd) {
   background-color: var(--bases-table-row-alt-background);
+}
+.bases-view.bases-view .bases-td {
+  box-shadow: calc(var(--bases-table-column-border-width) * -1) 0 0 var(--bases-table-border-color);
+}
+.bases-view.bases-view .bases-tr {
+  box-shadow: 0 calc(var(--bases-table-row-border-width) * -1) 0 var(--bases-table-border-color);
+}
+.bases-view.bases-view .bases-tr:last-child {
+  border-bottom: var(--bases-table-row-border-width) solid var(--bases-table-border-color);
+}
+.bases-view.bases-view .bases-kanban-column-header {
+  padding: 2px var(--size-4-1) 0 var(--size-4-3);
+}
+.bases-view.bases-view .bases-kanban-column-footer {
+  padding: 0px var(--size-4-1);
 }
 
 .bases-toolbar-menu-item.mod-active {
@@ -5789,17 +5816,6 @@ body {
   --icon-color: var(--text-dl);
   color: var(--text-dl);
   font-weight: 900;
-}
-
-.bases-td {
-  box-shadow: calc(var(--bases-table-column-border-width) * -1) 0 0 var(--bases-table-border-color);
-}
-
-.bases-tr {
-  box-shadow: 0 calc(var(--bases-table-row-border-width) * -1) 0 var(--bases-table-border-color);
-}
-.bases-tr:last-child {
-  border-bottom: var(--bases-table-row-border-width) solid var(--bases-table-border-color);
 }
 
 .bases-query-container .filter-row-component {
@@ -5810,16 +5826,8 @@ body {
   box-shadow: var(--shadow-s);
 }
 
-.bases-header .is-active {
+.bases-header .is-active:not(:hover) {
   --icon-color-active: var(--accent);
-}
-
-.bases-group-heading {
-  color: var(--text-dl);
-}
-
-.bases-view .summary-function-name {
-  color: var(--inactive);
 }
 
 .bases-embed .bases-view {
@@ -7868,6 +7876,14 @@ img[alt~=img-border],
   --img-adj-object-fit: contain;
 }
 
+.image-embed.image-embed .image-resize-corner::after {
+  border-end-end-radius: var(--radius-s);
+}
+
+body {
+  --embed-actions-radius: var(--radius-s);
+}
+
 .internal-embed:not(.image-embed)[alt*=htiny] .markdown-embed-content {
   height: var(--tiny);
 }
@@ -9211,14 +9227,12 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   border: 0;
 }
 
-.callout.callout.callout[data-callout-metadata~=clean],
-.callout.callout.callout[data-callout-metadata~=clean] > .callout-content {
+.callout.callout.callout[data-callout-metadata~=clean] {
   border: 0;
   box-shadow: none;
-  --callout-color: transparent;
   --callout-padding: 0;
+  --callout-color: "";
 }
-.callout.callout.callout[data-callout-metadata~=clean] .callout-content,
 .callout.callout.callout[data-callout-metadata~=clean] > .callout-content .callout-content {
   padding: 0;
 }
@@ -10025,7 +10039,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout[data-callout~=cards] > .callout-content {
   display: grid;
-  grid-template-columns: repeat(var(--callout-cards-columns), 1fr);
+  grid-template-columns: repeat(var(--callout-cards-columns), minmax(0, 1fr));
   grid-gap: var(--callout-cards-gap);
   border-radius: 0;
   padding-inline-start: 0px;

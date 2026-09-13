@@ -29,3 +29,7 @@
     --img-adj-size-h: auto;
     --img-adj-object-fit: contain;
 }
+.image-embed.image-embed .image-resize-corner::after { border-end-end-radius: var(--radius-s); }
+body {
+    --embed-actions-radius: var(--radius-s);
+}

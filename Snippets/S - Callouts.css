@@ -106,14 +106,12 @@
   border: 0;
 }
 
-.callout.callout.callout[data-callout-metadata~=clean],
-.callout.callout.callout[data-callout-metadata~=clean] > .callout-content {
+.callout.callout.callout[data-callout-metadata~=clean] {
   border: 0;
   box-shadow: none;
-  --callout-color: transparent;
   --callout-padding: 0;
+  --callout-color: "";
 }
-.callout.callout.callout[data-callout-metadata~=clean] .callout-content,
 .callout.callout.callout[data-callout-metadata~=clean] > .callout-content .callout-content {
   padding: 0;
 }
@@ -822,7 +820,7 @@
 }
 .callout.callout[data-callout=statblocks][data-callout-metadata~=columns] > .callout-content {
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
   gap: 15px;
 }
 
@@ -920,7 +918,7 @@
 }
 .callout[data-callout~=cards] > .callout-content {
   display: grid;
-  grid-template-columns: repeat(var(--callout-cards-columns), 1fr);
+  grid-template-columns: repeat(var(--callout-cards-columns), minmax(0, 1fr));
   grid-gap: var(--callout-cards-gap);
   border-radius: 0;
   padding-inline-start: 0px;
@@ -1392,7 +1390,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 }
 .callout[data-callout*=column] > .callout-content {
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
   gap: var(--callout-column-gap);
   background: transparent;
   box-shadow: none;
@@ -1482,7 +1480,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 }
 .callout[data-callout*=column][data-callout-metadata~=list-x] > .callout-content > :is(ul, ol) {
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
 }
 
 /*Kanban*/

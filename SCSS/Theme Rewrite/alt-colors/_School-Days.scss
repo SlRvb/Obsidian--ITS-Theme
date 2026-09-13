@@ -16,7 +16,7 @@
     --hr-icon-symbol: "\e3c9";
     --hr-icon-font: var(--mdi);
     --bullet: "\e80c";
-    --bullet-font: var(--mdi);
+    --bullet-font: var(--mdi, var(--its));
 
 
     background: var(--note);

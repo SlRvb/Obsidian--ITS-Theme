@@ -23,7 +23,7 @@
     
     --list-marker-min-width: 0;
     --list-marker-color: var(--accent);
-    --list-marker-color-other: var(--accent2);
+    --list-marker-color-alt: var(--accent2);
     --list-marker-color-collapsed: var(--inactive);
     --list-numbered-color: var(--headers);
     
@@ -167,6 +167,9 @@ ol > li::marker,
 .cm-hmd-list-indent .cm-indent:nth-child(5)::before { --indentation-guide-color: var(--list-color-5); }
 :is(ul ul ul ul ul ul, ol ol ol ol ol ol) > li,
 .cm-hmd-list-indent .cm-indent:nth-child(6)::before { --indentation-guide-color: var(--list-color-6); }
+
+//Alternating list coloring
+ul > li:nth-child(even) {  --list-marker-color: var(--list-marker-color-alt); }
 
 
 

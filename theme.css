@@ -4683,7 +4683,7 @@ strong a:is(.internal-link, .external-link) {
   --root-list-bullet-spacing: 0;
   --list-marker-min-width: 0;
   --list-marker-color: var(--accent);
-  --list-marker-color-other: var(--accent2);
+  --list-marker-color-alt: var(--accent2);
   --list-marker-color-collapsed: var(--inactive);
   --list-numbered-color: var(--headers);
   --list-bullet-size: calc(var(--font-text-size) / 2.5);
@@ -4810,6 +4810,10 @@ ol > li::marker,
 :is(ul ul ul ul ul ul, ol ol ol ol ol ol) > li,
 .cm-hmd-list-indent .cm-indent:nth-child(6)::before {
   --indentation-guide-color: var(--list-color-6);
+}
+
+ul > li:nth-child(even) {
+  --list-marker-color: var(--list-marker-color-alt);
 }
 
 body:not(.disable-spaced-lists) :is(ul, ol) li:not(:first-of-type) p:first-of-type {
@@ -9941,7 +9945,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout.callout[data-callout=statblocks][data-callout-metadata~=columns] > .callout-content {
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
   gap: 15px;
 }
 
@@ -10511,7 +10515,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 }
 .callout[data-callout*=column] > .callout-content {
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
   gap: var(--callout-column-gap);
   background: transparent;
   box-shadow: none;
@@ -10601,7 +10605,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 }
 .callout[data-callout*=column][data-callout-metadata~=list-x] > .callout-content > :is(ul, ol) {
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
 }
 
 /*Kanban*/
@@ -14855,6 +14859,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --list-color-5: var(--indentation-guide-color);
   --list-color-6: var(--indentation-guide-color);
   --list-marker-color: var(--accent);
+  --list-marker-color-alt: var(--accent2);
   --list-numbered-color: var(--lite-accent);
   --th: var(--dark-accent);
   --table-header-background: var(--th);

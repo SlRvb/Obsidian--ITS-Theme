@@ -3,7 +3,8 @@
 .internal-embed[alt*="clean"] {
     & > .markdown-embed,
     &.is-loaded:not(.image-embed) {
-        --embed-padding: 0;
+        & > .markdown-embed-content > .markdown-rendered { padding: 0; } //Only shrink immediate sub embed padding
+        
         border: none;
         box-shadow: none;
 

@@ -157,7 +157,7 @@
   --callout-brown: #a16a49;
   --callout-black: #000000;
   --callout-white: #FFFFFF;
-  --callout-plain: transparent;
+  --callout-plain: ;
 }
 .callout.callout.callout.callout.callout.callout:is([data-callout-metadata~=color-blue],
 [data-callout-metadata~=c-blue]) {
@@ -545,7 +545,7 @@
 }
 
 .callout.callout[data-callout~=infobox] {
-  --callout-color: var(--note, var(--background-primary));
+  --callout-color: "";
   --callout-padding: 0;
   --callout-content-padding: 5px;
   background: var(--note, var(--background-primary));
@@ -875,7 +875,7 @@
 
 /* Cards */
 .callout[data-callout~=cards] {
-  --callout-color: transparent;
+  --callout-color: "";
   --callout-icon: layout-dashboard;
   --callout-padding: 0;
   --callout-content-padding: 0px;
@@ -1372,7 +1372,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 
 /* Columns */
 .callout[data-callout*=column] {
-  --callout-color: var(--text-normal);
+  --callout-color: "";
   --callout-icon: layout-dashboard;
   --columns: 2;
   --callout-column-gap: 10px;
@@ -1485,7 +1485,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 
 /*Kanban*/
 .callout.callout[data-callout~=kanban] {
-  --callout-color: unset;
+  --callout-color: "";
   --callout-icon: layout-dashboard;
   --callout-padding: 0;
   --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));

@@ -6,6 +6,7 @@
     --table-style-column-header-bold-color: var(--bold-color);
 
     & .bases-tbody .bases-td:nth-child(1) .bases-table-cell *,
+    & td:nth-child(1),
     & td:nth-child(1) * { 
         font-weight: var(--table-style-column-header-bold-weight); 
         &:not(a) { color: var(--table-style-column-header-bold-color); }

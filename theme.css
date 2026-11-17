@@ -3934,6 +3934,7 @@ body {
   --touch-radius-xl: var(--radius-xl);
   --navbar-radius: var(--radius-h) !important;
   --view-header-action-radius: var(--radius-h);
+  --mobile-sidebar-radius: var(--radius-m);
   --bases-embed-width: unset;
   --bases-embed-border-width: 0;
   --bases-embed-transform: 0;
@@ -8047,9 +8048,13 @@ body.embed-mini-headers .markdown-embed {
 .embed-clean .internal-embed > .markdown-embed, .embed-clean .internal-embed.is-loaded:not(.image-embed),
 .internal-embed[alt*=clean] > .markdown-embed,
 .internal-embed[alt*=clean].is-loaded:not(.image-embed) {
-  --embed-padding: 0;
   border: none;
   box-shadow: none;
+}
+.embed-clean .internal-embed > .markdown-embed > .markdown-embed-content > .markdown-rendered, .embed-clean .internal-embed.is-loaded:not(.image-embed) > .markdown-embed-content > .markdown-rendered,
+.internal-embed[alt*=clean] > .markdown-embed > .markdown-embed-content > .markdown-rendered,
+.internal-embed[alt*=clean].is-loaded:not(.image-embed) > .markdown-embed-content > .markdown-rendered {
+  padding: 0;
 }
 .embed-clean .internal-embed > .markdown-embed:not(:hover), .embed-clean .internal-embed.is-loaded:not(.image-embed):not(:hover),
 .internal-embed[alt*=clean] > .markdown-embed:not(:hover),
@@ -9287,7 +9292,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
   --callout-brown: #a16a49;
   --callout-black: #000000;
   --callout-white: #FFFFFF;
-  --callout-plain: transparent;
+  --callout-plain: ;
 }
 .callout.callout.callout.callout.callout.callout:is([data-callout-metadata~=color-blue],
 [data-callout-metadata~=c-blue]) {
@@ -9675,7 +9680,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 
 .callout.callout[data-callout~=infobox] {
-  --callout-color: var(--note, var(--background-primary));
+  --callout-color: "";
   --callout-padding: 0;
   --callout-content-padding: 5px;
   background: var(--note, var(--background-primary));
@@ -10005,7 +10010,7 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 
 /* Cards */
 .callout[data-callout~=cards] {
-  --callout-color: transparent;
+  --callout-color: "";
   --callout-icon: layout-dashboard;
   --callout-padding: 0;
   --callout-content-padding: 0px;
@@ -10502,7 +10507,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 
 /* Columns */
 .callout[data-callout*=column] {
-  --callout-color: var(--text-normal);
+  --callout-color: "";
   --callout-icon: layout-dashboard;
   --columns: 2;
   --callout-column-gap: 10px;
@@ -11654,13 +11659,15 @@ iframe {
   --table-style-column-header-bold-weight: var(--bold-weight);
   --table-style-column-header-bold-color: var(--bold-color);
 }
-.table.table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *, .table.table td:nth-child(1) *,
+.table.table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *, .table.table td:nth-child(1), .table.table td:nth-child(1) *,
 .table .bases-table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *,
+.table .bases-table td:nth-child(1),
 .table .bases-table td:nth-child(1) * {
   font-weight: var(--table-style-column-header-bold-weight);
 }
-.table.table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *:not(a), .table.table td:nth-child(1) *:not(a),
+.table.table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *:not(a), .table.table td:nth-child(1):not(a), .table.table td:nth-child(1) *:not(a),
 .table .bases-table .bases-tbody .bases-td:nth-child(1) .bases-table-cell *:not(a),
+.table .bases-table td:nth-child(1):not(a),
 .table .bases-table td:nth-child(1) *:not(a) {
   color: var(--table-style-column-header-bold-color);
 }
@@ -12005,7 +12012,7 @@ iframe {
 }
 
 /*Live Preview Indent Style*/
-.alternate-indent .is-live-preview {
+.alternate-indent .markdown-source-view {
   --indentation-guide-color: transparent;
   --indentation-guide-color-active: transparent;
   --list-color-1: var(--indentation-guide-color);
@@ -12015,49 +12022,90 @@ iframe {
   --list-color-5: var(--indentation-guide-color);
   --list-color-6: var(--indentation-guide-color);
 }
-.alternate-indent .is-live-preview .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .cm-hmd-list-indent {
   margin-right: 5px;
   margin-left: -2px;
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-2 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-2 .cm-hmd-list-indent {
   background-color: var(--theme-rainbow-1);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-3 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-3 .cm-hmd-list-indent {
   background-color: var(--theme-rainbow-2);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-4 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-4 .cm-hmd-list-indent {
   background-color: var(--theme-rainbow-3);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-5 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-5 .cm-hmd-list-indent {
   background-color: var(--theme-rainbow-4);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-6 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-6 .cm-hmd-list-indent {
   background-color: var(--theme-rainbow-5);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-7 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-7 .cm-hmd-list-indent {
   background-color: var(--theme-rainbow-6);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-8 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-8 .cm-hmd-list-indent {
   background-color: var(--rainbow-1);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-9 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-9 .cm-hmd-list-indent {
   background-color: var(--rainbow-2);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-10 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-10 .cm-hmd-list-indent {
   background-color: var(--rainbow-3);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-11 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-11 .cm-hmd-list-indent {
   background-color: var(--rainbow-4);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-12 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-12 .cm-hmd-list-indent {
   background-color: var(--rainbow-5);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-13 .cm-hmd-list-indent {
+.alternate-indent .markdown-source-view .HyperMD-list-line-13 .cm-hmd-list-indent {
   background-color: var(--rainbow-6);
 }
-.alternate-indent .is-live-preview .HyperMD-list-line-2, .alternate-indent .is-live-preview .HyperMD-list-line-3, .alternate-indent .is-live-preview .HyperMD-list-line-4, .alternate-indent .is-live-preview .HyperMD-list-line-5, .alternate-indent .is-live-preview .HyperMD-list-line-6, .alternate-indent .is-live-preview .HyperMD-list-line-7, .alternate-indent .is-live-preview .HyperMD-list-line-8, .alternate-indent .is-live-preview .HyperMD-list-line-9, .alternate-indent .is-live-preview .HyperMD-list-line-10, .alternate-indent .is-live-preview .HyperMD-list-line-11, .alternate-indent .is-live-preview .HyperMD-list-line-12, .alternate-indent .is-live-preview .HyperMD-list-line-13 {
+.alternate-indent .markdown-source-view .HyperMD-list-line-2, .alternate-indent .markdown-source-view .HyperMD-list-line-3, .alternate-indent .markdown-source-view .HyperMD-list-line-4, .alternate-indent .markdown-source-view .HyperMD-list-line-5, .alternate-indent .markdown-source-view .HyperMD-list-line-6, .alternate-indent .markdown-source-view .HyperMD-list-line-7, .alternate-indent .markdown-source-view .HyperMD-list-line-8, .alternate-indent .markdown-source-view .HyperMD-list-line-9, .alternate-indent .markdown-source-view .HyperMD-list-line-10, .alternate-indent .markdown-source-view .HyperMD-list-line-11, .alternate-indent .markdown-source-view .HyperMD-list-line-12, .alternate-indent .markdown-source-view .HyperMD-list-line-13 {
   --collapse-icon-color: var(--text-dl);
   --collapse-icon-color-collapsed: var(--text-dl);
+}
+
+.alternate-indent .markdown-rendered.show-indentation-guide li > ul::before, .alternate-indent .markdown-rendered.show-indentation-guide li > ol::before {
+  --indentation-guide-width: 20px;
+  --indentation-guide-reading-indent: calc(var(--checkbox-size) * -1 - 7px);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul, ol ol):before {
+  --indentation-guide-color: var(--theme-rainbow-1);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul, ol ol ol):before {
+  --indentation-guide-color: var(--theme-rainbow-2);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul, ol ol ol ol):before {
+  --indentation-guide-color: var(--theme-rainbow-3);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul, ol ol ol ol ol):before {
+  --indentation-guide-color: var(--theme-rainbow-4);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul ul, ol ol ol ol ol ol):before {
+  --indentation-guide-color: var(--theme-rainbow-5);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol):before {
+  --indentation-guide-color: var(--theme-rainbow-6);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol):before {
+  --indentation-guide-color: var(--rainbow-1);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol):before {
+  --indentation-guide-color: var(--rainbow-2);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol ol):before {
+  --indentation-guide-color: var(--rainbow-3);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol ol ol):before {
+  --indentation-guide-color: var(--rainbow-4);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol ol ol ol):before {
+  --indentation-guide-color: var(--rainbow-5);
+}
+.alternate-indent .markdown-rendered.show-indentation-guide :is(ul ul ul ul ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol ol ol ol ol):before {
+  --indentation-guide-color: var(--rainbow-6);
 }
 
 .list-lines-color.list-lines-color {
@@ -13686,7 +13734,7 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
   --font: var(--font-default);
   --background-modifier-hover: var(--td);
   --tag-color: var(--accent2-lite);
-  --hr-icon-symbol: ;
+  --hr-icon-symbol: "";
   --file-icon: ;
   --folder-icon: ;
   --header-border-line-height: 0;
@@ -14630,8 +14678,6 @@ body:not(.wotc-beyond) .wotc-beyond:is(.markdown-source-view,
 .its.its {
   --font-default: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --font-monospace: "Fira Code", "Fira Code Medium", "Source Code Pro", monospace;
-  --hr-icon-symbol: "";
-  --hr-icon-font: var(--its);
 }
 
 .theme-dark.its, .theme-dark .its {

@@ -1,5 +1,5 @@
 /*Live Preview Indent Style*/
-.alternate-indent .is-live-preview {
+.alternate-indent .markdown-source-view {
     --indentation-guide-color: transparent;
     --indentation-guide-color-active: transparent;
     --list-color-1: var(--indentation-guide-color);
@@ -43,5 +43,41 @@
         --collapse-icon-color-collapsed: var(--text-dl); 
     }
 }
+
+.alternate-indent .markdown-rendered.show-indentation-guide {
+    & li > ul::before,
+    & li > ol::before {
+        --indentation-guide-width: 20px;
+        --indentation-guide-reading-indent: calc(var(--checkbox-size) * -1 - 7px);
+    }
+    
+    & :is(ul ul, ol ol):before
+    { --indentation-guide-color: var(--theme-rainbow-1); }
+    & :is(ul ul ul, ol ol ol):before
+    { --indentation-guide-color: var(--theme-rainbow-2); }
+    & :is(ul ul ul ul, ol ol ol ol):before
+    { --indentation-guide-color: var(--theme-rainbow-3); }
+    & :is(ul ul ul ul ul, ol ol ol ol ol):before
+    { --indentation-guide-color: var(--theme-rainbow-4); }
+    & :is(ul ul ul ul ul ul, ol ol ol ol ol ol):before
+    { --indentation-guide-color: var(--theme-rainbow-5); }
+    & :is(ul ul ul ul ul ul ul, ol ol ol ol ol ol ol):before
+    { --indentation-guide-color: var(--theme-rainbow-6); }
+    & :is(ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol):before
+    { --indentation-guide-color: var(--rainbow-1); }
+    & :is(ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol):before
+    { --indentation-guide-color: var(--rainbow-2); }
+    & :is(ul ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol ol):before
+    { --indentation-guide-color: var(--rainbow-3); }
+    & :is(ul ul ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol ol ol):before
+    { --indentation-guide-color: var(--rainbow-4); }
+    & :is(ul ul ul ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol ol ol ol):before
+    { --indentation-guide-color: var(--rainbow-5); }
+    & :is(ul ul ul ul ul ul ul ul ul ul ul ul ul, ol ol ol ol ol ol ol ol ol ol ol ol ol):before
+    { --indentation-guide-color: var(--rainbow-6); }
+
+    
+
+} 
 
 

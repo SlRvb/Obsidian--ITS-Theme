@@ -1,7 +1,7 @@
 
 /* Columns */
 .callout[data-callout*="column"] {
-    --callout-color: var(--text-normal);
+    --callout-color: '';
     --callout-icon: layout-dashboard;
     --columns: 2;
     --callout-column-gap: 10px;

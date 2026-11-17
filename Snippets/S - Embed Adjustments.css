@@ -58,10 +58,6 @@
   margin: auto;
 }
 
-:not(.lp-embed-float) .is-live-preview .internal-embed:is([alt~=right], [alt~=left]) {
-  float: unset;
-}
-
 /*Embed Link Hide/Move*/
 .internal-embed:is([alt~=lk-hvr], [alt~=link-hover]):not(:hover) .markdown-embed-link,
 .internal-embed:is([alt~=nlk], [alt~=no-link]) .markdown-embed-link {
@@ -156,9 +152,13 @@ body.embed-mini-headers .markdown-embed {
 .embed-clean .internal-embed > .markdown-embed, .embed-clean .internal-embed.is-loaded:not(.image-embed),
 .internal-embed[alt*=clean] > .markdown-embed,
 .internal-embed[alt*=clean].is-loaded:not(.image-embed) {
-  --embed-padding: 0;
   border: none;
   box-shadow: none;
+}
+.embed-clean .internal-embed > .markdown-embed > .markdown-embed-content > .markdown-rendered, .embed-clean .internal-embed.is-loaded:not(.image-embed) > .markdown-embed-content > .markdown-rendered,
+.internal-embed[alt*=clean] > .markdown-embed > .markdown-embed-content > .markdown-rendered,
+.internal-embed[alt*=clean].is-loaded:not(.image-embed) > .markdown-embed-content > .markdown-rendered {
+  padding: 0;
 }
 .embed-clean .internal-embed > .markdown-embed:not(:hover), .embed-clean .internal-embed.is-loaded:not(.image-embed):not(:hover),
 .internal-embed[alt*=clean] > .markdown-embed:not(:hover),

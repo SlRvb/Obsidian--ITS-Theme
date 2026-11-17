@@ -10203,12 +10203,12 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 }
 .callout[data-callout~=cards][data-callout-metadata~=notion] {
   --callout-cards-notion-padding: 10px;
-  --callout-cards-notion-shadow: 0 0 5px var(--outline), 0 0 6px var(--outline);
+  --callout-cards-notion-shadow: 0 0 5px var(--outline, var(--background-modifier-box-shadow)), 0 0 6px var(--outline, var(--background-modifier-box-shadow));
   --callout-cards-notion-radius: var(--radius-s);
   --callout-content-padding: 15px;
 }
 .callout[data-callout~=cards][data-callout-metadata~=notion]:is([data-callout-metadata~=round], [data-callout-metadata~=rounded]) {
-  --callout-cards-notion-radius: 5px;
+  --callout-cards-notion-radius: 7px;
 }
 .callout[data-callout~=cards][data-callout-metadata~=notion] .dataview.table-view-table tbody tr {
   padding: 0;
@@ -10261,14 +10261,20 @@ body:not(.check-color, .check-text) ul > li.task-list-item[data-task][data-task=
 .callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p, .callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p img {
   border-radius: var(--callout-cards-notion-radius);
 }
-.callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p > img:first-child, .callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p > .internal-embed:first-child img {
+.callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p > img:first-child:not(:last-child), .callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p > .internal-embed:first-child img {
   margin-bottom: 5px;
+  box-shadow: 0 1px 0 0 var(--outline);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p:has(> :is(img, .internal-embed):first-child) {
   padding-bottom: 7px;
 }
 .callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p > img:last-child, .callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p > .internal-embed:last-child img {
   margin-top: 5px;
+  box-shadow: 0 -1px 0 0cmar --outline;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .callout[data-callout~=cards][data-callout-metadata~=notion] > .callout-content > p:has(> :is(img, .internal-embed):last-child) {
   padding-top: 7px;

@@ -195,12 +195,12 @@
     &[data-callout-metadata~="notion"] {
         // --callout-card-border: 2px solid var(--outline, var(--background-modifier-box-shadow));
         --callout-cards-notion-padding: 10px;
-        --callout-cards-notion-shadow: 0 0 5px var(--outline), 0 0 6px var(--outline);
+        --callout-cards-notion-shadow: 0 0 5px var(--outline, var(--background-modifier-box-shadow)), 0 0 6px var(--outline, var(--background-modifier-box-shadow));
         --callout-cards-notion-radius: var(--radius-s);
         --callout-content-padding: 15px;
 
         &:is([data-callout-metadata~=round], [data-callout-metadata~=rounded]) {
-            --callout-cards-notion-radius: 5px;
+            --callout-cards-notion-radius: 7px;
         }
 
         //Dataview Card Styling
@@ -264,13 +264,23 @@
                 &, & img { border-radius: var(--callout-cards-notion-radius); }
                 
                 //First line is image
-                & > img:first-child,
-                & > .internal-embed:first-child img { margin-bottom: 5px; }
+                & > img:first-child:not(:last-child),
+                & > .internal-embed:first-child img { 
+                    margin-bottom: 5px; 
+                    box-shadow: 0 1px 0 0 var(--outline); 
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
                 &:has(> :is(img, .internal-embed):first-child) { padding-bottom: 7px; }
                 
                 //Last line is image
                 & > img:last-child,
-                & > .internal-embed:last-child img { margin-top: 5px; }
+                & > .internal-embed:last-child img {
+                    margin-top: 5px; 
+                    box-shadow: 0 -1px 0 0cmar(--outline); 
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
                 &:has(> :is(img, .internal-embed):last-child) { padding-top: 7px; }
             }
         }

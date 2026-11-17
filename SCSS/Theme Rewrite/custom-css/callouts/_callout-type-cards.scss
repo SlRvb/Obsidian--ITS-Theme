@@ -277,7 +277,7 @@
                 & > img:last-child,
                 & > .internal-embed:last-child img {
                     margin-top: 5px; 
-                    box-shadow: 0 -1px 0 0cmar(--outline); 
+                    box-shadow: 0 -1px 0 0 var(--outline); 
                     border-top-left-radius: 0;
                     border-top-right-radius: 0;
                 }

@@ -4818,7 +4818,7 @@ ol > li::marker,
   --indentation-guide-color: var(--list-color-6);
 }
 
-ul > li:nth-child(even) {
+ul > li:nth-child(even)::before, ul > li:nth-child(even) > .list-bullet {
   --list-marker-color: var(--list-marker-color-alt);
 }
 
@@ -10620,7 +10620,7 @@ body:not(.callout-no-metadata) .callout.callout[data-callout~=Metadata i][data-c
 
 /*Kanban*/
 .callout.callout[data-callout~=kanban] {
-  --callout-color: unset;
+  --callout-color: "";
   --callout-icon: layout-dashboard;
   --callout-padding: 0;
   --item-outline: 0 0 0 1px var(--outline, var(--background-modifier-border));
@@ -12169,9 +12169,8 @@ iframe {
   --list-marker-color: var(--text-faint);
   --list-marker-color-hover: var(--text-muted);
   --list-marker-color-collapsed: var(--inactive);
-  --list-bullet-border: none;
   --list-bullet-radius: 50%;
-  --list-bullet-size: 0.4em;
+  --list-bullet-size: 0.45em;
   --list-bullet-transform: none;
 }
 

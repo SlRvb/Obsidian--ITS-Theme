@@ -169,7 +169,12 @@ ol > li::marker,
 .cm-hmd-list-indent .cm-indent:nth-child(6)::before { --indentation-guide-color: var(--list-color-6); }
 
 //Alternating list coloring
-ul > li:nth-child(even) {  --list-marker-color: var(--list-marker-color-alt); }
+ul > li:nth-child(even) {
+    &::before, //ITS Bullet Styling
+    // &::marker, //??
+    & > .list-bullet //Default bullets
+    { --list-marker-color: var(--list-marker-color-alt); }
+}
 
 
 
